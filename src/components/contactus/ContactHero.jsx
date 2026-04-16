@@ -29,7 +29,6 @@ export default function ContactHero() {
               className="object-cover"
             />
           </div>
-          
         </div>
       </div>
     </section>
