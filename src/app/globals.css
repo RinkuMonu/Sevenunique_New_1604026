@@ -24,3 +24,12 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+ 
+  body {
+    @apply bg-white text-[#1a1a18];
+  }
+}
