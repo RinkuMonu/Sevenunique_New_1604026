@@ -15,6 +15,7 @@ export default function CTASection() {
             fill
             className="object-cover rounded-lg"
           />
+          
         </div>
       </div>
 
