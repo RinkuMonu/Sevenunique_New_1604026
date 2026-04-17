@@ -1,77 +1,95 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
-const stats = [
-  { num: "4,000+", label: "Engineers on roster", accent: true },
-  { num: "Top 1%", label: "Vetted talent only", accent: false },
-  { num: "500+", label: "Companies served", accent: false },
-  { num: "15 yrs", label: "In business since 2009", accent: false },
-];
-
 export default function Hero() {
+  const words = [
+    "tech talent",
+    "AI Engineers",
+    "Data Engineers",
+    "Cloud Engineers",
+    "Full stack Engineers",
+  ];
+
+  const [index, setIndex] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+  const interval = setInterval(() => {
+    setVisible(false); // fade out
+
+    setTimeout(() => {
+      setIndex((prev) => (prev + 1) % words.length);
+      setVisible(true); // fade in
+    }, 600); // slower animation
+  }, 5000); // more reading time
+
+  return () => clearInterval(interval);
+}, []);
+
   return (
-    <section className="bg-[#0a0a0a] px-6 py-20 lg:py-28">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        {/* Left */}
-        <div>
-          <div className="inline-flex items-center gap-2 bg-[#f4622a]/10 border border-[#f4622a]/25 text-[#f4622a] text-xs font-medium px-3 py-1.5 rounded-full mb-5">
-            <span className="w-2 h-2 rounded-full bg-[#f4622a] inline-block" />
-            Nearshore Tech Talent
-          </div>
+    <section className="relative overflow-hidden bg-white pb-32 lg:pb-40">
+      
+      {/* FULL WIDTH IMAGE */}
+      <div className="absolute inset-0">
+        <Image
+          src="/hero.avif"
+          alt="Team working"
+          fill
+          priority
+          className="object-cover object-right"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent"></div>
+      </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-[52px] font-semibold text-white leading-[1.08] tracking-[-1.5px] mb-5">
-            Accelerate Your Roadmap With Vetted{" "}
-            <em className="not-italic text-[#f4622a]">Tech Talent</em>
-          </h1>
+      {/* CONTENT */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 lg:py-32">
+        <div className="max-w-2xl">
 
-          <p className="text-white/60 text-base sm:text-lg leading-relaxed mb-8 max-w-lg">
-            Access 4,000+ timezone-aligned software engineers with experience in
-            AI and 100+ other technologies.
-          </p>
+<h1 className="text-[53.92px] font-semibold leading-[1.1] text-black mb-6 font-sans">
+              Accelerate Your Roadmap <br />
+            With Our Vetted Nearshore <br />
 
-          <div className="flex flex-wrap gap-3">
-            <Link
-              href="/start/basic-details"
-              className="inline-flex items-center bg-[#f4622a] hover:bg-[#d94f1e] text-white font-medium text-[15px] px-7 py-3.5 rounded-[7px] transition-colors duration-150"
-            >
-              Schedule a Call
-            </Link>
-            <Link
-              href="/solutions"
-              className="inline-flex items-center border border-white/20 hover:border-white/50 text-white font-medium text-[15px] px-7 py-3.5 rounded-[7px] transition-colors duration-150"
-            >
-              Explore Services
-            </Link>
-          </div>
-        </div>
-
-        {/* Right — stat cards */}
-        <div className="grid grid-cols-2 gap-3">
-          {stats.map((s) => (
-            <div
-              key={s.label}
-              className={`rounded-xl p-5 border ${
-                s.accent
-                  ? "bg-[#f4622a] border-[#f4622a]"
-                  : "bg-white/[0.05] border-white/[0.08]"
+            {/* 🔥 Animated Text */}
+            <span
+              className={`text-[#f4622a] inline-block transition-all duration-500 ${
+                visible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-3"
               }`}
             >
-              <p
-                className={`text-3xl font-semibold tracking-tight leading-none mb-1 ${
-                  s.accent ? "text-white" : "text-white"
-                }`}
-              >
-                {s.num}
-              </p>
-              <p
-                className={`text-sm ${
-                  s.accent ? "text-white/80" : "text-white/50"
-                }`}
-              >
-                {s.label}
-              </p>
-            </div>
-          ))}
+              {words[index]}
+            </span>
+          </h1>
+
+          <p className="text-gray-600 text-lg mb-8">
+            Access 4,000+ timezone-aligned software engineers
+            with experience in AI and 100+ other technologies.
+          </p>
+
+          <Link
+            href="/start/basic-details"
+            className="inline-block bg-[#f4622a] hover:bg-[#d94f1e] text-white px-6 py-3 rounded-md font-medium transition"
+          >
+            Schedule a Call
+          </Link>
         </div>
+      </div>
+
+      {/* CURVE */}
+      <div className="absolute bottom-0 left-0 w-full leading-none">
+        <svg
+          viewBox="0 0 1440 200"
+          className="w-full h-[180px]"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="#ffffff"
+            d="M0,80 C360,0 1080,0 1440,80 L1440,200 L0,200 Z"
+          />
+        </svg>
       </div>
     </section>
   );
