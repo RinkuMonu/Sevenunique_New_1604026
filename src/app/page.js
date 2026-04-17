@@ -5,6 +5,7 @@ import ClientLogos from "@/components/ClientLogos";
 import Services from "@/components/Services";
 import TalentProcess from "@/components/TalentProcess";
 import Industries from "@/components/Industries";
+import BlogInsights from "@/components/BlogInsights";
 import CTABand from "@/components/CTABand";
 import Footer from "@/components/Footer";
 
@@ -16,6 +17,7 @@ export default function Home() {
      <Services />
      <TalentProcess />
      <Industries />
+     <BlogInsights />
      <CTABand />
     </div>
   );
