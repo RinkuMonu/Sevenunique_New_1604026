@@ -2,6 +2,7 @@ import Image from "next/image";
 import Header from "./Header";
 import Hero from "@/components/Hero";
 import ClientLogos from "@/components/ClientLogos";
+import FeaturedSection from "@/components/FeaturedSection";
 import Services from "@/components/Services";
 import TalentProcess from "@/components/TalentProcess";
 import Industries from "@/components/Industries";
@@ -13,6 +14,7 @@ export default function Home() {
     <div>
      <Hero />
      <ClientLogos />
+     <FeaturedSection />
      <Services />
      <TalentProcess />
      <Industries />
