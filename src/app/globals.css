@@ -34,6 +34,43 @@ body {
   }
 }
 
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.spin-slow {
+  animation: spinSlow 20s linear infinite;
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
+
+.spin-reverse {
+  animation: spinReverse 25s linear infinite;
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
+/* Triangle */
+.clip-triangle {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* Tilted polygon (like screenshot) */
+.clip-polygon {
+  clip-path: polygon(10% 0%, 100% 10%, 90% 100%, 0% 90%);
 
 /* LEFT → RIGHT */
 @keyframes marquee {
