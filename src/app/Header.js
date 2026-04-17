@@ -18,6 +18,7 @@ export default function Header() {
             alt="logo"
             width={140}
             height={40}
+            className="w-32 h-auto"
           />
         </Link>
 

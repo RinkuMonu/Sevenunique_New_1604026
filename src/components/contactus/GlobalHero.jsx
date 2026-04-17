@@ -4,32 +4,36 @@ import Image from "next/image";
 
 export default function GlobalHero() {
   return (
-    <section className="relative bg-black text-white py-28 overflow-hidden">
+    <section className="relative bg-black text-white py-32 overflow-hidden">
       
-      {/* Background Image (World Map) */}
-      <div className="absolute inset-0 opacity-30">
+      {/* TOP RIGHT IMAGE */}
+      <div className="absolute top-0 right-30 w-[60%] h-[60%]">
         <Image
-          src="/global.png" // 👈 apni image yaha daal
+          src="/global.png"
           alt="world map"
           fill
-          className="object-contain object-top"
+          className="object-contain object-top-right"
         />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      {/* CONTENT LEFT SIDE */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
         
-        <h1 className="text-3xl md:text-5xl font-semibold leading-tight">
-          Accelerate your roadmap <br />
-          with a{" "}
-          <span className="text-orange-500">
-            global partner.
-          </span>
-        </h1>
+        <div className="max-w-xl">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight">
+            Accelerate your roadmap
+            <br />
+            with a{" "}
+            <span className="text-orange-500">
+              global partner.
+            </span>
+          </h1>
 
-        <button className="mt-10 bg-green-600 hover:bg-green-700 transition px-6 py-3 rounded-lg text-white font-medium">
-          Book a Discovery Call
-        </button>
+          <button className="mt-10 bg-green-600 hover:bg-green-700 transition px-6 py-3 rounded-lg text-white font-medium">
+            Book a Discovery Call
+          </button>
+        </div>
+
       </div>
     </section>
   );
