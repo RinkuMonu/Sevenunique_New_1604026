@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function CTABand() {
   return (
-    <section className=" px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-28 overflow-hidden">
+    <section className="bg-[#020202] px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-28 overflow-hidden">
       
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-10">
         

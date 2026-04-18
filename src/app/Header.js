@@ -402,7 +402,7 @@ export default function Header() {
                 Schedule a Call
               </Link>
             </div>
-          </div>
+          </div> 
         </div>
       )}
       <style jsx global>{`
