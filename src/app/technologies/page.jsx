@@ -284,9 +284,11 @@ export default function TechnologiesPage() {
           </div>
         </div>
 
-        {/* Filter chips */}
+        
+      </section>
+          {/* Filter chips */}
         <div
-          className="relative z-10 flex flex-wrap justify-center items-center gap-2 mt-10 px-4"
+          className="relative z-10 flex flex-wrap justify-center items-center gap-2 py-4 px-4 bg-[#F6F7F8]"
           style={fadeIn(400)}
         >
           <span className="text-sm font-semibold text-gray-700 mr-1">Filter by:</span>
@@ -304,10 +306,9 @@ export default function TechnologiesPage() {
             </button>
           ))}
         </div>
-      </section>
-
       {/* ── Alphabetical Grid ── */}
       <section className="max-w-7xl mx-auto px-6 py-10">
+      
         {sortedLetters.length > 0 ? (
           <div className="space-y-12">
             {sortedLetters.map((letter) => (
