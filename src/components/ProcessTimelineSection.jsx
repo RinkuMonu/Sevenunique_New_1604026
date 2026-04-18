@@ -14,20 +14,20 @@ export default function ProcessTimelineSection() {
     {
       icon: <Phone size={18} />,
       step: "STEP 1",
-      title: "Join exploration call.",
-      desc: "Tell us more about your business on a discovery call. We’ll discuss team structure and approach, success criteria, timescale, budget, and required skill sets to see how we can help.",
+      title: "Schedule a discovery session.",
+      desc: "Walk us through your requirements, and we’ll explore the right team, timeline, budget, and strategy to move forward.",
     },
     {
       icon: <Users size={18} />,
       step: "STEP 2",
-      title: "Discuss solution and team structure.",
-      desc: "In a matter of days, we will finalize your project specifications, agree on an engagement model, select and onboard your team.",
+      title: "Plan the solution and team.",
+      desc: "In just a few days, we lock in specifications, finalize the model, and onboard the right talent.",
     },
     {
       icon: <TrendingUp size={18} />,
       step: "STEP 3",
-      title: "Get started and track performance.",
-      desc: "Once we’ve agreed on milestones, we’ll immediately get to work. We’ll track progress, report updates, and continuously adapt to your needs.",
+      title: "Kick off and track results.",
+      desc: "After aligning on milestones, we start right away, providing regular updates and adjusting to your needs.",
     },
   ];
 
@@ -39,9 +39,9 @@ export default function ProcessTimelineSection() {
         {/* 🔥 CENTERED HEADER */}
         <div className="mb-20 text-center">
           <h2 className="text-[44px] leading-[1.2] font-semibold text-[#1a1a18]">
-            Our process. <br />
-            Simple, seamless, <br />
-            streamlined<span className="text-[#f4622a]">.</span>
+           Our process.<br />
+            Simple, smooth, <br />
+             and efficient<span className="text-[#f4622a]">.</span>
           </h2>
         </div>
 

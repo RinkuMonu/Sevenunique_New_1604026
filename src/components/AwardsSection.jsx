@@ -23,15 +23,14 @@ export default function AwardsSection() {
             </p>
 
             <h2 className="text-4xl lg:text-5xl font-semibold leading-tight mb-6 text-white">
-              <span className="text-[#f4622a]">Excellence.</span>
+              <span className="text-[#f4622a]">Excellence </span>
               <br />
-              Our minimum bar <br />
-              for client delivery.
-            </h2>
+              is our <br />
+ standard.            </h2>
 
             <p className="text-white/60 text-sm leading-relaxed mb-8 max-w-sm">
-              Over 130 awards, accolades, and achievements showcase our quality
-              and commitment to client success.
+             We’ve earned 130+ awards and recognitions that reflect our commitment to delivering real client success.
+
             </p>
 
             <button className="text-[#f4622a] text-sm font-medium border-b border-[#f4622a] pb-1 hover:opacity-80 transition">

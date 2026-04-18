@@ -17,21 +17,21 @@ export default function Hero() {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-  const interval = setInterval(() => {
-    setVisible(false); // fade out
+    const interval = setInterval(() => {
+      setVisible(false); // fade out
 
-    setTimeout(() => {
-      setIndex((prev) => (prev + 1) % words.length);
-      setVisible(true); // fade in
-    }, 600); // slower animation
-  }, 5000); // more reading time
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % words.length);
+        setVisible(true); // fade in
+      }, 600); // slower animation
+    }, 5000); // more reading time
 
-  return () => clearInterval(interval);
-}, []);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="relative overflow-hidden bg-white pb-32 lg:pb-40">
-      
+
       {/* FULL WIDTH IMAGE */}
       <div className="absolute inset-0">
         <Image
@@ -48,25 +48,25 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 lg:py-32">
         <div className="max-w-2xl">
 
-<h1 className="text-[53.92px] font-semibold leading-[1.1] text-black mb-6 font-sans">
-              Accelerate Your Roadmap <br />
-            With Our Vetted Nearshore <br />
+          <h1 className="text-[53.92px] font-semibold leading-[1.1] text-black mb-6 font-sans">
+            Speed Up Your Roadmap with Trusted
+            <br />
+            Nearshore Talent <br />
 
             {/* 🔥 Animated Text */}
             <span
-              className={`text-[#f4622a] inline-block transition-all duration-500 ${
-                visible
+              className={`text-[#f4622a] inline-block transition-all duration-500 ${visible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-3"
-              }`}
+                }`}
             >
               {words[index]}
             </span>
           </h1>
 
           <p className="text-gray-600 text-lg mb-8">
-            Access 4,000+ timezone-aligned software engineers
-            with experience in AI and 100+ other technologies.
+            Get access to 4,000+ timezone–compatible developers skilled in AI and over 100 technologies.
+
           </p>
 
           <Link
