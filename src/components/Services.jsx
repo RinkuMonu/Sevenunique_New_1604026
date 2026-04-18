@@ -3,7 +3,7 @@ import Link from "next/link";
 const services = [
   {
     title: "Front-End Development",
-    desc: "Build modern frontends designed for performance, accessibility, and scale.",
+    desc: "Create high-performance, accessible, and scalable user interfaces.",
     tags: ["Front-End", "Web Development", "React", "Angular"],
     iconBg: "bg-[#e25d35]",
     icon: (
@@ -14,7 +14,7 @@ const services = [
   },
   {
     title: "Back-End Development",
-    desc: "Develop secure, scalable backends that perform reliably under load.",
+    desc: "Create strong, scalable architectures built for stability and efficiency.",
     tags: ["Back-End", "Database", "Go", ".NET", "Java", "Node.js"],
     iconBg: "bg-[#232f3f]",
     icon: (
@@ -25,7 +25,7 @@ const services = [
   },
   {
     title: "AI and Machine Learning",
-    desc: "Deploy trustworthy AI solutions that create real business value.",
+    desc: "Implement reliable AI solutions that drive meaningful business outcomes.",
     tags: ["AI", "Machine Learning", "Data Science", "LLMs", "Generative AI", "Python"],
     iconBg: "bg-[#0f4f93]",
     icon: (
@@ -36,7 +36,7 @@ const services = [
   },
   {
     title: "Mobile Development",
-    desc: "Launch iOS and Android apps with smooth performance, stable sessions, and secure data handling.",
+    desc: "Build high-performance iOS and Android apps with seamless user experiences and strong data security.",
     tags: ["Mobile Applications", "iOS", "Android"],
     iconBg: "bg-[#1e5dc0]",
     icon: (
@@ -47,7 +47,7 @@ const services = [
   },
   {
     title: "UX/UI Design",
-    desc: "Deliver product designs with clear user flows, reusable components, and accessible layouts.",
+    desc: "Create intuitive designs with clear user journeys, scalable components, and accessible interfaces.",
     tags: ["UX Design", "UI Design"],
     iconBg: "bg-[#3f9ea6]",
     icon: (
@@ -58,7 +58,7 @@ const services = [
   },
   {
     title: "QA and Testing",
-    desc: "Ship release-ready software with manual and automated testing that validate core flows end to end.",
+    desc: "Ensure high-quality releases with end-to-end testing covering both manual and automated processes.",
     tags: ["Quality Assurance"],
     iconBg: "bg-[#1f9f71]",
     icon: (
@@ -110,7 +110,7 @@ export default function Services() {
                 {svc.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center px-2.5 py-1 text-[11px] leading-none text-[#1f4d84] border border-[#7ea5c9] rounded-md bg-transparent hover:bg-blue-500 hover:text-white hover:cursor-pointer"
+                    className="inline-flex items-center px-2.5 py-1 text-[15px] leading-none text-[#1764ca] border border-[#8db2e2] rounded-md bg-transparent hover:bg-blue-500 hover:text-white hover:cursor-pointer"
                   >
                     {tag}
                   </span>

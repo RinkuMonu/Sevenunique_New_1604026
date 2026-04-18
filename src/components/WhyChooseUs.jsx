@@ -10,19 +10,19 @@ const outfit = Outfit({
 const features = [
   {
     title: "The right people",
-    desc: "Our rigorous hiring process ensures only rock-solid, skilled candidates make it through.",
+    desc: "Our strict selection process guarantees experienced and capable experts on every project.",
   },
   {
     title: "The right team",
-    desc: "From solo engineers to multi-team engagements. Flexible project management options.",
+    desc: "Scale from a single engineer to dedicated teams with flexible project support.",
   },
   {
     title: "The right place",
-    desc: "Our nearshore teams are online when you are. Clear communication in English.",
+    desc: "Aligned with your working hours, our teams communicate clearly and collaborate efficiently.",
   },
   {
     title: "The right time",
-    desc: "Teams that start when you need them. Scale up or down with ease.",
+    desc: "Start quickly and scale your team up or down whenever required.",
   },
 ];
 
@@ -34,9 +34,9 @@ export default function WhyChooseUs() {
         {/* HEADING */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-semibold text-[#1a1a1a] leading-tight">
-            No need to wonder.
+           No doubts, just results.
             <br />
-            Working with us is wonderful
+           Working with us is simple and smooth.
             <span className="text-[#f4622a]">.</span>
           </h2>
         </div>
