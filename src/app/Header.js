@@ -10,7 +10,7 @@ const servicesCols = [
   {
     label: "Top Services",
     items: [
-      "AI Development",
+  { name: "AI Development", link: "/services/ai-development" },
       "Back-end Development",
       "CMS Development",
       "Cryptocurrency & Blockchain",
@@ -200,13 +200,21 @@ export default function Header() {
                             <div key={col.label || "services-second-col"}>
                               {col.label ? <DotHeading>{col.label}</DotHeading> : <div className="mb-4 h-[18px]" />}
                               <ul className="space-y-3">
-                                {col.items.map((entry) => (
-                                  <li key={entry}>
-                                    <Link href="#" className="inline-flex text-[12px] text-[#222] transition-all duration-200 hover:translate-x-1 hover:text-[#f46b45]">
-                                      {entry}
-                                    </Link>
-                                  </li>
-                                ))}
+                               {col.items.map((entry) => {
+  const name = typeof entry === "string" ? entry : entry.name;
+  const link = typeof entry === "string" ? "#" : entry.link;
+
+  return (
+    <li key={name}>
+      <Link
+        href={link}
+        className="inline-flex text-[12px] text-[#222] transition-all duration-200 hover:translate-x-1 hover:text-[#f46b45]"
+      >
+        {name}
+      </Link>
+    </li>
+  );
+})}
                               </ul>
                             </div>
                           ))}
@@ -371,17 +379,22 @@ export default function Header() {
                     </button>
                     {isActive && (
                       <ul className="grid grid-cols-1 gap-y-2 pb-3 text-[13px] text-[#222] sm:grid-cols-2">
-                        {cols.map((entry) => (
-                          <li key={`${id}-${entry}`}>
-                            <Link
-                              href="#"
-                              className="block rounded-md py-1 pr-2 transition-colors hover:text-[#f46b45]"
-                              onClick={() => setMobileOpen(false)}
-                            >
-                              {entry}
-                            </Link>
-                          </li>
-                        ))}
+                        {cols.map((entry) => {
+  const name = typeof entry === "string" ? entry : entry.name;
+  const link = typeof entry === "string" ? "#" : entry.link;
+
+  return (
+    <li key={`${id}-${name}`}>
+      <Link
+        href={link}
+        className="block rounded-md py-1 pr-2 transition-colors hover:text-[#f46b45]"
+        onClick={() => setMobileOpen(false)}
+      >
+        {name}
+      </Link>
+    </li>
+  );
+})}
                       </ul>
                     )}
                   </div>
