@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import AwardsSection from "@/components/AwardsSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import TeamMorphSection from "@/components/TeamMorphSection";
+import ProcessTimelineSection from "@/components/ProcessTimelineSection";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
      <AwardsSection />
      <WhyChooseUs />
      <TeamMorphSection />
+     <ProcessTimelineSection />
      <Services />
      <TalentProcess />
      <Industries />
