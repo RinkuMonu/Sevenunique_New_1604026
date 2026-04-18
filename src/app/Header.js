@@ -11,7 +11,7 @@ const servicesCols = [
     label: "Top Services",
     items: [
   { name: "AI Development", link: "/services/ai-development" },
-      "Back-end Development",
+    { name: "Back-end Development", link: "/services/backend-development" },
       "CMS Development",
       "Cryptocurrency & Blockchain",
       "Front-end Development",
