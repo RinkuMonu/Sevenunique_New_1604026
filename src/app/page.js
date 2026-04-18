@@ -20,15 +20,13 @@ export default function Home() {
     <div>
      <Hero />
      <ClientLogos />
+      <Services />
      <FeaturedSection />
+     <TestimonialSlider />
      <AwardsSection />
      <WhyChooseUs />
      <TeamMorphSection />
-     <ProcessTimelineSection />
-     <Services />
-     <TestimonialSlider />
-     <TalentProcess />
-     <Industries />
+     <ProcessTimelineSection />  
      <BlogInsights />
      <CTABand />
     </div>
