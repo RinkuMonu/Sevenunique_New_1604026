@@ -39,10 +39,12 @@ export default function Footer() {
             <div className="pt-1">
               <Link href="#" aria-label="BairesDev">
                 <Image
-                  src="https://assets.bairesdev.com//image/upload/c_limit,w_60/fl_sanitize/v1/www/static/bairesdev-logo-footer_wbvcp2.svg"
+                  // src="https://assets.bairesdev.com//image/upload/c_limit,w_60/fl_sanitize/v1/www/static/bairesdev-logo-footer_wbvcp2.svg"
+                              src="/sevenLogo.png"
+
                   alt="BairesDev"
-                  width={58}
-                  height={38}
+                  width={170}
+                  height={80}
                   className="h-auto w-[58px]"
                 />
               </Link>
