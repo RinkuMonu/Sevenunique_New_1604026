@@ -106,7 +106,7 @@ export default function TeamMorphSection() {
           ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
           <h2 className="text-[32px] sm:text-[48px] lg:text-[56px] font-semibold text-[#444] mb-8 tracking-tight leading-tight">
-            Let’s assemble your team.
+            Let’s build your team.
           </h2>
           
           <Link
