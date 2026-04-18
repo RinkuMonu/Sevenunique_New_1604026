@@ -137,11 +137,12 @@ export default function Header() {
       <div className="mx-auto flex max-w-[1280px] items-center justify-between px-4 py-4 sm:px-6">
         <Link href="/">
           <Image
-            src="https://assets.bairesdev.com/image/upload/www/static/bairesdev-logo_mdbbsh.svg"
-            alt="BairesDev"
-            width={152}
-            height={32}
-            priority
+            // src="https://assets.bairesdev.com/image/upload/www/static/bairesdev-logo_mdbbsh.svg"
+            src="/sevenLogo.png"
+            alt="logo"
+            width={170}
+            height={80}
+            className="w-32 h-auto"
           />
         </Link>
 

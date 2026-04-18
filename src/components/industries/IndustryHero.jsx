@@ -4,12 +4,12 @@ import Image from "next/image";
 
 export default function IndustryHero() {
   return (
-    <section className="bg-white py-12">
+    <section className="bg-white py-2">
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
 
         {/* LEFT */}
         <div>
-          <p className="text-sm text-gray-500 mb-3">
+          <p className="text-lg font-bold text-gray-500 mb-3">
             INDUSTRIES WE WORK IN
           </p>
 
@@ -31,8 +31,8 @@ export default function IndustryHero() {
           <Image
             src="/industriesHero.avif"
             alt="industry"
-            width={800}
-            height={400}
+            width={750}
+            height={350}
             className="w-full h-auto"
           />
         </div>
