@@ -18,7 +18,7 @@ export default function BackendHero() {
 
                         <span className="mx-2">›</span>
 
-                        <Link href="/solutions" className="hover:text-black transition hover: underline">
+                        <Link href="/solutions" className="hover:text-black transition hover:underline">
                             Solutions
                         </Link>
 
