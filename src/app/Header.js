@@ -47,10 +47,11 @@ export default function Header() {
         {/* Logo */}
         <Link href="/">
           <Image
-            src="https://assets.bairesdev.com/image/upload/www/static/bairesdev-logo_mdbbsh.svg"
+            // src="https://assets.bairesdev.com/image/upload/www/static/bairesdev-logo_mdbbsh.svg"
+            src="/sevenLogo.png"
             alt="logo"
-            width={140}
-            height={40}
+            width={170}
+            height={80}
             className="w-32 h-auto"
           />
         </Link>
