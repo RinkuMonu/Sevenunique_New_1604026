@@ -110,7 +110,7 @@ export default function Services() {
                 {svc.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center px-2.5 py-1 text-[11px] leading-none text-[#1f4d84] border border-[#7ea5c9] rounded-md bg-transparent hover:bg-blue-500 hover:text-white hover:cursor-pointer"
+                    className="inline-flex items-center px-2.5 py-1 text-[15px] leading-none text-[#1764ca] border border-[#8db2e2] rounded-md bg-transparent hover:bg-blue-500 hover:text-white hover:cursor-pointer"
                   >
                     {tag}
                   </span>
