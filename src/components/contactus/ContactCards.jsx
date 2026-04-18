@@ -37,7 +37,7 @@ export default function ContactCards() {
   return (
     <section className="bg-[#f5f7fa] py-16">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        
+
         {cards.map((card, i) => (
           <div
             key={i}
@@ -45,9 +45,8 @@ export default function ContactCards() {
           >
             <div>
               <h3
-                className={`text-lg font-semibold mb-3 ${
-                  card.highlight ? "text-orange-500" : "text-black"
-                }`}
+                className={`text-lg font-semibold mb-3 ${card.highlight ? "text-orange-500" : "text-black"
+                  }`}
               >
                 {card.title}
               </h3>
@@ -66,26 +65,41 @@ export default function ContactCards() {
 
       {/* Bottom row */}
       <div className="max-w-7xl mx-auto px-6 mt-12 flex flex-col md:flex-row items-center gap-6 text-black">
-        
+
         {/* Call Us */}
         <div>
-          <h4 className="font-semibold text-lg">Call Us</h4>
+          <h4 className="font-bold text-2xl">Call Us</h4>
           <div className="flex items-center gap-2 text-gray-600 mt-2">
-            <FaPhone size={18} />
+            <FaPhone size={22} />
             <span>+1(408) 478-2739</span>
           </div>
         </div>
 
         {/* Follow Us */}
         <div>
-          <h4 className="font-semibold text-lg">Follow Us</h4>
+          <h4 className="font-bold text-2xl">Follow Us</h4>
 
-          <div className="flex gap-4 mt-3 text-gray-700">
-            <FaLinkedin className="cursor-pointer hover:text-black transition" />
-            <FaFacebook className="cursor-pointer hover:text-black transition" />
-            <FaTwitter className="cursor-pointer hover:text-black transition" />
-            <FaInstagram className="cursor-pointer hover:text-black transition" />
-            <FaYoutube className="cursor-pointer hover:text-black transition" />
+          <div className="flex gap-4 mt-4 text-gray-700">
+            <FaLinkedin
+              size={22}
+              className="cursor-pointer hover:text-black transition"
+            />
+            <FaFacebook
+              size={22}
+              className="cursor-pointer hover:text-black transition"
+            />
+            <FaTwitter
+              size={22}
+              className="cursor-pointer hover:text-black transition"
+            />
+            <FaInstagram
+              size={22}
+              className="cursor-pointer hover:text-black transition"
+            />
+            <FaYoutube
+              size={22}
+              className="cursor-pointer hover:text-black transition"
+            />
           </div>
         </div>
       </div>
