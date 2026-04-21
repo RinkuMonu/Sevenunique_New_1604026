@@ -15,7 +15,7 @@ export default function Page() {
   };
 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen mb-10">
       {/* LEFT */}
       <div className="flex-1 bg-white">
         <div className="max-w-[37rem] mx-auto px-6 md:px-0 flex flex-col min-h-screen">

@@ -8,7 +8,7 @@ export default function ArticleCard({
   featured = false,
 }) {
   return (
-    <a href="#" className="group flex flex-col cursor-pointer">
+    <a href="/blogDetails" className="group flex flex-col cursor-pointer">
       <div
         className={`w-full aspect-[16/9] rounded-lg mb-3 flex items-center justify-center overflow-hidden flex-shrink-0  ${featured ? "border-4 border-[#F04E23]" : ""}`}
       >

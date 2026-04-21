@@ -1,6 +1,15 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
-
+import { FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaSquareYoutube, FaXTwitter } from "react-icons/fa6";
+import { IoHomeOutline } from "react-icons/io5";
+import { SiOpenai } from "react-icons/si"; // ChatGPT
+import { SiGoogle } from "react-icons/si"; // Gemini (approx)
+import { SiAnthropic } from "react-icons/si"; // Claude
+import { SiX } from "react-icons/si"; // Grok (X)
+import { TbBrandOpenai } from "react-icons/tb"; // fallback
+import { BsStars } from "react-icons/bs"; // main AI icon
 // ─── Icon helpers ─────────────────────────────────────────────────────────────
 const CalendarIcon = () => (
   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -178,20 +187,42 @@ const relatedArticles = [
 function Breadcrumb() {
   return (
     <ol className="hidden md:flex items-center flex-wrap gap-1 text-sm text-gray-600 mb-8 px-4 lg:px-0">
-      {["Home", "Blog", "Software Development"].map((item, i) => (
-        <li key={i} className="flex items-center gap-1">
-          <a href="#" className="hover:underline">
-            {item}
-          </a>
-          <svg
-            className="w-4 h-4 text-gray-800"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M9.71 6L8.3 7.41 12.88 12l-4.58 4.59L9.71 18l6-6z" />
-          </svg>
-        </li>
-      ))}
+      <li className="flex items-center gap-3">
+        <a href="#" className="hover:underline ">
+          <IoHomeOutline size={18} color="text-gray-700" />
+        </a>
+        <svg
+          className="w-4 h-4 text-gray-800"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M9.71 6L8.3 7.41 12.88 12l-4.58 4.59L9.71 18l6-6z" />
+        </svg>
+      </li>
+      <li className="flex items-center gap-1">
+        <a href="#" className="hover:underline">
+          Blog
+        </a>
+        <svg
+          className="w-4 h-4 text-gray-800"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M9.71 6L8.3 7.41 12.88 12l-4.58 4.59L9.71 18l6-6z" />
+        </svg>
+      </li>
+      <li className="flex items-center gap-1">
+        <a href="#" className="hover:underline">
+          Software Development
+        </a>
+        <svg
+          className="w-4 h-4 text-gray-800"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M9.71 6L8.3 7.41 12.88 12l-4.58 4.59L9.71 18l6-6z" />
+        </svg>
+      </li>
       <li className="font-bold text-gray-900 text-sm">
         Java Multithreading for Engineering Leaders: A Concurrency Risk and
         Governance Playbook
@@ -206,7 +237,7 @@ function AuthorCard() {
       {/* Badge */}
       <div className="absolute -top-3 right-6">
         <div className="relative inline-block">
-          <div className="bg-gradient-to-r from-blue-700 to-blue-900 text-white text-[11px] font-medium px-3 py-1 rounded-full flex items-center gap-1">
+          <div className="bg-gradient-to-t from-[#10654a] to-[#23a87e] text-white text-[11px] font-medium px-3 py-1 rounded-full flex items-center gap-1">
             <VerifiedIcon />
             <span>Verified Top Talent</span>
           </div>
@@ -218,32 +249,47 @@ function AuthorCard() {
         <div className="w-16 h-16 rounded-xl bg-gray-200 flex-shrink-0 overflow-hidden">
           {/* Replace with <Image src="..." alt="Fernando Ugarte" width={64} height={64} className="rounded-xl object-cover" /> */}
           <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center text-gray-500 text-xs">
-            Photo
+            <Image
+              src="https://assets.bairesdev.com/image/upload/f_auto,q_auto/www/blog/authors/FernandoUgarte_1760447453"
+              alt="Fernando Ugarte"
+              width={64}
+              height={64}
+              className="rounded-xl object-cover"
+            />
           </div>
         </div>
 
         <div className="flex-1">
-          <p className="text-sm font-normal text-gray-700">
+          <p className="text-xl font-semibold text-gray-700">
             By{" "}
             <a
               href="#"
-              className="font-bold text-gray-900 hover:text-blue-600 underline"
+              className="font-bold text-gray-900 hover:text-blue-600 underline text-[30px]"
             >
               Fernando Ugarte
             </a>
           </p>
           <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-0 mt-1">
-            <span className="text-sm text-gray-800">
+            <span className="text-md text-gray-600">
               Principal Software Engineer
             </span>
             <span className="hidden sm:inline mx-2 w-1.5 h-1.5 rounded-full bg-gray-200"></span>
-            <span className="text-xs text-gray-500">
+            <span className="text-md text-gray-500">
               16 years of experience
             </span>
           </div>
           <div className="flex items-center gap-3 mt-2">
-            <a href="#" className="text-gray-400 hover:text-blue-600">
-              <LinkedInIcon />
+            <a href="#" className="text-gray-600 hover:text-orange-600 ">
+              <LinkedInIcon size={22} />
+            </a>
+            <a href="#" className="text-gray-600 hover:text-orange-600 ">
+              <FaXTwitter size={22} />
+            </a>
+            <a href="#" className="text-gray-600 hover:text-orange-600 ">
+              <FaInstagram size={22} />
+            </a>
+            <a href="#" className="text-gray-600 hover:text-orange-600 ">
+              <FaSquareYoutube size={22} />
             </a>
           </div>
         </div>
@@ -257,14 +303,14 @@ function AuthorCard() {
       </p>
 
       <div className="mt-3">
-        <span className="text-xs font-bold uppercase text-gray-400 tracking-wide">
+        <span className="text-xs font-bold uppercase text-gray-500 tracking-wide">
           Expertise
         </span>
         <div className="flex flex-wrap gap-2 mt-2">
           {["Java", "SQL Server", "Backend Development"].map((tag) => (
             <span
               key={tag}
-              className="border border-gray-200 rounded-lg px-3 py-1 text-xs text-gray-700 hover:border-blue-500 cursor-pointer"
+              className="border border-gray-300 rounded-lg px-3 py-1 text-xs text-gray-700 hover:border-blue-500 cursor-pointer font-semibold tracking-wide"
             >
               {tag}
             </span>
@@ -277,9 +323,9 @@ function AuthorCard() {
 
 function ArticleMeta() {
   return (
-    <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-xs uppercase tracking-wide text-gray-400 mt-4">
+    <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-xs uppercase tracking-wide text-gray-600 font-bold mt-4 tracking-widest">
       <span className="flex items-center gap-2">
-        <CalendarIcon />
+        <CalendarIcon color="text-gray-500" />
         Last Updated: March 9th 2026
       </span>
       <span className="flex items-center gap-2">
@@ -294,11 +340,15 @@ function HeroImage() {
   return (
     <div className="relative w-full aspect-video bg-gray-200 rounded overflow-hidden mt-8 md:mt-0">
       {/* Replace with <Image src="/images/java-multithreading-hero.png" alt="Java Multithreading" fill className="object-cover" /> */}
-      <div className="w-full h-full bg-gradient-to-br from-blue-50 via-gray-100 to-gray-200 flex items-center justify-center">
+      <div className="w-full h-full flex items-center justify-center">
         <div className="text-center text-gray-400">
-          <div className="text-4xl mb-2">☕</div>
-          <p className="text-sm">Hero Image Placeholder</p>
-          <p className="text-xs">Java Multithreading for Engineering Leaders</p>
+          <Image
+            src="https://bairesdev.mo.cloudinary.net/blog/2026/03/Java-Multithreading-for-Engineering-Leaders.png?tx=w_1920,q_auto"
+            alt="Java Multithreading"
+            width={900}
+            height={800}
+            className="object-cover"
+          />
         </div>
       </div>
     </div>
@@ -310,9 +360,17 @@ function DiagramImage({ alt, className = "" }) {
     <div
       className={`w-full bg-gray-100 rounded overflow-hidden my-6 ${className}`}
     >
-      <div className="aspect-[2/1] flex items-center justify-center text-gray-400 text-sm">
-        <div className="text-center p-4">
-          <div className="text-2xl mb-1">📊</div>
+      <div className="aspect-[2/1] flex items-center justify-center text-gray-400">
+        <div className="text-center p4">
+          <div className="">
+            <Image
+              src="https://bairesdev.mo.cloudinary.net/blog/2026/03/JPI-1-1536x773.png"
+              alt="Diagram placeholder"
+              width={900}
+              height={900}
+              className="object-cover"
+            />
+          </div>
           <p className="text-xs">{alt}</p>
         </div>
       </div>
@@ -329,7 +387,7 @@ function DataTable({ headers, rows }) {
             {headers.map((h, i) => (
               <th
                 key={i}
-                className="text-left p-3 font-semibold text-gray-800 border border-gray-200 text-xs"
+                className="text-left p-3 font-semibold text-gray-900 border border-gray-200 text-lg"
               >
                 {h}
               </th>
@@ -342,7 +400,7 @@ function DataTable({ headers, rows }) {
               {row.map((cell, ci) => (
                 <td
                   key={ci}
-                  className="p-3 border border-gray-200 text-gray-700 text-xs align-top"
+                  className="p-3 border border-gray-200 text-gray-900 text-md align-top"
                 >
                   {ci === 0 ? <strong>{cell}</strong> : cell}
                 </td>
@@ -378,7 +436,7 @@ function FAQSection() {
                   {faq.q}
                 </span>
                 <span
-                  className={`rounded-full p-1 ${isOpen ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-600"}`}
+                  className={`rounded-full p-1 ${isOpen ? "bg-orange-600 text-white" : "bg-gray-200 text-gray-600"}`}
                 >
                   {isOpen ? <ChevronUp /> : <ChevronDown />}
                 </span>
@@ -437,27 +495,42 @@ function SocialShare({ vertical = false }) {
 
 function HiringWidget() {
   return (
-    <div className="bg-blue-50 border border-blue-100 rounded-lg shadow overflow-hidden">
+    <div className="border border-blue-100 rounded-lg shadow overflow-hidden bg-[#EAF2FD]">
       <div className="px-4 pt-4 pb-2">
         <h4 className="font-semibold text-gray-900 text-base">
           Hiring engineers?
         </h4>
       </div>
       <div className="px-4 pb-6 flex flex-col gap-4">
-        <p className="text-sm text-gray-700">
+        <p className="text-sm text-gray-800">
           We provide nearshore tech talent to companies from startups to
           enterprises like Google and Rolls-Royce.
         </p>
         {[
-          { name: "Alejandro D.", role: "Sr. Full-stack Dev." },
-          { name: "Gustavo A.", role: "Sr. QA Engineer" },
-          { name: "Fiorella G.", role: "Sr. Data Scientist" },
+          { name: "Alejandro D.", role: "Sr. Full-stack Dev.", img: "" },
+          {
+            name: "Gustavo A.",
+            role: "Sr. QA Engineer",
+            img: "",
+            extraMargin: true,
+          },
+          { name: "Fiorella G.", role: "Sr. Data Scientist", img: "" },
         ].map((person) => (
           <div
             key={person.name}
-            className="bg-white flex items-center gap-3 rounded-3xl py-1 pl-2 pr-8 w-fit"
+            className={`bg-white flex items-center gap-3 rounded-3xl py-1 pl-2 pr-8 w-fit ${person.extraMargin ? "ml-10" : ""}`}
           >
-            <div className="w-10 h-10 rounded-full bg-gray-200 flex-shrink-0" />
+            <div className="w-10 h-10 rounded-full bg-gray-200 flex-shrink-0 ">
+              {" "}
+              <Image
+                src="https://assets.bairesdev.com//image/upload/c_limit,w_80/dpr_auto/f_auto/q_auto/v1/www/static/talent-1_ylgyum?_a=BAVAfVDW0"
+                alt={person.name}
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
+            </div>
+
             <div>
               <p className="text-sm text-gray-600">{person.name}</p>
               <p className="text-xs text-gray-500">{person.role}</p>
@@ -480,18 +553,26 @@ function TestimonialWidget() {
   return (
     <div className="bg-white border border-blue-100 rounded-lg shadow sticky top-32">
       <div className="relative p-4 pt-6">
-        <span className="absolute left-0 top-0 -translate-x-4 -translate-y-6 text-7xl font-bold text-blue-600 leading-none select-none hidden lg:block">
-          "
+        <span className="absolute left-0 top-0 -translate-x-4 -translate-y-6 text-7xl font-bold text-orange-600 leading-none select-none hidden lg:block z-99">
+          “
         </span>
         <p className="text-gray-900 text-base italic">
-          "BairesDev assembled a dream team for us and in just a few months our
-          digital offering was completely transformed."
+          BairesDev assembled a dream team for us and in just a few months our
+          digital offering was completely transformed.
         </p>
-        <div className="bg-blue-50 mt-4 flex items-center gap-3 px-3 py-3 rounded">
+        <div className="bg-[#FEF1ED] mt-4 flex items-center gap-3 px-3 py-3 rounded">
           <div className="bg-white rounded-full w-14 h-14 flex items-center justify-center flex-shrink-0">
-            <div className="w-6 h-8 bg-gray-200 rounded" />
+            <div className="w-6 h-8 bg-[#FEF1ED] rounded">
+              <Image
+                src="https://assets.bairesdev.com//image/upload/c_limit,w_24/fl_sanitize/v1/www/core/joinus_rolls-royce_nca2nu.svg?_a=BAVAfVDW0"
+                alt="Rolls-Royce"
+                width={24}
+                height={32}
+                className="object-contain"
+              />
+            </div>
           </div>
-          <div>
+          <div className="">
             <p className="text-sm text-gray-900">VP Product Manager</p>
             <p className="text-xs text-gray-500">Rolls-Royce</p>
           </div>
@@ -518,7 +599,7 @@ function RelatedArticlesWidget() {
       <ul className="flex flex-col gap-3 px-4 py-4">
         {relatedArticles.map((a, i) => (
           <li key={i} className="flex items-start gap-2">
-            <span className="mt-1 text-blue-600 flex-shrink-0">
+            <span className="mt-1 text-blue-500 flex-shrink-0">
               <ArticleIcon />
             </span>
             <a
@@ -539,6 +620,13 @@ function PrevNextNav() {
     <div className="grid grid-cols-2 gap-4 mt-12 mb-4">
       <div className="flex flex-col h-full">
         <div className="relative h-44 bg-gray-200 rounded overflow-hidden group cursor-pointer">
+          <Image
+            src="https://bairesdev.mo.cloudinary.net/blog/2026/03/Why-Coding-Becomes-a-Specialist-Sport.png?tx=w_1920,q_auto"
+            alt="The Future of Software Development"
+            width={900}
+            height={800}
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-black/50 flex items-end p-3">
             <span className="text-white font-bold text-sm group-hover:underline leading-snug">
               The Future of Software Development: Why Coding Becomes a
@@ -556,6 +644,13 @@ function PrevNextNav() {
       </div>
       <div className="flex flex-col h-full">
         <div className="relative h-44 bg-gray-200 rounded overflow-hidden group cursor-pointer">
+          <Image
+            src="https://bairesdev.mo.cloudinary.net/blog/2026/03/Webinar-AI-first-enterprise.png?tx=w_1920,q_auto"
+            alt="The Future of Software Development"
+            width={900}
+            height={800}
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-black/50 flex items-end p-3">
             <span className="text-white font-bold text-sm group-hover:underline leading-snug text-right w-full">
               From AI Experiments to the AI-First Enterprise — Webinar Replay
@@ -575,9 +670,66 @@ function PrevNextNav() {
 }
 
 // ─── Main article body ────────────────────────────────────────────────────────
+
+function ArticleContents() {
+  const [open, setOpen] = useState(false);
+
+  const items = [
+    "Why Java Multithreading Fails Differently at Scale",
+    "How Organization Pressures Drive Multithreading Use",
+    "Why Teams Struggle with Multithreading",
+    "Concurrency Risk Signals Leaders Should Recognize",
+    "How to Diagnose and Prevent Multithreading Defects",
+  ];
+
+  return (
+    <div className="border border-gray-300 rounded-xl bg-white overflow-hidden">
+      {/* HEADER */}
+      <div
+        onClick={() => setOpen(!open)}
+        className={`flex justify-between items-center px-5 py-4 cursor-pointer transition
+        ${open ? "" : ""}`}
+      >
+        <span className="text-base font-medium text-gray-800">
+          Article Contents
+        </span>
+
+        <ChevronDown
+          className={`w-5 h-5 text-gray-500 transition-transform duration-300 ${
+            open ? "rotate-180" : ""
+          }`}
+        />
+      </div>
+
+      {/* DROPDOWN */}
+      <div
+        className={`transition-all duration-300 ${
+          open ? "max-h-72" : "max-h-0"
+        } overflow-hidden`}
+      >
+        <div className="max-h-72 overflow-y-auto">
+          {items.map((item, i) => (
+            <div
+              key={i}
+              className={`px-5 py-3 text-sm cursor-pointer border- last:border-none
+              ${
+                i === 0
+                  ? "bg-gray-100 text-gray-900"
+                  : "text-gray-700 hover:bg-gray-100"
+              }`}
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 function ArticleBody() {
   return (
     <article className="text-gray-700 text-base leading-relaxed mt-12 space-y-5">
+      <ArticleContents />
       <p>
         Java multithreading improves performance, but in large organizations it
         can also amplify failures unless it is governed like any other high-risk
@@ -638,6 +790,20 @@ function ArticleBody() {
         Concurrency is one type of optimization your teams can apply, but it
         comes with a different kind of risk.
       </p>
+      <ol className="list-disc list-inside space-y-2 pl-2 text-[20px]">
+        <li>
+          Restructuring to improved architecture: Wholesale changes risk losing
+          business rules built across the life of the original architecture.
+          Success can be assured by existing regression tests to make sure
+          features still work.
+        </li>
+        <li>
+          Optimizing with concurrency: Optimizing a familiar architecture risks
+          unpredictable behavior changes. Existing regression tests may not
+          trigger these behaviors, so they only emerge in production, usually
+          under heavy loads.
+        </li>
+      </ol>
 
       <DataTable
         headers={[
@@ -649,12 +815,12 @@ function ArticleBody() {
         rows={pressureRows.map((r) => [r.pressure, r.what, r.response, r.risk])}
       />
 
-      <p>
+      <p className="text-lg">
         You got your marching orders from the organization and you responded in
         a pragmatic fashion. This is good, but it should leave you asking two
         questions about each optimization:
       </p>
-      <ol className="list-decimal list-inside space-y-2 pl-2">
+      <ol className="list-decimal list-inside space-y-2 pl-2 text-lg">
         <li>
           Implemented in sound fashion, or are we going to see the predicted
           problems?
@@ -665,7 +831,21 @@ function ArticleBody() {
         </li>
       </ol>
 
-      <h2 className="text-2xl font-semibold text-gray-900 pt-4">
+      <p className="text-lg">
+        Each team that independently devises its own Java multithreading
+        solutions contributes to an organizational risk surface. Larger
+        organizations with more teams rolling their own solutions cause the risk
+        to increase non-linearly.
+      </p>
+
+      <p className="text-lg">
+        Knowing the risks causes leaders to lose sleep. It gets worse, though,
+        when you realize that these problems are the most difficult to diagnose
+        and fix. This is true not just because of their insidious nature, but
+        also because thread problem diagnosis-savvy people are rare.
+      </p>
+
+      <h2 className="text-3xl font-semibold text-black pt-4">
         Why Teams Struggle with Multithreading
       </h2>
       <p>
@@ -676,19 +856,29 @@ function ArticleBody() {
         recent graduates rarely have the ability to understand threading issues
         without on-the-job training.
       </p>
+      <ol className="list-disc list-inside space-y-2 pl-2 text-lg">
+        <li>
+          Implemented in sound fashion, or are we going to see the predicted
+          problems?
+        </li>
+        <li>
+          Stand-in for restructuring, or a band-aid that only raises the failure
+          threshold?
+        </li>
+      </ol>
       <p>
         Why did this happen? Modern platforms and libraries like Spring hide the
         gritty details that developers used to grapple with in custom code.
       </p>
 
-      <DiagramImage alt='Comparison: "Code at Rest" (linear flow) vs "Code in Motion" (chaotic concurrency)' />
+      <DiagramImage />
 
-      <p>
+      <p className="text-lg">
         The net effect creates an organizational blind spot when multithreading
         problems arise. Even with an expert diagnostician, these problems are
         hard to find because:
       </p>
-      <ul className="list-disc list-inside space-y-2 pl-2">
+      <ul className="list-disc list-inside space-y-2 pl-2 text-lg">
         <li>They do not appear in happy-path testing.</li>
         <li>Static code reviews are weak at spotting the risks.</li>
         <li>
@@ -696,8 +886,28 @@ function ArticleBody() {
           it's a timing issue")
         </li>
       </ul>
+      <p className="text-lg">
+        The problem is not with the Java platform. It was designed to support
+        threading, and it has only gotten more capable with lightweight
+        threading extensions. The root organizational problem stems from lack of
+        architectural oversight.
+      </p>
+      <p className="text-lg">
+        As a leader, you need to involve the architects to:
+      </p>
 
-      <h2 className="text-2xl font-semibold text-gray-900 pt-4">
+      <ol className="list-decimal list-inside space-y-2 pl-2 text-lg">
+        <li>
+          Establish guidelines for when and how to apply multithreading,
+          including approved patterns and banned anti-patterns.
+        </li>
+        <li>
+          Build a playbook for diagnosing and fixing multithreading problems
+          when they arise.
+        </li>
+      </ol>
+
+      <h2 className="text-3xl font-semibold text-black pt-4">
         Concurrency Risk Signals Leaders Should Recognize
       </h2>
       <p>
@@ -727,7 +937,7 @@ function ArticleBody() {
         governance.
       </p>
 
-      <DiagramImage alt="Six-step flowchart: Recognize → Contain → Visibility → Classify → Fix → Prevent" />
+      <DiagramImage />
 
       {[
         {
@@ -800,55 +1010,102 @@ function ReadingProgress() {
   );
 }
 
+function AISidebar() {
+  const [hovered, setHovered] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  const aiTools = [
+    {
+      name: "ChatGPT",
+      icon: <SiOpenai className="text-green-500 text-lg" />,
+    },
+    {
+      name: "Grok",
+      icon: <SiX className="text-black text-lg" />,
+    },
+    {
+      name: "Perplexity",
+      icon: <BsStars className="text-blue-500 text-lg" />,
+    },
+    {
+      name: "Google Gemini",
+      icon: <SiGoogle className="text-yellow-500 text-lg" />,
+    },
+    {
+      name: "Claude",
+      icon: <SiAnthropic className="text-orange-500 text-lg" />,
+    },
+  ];
+
+  return (
+    <>
+      <div className="hidden lg:block absolute left-0 top-0 z-20">
+        <div className="sticky top-32 flex flex-col gap-6">
+          {/* AI BUTTON */}
+          <div
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            onClick={() => setOpen(!open)}
+            className={`relative cursor-pointer transition-all duration-300 rounded-xl shadow-lg
+          ${hovered || open ? "w-56" : "w-16"}
+          bg-gradient-to-b from-blue-700 to-gray-900 p-3`}
+          >
+            <div className="flex items-center gap-3">
+              {/* ICON */}
+              <div
+                className="w-6 h-6 bg-white"
+                style={{
+                  mask: "url(https://assets.bairesdev.com/image/upload/www/static/union_1758745001.svg)",
+                  WebkitMask:
+                    "url(https://assets.bairesdev.com/image/upload/www/static/union_1758745001.svg)",
+                  maskRepeat: "no-repeat",
+                  WebkitMaskRepeat: "no-repeat",
+                  maskSize: "contain",
+                  WebkitMaskSize: "contain",
+                  maskPosition: "center",
+                  WebkitMaskPosition: "center",
+                }}
+              />
+
+              {/* TEXT (HOVER) */}
+              <span
+                className={`text-white text-sm font-semibold whitespace-nowrap transition-all duration-300
+              ${hovered || open ? "opacity-100" : "opacity-0 w-0 overflow-hidden"}`}
+              >
+                Summarize with AI
+              </span>
+            </div>
+
+            {/* DROPDOWN (CLICK) */}
+            {open && (
+              <div className="mt-4 bg-white rounded-xl p-3 flex flex-col gap-3 shadow-xl">
+                {aiTools.map((item) => (
+                  <div
+                    key={item.name}
+                    className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 cursor-pointer"
+                  >
+                    {item.icon}
+                    <span className="text-sm font-medium text-gray-700">
+                      {item.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+      {/* <SocialShare /> */}
+    </>
+  );
+}
 // ─── Main Page ────────────────────────────────────────────────────────────────
 export default function JavaMultithreadingPage() {
   return (
-    <div className="min-h-screen bg-white font-sans">
-      <ReadingProgress />
+    <div className="min-h-screen bg-white font-sans mb-10">
+      {/* <ReadingProgress /> */}
 
       {/* ── Nav (simplified) ─────────────────────────────── */}
-      <header className="sticky top-0 z-40 bg-white border-b border-gray-100 h-20 flex items-center px-6 lg:px-14 justify-between shadow-sm">
-        <div className="flex items-center gap-4">
-          {/* Logo placeholder */}
-          <div className="h-7 w-36 bg-gray-800 rounded flex items-center justify-center text-white text-xs font-bold tracking-widest">
-            BairesDev
-          </div>
-          <div className="w-px h-6 bg-gray-200 mx-2" />
-          <a
-            href="#"
-            className="text-sm text-gray-700 font-light flex items-center gap-1"
-          >
-            Blog{" "}
-            <svg
-              className="w-4 h-4 rotate-90"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M9.71 6L8.3 7.41 12.88 12l-4.58 4.59L9.71 18l6-6z" />
-            </svg>
-          </a>
-        </div>
-        <div className="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-800">
-          {[
-            "Services",
-            "Technologies",
-            "Industries",
-            "About",
-            "Our Work",
-            "Blog",
-          ].map((item) => (
-            <a key={item} href="#" className="hover:text-blue-600 transition">
-              {item}
-            </a>
-          ))}
-          <a
-            href="#"
-            className="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition text-sm font-medium ml-2"
-          >
-            Schedule a Call
-          </a>
-        </div>
-      </header>
 
       {/* ── Main layout ──────────────────────────────────── */}
       <main className="max-w-[89.5rem] mx-auto px-4 lg:px-14 mt-6">
@@ -881,23 +1138,7 @@ export default function JavaMultithreadingPage() {
             {/* Inline share + AI summary (desktop left side) */}
             <div className="relative lg:pl-24 xl:pl-28">
               {/* Floating share sidebar (desktop) */}
-              <div className="hidden lg:block absolute left-0 top-0 z-20">
-                <div className="sticky top-32 flex flex-col gap-8">
-                  {/* AI Summarize button */}
-                  <div className="bg-gradient-to-b from-blue-700 to-gray-900 rounded-xl p-3 cursor-pointer hover:opacity-90 transition">
-                    <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 bg-white/20 rounded flex items-center justify-center">
-                        <span className="text-white text-xs">✨</span>
-                      </div>
-                      <span className="text-white text-xs font-bold whitespace-nowrap">
-                        Summarize with AI
-                      </span>
-                    </div>
-                  </div>
-                  {/* Share icons */}
-                  <SocialShare vertical={true} />
-                </div>
-              </div>
+              <AISidebar />
 
               {/* Article content */}
               <ArticleBody />
@@ -928,108 +1169,7 @@ export default function JavaMultithreadingPage() {
       </main>
 
       {/* ── Footer (simplified) ─────────────────────────── */}
-      <footer className="mt-24 bg-gray-50 border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Logo */}
-          <div>
-            <div className="w-16 h-10 bg-gray-800 rounded flex items-center justify-center text-white text-xs font-bold">
-              BD
-            </div>
-            <div className="mt-6">
-              <p className="font-bold text-lg text-gray-900 mb-4">
-                Discover BairesDev<span className="text-blue-600">.</span>
-              </p>
-              {[
-                "About Us",
-                "Methodologies",
-                "Technologies",
-                "Staff Augmentation",
-              ].map((l) => (
-                <a
-                  key={l}
-                  href="#"
-                  className="block text-sm text-gray-700 hover:underline mb-2"
-                >
-                  {l}
-                </a>
-              ))}
-            </div>
-          </div>
-          <div>
-            <p className="font-bold text-lg text-gray-900 mb-4">
-              Resources<span className="text-blue-600">.</span>
-            </p>
-            {["Case Studies", "AI Learning Hub", "Blog", "Press"].map((l) => (
-              <a
-                key={l}
-                href="#"
-                className="block text-sm text-gray-700 hover:underline mb-2"
-              >
-                {l}
-              </a>
-            ))}
-          </div>
-          <div>
-            <p className="font-bold text-lg text-gray-900 mb-4">
-              Careers<span className="text-blue-600">.</span>
-            </p>
-            {["Job Opportunities", "Talent Referrals", "Company Culture"].map(
-              (l) => (
-                <a
-                  key={l}
-                  href="#"
-                  className="block text-sm text-gray-700 hover:underline mb-2"
-                >
-                  {l}
-                </a>
-              ),
-            )}
-          </div>
-          <div>
-            <p className="font-bold text-lg text-gray-900 mb-4">
-              Get in touch<span className="text-blue-600">.</span>
-            </p>
-            <div className="flex flex-col gap-3">
-              <a
-                href="#"
-                className="bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-blue-700 transition inline-flex items-center gap-2"
-              >
-                Schedule a Call <ArrowForward />
-              </a>
-              <a
-                href="#"
-                className="border-2 border-gray-900 text-gray-900 text-sm font-medium px-4 py-2 rounded-lg hover:bg-gray-900 hover:text-white transition inline-block"
-              >
-                Contact Us
-              </a>
-              <a
-                href="tel:+14084782739"
-                className="text-sm text-gray-700 flex items-center gap-2"
-              >
-                📞 +1 (408) 478-2739
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="border-t border-gray-200 px-8 py-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-2 max-w-7xl mx-auto">
-          <div className="flex gap-4 text-xs text-gray-500">
-            <a href="#" className="hover:underline">
-              Privacy Policy
-            </a>
-            <span>|</span>
-            <a href="#" className="hover:underline">
-              Terms of Service
-            </a>
-            <span>|</span>
-            <a href="#" className="hover:underline">
-              Do Not Sell My Personal Information
-            </a>
-          </div>
-          <p className="text-xs text-gray-500">
-            BairesDev 2009 - 2026. All rights reserved.
-          </p>
-        </div>
-      </footer>
+     
     </div>
   );
 }

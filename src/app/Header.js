@@ -483,18 +483,18 @@ export default function Header() {
             );
           })}
 
-          <Link href="#" className="transition-colors hover:text-[#f46b45]">
+          <Link href="/our-work-page" className="transition-colors hover:text-[#f46b45]">
             Our Work
           </Link>
           <Link
-            href="/blog/history-of-ai"
+            href="/blog"
             className="transition-colors hover:text-[#f46b45]"
           >
             Blog
           </Link>
 
           <Link
-            href="#"
+            href="/schedule-a-call-page"
             className="rounded-md bg-black px-4 py-2 text-[15px] font-medium text-white transition-colors hover:bg-gray-800"
           >
             Schedule a Call

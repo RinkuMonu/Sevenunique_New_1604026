@@ -27,7 +27,6 @@ const nextConfig = {
         pathname: "/**",
       },
     ],
-    reactCompiler: true,
 
   },
 };
