@@ -4,30 +4,61 @@ import Link from "next/link";
 function CaseStudyCard({ card }) {
   const content = (
     <div className="group relative min-h-[480px] overflow-hidden rounded-[18px] bg-black text-white shadow-[0_10px_30px_rgba(0,0,0,0.12)]">
+      
+      {/* IMAGE */}
       <Image
         src={card.image}
         alt={card.title}
         fill
         className="object-cover transition duration-500 group-hover:scale-105"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/68 to-black/98" />
+
+      {/* OVERLAY */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/60 to-black/90" />
+
+      {/* CONTENT */}
       <div className="relative z-10 flex h-full flex-col p-8">
-        <span className="inline-flex w-fit rounded-[10px] bg-[#eef0f3] px-4 py-3 text-[12px] font-semibold uppercase tracking-[0.24em] text-[#425b7d]">
+        
+        {/* TAG */}
+        <span className="inline-flex w-fit rounded-[10px] bg-[#eef0f3] px-4 py-3 text-[12px] font-medium uppercase tracking-[0.2em] text-[#425b7d]">
           {card.tag}
         </span>
 
-        <div className="mt-24 max-w-[300px]">
-          <h3 className="text-[26px] font-semibold leading-[1.22] text-white">
+        <div className="mt-24 max-w-[300px] relative">
+
+          {/* 🔴 TITLE (disappears on hover) */}
+          <h3
+            className="
+              text-[26px] font-semibold leading-[1.22] text-white
+              transition-all duration-300
+              group-hover:opacity-0 group-hover:-translate-x-4
+            "
+          >
             {card.title}
           </h3>
+
+          {/* 🟢 DESCRIPTION (slides in) */}
+          {card.description && (
+            <p
+              className="
+                absolute top-0 left-0
+                text-[16px] text-gray-300 leading-[1.6]
+                opacity-0 translate-x-full
+                group-hover:opacity-100 group-hover:translate-x-0
+                transition-all duration-500 ease-in-out
+              "
+            >
+              {card.description}
+            </p>
+          )}
+
         </div>
+
       </div>
     </div>
   );
 
-  if (!card.href) {
-    return content;
-  }
+  if (!card.href) return content;
 
   return (
     <Link href={card.href} className="block">
@@ -40,27 +71,33 @@ export default function CaseStudySection({ caseStudies }) {
   if (!caseStudies?.cards?.length) return null;
 
   return (
-    <section className="bg-white px-6 py-20 md:px-10 md:py-24">
+    <section className="bg-white px-6 py-20 md:px-10 md:py-24 font-sans">
       <div className="mx-auto max-w-7xl">
-        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-[#314a6b]">
+
+        {/* SECTION LABEL → 12px */}
+        <p className="mb-4 text-[12px] font-medium uppercase tracking-[0.2em] text-[#314a6b]">
           {caseStudies.sectionLabel}
         </p>
 
-        <h2 className="max-w-5xl text-[42px] font-semibold leading-[1.08] text-[#101010] md:text-[52px]">
+        {/* MAIN HEADING → 24px */}
+        <h2 className="max-w-5xl text-[24px] font-semibold leading-[1.4] text-[#101010]">
           {caseStudies.heading}
         </h2>
 
+        {/* DESCRIPTION → 16px */}
         {caseStudies.description && (
-          <p className="mt-6 max-w-5xl text-[18px] leading-[1.65] text-[#1e2a3b]">
+          <p className="mt-6 max-w-5xl text-[16px] leading-[1.6] text-[#1e2a3b]">
             {caseStudies.description}
           </p>
         )}
 
+        {/* CARDS */}
         <div className="mt-12 grid gap-8 lg:grid-cols-3">
           {caseStudies.cards.map((card) => (
             <CaseStudyCard key={card.title} card={card} />
           ))}
         </div>
+
       </div>
     </section>
   );
