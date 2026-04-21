@@ -1,6 +1,9 @@
 import { serviceData } from "./data";
 import ServiceHeroSection from "@/components/Services/ServiceHeroSection";
 import TrustedClientsStrip from "@/components/Services/ai-development/TrustedClientsStrip";
+import TableContent from "@/components/Services/Backend-development/TableContent";
+import AIUseCasesSection from "@/components/Services/ai-development/AIUseCasesSection";
+import AiTeamSection from "@/components/Services/ai-development/AiTeamSection";
 import TestimonialHighlightSection from "@/components/Services/ai-development/TestimonialHighlightSection";
 import AIUseCasesSection from "@/components/Services/ai-development/AIUseCasesSection";
 import CaseStudySection from "@/components/Services/CaseStudySection";
@@ -19,6 +22,12 @@ export default async function ServicePage({ params }) {
   return (
     <>
       <ServiceHeroSection data={data} />
+      <TrustedClientsStrip clients={data.trustedClients} />
+      <div className="bg-[#f5f6f7] px-6 py-10 md:px-10">
+        <TableContent />
+        <AIUseCasesSection />
+        <AiTeamSection />
+      </div>
       {data.sections?.trustedClientsStrip && <TrustedClientsStrip />}
       {data.useCases && <AIUseCasesSection useCases={data.useCases} />}
       {data.testimonialHighlight && (
