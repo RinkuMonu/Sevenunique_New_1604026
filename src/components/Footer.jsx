@@ -44,8 +44,7 @@ export default function Footer() {
 
                   alt="BairesDev"
                   width={170}
-                  height={80}
-                  className="h-auto w-[58px]"
+                  height={160}
                 />
               </Link>
             </div>

@@ -99,3 +99,14 @@ body {
 .animate-marquee-reverse {
   animation: marquee-reverse 20s linear infinite;
 }
+
+@keyframes dropdownFadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
