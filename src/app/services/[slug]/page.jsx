@@ -4,6 +4,8 @@ import TrustedClientsStrip from "@/components/Services/ai-development/TrustedCli
 import TableContent from "@/components/Services/Backend-development/TableContent";
 import AIUseCasesSection from "@/components/Services/ai-development/AIUseCasesSection";
 import AiTeamSection from "@/components/Services/ai-development/AiTeamSection";
+import CtaBanner from "@/components/Services/ai-development/CtaBanner";
+import TestimonialSection from "@/components/Services/ai-development/TestimonialSection";
 
 export default async function ServicePage({ params }) {
   const { slug } = await params;
@@ -24,6 +26,8 @@ export default async function ServicePage({ params }) {
         <TableContent />
         <AIUseCasesSection />
         <AiTeamSection />
+        <CtaBanner />
+        <TestimonialSection />
       </div>
     </>
   );
