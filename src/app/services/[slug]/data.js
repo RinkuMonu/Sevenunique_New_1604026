@@ -73,7 +73,7 @@ export const serviceData = {
           description:
             "Created an AI workflow that processes high-volume legal content with speed, consistency, and reliable summaries for downstream review teams.",
           image: "/logos/office1.jpg",
-          image: "/logos/l1.png",
+         
         },
         {
           tag: "AUDIO AND VIDEO MEDIA",
@@ -81,7 +81,7 @@ export const serviceData = {
           description:
             "Built a generative video pipeline that connected campaign systems, reduced manual production work, and accelerated content delivery.",
           image: "/logos/office2.jpg",
-          image: "/logos/l2.png",
+         
         },
         {
           tag: "TECHNOLOGY",
@@ -89,7 +89,7 @@ export const serviceData = {
           description:
             "Designed a developer workflow that made AI experimentation easier, faster, and more structured for internal engineering teams.",
           image: "/logos/office3.jpg",
-          image: "/logos/l3.png",
+      
         },
       ],
     },
