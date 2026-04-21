@@ -1,5 +1,8 @@
 export const serviceData = {
   "ai-development": {
+    sections: {
+      trustedClientsStrip: true,
+    },
     hero: {
       breadcrumb: ["Services", "AI"],
       title: "AI DEVELOPMENT SERVICES",
@@ -33,7 +36,47 @@ export const serviceData = {
     },
   },
 
+  "backend-development": {
+    sections: {
+      trustedClientsStrip: true,
+    },
+    hero: {
+      breadcrumb: ["Services", "Backend"],
+      title: "BACK-END DEVELOPMENT SERVICES",
+      heading: "Build robust backend systems engineered for performance and scale.",
+      description:
+        "We design and develop secure backend architectures, APIs, databases, and cloud-ready systems that keep your products fast, reliable, and easy to grow.",
+
+      label: "Backend Development",
+
+      rating: {
+        platform: "Clutch",
+        score: "4.9/5",
+        reviews: "55 client reviews",
+      },
+
+      formTitle: "Get expert help for your backend project.",
+    },
+
+    useCases: {
+      heading: "Backend Use Cases",
+      services: [
+        {
+          title: "API Development",
+          content: "Create scalable REST and GraphQL APIs for web and mobile products.",
+        },
+        {
+          title: "Cloud Architecture",
+          content: "Build resilient backend systems optimized for cloud deployment and growth.",
+        },
+      ],
+    },
+  },
+
   "web-development": {
+    sections: {
+      trustedClientsStrip: false,
+    },
     hero: {
       breadcrumb: ["Services", "Web"],
       title: "WEB DEVELOPMENT SERVICES",
@@ -54,6 +97,9 @@ export const serviceData = {
   },
 
   "mobile-development": {
+    sections: {
+      trustedClientsStrip: false,
+    },
     hero: {
       breadcrumb: ["Services", "Mobile"],
       title: "MOBILE APP DEVELOPMENT",
