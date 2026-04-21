@@ -1,5 +1,4 @@
-@import "tailwindcss";
-
+@import "tailwindcss";            
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -111,3 +110,4 @@ body {
     transform: translateY(0);
   }
 }
+
