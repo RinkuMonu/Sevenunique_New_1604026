@@ -3,8 +3,9 @@ import Link from "next/link";
 const services = [
   {
     title: "Front-End Development",
-    desc: "Build modern frontends designed for performance, accessibility, and scale.",
-    href: "/solutions/front-end",
+    desc: "Create high-performance, accessible, and scalable user interfaces.",
+    tags: ["Front-End", "Web Development", "React", "Angular"],
+    iconBg: "bg-[#e25d35]",
     icon: (
       <svg viewBox="0 0 20 20" fill="white" className="w-5 h-5">
         <path d="M3 4h14v1.5H3zm0 5h9v1.5H3zm0 5h11v1.5H3z" />
@@ -13,8 +14,9 @@ const services = [
   },
   {
     title: "Back-End Development",
-    desc: "Robust, scalable server-side systems and APIs to power your product.",
-    href: "/solutions/back-end",
+    desc: "Create strong, scalable architectures built for stability and efficiency.",
+    tags: ["Back-End", "Database", "Go", ".NET", "Java", "Node.js"],
+    iconBg: "bg-[#232f3f]",
     icon: (
       <svg viewBox="0 0 20 20" fill="white" className="w-5 h-5">
         <path d="M3 5h14a1 1 0 011 1v8a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v6h12V7H4zm2 1h2v1.5H6zm3.5 0H14v1.5h-4.5z" />
@@ -22,29 +24,21 @@ const services = [
     ),
   },
   {
-    title: "Staff Augmentation",
-    desc: "Embed pre-vetted engineers into your team. Scale up or down in days.",
-    href: "/staff-augmentation",
+    title: "AI and Machine Learning",
+    desc: "Implement reliable AI solutions that drive meaningful business outcomes.",
+    tags: ["AI", "Machine Learning", "Data Science", "LLMs", "Generative AI", "Python"],
+    iconBg: "bg-[#0f4f93]",
     icon: (
       <svg viewBox="0 0 20 20" fill="white" className="w-5 h-5">
-        <path d="M10 3a4 4 0 100 8 4 4 0 000-8zm-7 9.5C3 10.6 6.1 9 10 9s7 1.6 7 3.5V14H3v-1.5z" />
+        <path d="M9.2 3.3l.8 2.2 2.3.9-2.3.9-.8 2.2-.8-2.2-2.3-.9 2.3-.9.8-2.2zm5.3 3.4l.5 1.3 1.3.5-1.3.5-.5 1.3-.5-1.3-1.3-.5 1.3-.5.5-1.3zM6.4 10.2l.7 1.9 1.9.7-1.9.7-.7 1.9-.7-1.9-1.9-.7 1.9-.7.7-1.9z" />
       </svg>
     ),
   },
   {
-    title: "AI Development",
-    desc: "Custom AI/ML solutions, LLM integrations, and intelligent automation.",
-    href: "/technologies/ai",
-    icon: (
-      <svg viewBox="0 0 20 20" fill="white" className="w-5 h-5">
-        <path d="M10 2l8 4.5v7L10 18l-8-4.5v-7L10 2zm0 2.2L4 7.6v4.8L10 16l6-3.6V7.6L10 4.2z" />
-      </svg>
-    ),
-  },
-  {
-    title: "Mobile App Development",
-    desc: "Native and cross-platform apps for iOS and Android that users love.",
-    href: "/solutions/mobile-app",
+    title: "Mobile Development",
+    desc: "Build high-performance iOS and Android apps with seamless user experiences and strong data security.",
+    tags: ["Mobile Applications", "iOS", "Android"],
+    iconBg: "bg-[#1e5dc0]",
     icon: (
       <svg viewBox="0 0 20 20" fill="white" className="w-5 h-5">
         <path d="M7 2h6a2 2 0 012 2v12a2 2 0 01-2 2H7a2 2 0 01-2-2V4a2 2 0 012-2zm0 1.5a.5.5 0 00-.5.5v12c0 .28.22.5.5.5h6a.5.5 0 00.5-.5V4a.5.5 0 00-.5-.5H7zm2.5 11h1v1h-1z" />
@@ -52,12 +46,24 @@ const services = [
     ),
   },
   {
-    title: "QA Testing & Automation",
-    desc: "End-to-end quality assurance to ship faster with fewer bugs.",
-    href: "/solutions/qa",
+    title: "UX/UI Design",
+    desc: "Create intuitive designs with clear user journeys, scalable components, and accessible interfaces.",
+    tags: ["UX Design", "UI Design"],
+    iconBg: "bg-[#3f9ea6]",
     icon: (
       <svg viewBox="0 0 20 20" fill="white" className="w-5 h-5">
-        <path d="M9 2a7 7 0 104.9 12.07l3.5 3.5 1.06-1.06-3.5-3.5A7 7 0 009 2zm0 1.5a5.5 5.5 0 110 11 5.5 5.5 0 010-11zm-.75 2.5v4l3 1.5-.75 1.3-3.75-1.8V6h1.5z" />
+        <path d="M3 4h14a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V5a1 1 0 011-1zm0 1.5v10h14v-10H3zm2 2h4v6H5v-6zm5.5 0h4.5v2.5h-4.5V7.5zm0 3.5h4.5v2.5h-4.5V11z" />
+      </svg>
+    ),
+  },
+  {
+    title: "QA and Testing",
+    desc: "Ensure high-quality releases with end-to-end testing covering both manual and automated processes.",
+    tags: ["Quality Assurance"],
+    iconBg: "bg-[#1f9f71]",
+    icon: (
+      <svg viewBox="0 0 20 20" fill="white" className="w-5 h-5">
+        <path d="M3 10.5l3.2 3.2L17 3.9l-1.2-1.2-9.6 9.6-2-2zM2.5 15h10v1.5h-10z" />
       </svg>
     ),
   },
@@ -65,49 +71,53 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="px-6 py-20 lg:py-24">
+    <section className="px-6 py-16 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto">
-        <span className="inline-block bg-[#f4622a]/[0.08] text-[#f4622a] text-xs font-medium px-3 py-1 rounded-full uppercase tracking-wide mb-4">
-          Services
-        </span>
-        <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-[1.15] mb-3 max-w-xl">
-          Get full-stack coverage. Unblock execution across the SDLC.
-        </h2>
-        <p className="text-[#6b6b67] text-base leading-relaxed mb-12 max-w-2xl">
-          Software development services built around your needs — from staff
-          augmentation to full software outsourcing.
-        </p>
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 mb-10">
+          <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight leading-[1.12] max-w-3xl text-[#191919]">
+            Get full-stack coverage.
+            <br />
+            Unblock execution across the SDLC
+            <span className="text-[#f4622a]">.</span>
+          </h2>
+          <Link
+            href="/solutions"
+            className="shrink-0 inline-flex items-center gap-2 text-[15px] text-[#1f1f1f] border-b border-[#1f1f1f] pb-1 hover:text-[#f4622a] hover:border-[#f4622a] transition-colors"
+          >
+            Everything we do
+            <span aria-hidden>→</span>
+          </Link>
+        </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((svc) => (
             <div
               key={svc.title}
-              className="group bg-[#f7f7f5] border border-[#e5e5e0] hover:border-[#f4622a] rounded-xl p-6 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer"
+              className="bg-[#f4f4f6] border border-[#ececef] rounded-md p-7 min-h-[248px]"
             >
-              <div className="w-10 h-10 bg-[#f4622a] rounded-lg flex items-center justify-center mb-4">
+              <div
+                className={`w-10 h-10 ${svc.iconBg} rounded-lg flex items-center justify-center mb-5`}
+              >
                 {svc.icon}
               </div>
-              <h3 className="text-[15px] font-medium mb-2">{svc.title}</h3>
-              <p className="text-sm text-[#6b6b67] leading-relaxed mb-3">
+              <h3 className="text-3xl font-medium mb-2 text-[#1f1f1f] leading-[1.2]">
+                {svc.title}
+              </h3>
+              <p className="text-[15px] text-[#4f4f56] leading-relaxed mb-5">
                 {svc.desc}
               </p>
-              <Link
-                href={svc.href}
-                className="text-[13px] font-medium text-[#f4622a] hover:underline"
-              >
-                Learn more →
-              </Link>
+              <div className="flex flex-wrap gap-2">
+                {svc.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="inline-flex items-center px-2.5 py-1 text-[15px] leading-none text-[#1764ca] border border-[#8db2e2] rounded-md bg-transparent hover:bg-blue-500 hover:text-white hover:cursor-pointer"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
-        </div>
-
-        <div className="mt-8 text-center">
-          <Link
-            href="/solutions"
-            className="inline-flex items-center border border-[#e5e5e0] hover:border-[#f4622a] text-[#1a1a18] hover:text-[#f4622a] text-sm font-medium px-6 py-2.5 rounded-lg transition-colors duration-150"
-          >
-            View all services →
-          </Link>
         </div>
       </div>
     </section>
