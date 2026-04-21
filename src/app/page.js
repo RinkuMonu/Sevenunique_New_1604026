@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import ClientLogos from "@/components/ClientLogos";
 import FeaturedSection from "@/components/FeaturedSection";
 import Services from "@/components/Services";
+import TestimonialSlider from "@/components/TestimonialSlider";
 import TalentProcess from "@/components/TalentProcess";
 import Industries from "@/components/Industries";
 import BlogInsights from "@/components/BlogInsights";
@@ -19,14 +20,13 @@ export default function Home() {
     <div>
      <Hero />
      <ClientLogos />
+      <Services />
      <FeaturedSection />
+     <TestimonialSlider />
      <AwardsSection />
      <WhyChooseUs />
      <TeamMorphSection />
-     <ProcessTimelineSection />
-     <Services />
-     <TalentProcess />
-     <Industries />
+     <ProcessTimelineSection />  
      <BlogInsights />
      <CTABand />
     </div>
