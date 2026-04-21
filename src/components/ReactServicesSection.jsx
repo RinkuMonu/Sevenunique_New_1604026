@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import EngagementSection from "./EngagementSection";
 import EcosystemAndTestimonials from "./EcosystemAndTestimonials";
+import TestimonialHighlightSection from "./Services/ai-development/TestimonialHighlightSection";
 
 function AccordionItem({ question, answer, defaultOpen = false }) {
   const [open, setOpen] = useState(defaultOpen);
@@ -44,51 +45,9 @@ export default function ReactServicesSection({ data }) {
   return (
     <div className="bg-gray-50 text-gray-900">
 
-      {/* ===== SERVICES SECTION ===== */}
-      {servicesSection && (
-        <section className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="text-sm tracking-widest text-gray-500 uppercase mb-4">
-              {servicesSection.sectionLabel}
-            </p>
-            <h1 className="text-4xl md:text-5xl font-semibold leading-tight mb-6">
-              {servicesSection.heading}
-            </h1>
-            <p className="text-gray-600 mb-6">{servicesSection.description}</p>
-            <div className="rounded-xl overflow-hidden shadow">
-              <Image
-                src={servicesSection.image}
-                alt="Team working"
-                width={600}
-                height={350}
-                className="object-cover w-full h-full"
-              />
-            </div>
-          </div>
-
-          <div>
-            <div className="border-l-4 border-green-600 pl-6 mb-6">
-              <h3 className="text-xl font-semibold mb-2">
-                {servicesSection.highlightService.title}
-              </h3>
-              <p className="text-gray-600">
-                {servicesSection.highlightService.description}
-              </p>
-            </div>
-            <ul className="space-y-4 text-gray-800">
-              {servicesSection.serviceList.map((item, i) => (
-                <li key={i} className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-gray-400 rounded-full" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      )}
 
       {/* ===== TESTIMONIAL ===== */}
-      {testimonial && (
+      {/* {testimonial && (
         <section className="max-w-6xl mx-auto px-6 py-16">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -111,8 +70,9 @@ export default function ReactServicesSection({ data }) {
             </div>
           </div>
         </section>
-      )}
+      )} */}
 
+        <TestimonialHighlightSection testimonial={testimonial}/>
       {/* ===== TEAM SECTION ===== */}
       {teamSection && (
         <section className="bg-white py-20">
