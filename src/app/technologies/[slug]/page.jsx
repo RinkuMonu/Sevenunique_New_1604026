@@ -25,15 +25,15 @@ export default async function TechnologyPage({ params }) {
         {/* LEFT SIDE */}
         <div className="flex flex-col gap-6">
           <p className="text-xs font-semibold text-black uppercase tracking-widest">
-            {data.title}
+            {data?.title}
           </p>
 
           <h1 className="text-5xl text-black font-extrabold leading-tight">
-            {data.heading}
+            {data?.heading}
           </h1>
 
           <p className="text-base text-black leading-relaxed">
-            {data.description}
+            {data?.description}
           </p>
 
           {/* Clutch + Tech Badge Row */}
@@ -114,6 +114,7 @@ export default async function TechnologyPage({ params }) {
        {/* <TrustedCompanies /> */}
       <AIUseCasesSection useCases={data.useCases}/>
       <ReactServicesSection  data={data}/>
+      
     </>
   );
 }

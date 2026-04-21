@@ -5,6 +5,7 @@ import Image from "next/image";
 import EngagementSection from "./EngagementSection";
 import EcosystemAndTestimonials from "./EcosystemAndTestimonials";
 import TestimonialHighlightSection from "./Services/ai-development/TestimonialHighlightSection";
+import AwardsSection from "./AwardsSection";
 
 function AccordionItem({ question, answer, defaultOpen = false }) {
   const [open, setOpen] = useState(defaultOpen);
@@ -47,31 +48,6 @@ export default function ReactServicesSection({ data }) {
 
 
       {/* ===== TESTIMONIAL ===== */}
-      {/* {testimonial && (
-        <section className="max-w-6xl mx-auto px-6 py-16">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="text-orange-500 text-5xl mb-4">"</div>
-              <p className="text-2xl font-medium leading-relaxed">{testimonial.quote}</p>
-            </div>
-            <div className="bg-white rounded-xl shadow p-6 flex items-center gap-6">
-              <Image
-                src={testimonial.image}
-                alt={testimonial.name}
-                width={120}
-                height={120}
-                className="rounded-lg object-cover"
-              />
-              <div>
-                <p className="font-semibold">{testimonial.name}</p>
-                <p className="text-sm text-gray-500">{testimonial.role}</p>
-                <p className="mt-2 font-semibold text-gray-700">{testimonial.company}</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      )} */}
-
         <TestimonialHighlightSection testimonial={testimonial}/>
       {/* ===== TEAM SECTION ===== */}
       {teamSection && (
@@ -79,7 +55,7 @@ export default function ReactServicesSection({ data }) {
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
             <div>
               <p className="text-sm tracking-widest text-gray-500 uppercase mb-4">
-                {teamSection.sectionLabel}
+                {teamSection?.sectionLabel}
               </p>
               <div className="flex items-center gap-3 mb-4">
                 {[1, 2, 3, 4, 5].map((i) => (
@@ -87,8 +63,8 @@ export default function ReactServicesSection({ data }) {
                 ))}
                 <span className="text-sm text-gray-600">Backed by <b>4000+ devs</b></span>
               </div>
-              <h2 className="text-4xl font-semibold mb-4">{teamSection.heading}</h2>
-              <p className="text-gray-600 mb-6">{teamSection.description}</p>
+              <h2 className="text-4xl font-semibold mb-4">{teamSection?.heading}</h2>
+              <p className="text-gray-600 mb-6">{teamSection?.description}</p>
               <button className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium">
                 Speak With Our Team
               </button>
@@ -96,14 +72,14 @@ export default function ReactServicesSection({ data }) {
 
             <div className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                {teamSection.highlights.map((item, i) => (
+                {teamSection?.highlights?.map((item, i) => (
                   <div key={i} className="border rounded-xl p-6 bg-gray-50">
                     <p className="font-medium">{item}</p>
                   </div>
                 ))}
               </div>
               <div className="border border-red-400 rounded-xl p-6 text-gray-700">
-                {teamSection.detail}
+                {teamSection?.detail}
               </div>
             </div>
           </div>
@@ -115,9 +91,9 @@ export default function ReactServicesSection({ data }) {
         <section className="bg-white py-20">
           <div className="max-w-7xl mx-auto px-6">
             <p className="text-sm tracking-widest text-gray-500 uppercase mb-4">
-              {caseStudies.sectionLabel}
+              {caseStudies?.sectionLabel}
             </p>
-            <h2 className="text-4xl font-semibold mb-6">{caseStudies.heading}</h2>
+            <h2 className="text-4xl font-semibold mb-6">{caseStudies?.heading}</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {[1, 2, 3].map((i) => (
                 <div key={i} className="h-[300px] rounded-xl bg-gradient-to-b from-gray-700 to-black text-white p-6 flex items-end">
@@ -129,7 +105,7 @@ export default function ReactServicesSection({ data }) {
         </section>
       )}
 
-      <EcosystemAndTestimonials />
+      <EcosystemAndTestimonials data={data}/>
 
       {/* ===== CTA ===== */}
       <section className="py-20">
@@ -146,24 +122,24 @@ export default function ReactServicesSection({ data }) {
       </section>
 
       <EngagementSection />
-
+      <AwardsSection />
       {/* ===== FAQ ===== */}
       {faq && (
         <section className="bg-white py-20">
           <div className=" mx-auto px-6">
             <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-2">
-              {faq.sectionLabel}
+              {faq?.sectionLabel}
             </p>
             <h2 className="text-3xl font-bold text-gray-900 mb-10 leading-tight">
-              {faq.heading}
+              {faq?.heading}
             </h2>
             <div>
-              {faq.items.map((item, index) => (
+              {faq?.items?.map((item, index) => (
                 <AccordionItem
                   key={index}
-                  question={item.question}
-                  answer={item.answer}
-                  defaultOpen={item.defaultOpen}
+                  question={item?.question}
+                  answer={item?.answer}
+                  defaultOpen={item?.defaultOpen}
                 />
               ))}
             </div>
