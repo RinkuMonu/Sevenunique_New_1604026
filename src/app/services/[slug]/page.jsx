@@ -18,7 +18,7 @@ export default async function ServicePage({ params }) {
   const { slug } = await params;
 
   const data =
-    serviceData[slug] || 
+    serviceData[slug] ||
     serviceData[`${slug}-development`];
 
   if (!data) {
