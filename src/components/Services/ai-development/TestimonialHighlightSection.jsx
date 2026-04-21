@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-export default function TestimonialHighlightSection() {
+export default function TestimonialHighlightSection({ testimonial }) {
   return (
     <section className="bg-[#f5f5f5] py-24 px-6">
       <div className="max-w-6xl mx-auto">
@@ -12,15 +12,12 @@ export default function TestimonialHighlightSection() {
 
           {/* LEFT QUOTE */}
           <div>
-            {/* QUOTE ICON */}
             <div className="text-[60px] text-[#f4622a] leading-none mb-6">
               “
             </div>
 
-            {/* TEXT */}
             <p className="text-[28px] leading-[1.4] font-medium text-black max-w-xl">
-              Their engineers perform at very high standards. We've had a strong
-              relationship for almost 7 years.
+              {testimonial.quote}
             </p>
           </div>
 
@@ -31,28 +28,26 @@ export default function TestimonialHighlightSection() {
               {/* TEXT */}
               <div>
                 <h4 className="font-semibold text-black text-[16px]">
-                  Patrick Mee
+                  {testimonial.name}
                 </h4>
                 <p className="text-gray-500 text-[13px] mb-3">
-                  EVP Of Engineering
+                  {testimonial.role}
                 </p>
 
-                {/* LOGO */}
-                <div className="flex items-center gap-2">
-                  <Image
-                    src="/logos/nextroll-new.png" // 👈 replace with your logo
-                    alt="NextRoll"
-                    width={90}
-                    height={30}
-                  />
-                </div>
+                <Image
+                  src={testimonial.image1}
+                  alt={testimonial.image1}
+                  width={90}
+                  height={30}
+                  className="object-contain"
+                />
               </div>
 
               {/* IMAGE */}
               <div className="relative w-[120px] h-[140px]">
                 <Image
-                  src="/logos/img2.png" // 👈 replace with your image
-                  alt="Patrick"
+                  src={testimonial.image}
+                  alt={testimonial.name}
                   fill
                   className="object-contain"
                 />
@@ -65,7 +60,7 @@ export default function TestimonialHighlightSection() {
         {/* CTA */}
         <div className="mt-6 flex justify-end pr-2">
           <button className="flex items-center gap-2 text-black text-[14px] font-medium hover:text-[#f4622a] transition">
-            Watch Patrick's Testimonial
+            Watch {testimonial.name}'s Testimonial
             <span className="text-[#f4622a] text-lg">▶</span>
           </button>
         </div>
