@@ -9,9 +9,8 @@ import TestimonialSection from "@/components/Services/ai-development/Testimonial
 import TestimonialHighlightSection from "@/components/Services/ai-development/TestimonialHighlightSection";
 import CaseStudySection from "@/components/Services/CaseStudySection";
 
-import TestimonialHighlightSection from "@/components/Services/ai-development/TestimonialHighlightSection";
-import AIUseCasesSection from "@/components/Services/ai-development/AIUseCasesSection";
-import CaseStudySection from "@/components/Services/CaseStudySection";
+
+
 
 
 export default async function ServicePage({ params }) {
