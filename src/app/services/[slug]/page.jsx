@@ -2,6 +2,8 @@ import { serviceData } from "./data";
 import ServiceHeroSection from "@/components/Services/ServiceHeroSection";
 import TrustedClientsStrip from "@/components/Services/ai-development/TrustedClientsStrip";
 import TableContent from "@/components/Services/Backend-development/TableContent";
+import AIUseCasesSection from "@/components/Services/ai-development/AIUseCasesSection";
+import AiTeamSection from "@/components/Services/ai-development/AiTeamSection";
 
 export default async function ServicePage({ params }) {
   const { slug } = await params;
@@ -20,6 +22,8 @@ export default async function ServicePage({ params }) {
       <TrustedClientsStrip clients={data.trustedClients} />
       <div className="bg-[#f5f6f7] px-6 py-10 md:px-10">
         <TableContent />
+        <AIUseCasesSection />
+        <AiTeamSection />
       </div>
     </>
   );
