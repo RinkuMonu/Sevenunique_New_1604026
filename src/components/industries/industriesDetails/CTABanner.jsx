@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function CTABanner() {
   return (
-    <section className="bg-white ml-10">
-      <div className="max-w-[1000px] ">
+    <section className="bg-white">
+      <div className="max-w-[1180px] m-auto ">
         
         {/* MAIN BOX */}
         <div className="relative flex items-center bg-[#22a06b] rounded-[24px] overflow-hidden min-h-[140px]">
