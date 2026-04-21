@@ -4,13 +4,15 @@ import TrustedClientsStrip from "@/components/Services/ai-development/TrustedCli
 import TableContent from "@/components/Services/Backend-development/TableContent";
 import AIUseCasesSection from "@/components/Services/ai-development/AIUseCasesSection";
 import AiTeamSection from "@/components/Services/ai-development/AiTeamSection";
-<<<<<<< HEAD
 import CtaBanner from "@/components/Services/ai-development/CtaBanner";
 import TestimonialSection from "@/components/Services/ai-development/TestimonialSection";
-=======
 import TestimonialHighlightSection from "@/components/Services/ai-development/TestimonialHighlightSection";
 import CaseStudySection from "@/components/Services/CaseStudySection";
->>>>>>> 8067d36f53b4511e794deb083d12d3e3d2281567
+
+import TestimonialHighlightSection from "@/components/Services/ai-development/TestimonialHighlightSection";
+import AIUseCasesSection from "@/components/Services/ai-development/AIUseCasesSection";
+import CaseStudySection from "@/components/Services/CaseStudySection";
+
 
 export default async function ServicePage({ params }) {
   const { slug } = await params;
@@ -34,6 +36,7 @@ export default async function ServicePage({ params }) {
         <CtaBanner />
         <TestimonialSection />
       </div>
+      {data.sections?.trustedClientsStrip && <TrustedClientsStrip />}
       {data.useCases && <AIUseCasesSection useCases={data.useCases} />}
       {data.testimonialHighlight && (
         <TestimonialHighlightSection testimonial={data.testimonialHighlight} />
