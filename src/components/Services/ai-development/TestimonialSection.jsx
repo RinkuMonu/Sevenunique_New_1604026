@@ -290,7 +290,7 @@ export default function TestimonialSection() {
                                     type="button"
                                     className="relative z-10 inline-flex rounded-[8px] px-5 py-3 text-[15px] font-semibold text-white"
                                 >
-                                    <span className="relative z-10">Schedule a Call</span>
+                                    <span className="relative z-10">Schedule a Call</span>  
                                 </button>
                             </div>
                             </div>
