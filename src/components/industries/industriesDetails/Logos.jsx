@@ -6,7 +6,7 @@ export default function Logos() {
   return (
     <section className="bg-[#f6f7f9] py-10">
       
-      <div className="max-w-[1000px] px-6">
+      <div className="max-w-[1250px] px-6">
         
         {/* MAIN BOX */}
         <div className="bg-[#5f6b76] rounded-[20px] shadow-md px-8 py-6 flex items-center gap-8">
