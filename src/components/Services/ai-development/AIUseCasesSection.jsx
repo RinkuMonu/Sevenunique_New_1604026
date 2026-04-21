@@ -51,17 +51,15 @@ export default function AIUseCasesSection({ useCases }) {
                 onClick={() => setActive(i)}
               >
                 <h3
-                  className={`text-[18px] font-medium transition ${
-                    isOpen ? "text-black" : "text-black/70"
-                  }`}
+                  className={`text-[18px] font-medium transition ${isOpen ? "text-black" : "text-black/70"
+                    }`}
                 >
                   {item.title}
                 </h3>
 
                 <div
-                  className={`overflow-hidden transition-all duration-500 ${
-                    isOpen ? "max-h-[300px] mt-3" : "max-h-0"
-                  }`}
+                  className={`overflow-hidden transition-all duration-500 ${isOpen ? "max-h-[300px] mt-3" : "max-h-0"
+                    }`}
                 >
                   <div className="text-black/80 text-[14px] leading-[1.7] space-y-3">
                     {item.content.split("\n\n").map((para, idx) => (

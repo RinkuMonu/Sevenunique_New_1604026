@@ -1,3 +1,12 @@
+const trustedClients = [
+  { img: "/logos/l1.png", alt: "Client logo 1" },
+  { img: "/logos/l2.png", alt: "Client logo 2" },
+  { img: "/logos/l3.png", alt: "Client logo 3" },
+  { img: "/logos/l4.png", alt: "Client logo 4" },
+  { img: "/logos/l5.png", alt: "Client logo 5" },
+  { img: "/logos/l6.png", alt: "Client logo 6" },
+];
+
 export const serviceData = {
   "ai-development": {
     hero: {
@@ -17,6 +26,7 @@ export const serviceData = {
 
       formTitle: "Get expert help for your AI project.",
     },
+    trustedClients,
 
     useCases: {
       heading: "AI Use Cases",
@@ -51,6 +61,7 @@ export const serviceData = {
 
       formTitle: "Get expert help for your web project.",
     },
+    trustedClients,
   },
 
   "mobile-development": {
@@ -71,5 +82,6 @@ export const serviceData = {
 
       formTitle: "Get expert help for your mobile project.",
     },
+    trustedClients,
   },
 };
