@@ -70,17 +70,23 @@ export const serviceData = {
         {
           tag: "LEGAL",
           title: "Developed AI Tool to Summarize 10,000 Legal Transcripts Daily",
-          image: "/logos/l1.png",
+          description:
+            "Created an AI workflow that processes high-volume legal content with speed, consistency, and reliable summaries for downstream review teams.",
+          image: "/logos/office1.jpg",
         },
         {
           tag: "AUDIO AND VIDEO MEDIA",
           title: "Automated GenAI Video Integration for HubSpot Campaigns",
-          image: "/logos/l2.png",
+          description:
+            "Built a generative video pipeline that connected campaign systems, reduced manual production work, and accelerated content delivery.",
+          image: "/logos/office2.jpg",
         },
         {
           tag: "TECHNOLOGY",
           title: "Built an IDE That Simplifies AI Pipeline Prototyping",
-          image: "/logos/l3.png",
+          description:
+            "Designed a developer workflow that made AI experimentation easier, faster, and more structured for internal engineering teams.",
+          image: "/logos/office3.jpg",
         },
       ],
     },
@@ -147,16 +153,22 @@ export const serviceData = {
         {
           tag: "FINTECH",
           title: "Built Secure Transaction APIs for a High-Volume Finance Platform",
+          description:
+            "Engineered resilient backend APIs with strong security controls and throughput designed for demanding transaction workloads.",
           image: "/logos/out.png",
         },
         {
           tag: "SAAS",
           title: "Modernized Backend Services to Support Multi-Tenant Product Growth",
+          description:
+            "Refactored core services to improve tenant isolation, maintainability, and long-term scaling for a growing SaaS platform.",
           image: "/logos/l2.png",
         },
         {
           tag: "ENTERPRISE",
           title: "Re-Architected Core Systems for Better Reliability and Observability",
+          description:
+            "Improved system stability with cleaner service boundaries, stronger monitoring, and better visibility into production behavior.",
           image: "/logos/l3.png",
         },
       ],
