@@ -4,9 +4,15 @@ import TrustedClientsStrip from "@/components/Services/ai-development/TrustedCli
 import TableContent from "@/components/Services/Backend-development/TableContent";
 import AIUseCasesSection from "@/components/Services/ai-development/AIUseCasesSection";
 import AiTeamSection from "@/components/Services/ai-development/AiTeamSection";
+import CtaBanner from "@/components/Services/ai-development/CtaBanner";
+import TestimonialSection from "@/components/Services/ai-development/TestimonialSection";
+import TestimonialHighlightSection from "@/components/Services/ai-development/TestimonialHighlightSection";
+import CaseStudySection from "@/components/Services/CaseStudySection";
+
 import TestimonialHighlightSection from "@/components/Services/ai-development/TestimonialHighlightSection";
 import AIUseCasesSection from "@/components/Services/ai-development/AIUseCasesSection";
 import CaseStudySection from "@/components/Services/CaseStudySection";
+
 
 export default async function ServicePage({ params }) {
   const { slug } = await params;
@@ -27,6 +33,8 @@ export default async function ServicePage({ params }) {
         <TableContent />
         <AIUseCasesSection />
         <AiTeamSection />
+        <CtaBanner />
+        <TestimonialSection />
       </div>
       {data.sections?.trustedClientsStrip && <TrustedClientsStrip />}
       {data.useCases && <AIUseCasesSection useCases={data.useCases} />}
