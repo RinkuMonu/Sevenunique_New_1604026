@@ -64,7 +64,8 @@ export const techData = {
       name: "Patrick Mee",
       role: "EVP Of Engineering",
       company: "NextRoll",
-      image: "/person.jpg",
+      image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our .NET Software Development Team",
