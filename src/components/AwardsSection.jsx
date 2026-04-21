@@ -11,9 +11,9 @@ const outfit = Outfit({
 export default function AwardsSection() {
   return (
     <section className={`${outfit.className} bg-[#f3f3f3] py-20 px-6`}>
-      
+
       <div className="max-w-6xl mx-auto bg-[#0b0b0b] rounded-2xl px-10 py-14">
-        
+
         <div className="grid lg:grid-cols-3 gap-12 items-center">
 
           {/* LEFT CONTENT */}
@@ -26,10 +26,10 @@ export default function AwardsSection() {
               <span className="text-[#f4622a]">Excellence </span>
               <br />
               is our <br />
- standard.            </h2>
+              standard.            </h2>
 
             <p className="text-white/60 text-sm leading-relaxed mb-8 max-w-sm">
-             We’ve earned 130+ awards and recognitions that reflect our commitment to delivering real client success.
+              We’ve earned 130+ awards and recognitions that reflect our commitment to delivering real client success.
 
             </p>
 
@@ -45,22 +45,22 @@ export default function AwardsSection() {
             <div className="relative w-44 h-44 flex items-center justify-center">
 
               {/* ROTATING TEXT */}
-<svg
-  className="absolute w-full h-full spin-slow"
-  viewBox="0 0 200 200"
->
-  <defs>
-    <path
-      id="circlePath1"
-      d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0"
-    />
-  </defs>
-  <text fill="#6b7280" fontSize="12" letterSpacing="2">
-    <textPath href="#circlePath1">
-      projects executed successfully • projects executed successfully •
-    </textPath>
-  </text>
-</svg>
+              <svg
+                className="absolute w-full h-full spin-slow"
+                viewBox="0 0 200 200"
+              >
+                <defs>
+                  <path
+                    id="circlePath1"
+                    d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0"
+                  />
+                </defs>
+                <text fill="#6b7280" fontSize="16" letterSpacing="2">
+                  <textPath href="#circlePath1">
+                    projects executed successfully • projects executed successfully •
+                  </textPath>
+                </text>
+              </svg>
 
               {/* INNER CONTENT */}
               <div className="text-center z-10">
@@ -73,22 +73,22 @@ export default function AwardsSection() {
             <div className="relative w-44 h-44 flex items-center justify-center">
 
               {/* ROTATING TEXT */}
-<svg
-  className="absolute w-full h-full spin-reverse"
-  viewBox="0 0 200 200"
->
-  <defs>
-    <path
-      id="circlePath2"
-      d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0"
-    />
-  </defs>
-  <text fill="#6b7280" fontSize="12" letterSpacing="2">
-    <textPath href="#circlePath2">
-      industry sectors • industry sectors • industry sectors •
-    </textPath>
-  </text>
-</svg>
+              <svg
+                className="absolute w-full h-full spin-slow"
+                viewBox="0 0 200 200"
+              >
+                <defs>
+                  <path
+                    id="circlePath2"
+                    d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0"
+                  />
+                </defs>
+                <text fill="#6b7280" fontSize="16" letterSpacing="2">
+                  <textPath href="#circlePath2">
+                    industry sectors • industry sectors • industry sectors •
+                  </textPath>
+                </text>
+              </svg>
               {/* INNER CONTENT */}
               <div className="text-center z-10">
                 <p className="text-3xl font-semibold text-white">130+</p>

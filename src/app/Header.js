@@ -15,14 +15,22 @@ const servicesCols = [
   {
     label: "Top Services",
     items: [
-      { name: "AI Development", link: "/services/ai-development" },
-      "Back-end Development",
+  { name: "AI Development", link: "/services/ai-development" },
+    { name: "Back-end Development", link: "/services/backend-development" },
       "CMS Development",
       "Cryptocurrency & Blockchain",
       "Front-end Development",
       "Machine Learning",
       "QA Testing & Automation",
       "UX/UI Design",
+      { name: "AI Development", link: "/services/ai-development" },
+      { name: "Back-end Development", link: "/services/backend-development" },
+      { name: "CMS Development", link: "/services/cms-development" },
+      { name: "Cryptocurrency & Blockchain", link: "/services/blockchain" },
+      { name: "Front-end Development", link: "/services/frontend-development" },
+      { name: "Machine Learning", link: "/services/machine-learning" },
+      { name: "QA Testing & Automation", link: "/services/qa-testing" },
+      { name: "UX/UI Design", link: "/services/ui-ux-design" },
     ],
   },
   {
@@ -306,16 +314,22 @@ export default function Header() {
                                 <div className="mb-4 h-[18px]" />
                               )}
                               <ul className="space-y-3">
-                                {col.items.map((entry) => (
-                                  <li key={entry}>
-                                    <Link
-                                      href="#"
-                                      className="inline-flex text-[12px] text-[#222] transition-all duration-200 hover:translate-x-1 hover:text-[#f46b45]"
-                                    >
-                                      {entry}
-                                    </Link>
-                                  </li>
-                                ))}
+                              {col.items.map((entry, index) => {
+                              const isObject = typeof entry === "object";
+                              const name = isObject ? entry.name : entry;
+                              const path = isObject ? entry.link : "#";
+
+                              return (
+                                <li key={name + index}>
+                                  <Link
+                                    href={path}
+                                    className="hover:text-[#f46b45]"
+                                  >
+                                    {name}
+                                  </Link>
+                                </li>
+                              );
+                            })}
                               </ul>
                             </div>
                           ))}
@@ -510,7 +524,7 @@ export default function Header() {
                 const id = item.name.toLowerCase();
                 const isActive = mobileSection === id;
                 let cols = [];
-
+                
                 if (id === "services")
                   cols = servicesCols.map((col) => col.items).flat();
                 if (id === "technologies") cols = technologiesCols.flat();
@@ -534,13 +548,12 @@ export default function Header() {
                     {isActive && (
                       <ul className="grid grid-cols-1 gap-y-2 pb-3 text-[13px] text-[#222] sm:grid-cols-2">
                         {cols.map((entry) => {
-                          const name =
-                            typeof entry === "string" ? entry : entry.name;
-                          const path =
-                            typeof entry === "string" ? "#" : entry.path;
+                           const isObject = typeof entry === "object";
+                           const name = isObject ? entry.name : entry;
+                           const path = isObject ? entry.link : "#";
 
                           return (
-                            <li key={`${entry.name}-${entry.path}`}>
+                            <li key={name}>
                               <Link
                                 href={path}
                                 className="block rounded-md py-1 pr-2 transition-colors hover:text-[#f46b45]"
@@ -581,18 +594,7 @@ export default function Header() {
           </div>
         </div>
       )}
-      <style jsx global>{`
-        @keyframes dropdownFadeSlide {
-          from {
-            opacity: 0;
-            transform: translateY(-10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
+    
     </header>
   );
 }
