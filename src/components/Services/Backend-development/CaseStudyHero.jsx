@@ -1,118 +1,107 @@
 "use client";
 
+import Image from "next/image";
+
 export default function CaseStudyHero() {
     return (
-        <section className="w-full flex justify-center bg-[#f3f4f6] py-16">
+        <section className="w-full bg-[#f3f4f6] px-4 pb-28 pt-16 md:px-6">
+            <div className="relative mx-auto w-full max-w-[1250px] overflow-visible rounded-[20px]">
+                <div className="relative min-h-[520px] overflow-hidden rounded-[20px]">
+                    <Image
+                        src="/images/pinterest.png"
+                        alt="Pinterest UI collage"
+                        fill
+                        className="object-cover object-center"
+                        sizes="100vw"
+                        priority
+                    />
+                    <div className="absolute inset-y-0 left-0 w-full bg-[linear-gradient(90deg,rgba(7,7,8,0.94)_0%,rgba(7,7,8,0.9)_48%,rgba(7,7,8,0.58)_68%,rgba(7,7,8,0.16)_82%,rgba(7,7,8,0)_100%)]" />
 
-            {/* MAIN CONTAINER (80% WIDTH) */}
-            <div className="w-[80%] relative rounded-[20px] overflow-hidden">
-
-                {/* BACKGROUND SPLIT */}
-                <div className="grid grid-cols-12 min-h-[520px]">
-
-                    {/* LEFT DARK PANEL */}
-                    <div className="col-span-7 bg-[#0b0b0b] text-white p-12 flex flex-col justify-center">
-
-                        {/* TAG */}
-                        <span className="text-[11px] tracking-[1.5px] uppercase bg-[#2a2a2a] text-[#cbd5e1] px-3 py-1 rounded-md w-fit mb-6">
+                    <div className="relative grid min-h-[520px] grid-cols-1 lg:grid-cols-12">
+                    <div className="relative col-span-1 flex flex-col justify-center p-8 text-white md:p-12 lg:col-span-8 lg:pr-[320px]">
+                        <div className="relative z-10">
+                        <span className="mb-8 w-fit rounded-xl bg-[#8e8e92] px-4 py-2 text-[11px] font-semibold uppercase tracking-[2px] text-[#23364d]">
                             Advertising & Marketing
                         </span>
 
-                        {/* HEADING */}
-                        <h1 className="text-[34px] leading-[1.25] font-semibold mb-6 max-w-[520px]">
+                        <h1 className="mb-8 max-w-[600px] text-[34px] font-semibold leading-[1.2] md:text-[44px]">
                             Pinterest teamed up with us to rebuild its Ads Manager architecture for scale.
                         </h1>
 
-                        {/* BADGES */}
-                        <div className="flex gap-3 mb-6">
-                            <span className="text-[13px] border border-[#374151] px-3 py-1 rounded-md">
+                        <div className="mb-8 flex flex-wrap gap-4">
+                            <span className="rounded-xl border border-[#334155] px-4 py-2 text-[13px] text-[#d7dde6]">
                                 5-Year Engagement
                             </span>
-                            <span className="text-[13px] border border-[#374151] px-3 py-1 rounded-md">
+                            <span className="rounded-xl border border-[#334155] px-4 py-2 text-[13px] text-[#d7dde6]">
                                 233 Specialists
                             </span>
                         </div>
 
-                        {/* DESCRIPTION */}
-                        <p className="text-[14px] text-[#9ca3af] leading-relaxed mb-6 max-w-[520px]">
-                            Pinterest needed to rebuild its Ads Manager backend to handle growth and deliver more value to advertising partners. The platform's architecture required significant changes to support scale and reduce operational complexity.
+                        <p className="mb-10 max-w-[640px] text-[14px] leading-[1.7] text-[#afb7c2] md:text-[15px]">
+                            Pinterest needed to rebuild its Ads Manager backend to handle growth and deliver more value to advertising partners. The platform&apos;s architecture required significant changes to support scale and reduce operational complexity. Our backend, frontend, and data engineering teams integrated with Pinterest&apos;s in-house developers to hit their production deadline.
                         </p>
 
-                        {/* BULLETS */}
-                        <ul className="space-y-3 text-[14px] text-[#d1d5db]">
-                            <li className="flex items-center gap-2">
-                                <span className="text-green-400">✔</span>
+                        <ul className="space-y-4 text-[14px] text-[#d6dbe3] md:text-[15px]">
+                            <li className="flex items-center gap-3">
+                                <span className="text-[18px] text-[#2bb7a3]">✓</span>
                                 Rebuilt the Ads Manager architecture to handle scale
                             </li>
-                            <li className="flex items-center gap-2">
-                                <span className="text-green-400">✔</span>
-                                Reduced infrastructure complexity and costs
+                            <li className="flex items-center gap-3">
+                                <span className="text-[18px] text-[#2bb7a3]">✓</span>
+                                Reduced infrastructure complexity and costs across the ads platform
                             </li>
-                            <li className="flex items-center gap-2">
-                                <span className="text-green-400">✔</span>
+                            <li className="flex items-center gap-3">
+                                <span className="text-[18px] text-[#2bb7a3]">✓</span>
                                 Scaled engineering team from 5 developers to 233 specialists
                             </li>
                         </ul>
 
-                        {/* LOGO */}
-                        <div className="mt-8 text-[#9ca3af] text-[18px] font-semibold">
+                        <div className="mt-12 text-[18px] font-semibold text-[#d1d5db]">
                             Pinterest
                         </div>
+                        </div>
                     </div>
-
-                    {/* RIGHT IMAGE COLLAGE */}
-                    <div className="col-span-5 relative bg-[#111]">
-                        <img
-                            src="/pinterest-collage.jpg"
-                            alt="Pinterest UI"
-                            className="w-full h-full object-cover"
-                        />
                     </div>
                 </div>
 
-                {/* FLOATING FORM CARD */}
-                <div className="absolute right-[-40px] top-[80px] w-[360px] bg-white rounded-[16px] shadow-xl p-6">
-
-                    <h3 className="text-[18px] font-semibold text-[#111] mb-4">
+                <div className="relative z-20 mx-auto -mt-6 w-full max-w-[385px] rounded-[22px] bg-[#d9d9d9] p-8 shadow-[0_24px_60px_rgba(0,0,0,0.18)] lg:absolute lg:-right-[8px] lg:top-[326px] lg:mx-0 lg:mt-0">
+                    <h3 className="mb-8 max-w-[260px] text-[24px] font-semibold leading-[1.25] text-[#0f172a]">
                         Get expert help for your Backend project.
                     </h3>
 
-                    {/* INPUTS */}
-                    <div className="space-y-4">
-
+                    <div className="space-y-6">
                         <div>
-                            <label className="text-[13px] text-[#374151]">Your name</label>
+                            <label className="mb-2 block text-[13px] font-medium text-[#374151]">Your name</label>
                             <input
                                 type="text"
                                 placeholder="Full name"
-                                className="w-full mt-1 border border-[#e5e7eb] rounded-md px-3 py-2 text-[14px]"
+                                className="w-full rounded-md border border-[#b8bfc7] bg-transparent px-4 py-3 text-[14px] text-[#334155] outline-none placeholder:text-[#6b7280]"
                             />
                         </div>
 
                         <div>
-                            <label className="text-[13px] text-[#374151]">Your email</label>
+                            <label className="mb-2 block text-[13px] font-medium text-[#374151]">Your email</label>
                             <input
                                 type="email"
                                 placeholder="name@company.com"
-                                className="w-full mt-1 border border-[#e5e7eb] rounded-md px-3 py-2 text-[14px]"
+                                className="w-full rounded-md border border-[#b8bfc7] bg-transparent px-4 py-3 text-[14px] text-[#334155] outline-none placeholder:text-[#6b7280]"
                             />
                         </div>
 
                         <div>
-                            <label className="text-[13px] text-[#374151]">What can we do for you?</label>
+                            <label className="mb-2 block text-[13px] font-medium text-[#374151]">What can we do for you?</label>
                             <textarea
                                 placeholder="Tell us more about your needs."
-                                rows={3}
-                                className="w-full mt-1 border border-[#e5e7eb] rounded-md px-3 py-2 text-[14px]"
+                                rows={4}
+                                className="w-full rounded-md border border-[#b8bfc7] bg-transparent px-4 py-3 text-[14px] text-[#334155] outline-none placeholder:text-[#6b7280]"
                             />
                         </div>
 
-                        <button className="w-full bg-[#c2411c] hover:bg-[#a93415] text-white py-2.5 rounded-md text-[14px] font-medium">
+                        <button className="w-full rounded-md bg-[#c2411c] py-3 text-[14px] font-medium text-white transition-colors hover:bg-[#a93415]">
                             Jump-start Your Project
                         </button>
                     </div>
                 </div>
-
             </div>
         </section>
     );
