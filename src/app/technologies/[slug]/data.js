@@ -79,6 +79,34 @@ export const techData = {
       ],
       detail:
         "We vet for what matters on complex projects: distributed systems, high-concurrency patterns, and secure cloud design.",
+      "teamImages": [
+        { "src": "img1.png", "bg": "#FBB39E" },
+        { "src": "img2.png", "bg": "#90BBF3" },
+        { "src": "img3.png", "bg": "#8FD5BF" },
+        { "src": "img4.png", "bg": "#FFD785" },
+        { "src": "img5.png", "bg": "#FDDC43" },
+        { "src": "img6.png", "bg": "#CDE8FA" }
+      ],
+       "tabs": [
+        {
+          "id": 1,
+          "icon": "MdOutlineVerified",
+          "title": "Top 1% Senior .NET Talent",
+          "content": "Our .NET experts have an average of 10+ years of experience in enterprise application development, microservices architecture, cloud integration, and legacy modernization. Every engineer passes a multi-stage evaluation covering distributed systems, high-concurrency patterns, and secure cloud design."
+        },
+        {
+          "id": 2,
+          "icon": "LuLayoutDashboard",
+          "title": "Production-Grade .NET Delivery",
+          "content": "We ensure .NET solutions are scalable, reliable, and production-ready. Our teams follow best engineering practices, CI/CD pipelines, and rigorous testing to deliver enterprise-grade systems that meet strict uptime and compliance demands."
+        },
+        {
+          "id": 3,
+          "icon": "MdLockOutline",
+          "title": "Security, Governance, and Compliance",
+          "content": "We prioritize security, regulatory compliance, and governance frameworks. Our .NET systems align with enterprise standards including HIPAA, SOC 2, and GDPR, ensuring safety and transparency for regulated industries."
+        }
+      ]
     },
     caseStudies: {
       sectionLabel: ".NET Case Studies",
@@ -321,6 +349,34 @@ export const techData = {
       ],
       detail:
         "We vet for deep AWS knowledge: networking, security, serverless, infrastructure as code, and cost optimization.",
+       "teamImages": [
+        { "src": "img1.png", "bg": "#FBB39E" },
+        { "src": "img2.png", "bg": "#90BBF3" },
+        { "src": "img3.png", "bg": "#8FD5BF" },
+        { "src": "img4.png", "bg": "#FFD785" },
+        { "src": "img5.png", "bg": "#FDDC43" },
+        { "src": "img6.png", "bg": "#CDE8FA" }
+      ],
+      "tabs": [
+        {
+          "id": 1,
+          "icon": "MdOutlineVerified",
+          "title": "Top 1% Senior AWS Talent",
+          "content": "Our AWS engineers average 8+ years of experience and hold certifications including Solutions Architect, DevOps Engineer, and Security Specialty. Every engineer passes a multi-stage evaluation covering cloud architecture, infrastructure as code, and cost optimization."
+        },
+        {
+          "id": 2,
+          "icon": "LuLayoutDashboard",
+          "title": "Production-Grade AWS Delivery",
+          "content": "We ensure AWS solutions are scalable, reliable, and cost-effective. Our teams follow best practices for CI/CD, infrastructure as code, and rigorous testing to deliver enterprise-grade cloud systems."
+        },
+        {
+          "id": 3,
+          "icon": "MdLockOutline",
+          "title": "Security, Governance, and Compliance",
+          "content": "We implement security best practices including IAM, WAF, GuardDuty, and AWS Config. Our solutions meet compliance requirements for finance, healthcare, and other regulated industries."
+        }
+      ]
     },
     caseStudies: {
       sectionLabel: "AWS Case Studies",
@@ -358,6 +414,108 @@ export const techData = {
         },
       ],
     },
+     "ecosystem": {
+      "sectionLabel": "Tools for AWS Development",
+      "heading": "The ecosystem we use for AWS projects:",
+      "description": "We deliver AWS solutions using industry-best tools and practices for cloud infrastructure, deployment, and operations.",
+      "items": [
+        {
+          "label": "Infrastructure as Code",
+          "description": "We define cloud infrastructure using code, enabling version control, peer review, and repeatable deployments across environments.",
+          "tags": ["Terraform", "AWS CDK", "CloudFormation", "Pulumi", "AWS SAM"]
+        },
+        {
+          "label": "CI/CD & DevOps",
+          "description": "We automate build, test, and deployment pipelines to accelerate delivery while maintaining quality and security gates.",
+          "tags": ["AWS CodePipeline", "CodeBuild", "CodeDeploy", "GitHub Actions", "GitLab CI"]
+        },
+        {
+          "label": "Container Orchestration",
+          "description": "We containerize applications and manage them at scale using AWS container services.",
+          "tags": ["Docker", "Amazon ECS", "Amazon EKS", "Fargate", "Helm"]
+        },
+        {
+          "label": "Serverless Framework",
+          "description": "We build event-driven, serverless applications that scale automatically and reduce operational overhead.",
+          "tags": ["AWS Lambda", "API Gateway", "DynamoDB", "EventBridge", "SQS", "SNS"]
+        },
+        {
+          "label": "Monitoring & Observability",
+          "description": "We instrument applications for comprehensive monitoring, logging, and tracing to ensure reliability.",
+          "tags": ["CloudWatch", "X-Ray", "Prometheus", "Grafana", "OpenTelemetry", "Datadog"]
+        },
+        {
+          "label": "Security & Compliance",
+          "description": "We implement security best practices and compliance controls across AWS environments.",
+          "tags": ["IAM", "AWS WAF", "GuardDuty", "Security Hub", "AWS Config", "KMS"]
+        },
+        {
+          "label": "Data & Analytics",
+          "description": "We build scalable data pipelines and analytics solutions using AWS data services.",
+          "tags": ["S3", "Redshift", "Glue", "Athena", "EMR", "Kinesis", "QuickSight"]
+        },
+        {
+          "label": "Cost Management",
+          "description": "We optimize cloud spending through continuous monitoring and best practices.",
+          "tags": ["AWS Cost Explorer", "Budgets", "Savings Plans", "Compute Optimizer", "Trusted Advisor"]
+        }
+      ]
+    },
+    "testimonialsSection": {
+      "sectionLabel": "Client Testimonials",
+      "heading": "Get AWS results you can stand behind.",
+      "subheading": "Our work holds up in reviews, in production, and in front of the board.",
+      "showMoreButtonText": "Show More Testimonials",
+      "leftColumn": [
+        {
+          "industry": "E-commerce",
+          "project": "Migrated legacy infrastructure to AWS",
+          "quote": "BairesDev helped us migrate our entire infrastructure to AWS with zero downtime. Their team's expertise in cloud architecture saved us months of trial and error.",
+          "name": "Sarah Johnson",
+          "title": "CTO",
+          "company": "ShopFast",
+          "companyStyle": "font-bold text-orange-600 text-lg",
+          "photo": null
+        },
+        {
+          "industry": "FinTech",
+          "project": "Serverless banking platform",
+          "quote": "The serverless platform they built on AWS handles millions of transactions daily. Their understanding of Lambda and DynamoDB best practices is exceptional.",
+          "name": "James Wilson",
+          "title": "VP Engineering",
+          "company": "FinScale",
+          "companyStyle": "font-bold text-gray-800 text-xl",
+          "photo": null
+        }
+      ],
+      "rightColumn": [
+        {
+          "industry": "Healthcare",
+          "project": "HIPAA-compliant AWS solution",
+          "quote": "They built a HIPAA-compliant AWS environment for our patient data platform. Security and compliance were handled flawlessly.",
+          "name": "Dr. Emily Chen",
+          "title": "Chief Data Officer",
+          "company": "HealthBridge",
+          "companyStyle": "font-bold text-green-700 text-xl",
+          "photo": null
+        },
+        {
+          "industry": "Media & Entertainment",
+          "project": "Global CDN deployment",
+          "quote": "Their AWS team optimized our CloudFront distribution globally. Our content delivery latency dropped by 60%.",
+          "name": "Mark Taylor",
+          "title": "Infrastructure Director",
+          "company": "Streamline Media",
+          "companyStyle": "font-bold text-purple-700 text-xl",
+          "photo": null
+        }
+      ],
+      "cta": {
+        "title": "Join 500+ companies who count on our AWS developers",
+        "buttonText": "Schedule a Call",
+        "avatarColors": ["#f97316", "#3b82f6", "#10b981", "#8b5cf6", "#ef4444", "#f59e0b"]
+      }
+    }
   },
   react: {
     title: "React Development Services",

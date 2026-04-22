@@ -4,6 +4,7 @@ import ReactServicesSection from "@/components/ReactServicesSection";
 import TrustedClientsStrip from "@/components/Services/ai-development/TrustedClientsStrip";
 import AIUseCasesSection from "@/components/Services/ai-development/AIUseCasesSection";
 import { Star } from "lucide-react";
+import ServiceSection from "../ServiceSection";
 
 export default async function TechnologyPage({ params }) {
   const { slug } = await params;

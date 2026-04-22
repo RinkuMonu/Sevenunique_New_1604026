@@ -247,7 +247,8 @@ function AvatarRow() {
   );
 }
 
-export default function TestimonialSection() {
+export default function TestimonialSection({data}) {
+  const testimonials = data?.testimonialsSection;
   return (
     <section className="bg-[#f5f6f7] px-6 py-20 md:px-10">
       <div className="mx-auto max-w-7xl">
@@ -258,11 +259,10 @@ export default function TestimonialSection() {
                 Client Testimonials
               </p>
               <h2 className="max-w-[420px] text-[38px] font-medium leading-[1.12] text-[#111827] md:text-[52px]">
-                Get AI results you can stand behind.
+              {testimonials?.heading}
               </h2>
               <p className="mt-6 max-w-[420px] text-[18px] leading-[1.7] text-[#3d4652]">
-                Our work holds up in reviews, in production, and in front of the
-                board.
+              {testimonials?.subheading}
               </p>
             </div>
 

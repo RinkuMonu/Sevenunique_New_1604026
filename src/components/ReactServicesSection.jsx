@@ -6,6 +6,9 @@ import EngagementSection from "./EngagementSection";
 import EcosystemAndTestimonials from "./EcosystemAndTestimonials";
 import TestimonialHighlightSection from "./Services/ai-development/TestimonialHighlightSection";
 import AwardsSection from "./AwardsSection";
+import TeamSection from "@/app/technologies/TeamSection";
+import ServiceSection from "@/app/technologies/ServiceSection";
+import TestimonialSection from "@/app/technologies/TestimonialSection";
 
 function AccordionItem({ question, answer, defaultOpen = false }) {
   const [open, setOpen] = useState(defaultOpen);
@@ -50,7 +53,8 @@ export default function ReactServicesSection({ data }) {
       {/* ===== TESTIMONIAL ===== */}
         <TestimonialHighlightSection testimonial={testimonial}/>
       {/* ===== TEAM SECTION ===== */}
-      {teamSection && (
+      <TeamSection teamSection={teamSection}/>
+      {/* {teamSection && (
         <section className="bg-white py-20">
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
             <div>
@@ -66,7 +70,7 @@ export default function ReactServicesSection({ data }) {
               <h2 className="text-4xl font-semibold mb-4">{teamSection?.heading}</h2>
               <p className="text-gray-600 mb-6">{teamSection?.description}</p>
               <button className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium">
-                Speak With Our Team
+              Speak With Our Team
               </button>
             </div>
 
@@ -75,16 +79,16 @@ export default function ReactServicesSection({ data }) {
                 {teamSection?.highlights?.map((item, i) => (
                   <div key={i} className="border rounded-xl p-6 bg-gray-50">
                     <p className="font-medium">{item}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="border border-red-400 rounded-xl p-6 text-gray-700">
-                {teamSection?.detail}
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
+                    </div>
+                    ))}
+                    </div>
+                    <div className="border border-red-400 rounded-xl p-6 text-gray-700">
+                    {teamSection?.detail}
+                    </div>
+                    </div>
+                    </div>
+                    </section>
+                    )} */}
 
       {/* ===== CASE STUDIES ===== */}
       {caseStudies && (
@@ -106,6 +110,7 @@ export default function ReactServicesSection({ data }) {
       )}
 
       <EcosystemAndTestimonials data={data}/>
+      <TestimonialSection data={data}/>
 
       {/* ===== CTA ===== */}
       <section className="py-20">
@@ -121,7 +126,9 @@ export default function ReactServicesSection({ data }) {
         </div>
       </section>
 
+     
       <EngagementSection />
+      <ServiceSection/>
       <AwardsSection />
       {/* ===== FAQ ===== */}
       {faq && (
