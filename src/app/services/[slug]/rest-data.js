@@ -191,7 +191,7 @@ export const companyStripData = {
   companies: [
     {
       name: "Google",
-      logo: "/logos/google-new.png",
+      logo: "/images/google.png",
       subText: "Read case study",
     },
     {

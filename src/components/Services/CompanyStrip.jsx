@@ -20,31 +20,47 @@ export default function CompanyStrip() {
                 <div className="h-10 w-[1px] bg-white/30 mx-6" />
 
                 {/* LOGOS */}
-                <div className="flex items-center gap-10 flex-wrap">
-                    {companyStripData.companies.map((item, index) => (
-                        <div key={index} className="flex flex-col items-center text-white">
+                <div className="flex items-center gap-8 flex-wrap">
 
-                            {/* LOGO */}
-                            <Image
-                                src={item.logo}
-                                alt={item.name}
-                                width={90}
-                                height={30}
-                                className="object-contain opacity-90"
-                            />
+  {companyStripData.companies.map((item, index) => {
 
-                            {/* SUBTEXT */}
-                            {item.subText && (
-                                <div className="flex items-center gap-1 text-[12px] text-white/80 mt-1">
-                                    {item.subText}
-                                    {item.hasPlayIcon && (
-                                        <PlayCircle size={14} className="opacity-80" />
-                                    )}
-                                </div>
-                            )}
-                        </div>
-                    ))}
-                </div>
+    const isFeatured = item.featured;
+
+    return (
+      <div
+        key={index}
+        className={`flex flex-col items-center justify-center px-4 py-3 rounded-lg transition
+        ${
+          isFeatured
+            ? "border border-white/40 bg-[#4f5d68]"
+            : ""
+        }`}
+      >
+
+        {/* LOGO */}
+        <Image
+          src={item.logo}
+          alt={item.name}
+          width={120}
+          height={40}
+          className="object-contain opacity-95"
+        />
+
+        {/* SUBTEXT */}
+        {item.subText && (
+          <div className="flex items-center gap-1 text-[12px] text-white/80 mt-1">
+            {item.subText}
+            {item.hasPlayIcon && (
+              <PlayCircle size={14} className="opacity-80" />
+            )}
+          </div>
+        )}
+
+      </div>
+    );
+  })}
+
+</div>
 
             </div>
         </section>
