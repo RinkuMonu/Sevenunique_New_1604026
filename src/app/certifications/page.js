@@ -5,8 +5,9 @@ import CTASection from "@/components/industries/CTASection";
 
 
 export default function Page() {
-    
+
   return (
+    
     <>
        <CertificationHero />
        <CertificationsGrid />
