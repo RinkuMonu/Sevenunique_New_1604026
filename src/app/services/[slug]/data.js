@@ -50,7 +50,7 @@ function createServiceEntry({
         `${label} teams need strong execution, reliable delivery, and systems that can evolve with the business. We help organizations build that foundation with practical engineering and long-term maintainability in mind.`,
     },
     hero: {
-      breadcrumb: ["Services", breadcrumb],
+      breadcrumb: ["Services", breadcrumb], 
       title,
       heading,
       description,
@@ -669,6 +669,58 @@ export const serviceData = {
         },
       ],
     },
+    
+    toolsTech: {
+  sectionLabel: "TOOLS FOR AI DEVELOPMENT",
+  heading: "Tools and technologies used in our AI development projects:",
+  description:
+    "We combine industry-standard frameworks with modern tooling and proven internal processes to accelerate delivery and maintain custom AI solutions over time.",
+
+  items: [
+    {
+      title: "Deep Learning Frameworks",
+      description:
+        "We use high-performance frameworks to build, train, and optimize deep learning models across different use cases.",
+      tools: ["PyTorch", "TensorFlow", "Keras"],
+    },
+    {
+      title: "Machine Learning Libraries",
+      description:
+        "We leverage ML libraries to build scalable and efficient models for real-world applications.",
+      tools: ["Scikit-learn", "XGBoost", "LightGBM"],
+    },
+    {
+      title: "Data Engineering Tools",
+      description:
+        "Robust pipelines for handling large-scale structured and unstructured data.",
+      tools: ["Apache Spark", "Kafka", "Airflow"],
+    },
+    {
+      title: "Data Analysis Tools",
+      description:
+        "Tools for data processing, visualization, and insights extraction.",
+      tools: ["Pandas", "NumPy", "Matplotlib"],
+    },
+    {
+      title: "Cloud ML Platforms",
+      description:
+        "Deploy and scale ML models using cloud-native infrastructure.",
+      tools: ["AWS SageMaker", "Google AI", "Azure ML"],
+    },
+    {
+      title: "Development Environments",
+      description:
+        "Efficient coding and experimentation environments.",
+      tools: ["Jupyter", "VS Code", "Colab"],
+    },
+    {
+      title: "AI Coding Tools",
+      description:
+        "Accelerate development with AI-assisted tools.",
+      tools: ["GitHub Copilot", "ChatGPT", "Codeium"],
+    },
+  ],
+},
   },
 
   "backend-development": {
@@ -756,6 +808,8 @@ export const serviceData = {
       buttonLabel: "Talk to an expert",
       href: "https://www.bairesdev.com/start/basic-details/",
     },
+
+    
     testimonials: {
       sectionLabel: "Client Testimonials",
       heading: "Get backend results you can build on.",

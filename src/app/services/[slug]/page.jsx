@@ -10,6 +10,7 @@ import CtaBanner from "@/components/Services/ai-development/CtaBanner";
 import TestimonialSection from "@/components/Services/ai-development/TestimonialSection";
 import TestimonialHighlightSection from "@/components/Services/ai-development/TestimonialHighlightSection";
 import CaseStudySection from "@/components/Services/CaseStudySection";
+import ToolsTechSection from "@/components/Services/ToolsTechSection";
 
 
 
@@ -43,6 +44,7 @@ export default async function ServicePage({ params }) {
         <AIUseCasesSection useCases={data.useCases} />
         <AiTeamSection teamSection={data.teamSection} />
         <CtaBanner ctaBanner={data.ctaBanner} />
+        <ToolsTechSection toolsTech={data.toolsTech} />
         <TestimonialSection testimonials={data.testimonials} />
       </div>
       {data.testimonialHighlight && (
