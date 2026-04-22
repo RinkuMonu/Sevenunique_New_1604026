@@ -11,32 +11,32 @@ const outfit = Outfit({
 
 const slides = [
   {
-    logo: "/logos/ft.png",
+    logo: "/logos/logo1.png",
     title: "FINANCIAL TIMES",
     text: "We were recognized by Financial Times in the America's Fastest-growing Companies list of 2024, showcasing significant revenue growth between 2019 and 2022.",
   },
   {
-    logo: "/logos/news.png",
+    logo: "/logos/logo2.png",
     title: "FORBES",
     text: "Recognized by Forbes for innovation and impact in the tech ecosystem.",
   },
   {
-    logo: "/logos/techcrunch.png",
+    logo: "/logos/logo3.png",
     title: "TECHCRUNCH",
     text: "Featured by TechCrunch for disrupting the engineering talent space globally.",
   },
   {
-    logo: "/logos/stanford.png",
+    logo: "/logos/logo4.png",
     title: "CNBC",
     text: "CNBC highlighted our rapid growth and strong presence in the global tech market.",
   },
   {
-    logo: "/logos/sxs.png",
+    logo: "/logos/logo2.png",
     title: "BUSINESS INSIDER",
     text: "Business Insider recognized our platform for connecting top 1% tech talent worldwide.",
   },
   {
-    logo: "/logos/techcrunch.png",
+    logo: "/logos/logo3.png",
     title: "BLOOMBERG",
     text: "Featured by Bloomberg for consistent growth and global expansion.",
   },
