@@ -134,7 +134,110 @@ export const techData = {
             "We start with an assessment of the existing architecture, identify risk areas, and plan incremental migration milestones using a strangler-fig approach.",
         },
       ],
+      
     },
+    "ecosystem": {
+      "sectionLabel": "Tools for .NET Development",
+      "heading": "The ecosystem we use for .NET projects:",
+      "description": "We deliver .NET solutions on a disciplined ecosystem designed for stability and trust. Dependencies are versioned and scanned. Practices are codified in shared runbooks. And every build is traceable.",
+      "items": [
+        {
+          "label": "Core Frameworks",
+          "description": "We build on Long-Term Support (LTS) releases to guarantee years of stability and security. Our development process leverages a mature ecosystem to deliver deterministic, reproducible builds.",
+          "tags": [".NET", "C#", "F#", "ASP.NET Core", "Blazor", "Entity Framework Core", "Dapper"]
+        },
+        {
+          "label": "Build & Dependency Management",
+          "description": "Our development process leverages a mature ecosystem to deliver deterministic, reproducible builds that secure your software supply chain. This eliminates deployment risks and ensures every component of your .NET software is auditable and consistent.",
+          "tags": ["MSBuild", "NuGet", "Paket", "Cake", "Nuke"]
+        },
+        {
+          "label": "Quality Assurance",
+          "description": "We enforce rigorous QA practices including unit, integration, and end-to-end testing across all .NET projects. Every release is gated by automated quality checks.",
+          "tags": ["xUnit", "NUnit", "MSTest", "SpecFlow", "Playwright"]
+        },
+        {
+          "label": "Observability & Performance",
+          "description": "We instrument .NET applications for full-stack observability including distributed tracing, structured logging, and real-time performance dashboards.",
+          "tags": ["OpenTelemetry", "Serilog", "Datadog", "Prometheus", "Grafana"]
+        },
+        {
+          "label": "DevOps & CI/CD",
+          "description": "We integrate seamlessly with your existing DevOps toolchain and build repeatable, auditable deployment pipelines tailored to your organization's workflows.",
+          "tags": ["Azure DevOps", "GitHub Actions", "Jenkins", "Octopus Deploy", "ArgoCD"]
+        },
+        {
+          "label": "Data & Analytics Services",
+          "description": "We design data-intensive .NET solutions using modern database technologies and analytics platforms to support reporting, ML pipelines, and real-time processing.",
+          "tags": ["SQL Server", "PostgreSQL", "CosmosDB", "Databricks", "Power BI"]
+        },
+        {
+          "label": "Containerization & Orchestration",
+          "description": "We containerize .NET workloads and orchestrate them at scale, enabling teams to deploy with confidence across cloud-native and hybrid environments.",
+          "tags": ["Docker", "Kubernetes", "Helm", "Azure AKS", "AWS EKS"]
+        },
+        {
+          "label": "Security & Compliance Tooling",
+          "description": "Security is built in from day one. We integrate static analysis, dependency scanning, and compliance controls into every .NET project we deliver.",
+          "tags": ["SonarQube", "OWASP ZAP", "Snyk", "Veracode", "Azure Policy"]
+        }
+      ]
+    },
+    "testimonialsSection": {
+      "sectionLabel": "Client Testimonials",
+      "heading": "Get .NET results you can stand behind.",
+      "subheading": "Our work holds up in reviews, in production, and in front of the board.",
+      "showMoreButtonText": "Show More Testimonials",
+      "leftColumn": [
+        {
+          "industry": "Healthcare & MedTech",
+          "project": null,
+          "quote": "We are consistently delivering high-quality software on time, in part thanks to the people from BairesDev. They can find talented, high-caliber, sharp developers who will stay with us long-term. Their main strength is their talent.",
+          "name": "David Johnston",
+          "title": "Product Engagement Lead",
+          "company": "Johnson & Johnson",
+          "companyStyle": "font-bold text-red-600 text-lg leading-tight",
+          "photo": null
+        },
+        {
+          "industry": "Financial Services",
+          "project": "Upgraded and Maintained Repay's AWS Infrastructure",
+          "quote": "They've also been proactive about checking in about the state of the engagement and overall performance. I'm confident we'll continue working with BairesDev for a long time.",
+          "name": "Michael Soltow",
+          "title": "Software Dev. Manager",
+          "company": "REPAY",
+          "companyStyle": "font-bold text-gray-800 text-xl tracking-wide",
+          "photo": null
+        }
+      ],
+      "rightColumn": [
+        {
+          "industry": "Financial Services",
+          "project": "Developed new digital banking features",
+          "quote": "BairesDev has been a fantastic partner. We wanted to put forth a product to help people cope with financial struggles but didn't have the resources we needed, so we turned to them. They could always find us quality talent in a concise amount of time.",
+          "name": "Leonardo Shapiro",
+          "title": "Head of Growth",
+          "company": "azlo",
+          "companyStyle": "font-bold text-blue-700 text-xl",
+          "photo": null
+        },
+        {
+          "industry": "Renewable Energy",
+          "project": null,
+          "quote": "I was concerned about a possible mismatch of talent levels of our in-house engineers versus contractors. But, as it turns out, many of the BairesDev engineers we hired emerged as top performers. In fact, of our group of 120 developers, all the BairesDev engineers we had were in the top 20 of the organization.",
+          "name": "Matthew Mecham",
+          "title": null,
+          "company": "Lumio",
+          "companyStyle": "font-bold text-gray-800 text-xl",
+          "photo": null
+        }
+      ],
+      "cta": {
+        "title": "Join 500+ companies who count on our .NET developers",
+        "buttonText": "Schedule a Call",
+        "avatarColors": ["#f97316", "#3b82f6", "#10b981", "#8b5cf6", "#ef4444", "#f59e0b"]
+      }
+    }
   },
   aws: {
     title: "AWS Development Services",
@@ -203,7 +306,8 @@ export const techData = {
       name: "Michael Chen",
       role: "CTO",
       company: "CloudScale Inc.",
-      image: "/person.jpg",
+      image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our AWS Cloud Engineering Team",
@@ -321,7 +425,8 @@ export const techData = {
       name: "Patrick Mee",
       role: "EVP Of Engineering",
       company: "NextRoll",
-      image: "/person.jpg",
+     image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our React Software Development Team",
@@ -443,7 +548,8 @@ export const techData = {
       name: "Michael Torres",
       role: "CTO",
       company: "ShopLogic",
-      image: "/person.jpg",
+      image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our Django Software Development Team",
@@ -565,7 +671,8 @@ export const techData = {
       name: "David Kim",
       role: "VP of Engineering",
       company: "FinCore",
-      image: "/person.jpg",
+      image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our Java Software Development Team",
@@ -689,7 +796,8 @@ export const techData = {
       name: "James Liu",
       role: "Chief Data Officer",
       company: "SecurePay",
-      image: "/person.jpg",
+      image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our Machine Learning Team",
@@ -811,7 +919,8 @@ export const techData = {
       name: "Rachel Green",
       role: "Product Director",
       company: "ShopHub",
-      image: "/person.jpg",
+      image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our PHP Development Team",
@@ -936,7 +1045,8 @@ export const techData = {
       name: "Alex Morgan",
       role: "Engineering Manager",
       company: "CloudScale",
-      image: "/person.jpg",
+      image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our TypeScript Development Team",
@@ -1054,7 +1164,8 @@ export const techData = {
       name: "Sarah Chen",
       role: "CTO",
       company: "DataVault",
-      image: "/person.jpg",
+      image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our AI Software Development Team",
@@ -1177,7 +1288,8 @@ export const techData = {
       name: "Elena Volkov",
       role: "CTO",
       company: "TradeStream",
-      image: "/person.jpg",
+      image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our C# Development Team",
@@ -1299,7 +1411,8 @@ export const techData = {
       name: "Omar Hassan",
       role: "VP Infrastructure",
       company: "StreamFast",
-      image: "/person.jpg",
+      image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our Go Development Team",
@@ -1424,7 +1537,8 @@ export const techData = {
       name: "Lisa Wong",
       role: "Frontend Lead",
       company: "RetailDash",
-      image: "/person.jpg",
+      image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our JavaScript Development Team",
@@ -1548,7 +1662,8 @@ export const techData = {
       name: "Priya Mehta",
       role: "Cloud Director",
       company: "FinServe",
-      image: "/person.jpg",
+      image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our Azure Cloud Engineering Team",
@@ -1673,7 +1788,8 @@ export const techData = {
       name: "Marcus Chen",
       role: "COO",
       company: "LogiTrack",
-      image: "/person.jpg",
+      image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our Power BI Development Team",
@@ -1795,7 +1911,8 @@ export const techData = {
       name: "Sofia Rodriguez",
       role: "Engineering Lead",
       company: "QuickRent",
-      image: "/person.jpg",
+      image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our Ruby Development Team",
@@ -1916,7 +2033,8 @@ export const techData = {
       name: "Anna Schmidt",
       role: "Product Manager",
       company: "EventHub",
-      image: "/person.jpg",
+      image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our Vue.js Development Team",
@@ -2036,7 +2154,8 @@ export const techData = {
       name: "Robert Chen",
       role: "VP Product",
       company: "CorpSoft",
-      image: "/person.jpg",
+      image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our Angular Development Team",
@@ -2158,7 +2277,8 @@ export const techData = {
       name: "Dr. Emily White",
       role: "Lead Scientist",
       company: "SimCore",
-      image: "/person.jpg",
+      image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our C++ Development Team",
@@ -2283,7 +2403,8 @@ export const techData = {
       name: "Mark Taylor",
       role: "Data Director",
       company: "RetailNet",
-      image: "/person.jpg",
+      image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our GCP Cloud Engineering Team",
@@ -2404,7 +2525,8 @@ export const techData = {
       name: "David Park",
       role: "Mobile Lead",
       company: "TravelApp",
-      image: "/person.jpg",
+      image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our Kotlin Development Team",
@@ -2526,7 +2648,8 @@ export const techData = {
       name: "Nina Patel",
       role: "CTO",
       company: "ChatFlow",
-      image: "/person.jpg",
+      image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our Node.js Development Team",
@@ -2642,7 +2765,8 @@ export const techData = {
       name: "Sarah Chen",
       role: "Data Engineering Lead",
       company: "DataStream",
-      image: "/person.jpg",
+      image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our Python Development Team",
@@ -2767,7 +2891,8 @@ export const techData = {
       name: "Jessica Wu",
       role: "Sales Ops Director",
       company: "GlobalSoft",
-      image: "/person.jpg",
+      image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our Salesforce Development Team",
@@ -2890,7 +3015,8 @@ export const techData = {
       name: "Tom Williams",
       role: "Mobile Director",
       company: "FieldForce",
-      image: "/person.jpg",
+      image: "/logos/img2.png",
+      image1: "/logos/nextroll-new.png",
     },
     teamSection: {
       sectionLabel: "Our Xamarin Development Team",

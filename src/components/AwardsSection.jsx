@@ -55,7 +55,7 @@ export default function AwardsSection() {
                     d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0"
                   />
                 </defs>
-                <text fill="#6b7280" fontSize="12" letterSpacing="2">
+                <text fill="#6b7280" fontSize="16" letterSpacing="2">
                   <textPath href="#circlePath1">
                     projects executed successfully • projects executed successfully •
                   </textPath>
@@ -83,7 +83,7 @@ export default function AwardsSection() {
                     d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0"
                   />
                 </defs>
-                <text fill="#6b7280" fontSize="12" letterSpacing="2">
+                <text fill="#6b7280" fontSize="16" letterSpacing="2">
                   <textPath href="#circlePath2">
                     industry sectors • industry sectors • industry sectors •
                   </textPath>

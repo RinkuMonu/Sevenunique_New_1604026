@@ -9,9 +9,8 @@ import TestimonialSection from "@/components/Services/ai-development/Testimonial
 import TestimonialHighlightSection from "@/components/Services/ai-development/TestimonialHighlightSection";
 import CaseStudySection from "@/components/Services/CaseStudySection";
 
-import TestimonialHighlightSection from "@/components/Services/ai-development/TestimonialHighlightSection";
-import AIUseCasesSection from "@/components/Services/ai-development/AIUseCasesSection";
-import CaseStudySection from "@/components/Services/CaseStudySection";
+
+
 
 
 export default async function ServicePage({ params }) {
@@ -31,13 +30,11 @@ export default async function ServicePage({ params }) {
       <TrustedClientsStrip clients={data.trustedClients} />
       <div className="bg-[#f5f6f7] px-6 py-10 md:px-10">
         <TableContent />
-        <AIUseCasesSection />
-        <AiTeamSection />
-        <CtaBanner />
-        <TestimonialSection />
+        <AIUseCasesSection useCases={data.useCases} />
+        <AiTeamSection teamSection={data.teamSection} />
+        <CtaBanner ctaBanner={data.ctaBanner} />
+        <TestimonialSection testimonials={data.testimonials} />
       </div>
-      {data.sections?.trustedClientsStrip && <TrustedClientsStrip />}
-      {data.useCases && <AIUseCasesSection useCases={data.useCases} />}
       {data.testimonialHighlight && (
         <TestimonialHighlightSection testimonial={data.testimonialHighlight} />
       )}

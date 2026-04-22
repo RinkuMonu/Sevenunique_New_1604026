@@ -1,127 +1,114 @@
-﻿import Image from "next/image";
-import Link from "next/link";
+﻿"use client";
 
-function CaseStudyCard({ card }) {
-  const content = (
-    <div className="group relative min-h-[480px] overflow-hidden rounded-[18px] bg-black text-white shadow-[0_10px_30px_rgba(0,0,0,0.12)]">
+export default function CaseStudyHero() {
+  return (
+    <section className="w-full bg-[#eef0f2] py-20 flex justify-center">
       
-      {/* IMAGE */}
-      <Image
-        src={card.image}
-        alt={card.title}
-        fill
-        className="object-cover transition duration-500 group-hover:scale-105"
-      />
-
-      {/* OVERLAY */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/60 to-black/90" />
-
-      {/* CONTENT */}
-      <div className="relative z-10 flex h-full flex-col p-8">
+      {/* BIGGER CONTAINER */}
+      <div className="w-[85%] max-w-[1400px] relative rounded-[24px] overflow-visible">
         
-        {/* TAG */}
-        <span className="inline-flex w-fit rounded-[10px] bg-[#eef0f3] px-4 py-3 text-[12px] font-medium uppercase tracking-[0.2em] text-[#425b7d]">
-          {card.tag}
-        </span>
+        <div className="grid grid-cols-12 min-h-[620px] rounded-[24px] overflow-hidden">
+          
+          {/* LEFT PANEL */}
+          <div className="col-span-7 bg-[#0a0a0a] text-white px-14 py-16 flex flex-col justify-center">
+            
+            {/* TAG */}
+            <span className="text-[12px] tracking-[1.6px] uppercase bg-[#2b2b2b] text-[#cbd5e1] px-4 py-1.5 rounded-md w-fit mb-7">
+              Advertising & Marketing
+            </span>
 
-        <div className="mt-24 max-w-[300px] relative">
+            {/* HEADING */}
+            <h1 className="text-[38px] leading-[1.25] font-semibold mb-7 max-w-[560px]">
+              Pinterest teamed up with us to rebuild its Ads Manager architecture for scale.
+            </h1>
 
-          {/* 🔴 TITLE (disappears on hover) */}
-          <h3
-            className="
-              text-[26px] font-semibold leading-[1.22] text-white
-              transition-all duration-300
-              group-hover:opacity-0 group-hover:-translate-x-4
-            "
-          >
-            {card.title}
-          </h3>
+            {/* BADGES */}
+            <div className="flex gap-4 mb-7">
+              <span className="text-[13px] border border-[#374151] px-4 py-1.5 rounded-md">
+                5-Year Engagement
+              </span>
+              <span className="text-[13px] border border-[#374151] px-4 py-1.5 rounded-md">
+                233 Specialists
+              </span>
+            </div>
 
-          {/* 🟢 DESCRIPTION (slides in) */}
-          {card.description && (
-            <p
-              className="
-                absolute top-0 left-0
-                text-[16px] text-gray-300 leading-[1.6]
-                opacity-0 translate-x-full
-                group-hover:opacity-100 group-hover:translate-x-0
-                transition-all duration-500 ease-in-out
-              "
-            >
-              {card.description}
+            {/* DESCRIPTION */}
+            <p className="text-[15px] text-[#9ca3af] leading-relaxed mb-7 max-w-[560px]">
+              Pinterest needed to rebuild its Ads Manager backend to handle growth and deliver more value to advertising partners. The platform's architecture required significant changes to support scale and reduce operational complexity. Our backend, frontend, and data engineering teams integrated with Pinterest's in-house developers to hit their production deadline.
             </p>
-          )}
 
+            {/* BULLETS */}
+            <ul className="space-y-4 text-[15px] text-[#d1d5db]">
+              <li className="flex items-center gap-3">
+                <span className="text-green-400 text-[16px]">✔</span>
+                Rebuilt the Ads Manager architecture to handle scale
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="text-green-400 text-[16px]">✔</span>
+                Reduced infrastructure complexity and costs across the ads platform
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="text-green-400 text-[16px]">✔</span>
+                Scaled engineering team from 5 developers to 233 specialists
+              </li>
+            </ul>
+
+            {/* LOGO */}
+            <div className="mt-10 text-[#9ca3af] text-[20px] font-semibold">
+              Pinterest
+            </div>
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className="col-span-5 h-full">
+            <img
+              src="/pinterest.png"
+              alt="Pinterest UI"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
 
-      <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/68 to-black/98" />
-      <div className="relative z-10 flex h-full flex-col p-8">
-        <span className="inline-flex w-fit rounded-[10px] bg-[#eef0f3] px-4 py-3 text-[12px] font-semibold uppercase tracking-[0.24em] text-[#425b7d]">
-          {card.tag}
-        </span>
-
-        <div className="mt-24 max-w-[300px]">
-          <h3 className="text-[26px] font-semibold leading-[1.22] text-white">
-            {card.title}
+        {/* 🔥 CORRECT FORM POSITION (IMPORTANT PART) */}
+        <div className="absolute top-[110px] right-[-90px] w-[380px] bg-white rounded-[18px] shadow-2xl p-7">
+          
+          <h3 className="text-[19px] font-semibold text-[#111] mb-5">
+            Get expert help for your Backend project.
           </h3>
-        </div>
-      </div>
-    </div>
-  );
 
-  if (!card.href) return content;
-  if (!card.href) {
-    return content;
-  }
+          <div className="space-y-5">
+            
+            <div>
+              <label className="text-[13px] text-[#374151]">Your name</label>
+              <input
+                type="text"
+                placeholder="Full name"
+                className="w-full mt-1.5 border border-[#e5e7eb] rounded-md px-3 py-2.5 text-[14px]"
+              />
+            </div>
 
-  return (
-    <Link href={card.href} className="block">
-      {content}
-    </Link>
-  );
-}
+            <div>
+              <label className="text-[13px] text-[#374151]">Your email</label>
+              <input
+                type="email"
+                placeholder="name@company.com"
+                className="w-full mt-1.5 border border-[#e5e7eb] rounded-md px-3 py-2.5 text-[14px]"
+              />
+            </div>
 
-export default function CaseStudySection({ caseStudies }) {
-  if (!caseStudies?.cards?.length) return null;
+            <div>
+              <label className="text-[13px] text-[#374151]">What can we do for you?</label>
+              <textarea
+                rows={3}
+                placeholder="Tell us more about your needs."
+                className="w-full mt-1.5 border border-[#e5e7eb] rounded-md px-3 py-2.5 text-[14px]"
+              />
+            </div>
 
-  return (
-    <section className="bg-white px-6 py-20 md:px-10 md:py-24 font-sans">
-      <div className="mx-auto max-w-7xl">
-
-        {/* SECTION LABEL → 12px */}
-        <p className="mb-4 text-[12px] font-medium uppercase tracking-[0.2em] text-[#314a6b]">
-          {caseStudies.sectionLabel}
-        </p>
-
-        {/* MAIN HEADING → 24px */}
-        <h2 className="max-w-5xl text-[24px] font-semibold leading-[1.4] text-[#101010]">
-          {caseStudies.heading}
-        </h2>
-
-        {/* DESCRIPTION → 16px */}
-        {caseStudies.description && (
-          <p className="mt-6 max-w-5xl text-[16px] leading-[1.6] text-[#1e2a3b]">
-    <section className="bg-white px-6 py-20 md:px-10 md:py-24">
-      <div className="mx-auto max-w-7xl">
-        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-[#314a6b]">
-          {caseStudies.sectionLabel}
-        </p>
-
-        <h2 className="max-w-5xl text-[42px] font-semibold leading-[1.08] text-[#101010] md:text-[52px]">
-          {caseStudies.heading}
-        </h2>
-
-        {caseStudies.description && (
-          <p className="mt-6 max-w-5xl text-[18px] leading-[1.65] text-[#1e2a3b]">
-            {caseStudies.description}
-          </p>
-        )}
-
-        {/* CARDS */}
-        <div className="mt-12 grid gap-8 lg:grid-cols-3">
-          {caseStudies.cards.map((card) => (
-            <CaseStudyCard key={card.title} card={card} />
-          ))}
+            <button className="w-full bg-[#f66135] hover:bg-[#f1592a] text-white py-3 rounded-md text-[14px] font-medium">
+              Jump-start Your Project
+            </button>
+          </div>
         </div>
 
       </div>
