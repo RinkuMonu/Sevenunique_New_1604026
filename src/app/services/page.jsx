@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { serviceData } from "./[slug]/data";
+import CaseStudySection from "@/components/Services/CaseStudySection";
 
 /* ── Card Component ── */
 function ServiceCard({ service }) {
@@ -52,6 +53,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <CaseStudySection />
     </div>
+
   );
 }

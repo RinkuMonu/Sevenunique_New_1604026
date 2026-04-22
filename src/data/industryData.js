@@ -452,6 +452,7 @@ export const industryData = {
                 },
             ],
         },
+
         faq: {
             title: "Which institutions benefit from custom banking software development?",
             desc: "Custom banking software development services benefit financial institutions by enhancing security, improving customer experience, and enabling efficient management of financial operations and regulatory compliance.",
@@ -1218,6 +1219,7 @@ export const industryData = {
             ],
         }
 
+
     },
 
     retail: {
@@ -1462,4 +1464,917 @@ export const industryData = {
         }
 
     },
+
+    insurance: {
+        hero: {
+            label: "INSURANCE SOFTWARE DEVELOPMENT",
+            title: "Build custom software solutions for insurance industry.",
+            desc: "Enhance policy management, streamline claims processing, and improve customer engagement with secure and scalable insurance software solutions.",
+            image: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/Custom_Banking_Software_Development_Solutions_277d8cba5c?_a=BAVAfVDW0",
+        },
+
+        services: {
+            title: "Insurance software development services we provide",
+            desc: "We develop custom insurance software solutions that help insurers, brokers, and agencies automate workflows, manage policies efficiently, and deliver better customer experiences. Our solutions leverage AI, cloud computing, and data analytics to modernize legacy systems and drive operational efficiency.",
+
+            items: [
+                {
+                    title: "Policy Management Systems",
+                    desc: "We build comprehensive policy management platforms that enable insurers to create, manage, and track insurance policies across multiple product lines. These systems automate policy lifecycle processes including underwriting, renewals, endorsements, and cancellations, ensuring accuracy and compliance while reducing manual effort.",
+                },
+                {
+                    title: "Claims Management Solutions",
+                    desc: "Our claims management software streamlines the entire claims lifecycle, from claim initiation to settlement. With automated workflows, fraud detection mechanisms, and real-time tracking, insurers can process claims faster while improving customer satisfaction and reducing operational costs.",
+                },
+                {
+                    title: "Insurance CRM Systems",
+                    desc: "We develop customer relationship management systems tailored for insurance businesses. These platforms help manage customer interactions, track leads, and provide personalized policy recommendations, improving customer engagement and retention.",
+                },
+                {
+                    title: "Underwriting Automation Platforms",
+                    desc: "Our underwriting solutions leverage AI and data analytics to assess risk, automate decision-making, and improve underwriting accuracy. This reduces processing time and enables insurers to make informed decisions quickly.",
+                },
+                {
+                    title: "Insurance Analytics & Reporting",
+                    desc: "We build advanced analytics platforms that provide insights into risk assessment, claims trends, and customer behavior. These tools enable insurers to make data-driven decisions, optimize pricing strategies, and improve overall performance.",
+                },
+            ],
+        },
+
+        benefits: {
+            title: "Benefits of building bespoke insurance solutions",
+            items: [
+                {
+                    title: "Improved Operational Efficiency",
+                    desc: "Custom insurance software automates repetitive processes such as policy issuance, claims processing, and reporting, reducing manual effort and improving productivity across operations.",
+                },
+                {
+                    title: "Enhanced Customer Experience",
+                    desc: "With personalized portals, faster claims processing, and seamless communication, customers receive a better experience, leading to higher satisfaction and retention.",
+                },
+                {
+                    title: "Regulatory Compliance",
+                    desc: "Our solutions are built to comply with industry regulations and standards, ensuring secure data handling and adherence to legal requirements.",
+                },
+                {
+                    title: "Scalability & Flexibility",
+                    desc: "Custom-built systems are designed to scale with your business growth, allowing you to add new products, services, and integrations without limitations.",
+                },
+                {
+                    title: "Advanced Risk Management",
+                    desc: "Leverage predictive analytics and AI to assess risks accurately, detect fraud, and improve underwriting processes.",
+                },
+            ],
+        },
+
+        process: {
+            title: "Our process. Simple, seamless, insurance-focused.",
+            image: "https://assets.bairesdev.com/image/upload/v1/www/core/silos_solutions_our-process_dudyi1",
+
+            steps: [
+                {
+                    title: "Analyze insurance requirements.",
+                    desc: "We begin by understanding your insurance products, workflows, and regulatory requirements. This helps us design solutions tailored to your business model.",
+                    icon: "📊",
+                },
+                {
+                    title: "Design and develop the platform.",
+                    desc: "We create scalable and secure insurance systems, integrating policy management, claims processing, and analytics into a unified platform.",
+                    icon: "⚙️",
+                },
+                {
+                    title: "Deploy, optimize, and scale.",
+                    desc: "We launch your solution, monitor performance, and continuously optimize it to meet evolving business needs and market demands.",
+                    icon: "🚀",
+                },
+            ],
+        },
+
+        faq: {
+            title: "Which organizations benefit from custom insurance software development?",
+            desc: "Custom insurance software solutions are valuable for a wide range of organizations in the insurance ecosystem.",
+
+            items: [
+                {
+                    title: "Insurance Companies",
+                    desc: "Insurers use custom platforms to manage policies, process claims, and improve operational efficiency.",
+                },
+                {
+                    title: "Insurance Brokers",
+                    desc: "Brokers benefit from CRM and policy comparison tools that help them serve clients better.",
+                },
+                {
+                    title: "InsurTech Startups",
+                    desc: "Startups leverage modern software solutions to innovate and disrupt traditional insurance models.",
+                },
+                {
+                    title: "Reinsurance Companies",
+                    desc: "Reinsurers use advanced analytics and risk assessment tools to manage large-scale risks effectively.",
+                },
+                {
+                    title: "Third-Party Administrators",
+                    desc: "TPAs use software to manage claims, documentation, and customer communication efficiently.",
+                },
+            ],
+        },
+    },
+
+    "real-estate": {
+        hero: {
+            label: "REAL ESTATE SOFTWARE DEVELOPMENT",
+            title: "Build custom software solutions for real estate industry.",
+            desc: "Transform real estate operations with powerful digital solutions that streamline property management, enhance  processes.",
+            image: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/Custom_Hospitality_Software_Development_Solutions_7c021684ca?_a=BAVAfVDW0",
+        },
+
+        services: {
+            title: "Real estate software development services we provide",
+            desc: "We develop advanced real estate software solutions that enable agencies, brokers, developers, and property managers to digitize operations, improve efficiency, and deliver exceptional customer experiences. Our solutions integrate modern technologies such as cloud computing, AI-driven analytics, and automation to simplify complex real estate workflows, improve transparency, and accelerate transactions across the entire property lifecycle.",
+
+            items: [
+                {
+                    title: "Property Management Systems",
+                    desc: "We build comprehensive property management platforms that centralize all aspects of real estate operations, including property listings, tenant management, lease tracking, maintenance scheduling, and financial reporting. These systems allow property managers to monitor occupancy rates, track rental payments, automate lease renewals, and handle maintenance requests efficiently. By consolidating operations into a single platform, businesses can reduce manual effort, improve communication with tenants, and ensure smooth day-to-day management of residential and commercial properties.",
+                },
+                {
+                    title: "Real Estate Marketplace Platforms",
+                    desc: "Our real estate marketplace solutions enable seamless property buying, selling, and renting experiences through feature-rich platforms. These systems include advanced property search filters, interactive maps, virtual property tours, secure payment integrations, and user-friendly dashboards for buyers, sellers, and agents. By creating a centralized digital marketplace, businesses can expand their reach, improve customer engagement, and accelerate transaction cycles while ensuring transparency and trust.",
+                },
+                {
+                    title: "CRM for Real Estate",
+                    desc: "We develop customized CRM solutions designed specifically for real estate professionals to manage leads, track customer interactions, and automate sales pipelines. These systems help agents nurture prospects, schedule property visits, send automated follow-ups, and maintain detailed customer profiles. By leveraging CRM tools, businesses can improve conversion rates, build stronger client relationships, and deliver personalized experiences throughout the property buying or renting journey.",
+                },
+                {
+                    title: "Property Analytics & Insights",
+                    desc: "Our analytics platforms provide real-time insights into market trends, property valuations, pricing strategies, and investment opportunities. By analyzing large volumes of data, these tools help real estate businesses make informed decisions regarding property pricing, marketing strategies, and portfolio management. With customizable dashboards and predictive analytics, organizations can identify high-performing assets, forecast demand, and optimize their overall investment strategies.",
+                },
+                {
+                    title: "Virtual Tours & AR Solutions",
+                    desc: "We create immersive virtual tour and augmented reality solutions that allow potential buyers and tenants to explore properties remotely. These technologies provide interactive 3D walkthroughs, enabling users to visualize spaces without physical visits. This not only enhances customer experience but also reduces the time and cost associated with property showings, making the buying and renting process more efficient and accessible.",
+                },
+            ],
+        },
+
+        benefits: {
+            title: "Benefits of building bespoke real estate solutions",
+            items: [
+                {
+                    title: "Improved Property Management Efficiency",
+                    desc: "Custom real estate software streamlines property management processes by automating tasks such as rent collection, lease tracking, and maintenance scheduling. This reduces administrative workload, minimizes errors, and ensures smoother operations across all properties.",
+                },
+                {
+                    title: "Enhanced Customer Experience",
+                    desc: "With intuitive user interfaces, personalized property recommendations, and seamless communication tools, customers enjoy a more engaging and convenient experience when searching for, buying, or renting properties.",
+                },
+                {
+                    title: "Data-Driven Decision Making",
+                    desc: "Advanced analytics and reporting tools provide actionable insights into market trends, pricing strategies, and customer behavior, enabling businesses to make informed decisions and stay competitive in the market.",
+                },
+                {
+                    title: "Scalability and Flexibility",
+                    desc: "Custom-built solutions are designed to grow with your business, allowing you to expand property portfolios, manage more clients, and integrate new features without performance limitations.",
+                },
+                {
+                    title: "Operational Transparency",
+                    desc: "Centralized systems improve visibility across all operations, ensuring better coordination between teams, improved accountability, and more efficient workflow management.",
+                },
+            ],
+        },
+
+        process: {
+            title: "Our process. Simple, seamless, real estate-focused.",
+            image: "https://assets.bairesdev.com/image/upload/v1/www/core/silos_solutions_our-process_dudyi1",
+
+            steps: [
+                {
+                    title: "Understand your real estate operations.",
+                    desc: "We begin by analyzing your business model, property management processes, and customer journey. This helps us identify inefficiencies, opportunities for automation, and areas where technology can add the most value.",
+                    icon: "🏠",
+                },
+                {
+                    title: "Design and develop tailored solutions.",
+                    desc: "Based on your requirements, we design scalable and user-friendly real estate platforms that integrate seamlessly with your existing systems. Our development process focuses on performance, security, and usability to ensure long-term success.",
+                    icon: "⚙️",
+                },
+                {
+                    title: "Launch, optimize, and scale.",
+                    desc: "After deployment, we continuously monitor system performance, gather feedback, and implement improvements. This ensures your platform remains efficient, adaptable, and capable of supporting business growth.",
+                    icon: "🚀",
+                },
+            ],
+        },
+
+        faq: {
+            title: "Which stakeholders benefit from custom real estate software solutions?",
+            desc: "Custom real estate software provides value across the entire property ecosystem, helping different stakeholders streamline operations and improve outcomes.",
+
+            items: [
+                {
+                    title: "Real Estate Agencies",
+                    desc: "Agencies use software to manage property listings, track leads, and streamline sales processes, enabling them to close deals faster and improve client satisfaction.",
+                },
+                {
+                    title: "Property Managers",
+                    desc: "Property managers benefit from tools that automate tenant management, rent collection, and maintenance workflows, ensuring efficient day-to-day operations.",
+                },
+                {
+                    title: "Real Estate Investors",
+                    desc: "Investors leverage analytics platforms to evaluate property performance, identify profitable opportunities, and optimize their investment portfolios.",
+                },
+                {
+                    title: "Developers",
+                    desc: "Developers use custom software to manage projects, track construction progress, and handle property sales efficiently.",
+                },
+                {
+                    title: "Buyers and Renters",
+                    desc: "End users benefit from seamless property search, virtual tours, and simplified transaction processes, making it easier to find and secure properties.",
+                },
+            ],
+        },
+    },
+
+    automotive: {
+        hero: {
+            label: "AUTOMOTIVE SOFTWARE DEVELOPMENT",
+            title: "Build custom software solutions for automotive industry.",
+            desc: "Accelerate innovation in the automotive sector with advanced software solutions that enable connected vehicles, intelligent fleet management, and data-driven mobility services.",
+            image: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/Custom_Aviation_Software_Development_Solutions_abf6ed3869?_a=BAVAfVDW0",
+        },
+
+        services: {
+            title: "Automotive software development services we provide",
+            desc: "We develop advanced automotive software solutions designed to support manufacturers, mobility platforms, and fleet operators in managing vehicles, optimizing operations, and enhancing user experiences. Our solutions leverage IoT, AI, and real-time data processing to enable smarter, safer, and more efficient mobility ecosystems.",
+
+            items: [
+                {
+                    title: "Fleet Management Systems",
+                    desc: "We build intelligent fleet management platforms that allow businesses to monitor vehicle locations, fuel consumption, driver behavior, and maintenance schedules in real time. These systems help organizations optimize routes, reduce operational costs, and improve overall fleet efficiency while ensuring better control over assets.",
+                },
+                {
+                    title: "Connected Vehicle Solutions",
+                    desc: "Our connected vehicle solutions integrate IoT sensors, cloud infrastructure, and telematics systems to enable seamless communication between vehicles, drivers, and backend systems. This allows real-time diagnostics, remote monitoring, and enhanced safety features that improve driving experiences and operational visibility.",
+                },
+                {
+                    title: "Automotive Analytics Platforms",
+                    desc: "We develop data analytics platforms that collect and process vehicle and operational data to generate actionable insights. Businesses can analyze performance trends, detect anomalies, and make data-driven decisions to improve efficiency, safety, and customer satisfaction.",
+                },
+                {
+                    title: "Predictive Maintenance Systems",
+                    desc: "Our predictive maintenance solutions use AI and machine learning algorithms to identify potential vehicle issues before they occur. By analyzing historical and real-time data, these systems reduce downtime, prevent costly repairs, and extend vehicle lifespan.",
+                },
+                {
+                    title: "Mobility & Ride-Sharing Platforms",
+                    desc: "We create scalable mobility platforms that support ride-sharing, car rentals, and on-demand transportation services. These systems include features such as real-time booking, GPS tracking, payment integration, and user management to deliver seamless mobility experiences.",
+                },
+            ],
+        },
+
+        benefits: {
+            title: "Benefits of building bespoke automotive solutions",
+            items: [
+                {
+                    title: "Improved Fleet Efficiency",
+                    desc: "Custom automotive software enables businesses to optimize routes, monitor fuel consumption, and reduce operational costs, resulting in higher efficiency across fleet operations.",
+                },
+                {
+                    title: "Enhanced Safety and Reliability",
+                    desc: "Real-time monitoring, predictive maintenance, and advanced driver assistance systems help improve safety and reduce the risk of accidents and breakdowns.",
+                },
+                {
+                    title: "Data-Driven Insights",
+                    desc: "Analytics platforms provide valuable insights into vehicle performance, driver behavior, and operational trends, enabling better decision-making and continuous improvement.",
+                },
+                {
+                    title: "Scalability and Flexibility",
+                    desc: "Custom solutions are designed to grow with your business, allowing you to manage larger fleets, integrate new technologies, and expand operations without limitations.",
+                },
+                {
+                    title: "Enhanced Customer Experience",
+                    desc: "Mobility platforms and connected services provide users with seamless, reliable, and convenient transportation experiences, improving satisfaction and retention.",
+                },
+            ],
+        },
+
+        process: {
+            title: "Our process. Smart, connected, automotive-ready.",
+            image: "https://assets.bairesdev.com/image/upload/v1/www/core/silos_solutions_our-process_dudyi1",
+
+            steps: [
+                {
+                    title: "Analyze mobility requirements.",
+                    desc: "We begin by understanding your fleet operations, vehicle systems, and business objectives to identify opportunities for optimization and innovation.",
+                    icon: "🚗",
+                },
+                {
+                    title: "Design and develop solutions.",
+                    desc: "We build scalable automotive platforms tailored to your needs, integrating IoT, analytics, and cloud technologies for maximum performance.",
+                    icon: "⚙️",
+                },
+                {
+                    title: "Deploy and optimize.",
+                    desc: "We launch your solution and continuously monitor performance, making improvements to ensure efficiency, reliability, and scalability.",
+                    icon: "🚀",
+                },
+            ],
+        },
+
+        faq: {
+            title: "Who benefits from automotive software solutions?",
+            desc: "Custom automotive software solutions provide value across the mobility ecosystem.",
+
+            items: [
+                {
+                    title: "Fleet Operators",
+                    desc: "Fleet operators use software to monitor vehicles, optimize routes, and reduce operational costs.",
+                },
+                {
+                    title: "Automotive Manufacturers",
+                    desc: "Manufacturers leverage connected systems and analytics to build smarter vehicles and improve production processes.",
+                },
+                {
+                    title: "Mobility Platforms",
+                    desc: "Ride-sharing and transportation platforms rely on software for booking, tracking, and user management.",
+                },
+                {
+                    title: "Logistics Companies",
+                    desc: "Logistics providers use fleet and tracking systems to improve delivery efficiency and reduce delays.",
+                },
+                {
+                    title: "Drivers and End Users",
+                    desc: "End users benefit from safer, more reliable, and connected driving experiences.",
+                },
+            ],
+        },
+    },
+
+    telecommunications: {
+        hero: {
+            label: "TELECOMMUNICATION SOFTWARE DEVELOPMENT",
+            title: "Build custom software solutions for telecom industry.",
+            desc: "Enhance network performance, streamline operations, and deliver superior customer experiences with scalable telecom software solutions built for modern connectivity.",
+            image: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/Custom_Banking_Software_Development_Solutions_277d8cba5c?_a=BAVAfVDW0",
+        },
+
+        services: {
+            title: "Telecom software development services we provide",
+            desc: "We develop robust telecom software solutions that help service providers manage complex networks, optimize service delivery, and improve customer engagement. Our platforms leverage cloud computing, automation, and advanced analytics to support scalable and high-performance telecom ecosystems.",
+
+            items: [
+                {
+                    title: "Network Management Systems",
+                    desc: "We build advanced network management platforms that monitor network performance, detect issues, and automate maintenance tasks. These systems ensure high availability, reduce downtime, and improve overall service quality.",
+                },
+                {
+                    title: "Billing & OSS/BSS Systems",
+                    desc: "Our billing and operational support systems automate subscription management, billing processes, and customer lifecycle management, ensuring accuracy and efficiency.",
+                },
+                {
+                    title: "Customer Self-Service Portals",
+                    desc: "We develop user-friendly portals that allow customers to manage subscriptions, monitor usage, and resolve issues independently, improving customer satisfaction.",
+                },
+                {
+                    title: "Telecom Analytics Platforms",
+                    desc: "Our analytics solutions provide insights into network performance, user behavior, and service usage, enabling telecom providers to optimize operations and improve services.",
+                },
+                {
+                    title: "5G & IoT Integration Solutions",
+                    desc: "We build scalable platforms that support next-generation connectivity, enabling telecom companies to deliver innovative IoT and 5G services.",
+                },
+            ],
+        },
+
+        benefits: {
+            title: "Benefits of telecom software solutions",
+            items: [
+                {
+                    title: "Improved Network Efficiency",
+                    desc: "Optimize network performance and reduce downtime through automated monitoring and management systems.",
+                },
+                {
+                    title: "Enhanced Customer Experience",
+                    desc: "Provide seamless and personalized services through advanced customer portals and communication tools.",
+                },
+                {
+                    title: "Operational Automation",
+                    desc: "Automate complex processes such as billing, provisioning, and network management to improve efficiency.",
+                },
+                {
+                    title: "Scalability",
+                    desc: "Support growing user bases and increasing data demands with flexible and scalable solutions.",
+                },
+                {
+                    title: "Advanced Analytics",
+                    desc: "Gain actionable insights into network and customer behavior to drive better decision-making.",
+                },
+            ],
+        },
+
+        process: {
+            title: "Our process. Connected, scalable, telecom-ready.",
+            image: "https://assets.bairesdev.com/image/upload/v1/www/core/silos_solutions_our-process_dudyi1",
+
+            steps: [
+                {
+                    title: "Assess telecom infrastructure.",
+                    desc: "We analyze your network systems, operational processes, and customer requirements.",
+                    icon: "📡",
+                },
+                {
+                    title: "Develop scalable systems.",
+                    desc: "We design and build robust telecom platforms tailored to your infrastructure and business goals.",
+                    icon: "⚙️",
+                },
+                {
+                    title: "Deploy and optimize.",
+                    desc: "We ensure smooth deployment and continuously optimize performance for scalability and reliability.",
+                    icon: "🚀",
+                },
+            ],
+        },
+
+        faq: {
+            title: "Who benefits from telecom software solutions?",
+            desc: "Telecom software solutions support a wide range of stakeholders in the connectivity ecosystem.",
+
+            items: [
+                {
+                    title: "Telecom Providers",
+                    desc: "Service providers use software to manage networks and deliver reliable services.",
+                },
+                {
+                    title: "Internet Service Providers",
+                    desc: "ISPs leverage systems to optimize bandwidth usage and improve service quality.",
+                },
+                {
+                    title: "Enterprises",
+                    desc: "Businesses use telecom solutions for communication and connectivity needs.",
+                },
+                {
+                    title: "IoT Providers",
+                    desc: "IoT companies rely on telecom infrastructure for device connectivity and data transmission.",
+                },
+                {
+                    title: "End Users",
+                    desc: "Users benefit from faster, more reliable, and seamless connectivity experiences.",
+                },
+            ],
+        },
+    },
+
+    martech: {
+        hero: {
+            label: "MARTECH SOFTWARE DEVELOPMENT",
+            title: "Build custom software solutions for marketing technology.",
+            desc: "Empower your marketing strategies with advanced Martech solutions that enable automation, personalization, and data-driven decision-making.",
+            image: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/Custom_Retail_Software_Development_Solutions_fc0aec98ec?_a=BAVAfVDW0",
+        },
+
+        services: {
+            title: "Martech software development services we provide",
+            desc: "We develop cutting-edge marketing technology solutions that help businesses automate campaigns, analyze customer behavior, and deliver personalized experiences at scale. Our Martech platforms integrate with CRM systems, analytics tools, and advertising platforms to provide a unified view of marketing performance and customer engagement.",
+
+            items: [
+                {
+                    title: "Marketing Automation Platforms",
+                    desc: "We build powerful automation platforms that allow businesses to automate email campaigns, lead nurturing, customer segmentation, and multi-channel marketing workflows. These systems reduce manual effort, ensure consistent communication, and enable businesses to deliver the right message to the right audience at the right time. By leveraging automation, organizations can increase engagement, improve conversion rates, and optimize marketing efficiency.",
+                },
+                {
+                    title: "Customer Data Platforms (CDP)",
+                    desc: "Our CDP solutions unify customer data from multiple sources into a single platform, providing a 360-degree view of customer behavior and preferences. This enables businesses to create personalized marketing campaigns, improve targeting accuracy, and deliver seamless experiences across all touchpoints. With real-time data processing and analytics, companies can make informed decisions and enhance customer engagement strategies.",
+                },
+                {
+                    title: "Campaign Management Systems",
+                    desc: "We develop centralized campaign management platforms that allow businesses to plan, execute, and monitor marketing campaigns across various channels. These systems provide real-time insights into campaign performance, enabling marketers to optimize strategies and maximize ROI. By consolidating campaign operations into a single dashboard, businesses can improve efficiency and ensure consistent messaging.",
+                },
+                {
+                    title: "Marketing Analytics & Reporting Tools",
+                    desc: "Our analytics platforms provide deep insights into customer behavior, campaign performance, and marketing ROI. Businesses can track key metrics, identify trends, and make data-driven decisions to improve marketing effectiveness. With customizable dashboards and advanced reporting features, organizations can continuously refine their strategies and achieve better outcomes.",
+                },
+                {
+                    title: "Personalization & Recommendation Engines",
+                    desc: "We build AI-driven personalization engines that deliver tailored content, product recommendations, and targeted messaging based on user behavior and preferences. These systems enhance customer experiences, increase engagement, and drive higher conversion rates by ensuring that users receive relevant and meaningful interactions.",
+                },
+            ],
+        },
+
+        benefits: {
+            title: "Benefits of building bespoke Martech solutions",
+            items: [
+                {
+                    title: "Improved Marketing Efficiency",
+                    desc: "Custom Martech solutions automate repetitive tasks such as campaign execution, lead management, and reporting, allowing marketing teams to focus on strategy and creativity. This improves overall efficiency and reduces operational overhead.",
+                },
+                {
+                    title: "Enhanced Customer Engagement",
+                    desc: "Personalized experiences and targeted messaging help businesses connect with their audience more effectively. By delivering relevant content at the right time, companies can increase engagement and build stronger relationships with customers.",
+                },
+                {
+                    title: "Data-Driven Decision Making",
+                    desc: "Advanced analytics and reporting tools provide actionable insights into campaign performance and customer behavior. This enables businesses to make informed decisions and continuously optimize their marketing strategies.",
+                },
+                {
+                    title: "Scalability and Flexibility",
+                    desc: "Custom-built Martech platforms are designed to scale with your business, allowing you to manage increasing data volumes, campaigns, and customer interactions without compromising performance.",
+                },
+                {
+                    title: "Unified Marketing Ecosystem",
+                    desc: "Integration with CRM systems, advertising platforms, and analytics tools ensures a seamless flow of data across your marketing ecosystem, enabling better coordination and improved results.",
+                },
+            ],
+        },
+
+        process: {
+            title: "Our process. Data-driven, scalable, Martech-focused.",
+            image: "https://assets.bairesdev.com/image/upload/v1/www/core/silos_solutions_our-process_dudyi1",
+
+            steps: [
+                {
+                    title: "Understand marketing goals and audience.",
+                    desc: "We analyze your marketing strategies, target audience, and existing tools to identify opportunities for improvement and optimization. This helps us design solutions aligned with your business objectives.",
+                    icon: "📊",
+                },
+                {
+                    title: "Design and build Martech solutions.",
+                    desc: "We develop scalable and integrated Martech platforms tailored to your needs, ensuring seamless data flow, automation, and performance across all marketing channels.",
+                    icon: "⚙️",
+                },
+                {
+                    title: "Optimize and scale campaigns.",
+                    desc: "We continuously monitor performance, refine strategies, and scale your marketing efforts to maximize ROI and long-term success.",
+                    icon: "🚀",
+                },
+            ],
+        },
+
+        faq: {
+            title: "Who benefits from Martech software solutions?",
+            desc: "Martech solutions provide value across various marketing and business functions.",
+
+            items: [
+                {
+                    title: "Marketing Teams",
+                    desc: "Marketing professionals use Martech platforms to automate campaigns, analyze performance, and improve engagement with their target audience.",
+                },
+                {
+                    title: "E-commerce Businesses",
+                    desc: "E-commerce companies leverage personalization and analytics tools to improve customer experience and increase sales conversions.",
+                },
+                {
+                    title: "Digital Agencies",
+                    desc: "Agencies use Martech solutions to manage multiple client campaigns, track performance, and deliver measurable results efficiently.",
+                },
+                {
+                    title: "Enterprises",
+                    desc: "Large organizations rely on Martech platforms to manage complex marketing operations and maintain consistency across global campaigns.",
+                },
+                {
+                    title: "Startups",
+                    desc: "Startups benefit from scalable Martech tools that help them grow quickly, acquire customers, and optimize marketing strategies with limited resources.",
+                },
+            ],
+        },
+    },
+
+    startups: {
+        hero: {
+            label: "STARTUP SOFTWARE DEVELOPMENT",
+            title: "Build scalable software solutions for startups.",
+            desc: "Accelerate your startup journey with custom software solutions designed for rapid growth, scalability, and innovation.",
+            image: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/Custom_Banking_Software_Development_Solutions_277d8cba5c?_a=BAVAfVDW0",
+        },
+
+        services: {
+            title: "Startup software development services we provide",
+            desc: "We help startups transform ideas into successful digital products by building scalable, high-performance applications. From MVP development to full-scale product engineering, our solutions are designed to support rapid growth, innovation, and adaptability in competitive markets.",
+
+            items: [
+                {
+                    title: "MVP Development",
+                    desc: "We build minimum viable products that allow startups to validate their ideas quickly and efficiently. By focusing on core features and rapid development cycles, we help startups launch products faster, gather user feedback, and iterate based on real-world insights. This approach reduces risk and ensures that resources are invested in building features that truly matter.",
+                },
+                {
+                    title: "Product Development & Scaling",
+                    desc: "Our product development services support startups in building scalable applications that can handle growing user bases and increasing data volumes. We design systems with scalability in mind, ensuring that your product can evolve as your business grows without performance bottlenecks.",
+                },
+                {
+                    title: "Cloud & DevOps Solutions",
+                    desc: "We implement cloud infrastructure and DevOps practices that enable startups to deploy, monitor, and scale applications efficiently. With automated CI/CD pipelines and cloud-native architectures, startups can achieve faster releases and improved system reliability.",
+                },
+                {
+                    title: "UI/UX Design",
+                    desc: "We create intuitive and engaging user interfaces that enhance user experience and drive product adoption. Our design approach focuses on usability, accessibility, and aesthetics to ensure that your product stands out in competitive markets.",
+                },
+                {
+                    title: "Technology Consulting",
+                    desc: "We provide strategic guidance on technology choices, architecture design, and development roadmaps. This helps startups make informed decisions and build products that align with their long-term business goals.",
+                },
+            ],
+        },
+
+        benefits: {
+            title: "Benefits of building bespoke startup solutions",
+            items: [
+                {
+                    title: "Faster Time-to-Market",
+                    desc: "Custom startup solutions enable rapid development and deployment, allowing you to launch your product quickly and gain a competitive advantage in the market.",
+                },
+                {
+                    title: "Scalability",
+                    desc: "Our solutions are designed to grow with your startup, ensuring that your product can handle increasing users, data, and complexity without performance issues.",
+                },
+                {
+                    title: "Cost Efficiency",
+                    desc: "By focusing on essential features and iterative development, startups can reduce development costs and allocate resources more effectively.",
+                },
+                {
+                    title: "Flexibility and Innovation",
+                    desc: "Custom solutions provide the flexibility to experiment, iterate, and innovate, enabling startups to adapt quickly to changing market conditions.",
+                },
+                {
+                    title: "Improved User Experience",
+                    desc: "User-centric design and development ensure that your product delivers a seamless and engaging experience, increasing user retention and satisfaction.",
+                },
+            ],
+        },
+
+        process: {
+            title: "Our process. Agile, fast, startup-focused.",
+            image: "https://assets.bairesdev.com/image/upload/v1/www/core/silos_solutions_our-process_dudyi1",
+
+            steps: [
+                {
+                    title: "Validate your idea.",
+                    desc: "We work with you to understand your vision, target audience, and market opportunities, helping you refine your idea and define a clear product roadmap.",
+                    icon: "💡",
+                },
+                {
+                    title: "Build and iterate quickly.",
+                    desc: "We develop your product using agile methodologies, allowing for rapid iterations and continuous improvements based on user feedback.",
+                    icon: "⚙️",
+                },
+                {
+                    title: "Scale and grow.",
+                    desc: "Once your product gains traction, we help you scale your infrastructure and features to support growth and long-term success.",
+                    icon: "🚀",
+                },
+            ],
+        },
+
+        faq: {
+            title: "Who benefits from startup software solutions?",
+            desc: "Startup software solutions are designed to support entrepreneurs and growing businesses.",
+
+            items: [
+                {
+                    title: "Early-stage Startups",
+                    desc: "Startups in the early stages use custom solutions to validate ideas and launch MVPs quickly.",
+                },
+                {
+                    title: "Tech Founders",
+                    desc: "Founders rely on scalable software to build innovative products and attract investors.",
+                },
+                {
+                    title: "Growing Startups",
+                    desc: "Scaling startups use advanced systems to handle increased demand and expand their market reach.",
+                },
+                {
+                    title: "Investors",
+                    desc: "Investors benefit from well-built products that demonstrate growth potential and technical stability.",
+                },
+                {
+                    title: "Entrepreneurs",
+                    desc: "Entrepreneurs use custom software to turn ideas into successful digital businesses.",
+                },
+            ],
+        },
+    },
+
+    "supply-chain": {
+        hero: {
+            label: "SUPPLY CHAIN SOFTWARE DEVELOPMENT",
+            title: "Build custom software solutions for supply chain industry.",
+            desc: "Optimize your supply chain operations with intelligent software solutions that enhance visibility, improve coordination, and streamline logistics processes.",
+            image: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/Custom_Aviation_Software_Development_Solutions_abf6ed3869?_a=BAVAfVDW0",
+        },
+
+        services: {
+            title: "Supply chain software development services we provide",
+            desc: "We develop advanced supply chain software solutions that help businesses manage complex logistics networks, optimize inventory, and improve operational efficiency. Our platforms integrate real-time tracking, automation, and analytics to provide end-to-end visibility and control over supply chain processes.",
+
+            items: [
+                {
+                    title: "Inventory Management Systems",
+                    desc: "We build intelligent inventory management systems that allow businesses to track stock levels, manage warehouses, and automate replenishment processes. These platforms provide real-time visibility into inventory movements, helping organizations reduce overstocking, avoid stockouts, and improve overall supply chain efficiency. By integrating with other systems, they ensure seamless coordination across operations.",
+                },
+                {
+                    title: "Logistics & Transportation Management",
+                    desc: "Our logistics solutions enable businesses to plan, execute, and optimize transportation operations efficiently. These systems include route optimization, shipment tracking, and fleet management features that help reduce delivery times and operational costs. With real-time updates and analytics, companies can improve coordination and ensure timely delivery of goods.",
+                },
+                {
+                    title: "Supply Chain Analytics Platforms",
+                    desc: "We develop analytics tools that provide deep insights into supply chain performance, demand forecasting, and operational bottlenecks. By leveraging data visualization and predictive analytics, businesses can identify inefficiencies, optimize workflows, and make informed decisions. These platforms help improve responsiveness and adaptability in dynamic market conditions.",
+                },
+                {
+                    title: "Order Management Systems",
+                    desc: "Our order management systems streamline the entire order lifecycle, from order placement to fulfillment and delivery. These platforms ensure accurate order processing, real-time tracking, and efficient coordination between suppliers, warehouses, and customers. By automating workflows, businesses can reduce errors and enhance customer satisfaction.",
+                },
+                {
+                    title: "Supplier & Vendor Management Solutions",
+                    desc: "We build systems that help organizations manage supplier relationships, track performance, and ensure compliance with contracts and standards. These solutions enable better communication, improved collaboration, and enhanced visibility across supplier networks, resulting in stronger partnerships and more reliable supply chains.",
+                },
+            ],
+        },
+
+        benefits: {
+            title: "Benefits of building bespoke supply chain solutions",
+            items: [
+                {
+                    title: "End-to-End Visibility",
+                    desc: "Custom supply chain software provides real-time visibility into every stage of the supply chain, from procurement to delivery. This helps businesses monitor operations, identify bottlenecks, and ensure smooth coordination across all stakeholders.",
+                },
+                {
+                    title: "Improved Operational Efficiency",
+                    desc: "Automation of processes such as inventory tracking, order processing, and logistics management reduces manual effort and minimizes errors. This leads to faster operations and better resource utilization.",
+                },
+                {
+                    title: "Cost Optimization",
+                    desc: "With better planning, route optimization, and inventory control, businesses can significantly reduce operational costs and improve profit margins. Data-driven insights help identify areas for cost savings.",
+                },
+                {
+                    title: "Scalability and Flexibility",
+                    desc: "Custom solutions are designed to grow with your business, allowing you to manage larger networks, increased demand, and more complex operations without compromising performance.",
+                },
+                {
+                    title: "Enhanced Collaboration",
+                    desc: "Integrated platforms improve communication and collaboration between suppliers, distributors, and internal teams, ensuring smoother workflows and better coordination.",
+                },
+            ],
+        },
+
+        process: {
+            title: "Our process. Efficient, scalable, supply-chain focused.",
+            image: "https://assets.bairesdev.com/image/upload/v1/www/core/silos_solutions_our-process_dudyi1",
+
+            steps: [
+                {
+                    title: "Analyze supply chain operations.",
+                    desc: "We evaluate your existing supply chain processes, identify inefficiencies, and understand your business goals to design effective solutions tailored to your needs.",
+                    icon: "📦",
+                },
+                {
+                    title: "Design and develop systems.",
+                    desc: "We build scalable and integrated supply chain platforms that connect all stakeholders and streamline operations using modern technologies.",
+                    icon: "⚙️",
+                },
+                {
+                    title: "Deploy and optimize performance.",
+                    desc: "We implement your solution, monitor its performance, and continuously optimize it to ensure efficiency, scalability, and long-term success.",
+                    icon: "🚀",
+                },
+            ],
+        },
+
+        faq: {
+            title: "Who benefits from supply chain software solutions?",
+            desc: "Supply chain software solutions provide value across multiple industries and stakeholders involved in logistics and operations.",
+
+            items: [
+                {
+                    title: "Manufacturers",
+                    desc: "Manufacturers use software to manage production, inventory, and distribution processes efficiently, ensuring timely delivery and reduced waste.",
+                },
+                {
+                    title: "Logistics Companies",
+                    desc: "Logistics providers rely on tracking and optimization tools to manage transportation, reduce delays, and improve delivery performance.",
+                },
+                {
+                    title: "Retail Businesses",
+                    desc: "Retailers benefit from better inventory management and demand forecasting, ensuring products are available when customers need them.",
+                },
+                {
+                    title: "Distributors",
+                    desc: "Distributors use software to coordinate supply chain activities, manage warehouses, and streamline order fulfillment processes.",
+                },
+                {
+                    title: "Suppliers",
+                    desc: "Suppliers gain better visibility into demand and performance metrics, helping them improve reliability and strengthen partnerships.",
+                },
+            ],
+        },
+    },
+
+    "oil-gas": {
+        hero: {
+            label: "OIL AND GAS SOFTWARE DEVELOPMENT",
+            title: "Build custom software solutions for oil and gas industry.",
+            desc: "Enhance operational efficiency, improve safety, and optimize resource management with advanced oil and gas software solutions.",
+            image: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/Custom_Construction_Software_Development_Solutions_2873e8647c?_a=BAVAfVDW0",
+        },
+
+        services: {
+            title: "Oil and gas software development services we provide",
+            desc: "We develop custom oil and gas software solutions that enable companies to manage complex operations, improve safety standards, and optimize resource utilization. Our solutions integrate data analytics, IoT, and automation to enhance efficiency across upstream, midstream, and downstream processes.",
+
+            items: [
+                {
+                    title: "Exploration & Production Management Systems",
+                    desc: "We build platforms that help companies manage exploration activities, monitor drilling operations, and track production levels in real time. These systems provide insights into resource utilization and help optimize extraction processes while reducing operational risks.",
+                },
+                {
+                    title: "Asset Management Solutions",
+                    desc: "Our asset management systems allow businesses to monitor equipment performance, schedule maintenance, and extend asset lifecycles. By leveraging predictive analytics, companies can prevent failures and ensure continuous operations.",
+                },
+                {
+                    title: "Pipeline Monitoring Systems",
+                    desc: "We develop solutions that monitor pipelines in real time, detect leaks, and ensure safe transportation of resources. These systems improve safety, reduce environmental risks, and ensure compliance with industry regulations.",
+                },
+                {
+                    title: "Energy Analytics Platforms",
+                    desc: "Our analytics platforms provide insights into energy production, consumption, and efficiency. Businesses can use these tools to optimize operations, reduce costs, and make data-driven decisions.",
+                },
+                {
+                    title: "Compliance & Safety Management Systems",
+                    desc: "We build solutions that help organizations comply with regulatory standards and maintain safety protocols. These systems track incidents, monitor risks, and ensure adherence to industry guidelines.",
+                },
+            ],
+        },
+
+        benefits: {
+            title: "Benefits of building bespoke oil and gas solutions",
+            items: [
+                {
+                    title: "Improved Operational Efficiency",
+                    desc: "Custom software automates processes and provides real-time insights, enabling companies to optimize operations and reduce downtime across all stages of production.",
+                },
+                {
+                    title: "Enhanced Safety",
+                    desc: "Advanced monitoring systems and predictive analytics help identify risks early, ensuring safer working environments and reducing accidents.",
+                },
+                {
+                    title: "Regulatory Compliance",
+                    desc: "Custom solutions ensure adherence to industry regulations by providing tools for monitoring, reporting, and compliance management.",
+                },
+                {
+                    title: "Cost Reduction",
+                    desc: "Optimized resource utilization, predictive maintenance, and efficient workflows help reduce operational costs and improve profitability.",
+                },
+                {
+                    title: "Data-Driven Decision Making",
+                    desc: "Analytics platforms provide actionable insights that enable businesses to make informed decisions and improve overall performance.",
+                },
+            ],
+        },
+
+        process: {
+            title: "Our process. Secure, efficient, energy-focused.",
+            image: "https://assets.bairesdev.com/image/upload/v1/www/core/silos_solutions_our-process_dudyi1",
+
+            steps: [
+                {
+                    title: "Assess operational requirements.",
+                    desc: "We analyze your oil and gas operations, identify challenges, and define requirements to build effective solutions.",
+                    icon: "⛽",
+                },
+                {
+                    title: "Develop tailored systems.",
+                    desc: "We design and build scalable software solutions that integrate with existing infrastructure and improve efficiency.",
+                    icon: "⚙️",
+                },
+                {
+                    title: "Deploy and optimize.",
+                    desc: "We implement the solution and continuously optimize it to ensure performance, safety, and scalability.",
+                    icon: "🚀",
+                },
+            ],
+        },
+
+        faq: {
+            title: "Who benefits from oil and gas software solutions?",
+            desc: "Oil and gas software solutions support organizations across the energy sector.",
+
+            items: [
+                {
+                    title: "Oil & Gas Companies",
+                    desc: "Companies use software to manage exploration, production, and distribution processes efficiently.",
+                },
+                {
+                    title: "Energy Providers",
+                    desc: "Energy providers leverage analytics and monitoring tools to optimize production and distribution.",
+                },
+                {
+                    title: "Pipeline Operators",
+                    desc: "Operators use monitoring systems to ensure safe and efficient transportation of resources.",
+                },
+                {
+                    title: "Refineries",
+                    desc: "Refineries benefit from systems that optimize processing and improve operational efficiency.",
+                },
+                {
+                    title: "Regulatory Bodies",
+                    desc: "Regulators use software to monitor compliance and ensure adherence to safety and environmental standards.",
+                },
+            ],
+        },
+    },
+
 };

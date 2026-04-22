@@ -20,7 +20,7 @@ export default function TestimonialHighlightSection({ testimonial }) {
           </div>
 
           <div className="flex justify-end">
-            <div className="flex w-full max-w-[420px] items-center gap-6 rounded-xl bg-white p-6 shadow-sm">
+            <div className="flex w-full max-w-105 items-center gap-6 rounded-xl bg-white p-6 shadow-sm">
               <div>
                 <h4 className="text-[16px] font-semibold text-black">
                   {testimonial?.name}
@@ -40,16 +40,14 @@ export default function TestimonialHighlightSection({ testimonial }) {
                 )}
               </div>
 
-              {testimonial?.personImage && (
-                <div className="relative h-[140px] w-[120px]">
-                  <Image
-                    src={testimonial?.personImage}
-                    alt={testimonial?.name || "person"}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              )}
+              <div className="relative h-[140px] w-[120px]">
+                <Image
+                  src={testimonial.personImage}
+                  alt={testimonial.name}
+                  fill
+                  className="object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
