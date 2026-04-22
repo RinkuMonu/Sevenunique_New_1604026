@@ -125,7 +125,7 @@ function TestimonialCard({ item, featured = false }) {
                 <div className="flex min-h-full flex-col">
                     <p className="text-[18px] leading-[1.6] text-[#111827]">
                         <span className="mr-1 align-top text-[26px] leading-none text-[#f4622a]">
-                            "
+                            &quot;
                         </span>
                         {item.quote}
                     </p>
@@ -246,7 +246,21 @@ function AvatarRow() {
     );
 }
 
-export default function TestimonialSection() {
+export default function TestimonialSection({ testimonials }) {
+    const sectionLabel = testimonials?.sectionLabel || "Client Testimonials";
+    const heading =
+        testimonials?.heading || "Get AI results you can stand behind.";
+    const description =
+        testimonials?.description ||
+        "Our work holds up in reviews, in production, and in front of the board.";
+    const leftItems = testimonials?.leftItems || leftTestimonials;
+    const rightItems = testimonials?.rightItems || rightTestimonials;
+    const calloutText =
+        testimonials?.calloutText ||
+        "Join 500+ companies building AI products with our engineers.";
+    const calloutButtonLabel =
+        testimonials?.calloutButtonLabel || "Schedule a Call";
+
     return (
         <section className="bg-[#f5f6f7] px-6 py-20 md:px-10">
             <div className="mx-auto max-w-7xl">
@@ -254,24 +268,23 @@ export default function TestimonialSection() {
                     <div className="space-y-6">
                         <div className="max-w-[470px] pt-2">
                             <p className="mb-5 text-[12px] font-semibold uppercase tracking-[0.28em] text-[#233143]">
-                                Client Testimonials
+                                {sectionLabel}
                             </p>
                             <h2 className="max-w-[420px] text-[38px] font-medium leading-[1.12] text-[#111827] md:text-[52px]">
-                                Get AI results you can stand behind.
+                                {heading}
                             </h2>
                             <p className="mt-6 max-w-[420px] text-[18px] leading-[1.7] text-[#3d4652]">
-                                Our work holds up in reviews, in production, and in front of the
-                                board.
+                                {description}
                             </p>
                         </div>
 
-                        {leftTestimonials.map((item) => (
+                        {leftItems.map((item) => (
                             <TestimonialCard key={item.name} item={item} />
                         ))}
                     </div>
 
                     <div className="space-y-6">
-                        {rightTestimonials.map((item, index) => (
+                        {rightItems.map((item, index) => (
                             <TestimonialCard
                                 key={item.name}
                                 item={item}
@@ -283,14 +296,14 @@ export default function TestimonialSection() {
                             <div className="relative z-10">
                             <AvatarRow />
                             <p className="mt-4 max-w-[420px] text-[24px] font-medium leading-[1.3] text-[#111827]">
-                                Join 500+ companies building AI products with our engineers.
+                                {calloutText}
                             </p>
                             <div className="mt-5 w-fit overflow-hidden rounded-[8px] border bg-[#2563eb]">
                                 <button
                                     type="button"
                                     className="relative z-10 inline-flex rounded-[8px] px-5 py-3 text-[15px] font-semibold text-white"
                                 >
-                                    <span className="relative z-10">Schedule a Call</span>  
+                                    <span className="relative z-10">{calloutButtonLabel}</span>  
                                 </button>
                             </div>
                             </div>
