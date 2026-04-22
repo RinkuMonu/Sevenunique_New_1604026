@@ -22,11 +22,11 @@ export default function RestServiceHeroSection({ data }) {
 
         <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1.5fr)_320px] lg:gap-20">
           <div className="max-w-4xl">
-            <p className="mb-8 text-xs font-semibold uppercase tracking-[0.28em] text-[#516986]">
+            <p className="mb-8 text-[14px] font-semibold uppercase tracking-[0.18em] text-[#516986]">
               {hero.title}
             </p>
 
-            <h1 className="max-w-4xl text-[44px] font-semibold leading-[1.08] text-[#2b3440] md:text-[68px]">
+            <h1 className="max-w-4xl text-[54px] font-semibold leading-[1.08] text-[#2b3440] md:text-[54px]">
               {hero.heading}
             </h1>
 
@@ -36,7 +36,7 @@ export default function RestServiceHeroSection({ data }) {
 
             <Link
               href="/schedule-a-call-page"
-              className="mt-12 inline-flex rounded-[12px] bg-[#ff6b3d] px-6 py-4 text-[18px] font-semibold text-white transition hover:bg-[#f15c2d]"
+              className="mt-12 inline-flex rounded-[12px] bg-[#ff6b3d] px-6 py-4 text-[20px] font-semibold text-white transition hover:bg-[#f15c2d]"
             >
               {hero.buttonLabel}
             </Link>
