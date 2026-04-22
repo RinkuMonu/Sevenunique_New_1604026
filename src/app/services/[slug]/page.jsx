@@ -1,7 +1,7 @@
 import { serviceData } from "./data";
-import { restServiceData } from "./rest-data";
+import { restServiceData } from "./rest-data.js";
+import { RestServicePage } from "./rest-data.jsx";
 import ServiceHeroSection from "@/components/Services/ServiceHeroSection";
-import RestServiceHeroSection from "@/components/Services/RestServiceHeroSection";
 import TrustedClientsStrip from "@/components/Services/ai-development/TrustedClientsStrip";
 import TableContent from "@/components/Services/Backend-development/TableContent";
 import AIUseCasesSection from "@/components/Services/ai-development/AIUseCasesSection";
@@ -23,7 +23,7 @@ export default async function ServicePage({ params }) {
     restServiceData[`${slug}-development`];
 
   if (restData) {
-    return <RestServiceHeroSection data={restData} />;
+    return <RestServicePage data={restData} />;
   }
 
   const data =
