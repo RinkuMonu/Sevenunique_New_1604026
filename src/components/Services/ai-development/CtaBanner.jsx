@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-export default function CtaBanner() {
+export default function CtaBanner({ ctaBanner }) {
   return (
     <div className="group rounded-2xl overflow-hidden bg-gradient-to-b md:bg-gradient-to-r from-[#eaf2fd] to-[#afcef7] rounded-xl">
 
@@ -10,8 +10,12 @@ export default function CtaBanner() {
 
         {/* TEXT */}
         <div className="flex-1 text-gray-900 text-[32px]">
-          <p>Looking for a team with this kind of track record?</p>
-          <p className="mt-2">Tell us more about your AI needs.</p>
+          <p>
+            {ctaBanner?.title || "Looking for a team with this kind of track record?"}
+          </p>
+          <p className="mt-2">
+            {ctaBanner?.subtitle || "Tell us more about your AI needs."}
+          </p>
         </div>
 
         {/* BUTTON + GLOW */}
@@ -19,18 +23,18 @@ export default function CtaBanner() {
 
           {/* MOBILE BUTTON */}
           <Link
-            href="https://www.bairesdev.com/start/basic-details/"
+            href={ctaBanner?.href || "https://www.bairesdev.com/start/basic-details/"}
             className="flex lg:hidden items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-[#2563eb] text-white font-medium hover:bg-[#1d4ed8] active:bg-[#1e40af] transition"
           >
-            Talk to an expert
+            {ctaBanner?.buttonLabel || "Talk to an expert"}
           </Link>
 
           {/* DESKTOP BUTTON */}
           <Link
-            href="https://www.bairesdev.com/start/basic-details/"
+            href={ctaBanner?.href || "https://www.bairesdev.com/start/basic-details/"}
             className="hidden lg:flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[#2563eb] text-white text-[24px] font-medium hover:bg-[#1d4ed8] active:bg-[#1e40af] transition"
           >
-            Talk to an expert
+            {ctaBanner?.buttonLabel || "Talk to an expert"}
           </Link>
 
           {/* GLOW EFFECT (FIXED) */}

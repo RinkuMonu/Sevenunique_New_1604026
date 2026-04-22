@@ -17,8 +17,8 @@ export const serviceData = {
         "Their engineers perform at very high standards. We've had a strong relationship for almost 7 years.",
       name: "Patrick Mee",
       role: "EVP of Engineering",
-      companyName: "NextRoll",
-      companyLogo: "/logos/nextroll-new.png",
+      companyName: "NextRoll", 
+      companyLogo: "/logos/nr.png",
       personImage: "/logos/img2.png",
       summary:
         "The best partnerships are the ones you do not have to worry about. We deliver the kind of technical execution and reliability that builds long-term trust and consistent results.",
@@ -99,6 +99,7 @@ export const serviceData = {
     sections: {
       trustedClientsStrip: true,
     },
+    trustedClients,
     testimonialHighlight: {
       quote:
         "They helped us strengthen our backend architecture and gave us the confidence to scale without sacrificing stability.",
@@ -147,6 +148,120 @@ export const serviceData = {
         },
       ],
     },
+    teamSection: {
+      eyebrow: "Our backend development team",
+      supporterLabel: "Backed by",
+      supporterValue: "4000+ devs",
+      heading: "Why product teams choose our backend engineers:",
+      description:
+        "We help companies build backend systems that stay reliable under real production pressure. Our engineers focus on clean architecture, maintainable services, and infrastructure that supports long-term growth.",
+      buttonLabel: "Speak With Our Team",
+      tabs: [
+        {
+          title: "Senior backend specialists",
+          content:
+            "Our backend engineers bring deep experience across APIs, distributed systems, databases, and cloud-native architecture. Every engineer is vetted for code quality, system thinking, and practical delivery in production environments.",
+        },
+        {
+          title: "Systems built for scale",
+          content:
+            "We design backend platforms that handle growth without becoming hard to maintain. That includes service boundaries, observability, deployment pipelines, and the reliability practices teams need as usage increases.",
+        },
+        {
+          title: "Security and operational rigor",
+          content:
+            "From access control to infrastructure hardening and auditability, we help teams ship backend systems with security and governance built into day-to-day engineering work.",
+        },
+      ],
+    },
+    ctaBanner: {
+      title: "Looking for a backend team with this kind of track record?",
+      subtitle: "Tell us more about your platform, APIs, or infrastructure needs.",
+      buttonLabel: "Talk to an expert",
+      href: "https://www.bairesdev.com/start/basic-details/",
+    },
+    testimonials: {
+      sectionLabel: "Client Testimonials",
+      heading: "Get backend results you can build on.",
+      description:
+        "Our backend work stands up under production traffic, product growth, and long-term operational demands.",
+      leftItems: [
+        {
+          industry: "Fintech",
+          quote:
+            "Their backend engineers helped us stabilize core transaction flows and improve confidence in every release. The team brought strong technical judgment and real ownership.",
+          name: "Anika Patel",
+          role: "VP of Engineering",
+          photo: "/images/man1.png",
+          companyType: "text",
+          companyText: "PAYGRID",
+          companyClassName:
+            "text-[18px] font-semibold tracking-[0.2em] text-[#24456f]",
+        },
+        {
+          industry: "SaaS",
+          subtitle: "Scaled multi-tenant backend services for a growing platform",
+          quote:
+            "They were thoughtful about architecture, proactive in delivery, and strong at turning messy legacy services into something our team could confidently extend.",
+          name: "Marcus Lee",
+          role: "Director of Engineering",
+          photo: "/images/man2.png",
+          companyType: "text",
+          companyText: "STACKLANE",
+          companyClassName:
+            "text-[18px] font-semibold tracking-[0.18em] text-[#24456f]",
+          hoverDetails: {
+            description:
+              "We partnered with the client to modernize service boundaries, improve deployment confidence, and support a fast-growing tenant base without sacrificing maintainability.",
+            tags: ["Node.js", "PostgreSQL", "AWS", "CI/CD", "Observability"],
+            metrics: [
+              { value: "8", label: "Team size" },
+              { value: "99.95%", label: "Uptime" },
+              { value: "14 mo", label: "Engagement" },
+            ],
+          },
+        },
+      ],
+      rightItems: [
+        {
+          industry: "Enterprise Software",
+          subtitle: "Reworked backend architecture for reliability and speed",
+          quote:
+            "They improved service performance, simplified releases, and gave us a backend foundation we could keep building on as the product matured.",
+          name: "Nina Romero",
+          role: "Head of Platform",
+          photo: "/images/man3.png",
+          companyType: "text",
+          companyText: "coreOS",
+          companyClassName: "text-[20px] font-semibold text-[#101828]",
+          featured: true,
+          hoverDetails: {
+            description:
+              "The engagement focused on backend modernization, clearer service ownership, and production visibility so the platform team could move faster with less risk.",
+            tags: ["Java", "Spring Boot", "Kafka", "Docker", "Prometheus"],
+            metrics: [
+              { value: "12", label: "Team size" },
+              { value: "35%", label: "Faster releases" },
+              { value: "16 mo", label: "Engagement" },
+            ],
+          },
+        },
+        {
+          industry: "HealthTech",
+          quote:
+            "The engineers integrated smoothly with our internal team and consistently delivered backend improvements that made the platform more stable and easier to support.",
+          name: "Daniel Brooks",
+          role: "CTO",
+          photo: "/images/man4.png",
+          companyType: "text",
+          companyText: "MEDSYNC",
+          companyClassName: "text-[20px] font-semibold text-[#101828]",
+        },
+      ],
+      calloutText:
+        "Join 500+ companies strengthening their backend systems with our engineers.",
+      calloutButtonLabel: "Schedule a Call",
+    },
     caseStudies: {
       sectionLabel: "BACKEND CASE STUDIES",
       heading: "Backend systems built for scale, speed, and reliability.",
@@ -158,21 +273,21 @@ export const serviceData = {
           title: "Built Secure Transaction APIs for a High-Volume Finance Platform",
           description:
             "Engineered resilient backend APIs with strong security controls and throughput designed for demanding transaction workloads.",
-          image: "/logos/out.png",
+          image: "/logos/office1.jpg",
         },
         {
           tag: "SAAS",
           title: "Modernized Backend Services to Support Multi-Tenant Product Growth",
           description:
             "Refactored core services to improve tenant isolation, maintainability, and long-term scaling for a growing SaaS platform.",
-          image: "/logos/l2.png",
+          image: "/logos/office2.jpg",
         },
         {
           tag: "ENTERPRISE",
           title: "Re-Architected Core Systems for Better Reliability and Observability",
           description:
             "Improved system stability with cleaner service boundaries, stronger monitoring, and better visibility into production behavior.",
-          image: "/logos/l3.png",
+          image: "/logos/office3.jpg",
         },
       ],
     },
