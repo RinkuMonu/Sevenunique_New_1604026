@@ -110,7 +110,7 @@ export default function CaseStudyHero() {
             </button>
           </div>
         </div>
-
+     
       </div>
     </section>
   );
