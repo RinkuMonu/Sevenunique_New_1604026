@@ -15,6 +15,7 @@ const servicesCols = [
   {
     label: "Top Services",
     items: [
+  
       { name: "AI Development", link: "/services/ai-development" },
       { name: "Back-end Development", link: "/services/backend-development" },
       { name: "CMS Development", link: "/services/cms-development" },
@@ -28,27 +29,27 @@ const servicesCols = [
   {
     label: "",
     items: [
-      "Android App Development",
-      "Business Intelligence",
-      "Data Engineering",
-      "eCommerce Development",
-      "iOS App Development",
-      "Mobile App Development",
-      "SaaS Development",
-      "Web Development",
+      { name: "Android App Development", link: "/services/android-app-development" },
+      { name: "Business Intelligence", link: "/services/business-intelligence" },
+      { name: "Data Engineering", link: "/services/data-engineering" },
+      { name: "eCommerce Development", link: "/services/ecommerce-development" },
+      { name: "iOS App Development", link: "/services/ios-app-development" },
+      { name: "Mobile App Development", link: "/services/mobile-app-development" },
+      { name: "SaaS Development", link: "/services/saas-development" },
+      { name: "Web Development", link: "/services/web-development" },
     ],
   },
   {
     label: "Enterprise Focused",
     items: [
-      "Backup Solutions",
-      "Big Data",
-      "Cloud Applications",
-      "CRM Systems",
-      "Cybersecurity",
-      "DevOps",
-      "Digital Transformation",
-      "ERP Development",
+      { name: "Backup Solutions", link: "/services/backup-solutions" },
+      { name: "Big Data", link: "/services/big-data" },
+      { name: "Cloud Applications", link: "/services/cloud-applications" },
+      { name: "CRM Systems", link: "/services/crm-systems" },
+      { name: "Cybersecurity", link: "/services/cybersecurity" },
+      { name: "DevOps", link: "/services/devops" },
+      { name: "Digital Transformation", link: "/services/digital-transformation" },
+      { name: "ERP Development", link: "/services/erp-development" },
     ],
   },
 ];
@@ -489,18 +490,18 @@ export default function Header() {
             );
           })}
 
-          <Link href="#" className="transition-colors hover:text-[#f46b45]">
+          <Link href="/our-work-page" className="transition-colors hover:text-[#f46b45]">
             Our Work
           </Link>
           <Link
-            href="/blog/history-of-ai"
+            href="/blog"
             className="transition-colors hover:text-[#f46b45]"
           >
             Blog
           </Link>
 
           <Link
-            href="#"
+            href="/schedule-a-call-page"
             className="rounded-md bg-black px-4 py-2 text-[15px] font-medium text-white transition-colors hover:bg-gray-800"
           >
             Schedule a Call
