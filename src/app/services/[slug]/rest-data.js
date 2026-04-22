@@ -23,13 +23,13 @@ function createRestServiceEntry({
 export const restServiceData = {
   "android-app-development": createRestServiceEntry({
     slug: "android-app-development",
-    breadcrumb: "Android App Development",
+    breadcrumb: "Android",
     title: "ANDROID APP DEVELOPMENT SERVICES",
-    heading: "Build Android apps that stay fast, stable, and ready to scale.",
+    heading: "Tap into 3.6 billion users. Launch your Android app—fast.",
     description:
-      "Create reliable Android products with our Android app development services. Work with experienced mobile engineers who can support product delivery, performance, and long-term growth.",
-    buttonLabel: "Access Android Services",
-    image: "/images/man1.png",
+      "Access the top 1% of LATAM tech talent within 2 weeks. Create beautiful, secure Android apps to engage and convert mobile users.",
+    buttonLabel: "Get Android App Developers",
+    image: "/images/man.png",
   }),
   "business-intelligence": createRestServiceEntry({
     slug: "business-intelligence",
@@ -181,4 +181,36 @@ export const restServiceData = {
     buttonLabel: "Access ERP Services",
     image: "/images/man1.png",
   }),
+};
+
+
+// rest-data.js
+
+export const companyStripData = {
+  title: "500+ companies rely on our top 1% tech talent.",
+  companies: [
+    {
+      name: "Google",
+      logo: "/logos/google-new.png",
+      subText: "Read case study",
+    },
+    {
+      name: "NextRoll",
+      logo: "/logos/nextroll-new.png",
+      subText: "Watch testimonial",
+      hasPlayIcon: true,
+    },
+    {
+      name: "Pinterest",
+      logo: "/logos/pintrest.png",
+    },
+    {
+      name: "Adobe",
+      logo: "/logos/adobe.png",
+    },
+    {
+      name: "Square",
+      logo: "/logos/salesforce.png",
+    },
+  ],
 };
