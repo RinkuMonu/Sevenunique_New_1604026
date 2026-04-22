@@ -218,47 +218,75 @@ export const techData = {
       "showMoreButtonText": "Show More Testimonials",
       "leftColumn": [
         {
-          "industry": "Healthcare & MedTech",
-          "project": null,
-          "quote": "We are consistently delivering high-quality software on time, in part thanks to the people from BairesDev. They can find talented, high-caliber, sharp developers who will stay with us long-term. Their main strength is their talent.",
-          "name": "David Johnston",
-          "title": "Product Engagement Lead",
-          "company": "Johnson & Johnson",
-          "companyStyle": "font-bold text-red-600 text-lg leading-tight",
-          "photo": null
+          industry: "Healthcare & MedTech",
+          quote:
+            "We are consistently delivering high-quality software on time, in part thanks to the people from BairesDev. They can find talented, high-caliber, sharp developers who will stay with us long-term. Their main strength is their talent.",
+          name: "David Johnston",
+          role: "Product Engagement Lead",
+          photo: "/images/man1.png",
+          companyType: "image",
+          companySrc: "/logos/johnson.png",
+          companyAlt: "Johnson & Johnson",
         },
         {
-          "industry": "Financial Services",
-          "project": "Upgraded and Maintained Repay's AWS Infrastructure",
-          "quote": "They've also been proactive about checking in about the state of the engagement and overall performance. I'm confident we'll continue working with BairesDev for a long time.",
-          "name": "Michael Soltow",
-          "title": "Software Dev. Manager",
-          "company": "REPAY",
-          "companyStyle": "font-bold text-gray-800 text-xl tracking-wide",
-          "photo": null
-        }
+          industry: "Financial Services",
+          subtitle: "Upgraded and Maintained Repay's AWS Infrastructure",
+          quote:
+            "They've also been proactive about checking in about the state of the engagement and overall performance. I'm confident we'll continue working with BairesDev for a long time.",
+          name: "Michael Soltow",
+          role: "Software Dev. Manager",
+          photo: "/images/man2.png",
+          companyType: "text",
+          companyText: "REPAY",
+          companyClassName:
+            "text-[18px] font-semibold tracking-[0.28em] text-[#24456f]",
+          hoverDetails: {
+            description:
+              "Repay needed a stronger AWS foundation to improve uptime, monitoring, and release confidence. Our team modernized infrastructure management and tightened DevOps workflows to support long-term scale.",
+            tags: ["AWS", "Terraform", "CI/CD", "Observability", "DevOps"],
+            metrics: [
+              { value: "6", label: "Team size" },
+              { value: "99.9%", label: "Uptime" },
+              { value: "18 mo", label: "Engagement" },
+            ],
+          },
+        },
       ],
       "rightColumn": [
         {
-          "industry": "Financial Services",
-          "project": "Developed new digital banking features",
-          "quote": "BairesDev has been a fantastic partner. We wanted to put forth a product to help people cope with financial struggles but didn't have the resources we needed, so we turned to them. They could always find us quality talent in a concise amount of time.",
-          "name": "Leonardo Shapiro",
-          "title": "Head of Growth",
-          "company": "azlo",
-          "companyStyle": "font-bold text-blue-700 text-xl",
-          "photo": null
+          industry: "Financial Services",
+          subtitle: "Developed new digital banking features",
+          quote:
+            "BairesDev has been a fantastic partner. We wanted to put forth a product to help people cope with financial struggles but didn't have the resources we needed, so we turned to them. They could always find us quality talent in a concise amount of time.",
+          name: "Leonardo Shapiro",
+          role: "Head of Growth",
+          photo: "/images/man3.png",
+          companyType: "text",
+          companyText: "azlo",
+          companyClassName: "text-[20px] font-semibold lowercase text-[#101828]",
+          featured: true,
+          hoverDetails: {
+            description:
+              "Azlo wanted to make digital banking accessible for entrepreneurs and small businesses. Our engineers built CI/CD pipelines, developed new banking features, and migrated data from MongoDB to PostgreSQL to improve reliability and scalability. We also redesigned the onboarding experience for better UX and faster adoption.",
+            tags: ["Angular", "Node.js", "JavaScript", "MongoDB", "Kafka"],
+            metrics: [
+              { value: "15", label: "Team size" },
+              { value: "10", label: "NPS" },
+              { value: "2 years", label: "Engagement" },
+            ],
+          },
         },
         {
-          "industry": "Renewable Energy",
-          "project": null,
-          "quote": "I was concerned about a possible mismatch of talent levels of our in-house engineers versus contractors. But, as it turns out, many of the BairesDev engineers we hired emerged as top performers. In fact, of our group of 120 developers, all the BairesDev engineers we had were in the top 20 of the organization.",
-          "name": "Matthew Mecham",
-          "title": null,
-          "company": "Lumio",
-          "companyStyle": "font-bold text-gray-800 text-xl",
-          "photo": null
-        }
+          industry: "Renewable Energy",
+          quote:
+            "I was concerned about a possible mismatch of talent levels of our in-house engineers versus contractors. But, as it turns out, many of the BairesDev engineers we hired emerged as top performers. In fact, of our group of 120 developers, all the BairesDev engineers we had were in the top 20 of the organization.",
+          name: "Matthew Mecham",
+          role: "VP of Engineering",
+          photo: "/images/man4.png",
+          companyType: "text",
+          companyText: "Lumio",
+          companyClassName: "text-[20px] font-semibold text-[#101828]",
+        },
       ],
       "cta": {
         "title": "Join 500+ companies who count on our .NET developers",
@@ -349,32 +377,32 @@ export const techData = {
       ],
       detail:
         "We vet for deep AWS knowledge: networking, security, serverless, infrastructure as code, and cost optimization.",
-       "teamImages": [
-        { "src": "img1.png", "bg": "#FBB39E" },
-        { "src": "img2.png", "bg": "#90BBF3" },
-        { "src": "img3.png", "bg": "#8FD5BF" },
-        { "src": "img4.png", "bg": "#FFD785" },
-        { "src": "img5.png", "bg": "#FDDC43" },
-        { "src": "img6.png", "bg": "#CDE8FA" }
+      teamImages: [
+        { src: "img1.png", bg: "#FBB39E" },
+        { src: "img2.png", bg: "#90BBF3" },
+        { src: "img3.png", bg: "#8FD5BF" },
+        { src: "img4.png", bg: "#FFD785" },
+        { src: "img5.png", bg: "#FDDC43" },
+        { src: "img6.png", bg: "#CDE8FA" }
       ],
-      "tabs": [
+      tabs: [
         {
-          "id": 1,
-          "icon": "MdOutlineVerified",
-          "title": "Top 1% Senior AWS Talent",
-          "content": "Our AWS engineers average 8+ years of experience and hold certifications including Solutions Architect, DevOps Engineer, and Security Specialty. Every engineer passes a multi-stage evaluation covering cloud architecture, infrastructure as code, and cost optimization."
+          id: 1,
+          icon: "MdOutlineVerified",
+          title: "Top 1% Senior AWS Talent",
+          content: "Our AWS engineers average 8+ years of experience and hold certifications including Solutions Architect, DevOps Engineer, and Security Specialty. Every engineer passes a multi-stage evaluation covering cloud architecture, infrastructure as code, and cost optimization."
         },
         {
-          "id": 2,
-          "icon": "LuLayoutDashboard",
-          "title": "Production-Grade AWS Delivery",
-          "content": "We ensure AWS solutions are scalable, reliable, and cost-effective. Our teams follow best practices for CI/CD, infrastructure as code, and rigorous testing to deliver enterprise-grade cloud systems."
+          id: 2,
+          icon: "LuLayoutDashboard",
+          title: "Production-Grade AWS Delivery",
+          content: "We ensure AWS solutions are scalable, reliable, and cost-effective. Our teams follow best practices for CI/CD, infrastructure as code, and rigorous testing to deliver enterprise-grade cloud systems."
         },
         {
-          "id": 3,
-          "icon": "MdLockOutline",
-          "title": "Security, Governance, and Compliance",
-          "content": "We implement security best practices including IAM, WAF, GuardDuty, and AWS Config. Our solutions meet compliance requirements for finance, healthcare, and other regulated industries."
+          id: 3,
+          icon: "MdLockOutline",
+          title: "Security, Governance, and Compliance",
+          content: "We implement security best practices including IAM, WAF, GuardDuty, and AWS Config. Our solutions meet compliance requirements for finance, healthcare, and other regulated industries."
         }
       ]
     },
@@ -388,132 +416,164 @@ export const techData = {
       items: [
         {
           question: "How senior are your AWS engineers?",
-          answer:
-            "Our AWS engineers average 8+ years of experience and hold certifications including Solutions Architect, DevOps Engineer, and Security Specialty.",
+          answer: "Our AWS engineers average 8+ years of experience and hold certifications including Solutions Architect, DevOps Engineer, and Security Specialty.",
           defaultOpen: true,
         },
         {
           question: "Can you help us migrate from on-premise to AWS?",
-          answer:
-            "Yes. We use AWS Migration Acceleration Program (MAP) methodologies to ensure minimal downtime and risk-free transitions.",
+          answer: "Yes. We use AWS Migration Acceleration Program (MAP) methodologies to ensure minimal downtime and risk-free transitions.",
         },
         {
           question: "How do you handle multi-account AWS strategy?",
-          answer:
-            "We implement best practices using AWS Organizations, Control Tower, and Service Control Policies (SCPs) for governance at scale.",
+          answer: "We implement best practices using AWS Organizations, Control Tower, and Service Control Policies (SCPs) for governance at scale.",
         },
         {
           question: "What's your approach to cloud cost optimization?",
-          answer:
-            "We continuously monitor usage, implement rightsizing, leverage Savings Plans, and set up budget alerts to prevent cost overruns.",
+          answer: "We continuously monitor usage, implement rightsizing, leverage Savings Plans, and set up budget alerts to prevent cost overruns.",
         },
         {
           question: "Do you work with Terraform or CloudFormation?",
-          answer:
-            "Both. We typically recommend Terraform for multi-cloud flexibility or CloudFormation for AWS-native deep integration.",
+          answer: "Both. We typically recommend Terraform for multi-cloud flexibility or CloudFormation for AWS-native deep integration.",
         },
       ],
     },
-     "ecosystem": {
-      "sectionLabel": "Tools for AWS Development",
-      "heading": "The ecosystem we use for AWS projects:",
-      "description": "We deliver AWS solutions using industry-best tools and practices for cloud infrastructure, deployment, and operations.",
-      "items": [
+    ecosystem: {
+      sectionLabel: "Tools for AWS Development",
+      heading: "The ecosystem we use for AWS projects:",
+      description: "We deliver AWS solutions using industry-best tools and practices for cloud infrastructure, deployment, and operations.",
+      items: [
         {
-          "label": "Infrastructure as Code",
-          "description": "We define cloud infrastructure using code, enabling version control, peer review, and repeatable deployments across environments.",
-          "tags": ["Terraform", "AWS CDK", "CloudFormation", "Pulumi", "AWS SAM"]
+          label: "Infrastructure as Code",
+          description: "We define cloud infrastructure using code, enabling version control, peer review, and repeatable deployments across environments.",
+          tags: ["Terraform", "AWS CDK", "CloudFormation", "Pulumi", "AWS SAM"]
         },
         {
-          "label": "CI/CD & DevOps",
-          "description": "We automate build, test, and deployment pipelines to accelerate delivery while maintaining quality and security gates.",
-          "tags": ["AWS CodePipeline", "CodeBuild", "CodeDeploy", "GitHub Actions", "GitLab CI"]
+          label: "CI/CD & DevOps",
+          description: "We automate build, test, and deployment pipelines to accelerate delivery while maintaining quality and security gates.",
+          tags: ["AWS CodePipeline", "CodeBuild", "CodeDeploy", "GitHub Actions", "GitLab CI"]
         },
         {
-          "label": "Container Orchestration",
-          "description": "We containerize applications and manage them at scale using AWS container services.",
-          "tags": ["Docker", "Amazon ECS", "Amazon EKS", "Fargate", "Helm"]
+          label: "Container Orchestration",
+          description: "We containerize applications and manage them at scale using AWS container services.",
+          tags: ["Docker", "Amazon ECS", "Amazon EKS", "Fargate", "Helm"]
         },
         {
-          "label": "Serverless Framework",
-          "description": "We build event-driven, serverless applications that scale automatically and reduce operational overhead.",
-          "tags": ["AWS Lambda", "API Gateway", "DynamoDB", "EventBridge", "SQS", "SNS"]
+          label: "Serverless Framework",
+          description: "We build event-driven, serverless applications that scale automatically and reduce operational overhead.",
+          tags: ["AWS Lambda", "API Gateway", "DynamoDB", "EventBridge", "SQS", "SNS"]
         },
         {
-          "label": "Monitoring & Observability",
-          "description": "We instrument applications for comprehensive monitoring, logging, and tracing to ensure reliability.",
-          "tags": ["CloudWatch", "X-Ray", "Prometheus", "Grafana", "OpenTelemetry", "Datadog"]
+          label: "Monitoring & Observability",
+          description: "We instrument applications for comprehensive monitoring, logging, and tracing to ensure reliability.",
+          tags: ["CloudWatch", "X-Ray", "Prometheus", "Grafana", "OpenTelemetry", "Datadog"]
         },
         {
-          "label": "Security & Compliance",
-          "description": "We implement security best practices and compliance controls across AWS environments.",
-          "tags": ["IAM", "AWS WAF", "GuardDuty", "Security Hub", "AWS Config", "KMS"]
+          label: "Security & Compliance",
+          description: "We implement security best practices and compliance controls across AWS environments.",
+          tags: ["IAM", "AWS WAF", "GuardDuty", "Security Hub", "AWS Config", "KMS"]
         },
         {
-          "label": "Data & Analytics",
-          "description": "We build scalable data pipelines and analytics solutions using AWS data services.",
-          "tags": ["S3", "Redshift", "Glue", "Athena", "EMR", "Kinesis", "QuickSight"]
+          label: "Data & Analytics",
+          description: "We build scalable data pipelines and analytics solutions using AWS data services.",
+          tags: ["S3", "Redshift", "Glue", "Athena", "EMR", "Kinesis", "QuickSight"]
         },
         {
-          "label": "Cost Management",
-          "description": "We optimize cloud spending through continuous monitoring and best practices.",
-          "tags": ["AWS Cost Explorer", "Budgets", "Savings Plans", "Compute Optimizer", "Trusted Advisor"]
+          label: "Cost Management",
+          description: "We optimize cloud spending through continuous monitoring and best practices.",
+          tags: ["AWS Cost Explorer", "Budgets", "Savings Plans", "Compute Optimizer", "Trusted Advisor"]
         }
       ]
     },
-    "testimonialsSection": {
-      "sectionLabel": "Client Testimonials",
-      "heading": "Get AWS results you can stand behind.",
-      "subheading": "Our work holds up in reviews, in production, and in front of the board.",
-      "showMoreButtonText": "Show More Testimonials",
-      "leftColumn": [
+    testimonialsSection: {
+      sectionLabel: "Client Testimonials",
+      heading: "Get AWS results you can stand behind.",
+      subheading: "Our work holds up in reviews, in production, and in front of the board.",
+      showMoreButtonText: "Show More Testimonials",
+      leftColumn: [
         {
-          "industry": "E-commerce",
-          "project": "Migrated legacy infrastructure to AWS",
-          "quote": "BairesDev helped us migrate our entire infrastructure to AWS with zero downtime. Their team's expertise in cloud architecture saved us months of trial and error.",
-          "name": "Sarah Johnson",
-          "title": "CTO",
-          "company": "ShopFast",
-          "companyStyle": "font-bold text-orange-600 text-lg",
-          "photo": null
+          industry: "E-commerce",
+          quote: "BairesDev helped us migrate our entire infrastructure to AWS with zero downtime. Their team's expertise in cloud architecture saved us months of trial and error.",
+          name: "Sarah Johnson",
+          role: "CTO",
+          photo: "/images/man1.png",
+          companyType: "image",
+          companySrc: "/logos/shopfast.png",
+          companyAlt: "ShopFast",
+          hoverDetails: {
+            description: "ShopFast needed to migrate their legacy infrastructure to AWS to improve scalability and reduce costs. Our team executed a zero-downtime migration using AWS Migration Acceleration Program methodologies.",
+            tags: ["AWS", "Migration", "CloudFormation", "Terraform", "DevOps"],
+            metrics: [
+              { value: "4", label: "Team size" },
+              { value: "0", label: "Downtime" },
+              { value: "35%", label: "Cost reduction" },
+            ],
+          },
         },
         {
-          "industry": "FinTech",
-          "project": "Serverless banking platform",
-          "quote": "The serverless platform they built on AWS handles millions of transactions daily. Their understanding of Lambda and DynamoDB best practices is exceptional.",
-          "name": "James Wilson",
-          "title": "VP Engineering",
-          "company": "FinScale",
-          "companyStyle": "font-bold text-gray-800 text-xl",
-          "photo": null
-        }
+          industry: "FinTech",
+          quote: "The serverless platform they built on AWS handles millions of transactions daily. Their understanding of Lambda and DynamoDB best practices is exceptional.",
+          name: "James Wilson",
+          role: "VP Engineering",
+          photo: "/images/man2.png",
+          companyType: "text",
+          companyText: "FinScale",
+          companyClassName: "text-[18px] font-semibold tracking-[0.28em] text-[#24456f]",
+          hoverDetails: {
+            description: "FinScale needed a high-throughput serverless banking platform. Our team architected event-driven systems using Lambda, DynamoDB, and EventBridge to handle millions of daily transactions.",
+            tags: ["Lambda", "DynamoDB", "EventBridge", "Serverless", "API Gateway"],
+            metrics: [
+              { value: "8", label: "Team size" },
+              { value: "99.99%", label: "Uptime" },
+              { value: "2M+", label: "Daily transactions" },
+            ],
+          },
+        },
       ],
-      "rightColumn": [
+      rightColumn: [
         {
-          "industry": "Healthcare",
-          "project": "HIPAA-compliant AWS solution",
-          "quote": "They built a HIPAA-compliant AWS environment for our patient data platform. Security and compliance were handled flawlessly.",
-          "name": "Dr. Emily Chen",
-          "title": "Chief Data Officer",
-          "company": "HealthBridge",
-          "companyStyle": "font-bold text-green-700 text-xl",
-          "photo": null
+          industry: "Healthcare",
+          quote: "They built a HIPAA-compliant AWS environment for our patient data platform. Security and compliance were handled flawlessly.",
+          name: "Dr. Emily Chen",
+          role: "Chief Data Officer",
+          photo: "/images/man3.png",
+          companyType: "text",
+          companyText: "HealthBridge",
+          companyClassName: "text-[20px] font-semibold lowercase text-[#101828]",
+          featured: true,
+          hoverDetails: {
+            description: "HealthBridge required a HIPAA-compliant AWS infrastructure for patient data. Our team implemented security controls including encryption, IAM policies, and comprehensive audit logging.",
+            tags: ["HIPAA", "IAM", "KMS", "CloudTrail", "GuardDuty"],
+            metrics: [
+              { value: "6", label: "Team size" },
+              { value: "100%", label: "Compliance" },
+              { value: "12 mo", label: "Engagement" },
+            ],
+          },
         },
         {
-          "industry": "Media & Entertainment",
-          "project": "Global CDN deployment",
-          "quote": "Their AWS team optimized our CloudFront distribution globally. Our content delivery latency dropped by 60%.",
-          "name": "Mark Taylor",
-          "title": "Infrastructure Director",
-          "company": "Streamline Media",
-          "companyStyle": "font-bold text-purple-700 text-xl",
-          "photo": null
-        }
+          industry: "Media & Entertainment",
+          quote: "Their AWS team optimized our CloudFront distribution globally. Our content delivery latency dropped by 60%.",
+          name: "Mark Taylor",
+          role: "Infrastructure Director",
+          photo: "/images/man4.png",
+          companyType: "text",
+          companyText: "Streamline Media",
+          companyClassName: "text-[20px] font-semibold text-[#101828]",
+          hoverDetails: {
+            description: "Streamline Media needed to improve global content delivery performance. Our team optimized CloudFront distributions, implemented Lambda@Edge for request routing, and fine-tuned caching strategies.",
+            tags: ["CloudFront", "Lambda@Edge", "S3", "Route53", "Global Accelerator"],
+            metrics: [
+              { value: "3", label: "Team size" },
+              { value: "60%", label: "Latency reduction" },
+              { value: "99.95%", label: "Availability" },
+            ],
+          },
+        },
       ],
-      "cta": {
-        "title": "Join 500+ companies who count on our AWS developers",
-        "buttonText": "Schedule a Call",
-        "avatarColors": ["#f97316", "#3b82f6", "#10b981", "#8b5cf6", "#ef4444", "#f59e0b"]
+      cta: {
+        title: "Join 500+ companies who count on our AWS developers",
+        buttonText: "Schedule a Call",
+        avatarColors: ["#f97316", "#3b82f6", "#10b981", "#8b5cf6", "#ef4444", "#f59e0b"]
       }
     }
   },

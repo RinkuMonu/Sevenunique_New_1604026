@@ -54,6 +54,7 @@ export default function ReactServicesSection({ data }) {
         <TestimonialHighlightSection testimonial={testimonial}/>
       {/* ===== TEAM SECTION ===== */}
       <TeamSection teamSection={teamSection}/>
+      
       {/* {teamSection && (
         <section className="bg-white py-20">
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
@@ -108,10 +109,7 @@ export default function ReactServicesSection({ data }) {
           </div>
         </section>
       )}
-
-      <EcosystemAndTestimonials data={data}/>
-      <TestimonialSection data={data}/>
-
+      
       {/* ===== CTA ===== */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-6">
@@ -125,9 +123,13 @@ export default function ReactServicesSection({ data }) {
           </div>
         </div>
       </section>
+      <EcosystemAndTestimonials data={data}/>
+      <TestimonialSection data={data}/>
+      <EngagementSection />
+      
 
      
-      <EngagementSection />
+     
       <ServiceSection/>
       <AwardsSection />
       {/* ===== FAQ ===== */}

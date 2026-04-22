@@ -2,80 +2,6 @@
 
 import Image from "next/image";
 
-const leftTestimonials = [
-  {
-    industry: "Healthcare & MedTech",
-    quote:
-      "We are consistently delivering high-quality software on time, in part thanks to the people from BairesDev. They can find talented, high-caliber, sharp developers who will stay with us long-term. Their main strength is their talent.",
-    name: "David Johnston",
-    role: "Product Engagement Lead",
-    photo: "/images/man1.png",
-    companyType: "image",
-    companySrc: "/logos/johnson.png",
-    companyAlt: "Johnson & Johnson",
-  },
-  {
-    industry: "Financial Services",
-    subtitle: "Upgraded and Maintained Repay's AWS Infrastructure",
-    quote:
-      "They've also been proactive about checking in about the state of the engagement and overall performance. I'm confident we'll continue working with BairesDev for a long time.",
-    name: "Michael Soltow",
-    role: "Software Dev. Manager",
-    photo: "/images/man2.png",
-    companyType: "text",
-    companyText: "REPAY",
-    companyClassName:
-      "text-[18px] font-semibold tracking-[0.28em] text-[#24456f]",
-    hoverDetails: {
-      description:
-        "Repay needed a stronger AWS foundation to improve uptime, monitoring, and release confidence. Our team modernized infrastructure management and tightened DevOps workflows to support long-term scale.",
-      tags: ["AWS", "Terraform", "CI/CD", "Observability", "DevOps"],
-      metrics: [
-        { value: "6", label: "Team size" },
-        { value: "99.9%", label: "Uptime" },
-        { value: "18 mo", label: "Engagement" },
-      ],
-    },
-  },
-];
-
-const rightTestimonials = [
-  {
-    industry: "Financial Services",
-    subtitle: "Developed new digital banking features",
-    quote:
-      "BairesDev has been a fantastic partner. We wanted to put forth a product to help people cope with financial struggles but didn't have the resources we needed, so we turned to them. They could always find us quality talent in a concise amount of time.",
-    name: "Leonardo Shapiro",
-    role: "Head of Growth",
-    photo: "/images/man3.png",
-    companyType: "text",
-    companyText: "azlo",
-    companyClassName: "text-[20px] font-semibold lowercase text-[#101828]",
-    featured: true,
-    hoverDetails: {
-      description:
-        "Azlo wanted to make digital banking accessible for entrepreneurs and small businesses. Our engineers built CI/CD pipelines, developed new banking features, and migrated data from MongoDB to PostgreSQL to improve reliability and scalability. We also redesigned the onboarding experience for better UX and faster adoption.",
-      tags: ["Angular", "Node.js", "JavaScript", "MongoDB", "Kafka"],
-      metrics: [
-        { value: "15", label: "Team size" },
-        { value: "10", label: "NPS" },
-        { value: "2 years", label: "Engagement" },
-      ],
-    },
-  },
-  {
-    industry: "Renewable Energy",
-    quote:
-      "I was concerned about a possible mismatch of talent levels of our in-house engineers versus contractors. But, as it turns out, many of the BairesDev engineers we hired emerged as top performers. In fact, of our group of 120 developers, all the BairesDev engineers we had were in the top 20 of the organization.",
-    name: "Matthew Mecham",
-    role: "VP of Engineering",
-    photo: "/images/man4.png",
-    companyType: "text",
-    companyText: "Lumio",
-    companyClassName: "text-[20px] font-semibold text-[#101828]",
-  },
-];
-
 function CompanyMark({
   companyType,
   companySrc,
@@ -212,8 +138,8 @@ function TestimonialCard({ item, featured = false }) {
   );
 }
 
-function AvatarRow() {
-  const avatars = [
+function AvatarRow({ colors }) {
+  const defaultAvatars = [
     { src: "/images/img1.png", bg: "#FBB39E" },
     { src: "/images/img2.png", bg: "#90BBF3" },
     { src: "/images/img3.png", bg: "#8FD5BF" },
@@ -221,6 +147,11 @@ function AvatarRow() {
     { src: "/images/img5.png", bg: "#FDDC43" },
     { src: "/images/img6.png", bg: "#CDE8FA" },
   ];
+
+  const avatars = colors?.map((color, index) => ({
+    src: defaultAvatars[index]?.src || `/images/img${index + 1}.png`,
+    bg: color,
+  })) || defaultAvatars;
 
   return (
     <div className="flex items-center">
@@ -247,8 +178,16 @@ function AvatarRow() {
   );
 }
 
-export default function TestimonialSection({data}) {
+export default function TestimonialSection({ data }) {
   const testimonials = data?.testimonialsSection;
+  
+  // Return null if no testimonials data exists
+  if (!testimonials) return null;
+
+  const leftTestimonials = testimonials.leftColumn || [];
+  const rightTestimonials = testimonials.rightColumn || [];
+  const cta = testimonials.cta || {};
+
   return (
     <section className="bg-[#f5f6f7] px-6 py-20 md:px-10">
       <div className="mx-auto max-w-7xl">
@@ -256,13 +195,13 @@ export default function TestimonialSection({data}) {
           <div className="space-y-6">
             <div className="max-w-[470px] pt-2">
               <p className="mb-5 text-[12px] font-semibold uppercase tracking-[0.28em] text-[#233143]">
-                Client Testimonials
+                {testimonials.sectionLabel || "Client Testimonials"}
               </p>
               <h2 className="max-w-[420px] text-[38px] font-medium leading-[1.12] text-[#111827] md:text-[52px]">
-              {testimonials?.heading}
+                {testimonials.heading}
               </h2>
               <p className="mt-6 max-w-[420px] text-[18px] leading-[1.7] text-[#3d4652]">
-              {testimonials?.subheading}
+                {testimonials.subheading}
               </p>
             </div>
 
@@ -282,16 +221,16 @@ export default function TestimonialSection({data}) {
 
             <div className="group relative overflow-hidden rounded-[8px] border border-[#cfd5dd] bg-[#f5f6f7] p-5 transition-colors duration-500 hover:bg-[#d7ebff]">
               <div className="relative z-10">
-                <AvatarRow />
+                <AvatarRow colors={cta.avatarColors} />
                 <p className="mt-4 max-w-[420px] text-[24px] font-medium leading-[1.3] text-[#111827]">
-                  Join 500+ companies building AI products with our engineers.
+                  {cta.title || "Join 500+ companies building AI products with our engineers."}
                 </p>
                 <div className="mt-5 w-fit overflow-hidden rounded-[8px] border bg-[#2563eb]">
                   <button
                     type="button"
                     className="relative z-10 inline-flex rounded-[8px] px-5 py-3 text-[15px] font-semibold text-white"
                   >
-                    <span className="relative z-10">Schedule a Call</span>
+                    <span className="relative z-10">{cta.buttonText || "Schedule a Call"}</span>
                   </button>
                 </div>
               </div>
