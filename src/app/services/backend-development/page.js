@@ -1,4 +1,5 @@
 import TableContent from "@/components/Services/Backend-development/TableContent";
+import CaseStudyHero from "@/components/Services/Backend-development/CaseStudyHero";
 import ServiceHeroSection from "@/components/Services/ServiceHeroSection";
 import TrustedClientsStrip from "@/components/Services/ai-development/TrustedClientsStrip";
 import AIUseCasesSection from "@/components/Services/ai-development/AIUseCasesSection";
@@ -16,6 +17,7 @@ export default function Page() {
   return (
     <>
       <ServiceHeroSection data={data} />
+      <CaseStudyHero />
       <TrustedClientsStrip clients={data.trustedClients} />
       <div className="bg-[#f5f6f7] px-6 py-10 md:px-10">
         <TableContent />
