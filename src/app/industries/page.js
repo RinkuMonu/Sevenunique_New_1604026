@@ -8,10 +8,12 @@ import CTASection from "@/components/Industries/CTASection";
 export default function Page() {
   return (
     <>
+
       <IndustryHero />
       <IndustryGrid />
       <TechStack />
       <CTASection />
+      
     </>
   );
 }
