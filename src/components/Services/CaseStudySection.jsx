@@ -62,7 +62,7 @@ export default function CaseStudyHero() {
           {/* RIGHT IMAGE */}
           <div className="col-span-5 h-full">
             <img
-              src="/pinterest.png"
+              src="/images/pinterest.png"
               alt="Pinterest UI"
               className="w-full h-full object-cover"
             />
