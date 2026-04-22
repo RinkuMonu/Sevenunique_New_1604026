@@ -173,7 +173,7 @@ function TestimonialCard({ item, featured = false }) {
                                     {item.hoverDetails.tags.map((tag) => (
                                         <span
                                             key={tag}
-                                            className="rounded-[6px] bg-[#f4f6f8] px-3 py-2 text-[14px] text-[#111827]"
+                                            className="rounded-md bg-[#f4f6f8] px-3 py-2 text-[14px] text-[#111827]"
                                         >
                                             {tag}
                                         </span>
