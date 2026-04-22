@@ -34,6 +34,11 @@ function createServiceEntry({
   caseStudiesDescription,
   caseStudyCards,
 }) {
+  const backendServicesItems = (useCasesServices || []).map((service) => ({
+    title: service.title,
+    content: service.content,
+  }));
+
   return {
     sections: {
       trustedClientsStrip: true,
@@ -50,7 +55,7 @@ function createServiceEntry({
         `${label} teams need strong execution, reliable delivery, and systems that can evolve with the business. We help organizations build that foundation with practical engineering and long-term maintainability in mind.`,
     },
     hero: {
-      breadcrumb: ["Services", breadcrumb],
+      breadcrumb: ["Services", breadcrumb], 
       title,
       heading,
       description,
@@ -68,6 +73,18 @@ function createServiceEntry({
       description: useCasesDescription,
       image: "/logos/img1.png",
       services: useCasesServices,
+    },
+    backendServices: {
+      sectionLabel: title,
+      heading: "No matter what you're building, we can help.",
+      description:
+        `Our ${label.toLowerCase()} teams help companies ship reliable systems, improve delivery quality, and support growth without unnecessary complexity.`,
+      logos: [
+        { src: "/images/gcp.png", alt: "Google Cloud" },
+        { src: "/images/aws.png", alt: "AWS" },
+        { src: "/images/ipo.png", alt: "Azure" },
+      ],
+      items: backendServicesItems,
     },
     teamSection: {
       eyebrow: teamEyebrow,
@@ -100,6 +117,7 @@ function createServiceEntry({
       buttonLabel: "Talk to an expert",
       href: "https://www.bairesdev.com/start/basic-details/",
     },
+
     testimonials: {
       sectionLabel: "Client Testimonials",
       heading: testimonialHeading,
@@ -181,6 +199,34 @@ function createServiceEntry({
         `Join 500+ companies building stronger ${label.toLowerCase()} capabilities with our engineers.`,
       calloutButtonLabel: "Schedule a Call",
     },
+    engagementData: {
+  sectionLabel: "Flexible engagement models",
+  heading:
+    "Need extra Amazon Web Services expertise? Plug us in where you need us most.",
+  description:
+    "We customize every engagement to fit your workflow, priorities, and delivery needs.",
+
+  items: [
+    {
+      label: "Staff Augmentation",
+      question: "Need a couple of extra software engineers on your team?",
+      description: "Get senior developers who integrate into your team.",
+      imgSrc: "/icons/staff.svg",
+    },
+    {
+      label: "Dedicated Teams",
+      question: "Need multiple teams working simultaneously?",
+      description: "Delivery-ready teams managed by tech leads.",
+      imgSrc: "/icons/team.svg",
+    },
+    {
+      label: "Software Outsourcing",
+      question: "Want full project ownership?",
+      description: "We handle everything from start to finish.",
+      imgSrc: "/icons/outsource.svg",
+    },
+  ],
+},
     caseStudies: {
       sectionLabel: caseStudiesLabel,
       heading: caseStudiesHeading,
@@ -585,6 +631,7 @@ const generatedServices = {
 
 export const serviceData = {
   "ai-development": {
+    
     sections: {
       trustedClientsStrip: true,
     },
@@ -599,6 +646,22 @@ export const serviceData = {
       summary:
         "The best partnerships are the ones you do not have to worry about. We deliver the kind of technical execution and reliability that builds long-term trust and consistent results.",
     },
+    engagementData: {
+  sectionLabel: "Flexible engagement models",
+  heading:
+    "Need extra Amazon Web Services expertise? Plug us in where you need us most.",
+  description:
+    "We customize every engagement to fit your workflow, priorities, and delivery needs.",
+
+  items: [
+    {
+      label: "Staff Augmentation",
+      question: "Need a couple of extra software engineers?",
+      description: "Get senior developers integrated into your team.",
+      imgSrc: "/icons/staff.svg",
+    },
+  ],
+},
     hero: {
       breadcrumb: ["Services", "AI"],
       title: "AI DEVELOPMENT SERVICES",
@@ -669,211 +732,201 @@ export const serviceData = {
         },
       ],
     },
+    
+    toolsTech: {
+  sectionLabel: "TOOLS FOR AI DEVELOPMENT",
+  heading: "Tools and technologies used in our AI development projects:",
+  description:
+    "We combine industry-standard frameworks with modern tooling and proven internal processes to accelerate delivery and maintain custom AI solutions over time.",
+
+  items: [
+    {
+      title: "Deep Learning Frameworks",
+      description:
+        "We use high-performance frameworks to build, train, and optimize deep learning models across different use cases.",
+      tools: ["PyTorch", "TensorFlow", "Keras"],
+    },
+    {
+      title: "Machine Learning Libraries",
+      description:
+        "We leverage ML libraries to build scalable and efficient models for real-world applications.",
+      tools: ["Scikit-learn", "XGBoost", "LightGBM"],
+    },
+    {
+      title: "Data Engineering Tools",
+      description:
+        "Robust pipelines for handling large-scale structured and unstructured data.",
+      tools: ["Apache Spark", "Kafka", "Airflow"],
+    },
+    {
+      title: "Data Analysis Tools",
+      description:
+        "Tools for data processing, visualization, and insights extraction.",
+      tools: ["Pandas", "NumPy", "Matplotlib"],
+    },
+    {
+      title: "Cloud ML Platforms",
+      description:
+        "Deploy and scale ML models using cloud-native infrastructure.",
+      tools: ["AWS SageMaker", "Google AI", "Azure ML"],
+    },
+    {
+      title: "Development Environments",
+      description:
+        "Efficient coding and experimentation environments.",
+      tools: ["Jupyter", "VS Code", "Colab"],
+    },
+    {
+      title: "AI Coding Tools",
+      description:
+        "Accelerate development with AI-assisted tools.",
+      tools: ["GitHub Copilot", "ChatGPT", "Codeium"],
+    },
+  ],
+},
   },
 
-  "backend-development": {
-    sections: {
-      trustedClientsStrip: true,
-    },
-    trustedClients,
-    testimonialHighlight: {
-      quote:
-        "They helped us strengthen our backend architecture and gave us the confidence to scale without sacrificing stability.",
-      name: "Aarav Shah",
-      role: "Head of Engineering",
-      companyName: "CloudForge",
-      companyLogo: "/logos/nextroll-new.png",
-      personImage: "/logos/img2.png",
-      summary:
-        "Reliable backend engineering creates room for product growth. Our team focuses on performance, maintainability, and system design that supports long-term business goals.",
-    },
-    hero: {
-      breadcrumb: ["Services", "Backend"],
-      title: "BACK-END DEVELOPMENT SERVICES",
-      heading: "Build robust backend systems engineered for performance and scale.",
-      description:
-        "We design and develop secure backend architectures, APIs, databases, and cloud-ready systems that keep your products fast, reliable, and easy to grow.",
+ "backend-development": createServiceEntry({
+  breadcrumb: "Backend",
+  title: "BACK-END DEVELOPMENT SERVICES",
+  heading: "Build robust backend systems engineered for performance and scale.",
+  description:
+    "We design and develop secure backend architectures, APIs, databases, and cloud-ready systems that keep your products fast, reliable, and easy to grow.",
+  label: "Backend Development",
 
-      label: "Backend Development",
+  useCasesLabel: "BACKEND SYSTEMS",
+  useCasesHeading: "Backend Use Cases",
+  useCasesDescription:
+    "We build backend platforms that support high traffic, clean integrations, and stable performance as your product and team grow.",
 
-      rating: {
-        platform: "Clutch",
-        score: "4.9/5",
-        reviews: "55 client reviews",
-      },
+  useCasesServices: [
+    {
+      title: "API Development",
+      content:
+        "Create scalable REST and GraphQL APIs for web and mobile products.\n\nDesign service contracts, authentication flows, and data access layers that are easy to maintain and extend.",
+    },
+    {
+      title: "Cloud Architecture",
+      content:
+        "Build resilient backend systems optimized for cloud deployment and growth.\n\nSupport reliability, observability, and future scaling with cloud-ready architecture and strong infrastructure foundations.",
+    },
+    {
+      title: "Microservices Architecture",
+      content:
+        "Design service-oriented backend systems for products that need cleaner scaling paths and better service boundaries.\n\nWe help teams break down monoliths, define communication patterns, and reduce operational complexity as platforms grow.",
+    },
+    {
+      title: "Database Architecture & Optimization",
+      content:
+        "Build database layers that support performance, consistency, and long-term maintainability.\n\nWe design schemas, indexing strategies, and query patterns that help products stay responsive under increasing load.",
+    },
+    {
+      title: "Authentication & Authorization Systems",
+      content:
+        "Implement secure access control across products, APIs, and internal platforms.\n\nWe support identity flows, permissions models, and token-based authentication strategies that fit real production requirements.",
+    },
+    {
+      title: "Backend Modernization & Migration",
+      content:
+        "Upgrade outdated backend systems without disrupting business-critical workflows.\n\nWe help teams modernize architecture, reduce technical debt, and improve long-term maintainability through phased engineering plans.",
+    },
+    {
+      title: "Real-Time Processing",
+      content:
+        "Support products that rely on live updates, event-driven workflows, and streaming data.\n\nWe build backend systems that can process and deliver real-time information reliably across customer-facing and internal use cases.",
+    },
+    {
+      title: "Monitoring & Observability",
+      content:
+        "Create stronger production visibility across backend systems and infrastructure.\n\nWe help teams instrument services, surface useful alerts, and improve response speed when performance or reliability issues appear.",
+    },
+  ],
 
-      formTitle: "Get expert help for your backend project.",
-    },
+  teamEyebrow: "Our backend development team",
+  teamHeading: "Why product teams choose our backend engineers:",
+  teamDescription:
+    "We help companies build backend systems that stay reliable under real production pressure. Our engineers focus on clean architecture, maintainable services, and infrastructure that supports long-term growth.",
 
-    useCases: {
-      sectionLabel: "BACKEND SYSTEMS",
-      heading: "Backend Use Cases",
-      description:
-        "We build backend platforms that support high traffic, clean integrations, and stable performance as your product and team grow.",
-      image: "/logos/img1.png",
-      services: [
-        {
-          title: "API Development",
-          content:
-            "Create scalable REST and GraphQL APIs for web and mobile products.\n\nDesign service contracts, authentication flows, and data access layers that are easy to maintain and extend.",
-        },
-        {
-          title: "Cloud Architecture",
-          content:
-            "Build resilient backend systems optimized for cloud deployment and growth.\n\nSupport reliability, observability, and future scaling with cloud-ready architecture and strong infrastructure foundations.",
-        },
-      ],
-    },
-    teamSection: {
-      eyebrow: "Our backend development team",
-      supporterLabel: "Backed by",
-      supporterValue: "4000+ devs",
-      heading: "Why product teams choose our backend engineers:",
-      description:
-        "We help companies build backend systems that stay reliable under real production pressure. Our engineers focus on clean architecture, maintainable services, and infrastructure that supports long-term growth.",
-      buttonLabel: "Speak With Our Team",
-      tabs: [
-        {
-          title: "Senior backend specialists",
-          content:
-            "Our backend engineers bring deep experience across APIs, distributed systems, databases, and cloud-native architecture. Every engineer is vetted for code quality, system thinking, and practical delivery in production environments.",
-        },
-        {
-          title: "Systems built for scale",
-          content:
-            "We design backend platforms that handle growth without becoming hard to maintain. That includes service boundaries, observability, deployment pipelines, and the reliability practices teams need as usage increases.",
-        },
-        {
-          title: "Security and operational rigor",
-          content:
-            "From access control to infrastructure hardening and auditability, we help teams ship backend systems with security and governance built into day-to-day engineering work.",
-        },
-      ],
-    },
-    ctaBanner: {
-      title: "Looking for a backend team with this kind of track record?",
-      subtitle: "Tell us more about your platform, APIs, or infrastructure needs.",
-      buttonLabel: "Talk to an expert",
-      href: "https://www.bairesdev.com/start/basic-details/",
-    },
-    testimonials: {
-      sectionLabel: "Client Testimonials",
-      heading: "Get backend results you can build on.",
-      description:
-        "Our backend work stands up under production traffic, product growth, and long-term operational demands.",
-      leftItems: [
-        {
-          industry: "Fintech",
-          quote:
-            "Their backend engineers helped us stabilize core transaction flows and improve confidence in every release. The team brought strong technical judgment and real ownership.",
-          name: "Anika Patel",
-          role: "VP of Engineering",
-          photo: "/images/man1.png",
-          companyType: "text",
-          companyText: "PAYGRID",
-          companyClassName:
-            "text-[18px] font-semibold tracking-[0.2em] text-[#24456f]",
-        },
-        {
-          industry: "SaaS",
-          subtitle: "Scaled multi-tenant backend services for a growing platform",
-          quote:
-            "They were thoughtful about architecture, proactive in delivery, and strong at turning messy legacy services into something our team could confidently extend.",
-          name: "Marcus Lee",
-          role: "Director of Engineering",
-          photo: "/images/man2.png",
-          companyType: "text",
-          companyText: "STACKLANE",
-          companyClassName:
-            "text-[18px] font-semibold tracking-[0.18em] text-[#24456f]",
-          hoverDetails: {
-            description:
-              "We partnered with the client to modernize service boundaries, improve deployment confidence, and support a fast-growing tenant base without sacrificing maintainability.",
-            tags: ["Node.js", "PostgreSQL", "AWS", "CI/CD", "Observability"],
-            metrics: [
-              { value: "8", label: "Team size" },
-              { value: "99.95%", label: "Uptime" },
-              { value: "14 mo", label: "Engagement" },
-            ],
-          },
-        },
-      ],
-      rightItems: [
-        {
-          industry: "Enterprise Software",
-          subtitle: "Reworked backend architecture for reliability and speed",
-          quote:
-            "They improved service performance, simplified releases, and gave us a backend foundation we could keep building on as the product matured.",
-          name: "Nina Romero",
-          role: "Head of Platform",
-          photo: "/images/man3.png",
-          companyType: "text",
-          companyText: "coreOS",
-          companyClassName: "text-[20px] font-semibold text-[#101828]",
-          featured: true,
-          hoverDetails: {
-            description:
-              "The engagement focused on backend modernization, clearer service ownership, and production visibility so the platform team could move faster with less risk.",
-            tags: ["Java", "Spring Boot", "Kafka", "Docker", "Prometheus"],
-            metrics: [
-              { value: "12", label: "Team size" },
-              { value: "35%", label: "Faster releases" },
-              { value: "16 mo", label: "Engagement" },
-            ],
-          },
-        },
-        {
-          industry: "HealthTech",
-          quote:
-            "The engineers integrated smoothly with our internal team and consistently delivered backend improvements that made the platform more stable and easier to support.",
-          name: "Daniel Brooks",
-          role: "CTO",
-          photo: "/images/man4.png",
-          companyType: "text",
-          companyText: "MEDSYNC",
-          companyClassName: "text-[20px] font-semibold text-[#101828]",
-        },
-      ],
-      calloutText:
-        "Join 500+ companies strengthening their backend systems with our engineers.",
-      calloutButtonLabel: "Schedule a Call",
-    },
-    caseStudies: {
-      sectionLabel: "BACKEND CASE STUDIES",
-      heading: "Backend systems built for scale, speed, and reliability.",
-      description:
-        "We've delivered backend development services for products that demand strong APIs, dependable infrastructure, and long-term maintainability. These engagements show how we help teams support growth without sacrificing performance.",
-      cards: [
-        {
-          tag: "FINTECH",
-          title: "Built Secure Transaction APIs for a High-Volume Finance Platform",
-          description:
-            "Engineered resilient backend APIs with strong security controls and throughput designed for demanding transaction workloads.",
-          image: "/logos/office1.jpg",
-        },
-        {
-          tag: "SAAS",
-          title: "Modernized Backend Services to Support Multi-Tenant Product Growth",
-          description:
-            "Refactored core services to improve tenant isolation, maintainability, and long-term scaling for a growing SaaS platform.",
-          image: "/logos/office2.jpg",
-        },
-        {
-          tag: "ENTERPRISE",
-          title: "Re-Architected Core Systems for Better Reliability and Observability",
-          description:
-            "Improved system stability with cleaner service boundaries, stronger monitoring, and better visibility into production behavior.",
-          image: "/logos/office3.jpg",
-        },
-      ],
-    },
-  },
+  ctaTitle: "Looking for a backend team with this kind of track record?",
+  ctaSubtitle:
+    "Tell us more about your platform, APIs, or infrastructure needs.",
 
+  testimonialHeading: "Get backend results you can build on.",
+  testimonialDescription:
+    "Our backend work stands up under production traffic, product growth, and long-term operational demands.",
+
+  highlightQuote:
+    "They helped us strengthen our backend architecture and gave us the confidence to scale without sacrificing stability.",
+  highlightName: "Aarav Shah",
+  highlightRole: "Head of Engineering",
+  highlightCompany: "CloudForge",
+
+  caseStudiesLabel: "BACKEND CASE STUDIES",
+  caseStudiesHeading:
+    "Backend systems built for scale, speed, and reliability.",
+  caseStudiesDescription:
+    "We help teams support growth without sacrificing performance through strong backend engineering.",
+
+  caseStudyCards: [
+    {
+      tag: "FINTECH",
+      title:
+        "Built Secure Transaction APIs for a High-Volume Finance Platform",
+      description:
+        "Engineered resilient backend APIs with strong security controls.",
+      image: "/logos/office1.jpg",
+    },
+    {
+      tag: "SAAS",
+      title:
+        "Modernized Backend Services to Support Multi-Tenant Growth",
+      description:
+        "Improved scalability and maintainability for a SaaS platform.",
+      image: "/logos/office2.jpg",
+    },
+    {
+      tag: "ENTERPRISE",
+      title:
+        "Re-Architected Core Systems for Reliability and Observability",
+      description:
+        "Improved monitoring and system stability.",
+      image: "/logos/office3.jpg",
+    },
+  ],
+}),
   ...generatedServices,
 
   "web-development": {
     sections: {
       trustedClientsStrip: false,
+    },
+    backendServices: {
+      sectionLabel: "WEB DEVELOPMENT SERVICES",
+      heading: "No matter what you're building, we can help.",
+      description:
+        "Our web development teams help companies build fast, maintainable web applications with stronger user experience and reliable delivery.",
+      logos: [
+        { src: "/images/gcp.png", alt: "Google Cloud" },
+        { src: "/images/aws.png", alt: "AWS" },
+        { src: "/images/ipo.png", alt: "Azure" },
+      ],
+      items: [
+        {
+          title: "Custom Web Applications",
+          content:
+            "Build high-performance web applications tailored to your product and business workflows.",
+        },
+        {
+          title: "Frontend Architecture",
+          content:
+            "Create scalable UI systems and maintainable frontend foundations for growing products.",
+        },
+        {
+          title: "Platform Modernization",
+          content:
+            "Upgrade legacy web systems to improve performance, maintainability, and release speed.",
+        },
+      ],
     },
     hero: {
       breadcrumb: ["Services", "Web"],
@@ -898,6 +951,34 @@ export const serviceData = {
   "mobile-development": {
     sections: {
       trustedClientsStrip: false,
+    },
+    backendServices: {
+      sectionLabel: "MOBILE APP DEVELOPMENT",
+      heading: "No matter what you're building, we can help.",
+      description:
+        "Our mobile app teams help companies launch and scale reliable products across iOS and Android with strong engineering support.",
+      logos: [
+        { src: "/images/gcp.png", alt: "Google Cloud" },
+        { src: "/images/aws.png", alt: "AWS" },
+        { src: "/images/ipo.png", alt: "Azure" },
+      ],
+      items: [
+        {
+          title: "Cross-Platform Apps",
+          content:
+            "Build mobile applications that support efficient delivery across major platforms.",
+        },
+        {
+          title: "Native App Development",
+          content:
+            "Deliver polished mobile experiences optimized for platform performance and usability.",
+        },
+        {
+          title: "Mobile Modernization",
+          content:
+            "Improve app stability, release quality, and long-term maintainability across evolving products.",
+        },
+      ],
     },
     hero: {
       breadcrumb: ["Services", "Mobile"],

@@ -1,7 +1,10 @@
 import { serviceData } from "./data";
-import { restServiceData } from "./rest-data.js";
-import { RestServicePage } from "./rest-data.jsx";
+
+
 import ServiceHeroSection from "@/components/Services/ServiceHeroSection";
+import BackendHero from "@/components/Services/Backend-development/BackendHero";
+import BackendServices from "@/components/Services/Backend-development/BackendServices";
+import CaseStudyHero from "@/components/Services/Backend-development/CaseStudyHero";
 import TrustedClientsStrip from "@/components/Services/ai-development/TrustedClientsStrip";
 import TableContent from "@/components/Services/Backend-development/TableContent";
 import AIUseCasesSection from "@/components/Services/ai-development/AIUseCasesSection";
@@ -10,25 +13,20 @@ import CtaBanner from "@/components/Services/ai-development/CtaBanner";
 import TestimonialSection from "@/components/Services/ai-development/TestimonialSection";
 import TestimonialHighlightSection from "@/components/Services/ai-development/TestimonialHighlightSection";
 import CaseStudySection from "@/components/Services/CaseStudySection";
+import ToolsTechSection from "@/components/Services/ToolsTechSection";
+import EngagementSection from "@/components/EngagementSection";
 
+import AwardsSectionFull from "@/components/AwardsSectionFull";
+import UsefulAIResources from "@/components/UsefulAIResources";
 
-
-
-
+// page.jsx logic update
 export default async function ServicePage({ params }) {
   const { slug } = await params;
 
-  const restData =
-    restServiceData[slug] ||
-    restServiceData[`${slug}-development`];
+  const normalizedSlug =
+    serviceData[slug] ? slug : `${slug}-development`;
 
-  if (restData) {
-    return <RestServicePage data={restData} />;
-  }
-
-  const data =
-    serviceData[slug] ||
-    serviceData[`${slug}-development`];
+  const data = serviceData[normalizedSlug];
 
   if (!data) {
     return <div className="p-10">No data found for: {slug}</div>;
@@ -36,19 +34,57 @@ export default async function ServicePage({ params }) {
 
   return (
     <>
-      <ServiceHeroSection data={data} />
-      <TrustedClientsStrip clients={data.trustedClients} />
+    {/* HERO */}
+{normalizedSlug === "ai-development" ? (
+  <ServiceHeroSection data={data} />
+) : (
+  <BackendHero data={data} />
+)}
+
+{/* TRUSTED CLIENTS */}
+{data.sections?.trustedClientsStrip && (
+  <TrustedClientsStrip clients={data.trustedClients} />
+)}
       <div className="bg-[#f5f6f7] px-6 py-10 md:px-10">
         <TableContent />
-        <AIUseCasesSection useCases={data.useCases} />
-        <AiTeamSection teamSection={data.teamSection} />
-        <CtaBanner ctaBanner={data.ctaBanner} />
-        <TestimonialSection testimonials={data.testimonials} />
       </div>
-      {data.testimonialHighlight && (
-        <TestimonialHighlightSection testimonial={data.testimonialHighlight} />
-      )}
-      {data.caseStudies && <CaseStudySection caseStudies={data.caseStudies} />}
+{normalizedSlug !== "ai-development" && data.backendServices && (
+  <BackendServices servicesSection={data.backendServices} />
+)}
+{normalizedSlug !== "ai-development" && data.caseStudies && (
+  <CaseStudySection caseStudies={data.caseStudies} />
+)}
+{normalizedSlug === "backend-development" && <CaseStudyHero />}
+      <div className="bg-[#f5f6f7] px-6 py-10 md:px-10">
+        {normalizedSlug !== "backend-development" && (
+          <AIUseCasesSection useCases={data.useCases} />
+        )}
+
+        {data.testimonialHighlight && (
+          <TestimonialHighlightSection testimonial={data.testimonialHighlight} />
+        )}
+
+        <AiTeamSection teamSection={data.teamSection} />
+
+        {normalizedSlug === "ai-development" && data.caseStudies && (
+          <CaseStudySection caseStudies={data.caseStudies} />
+        )}
+
+        <CtaBanner ctaBanner={data.ctaBanner} />
+
+        {data.toolsTech && (
+          <ToolsTechSection toolsTech={data.toolsTech} />
+        )}
+
+        <TestimonialSection testimonials={data.testimonials} />
+
+        {data.engagementData && (
+          <EngagementSection engagementData={data.engagementData} />
+        )}
+
+        <AwardsSectionFull />
+        <UsefulAIResources />
+      </div>
     </>
   );
 }
