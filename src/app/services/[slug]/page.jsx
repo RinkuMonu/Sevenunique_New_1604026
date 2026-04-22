@@ -1,4 +1,6 @@
 import { serviceData } from "./data";
+import { restServiceData } from "./rest-data.js";
+import { RestServicePage } from "./rest-data.jsx";
 import ServiceHeroSection from "@/components/Services/ServiceHeroSection";
 import TrustedClientsStrip from "@/components/Services/ai-development/TrustedClientsStrip";
 import TableContent from "@/components/Services/Backend-development/TableContent";
@@ -15,6 +17,14 @@ import CaseStudySection from "@/components/Services/CaseStudySection";
 
 export default async function ServicePage({ params }) {
   const { slug } = await params;
+
+  const restData =
+    restServiceData[slug] ||
+    restServiceData[`${slug}-development`];
+
+  if (restData) {
+    return <RestServicePage data={restData} />;
+  }
 
   const data =
     serviceData[slug] ||
