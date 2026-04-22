@@ -15,14 +15,7 @@ const servicesCols = [
   {
     label: "Top Services",
     items: [
-  { name: "AI Development", link: "/services/ai-development" },
-    { name: "Back-end Development", link: "/services/backend-development" },
-      "CMS Development",
-      "Cryptocurrency & Blockchain",
-      "Front-end Development",
-      "Machine Learning",
-      "QA Testing & Automation",
-      "UX/UI Design",
+  
       { name: "AI Development", link: "/services/ai-development" },
       { name: "Back-end Development", link: "/services/backend-development" },
       { name: "CMS Development", link: "/services/cms-development" },
