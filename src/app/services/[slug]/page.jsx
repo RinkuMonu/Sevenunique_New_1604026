@@ -9,15 +9,20 @@ import TrustedClientsStrip from "@/components/Services/ai-development/TrustedCli
 import TableContent from "@/components/Services/Backend-development/TableContent";
 import AIUseCasesSection from "@/components/Services/ai-development/AIUseCasesSection";
 import AiTeamSection from "@/components/Services/ai-development/AiTeamSection";
+import ServiceExpertsSection from "@/components/Services/ServiceExpertsSection";
+import ServiceTrustMapSection from "@/components/Services/ServiceTrustMapSection";
 import CtaBanner from "@/components/Services/ai-development/CtaBanner";
 import TestimonialSection from "@/components/Services/ai-development/TestimonialSection";
 import TestimonialHighlightSection from "@/components/Services/ai-development/TestimonialHighlightSection";
 import CaseStudySection from "@/components/Services/CaseStudySection";
 import ToolsTechSection from "@/components/Services/ToolsTechSection";
 import EngagementSection from "@/components/EngagementSection";
-
+import WorkSection from "@/components/services/WorkSection";
 import AwardsSectionFull from "@/components/AwardsSectionFull";
 import UsefulAIResources from "@/components/UsefulAIResources";
+import IndustrySection from "@/components/IndustrySection";
+import ProcessSliderSection from "@/components/ProcessSliderSection";
+import FAQSection from "@/components/FAQSection";
 
 // page.jsx logic update
 export default async function ServicePage({ params }) {
@@ -64,25 +69,53 @@ export default async function ServicePage({ params }) {
           <TestimonialHighlightSection testimonial={data.testimonialHighlight} />
         )}
 
-        <AiTeamSection teamSection={data.teamSection} />
+        {normalizedSlug === "ai-development" ? (
+          <AiTeamSection teamSection={data.teamSection} />
+        ) : data.expertsSection ? (
+          <ServiceExpertsSection expertsSection={data.expertsSection} />
+        ) : data.teamSection ? (
+          <AiTeamSection teamSection={data.teamSection} />
+        ) : null}
+        
+
+        {normalizedSlug !== "ai-development" && data.companyTrustSection ? (
+          <ServiceTrustMapSection section={data.companyTrustSection} />
+        ) : null}
+
+        
+
+        {normalizedSlug !== "ai-development" && data.workSection ? (
+  <WorkSection data={data.workSection} />
+) : null}
+
+
+ {data.engagementData && (
+          <EngagementSection engagementData={data.engagementData} />
+        )}
+
+{normalizedSlug !== "ai-development" && data.industrySection && (
+  <IndustrySection data={data.industrySection} />
+)}
+ <CtaBanner ctaBanner={data.ctaBanner} />
+
+{normalizedSlug !== "ai-development" && data.processSection && (
+  <ProcessSliderSection data={data.processSection} />
+)}
 
         {normalizedSlug === "ai-development" && data.caseStudies && (
           <CaseStudySection caseStudies={data.caseStudies} />
         )}
 
-        <CtaBanner ctaBanner={data.ctaBanner} />
-
-        {data.toolsTech && (
-          <ToolsTechSection toolsTech={data.toolsTech} />
-        )}
-
+       
+<ToolsTechSection toolsTech={data.toolsTech || defaultToolsTech} />
         <TestimonialSection testimonials={data.testimonials} />
 
-        {data.engagementData && (
-          <EngagementSection engagementData={data.engagementData} />
-        )}
-
+       
         <AwardsSectionFull />
+
+
+
+<FAQSection data={data.faq} />
         <UsefulAIResources />
       </div>
     </>

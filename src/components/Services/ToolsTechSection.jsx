@@ -8,7 +8,7 @@ export default function ToolsTechSection({ toolsTech }) {
   if (!toolsTech) return null;
 
   const { sectionLabel, heading, description, items } = toolsTech;
-  const activeItem = items[activeIndex];
+  const activeItem = items?.[activeIndex];
 
   return (
     <section className="bg-[#f5f6f7] px-6 py-20 md:px-10">
@@ -28,10 +28,10 @@ export default function ToolsTechSection({ toolsTech }) {
         </p>
 
         {/* GRID */}
-        <div className="grid lg:grid-cols-2 gap-12 relative">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
 
           {/* LEFT LIST */}
-          <div className="flex flex-col gap-4 relative">
+          <div className="flex flex-col gap-4">
             {items.map((item, index) => {
               const isActive = activeIndex === index;
 
@@ -43,7 +43,7 @@ export default function ToolsTechSection({ toolsTech }) {
                     ${
                       isActive
                         ? "border-orange-500 bg-white"
-                        : "border-gray-200 bg-gray-100 hover:border-orange-300"
+                        : "border-gray-200 bg-gray-100"
                     }`}
                 >
                   <span className="text-orange-500">✔</span>
@@ -60,36 +60,47 @@ export default function ToolsTechSection({ toolsTech }) {
                 </div>
               );
             })}
+          </div>
 
-            {/* 🔥 RIGHT BOX (NO TITLE + BIGGER WIDTH) */}
-            <div
-              className="hidden lg:block absolute left-[105%] w-[520px] transition-all duration-500"
-              style={{
-                top: `${activeIndex * 88}px`,
-              }}
-            >
-              <div className="border border-orange-400 rounded-xl p-6 bg-white shadow-md">
+          {/* RIGHT BOX */}
+          <div className="hidden lg:block">
+            <div className="border border-orange-400 rounded-xl p-6 bg-white shadow-md w-full max-w-[520px]">
 
-                {/* ❌ TITLE REMOVED */}
+              {/* DESCRIPTION */}
+              <p className="text-gray-700 leading-[1.7] mb-6 text-[16px]">
+                {activeItem?.description}
+              </p>
 
-                <p className="text-gray-700 leading-[1.7] mb-4 text-[16px]">
-                  {activeItem.description}
-                </p>
+              {/* LOGO GRID */}
+              <div className="grid grid-cols-3 gap-4">
+                {(activeItem?.tools || []).map((tool, i) => {
+                  
+                  const name = typeof tool === "string" ? tool : tool.name;
+                  const logo =
+                    typeof tool === "string"
+                      ? `/tools/${tool.toLowerCase().replace(/\s+/g, "")}.png`
+                      : tool.logo;
 
-                <div className="flex flex-wrap gap-2">
-                  {activeItem.tools.map((tool, i) => (
-                    <span
+                  return (
+                    <div
                       key={i}
-                      className="px-3 py-1 rounded-md bg-gray-200 text-sm text-gray-800"
+                      className="flex items-center justify-center h-[90px] border border-gray-200 rounded-lg bg-white"
                     >
-                      {tool}
-                    </span>
-                  ))}
-                </div>
-
+                      {logo ? (
+                        <img
+                          src={logo}
+                          alt={name}
+                          className="h-full w-full object-contain p-4"
+                        />
+                      ) : (
+                        <span className="text-sm text-gray-600">{name}</span>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
-            </div>
 
+            </div>
           </div>
 
         </div>
