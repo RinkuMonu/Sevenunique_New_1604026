@@ -99,13 +99,16 @@ function StepItem({ step, index, isLast }) {
   );
 }
 
-export default function ServiceSection() {
+export default function ServiceSection({data}) {
+    const displayName = data.title
+    .replace(/(development services|app development services|services)/gi, "")
+    .trim();
   return (
     <section className="bg-gray-50 rounded-b-2xl pt-20 pb-20 px-6">
       <div className="max-w-4xl mx-auto flex flex-col gap-12">
         {/* Heading */}
         <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 text-center leading-tight">
-          Kick off .NET projects in 2–4 weeks.
+          Kick off {displayName} projects in 2–4 weeks.
         </h2>
 
         {/* Content grid */}
