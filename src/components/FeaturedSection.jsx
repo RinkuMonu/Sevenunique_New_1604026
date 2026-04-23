@@ -11,32 +11,33 @@ const outfit = Outfit({
 
 const slides = [
   {
-    logo: "/logos/ft.png",
+    logo: "/logos/logo1.png",
     title: "FINANCIAL TIMES",
-    text: "We were recognized by Financial Times in the America's Fastest-growing Companies list of 2024, showcasing significant revenue growth between 2019 and 2022.",
+    text:"The collaboration has been consistently smooth and efficient. Their team brings a strong sense of ownership, delivering reliable solutions while maintaining high performance standards. It’s been a valuable partnership for us.",
   },
   {
-    logo: "/logos/news.png",
+    logo: "/logos/logo2.png",
     title: "FORBES",
-    text: "Recognized by Forbes for innovation and impact in the tech ecosystem.",
+    text: "Working with them has been a seamless experience. They understand the complexity of large-scale systems and deliver solutions that are both stable and scalable, without compromising on timelines.",
   },
   {
-    logo: "/logos/techcrunch.png",
+    logo: "/logos/logo3.png",
     title: "TECHCRUNCH",
-    text: "Featured by TechCrunch for disrupting the engineering talent space globally.",
+    text: "A dependable and knowledgeable team that truly understands the importance of precision and security. Their approach is structured, thoughtful, and aligned with long-term performance goals.",
   },
   {
-    logo: "/logos/stanford.png",
+    logo: "/logos/logo4.png",
     title: "CNBC",
-    text: "CNBC highlighted our rapid growth and strong presence in the global tech market.",
+    text: "Their ability to combine technical expertise with practical execution makes a real difference. The team is responsive, detail-oriented, and focused on delivering solutions that scale with confidence.",
+
   },
   {
-    logo: "/logos/sxs.png",
+    logo: "/logos/logo2.png",
     title: "BUSINESS INSIDER",
     text: "Business Insider recognized our platform for connecting top 1% tech talent worldwide.",
   },
   {
-    logo: "/logos/techcrunch.png",
+    logo: "/logos/logo3.png",
     title: "BLOOMBERG",
     text: "Featured by Bloomberg for consistent growth and global expansion.",
   },

@@ -1,0 +1,38 @@
+"use client";
+
+import Image from "next/image";
+
+export default function GreenCtaStrip() {
+    return (
+        <section className="w-full flex justify-center py-10">
+            <div className="max-w-5xl w-full bg-[#1f8a63] rounded-2xl px-6 py-5 flex items-center justify-between gap-6">
+
+                {/* LEFT: Image + Text */}
+                <div className="flex items-center gap-5">
+
+                    {/* Image */}
+                    <div className="w-30 h-20 relative rounded-xl overflow-hidden">
+                        <Image
+                            src="/images/green.png" 
+                            alt="team"
+                            fill
+                            className="object-cover"
+                        />
+                    </div>
+
+                    {/* Text */}
+                    <p className="text-white font-bold text-[20px] leading-7 font-medium max-w-md">
+                        100s of companies worldwide trust us for their Android services.
+                    </p>
+                </div>
+
+                {/* RIGHT: Button */}
+                <button className="bg-black text-white px-5 py-2.5 rounded-lg text-sm font-medium flex items-center gap-2 hover:opacity-90 transition">
+                    Schedule a Call
+                    <span className="text-lg">→</span>
+                </button>
+
+            </div>
+        </section>
+    );
+}
