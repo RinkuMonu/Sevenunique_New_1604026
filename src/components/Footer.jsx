@@ -123,17 +123,17 @@ export default function Footer() {
             </h3>
 
             <div className="mb-4 flex flex-wrap gap-3">
-              <button className="rounded-md border-[2px] border-black bg-transparent px-5 py-2 text-[16px] font-medium leading-none">
+              <Link href="/schedule-a-call-page" className="rounded-md border-[2px] border-black bg-transparent px-5 py-2 text-[16px] font-medium leading-none">
                 Contact Us
-              </button>
-              <button className="rounded-md bg-[#ff5b1f] px-2 py-2 text-[16px] font-semibold leading-none text-white">
+              </Link>
+              <Link href="/schedule-a-call-page" className="rounded-md bg-[#ff5b1f] px-2 py-2 text-[16px] font-semibold leading-none text-white">
                 Schedule a Call &rarr;
-              </button>
+              </Link>
             </div>
 
             <p className="flex items-center gap-2 text-[16px] leading-none">
               <FiPhone className="text-lg" />
-              +1(408) 478-2739
+              0141-4511098
             </p>
           </div>
 
@@ -171,21 +171,21 @@ export default function Footer() {
               Follow us.
             </h3>
             <div className="mt-5 flex items-center gap-6 text-lg">
-              <Link href="#" aria-label="LinkedIn" className="hover:opacity-70">
+              <Link href="https://www.linkedin.com/in/sevenuniquetechsolution/" aria-label="LinkedIn" className="hover:opacity-70">
                 <FaLinkedinIn />
               </Link>
-              <Link href="#" aria-label="Facebook" className="hover:opacity-70">
+              <Link href="https://www.facebook.com/people/SevenUnique-Tech-Solutions-Pvtltd/61556669918427/" aria-label="Facebook" className="hover:opacity-70">
                 <FaFacebookF />
               </Link>
-              <Link href="#" aria-label="X" className="hover:opacity-70">
+              <Link href="https://x.com/Sevenuniqu42041" aria-label="X" className="hover:opacity-70">
                 <FaXTwitter />
               </Link>
-              <Link href="#" aria-label="Instagram" className="hover:opacity-70">
+              <Link href="https://www.instagram.com/sevenuniquetech/?hl=en" aria-label="Instagram" className="hover:opacity-70">
                 <FaInstagram />
               </Link>
-              <Link href="#" aria-label="Youtube" className="hover:opacity-70">
+              {/* <Link href="#" aria-label="Youtube" className="hover:opacity-70">
                 <FaYoutube />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </aside>
