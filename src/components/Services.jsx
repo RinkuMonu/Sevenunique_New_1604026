@@ -1,10 +1,15 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 const services = [
   {
     title: "Front-End Development",
     desc: "Create high-performance, accessible, and scalable user interfaces.",
-    tags: ["Front-End", "Web Development", "React", "Angular"],
+    tags: [
+      { name: "Front-End", link: "/services/frontend-development" },
+      { name: "Web Development", link: "/services/web-development" },
+      { name: "React", link: "/technologies/react" },
+      { name: "Angular", link: "/technologies/angular" }
+    ],
     iconBg: "bg-[#e25d35]",
     icon: (
       <svg viewBox="0 0 20 20" fill="white" className="w-5 h-5">
@@ -15,7 +20,14 @@ const services = [
   {
     title: "Back-End Development",
     desc: "Create strong, scalable architectures built for stability and efficiency.",
-    tags: ["Back-End", "Database", "Go", ".NET", "Java", "Node.js"],
+    tags: [
+      { name: "Back-End", link: "/services/backend-development" },
+      { name: "Database", link: "/services/data-engineering" },
+      { name: "Go", link: "/technologies/golang" },
+      { name: ".NET", link: "/technologies/dotnet" },
+      { name: "Java", link: "/technologies/java" },
+      { name: "Node.js", link: "/technologies/nodejs" }
+    ],
     iconBg: "bg-[#232f3f]",
     icon: (
       <svg viewBox="0 0 20 20" fill="white" className="w-5 h-5">
@@ -26,7 +38,14 @@ const services = [
   {
     title: "AI and Machine Learning",
     desc: "Implement reliable AI solutions that drive meaningful business outcomes.",
-    tags: ["AI", "Machine Learning", "Data Science", "LLMs", "Generative AI", "Python"],
+    tags: [
+      { name: "AI", link: "/technologies/ai" },
+      { name: "Machine Learning", link: "/technologies/machine-learning" },
+      { name: "Data Science", link: "/services/data-engineering" },
+      { name: "LLMs", link: "/technologies/ai" },
+      { name: "Generative AI", link: "/technologies/ai" },
+      { name: "Python", link: "/technologies/python" }
+    ],
     iconBg: "bg-[#0f4f93]",
     icon: (
       <svg viewBox="0 0 20 20" fill="white" className="w-5 h-5">
@@ -37,7 +56,11 @@ const services = [
   {
     title: "Mobile Development",
     desc: "Build high-performance iOS and Android apps with seamless user experiences and strong data security.",
-    tags: ["Mobile Applications", "iOS", "Android"],
+    tags: [
+      { name: "Mobile Applications", link: "/services/mobile-app-development" },
+      { name: "iOS", link: "/services/ios-app-development" },
+      { name: "Android", link: "/services/android-app-development" }
+    ],
     iconBg: "bg-[#1e5dc0]",
     icon: (
       <svg viewBox="0 0 20 20" fill="white" className="w-5 h-5">
@@ -48,7 +71,10 @@ const services = [
   {
     title: "UX/UI Design",
     desc: "Create intuitive designs with clear user journeys, scalable components, and accessible interfaces.",
-    tags: ["UX Design", "UI Design"],
+    tags: [
+      { name: "UX Design", link: "/services/ui-ux-design" },
+      { name: "UI Design", link: "/services/ui-ux-design" }
+    ],
     iconBg: "bg-[#3f9ea6]",
     icon: (
       <svg viewBox="0 0 20 20" fill="white" className="w-5 h-5">
@@ -59,7 +85,9 @@ const services = [
   {
     title: "QA and Testing",
     desc: "Ensure high-quality releases with end-to-end testing covering both manual and automated processes.",
-    tags: ["Quality Assurance"],
+    tags: [
+      { name: "Quality Assurance", link: "/services/qa-testing" }
+    ],
     iconBg: "bg-[#1f9f71]",
     icon: (
       <svg viewBox="0 0 20 20" fill="white" className="w-5 h-5">
@@ -81,7 +109,7 @@ export default function Services() {
             <span className="text-[#f4622a]">.</span>
           </h2>
           <Link
-            href="/solutions"
+            href="/services"
             className="shrink-0 inline-flex items-center gap-2 text-[15px] text-[#1f1f1f] border-b border-[#1f1f1f] pb-1 hover:text-[#f4622a] hover:border-[#f4622a] transition-colors"
           >
             Everything we do
@@ -108,12 +136,13 @@ export default function Services() {
               </p>
               <div className="flex flex-wrap gap-2">
                 {svc.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="inline-flex items-center px-2.5 py-1 text-[15px] leading-none text-[#1764ca] border border-[#8db2e2] rounded-md bg-transparent hover:bg-blue-500 hover:text-white hover:cursor-pointer"
+                  <Link
+                    key={tag.name}
+                    href={tag.link}
+                    className="inline-flex items-center px-2.5 py-1 text-[15px] leading-none text-[#1764ca] border border-[#8db2e2] rounded-md bg-transparent hover:bg-blue-500 hover:text-white hover:cursor-pointer transition-colors"
                   >
-                    {tag}
-                  </span>
+                    {tag.name}
+                  </Link>
                 ))}
               </div>
             </div>

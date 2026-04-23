@@ -6,6 +6,10 @@ import EngagementSection from "./EngagementSection";
 import EcosystemAndTestimonials from "./EcosystemAndTestimonials";
 import TestimonialHighlightSection from "./Services/ai-development/TestimonialHighlightSection";
 import AwardsSection from "./AwardsSection";
+import TeamSection from "@/app/technologies/TeamSection";
+import ServiceSection from "@/app/technologies/ServiceSection";
+import TestimonialSection from "@/app/technologies/TestimonialSection";
+import CaseStudySection from "./Services/CaseStudySection";
 
 function AccordionItem({ question, answer, defaultOpen = false }) {
   const [open, setOpen] = useState(defaultOpen);
@@ -42,86 +46,37 @@ export default function ReactServicesSection({ data }) {
   if (!data) return null;
 
   const { servicesSection, testimonial, teamSection, caseStudies, faq } = data;
-
+  const displayName = data.title
+  .replace(/(development services|app development services|services)/gi, "")
+  .trim();
   return (
     <div className="bg-gray-50 text-gray-900">
-
-
       {/* ===== TESTIMONIAL ===== */}
         <TestimonialHighlightSection testimonial={testimonial}/>
       {/* ===== TEAM SECTION ===== */}
-      {teamSection && (
-        <section className="bg-white py-20">
-          <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
-            <div>
-              <p className="text-sm tracking-widest text-gray-500 uppercase mb-4">
-                {teamSection?.sectionLabel}
-              </p>
-              <div className="flex items-center gap-3 mb-4">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <Image key={i} src={`/avatar${i}.jpg`} alt="avatar" width={40} height={40} className="rounded-full" />
-                ))}
-                <span className="text-sm text-gray-600">Backed by <b>4000+ devs</b></span>
-              </div>
-              <h2 className="text-4xl font-semibold mb-4">{teamSection?.heading}</h2>
-              <p className="text-gray-600 mb-6">{teamSection?.description}</p>
-              <button className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium">
-                Speak With Our Team
-              </button>
-            </div>
-
-            <div className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                {teamSection?.highlights?.map((item, i) => (
-                  <div key={i} className="border rounded-xl p-6 bg-gray-50">
-                    <p className="font-medium">{item}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="border border-red-400 rounded-xl p-6 text-gray-700">
-                {teamSection?.detail}
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
+      <TeamSection teamSection={teamSection}/>
       {/* ===== CASE STUDIES ===== */}
-      {caseStudies && (
-        <section className="bg-white py-20">
-          <div className="max-w-7xl mx-auto px-6">
-            <p className="text-sm tracking-widest text-gray-500 uppercase mb-4">
-              {caseStudies?.sectionLabel}
-            </p>
-            <h2 className="text-4xl font-semibold mb-6">{caseStudies?.heading}</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              {[1, 2, 3].map((i) => (
-                <div key={i} className="h-[300px] rounded-xl bg-gradient-to-b from-gray-700 to-black text-white p-6 flex items-end">
-                  <p className="font-semibold">Case Study {i}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      <EcosystemAndTestimonials data={data}/>
-
+      {data?.caseStudies &&(<CaseStudySection caseStudies={data.caseStudies}/>)}
       {/* ===== CTA ===== */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="bg-blue-100 rounded-2xl p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="bg-blue-100 rounded-2xl p-10 flex flex-col md:flex-row items-center justify-between gap-6 ">
             <h3 className="text-2xl md:text-3xl font-medium">
-              Looking for a team with this kind of track record?
+            Looking for a team with this kind of track record?
+            <br className="hidden md:block" />
+            Share your {displayName} goals with us.
             </h3>
+            <br/>
             <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium">
               Talk to an expert
             </button>
           </div>
         </div>
       </section>
-
-      <EngagementSection />
+      <EcosystemAndTestimonials data={data}/>
+      <TestimonialSection data={data}/>
+      <EngagementSection data={data} />
+      <ServiceSection data={data}/>
       <AwardsSection />
       {/* ===== FAQ ===== */}
       {faq && (

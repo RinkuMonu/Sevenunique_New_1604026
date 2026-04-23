@@ -10,9 +10,9 @@ const outfit = Outfit({
 
 export default function AwardsSection() {
   return (
-    <section className={`${outfit.className} bg-[#f3f3f3] py-20 px-6`}>
+    <section className={`${outfit.className} bg-[#f3f3f3] py-10 px-6`}>
 
-      <div className="max-w-6xl mx-auto bg-[#0b0b0b] rounded-2xl px-10 py-14">
+      <div className=" mx-auto bg-[#0b0b0b] rounded-2xl px-10 py-14">
 
         <div className="grid lg:grid-cols-3 gap-12 items-center">
 
@@ -55,7 +55,7 @@ export default function AwardsSection() {
                     d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0"
                   />
                 </defs>
-                <text fill="#6b7280" fontSize="16" letterSpacing="2">
+                <text fill="#6b7280" fontSize="18" letterSpacing="2">
                   <textPath href="#circlePath1">
                     projects executed successfully • projects executed successfully •
                   </textPath>
@@ -83,7 +83,7 @@ export default function AwardsSection() {
                     d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0"
                   />
                 </defs>
-                <text fill="#6b7280" fontSize="16" letterSpacing="2">
+                <text fill="#6b7280" fontSize="18" letterSpacing="2">
                   <textPath href="#circlePath2">
                     industry sectors • industry sectors • industry sectors •
                   </textPath>
@@ -99,7 +99,7 @@ export default function AwardsSection() {
           </div>
 
           {/* RIGHT AWARDS */}
-          <div className="grid grid-cols-2 gap-8 border-l border-white/10 pl-8">
+          <div className="grid grid-cols-2 gap-8 border-l border-white/10 pl-4">
 
             <div className="text-center space-y-3">
               <div className="w-24 h-12 mx-auto relative">

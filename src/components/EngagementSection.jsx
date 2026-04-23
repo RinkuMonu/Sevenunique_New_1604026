@@ -152,9 +152,11 @@ function MobileAccordionItem({ model, isOpen, onToggle, isFirst }) {
 }
 
 // ─── Main Section ────────────────────────────────────────────────────────────
-export default function EngagementSection() {
+export default function EngagementSection({data}) {
   const [openIndex, setOpenIndex] = useState(0);
-
+  const displayName = data.title
+  .replace(/(development services|app development services|services)/gi, "")
+  .trim();
   const toggle = (i) => setOpenIndex((prev) => (prev === i ? -1 : i));
 
   return (
@@ -167,7 +169,7 @@ export default function EngagementSection() {
             Flexible engagement models
           </p>
           <h2 className="text-3xl md:text-4xl font-medium text-gray-900 leading-tight">
-            Need extra Amazon Web Services expertise?<br />
+            Need extra {displayName} expertise?<br />
             Plug us in where you need us most.
           </h2>
           <p className="text-base text-gray-900 max-w-xl">

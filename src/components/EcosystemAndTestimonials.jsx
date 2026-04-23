@@ -72,7 +72,7 @@ function TestimonialCard({ t, seed, active = false }) {
 export default function EcosystemAndTestimonials({data}) {
   const [activeIndex, setActiveIndex] = useState(0);
    const ecosystem = data?.ecosystem;
-  const testimonials = data?.testimonialsSection;
+  // const testimonials = data?.testimonialsSection;
   return (
     <>
       {/* ECOSYSTEM SECTION */}
@@ -131,9 +131,9 @@ export default function EcosystemAndTestimonials({data}) {
       </section>
 
       {/* TESTIMONIALS SECTION */}
-      <section className="bg-gray-50 py-20">
+      {/* <section className="bg-gray-50 py-20">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10">
-          {/* LEFT COLUMN */}
+         
           <div>
             <p className="text-xs uppercase text-gray-400 mb-4">
               {testimonials?.sectionLabel}
@@ -158,13 +158,13 @@ export default function EcosystemAndTestimonials({data}) {
             </button>
           </div>
 
-          {/* RIGHT COLUMN */}
+      
           <div className="space-y-4">
             {testimonials?.rightColumn.map((t, i) => (
               <TestimonialCard key={i} t={t} seed={i + 2} />
             ))}
 
-            {/* CTA */}
+         
             <div className="rounded-xl border border-gray-200 bg-white p-5">
               <div className="flex -space-x-2 mb-4">
                 {(testimonials?.cta.avatarColors || [
@@ -193,7 +193,7 @@ export default function EcosystemAndTestimonials({data}) {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
