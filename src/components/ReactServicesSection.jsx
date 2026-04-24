@@ -46,7 +46,7 @@ export default function ReactServicesSection({ data }) {
   if (!data) return null;
 
   const { servicesSection, testimonial, teamSection, caseStudies, faq } = data;
-  const displayName = data.title
+  const displayName = data?.title
   .replace(/(development services|app development services|services)/gi, "")
   .trim();
   return (
