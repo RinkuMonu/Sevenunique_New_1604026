@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CTABanner() {
   return (
@@ -29,12 +30,15 @@ export default function CTABanner() {
           </div>
 
           {/* BUTTON */}
-          <div className="pr-[30px]">
-            <button className="bg-black text-white px-6 py-3 rounded-xl flex items-center gap-2 text-[15px] font-medium hover:bg-[#111] transition">
-              Schedule a Call
-              <span className="text-lg">→</span>
-            </button>
-          </div>
+        <div className="pr-[30px]">
+  <Link
+    href="/schedule-a-call-page"
+    className="bg-black text-white px-6 py-3 rounded-xl flex items-center gap-2 text-[15px] font-medium hover:bg-[#111] transition"
+  >
+    Schedule a Call
+    <span className="text-lg">→</span>
+  </Link>
+</div>
 
         </div>
 
