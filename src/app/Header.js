@@ -8,8 +8,7 @@ const menuItems = [
   { name: "Services", path: "/services" },
   { name: "Technologies", path: "/technologies" },
   { name: "Industries", path: "/industries" },
-  { name: "About", path: "/about" },
-];
+{ name: "About", path: "/about-us" }];
 
 const servicesCols = [
   {
