@@ -24,8 +24,14 @@ export default function ClientShowcase() {
   return (
     <section className="bg-[#f5f5f6] py-24 px-6 md:px-12">
       
-      {/* ✅ Slight reduction (1280 → 1180) */}
-      <div className="max-w-[1180px] mx-auto grid md:grid-cols-2 gap-14 items-center">
+      {/* ✅ RESPONSIVE WIDTH CONTROL */}
+      <div className="
+        mx-auto 
+        max-w-[1000px]     /* laptop tighter */
+        lg:max-w-[1100px] /* bigger screens */
+        xl:max-w-[1180px] /* full desktop */
+        grid md:grid-cols-2 gap-14 items-center
+      ">
 
         {/* LEFT CONTENT */}
         <div>

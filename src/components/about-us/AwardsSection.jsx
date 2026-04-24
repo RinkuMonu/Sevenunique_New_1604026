@@ -10,7 +10,7 @@ export default function AwardsSection() {
 
         {/* LEFT CONTENT */}
         <div>
-          <h2 className="text-[32px] md:text-[40px] font-semibold text-[#111] leading-tight mb-8 max-w-md">
+          <h2 className="text-[28px] md:text-[36px] lg:text-[40px] font-semibold text-[#111] leading-tight mb-8 max-w-md">
             We've received many awards and accolades...
           </h2>
 
@@ -20,35 +20,20 @@ export default function AwardsSection() {
           </button>
         </div>
 
-        {/* RIGHT SIDE — SHIFTED RIGHT */}
-        <div className="flex gap-6 ml-16 md:ml-28">
+        {/* RIGHT SIDE */}
+        <div className="flex gap-4 md:gap-6 lg:ml-20">
 
-          {/* LEFT COLUMN (3 cards) */}
-          <div className="flex flex-col gap-6 mt-[-40px]">
-            <Card
-              logo="/logos/inc1.png"
-              text="America's fastest-growing companies 2025"
-            />
-            <Card
-              logo="/logos/cio.png"
-              text="Enterprise excellence and IT Innovation 2025"
-            />
-            <Card
-              logo="/logos/cw.png"
-              text="Computerworld's Best Places to Work in IT 2026"
-            />
+          {/* LEFT COLUMN */}
+          <div className="flex flex-col gap-4 md:gap-6 md:-mt-6 lg:-mt-10">
+            <Card logo="/logos/inc1.png" text="America's fastest-growing companies 2025" />
+            <Card logo="/logos/cio.png" text="Enterprise excellence and IT Innovation 2025" />
+            <Card logo="/logos/cw.png" text="Computerworld's Best Places to Work in IT 2026" />
           </div>
 
-          {/* RIGHT COLUMN (2 cards) */}
-          <div className="flex flex-col gap-6 mt-10">
-            <Card
-              logo="/logos/b.png"
-              text="VentureBeat's Women in AI Awards - Finalist 2025"
-            />
-            <Card
-              logo="/logos/financial.png"
-              text="America's Fastest-growing Companies list 2025"
-            />
+          {/* RIGHT COLUMN */}
+          <div className="flex flex-col gap-4 md:gap-6 mt-4 md:mt-6 lg:mt-10">
+            <Card logo="/logos/b.png" text="VentureBeat's Women in AI Awards - Finalist 2025" />
+            <Card logo="/logos/financial.png" text="America's Fastest-growing Companies list 2025" />
           </div>
 
         </div>
@@ -58,12 +43,18 @@ export default function AwardsSection() {
   );
 }
 
-/* 🔥 Reusable Card */
+/* ✅ Responsive Card */
 function Card({ logo, text }) {
   return (
-    <div className="bg-white rounded-2xl shadow-sm p-6 flex flex-col items-center justify-center text-center w-[180px] h-[180px] hover:shadow-md transition">
-      
-      <div className="relative w-[80px] h-[50px] mb-4">
+    <div className="
+      bg-white rounded-2xl shadow-sm 
+      p-4 md:p-5 
+      flex flex-col items-center justify-center text-center 
+      w-[140px] md:w-[160px] lg:w-[180px] 
+      h-[140px] md:h-[160px] lg:h-[180px] 
+      hover:shadow-md transition
+    ">
+      <div className="relative w-[60px] md:w-[70px] lg:w-[80px] h-[40px] mb-3 md:mb-4">
         <Image
           src={logo}
           alt="award"
@@ -72,10 +63,9 @@ function Card({ logo, text }) {
         />
       </div>
 
-      <p className="text-[13px] text-[#333] leading-5">
+      <p className="text-[11px] md:text-[12px] lg:text-[13px] text-[#333] leading-4 md:leading-5">
         {text}
       </p>
-
     </div>
   );
 }
