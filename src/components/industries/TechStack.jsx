@@ -3,12 +3,10 @@
 import Link from "next/link";
 
 export default function TechStack() {
-  // const row1 = ["Node.js", "Java", "React", ".NET", "Python", "C#", "Rails"];
-  // const row2 = ["Angular", "PHP", "Android", "iOS", "Golang", "Vue.js", "C++"];
 
 
   const row1 = [
-     { name: ".NET", path: "/technologies/dotnet" },
+    { name: ".NET", path: "/technologies/dotnet" },
     { name: "AWS", path: "/technologies/aws" },
     { name: "Django", path: "/technologies/django" },
     { name: "Java", path: "/technologies/java" },
@@ -19,7 +17,7 @@ export default function TechStack() {
   ];
 
   const row2 = [
-     { name: "AI", path: "/technologies/ai" },
+    { name: "AI", path: "/technologies/ai" },
     { name: "C#", path: "/technologies/csharp" },
     { name: "Golang", path: "/technologies/golang" },
     // { name: "JavaScript", path: "/technologies/javascript" },
