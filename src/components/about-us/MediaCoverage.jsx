@@ -3,23 +3,28 @@
 import { useState } from "react";
 import Image from "next/image";
 import { FaArrowRight, FaPlus, FaMinus } from "react-icons/fa";
+import Link from "next/link";
 
 const data = [
   {
     logo: "/logos/b.png",
     content: "Recognized for innovation in AI and enterprise solutions.",
+    link: "#",
   },
   {
     logo: "/logos/financial1.png",
     content: "Featured among fastest-growing global tech companies.",
+    link: "#",
   },
   {
     logo: "/logos/techcrunch1.png",
     content: "Highlighted for disruptive startup ecosystem impact.",
+    link: "#",
   },
   {
     logo: "/logos/harvard.png",
     content: "Case study on scaling global engineering teams.",
+    link: "#",
   },
 ];
 
@@ -66,19 +71,30 @@ export default function MediaCoverage() {
                   />
                 </div>
 
-                <div className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-[#f15c2d] text-white transition-transform duration-300">
+                <div className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-[#f15c2d] text-white">
                   {active === index ? <FaMinus /> : <FaPlus />}
                 </div>
               </button>
 
-              {/* SMOOTH CONTENT */}
+              {/* CONTENT */}
               <div
                 className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                  active === index ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"
+                  active === index ? "max-h-[260px] opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
                 <div className="px-5 md:px-6 pb-5 md:pb-6 text-[13px] md:text-[14px] text-gray-600">
-                  {item.content}
+                  
+                  <p className="mb-3">{item.content}</p>
+
+                  {/* ✅ READ ARTICLE LINK */}
+                  <Link
+                    href={item.link}
+                    className="inline-flex items-center gap-2 text-[#111] font-medium hover:text-[#f46b45] transition group"
+                  >
+                    Read this article
+                    <FaArrowRight className="transition-transform group-hover:translate-x-1" />
+                  </Link>
+
                 </div>
               </div>
 
