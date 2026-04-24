@@ -120,10 +120,10 @@ const aboutCols = [
     items: [
           { name: "Leadership Team", path: "/about-us/Leadership" },
       { name: "Our Tech Talent", path: "/about-us/tech-talent" },
-      { name: "Press Releases", path: "#" },
+      { name: "Press Releases", path: "/about-us/press" },
       { name: "Contact Us", path: "#" },
       { name: "FAQs", path: "#" },
-    ],
+    ],                     
   },
   {
     label: "Recognitions",

@@ -57,7 +57,7 @@ export default function ServicesPage() {
 
             {/* Heading */}
             <h1 className="text-[52px] leading-[1.1] font-semibold text-[#111827]">
-              Tap into our end-to-end <br />
+              finto our end-to-end <br />
               <span className="text-[#c2410c]">tech solutions.</span>
             </h1>
 

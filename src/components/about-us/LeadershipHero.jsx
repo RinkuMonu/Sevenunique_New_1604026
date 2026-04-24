@@ -15,7 +15,7 @@ export default function LeadershipHero() {
                 {/* Heading */}
                 <h1 className="text-[56px] leading-[64px] font-semibold text-[#1f2937]">
                     Industry-recognized. <br />
-                    Award-winning<span className="text-[#c2410c]">.</span>
+                    Award-winning<span className="text-[#f66135]">.</span>
                 </h1>
 
                 {/* Image + Quote Section */}
