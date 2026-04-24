@@ -332,7 +332,7 @@ export default function CircleLeadersSection() {
         {/* Bottom Left Link */}
         <div className="mt-12">
           <a
-            href="#"
+            href="/about-us/Leadership"
             className="inline-flex items-center text-[#1a1a1a] font-semibold border-b border-[#242323] pb-1 hover:opacity-80 transition-all"
           >
             Get to Know Our Community →

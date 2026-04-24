@@ -85,7 +85,7 @@ export function IntroducingCircles() {
             </p>
 
             <a
-              href="#"
+              href="/circle"
               className="inline-flex items-center text-gray-900 font-semibold border-b-2 border-gray-900 pb-1 hover:text-gray-700 transition-colors w-fit"
             >
               How Circles Work

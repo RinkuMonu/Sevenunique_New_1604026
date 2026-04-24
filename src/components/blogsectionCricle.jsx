@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import React, { useRef, useState, useEffect } from "react";
 
 // Reusable Blog Card Component
@@ -20,9 +21,9 @@ const BlogCard = ({ title, imageUrl, author, date }) => {
         {/* Content */}
         <div className="p-6 flex flex-col flex-grow">
           {/* Title */}
-          <h3 className="text-xl font-bold text-gray-900 mb-4 line-clamp-3 min-h-[4.5rem]">
+          <Link href="/blog" className="text-xl font-bold text-gray-900 mb-4 line-clamp-3 min-h-[4.5rem]">
             {title}
-          </h3>
+          </Link>
 
           {/* Author Section */}
           <div className="flex items-center gap-2 mt-auto">
@@ -158,7 +159,7 @@ const BlogCarouselSectionCricle = () => {
 
           {/* Right side: Link */}
           <a
-            href="#"
+            href="/blog"
             className="text-gray-800 font-semibold hover:text-gray-600 transition-colors flex items-center gap-1 group text-right"
           >
             Over 1,100 Articles on Technology and Talent →

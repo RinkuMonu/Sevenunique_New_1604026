@@ -41,12 +41,12 @@ export default function OneTeamSection() {
           </div>
 
           {/* LINK */}
-          <a
+          {/* <a
             href="#"
             className="inline-flex items-center gap-2 border-b-2 border-black w-fit pb-1 font-medium text-black hover:opacity-70 transition"
           >
             Learn more →
-          </a>
+          </a> */}
         </div>
 
         {/* RIGHT IMAGES */}

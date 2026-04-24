@@ -148,25 +148,25 @@ const aboutCols = [
       { name: "Leadership Team", path: "/about-us/Leadership" },
       { name: "Our Tech Talent", path: "/about-us/tech-talent" },
       { name: "Press Releases", path: "#" },
-      { name: "Contact Us", path: "#" },
-      { name: "FAQs", path: "#" },
+      { name: "Contact Us", path: "/contact-us" },
+      { name: "FAQs", path: "/faq" },
     ],
   },
   {
     label: "Recognitions",
     items: [
-      { name: "Awards", path: "#" },
-      { name: "Certifications", path: "#" },
+      { name: "Awards", path: "/awards" },
+      { name: "Certifications", path: "/certifications" },
     ],
   },
   {
     label: "Careers",
     items: [
-      { name: "Working at BairesDev", path: "#" },
-      { name: "Job Opportunities", path: "#" },
-      { name: "Talent Referrals", path: "#" },
-      { name: "Our Circles Program", path: "#" },
-      { name: "Company Culture", path: "#" },
+      { name: "Working at BairesDev", path: "/Working-at-BairesDev" },
+      { name: "Job Opportunities", path: "/jobOp" },
+      { name: "Talent Referrals", path: "/ReferralPageAbout" },
+      { name: "Our Circles Program", path: "/circle" },
+      { name: "Company Culture", path: "/culture" },
     ],
   },
 ];
@@ -358,7 +358,7 @@ export default function Header() {
                         </div>
                         <div className="mt-9">
                           <Link
-                            href="#"
+                            href="/services"
                             className="group inline-flex items-center gap-2 text-[12px] font-medium text-[#111] hover:text-[#f46b45]"
                           >
                             All Services
@@ -404,7 +404,7 @@ export default function Header() {
                         </div>
                         <div className="mt-9">
                           <Link
-                            href="#"
+                            href="/technologies"
                             className="group inline-flex items-center gap-2 text-[12px] font-medium text-[#111] hover:text-[#f46b45]"
                           >
                             All Technologies
@@ -475,9 +475,9 @@ export default function Header() {
                     <div className="flex">
                       <LeftPanel
                         title="About"
-                        subtitle="Since 2009, we've built software for companies of all types, from startups to Fortune 500 giants."
+                        subtitle="Since 2023, we've built software for companies of all types, from startups to Fortune 500 giants."
                         links={[]}
-                        brand="Our CEO, speaking at the World Economic Forum at Davos 2025. Read more"
+                        // brand="Our CEO, speaking at the World Economic Forum at Davos 2025. Read more"
                         blurb=""
                       />
                       <div className="mx-auto flex-1 max-w-[1280px] px-12 py-10">

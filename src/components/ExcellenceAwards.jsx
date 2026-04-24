@@ -465,7 +465,7 @@ export default function ExcellenceAwards() {
             {/* CTA link */}
             <div className="border-b border-gray-800 pb-1 inline-block">
               <a
-                href="#"
+                href="/awards"
                 className="flex items-center gap-2 font-bold text-[1rem] text-gray-900 hover:text-orange-500 transition-colors"
               >
                 Explore Our 130+ Awards

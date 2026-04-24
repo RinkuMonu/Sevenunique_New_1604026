@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function BaiPortfolioSection() {
   const items = [
@@ -71,9 +72,9 @@ export default function BaiPortfolioSection() {
 
           {/* BUTTON */}
           <div className="mt-10">
-            <button className="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition">
+            <Link href="/schedule-a-call-page" className="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition">
               More Previous Projects
-            </button>
+            </Link>
           </div>
         </div>
       </div>

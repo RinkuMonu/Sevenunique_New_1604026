@@ -47,6 +47,7 @@ export default function WhyBairesdevSection() {
             height={600}
             className="object-cover "
             priority
+            alt="img"
           />
         </div>
         <div className="rounded-lg aspect-video flex items-center justify-center">

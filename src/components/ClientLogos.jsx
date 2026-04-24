@@ -23,17 +23,17 @@ export default function ClientLogos() {
           
           <div className="flex flex-col items-center gap-0">
             <Image src="/logos/google-new.png" alt="Google" width={130} height={60} className="grayscale opacity-70"/>
-            <Link href="#" className="text-xs text-[#f4622a]">Read case study</Link>
+            <Link href="/google-case-study" className="text-xs text-[#f4622a]">Read case study</Link>
           </div>
 
           <div className="flex flex-col items-center gap-0">
             <Image src="/logos/nextroll-new.png" alt="NextRoll" width={120} height={60} className="grayscale opacity-70"/>
-            <Link href="#" className="text-xs text-[#f4622a]">Watch testimonial ▶</Link>
+            <Link href="/google-case-stud" className="text-xs text-[#f4622a]">Watch testimonial ▶</Link>
           </div>
 
           <div className="flex flex-col items-center gap-0">
             <Image src="/logos/pintrest.png" alt="Pinterest" width={120} height={60} className="grayscale opacity-70"/>
-            <Link href="#" className="text-xs text-[#f4622a]">Read case study</Link>
+            <Link href="/google-case-stud" className="text-xs text-[#f4622a]">Read case study</Link>
           </div>
 
         </div>

@@ -20,18 +20,18 @@ export default function BaiContactSection() {
           </p>
 
           <p>
-            Contact us via <br />
+            {/* Contact us via <br />
             Live Chat on our{" "}
             <a href="#" className="underline">
               Applications Site
             </a>{" "}
-            <br />
+            <br /> */}
             Email:{" "}
             <a
-              href="mailto:recruiting.process@bairesdev.com"
+              // href="mailto:recruiting.process@bairesdev.com"
               className="underline"
             >
-              recruiting.process@bairesdev.com
+              info@7uniqune.in
             </a>{" "}
             <br />
             We offer support in English, Spanish, and Portuguese.

@@ -13,6 +13,7 @@ import {
 import Image from "next/image";
 import { BiLeftArrow } from "react-icons/bi";
 import { FaAngleRight } from "react-icons/fa";
+import Link from "next/link";
 
 const beliefs = [
   {
@@ -424,8 +425,11 @@ export default function CulturePage() {
                   </span>
                 </p>
 
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition-all duration-300">
-                  Apply Now
+                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3  rounded-xl transition-all duration-300">
+                  <Link href="/schedule-a-call-page" className="py-3">
+                    {" "}
+                    Apply now{" "}
+                  </Link>
                 </button>
               </div>
             </div>

@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function Criclegrowth() {
   return (
     <section className="w-full relative -mt-20">
@@ -29,12 +31,12 @@ export default function Criclegrowth() {
 
         {/* BUTTONS */}
         <div className="flex flex-col md:flex-row items-center gap-6">
-          <button className="bg-blue-600 hover:bg-blue-700 px-5 py-3 rounded-lg text-white font-semibold transition">
+          <Link href="circle" className="bg-blue-600 hover:bg-blue-700 px-5 py-3 rounded-lg text-white font-semibold transition">
             Join us Inside Circles
-          </button>
+          </Link>
 
           <a
-            href="#"
+            href="/jobOp"
             className="text-white font-semibold border-b-2 border-white pb-1 flex items-center gap-2 hover:opacity-80"
           >
             Hire Our Experts →

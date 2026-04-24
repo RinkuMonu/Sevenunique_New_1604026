@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ExperiencesSection() {
   return (
@@ -43,9 +44,9 @@ export default function ExperiencesSection() {
             </div>
 
             {/* BUTTON */}
-            <button className="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition w-fit">
+            <Link href="/schedule-a-call-page" className="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition w-fit">
               Send an Open Application
-            </button>
+            </Link>
           </div>
         </div>
       </div>

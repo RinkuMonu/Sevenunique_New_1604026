@@ -7,6 +7,7 @@ import { FaAngleRight } from "react-icons/fa";
 import { RiMoneyRupeeCircleLine } from "react-icons/ri";
 import TestimonialSectionInAboutPage from "@/components/testimonialInaboutPage";
 import Criclegrowth from "@/components/criclegrowth";
+import Link from "next/link";
 
 export default function ReferralPageAbout() {
   const images = [
@@ -111,8 +112,13 @@ export default function ReferralPageAbout() {
               BairesDev® or just an admirer of our company.
             </p>
 
-            <button className="flex items-center gap-2 bg-[#ff6a3d] hover:bg-[#e55a2e] text-white px-6 py-3 rounded-lg font-medium transition">
-              Get Started →
+            <button className="flex items-center gap-2 bg-[#ff6a3d] hover:bg-[#e55a2e] text-white rounded-lg font-medium transition">
+              <Link
+                href="/schedule-a-call-page"
+                className="cursor-pointer  px-6 py-3"
+              >
+                Get Started →
+              </Link>
             </button>
           </div>
 
@@ -224,7 +230,12 @@ export default function ReferralPageAbout() {
                 <div className="-z-30 absolute left-6 lg:left-8 top-8 w-16 border-t-2 border-dashed border-gray-300"></div>
 
                 <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium z-50">
-                  Submit your Referral
+                  <Link
+                    href="/schedule-a-call-page"
+                    className="cursor-pointer  px-6 py-3"
+                  >
+                    Submit your Referral
+                  </Link>
                 </button>
               </div>
             </div>

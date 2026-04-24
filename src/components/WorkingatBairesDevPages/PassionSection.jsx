@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function PassionSection() {
   const items = [
@@ -70,6 +71,7 @@ export default function PassionSection() {
                     src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/joinus_what-drives-2_jocucg?_a=BAVAfVDW0"
                     fill
                     className="object-cover"
+                    alt="img"
                   />
                 </span>
               </div>
@@ -79,6 +81,7 @@ export default function PassionSection() {
                   <Image
                     src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/joinus_what-drives-2_jocucg?_a=BAVAfVDW0"
                     fill
+                    alt="img"
                     className="object-cover"
                   />
                 </span>
@@ -92,6 +95,7 @@ export default function PassionSection() {
                   <Image
                     src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/joinus_what-drives-1_wfqly4?_a=BAVAfVDW00"
                     fill
+                    alt="img"
                     className="object-cover"
                   />
                 </span>
@@ -102,6 +106,7 @@ export default function PassionSection() {
                   <Image
                     src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/joinus_what-drives-2_jocucg?_a=BAVAfVDW0"
                     fill
+                    alt="img"
                     className="object-cover"
                   />
                 </span>
@@ -115,6 +120,7 @@ export default function PassionSection() {
                   <Image
                     src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/joinus_what-drives-1_wfqly4?_a=BAVAfVDW00"
                     fill
+                    alt="img"
                     className="object-cover"
                   />
                 </span>
@@ -125,6 +131,7 @@ export default function PassionSection() {
                   <Image
                     src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/joinus_what-drives-2_jocucg?_a=BAVAfVDW0"
                     fill
+                    alt="img"
                     className="object-cover"
                   />
                 </span>
@@ -137,9 +144,9 @@ export default function PassionSection() {
 
         {/* BUTTON */}
         <div className="mt-16">
-          <button className="bg-[#16A87A] hover:bg-[#16A87A] text-white px-6 py-3 rounded-lg font-semibold tracking-wide">
+          <Link href="jobOp" className="bg-[#16A87A] hover:bg-[#16A87A] text-white px-6 py-3 rounded-lg font-semibold tracking-wide">
             Explore Careers
-          </button>
+          </Link>
         </div>
       </div>
     </section>

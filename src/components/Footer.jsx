@@ -12,29 +12,28 @@ import { FiMail, FiPhone } from "react-icons/fi";
 
 export default function Footer() {
   const discoverLinks = [
-    "About Us",
-    "Methodologies",
-    "Technologies",
-    "Certifications",
-    "Software Development Services",
-    "Software Development Solutions",
-    "Dedicated Software Development Teams",
-    "Staff Augmentation",
-    "Software Development Outsourcing",
-    "Diversity",
-    "Social Responsibility",
-    "Senior Advisor Program",
+    // { name: "About Us", to: "about-uss" },
+    { name: "Technologies", to: "/technologies" },
+    { name: "Certifications", to: "/certifications" },
+    { name: "Software Development Services", to: "/services" },
+    { name: "Working at sevenunique", to: "/Working-at-BairesDev" },
+    { name: "Backend Development", to: "/services/backend-development" },
+    { name: "Business Intelligence", to: "/services/backend-development" },
+    { name: "Finance", to: "/industries/insurance" },
+    { name: "Travel and Hospitality", to: "/industries/travel-hospitality" },
+    { name: "Company Culture", to: "/culture" },
+    { name: "Job Opportunities", to: "jobOp" },
   ];
 
   const resourceLinks = [
-    "Case Studies",
-    "AI Learning Hub",
-    "Blog",
-    "Press",
-    "Industries Insights",
-    "Technology Resource Center",
-    "Client Referral Program",
-    "Fellows Program",
+    { name: "Case Studies", to: "/google-case-study" },
+    { name: "AI Development", to: "/services/ai-development" },
+    { name: "Blog", to: "/blog" },
+    { name: "About us", to: "/" },
+    { name: "Industries Insights", to: "/industries" },
+    { name: "Technology Resource Center", to: "/technologies" },
+    { name: "Client Referral Program", to: "/ReferralPageAbout" },
+    { name: "Our Work", to: "/our-work-page" },
   ];
 
   return (
@@ -59,10 +58,10 @@ export default function Footer() {
                 Discover Sevenunique.
               </h3>
               <ul className="space-y-2 text-sm leading-5 text-[#202124]">
-                {discoverLinks.map((item) => (
-                  <li key={item}>
-                    <Link href="#" className="hover:underline">
-                      {item}
+                {discoverLinks.map((item, i) => (
+                  <li key={i}>
+                    <Link href={item.to || "/"} className="hover:underline">
+                      {item.name || ""}
                     </Link>
                   </li>
                 ))}
@@ -74,10 +73,10 @@ export default function Footer() {
                 Resources.
               </h3>
               <ul className="space-y-2 text-sm leading-5 text-[#202124]">
-                {resourceLinks.map((item) => (
-                  <li key={item}>
-                    <Link href="#" className="hover:underline">
-                      {item}
+                {resourceLinks.map((item, i) => (
+                  <li key={i}>
+                    <Link href={item.to} className="hover:underline">
+                      {item.name}
                     </Link>
                   </li>
                 ))}
@@ -90,12 +89,12 @@ export default function Footer() {
               </h3>
               <ul className="space-y-2 text-sm leading-5 text-[#202124]">
                 <li>
-                  <Link href="#" className="hover:underline">
+                  <Link href="/jobOp" className="hover:underline">
                     Job Opportunities
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:underline">
+                  <Link href="/ReferralPageAbout" className="hover:underline">
                     Talent Referrals
                   </Link>
                 </li>
@@ -105,21 +104,19 @@ export default function Footer() {
 
           <div className="mt-14 text-xs text-[#202124]">
             <div className="flex flex-wrap items-center gap-2">
-              <Link href="#" className="hover:underline">
+              <Link href="/privacy-policy" className="hover:underline">
                 Privacy Policy
               </Link>
               <span>|</span>
-              <Link href="#" className="hover:underline">
+              <Link href="/termsAndCondition" className="hover:underline">
                 Terms of Service
               </Link>
               <span>|</span>
-              <Link href="#" className="hover:underline">
+              {/* <Link href="#" className="hover:underline">
                 Do Not Sell My Personal Information
-              </Link>
+              </Link> */}
             </div>
-            <p className="mt-5">
-              Sevenunique 2026. All rights reserved.
-            </p>
+            <p className="mt-5">Sevenunique 2026. All rights reserved.</p>
           </div>
         </div>
 
@@ -176,28 +173,28 @@ export default function Footer() {
                 aria-label="LinkedIn"
                 className="hover:opacity-70"
               >
-                <FaLinkedinIn className="hover:text-orange-600 "/>
+                <FaLinkedinIn className="hover:text-orange-600 " />
               </Link>
               <Link
                 href="https://www.facebook.com/people/SevenUnique-Tech-Solutions-Pvtltd/61556669918427/"
                 aria-label="Facebook"
                 className="hover:opacity-70"
               >
-                <FaFacebookF className="hover:text-orange-600 "/>
+                <FaFacebookF className="hover:text-orange-600 " />
               </Link>
               <Link
                 href="https://x.com/Sevenuniqu42041"
                 aria-label="X"
                 className="hover:opacity-70"
               >
-                <FaXTwitter className="hover:text-orange-600 "/>
+                <FaXTwitter className="hover:text-orange-600 " />
               </Link>
               <Link
                 href="https://www.linkedin.com/in/sevenuniquetechsolution/"
                 aria-label="Instagram"
                 className="hover:opacity-70"
               >
-                <FaInstagram className="hover:text-orange-600 "/>
+                <FaInstagram className="hover:text-orange-600 " />
               </Link>
               {/* <Link href="#" aria-label="Youtube" className="hover:opacity-70">
                 <FaYoutube />

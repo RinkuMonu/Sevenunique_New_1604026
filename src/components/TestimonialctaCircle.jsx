@@ -1,6 +1,8 @@
 // TestimonialCTA.jsx — Next.js + Tailwind CSS (JSX)
 "use client";
 
+import Link from "next/link";
+
 const avatars = [
   "https://randomuser.me/api/portraits/men/32.jpg",
   "https://randomuser.me/api/portraits/men/54.jpg",
@@ -79,17 +81,17 @@ export default function TestimonialCTA() {
             </p>
 
             {/* Primary CTA button */}
-            <button
+            <Link href="/schedule-a-call-page"
               className="w-full text-white font-bold text-[0.92rem] py-4 px-8 rounded-lg transition-opacity hover:opacity-90"
               style={{ backgroundColor: "#22a86e" }}
             >
               Be the Best. Join Circles.
-            </button>
+            </Link>
 
             {/* Secondary text link */}
             <div className="border-b border-gray-400 pb-1">
               <a
-                href="#"
+                href="/jobOp"
                 className="flex items-center gap-2 text-white font-semibold text-[0.88rem] hover:text-gray-300 transition-colors"
               >
                 Hire Top 1% Tech Talent{" "}

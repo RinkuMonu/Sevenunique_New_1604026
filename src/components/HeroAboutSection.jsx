@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Link from "next/link";
 
 const OrbitAnimation = dynamic(() => import("./OrbitAnimation"), {
   ssr: false,
@@ -32,12 +33,12 @@ export const HeroAboutSection = () => {
 
           {/* CTA buttons */}
           <div className="flex flex-wrap items-center gap-4">
-            <button className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-bold text-[0.95rem] tracking-wide px-7 py-4 rounded-lg transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2">
+            <Link href="/schedule-a-call-page" className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-bold text-[0.95rem] tracking-wide px-7 py-4 rounded-lg transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2">
               Upskill Inside Circles
-            </button>
-            <button className="border-2 border-gray-900 hover:bg-gray-50 active:bg-gray-100 text-gray-900 font-bold text-[0.95rem] tracking-wide px-7 py-4 rounded-lg transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2">
+            </Link>
+            <Link href="/jobOp" className="border-2 border-gray-900 hover:bg-gray-50 active:bg-gray-100 text-gray-900 font-bold text-[0.95rem] tracking-wide px-7 py-4 rounded-lg transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2">
               Hire Our Top Talent
-            </button>
+            </Link>
           </div>
         </div>
 
