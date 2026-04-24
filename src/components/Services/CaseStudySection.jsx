@@ -38,11 +38,24 @@ function CaseStudyCard({ card }) {
               {card.description}
             </p>
           )}
-
+          {/* TECHNOLOGIES */}
+          {card.technologies && (
+            <div className="mt-24 flex flex-wrap gap-3 opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 ease-in-out">
+              {card.technologies.slice(0, 6).map((tech) => (
+                <span
+                  key={tech}
+                  className="px-4 py-2 text-[12px] rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
 
+
       </div>
-    </div>
+    </div >
   );
 
   if (!card.href) return content;
@@ -78,6 +91,8 @@ export default function CaseStudySection({ caseStudies }) {
             {caseStudies.description}
           </p>
         )}
+
+
 
         {/* CARDS */}
         <div className="mt-12 grid gap-8 lg:grid-cols-3">

@@ -11,11 +11,11 @@ const outfit = Outfit({
 });
 
 const people = [
-  { img: "/team/p1.png", role: "Software developers", bg: "#ff5a2f", shape: "semi-circle" },
-  { img: "/team/p2.png", role: "QA engineers", bg: "#6c9bd2", shape: "polygon-square" },
-  { img: "/team/p3.png", role: "UX designers", bg: "#f49b7d", shape: "circle" },
-  { img: "/team/p4.png", role: "Data scientists", bg: "#f4a300", shape: "triangle-down" },
-  { img: "/team/p5.png", role: "Project managers", bg: "#7dc3b5", shape: "semi-circle" },
+  { img: "/team/p1.png", role: "Founder & Promoter • CEO", bg: "#ff5a2f", shape: "semi-circle" },
+  { img: "/team/p2.png", role: "Company Secretary", bg: "#6c9bd2", shape: "polygon-square" },
+  { img: "/team/p4.png", role: "Vice President", bg: "#f4a300", shape: "triangle-down" },
+  { img: "/team/p3.png", role: "Sr. Full Stack Developer", bg: "#f49b7d", shape: "circle" },
+  { img: "/team/p5.png", role: "Tech Manager", bg: "#7dc3b5", shape: "semi-circle" },
 ];
 
 export default function TeamMorphSection() {
@@ -93,7 +93,7 @@ export default function TeamMorphSection() {
                 }`}
               >
                 <p className="text-[14px] sm:text-[16px] font-medium text-[#666] text-center whitespace-nowrap">
-                  {p.role.split(' ')[0]}
+                  {p.role}
                 </p>
               </div>
             </div>
@@ -110,7 +110,7 @@ export default function TeamMorphSection() {
           </h2>
           
           <Link
-            href="#"
+            href="/schedule-a-call-page"
             className="inline-block bg-[#10a37f] hover:bg-[#0e8c6d] text-white font-medium px-10 py-4 rounded-[10px] text-[18px] transition-all duration-200 active:scale-95 shadow-sm"
           >
             Schedule a Call

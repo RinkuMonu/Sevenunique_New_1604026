@@ -15,27 +15,29 @@ export default function TestimonialHighlightSection({ testimonial }) {
             </div>
 
             <p className="max-w-xl text-[28px] font-medium leading-[1.4] text-black">
-              {testimonial.quote}
+              {testimonial?.quote}
             </p>
           </div>
 
           <div className="flex justify-end">
-            <div className="flex w-full max-w-[420px] items-center gap-6 rounded-xl bg-white p-6 shadow-sm">
+            <div className="flex w-full max-w-105 items-center gap-6 rounded-xl bg-white p-6 shadow-sm">
               <div>
                 <h4 className="text-[16px] font-semibold text-black">
-                  {testimonial.name}
+                  {testimonial?.name}
                 </h4>
                 <p className="mb-3 text-[13px] text-gray-500">
-                  {testimonial.role}
+                  {testimonial?.role}
                 </p>
 
-                <Image
-                  src={testimonial.companyLogo}
-                  alt={testimonial.companyName}
-                  width={90}
-                  height={30}
-                  className="object-contain"
-                />
+                {testimonial?.companyLogo && (
+                  <Image
+                    src={testimonial.companyLogo}
+                    alt={testimonial?.companyName || "company logo"}
+                    width={90}
+                    height={30}
+                    className="object-contain"
+                  />
+                )}
               </div>
 
               <div className="relative h-[140px] w-[120px]">
@@ -52,7 +54,7 @@ export default function TestimonialHighlightSection({ testimonial }) {
 
         <div className="mt-6 flex justify-end pr-2">
           <button className="flex items-center gap-2 text-[14px] font-medium text-black transition hover:text-[#f4622a]">
-            Watch {testimonial.name}
+            Watch {testimonial?.name}
             {"'s "}
             Testimonial
             <span className="text-lg text-[#f4622a]">{">"}</span>
@@ -62,7 +64,7 @@ export default function TestimonialHighlightSection({ testimonial }) {
         <div className="my-12 border-t border-gray-300"></div>
 
         <p className="mx-auto max-w-3xl text-center text-[15px] leading-[1.7] text-gray-600">
-          {testimonial.summary}
+          {testimonial?.summary}
         </p>
       </div>
     </section>

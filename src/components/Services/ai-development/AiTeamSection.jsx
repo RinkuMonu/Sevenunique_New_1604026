@@ -38,8 +38,9 @@ const tabs = [
   },
 ];
 
-export default function AiTeamSection() {
+export default function AiTeamSection({ teamSection }) {
   const [activeTab, setActiveTab] = useState(1);
+  const sectionTabs = teamSection?.tabs || tabs;
 
   return (
     <section className="bg-[#f5f5f5] py-20 px-6">
@@ -50,7 +51,7 @@ export default function AiTeamSection() {
 
           {/* TOP SMALL TEXT + AVATARS */}
           <p className="mb-4 text-md font-bold tracking-widest text-black">
-            Our AI development team
+            {teamSection?.eyebrow || "Our AI development team"}
           </p>
 
           <div className="mb-6 flex flex-wrap items-center gap-4">
@@ -73,27 +74,30 @@ export default function AiTeamSection() {
             </div>
 
             <div className="text-sm text-gray-600">
-              <p>Backed by</p>
-              <p className="font-semibold text-black">4000+ devs</p>
+              <p>{teamSection?.supporterLabel || "Backed by"}</p>
+              <p className="font-semibold text-black">
+                {teamSection?.supporterValue || "4000+ devs"}
+              </p>
             </div>
           </div>
 
           {/* HEADING */}
           <h2 className="text-4xl font-semibold leading-tight text-black mb-4">
-            Why tech leaders choose our AI development teams:
+            {teamSection?.heading ||
+              "Why tech leaders choose our AI development teams:"}
           </h2>
 
           {/* DESCRIPTION */}
           <p className="text-black leading-relaxed mb-8">
-            We help organizations move from experimentation to execution,
-            transforming AI prototypes into production-ready solutions. Backed by
-            deep expertise, our teams deliver enterprise-grade solutions that
-            integrate with your existing systems.
+            {teamSection?.description ||
+              "We help organizations move from experimentation to execution, transforming AI prototypes into production-ready solutions. Backed by deep expertise, our teams deliver enterprise-grade solutions that integrate with your existing systems."}
           </p>
 
           {/* BUTTON */}
           <button className="bg-[#128662] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#127455] transition cursor-pointer">
-            <span className="font-bold text-[20px]">Speak With Our Team</span>
+            <span className="font-bold text-[20px]">
+              {teamSection?.buttonLabel || "Speak With Our Team"}
+            </span>
           </button>
         </div>
 
@@ -102,25 +106,25 @@ export default function AiTeamSection() {
 
           {/* TABS */}
           <div className="mb-6 flex gap-4">
-            {tabs.map((tab) => (
+            {sectionTabs.map((tab, index) => (
               <div
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
+                key={tab.id || tab.title}
+                onClick={() => setActiveTab(tab.id || index + 1)}
                 className={`cursor-pointer border rounded-xl p-5 w-full transition-all duration-300
                   ${
-                    activeTab === tab.id
+                    activeTab === (tab.id || index + 1)
                       ? "border-orange-500"
                       : "border-gray-300 hover:border-orange-400"
                   }`}
               >
                 {(() => {
-                  const Icon = tab.icon;
+                 const Icon = tab.icon || MdOutlineVerified; // fallback icon
 
-                  return (
-                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#f5f6f7]">
-                      <Icon className="h-6 w-6 text-orange-500" />
-                    </div>
-                  );
+return (
+  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#f5f6f7]">
+    <Icon className="h-6 w-6 text-orange-500" />
+  </div>
+);
                 })()}
                 <p className="font-medium text-black text-sm leading-snug">
                   {tab.title}
@@ -131,7 +135,8 @@ export default function AiTeamSection() {
 
           {/* CONTENT BOX */}
           <div className="border border-orange-500 rounded-xl p-6 text-black leading-relaxed shadow-sm">
-            {tabs.find((tab) => tab.id === activeTab)?.content}
+            {sectionTabs.find((tab, index) => (tab.id || index + 1) === activeTab)
+              ?.content}
           </div>
         </div>
       </div>

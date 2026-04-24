@@ -15,14 +15,7 @@ const servicesCols = [
   {
     label: "Top Services",
     items: [
-  { name: "AI Development", link: "/services/ai-development" },
-    { name: "Back-end Development", link: "/services/backend-development" },
-      "CMS Development",
-      "Cryptocurrency & Blockchain",
-      "Front-end Development",
-      "Machine Learning",
-      "QA Testing & Automation",
-      "UX/UI Design",
+
       { name: "AI Development", link: "/services/ai-development" },
       { name: "Back-end Development", link: "/services/backend-development" },
       { name: "CMS Development", link: "/services/cms-development" },
@@ -36,27 +29,27 @@ const servicesCols = [
   {
     label: "",
     items: [
-      "Android App Development",
-      "Business Intelligence",
-      "Data Engineering",
-      "eCommerce Development",
-      "iOS App Development",
-      "Mobile App Development",
-      "SaaS Development",
-      "Web Development",
+      { name: "Android App Development", link: "/services/android-app-development" },
+      { name: "Business Intelligence", link: "/services/business-intelligence" },
+      { name: "Data Engineering", link: "/services/data-engineering" },
+      { name: "eCommerce Development", link: "/services/ecommerce-development" },
+      { name: "iOS App Development", link: "/services/ios-app-development" },
+      { name: "Mobile App Development", link: "/services/mobile-app-development" },
+      { name: "SaaS Development", link: "/services/saas-development" },
+      { name: "Web Development", link: "/services/web-development" },
     ],
   },
   {
     label: "Enterprise Focused",
     items: [
-      "Backup Solutions",
-      "Big Data",
-      "Cloud Applications",
-      "CRM Systems",
-      "Cybersecurity",
-      "DevOps",
-      "Digital Transformation",
-      "ERP Development",
+      { name: "Backup Solutions", link: "/services/backup-solutions" },
+      { name: "Big Data", link: "/services/big-data" },
+      { name: "Cloud Applications", link: "/services/cloud-applications" },
+      { name: "CRM Systems", link: "/services/crm-systems" },
+      { name: "Cybersecurity", link: "/services/cybersecurity" },
+      { name: "DevOps", link: "/services/devops" },
+      { name: "Digital Transformation", link: "/services/digital-transformation" },
+      { name: "ERP Development", link: "/services/erp-development" },
     ],
   },
 ];
@@ -125,25 +118,28 @@ const aboutCols = [
   {
     label: "Inside BairesDev",
     items: [
-      "Our Leadership Team",
-      "Our Tech Talent",
-      "Press Releases",
-      "Contact Us",
-      "FAQs",
+          { name: "Leadership Team", path: "/about-us/Leadership" },
+      { name: "Our Tech Talent", path: "/about-us/tech-talent" },
+      { name: "Press Releases", path: "#" },
+      { name: "Contact Us", path: "#" },
+      { name: "FAQs", path: "#" },
     ],
   },
   {
     label: "Recognitions",
-    items: ["Awards", "Certifications"],
+    items: [
+      { name: "Awards", path: "#" },
+      { name: "Certifications", path: "#" },
+    ],
   },
   {
     label: "Careers",
     items: [
-      "Working at BairesDev",
-      "Job Opportunities",
-      "Talent Referrals",
-      "Our Circles Program",
-      "Company Culture",
+      { name: "Working at BairesDev", path: "#" },
+      { name: "Job Opportunities", path: "#" },
+      { name: "Talent Referrals", path: "#" },
+      { name: "Our Circles Program", path: "#" },
+      { name: "Company Culture", path: "#" },
     ],
   },
 ];
@@ -276,9 +272,8 @@ export default function Header() {
               >
                 <Link href={item.path}>
                   <button
-                    className={`relative flex items-center cursor-pointer gap-1 transition-colors ${
-                      isOpen ? "text-[#f46b45]" : "hover:text-[#f46b45]"
-                    }`}
+                    className={`relative flex items-center cursor-pointer gap-1 transition-colors ${isOpen ? "text-[#f46b45]" : "hover:text-[#f46b45]"
+                      }`}
                   >
                     {item.name}
                     <ArrowDown open={isOpen} />
@@ -314,22 +309,22 @@ export default function Header() {
                                 <div className="mb-4 h-[18px]" />
                               )}
                               <ul className="space-y-3">
-                              {col.items.map((entry, index) => {
-                              const isObject = typeof entry === "object";
-                              const name = isObject ? entry.name : entry;
-                              const path = isObject ? entry.link : "#";
+                                {col.items.map((entry, index) => {
+                                  const isObject = typeof entry === "object";
+                                  const name = isObject ? entry.name : entry;
+                                  const path = isObject ? entry.link : "#";
 
-                              return (
-                                <li key={name + index}>
-                                  <Link
-                                    href={path}
-                                    className="hover:text-[#f46b45]"
-                                  >
-                                    {name}
-                                  </Link>
-                                </li>
-                              );
-                            })}
+                                  return (
+                                    <li key={name + index}>
+                                      <Link
+                                        href={path}
+                                        className="hover:text-[#f46b45]"
+                                      >
+                                        {name}
+                                      </Link>
+                                    </li>
+                                  );
+                                })}
                               </ul>
                             </div>
                           ))}
@@ -465,12 +460,12 @@ export default function Header() {
                               <DotHeading>{col.label}</DotHeading>
                               <ul className="space-y-3">
                                 {col.items.map((entry) => (
-                                  <li key={entry}>
+                                  <li key={entry.name}>
                                     <Link
-                                      href="#"
+                                      href={entry.path}
                                       className="inline-flex text-[13px] text-[#222] transition-all duration-200 hover:translate-x-1 hover:text-[#f46b45]"
                                     >
-                                      {entry}
+                                      {entry.name}
                                     </Link>
                                   </li>
                                 ))}
@@ -524,7 +519,7 @@ export default function Header() {
                 const id = item.name.toLowerCase();
                 const isActive = mobileSection === id;
                 let cols = [];
-                
+
                 if (id === "services")
                   cols = servicesCols.map((col) => col.items).flat();
                 if (id === "technologies") cols = technologiesCols.flat();
@@ -548,9 +543,9 @@ export default function Header() {
                     {isActive && (
                       <ul className="grid grid-cols-1 gap-y-2 pb-3 text-[13px] text-[#222] sm:grid-cols-2">
                         {cols.map((entry) => {
-                           const isObject = typeof entry === "object";
-                           const name = isObject ? entry.name : entry;
-                           const path = isObject ? entry.link : "#";
+                          const isObject = typeof entry === "object";
+                          const name = isObject ? entry.name : entry;
+                          const path = isObject ? entry.link : "#";
 
                           return (
                             <li key={name}>
@@ -594,7 +589,7 @@ export default function Header() {
           </div>
         </div>
       )}
-    
+
     </header>
   );
 }

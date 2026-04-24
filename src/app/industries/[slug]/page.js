@@ -13,20 +13,20 @@ import { industryData } from "@/data/industryData";
 
 
 export default async function Page({ params }) {
-  
-    const { slug } = await params;
-    console.log("slug", slug);
 
-      const data = industryData[slug];
+  const { slug } = await params;
+  console.log("slug", slug);
 
-        if (!data) return <div>Not Found</div>;
+  const data = industryData[slug];
+  console.log(data);
+
+  if (!data) return <div>Not Found</div>;
 
 
-  
   return (
     <main className="bg-white text-[#111]">
       {/* <Hero /> */}
-            <Hero data={data.hero} />
+      <Hero data={data.hero} />
 
       <Logos />
       {/* <Services /> */}
@@ -45,6 +45,7 @@ export default async function Page({ params }) {
       <CTABanner />
 
       {/* <FAQ /> */}
+
       <FAQ data={data.faq} />
 
       <Industries />

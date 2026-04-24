@@ -85,7 +85,7 @@ export default function ProcessTimelineSection() {
         {/* BUTTON (centered) */}
         <div className="mt-16 text-center">
           <Link
-            href="#"
+            href="/schedule-a-call-page"
             className="inline-block bg-[#f4622a] hover:bg-[#d94f1e] text-white px-6 py-3 rounded-md font-medium transition"
           >
             Schedule a Call
