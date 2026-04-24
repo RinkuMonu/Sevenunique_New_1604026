@@ -1,6 +1,7 @@
 // components/GlobalHero.jsx
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function GlobalHero() {
   return (
@@ -28,10 +29,12 @@ export default function GlobalHero() {
               global partner.
             </span>
           </h1>
-
-          <button className="mt-10 bg-green-600 hover:bg-green-700 transition px-6 py-3 rounded-lg text-white font-medium">
-            Book a Discovery Call
-          </button>
+<Link
+  href="/schedule-a-call-page"
+  className="mt-10 inline-block bg-green-600 hover:bg-green-700 transition px-6 py-3 rounded-lg text-white font-medium"
+>
+  Book a Discovery Call
+</Link>
         </div>
 
       </div>

@@ -8,8 +8,7 @@ const menuItems = [
   { name: "Services", path: "/services" },
   { name: "Technologies", path: "/technologies" },
   { name: "Industries", path: "/industries" },
-  { name: "About", path: "/about" },
-];
+{ name: "About", path: "/about-us" }];
 
 const servicesCols = [
   {
@@ -87,30 +86,57 @@ const technologiesCols = [
   ],
 ];
 
+// const industriesCols = [
+//   [
+//     "Agriculture",
+//     "Banking",
+//     "Finance",
+//     "Insurance",
+//     "Real Estate",
+//     "Telecommunications",
+//   ],
+//   [
+//     "Automotive",
+//     "Construction",
+//     "Startups",
+//     "Martech",
+//     "Retail",
+//     "Transportation and Logistics",
+//   ],
+//   [
+//     "Aviation",
+//     "Entertainment",
+//     "Healthcare",
+//     "Oil and Gas",
+//     "Supply Chain",
+//     "Travel and Hospitality",
+//   ],
+// ];
+
+
 const industriesCols = [
   [
-    "Agriculture",
-    "Banking",
-    "Finance",
-    "Insurance",
-    "Real Estate",
-    "Telecommunications",
+    { name: "Agriculture", slug: "agriculture" },
+    { name: "Banking", slug: "banking" },
+    { name: "Finance", slug: "finance" },
+    { name: "Insurance", slug: "insurance" },
+    { name: "Real Estate", slug: "real-estate" },
+    { name: "Telecommunications", slug: "telecommunications" },
   ],
   [
-    "Automotive",
-    "Construction",
-    "Startups",
-    "Martech",
-    "Retail",
-    "Transportation and Logistics",
+    { name: "Automotive", slug: "automotive" },
+    { name: "Construction", slug: "construction" },
+    { name: "Startups", slug: "startups" },
+    { name: "Martech", slug: "martech" },
+    { name: "Retail", slug: "retail" },
   ],
   [
-    "Aviation",
-    "Entertainment",
-    "Healthcare",
-    "Oil and Gas",
-    "Supply Chain",
-    "Travel and Hospitality",
+    { name: "Aviation", slug: "aviation" },
+    { name: "Entertainment", slug: "entertainment" },
+    { name: "Healthcare", slug: "healthcare" },
+    { name: "Oil and Gas", slug: "oil-gas" },
+    { name: "Supply Chain", slug: "supply-chain" },
+    { name: "Travel and Hospitality", slug: "travel-hospitality" },
   ],
 ];
 
@@ -118,28 +144,32 @@ const aboutCols = [
   {
     label: "Inside BairesDev",
     items: [
-          { name: "Leadership Team", path: "/about-us/Leadership" },
+      { name: "Leadership Team", path: "/about-us/Leadership" },
       { name: "Our Tech Talent", path: "/about-us/tech-talent" },
       { name: "Press Releases", path: "/about-us/press" },
       { name: "Contact Us", path: "#" },
       { name: "FAQs", path: "#" },
     ],                     
+      { name: "Press Releases", path: "#" },
+      { name: "Contact Us", path: "/contact-us" },
+      { name: "FAQs", path: "/faq" },
+    ],
   },
   {
     label: "Recognitions",
     items: [
-      { name: "Awards", path: "#" },
-      { name: "Certifications", path: "#" },
+      { name: "Awards", path: "/awards" },
+      { name: "Certifications", path: "/certifications" },
     ],
   },
   {
     label: "Careers",
     items: [
-      { name: "Working at BairesDev", path: "#" },
-      { name: "Job Opportunities", path: "#" },
-      { name: "Talent Referrals", path: "#" },
-      { name: "Our Circles Program", path: "#" },
-      { name: "Company Culture", path: "#" },
+      { name: "Working at BairesDev", path: "/Working-at-BairesDev" },
+      { name: "Job Opportunities", path: "/jobOp" },
+      { name: "Talent Referrals", path: "/ReferralPageAbout" },
+      { name: "Our Circles Program", path: "/circle" },
+      { name: "Company Culture", path: "/culture" },
     ],
   },
 ];
@@ -331,7 +361,7 @@ export default function Header() {
                         </div>
                         <div className="mt-9">
                           <Link
-                            href="#"
+                            href="/services"
                             className="group inline-flex items-center gap-2 text-[12px] font-medium text-[#111] hover:text-[#f46b45]"
                           >
                             All Services
@@ -377,7 +407,7 @@ export default function Header() {
                         </div>
                         <div className="mt-9">
                           <Link
-                            href="#"
+                            href="/technologies"
                             className="group inline-flex items-center gap-2 text-[12px] font-medium text-[#111] hover:text-[#f46b45]"
                           >
                             All Technologies
@@ -414,10 +444,10 @@ export default function Header() {
                               {col.map((entry) => (
                                 <li key={entry}>
                                   <Link
-                                    href="#"
+                                    href={`/industries/${entry.slug}`}
                                     className="inline-flex text-[13px] text-[#222] transition-all duration-200 hover:translate-x-1 hover:text-[#f46b45]"
                                   >
-                                    {entry}
+                                    {entry.name}
                                   </Link>
                                 </li>
                               ))}
@@ -426,7 +456,7 @@ export default function Header() {
                         </div>
                         <div className="mt-9">
                           <Link
-                            href="#"
+                            href="/industries"
                             className="group inline-flex items-center gap-2 text-[12px] font-medium text-[#111] hover:text-[#f46b45]"
                           >
                             All Industries
@@ -448,9 +478,9 @@ export default function Header() {
                     <div className="flex">
                       <LeftPanel
                         title="About"
-                        subtitle="Since 2009, we've built software for companies of all types, from startups to Fortune 500 giants."
+                        subtitle="Since 2023, we've built software for companies of all types, from startups to Fortune 500 giants."
                         links={[]}
-                        brand="Our CEO, speaking at the World Economic Forum at Davos 2025. Read more"
+                        // brand="Our CEO, speaking at the World Economic Forum at Davos 2025. Read more"
                         blurb=""
                       />
                       <div className="mx-auto flex-1 max-w-[1280px] px-12 py-10">

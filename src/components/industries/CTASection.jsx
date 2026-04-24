@@ -1,16 +1,17 @@
 // components/CTASection.jsx
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CTASection() {
   return (
     <section className="bg-black text-white pt-32 pb-20 relative">
-      
+
       {/* TOP IMAGE (OVERLAP) */}
-<div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[30%] z-10">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[30%] z-10">
         <div className="relative w-[400px] md:w-[450px] h-[200px] md:h-[260px] rotate-[-5deg] shadow-xl">
           <Image
-            src="/CTAImage.avif" // 👈 apni image
+            src="/CTAImage.avif"
             alt="cta"
             fill
             className="object-cover rounded-lg"
@@ -21,7 +22,7 @@ export default function CTASection() {
 
       {/* CONTENT */}
       <div className="max-w-5xl mx-auto px-6 mt-20">
-        
+
         <div className="max-w-2xl">
           <h2 className="text-2xl md:text-4xl bold leading-snug">
             Want to accelerate software <br /> development at your company?{" "}
@@ -30,9 +31,12 @@ export default function CTASection() {
             </span>
           </h2>
 
-          <button className="mt-8 bg-green-800 hover:bg-green-900 transition px-6 py-3 rounded-lg font-medium">
-            Schedule a Call
-          </button>
+       <Link
+  href="/schedule-a-call-page"
+  className="mt-8 inline-block bg-green-800 hover:bg-green-900 transition px-6 py-3 rounded-lg font-medium text-white"
+>
+  Schedule a Call
+</Link>
         </div>
 
       </div>
