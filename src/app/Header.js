@@ -149,7 +149,6 @@ const aboutCols = [
       { name: "Press Releases", path: "/about-us/press" },
       { name: "Contact Us", path: "#" },
       { name: "FAQs", path: "#" },
-    ],                     
       { name: "Press Releases", path: "#" },
       { name: "Contact Us", path: "/contact-us" },
       { name: "FAQs", path: "/faq" },

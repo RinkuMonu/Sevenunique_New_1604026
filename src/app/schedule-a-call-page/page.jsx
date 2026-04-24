@@ -23,16 +23,10 @@ export default function Page() {
         <div className="max-w-[37rem] mx-auto px-6 md:px-0 flex flex-col min-h-screen">
           {/* LOGO */}
           <div className="pt-10 w-fit mx-auto md:mx-0">
-            {/* <Link href="/"> */}
-              <Image
-                // src="https://assets.bairesdev.com/image/upload/www/static/bairesdev-logo_mdbbsh.svg"
-                src="/sevenLogo.png"
-                alt="logo"
-                width={170}
-                height={80}
-                className="w-32 h-auto"
-              />
-            {/* </Link> */}
+            <img
+              src="./sevenLogo.png"
+              className="w-[12.25rem] md:w-[14rem]"
+            />
           </div>
 
           {/* CONTENT */}
