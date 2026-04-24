@@ -154,9 +154,13 @@ function MobileAccordionItem({ model, isOpen, onToggle, isFirst }) {
 // ─── Main Section ────────────────────────────────────────────────────────────
 export default function EngagementSection({ data }) {
   const [openIndex, setOpenIndex] = useState(0);
-  const displayName = data?.title
-  .replace(/(development services|app development services|services)/gi, "")
-  .trim();
+
+  if (!data) return null; // ✅ prevents crash
+
+  const displayName = data.title
+    ?.replace(/(development services|app development services|services)/gi, "")
+    .trim();
+
   const toggle = (i) => setOpenIndex((prev) => (prev === i ? -1 : i));
 
   return (
