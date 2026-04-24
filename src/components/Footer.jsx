@@ -12,7 +12,6 @@ import { FiMail, FiPhone } from "react-icons/fi";
 
 export default function Footer() {
   const discoverLinks = [
-    // { name: "About Us", to: "about-uss" },
     { name: "Technologies", to: "/technologies" },
     { name: "Certifications", to: "/certifications" },
     { name: "Software Development Services", to: "/services" },
@@ -29,7 +28,7 @@ export default function Footer() {
     { name: "Case Studies", to: "/google-case-study" },
     { name: "AI Development", to: "/services/ai-development" },
     { name: "Blog", to: "/blog" },
-    { name: "About us", to: "/" },
+    { name: "About us", to: "/about-us" },
     { name: "Industries Insights", to: "/industries" },
     { name: "Technology Resource Center", to: "/technologies" },
     { name: "Client Referral Program", to: "/ReferralPageAbout" },
@@ -128,7 +127,7 @@ export default function Footer() {
 
             <div className="mb-4 flex flex-wrap gap-3">
               <Link
-                href="/schedule-a-call-page"
+                href="/contact-us"
                 className="rounded-md border-[2px] border-black bg-transparent px-5 py-2 text-[16px] font-medium leading-none"
               >
                 Contact Us
