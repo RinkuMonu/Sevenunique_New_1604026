@@ -3,26 +3,13 @@
 import { useState } from "react";
 import { FaPlus, FaTimes } from "react-icons/fa";
 
-export default function BestPracticesSection() {
+export default function BestPracticesSection({ data }) {
   const [active, setActive] = useState(null);
 
-  const data = [
-    {
-      title: "Part 1: Design",
-      content:
-        "Focus on intuitive UI/UX, accessibility, and responsive layouts. Use Material Design principles and user-centered design practices.",
-    },
-    {
-      title: "Part 2: Implementation",
-      content:
-        "Write clean, modular code. Follow MVVM architecture, optimize performance, and ensure efficient API integration.",
-    },
-    {
-      title: "Part 3: Testing",
-      content:
-        "Perform unit testing, UI testing, and real-device testing to ensure stability, performance, and bug-free experience.",
-    },
-  ];
+  // ✅ safety (prevents crash)
+  if (!data) return null;
+
+  const { title, description, items } = data;
 
   const toggle = (i) => {
     setActive(active === i ? null : i);
@@ -37,17 +24,17 @@ export default function BestPracticesSection() {
           
           {/* Heading */}
           <h2 className="text-[42px] font-semibold text-[#0f172a] leading-tight mb-6">
-            Best Practices for Android App Development
+            {title}
           </h2>
 
           {/* Subtext */}
           <p className="text-[16px] text-gray-600 leading-7 mb-10">
-            Android has evolved considerably over the years. Here are some industry-standard best practices we follow for high-quality app development.
+            {description}
           </p>
 
           {/* Accordion */}
           <div>
-            {data.map((item, i) => (
+            {items?.map((item, i) => (
               <div
                 key={i}
                 className="border-b border-gray-200 py-6 cursor-pointer"
@@ -79,8 +66,6 @@ export default function BestPracticesSection() {
           </div>
 
         </div>
-
-
       </div>
     </section>
   );

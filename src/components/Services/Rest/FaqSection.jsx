@@ -3,31 +3,12 @@
 import { useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
 
-export default function FaqSection() {
+export default function FaqSection({ data }) {
   const [active, setActive] = useState(null);
 
-  const faqs = [
-    {
-      q: "How does outsourcing to an Android app development company work?",
-      a: "Outsourcing involves partnering with a company that provides skilled Android developers who handle your project requirements, timelines, and delivery while keeping you informed throughout the process.",
-    },
-    {
-      q: "Can I hire outsourced Android App developers on a full-time basis?",
-      a: "Yes, you can hire developers on a full-time, part-time, or project basis depending on your business needs and engagement model.",
-    },
-    {
-      q: "What kind of applications can you build for Android devices?",
-      a: "We build enterprise apps, consumer apps, eCommerce platforms, on-demand apps, and custom solutions tailored to business needs.",
-    },
-    {
-      q: "Will Android app development companies do custom development work?",
-      a: "Yes, most companies specialize in custom development tailored to your specific business requirements and goals.",
-    },
-    {
-      q: "How does the choice of technology and tools affect the overall Android app development cost?",
-      a: "The tech stack, tools, and integrations directly impact development complexity, time, and cost. More advanced features typically increase overall investment.",
-    },
-  ];
+  if (!data) return null; // ✅ safety
+
+  const { title, questions } = data;
 
   const toggle = (i) => {
     setActive(active === i ? null : i);
@@ -37,20 +18,19 @@ export default function FaqSection() {
     <section className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-6">
         
-        {/* 12 GRID */}
         <div className="grid grid-cols-12 gap-10">
           
-          {/* MAIN CONTENT (9 COLS) */}
+          {/* MAIN CONTENT */}
           <div className="col-span-12 lg:col-span-9">
             
             {/* Heading */}
             <h2 className="text-[42px] font-semibold text-[#0f172a] mb-10">
-              Frequently Asked Questions (FAQ)
+              {title}
             </h2>
 
             {/* Accordion */}
             <div>
-              {faqs.map((item, i) => (
+              {questions?.map((item, i) => (
                 <div
                   key={i}
                   className="border-b border-gray-200 py-5 cursor-pointer"
@@ -92,7 +72,7 @@ export default function FaqSection() {
 
           </div>
 
-          {/* EMPTY RIGHT SPACE (3 COLS) */}
+          {/* EMPTY RIGHT */}
           <div className="hidden lg:block lg:col-span-3"></div>
 
         </div>
