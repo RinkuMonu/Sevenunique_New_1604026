@@ -40,14 +40,16 @@ export default function TestimonialHighlightSection({ testimonial }) {
                 )}
               </div>
 
-              <div className="relative h-[140px] w-[120px]">
-                <Image
-                  src={testimonial.personImage}
-                  alt={testimonial.name}
-                  fill
-                  className="object-contain"
-                />
-              </div>
+              {testimonial?.personImage && (
+                <div className="relative h-[140px] w-[120px]">
+                  <Image
+                    src={testimonial.personImage}
+                    alt={testimonial?.name || "company logo"}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              )}
             </div>
           </div>
         </div>

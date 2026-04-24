@@ -4,23 +4,23 @@ import { useState } from "react";
 const engagementModels = [
   {
     label: "Staff Augmentation",
-    question: "Need a couple of extra software engineers on your team?",
+    question: "Need extra engineers on your team?",
     description:
-      "Get senior, production-ready developers who integrate directly into your internal team. They work your hours, join your standups, and follow your workflows—just like any full-time engineer.",
+      "Add senior, production-ready developers who integrate seamlessly into your workflow. They align with your schedule, join your processes, and work just like your in-house team.",
     imgSrc: "https://assets.bairesdev.com//image/upload/c_limit,w_40/fl_sanitize/v1/www/static/staff-augmentation_dmiajc.svg",
   },
   {
     label: "Dedicated Teams",
-    question: "Need a few teams to deliver several projects simultaneously?",
+    question: "Need multiple teams for parallel delivery?",
     description:
-      "Spin up focused, delivery-ready pods to handle full builds or workstreams. Together we align on priorities. Then our tech PMs lead the team and drive delivery to maintain velocity and consistency.",
+      "Deploy focused, delivery-ready teams to handle complete builds or key workstreams. We align on priorities upfront, and our tech leads drive execution to ensure speed, consistency, and quality.",
     imgSrc: "https://assets.bairesdev.com//image/upload/c_limit,w_40/fl_sanitize/v1/www/static/dedicated-teams_gprok3.svg",
   },
   {
     label: "Software Outsourcing",
-    question: "Want to offload everything to us, from start to finish?",
+    question: "Want end-to-end delivery handled for you?",
     description:
-      "Hand off the full project lifecycle, from planning to deployment. You define the outcomes. We take full ownership of the execution and keep you looped in every step of the way.",
+      "Entrust us with the full lifecycle from planning to deployment. You define the goals, we take ownership of execution while keeping you aligned at every step.",
     imgSrc: "https://assets.bairesdev.com//image/upload/c_limit,w_40/fl_sanitize/v1/www/static/software-outsourcing_hew84i.svg",
   },
 ];
@@ -169,11 +169,11 @@ export default function EngagementSection({data}) {
             Flexible engagement models
           </p>
           <h2 className="text-3xl md:text-4xl font-medium text-gray-900 leading-tight">
-            Need extra {displayName} expertise?<br />
-            Plug us in where you need us most.
+            Need additional {displayName} expertise?<br />
+            Plug us in where it matters most.
           </h2>
           <p className="text-base text-gray-900 max-w-xl">
-            We customize every engagement to fit your workflow, priorities, and delivery needs.
+          We tailor every engagement to match your workflow, priorities, and delivery goals.
           </p>
         </div>
 

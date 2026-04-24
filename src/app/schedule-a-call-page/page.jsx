@@ -22,7 +22,7 @@ export default function Page() {
           {/* LOGO */}
           <div className="pt-10 w-fit mx-auto md:mx-0">
             <img
-              src="https://assets.bairesdev.com/image/upload/www/static/bairesdev-logo_mdbbsh.svg"
+              src="./sevenLogo.png"
               className="w-[12.25rem] md:w-[14rem]"
             />
           </div>
