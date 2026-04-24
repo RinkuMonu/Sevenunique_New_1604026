@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { FaArrowRight, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -33,8 +34,14 @@ export default function Testimonials() {
 
   const scroll = (dir) => {
     if (!scrollRef.current) return;
-    scrollRef.current.scrollBy({
-      left: dir === "left" ? -400 : 400,
+
+    const container = scrollRef.current;
+
+    // ✅ reliable scroll amount
+    const scrollAmount = container.clientWidth * 0.7;
+
+    container.scrollBy({
+      left: dir === "left" ? -scrollAmount : scrollAmount,
       behavior: "smooth",
     });
   };
@@ -54,18 +61,24 @@ export default function Testimonials() {
           {/* Cards */}
           <div
             ref={scrollRef}
-            className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth"
+            className="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar"
           >
             {testimonials.map((item, i) => (
               <div
                 key={i}
-                className="min-w-[340px] md:min-w-[420px] bg-[#f15c2d] text-white rounded-2xl p-8 flex flex-col justify-between"
+                className="min-w-[320px] md:min-w-[420px] bg-[#f15c2d] text-white rounded-2xl p-8 flex flex-col justify-between"
               >
                 {/* Top */}
                 <div className="flex items-center justify-between mb-6">
-                  <img src={item.logo} alt="logo" className="h-6" />
+                  <div className="relative w-[100px] h-[24px]">
+                    <Image
+                      src={item.logo}
+                      alt="logo"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
 
-                  {/* 🔥 Clickable Arrow */}
                   <Link href={item.link}>
                     <FaArrowRight className="text-xl cursor-pointer hover:translate-x-1 transition" />
                   </Link>
@@ -89,14 +102,14 @@ export default function Testimonials() {
           <div className="flex justify-end gap-3 mt-6">
             <button
               onClick={() => scroll("left")}
-              className="w-10 h-10 bg-white rounded-full shadow flex items-center justify-center hover:bg-gray-100 transition"
+              className="w-10 h-10 bg-orange-500 rounded-full shadow flex items-center justify-center hover:bg-gray-100 transition"
             >
               <FaChevronLeft />
             </button>
 
             <button
               onClick={() => scroll("right")}
-              className="w-10 h-10 bg-white rounded-full shadow flex items-center justify-center hover:bg-gray-100 transition"
+              className="w-10 h-10 bg-orange-500 rounded-full shadow flex items-center justify-center hover:bg-gray-100 transition"
             >
               <FaChevronRight />
             </button>
@@ -105,6 +118,17 @@ export default function Testimonials() {
         </div>
 
       </div>
+
+      {/* Hide scrollbar */}
+      <style jsx>{`
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
     </section>
   );
 }
