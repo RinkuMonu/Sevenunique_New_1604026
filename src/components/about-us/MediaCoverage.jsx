@@ -6,15 +6,15 @@ import { FaArrowRight, FaPlus, FaMinus } from "react-icons/fa";
 
 const data = [
   {
-    logo: "/logos/vb.png",
+    logo: "/logos/b.png",
     content: "Recognized for innovation in AI and enterprise solutions.",
   },
   {
-    logo: "/logos/financialtimes.png",
+    logo: "/logos/financial1.png",
     content: "Featured among fastest-growing global tech companies.",
   },
   {
-    logo: "/logos/techcrunch.png",
+    logo: "/logos/techcrunch1.png",
     content: "Highlighted for disruptive startup ecosystem impact.",
   },
   {
