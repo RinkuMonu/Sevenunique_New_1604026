@@ -154,7 +154,6 @@ function MobileAccordionItem({ model, isOpen, onToggle, isFirst }) {
 // ─── Main Section ────────────────────────────────────────────────────────────
 export default function EngagementSection({ data }) {
   const [openIndex, setOpenIndex] = useState(0);
-<<<<<<< HEAD
 
   if (!data) return null; // ✅ prevents crash
 
@@ -162,11 +161,6 @@ export default function EngagementSection({ data }) {
     ?.replace(/(development services|app development services|services)/gi, "")
     .trim();
 
-=======
-  const displayName = data?.title
-  .replace(/(development services|app development services|services)/gi, "")
-  .trim();
->>>>>>> b01b050a698b781a07a1280f628e7176d218651b
   const toggle = (i) => setOpenIndex((prev) => (prev === i ? -1 : i));
 
   return (
