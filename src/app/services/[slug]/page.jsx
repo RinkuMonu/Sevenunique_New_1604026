@@ -1,5 +1,5 @@
 import { serviceData } from "./data";
-
+import {restServiceData } from "./rest-data"
 
 import ServiceHeroSection from "@/components/Services/ServiceHeroSection";
 import BackendHero from "@/components/Services/Backend-development/BackendHero";
@@ -23,11 +23,15 @@ import UsefulAIResources from "@/components/UsefulAIResources";
 import IndustrySection from "@/components/IndustrySection";
 import ProcessSliderSection from "@/components/ProcessSliderSection";
 import FAQSection from "@/components/FAQSection";
+import RestServicePage from "./RestServicePage";
 
 // page.jsx logic update
 export default async function ServicePage({ params }) {
   const { slug } = await params;
-
+  
+ if (restServiceData && restServiceData[slug]) {
+    return <RestServicePage data={restServiceData[slug]} />;
+  }
   const normalizedSlug =
     serviceData[slug] ? slug : `${slug}-development`;
 
