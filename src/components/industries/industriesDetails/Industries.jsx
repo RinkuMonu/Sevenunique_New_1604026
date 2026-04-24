@@ -1,6 +1,7 @@
 // components/Industries.jsx
 
 import Image from "next/image";
+import Link from "next/link";
 
 const cards = [
     {
@@ -34,9 +35,12 @@ export default function Industries() {
                         Beyond agriculture: 100+ industries covered.
                     </h2>
 
-                    <button className="text-[#f45d2d] border-b-2 border-[#f45d2d] pb-1 flex items-center gap-2 hover:gap-3 transition">
-                        View all industries →
-                    </button>
+                 <Link
+  href="/industries"
+  className="text-[#f45d2d] border-b-2 border-[#f45d2d] pb-1 flex items-center gap-2 hover:gap-3 transition w-fit"
+>
+  View all industries →
+</Link>
                 </div>
 
                 {/* GRID */}

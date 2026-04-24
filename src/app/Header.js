@@ -87,30 +87,57 @@ const technologiesCols = [
   ],
 ];
 
+// const industriesCols = [
+//   [
+//     "Agriculture",
+//     "Banking",
+//     "Finance",
+//     "Insurance",
+//     "Real Estate",
+//     "Telecommunications",
+//   ],
+//   [
+//     "Automotive",
+//     "Construction",
+//     "Startups",
+//     "Martech",
+//     "Retail",
+//     "Transportation and Logistics",
+//   ],
+//   [
+//     "Aviation",
+//     "Entertainment",
+//     "Healthcare",
+//     "Oil and Gas",
+//     "Supply Chain",
+//     "Travel and Hospitality",
+//   ],
+// ];
+
+
 const industriesCols = [
   [
-    "Agriculture",
-    "Banking",
-    "Finance",
-    "Insurance",
-    "Real Estate",
-    "Telecommunications",
+    { name: "Agriculture", slug: "agriculture" },
+    { name: "Banking", slug: "banking" },
+    { name: "Finance", slug: "finance" },
+    { name: "Insurance", slug: "insurance" },
+    { name: "Real Estate", slug: "real-estate" },
+    { name: "Telecommunications", slug: "telecommunications" },
   ],
   [
-    "Automotive",
-    "Construction",
-    "Startups",
-    "Martech",
-    "Retail",
-    "Transportation and Logistics",
+    { name: "Automotive", slug: "automotive" },
+    { name: "Construction", slug: "construction" },
+    { name: "Startups", slug: "startups" },
+    { name: "Martech", slug: "martech" },
+    { name: "Retail", slug: "retail" },
   ],
   [
-    "Aviation",
-    "Entertainment",
-    "Healthcare",
-    "Oil and Gas",
-    "Supply Chain",
-    "Travel and Hospitality",
+    { name: "Aviation", slug: "aviation" },
+    { name: "Entertainment", slug: "entertainment" },
+    { name: "Healthcare", slug: "healthcare" },
+    { name: "Oil and Gas", slug: "oil-gas" },
+    { name: "Supply Chain", slug: "supply-chain" },
+    { name: "Travel and Hospitality", slug: "travel-hospitality" },
   ],
 ];
 
@@ -118,7 +145,7 @@ const aboutCols = [
   {
     label: "Inside BairesDev",
     items: [
-          { name: "Leadership Team", path: "/about-us/Leadership" },
+      { name: "Leadership Team", path: "/about-us/Leadership" },
       { name: "Our Tech Talent", path: "/about-us/tech-talent" },
       { name: "Press Releases", path: "#" },
       { name: "Contact Us", path: "#" },
@@ -414,10 +441,10 @@ export default function Header() {
                               {col.map((entry) => (
                                 <li key={entry}>
                                   <Link
-                                    href="#"
+                                    href={`/industries/${entry.slug}`}
                                     className="inline-flex text-[13px] text-[#222] transition-all duration-200 hover:translate-x-1 hover:text-[#f46b45]"
                                   >
-                                    {entry}
+                                    {entry.name}
                                   </Link>
                                 </li>
                               ))}
@@ -426,7 +453,7 @@ export default function Header() {
                         </div>
                         <div className="mt-9">
                           <Link
-                            href="#"
+                            href="/industries"
                             className="group inline-flex items-center gap-2 text-[12px] font-medium text-[#111] hover:text-[#f46b45]"
                           >
                             All Industries
