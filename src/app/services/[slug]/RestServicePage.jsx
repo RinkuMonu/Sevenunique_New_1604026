@@ -28,10 +28,12 @@ export default function RestServicePage({ data }) {
       )}
 
       {data.sections?.bestPractices && (
-        <BestPracticesSection data={data.sections.bestPractices} />
-      )}
+  <BestPracticesSection data={data.sections.bestPractices} />
+)}
 
-      <GreenCtaStrip />
+{data.sections?.greenCta && (
+  <GreenCtaStrip data={data.sections.greenCta} />
+)}
 
       {data.sections?.whyChoose && (
         <WhyChooseSection data={data?.sections.whyChoose} />
@@ -45,7 +47,9 @@ export default function RestServicePage({ data }) {
         <FaqSection data={data?.sections.faq} />
       )}
 
-      <DarkCtaStrip />
+{data.sections?.darkCta && (
+  <DarkCtaStrip data={data.sections.darkCta} />
+)}
     </>
   );
 }
