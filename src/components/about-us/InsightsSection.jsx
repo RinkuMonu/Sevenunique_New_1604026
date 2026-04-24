@@ -56,7 +56,7 @@ export default function InsightsSection() {
               </div>
 
               {/* TITLE */}
-              <h3 className="mt-5 text-[20px] font-semibold text-[#111827] leading-snug group-hover:text-[#c2410c] transition">
+              <h3 className="mt-5 text-[20px] font-semibold text-[#111827] leading-snug group-hover:text-[#f66135] transition">
                 {item.title}
               </h3>
 
@@ -80,6 +80,22 @@ export default function InsightsSection() {
 
         </div>
       </div>
+              {/* READ BLOG CTA */}
+        <div className="mt-16 ps-24">
+          <a
+            href="/blog"
+            className="inline-flex items-center gap-2 text-[#f66135] font-medium text-[20px] group transition-all duration-300"
+          >
+            <span className="border-b border-[#f66135] pb-1 font-bold">
+              Read our blog
+            </span>
+
+            {/* Arrow */}
+            <span className="transition-transform duration-300 group-hover:translate-x-2">
+              →
+            </span>
+          </a>
+        </div>
     </section>
   );
 }
