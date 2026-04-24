@@ -1,6 +1,12 @@
+import { MailIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiMail, FiPhone } from "react-icons/fi";
 
@@ -40,8 +46,7 @@ export default function Footer() {
               <Link href="#" aria-label="BairesDev">
                 <Image
                   // src="https://assets.bairesdev.com//image/upload/c_limit,w_60/fl_sanitize/v1/www/static/bairesdev-logo-footer_wbvcp2.svg"
-                              src="/sevenLogo.png"
-
+                  src="/sevenLogo.png"
                   alt="BairesDev"
                   width={170}
                   height={160}
@@ -112,7 +117,9 @@ export default function Footer() {
                 Do Not Sell My Personal Information
               </Link>
             </div>
-            <p className="mt-5">Sevenunique 2009 - 2026. All rights reserved.</p>
+            <p className="mt-5">
+              Sevenunique 2026. All rights reserved.
+            </p>
           </div>
         </div>
 
@@ -123,10 +130,16 @@ export default function Footer() {
             </h3>
 
             <div className="mb-4 flex flex-wrap gap-3">
-              <Link href="/schedule-a-call-page" className="rounded-md border-[2px] border-black bg-transparent px-5 py-2 text-[16px] font-medium leading-none">
+              <Link
+                href="/schedule-a-call-page"
+                className="rounded-md border-[2px] border-black bg-transparent px-5 py-2 text-[16px] font-medium leading-none"
+              >
                 Contact Us
               </Link>
-              <Link href="/schedule-a-call-page" className="rounded-md bg-[#ff5b1f] px-2 py-2 text-[16px] font-semibold leading-none text-white">
+              <Link
+                href="/schedule-a-call-page"
+                className="rounded-md bg-[#ff5b1f] px-2 py-2 text-[16px] font-semibold leading-none text-white"
+              >
                 Schedule a Call &rarr;
               </Link>
             </div>
@@ -135,35 +148,22 @@ export default function Footer() {
               <FiPhone className="text-lg" />
               0141-4511098
             </p>
+            <p className="flex items-center gap-2 text-[16px] leading-none mt-4">
+              <MailIcon className="text-lg" />
+              info@7unique.in
+            </p>
           </div>
 
-          <div className="mt-14">
-            <p className="max-w-[300px] text-[12px] font-semibold leading-tight">
-              Get insights from the experts on building and scaling technology teams.
+          <div className="mt-14 max-w-sm">
+            <p className="text-sm font-semibold text-gray-800 mb-2">
+              Office Address
             </p>
 
-            <div className="mt-5 flex gap-3">
-              <input
-                type="email"
-                placeholder="name@email.com"
-                className="w-full rounded-md border border-black/40 bg-white px-4 py-3 text-sm placeholder:text-[#818181] focus:outline-none"
-              />
-              <button className="inline-flex items-center bg-[#d9dcdf] text-black gap-2 rounded-md border-[2px] border-black  px-4 py-3 text-sm font-medium">
-                Subscribe
-                <FiMail />
-              </button>
-            </div>
-
-            <label className="mt-4 flex items-start gap-2 text-xs">
-              <input type="checkbox" className="mt-0.5 size-4" />
-              <span>
-                By subscribing I accept the{" "}
-                <Link href="#" className="underline hover:no-underline">
-                  Privacy Policy
-                </Link>
-                .
-              </span>
-            </label>
+            <p className="text-gray-600 text-[14px] leading-relaxed">
+              Plot No. 97, Dakshinpuri - I <br />
+              Shrikishan, Sanganer, Jagatpura <br />
+              Jaipur, Rajasthan, India - 302017
+            </p>
           </div>
 
           <div className="mt-16">
@@ -171,17 +171,33 @@ export default function Footer() {
               Follow us.
             </h3>
             <div className="mt-5 flex items-center gap-6 text-lg">
-              <Link href="https://www.linkedin.com/in/sevenuniquetechsolution/" aria-label="LinkedIn" className="hover:opacity-70">
-                <FaLinkedinIn />
+              <Link
+                href="https://www.linkedin.com/in/sevenuniquetechsolution/"
+                aria-label="LinkedIn"
+                className="hover:opacity-70"
+              >
+                <FaLinkedinIn className="hover:text-orange-600 "/>
               </Link>
-              <Link href="https://www.facebook.com/people/SevenUnique-Tech-Solutions-Pvtltd/61556669918427/" aria-label="Facebook" className="hover:opacity-70">
-                <FaFacebookF />
+              <Link
+                href="https://www.facebook.com/people/SevenUnique-Tech-Solutions-Pvtltd/61556669918427/"
+                aria-label="Facebook"
+                className="hover:opacity-70"
+              >
+                <FaFacebookF className="hover:text-orange-600 "/>
               </Link>
-              <Link href="https://x.com/Sevenuniqu42041" aria-label="X" className="hover:opacity-70">
-                <FaXTwitter />
+              <Link
+                href="https://x.com/Sevenuniqu42041"
+                aria-label="X"
+                className="hover:opacity-70"
+              >
+                <FaXTwitter className="hover:text-orange-600 "/>
               </Link>
-              <Link href="https://www.instagram.com/sevenuniquetech/?hl=en" aria-label="Instagram" className="hover:opacity-70">
-                <FaInstagram />
+              <Link
+                href="https://www.linkedin.com/in/sevenuniquetechsolution/"
+                aria-label="Instagram"
+                className="hover:opacity-70"
+              >
+                <FaInstagram className="hover:text-orange-600 "/>
               </Link>
               {/* <Link href="#" aria-label="Youtube" className="hover:opacity-70">
                 <FaYoutube />
