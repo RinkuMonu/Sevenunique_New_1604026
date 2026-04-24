@@ -26,6 +26,10 @@ const nextConfig = {
         hostname: "bairesdev.mo.cloudinary.net",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "api.dicebear.com",
+      },
     ],
 
   },
