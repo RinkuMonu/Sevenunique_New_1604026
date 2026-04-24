@@ -100,7 +100,7 @@ function StepItem({ step, index, isLast }) {
 }
 
 export default function ServiceSection({data}) {
-    const displayName = data.title
+    const displayName = data?.title
     .replace(/(development services|app development services|services)/gi, "")
     .trim();
   return (
