@@ -63,6 +63,7 @@
 // components/Hero.jsx
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero({ data }) {
   return (
@@ -87,9 +88,12 @@ export default function Hero({ data }) {
               {data.desc}
             </p>
 
-            <button className="mt-8 bg-[#f45d2d] text-white px-7 py-[14px] rounded-lg">
-              Accelerate Your Roadmap
-            </button>
+           <Link
+  href="/schedule-a-call-page"
+  className="mt-8 inline-block bg-green-800 hover:bg-green-900 transition px-6 py-3 rounded-lg font-medium text-white"
+>
+  Accelerate Your Roadmap
+</Link>
 
           </div>
 

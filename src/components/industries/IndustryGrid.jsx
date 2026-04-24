@@ -24,7 +24,7 @@ const industries = [
   { title: "Automotive", slug: "automotive", desc: "Drive innovation in automotive industry with connected systems, fleet management, and smart mobility solutions." },
   { title: "Startups", slug: "startups", desc: "Empower startups with scalable, fast-to-market software solutions tailored for rapid growth." },
   { title: "Martech", slug: "martech", desc: "Build marketing technology platforms for automation, analytics, and customer engagement." },
-  { title: "Transportation and Logistics", slug: "transportation-logistics", desc: "Optimize logistics operations with tracking, route optimization, and supply chain visibility." },
+  // { title: "Transportation and Logistics", slug: "transportation-logistics", desc: "Optimize logistics operations with tracking, route optimization, and supply chain visibility." },
   { title: "Oil and Gas", slug: "oil-gas", desc: "Develop robust systems for resource management, safety compliance, and operational efficiency." },
   { title: "Supply Chain", slug: "supply-chain", desc: "Streamline supply chain processes with real-time tracking, analytics, and automation tools." },
 ];

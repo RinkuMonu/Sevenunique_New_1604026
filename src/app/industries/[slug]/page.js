@@ -18,7 +18,7 @@ export default async function Page({ params }) {
   console.log("slug", slug);
 
   const data = industryData[slug];
-  console.log(data);
+  // console.log(data);
 
   if (!data) return <div>Not Found</div>;
 
