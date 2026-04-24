@@ -28,13 +28,13 @@ function CaseStudyCard({ card }) {
         <div className="mt-24 max-w-[300px] relative">
 
           {/* TITLE (disappears) */}
-          <h3 className="text-[26px] font-semibold leading-[1.22] text-white transition-all duration-300 group-hover:opacity-0 group-hover:-translate-x-4">
+          <h3 className="text-[26px]  font-semibold leading-[1.22] text-white transition-all duration-300 group-hover:opacity-0 group-hover:-translate-x-4">
             {card.title}
           </h3>
 
           {/* DESCRIPTION (slides in) */}
           {card.description && (
-            <p className="absolute top-0 left-0 text-[16px] text-gray-300 leading-[1.6] opacity-0 translate-x-full group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 ease-in-out">
+            <p className="absolute -top-6 left-0 text-[16px] text-gray-300 leading-[1.6] opacity-0 translate-x-full group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 ease-in-out">
               {card.description}
             </p>
           )}
@@ -44,7 +44,7 @@ function CaseStudyCard({ card }) {
               {card.technologies.slice(0, 6).map((tech) => (
                 <span
                   key={tech}
-                  className="px-4 py-2 text-[12px] rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white"
+                  className="px-4 py-2 text-[12px] rounded bg-white/10 backdrop-blur-md border border-white/20 text-white"
                 >
                   {tech}
                 </span>

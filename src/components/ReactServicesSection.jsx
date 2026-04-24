@@ -77,7 +77,8 @@ export default function ReactServicesSection({ data }) {
       <TestimonialSection data={data}/>
       <EngagementSection data={data} />
       <ServiceSection data={data}/>
-      <AwardsSection />
+      {/* <AwardsSection /> */}
+      <AwardsSection/>
       {/* ===== FAQ ===== */}
       {faq && (
         <section className="bg-white py-20">

@@ -2825,70 +2825,36 @@ export const techData = {
       ]
     },
     faq: {
-      sectionLabel: "AI Development FAQ",
-      heading: "What tech leaders ask about AI development before pulling us in:",
+      sectionLabel: "AI FAQ",
+      heading: "What decision-makers ask before starting AI projects:",
       items: [
         {
-          question: "Do you build custom LLMs or fine-tune existing models?",
+          question: "What makes you a trusted AI development partner?",
           answer:
-            "Both. We assess your use case and recommend the most cost-effective approach — fine-tuning an existing model like GPT or Llama, or building a custom model from scratch when needed.",
+            "We deliver scalable AI solutions across industries with experienced teams in ML, data engineering, and MLOps backed by proven processes and a decade of enterprise experience.",
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev AI talent the top 1%?",
+          question: "Will we work with senior AI developers or junior contractors?",
           answer:
-            "We apply a rigorous multi-stage vetting process that evaluates deep learning fundamentals, production AI experience, MLOps practices, and real-world problem-solving. Less than 1% of applicants make it through.",
+            "You’ll work only with senior, full-time AI engineers, no juniors or contractors. Our experts bring 8+ years of experience and are carefully vetted to build and scale high-impact solutions.",
         },
         {
-          question: "How fast can you staff an AI team?",
+          question: "Can your AI engineers integrate with our workflows?",
           answer:
-            "We can have a fully vetted AI engineer ready to start within two weeks of your request, and full teams typically onboard within a month.",
+            "Ye, Our engineers seamlessly integrate with your team, tools, and processes whether it’s Jira, Azure Boards, or others. For managed projects, we handle delivery end-to-end while keeping you aligned at every stage.",
         },
         {
-          question: "How do you handle data privacy for AI projects?",
+          question: "Do you support AI-powered mobile app development?",
           answer:
-            "We design AI pipelines with privacy-first architecture, supporting on-premise deployments, data anonymization, and compliance with GDPR, HIPAA, and SOC 2. We never train on your proprietary data without explicit permission.",
+            "Yes, We build AI-enabled mobile apps and integrate models using edge, API, or hybrid approaches ensuring smooth performance and seamless fit with your app architecture.",
         },
         {
-          question: "Can you help us move from AI prototype to production?",
+          question: "How quickly can you ramp up on our AI project?",
           answer:
-            "Yes. Many clients come to us with a proof-of-concept that needs to scale. We handle MLOps, model optimization (quantization, pruning), API deployment, monitoring, and continuous retraining pipelines.",
+            "We typically onboard teams within 2–4 weeks. Our senior engineers ramp up quickly and start delivering value fast, often faster than internal hires.",
         },
-        {
-          question: "What AI frameworks and tools do you work with?",
-          answer:
-            "PyTorch, TensorFlow, LangChain, LlamaIndex, Hugging Face, OpenAI APIs, Anthropic, Gemini, vLLM, Ray, and more. We adapt to your existing stack and requirements.",
-        },
-        {
-          question: "How long does it take to build an AI solution?",
-          answer:
-            "Simple integrations (API wrappers, basic RAG) can be delivered in weeks. Custom ML models or complex agentic systems typically take 2-4 months depending on data readiness, validation requirements, and system complexity.",
-        },
-        {
-          question: "What's your approach to Retrieval-Augmented Generation (RAG)?",
-          answer:
-            "We build production RAG systems with chunking strategies, embedding optimization, hybrid search (vector + keyword), reranking, and evaluation frameworks to minimize hallucinations and improve accuracy.",
-        },
-        {
-          question: "How do you evaluate and test AI systems?",
-          answer:
-            "We use comprehensive evaluation frameworks including held-out test sets, human evaluation, LLM-as-judge, and task-specific metrics. For LLM systems, we test for accuracy, latency, cost, and safety.",
-        },
-        {
-          question: "How do you ensure our team can maintain the AI systems you build?",
-          answer:
-            "We document thoroughly, share training notebooks and evaluation pipelines, conduct knowledge-transfer sessions, and follow your internal standards. Our goal is to leave your team fully capable of owning and improving the AI system.",
-        },
-        {
-          question: "What's your approach to AI for regulated industries?",
-          answer:
-            "We have deep experience in finance, healthcare, insurance, and other regulated verticals. Our engineers are fluent in compliance requirements like HIPAA, SOC 2, GDPR, and emerging AI regulations including the EU AI Act.",
-        },
-        {
-          question: "Do you offer standalone AI data labeling and prep services?",
-          answer:
-            "Yes. We can provide dedicated data engineers and annotation specialists who ensure your training and evaluation data is high-quality, well-documented, and properly structured for your AI use case.",
-        },
+       
       ],
     },
     ecosystem: {
@@ -2897,72 +2863,52 @@ export const techData = {
       description: "We combine industry-standard frameworks with modern tools and proven workflows to deliver and maintain custom AI solutions. Our engineers bring deep expertise in model development, data engineering, and secure deployment ensuring reliable, scalable performance over time.",
       items: [
         {
-          label: "LLM & GenAI Frameworks",
-          description: "We build on cutting-edge frameworks for LLM orchestration, RAG, and agentic systems. Production-ready patterns for complex AI workflows.",
-          tags: ["LangChain", "LlamaIndex", "AutoGen", "CrewAI", "DSPy", "Semantic Kernel", "Haystack"]
+          "label": "Deep Learning Frameworks",
+          "description": "We use high-performance frameworks to build, train, and optimize deep learning models across use cases, following proven practices for architecture and performance.",
+          "tags": ["PyTorch", "TensorFlow", "Keras"]
         },
         {
-          label: "LLM Providers & Models",
-          description: "We work with both commercial APIs and open-source models, choosing the right balance of cost, performance, and control for your use case.",
-          tags: ["OpenAI (GPT-4o)", "Anthropic (Claude)", "Google Gemini", "Llama 3", "Mistral", "Command R", "Qwen"]
+          "label": "Machine Learning Libraries",
+          "description": "We use robust ML libraries for predictive modeling, classification, and regression focusing on performance, accuracy, and interpretability. Our approach ensures consistent feature engineering, evaluation, and tuning.",
+          "tags": ["Scikit-learn", "XGBoost", "LightGBM"]
         },
         {
-          label: "ML & Deep Learning Frameworks",
-          description: "We build custom models using industry-standard frameworks, from research to production deployment.",
-          tags: ["PyTorch", "TensorFlow", "Keras", "JAX", "Hugging Face Transformers", "scikit-learn", "XGBoost"]
+          "label": "Data Engineering Tools",
+          "description": "We build high-throughput data pipelines for real-time insights, transforming raw data into structured, feature-ready datasets with scalable workflows.",
+          "tags": ["Apache Airflow", "Kafka", "Spark", "Snowflake", "BigQuery"]
         },
         {
-          label: "Model Deployment & Serving",
-          description: "We deploy AI models for low-latency inference, batch processing, and streaming. Optimized for cost and performance.",
-          tags: ["vLLM", "TGI", "BentoML", "Ray Serve", "KServe", "SageMaker", "Vertex AI", "Ollama"]
+          "label": "Data Manipulation & Analysis Tools",
+          "description": "We streamline data preparation and transformation using structured workflows for validation, anomaly detection, and analysis ensuring reliable model outputs.",
+          "tags": ["Pandas", "NumPy", "Dask"]
         },
         {
-          label: "Vector Databases & RAG Storage",
-          description: "We power RAG systems with high-performance vector databases optimized for similarity search at scale.",
-          tags: ["Pinecone", "Weaviate", "Qdrant", "Milvus", "Chroma", "Pgvector", "FAISS", "LanceDB"]
+          "label": "Cloud-Based Machine Learning Platforms",
+          "description": "We deploy and scale ML models using secure, cloud-native infrastructure built for performance and auto-scaling. Our team leverages leading cloud ecosystems for reliable, production-ready deployments.",
+          "tags": ["Amazon SageMaker", "Google Vertex AI", "Azure Machine Learning"]
         },
         {
-          label: "LLM Evaluation & Observability",
-          description: "We instrument AI systems for comprehensive evaluation, monitoring, and continuous improvement.",
-          tags: ["LangSmith", "LangFuse", "Weights & Biases", "MLflow", "Arize", "Phoenix", "Ragas", "DeepEval"]
+          "label": "Integrated Development Environments",
+          "description": "We build and test AI solutions using modern IDEs that support collaborative development, reproducibility, and efficient workflows, with standardized toolchains across teams.",
+          "tags": ["Jupyter Notebooks", "Visual Studio Code", "PyCharm"]
         },
         {
-          label: "Prompt Engineering & Management",
-          description: "We treat prompts as code — versioned, tested, and optimized for production LLM applications.",
-          tags: ["PromptLayer", "LangSmith Hub", "Portkey", "HumanLoop", "Outlines", "Guidance"]
-        },
-        {
-          label: "MLOps & Orchestration",
-          description: "We operationalize AI with production-grade MLOps practices. Pipelines are automated, reproducible, and monitored.",
-          tags: ["Kubeflow", "MLflow", "ZenML", "Prefect", "Airflow", "Dagster", "Metaflow"]
-        },
-        {
-          label: "Data Processing & Engineering",
-          description: "We build scalable data pipelines that feed your AI models. Clean, versioned, and battle-tested for production.",
-          tags: ["Pandas", "Polars", "Spark", "Dask", "Ray", "Databricks", "Snowflake", "dbt"]
-        },
-        {
-          label: "Infrastructure & Compute",
-          description: "We train and deploy AI models at scale using modern compute infrastructure. GPU optimization is standard practice.",
-          tags: ["AWS (SageMaker, Bedrock)", "Google Cloud (Vertex AI)", "Azure (OpenAI, ML)", "Lambda Labs", "RunPod", "Modal"]
-        },
-        {
-          label: "Responsible AI Tooling",
-          description: "We build AI that's fair, explainable, and auditable. Responsible AI is built in from day one.",
-          tags: ["SHAP", "LIME", "Clarify", "AI Fairness 360", "Guardrails AI", "NeMo Guardrails", "Rebuff"]
+          "label": "AI-Assisted Coding Tools",
+          "description": "We use AI-powered coding assistants to enhance productivity, improve code quality, and reduce manual effort through smart suggestions and automated support.",
+          "tags": ["GitHub Copilot", "Tabnine", "Kite"]
         }
-      ],
+      ]
     },
     testimonialsSection: {
       sectionLabel: "Client Testimonials",
-      heading: "Get AI results you can stand behind.",
-      subheading: "Our AI systems hold up in production, in audits, and in front of the board.",
+      heading: "AI results you can trust.",
+      subheading: "Proven in real-world use, validated by our clients.",
       showMoreButtonText: "Show More Testimonials",
       leftColumn: [
         {
-          industry: "Healthcare",
-          quote: "Their AI engineers built a clinical documentation agent that saved our doctors 15 hours per week. The RAG system is incredibly accurate and secure.",
-          name: "Sarah Chen",
+          industry: "HEALTHCARE & MEDTECH",
+          quote: "We’ve consistently delivered high-quality software on schedule, thanks to a strong and dependable team. They bring in skilled, sharp developers who integrate well and contribute long-term. Their biggest strength is the quality of talent they provide.",
+          name: "Team Johnson & Johnson",
           role: "CTO",
           photo: "/images/man1.png",
           companyType: "image",
@@ -2970,10 +2916,10 @@ export const techData = {
           companyAlt: "DataVault",
         },
         {
-          industry: "Insurance",
-          subtitle: "Agentic AI for Claims Processing",
-          quote: "BairesDev built an LLM-powered claims agent that reduced processing time from days to hours. The system handles complex edge cases we never thought possible with AI.",
-          name: "Michael Soltow",
+          industry: "FINANCIAL SERVICES",
+          subtitle: "Built Modern Digital Banking Features",
+          quote: "They’ve been a reliable partner throughout. When we needed to launch quickly, their team delivered the right talent without delays. The quality and speed of execution made a real difference for us.",
+          name: "Team Azlo",
           role: "VP of Product",
           photo: "/images/man2.png",
           companyType: "text",
@@ -2992,10 +2938,10 @@ export const techData = {
       ],
       rightColumn: [
         {
-          industry: "E-Commerce",
-          subtitle: "Generative AI Product Content Engine",
-          quote: "Their GenAI system generates 10,000+ unique product descriptions per hour across 8 languages. Quality is better than human writers and 100x faster.",
-          name: "Leonardo Shapiro",
+          industry: "FINANCIAL SERVICES",
+          subtitle: "Upgraded & Maintained Cloud Infrastructure",
+          quote: "The team has been proactive in monitoring performance and staying aligned throughout the engagement. Their consistency and communication give us confidence in a long-term partnership.",
+          name: "Team Repay",
           role: "Head of Product",
           photo: "/images/man3.png",
           companyType: "text",
@@ -3013,9 +2959,9 @@ export const techData = {
           },
         },
         {
-          industry: "Enterprise",
-          quote: "The custom LLM they fine-tuned on our internal docs has become our team's primary knowledge tool. Response accuracy is over 95%.",
-          name: "Matthew Mecham",
+          industry: "RENEWABLE ENERGY",
+          quote: "We initially had concerns about aligning external talent with our in-house team, but the results exceeded expectations. Many engineers quickly stood out as top performers, ranking among the best within our organization.",
+          name: "Team Lumio",
           role: "VP of Engineering",
           photo: "/images/man4.png",
           companyType: "text",

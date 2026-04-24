@@ -5,6 +5,7 @@ import TrustedClientsStrip from "@/components/Services/ai-development/TrustedCli
 import AIUseCasesSection from "@/components/Services/ai-development/AIUseCasesSection";
 import { Star } from "lucide-react";
 import ServiceSection from "../ServiceSection";
+import CTASection from "../CTASection";
 
 export default async function TechnologyPage({ params }) {
   const { slug } = await params;
@@ -115,7 +116,7 @@ export default async function TechnologyPage({ params }) {
        {/* <TrustedCompanies /> */}
       <AIUseCasesSection useCases={data.useCases}/>
       <ReactServicesSection  data={data}/>
-      
+      <CTASection data={data}/>
     </>
   );
 }

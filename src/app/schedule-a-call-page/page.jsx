@@ -1,5 +1,7 @@
 "use client";
 
+import { Link } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Page() {
@@ -22,7 +24,7 @@ export default function Page() {
           {/* LOGO */}
           <div className="pt-10 w-fit mx-auto md:mx-0">
             <img
-              src="https://assets.bairesdev.com/image/upload/www/static/bairesdev-logo_mdbbsh.svg"
+              src="./sevenLogo.png"
               className="w-[12.25rem] md:w-[14rem]"
             />
           </div>
@@ -46,12 +48,20 @@ export default function Page() {
                 {/* NAME */}
                 <div>
                   <label className="text-gray-600 text-sm">Your name</label>
+
                   <div className="mt-1 flex outline outline-1 outline-[#e2dedee0] rounded px-2 py-2 focus-within:outline-gray-600">
                     <input
                       name="name"
                       value={form.name}
-                      onChange={handleChange}
-                      className="w-full outline-none bg-transparent"
+                      onChange={(e) => {
+                        const value = e.target.value;
+
+                        // ✅ allow only letters + space
+                        if (/^[a-zA-Z\s]*$/.test(value)) {
+                          handleChange(e);
+                        }
+                      }}
+                      className="w-full outline-none bg-transparent text-gray-600"
                     />
                   </div>
                 </div>
@@ -66,7 +76,7 @@ export default function Page() {
                       name="email"
                       value={form.email}
                       onChange={handleChange}
-                      className="w-full outline-none bg-transparent"
+                      className="w-full outline-none bg-transparent text-gray-600"
                     />
                   </div>
                 </div>
@@ -116,13 +126,13 @@ export default function Page() {
                       rows={3}
                       value={form.comments}
                       onChange={handleChange}
-                      className="w-full outline-none resize-none bg-transparent"
+                      className="w-full outline-none resize-none bg-transparent text-gray-600"
                     />
                   </div>
                 </div>
 
                 {/* BUTTON */}
-                <button className="mt-6 flex items-center gap-2 bg-black text-white px-5 py-2 rounded-lg hover:bg-gray-800">
+                <button className="mt-6 flex items-center gap-2 bg-black text-white px-5 py-2 rounded-lg hover:bg-gray-800 cursor-pointer">
                   Get Started
                   <span className="text-lg">→</span>
                 </button>
