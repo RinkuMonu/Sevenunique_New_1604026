@@ -1,41 +1,56 @@
 export const techData = {
   dotnet: {
     title: ".NET Development Services",
-    heading: "Work with .NET experts trusted by the world's top tech teams.",
+    heading: "Work with trusted .NET experts",
     description:
-      "Our .NET specialists have successfully delivered hundreds of projects for global brands and leading enterprises.",
+      "Our senior .NET developers have delivered hundreds of projects for global brands and enterprises. With deep experience in building complex web and cloud solutions, they bring reliability and expertise to every project.",
     formTitle: ".NET",
     useCases: {
       sectionLabel: "Custom .NET Development Services",
-      heading: "You've probably used products built by our .NET engineers.",
+      heading: "Built by experts behind high-impact products.",
       description:
-        "We've developed custom .NET solutions across industries. Whether you're building enterprise platforms or modernizing legacy systems, we can help.",
+        "Our .NET developers have been delivering solutions for leading brands since 2009, powering high-performance systems, securing critical data, and supporting millions of users at scale. When reliability matters, teams turn to us.",
       image: "/logos/img1.png",
       services: [
         {
-          title: "Enterprise Application Development",
+          title: ".NET Web & API Development",
           content:
-            "We build scalable enterprise apps using .NET.\n\nFrom architecture to deployment, our solutions are built for performance and maintainability.",
+            "We build enterprise-grade platforms with scalable ASP.NET Core APIs and modern, responsive frontends. Our solutions are secure, easy to integrate, and designed for performance across cloud environments.",
         },
         {
-          title: "ASP.NET Web Development",
+          title: ".NET Modernization & Migration",
           content:
-            "We develop robust web applications using ASP.NET Core.\n\nOur team handles everything from APIs to full-stack solutions.",
+            "We modernize legacy .NET systems by migrating to the latest frameworks without disrupting operations. Our approach reduces infrastructure costs and delivers a scalable, future-ready codebase.",
         },
         {
-          title: "Microservices & API Development",
+          title: "Cross-Platform App Development",
           content:
-            "We design and build microservices architectures with .NET.\n\nScalable, maintainable, and cloud-ready.",
+            "We build high-performance apps for iOS, Android, and desktop using a unified .NET codebase. Our solutions deliver secure, consistent experiences across platforms while simplifying development and deployment.",
         },
         {
-          title: ".NET Cloud Integration",
+          title: "Testing & Quality Assurance",
           content:
-            "We integrate .NET applications with AWS, Azure, and Google Cloud.\n\nSeamless cloud-native solutions tailored to your needs.",
+            "We go beyond basic testing with comprehensive QA strategies, including automated, performance, and security testing ensuring your .NET applications are stable, efficient, and production-ready.",
         },
         {
-          title: "Legacy System Modernization",
+          title: "Data & Analytics Platforms",
           content:
-            "We migrate and modernize legacy .NET applications.\n\nReduce technical debt while preserving business logic.",
+            "We turn raw data into actionable insights with scalable pipelines and real-time dashboards. Our solutions ensure data security, flexibility, and reliable metrics for informed decision-making.",
+        },
+        {
+          title: "Desktop Solutions for Complex Workflows",
+          content:
+            "We build high-performance Windows applications for demanding environments, supporting real-time data, hardware integration, and advanced interfaces while ensuring long-term maintainability.",
+        },
+        {
+          title: "Cloud & DevOps Automation",
+          content:
+            "We build secure, scalable cloud infrastructure with automated CI/CD pipelines ensuring your .NET applications run reliably while your team focuses on innovation, not operations.",
+        },
+        {
+          title: "IoT & Edge Computing",
+          content:
+            "We build .NET-based IoT solutions that process and sync data efficiently, even in low-connectivity environments enabling real-time visibility and seamless integration with modern analytics systems.",
         },
       ],
     },
@@ -69,9 +84,9 @@ export const techData = {
     },
     teamSection: {
       sectionLabel: "Our .NET Software Development Team",
-      heading: "Why tech leaders choose our .NET development teams:",
+      heading: "Why tech leaders choose us?",
       description:
-        "We have built a reputation for delivering compliant, mission-critical .NET solutions.",
+        "We deliver mission-critical .NET solutions with consistent speed and reliability, integrating seamlessly with your in-house teams to drive dependable outcomes.",
       highlights: [
         "Top 1% .NET Developers",
         "Immediate Impact",
@@ -92,129 +107,113 @@ export const techData = {
           "id": 1,
           "icon": "MdOutlineVerified",
           "title": "Top 1% Senior .NET Talent",
-          "content": "Our .NET experts have an average of 10+ years of experience in enterprise application development, microservices architecture, cloud integration, and legacy modernization. Every engineer passes a multi-stage evaluation covering distributed systems, high-concurrency patterns, and secure cloud design."
+          "content": "We bring in highly vetted engineers with deep expertise in scalable architecture, high-concurrency systems, and secure cloud design averaging 10+ years of experience."
         },
         {
           "id": 2,
           "icon": "LuLayoutDashboard",
-          "title": "Production-Grade .NET Delivery",
-          "content": "We ensure .NET solutions are scalable, reliable, and production-ready. Our teams follow best engineering practices, CI/CD pipelines, and rigorous testing to deliver enterprise-grade systems that meet strict uptime and compliance demands."
+          "title": "Immediate Impact",
+          "content": "We onboard senior .NET experts in as little as 2 weeks, enabling them to quickly understand your systems and start delivering real value from day one."
         },
         {
           "id": 3,
           "icon": "MdLockOutline",
-          "title": "Security, Governance, and Compliance",
-          "content": "We prioritize security, regulatory compliance, and governance frameworks. Our .NET systems align with enterprise standards including HIPAA, SOC 2, and GDPR, ensuring safety and transparency for regulated industries."
+          "title": "Compliance Expertise",
+          "content": "We embed compliance into your platform from day one, using pre-built frameworks and secure architectures reducing audit time and ensuring readiness for regulated environments."
         }
       ]
     },
     caseStudies: {
       sectionLabel: ".NET Case Studies",
-      heading: "Hundreds of .NET projects delivered.",
+      heading: "Hundreds of successful .NET projects delivered.",
     },
     faq: {
       sectionLabel: ".NET FAQ",
-      heading: "What tech leaders ask about .NET before pulling us in:",
+      heading: "What decision-makers ask before starting .NET projects.",
       items: [
         {
           question:
-            "How senior are your .NET engineers, and will we work directly with them?",
+            "How senior are your .NET engineers? Will we work directly with them?",
           answer:
-            "Our .NET engineers average 10+ years of experience, bringing deep technical expertise to every project. You will work directly with our senior engineers. No intermediaries or juniors.",
+            "Our engineers bring 10+ years of experience and work with you directly, no juniors, no intermediaries, just senior experts focused on solving real business challenges.",
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev talent the top 1%?",
+          question: "What makes your .NET talent the top 1%?",
           answer:
-            "We apply a rigorous multi-stage vetting process that evaluates technical depth, communication skills, and real-world problem-solving. Less than 1% of applicants make it through.",
+            "We rigorously vet thousands of candidates, selecting less than 1% through in-depth technical evaluations and real-world project assessments along with strong communication and collaboration skills.",
         },
         {
-          question: "How fast can you staff a team?",
+          question: "How quickly can you staff a team?",
           answer:
-            "We can have a fully vetted engineer ready to start within two weeks of your request, and full teams typically onboard within a month.",
-        },
-        {
-          question:
-            "How do you ensure our team can own and maintain the software you build?",
-          answer:
-            "We document thoroughly, follow your internal coding standards, and conduct knowledge-transfer sessions. Our goal is always to leave your team fully capable of owning the codebase.",
+            "We typically onboard engineers within 2–4 weeks, quickly adding capacity without disrupting your existing team.",
         },
         {
           question:
-            "What's your approach to building software for regulated industries?",
+            "How do you ensure our team can maintain the software?",
           answer:
-            "We have deep experience in finance, healthcare, and other regulated verticals. Our engineers are fluent in compliance requirements like HIPAA, SOC 2, and GDPR.",
-        },
-        {
-          question: "Do you offer standalone .NET QA and testing services?",
-          answer:
-            "Yes. We can provide dedicated QA engineers who specialize in .NET testing frameworks — unit, integration, end-to-end, and performance testing.",
-        },
-        {
-          question: "How do you integrate with our existing DevOps toolchain?",
-          answer:
-            "We adapt to your stack. Whether you're using Azure DevOps, GitHub Actions, Jenkins, or another CI/CD setup, our engineers integrate smoothly.",
+            "We deliver clean, well-documented code and share knowledge throughout so your team can confidently own and evolve the system long after delivery.",
         },
         {
           question:
-            "What's your approach to migrating a legacy .NET Framework application?",
+            "What’s your approach for regulated industries?",
           answer:
-            "We start with an assessment of the existing architecture, identify risk areas, and plan incremental migration milestones using a strangler-fig approach.",
+            "We embed compliance into every step ensuring audit-ready systems with strong controls for security, testing, and data protection, aligned with standards like HIPAA, SOC 2, and ISO.",
         },
       ],
 
     },
     "ecosystem": {
       "sectionLabel": "Tools for .NET Development",
-      "heading": "The ecosystem we use for .NET projects:",
-      "description": "We deliver .NET solutions on a disciplined ecosystem designed for stability and trust. Dependencies are versioned and scanned. Practices are codified in shared runbooks. And every build is traceable.",
+      "heading": "A disciplined, reliable ecosystem",
+      "description": "We build .NET solutions on a structured stack where dependencies are managed, security is enforced, and every build remains traceable ensuring stability and long-term trust.",
       "items": [
         {
           "label": "Core Frameworks",
-          "description": "We build on Long-Term Support (LTS) releases to guarantee years of stability and security. Our development process leverages a mature ecosystem to deliver deterministic, reproducible builds.",
+          "description": "We build on LTS releases to ensure long-term stability, security, and performance—enabling modern, cross-platform development without vendor lock-in.",
           "tags": [".NET", "C#", "F#", "ASP.NET Core", "Blazor", "Entity Framework Core", "Dapper"]
         },
         {
           "label": "Build & Dependency Management",
-          "description": "Our development process leverages a mature ecosystem to deliver deterministic, reproducible builds that secure your software supply chain. This eliminates deployment risks and ensures every component of your .NET software is auditable and consistent.",
+          "description": "We ensure secure, reproducible builds with a structured ecosystem—reducing deployment risks and maintaining full consistency across your .NET applications.",
           "tags": ["MSBuild", "NuGet", "Paket", "Cake", "Nuke"]
         },
         {
           "label": "Quality Assurance",
-          "description": "We enforce rigorous QA practices including unit, integration, and end-to-end testing across all .NET projects. Every release is gated by automated quality checks.",
-          "tags": ["xUnit", "NUnit", "MSTest", "SpecFlow", "Playwright"]
+          "description": "We rely on automated testing and industry-standard tools to detect issues early reducing risk and ensuring stable, high-quality software.",
+          "tags":["xUnit","NUnit","MSTest","SpecFlow","Playwright","BDDfy","FluentAssertions","ApprovalTests","Coverlet","ReportGenerator","SonarQube","NDepend","Roslyn Analyzers"]
         },
         {
           "label": "Observability & Performance",
-          "description": "We instrument .NET applications for full-stack observability including distributed tracing, structured logging, and real-time performance dashboards.",
-          "tags": ["OpenTelemetry", "Serilog", "Datadog", "Prometheus", "Grafana"]
+          "description": "We use vendor-neutral standards to monitor system health and optimize performance ensuring flexibility and reliable insights across any environment.",
+         "tags": ["OpenTelemetry","Serilog","Datadog","Prometheus","Grafana","Application Insights","dotTrace","dotMemory","PerfView","BenchmarkDotNet"]
         },
         {
           "label": "DevOps & CI/CD",
-          "description": "We integrate seamlessly with your existing DevOps toolchain and build repeatable, auditable deployment pipelines tailored to your organization's workflows.",
-          "tags": ["Azure DevOps", "GitHub Actions", "Jenkins", "Octopus Deploy", "ArgoCD"]
+          "description": "We implement automated pipelines with Infrastructure as Code to ensure reliable, repeatable deployments reducing errors and accelerating time to market.",
+         "tags": ["GitHub Actions","Azure DevOps","GitLab CI","Docker","Podman","Terraform","Pulumi","Helm","Kustomize"]
         },
         {
           "label": "Data & Analytics Services",
-          "description": "We design data-intensive .NET solutions using modern database technologies and analytics platforms to support reporting, ML pipelines, and real-time processing.",
-          "tags": ["SQL Server", "PostgreSQL", "CosmosDB", "Databricks", "Power BI"]
+          "description": "We use scalable, managed data platforms to deliver cost-effective analytics with minimal operational overhead built to grow with your business.",
+          "tags": ["SQL Server","PostgreSQL","MongoDB","Redis","Kafka","Elasticsearch","OpenSearch"]
         },
         {
           "label": "Containerization & Orchestration",
-          "description": "We containerize .NET workloads and orchestrate them at scale, enabling teams to deploy with confidence across cloud-native and hybrid environments.",
-          "tags": ["Docker", "Kubernetes", "Helm", "Azure AKS", "AWS EKS"]
+          "description": "We build cloud-agnostic, scalable systems with Kubernetes ensuring resilience, auto-scaling, and freedom from vendor lock-in.",
+         "tags": ["Istio","Linkerd","KEDA"]
         },
         {
           "label": "Security & Compliance Tooling",
-          "description": "Security is built in from day one. We integrate static analysis, dependency scanning, and compliance controls into every .NET project we deliver.",
-          "tags": ["SonarQube", "OWASP ZAP", "Snyk", "Veracode", "Azure Policy"]
+          "description": "We embed security directly into development workflows automating compliance readiness and strengthening your software supply chain from day one.",
+          "tags": ["Snyk","Mend","Vault","Azure Key Vault","AWS KMS","Syft","Cosign"]
         }
       ]
     },
     "testimonialsSection": {
       "sectionLabel": "Client Testimonials",
-      "heading": "Get .NET results you can stand behind.",
-      "subheading": "Our work holds up in reviews, in production, and in front of the board.",
+      "heading": ".NET results you can confidently stand behind.",
+      "subheading": "Proven in production, validated by clients, and trusted at every level.",
       "showMoreButtonText": "Show More Testimonials",
       "leftColumn": [
         {
@@ -291,6 +290,7 @@ export const techData = {
       "cta": {
         "title": "Join 500+ companies who count on our .NET developers",
         "buttonText": "Schedule a Call",
+        "buttonLink": "/schedule-a-call-page",
         "avatarColors": ["#f97316", "#3b82f6", "#10b981", "#8b5cf6", "#ef4444", "#f59e0b"]
       },
 
@@ -298,26 +298,29 @@ export const techData = {
     caseStudies: {
       sectionLabel: ".NET Case Studies",
       heading: "Hundreds of .NET projects delivered.",
-      description: "We build CMS solutions that support editorial teams, campaign launches, and long-term digital growth without sacrificing maintainability.",
+      description: "We build high-performance, secure, and compliant applications from payment systems to healthcare platforms designed to run reliably for years.",
       cards: [
         {
-          tag: "MEDIA",
-          title: "Built a Multi-Site CMS Platform for Faster Publishing",
-          description: "Delivered reusable content models and publishing workflows for a growing media brand.",
+          tag: "MEDIA & ENTERTAINMENT",
+          title: "Modernized Global News Delivery Platform",
+          description: "We migrated a large-scale legacy system to a modern .NET platform, enabling dynamic, API-driven content delivery and improving performance across web, mobile, and social channels.",
+          technologies: [".NET","C#","SQL Server", "Salesforce"],
           image: "/logos/office1.jpg",
-          href: "/case-studies/media-platform" // optional
+          href: "https://www.openai.com"
         },
         {
-          tag: "ECOMMERCE",
-          title: "Migrated Legacy CMS Workflows to a Headless Stack",
-          description: "Improved flexibility for marketing teams while supporting modern frontend delivery.",
+          tag: "E-LEARNING & TRAINING",
+          title: "Scaled LMS with System Integration",
+          description: "We integrated core platforms to streamline workflows and accelerate LMS development. The solution improved efficiency across support and engineering, enabling faster innovation at scale.",
+          technologies: [".NET","C#","SQL Server", "Salesforce","Java","ServiceNow",],
           image: "/logos/office2.jpg",
           href: "/case-studies/ecommerce-migration"
         },
         {
-          tag: "ENTERPRISE",
-          title: "Centralized Content Operations Across Regional Teams",
-          description: "Created a governed CMS setup that scaled across multiple markets and editorial groups.",
+          tag: "AGRICULTURE & TECHNOLOGY",
+          title: "Modernized AgTech Platform",
+          description: "We transformed a legacy system into a modern MVC-based platform, improving performance, code quality, and user experience while enabling faster feature delivery.",
+          technologies: [".NET","Xamarin"],
           image: "/logos/office3.jpg",
           href: "/case-studies/enterprise-content"
         },

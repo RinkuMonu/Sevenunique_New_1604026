@@ -228,7 +228,8 @@ export default function TestimonialSection({ data }) {
                 <div className="mt-5 w-fit overflow-hidden rounded-[8px] border bg-[#2563eb]">
                   <button
                     type="button"
-                    className="relative z-10 inline-flex rounded-[8px] px-5 py-3 text-[15px] font-semibold text-white"
+                    onClick={() => window.open(cta.buttonLink, "_blank")}
+                    className="relative z-10 inline-flex rounded-[8px] px-5 py-3 text-[15px] font-semibold text-white cursor-pointer"
                   >
                     <span className="relative z-10">{cta.buttonText || "Schedule a Call"}</span>
                   </button>

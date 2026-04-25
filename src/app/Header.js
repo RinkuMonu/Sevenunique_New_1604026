@@ -164,7 +164,7 @@ const aboutCols = [
   {
     label: "Careers",
     items: [
-      { name: "Working at BairesDev", path: "/Working-at-BairesDev" },
+      { name: "Working-at-Sevenunique", path: "/Working-at-Sevenunique" },
       { name: "Job Opportunities", path: "/jobOp" },
       { name: "Talent Referrals", path: "/ReferralPageAbout" },
       { name: "Our Circles Program", path: "/circle" },

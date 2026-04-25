@@ -6,7 +6,7 @@ import Link from "next/link";
 const technologies = [
   // A
   { name: "AI",                   slug: "ai",                   category: "Data Science",   color: "#7C3AED", logo: null,                                              textLogo: "Artificial\nIntelligence", textColor: "#7C3AED" },
-  { name: "Amazon Web Services",  slug: "amazon-web-services",  category: "Cloud Computing",color: "#FF9900", logo: "https://cdn.simpleicons.org/amazonaws/FF9900" },
+  { name: "Amazon Web Services",  slug: "aws",                  category: "Cloud Computing",color: "#FF9900", logo: "https://cdn.simpleicons.org/amazonaws/FF9900" },
   { name: "Android",              slug: "android",              category: "Mobile",         color: "#3DDC84", logo: "https://cdn.simpleicons.org/android/3DDC84" },
   { name: "Angular",              slug: "angular",              category: "JavaScript",     color: "#DD0031", logo: "https://cdn.simpleicons.org/angular/DD0031" },
   { name: "API",                  slug: "api",                  category: "JavaScript",     color: "#FF6B35", logo: null,                                              textLogo: "API",                      textColor: "#FF6B35" },
@@ -127,7 +127,7 @@ function FloatingCard({ tech, style }) {
 
   return (
     <div
-      className="absolute bg-white rounded-2xl shadow-md border border-gray-100 px-4 py-3
+      className="absolute bg-white rounded-2xl shadow-md border border-gray-100 px-6 py-6
                  flex items-center gap-2.5 opacity-60 pointer-events-none select-none"
       style={style}
     >
@@ -136,7 +136,7 @@ function FloatingCard({ tech, style }) {
         <img
           src={tech.logo}
           alt={tech.name}
-          className="w-6 h-6 object-contain"
+          className="w-10 h-10 object-contain"
           onError={() => setErrored(true)}
         />
       ) : (
