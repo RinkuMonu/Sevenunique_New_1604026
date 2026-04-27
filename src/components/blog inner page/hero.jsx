@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const latestPosts = [
   {
@@ -75,7 +76,7 @@ export default function HeroSection() {
           </h2>
           <div className="flex flex-col gap-3">
             {latestPosts.map((post) => (
-              <a
+              <div
                 key={post.id}
                 href="#"
                 className="flex items-center gap-3 group  bg-gray-100"
@@ -90,9 +91,9 @@ export default function HeroSection() {
                 {/* className={`w-16 h-12 rounded flex-shrink-0 ${post.color} flex items-center justify-center overflow-hidden`}
                 ></Image> */}
                 <p className="text-md text-gray-700 leading-snug group-hover:underline transition-colors line-clamp-3">
-                  {post.title}
+                  <Link href="/blogDetails">{post.title}</Link>
                 </p>
-              </a>
+              </div>
             ))}
           </div>
         </div>

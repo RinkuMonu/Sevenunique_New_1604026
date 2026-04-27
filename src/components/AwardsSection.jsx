@@ -25,11 +25,13 @@ export default function AwardsSection() {
             <h2 className="text-4xl lg:text-5xl font-semibold leading-tight mb-6 text-white">
               <span className="text-[#f4622a]">Excellence </span>
               <br />
-              is our <br />
-              standard.            </h2>
+              By <br />
+              Default.            </h2>
 
             <p className="text-white/60 text-sm leading-relaxed mb-8 max-w-sm">
-              We’ve earned 130+ awards and recognitions that reflect our commitment to delivering real client success.
+            The standard we deliver every time.
+130+ awards highlight our focus on quality and long-term client value.
+
 
             </p>
 

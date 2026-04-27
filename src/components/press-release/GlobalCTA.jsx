@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import Image from "next/image";
 
 export default function GlobalCTA() {
@@ -26,9 +26,11 @@ export default function GlobalCTA() {
         </h2>
 
         {/* BUTTON */}
-        <button className="mt-8 bg-[#2bb673] hover:bg-[#249e62] text-white px-6 py-3 rounded-md text-sm font-medium transition">
-          Schedule a Call
-        </button>
+        <Link href="/schedule-a-call-page">
+  <button className="mt-8 bg-[#2bb673] hover:bg-[#249e62] text-white px-6 py-3 rounded-md text-sm font-medium transition cursor-pointer">
+    Schedule a Call
+  </button>
+</Link>
 
       </div>
     </section>

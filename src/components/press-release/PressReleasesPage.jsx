@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import { ChevronRight, ChevronLeft, Home } from "lucide-react";
@@ -97,7 +97,9 @@ export default function PressReleasesPage() {
         <div className="flex items-center gap-2 text-sm text-gray-500 mb-6">
           <Home size={16} />
           <ChevronRight size={16} />
-          <span>Press</span>
+          <Link href="/media-hub">
+  <span className="cursor-pointer">Press</span>
+</Link>
           <ChevronRight size={16} />
           <span className="text-black font-medium">Press Releases</span>
         </div>

@@ -1,34 +1,39 @@
+"use client"
+import { MailIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiMail, FiPhone } from "react-icons/fi";
 
 export default function Footer() {
   const discoverLinks = [
-    "About Us",
-    "Methodologies",
-    "Technologies",
-    "Certifications",
-    "Software Development Services",
-    "Software Development Solutions",
-    "Dedicated Software Development Teams",
-    "Staff Augmentation",
-    "Software Development Outsourcing",
-    "Diversity",
-    "Social Responsibility",
-    "Senior Advisor Program",
+    { name: "Technologies", to: "/technologies" },
+    { name: "Certifications", to: "/certifications" },
+    { name: "Software Development Services", to: "/services" },
+    { name: "Working at sevenunique", to: "/Working-at-BairesDev" },
+    { name: "Backend Development", to: "/services/backend-development" },
+    { name: "Business Intelligence", to: "/services/backend-development" },
+    { name: "Finance", to: "/industries/insurance" },
+    { name: "Travel and Hospitality", to: "/industries/travel-hospitality" },
+    { name: "Company Culture", to: "/culture" },
+    { name: "Job Opportunities", to: "jobOp" },
   ];
 
   const resourceLinks = [
-    "Case Studies",
-    "AI Learning Hub",
-    "Blog",
-    "Press",
-    "Industries Insights",
-    "Technology Resource Center",
-    "Client Referral Program",
-    "Fellows Program",
+    { name: "Case Studies", to: "/google-case-study" },
+    { name: "AI Development", to: "/services/ai-development" },
+    { name: "Blog", to: "/blog" },
+    { name: "About us", to: "/about-us" },
+    { name: "Industries Insights", to: "/industries" },
+    { name: "Technology Resource Center", to: "/technologies" },
+    { name: "Client Referral Program", to: "/ReferralPageAbout" },
+    { name: "Our Work", to: "/our-work-page" },
   ];
 
   return (
@@ -40,8 +45,7 @@ export default function Footer() {
               <Link href="#" aria-label="BairesDev">
                 <Image
                   // src="https://assets.bairesdev.com//image/upload/c_limit,w_60/fl_sanitize/v1/www/static/bairesdev-logo-footer_wbvcp2.svg"
-                              src="/sevenLogo.png"
-
+                  src="/sevenLogo.png"
                   alt="BairesDev"
                   width={170}
                   height={160}
@@ -54,10 +58,10 @@ export default function Footer() {
                 Discover Sevenunique.
               </h3>
               <ul className="space-y-2 text-sm leading-5 text-[#202124]">
-                {discoverLinks.map((item) => (
-                  <li key={item}>
-                    <Link href="#" className="hover:underline">
-                      {item}
+                {discoverLinks.map((item, i) => (
+                  <li key={i}>
+                    <Link href={item.to || "/"} className="hover:underline">
+                      {item.name || ""}
                     </Link>
                   </li>
                 ))}
@@ -69,10 +73,10 @@ export default function Footer() {
                 Resources.
               </h3>
               <ul className="space-y-2 text-sm leading-5 text-[#202124]">
-                {resourceLinks.map((item) => (
-                  <li key={item}>
-                    <Link href="#" className="hover:underline">
-                      {item}
+                {resourceLinks.map((item, i) => (
+                  <li key={i}>
+                    <Link href={item.to} className="hover:underline">
+                      {item.name}
                     </Link>
                   </li>
                 ))}
@@ -85,12 +89,12 @@ export default function Footer() {
               </h3>
               <ul className="space-y-2 text-sm leading-5 text-[#202124]">
                 <li>
-                  <Link href="#" className="hover:underline">
+                  <Link href="/jobOp" className="hover:underline">
                     Job Opportunities
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:underline">
+                  <Link href="/ReferralPageAbout" className="hover:underline">
                     Talent Referrals
                   </Link>
                 </li>
@@ -100,19 +104,19 @@ export default function Footer() {
 
           <div className="mt-14 text-xs text-[#202124]">
             <div className="flex flex-wrap items-center gap-2">
-              <Link href="#" className="hover:underline">
+              <Link href="/privacy-policy" className="hover:underline">
                 Privacy Policy
               </Link>
               <span>|</span>
-              <Link href="#" className="hover:underline">
+              <Link href="/termsAndCondition" className="hover:underline">
                 Terms of Service
               </Link>
               <span>|</span>
-              <Link href="#" className="hover:underline">
+              {/* <Link href="#" className="hover:underline">
                 Do Not Sell My Personal Information
-              </Link>
+              </Link> */}
             </div>
-            <p className="mt-5">Sevenunique 2009 - 2026. All rights reserved.</p>
+            <p className="mt-5">Sevenunique 2026. All rights reserved.</p>
           </div>
         </div>
 
@@ -123,10 +127,16 @@ export default function Footer() {
             </h3>
 
             <div className="mb-4 flex flex-wrap gap-3">
-              <Link href="/schedule-a-call-page" className="rounded-md border-[2px] border-black bg-transparent px-5 py-2 text-[16px] font-medium leading-none">
+              <Link
+                href="/contact-us"
+                className="rounded-md border-[2px] border-black bg-transparent px-5 py-2 text-[16px] font-medium leading-none"
+              >
                 Contact Us
               </Link>
-              <Link href="/schedule-a-call-page" className="rounded-md bg-[#ff5b1f] px-2 py-2 text-[16px] font-semibold leading-none text-white">
+              <Link
+                href="/schedule-a-call-page"
+                className="rounded-md bg-[#ff5b1f] px-2 py-2 text-[16px] font-semibold leading-none text-white"
+              >
                 Schedule a Call &rarr;
               </Link>
             </div>
@@ -135,35 +145,22 @@ export default function Footer() {
               <FiPhone className="text-lg" />
               0141-4511098
             </p>
+            <p className="flex items-center gap-2 text-[16px] leading-none mt-4">
+              <MailIcon className="text-lg" />
+              info@7unique.in
+            </p>
           </div>
 
-          <div className="mt-14">
-            <p className="max-w-[300px] text-[12px] font-semibold leading-tight">
-              Get insights from the experts on building and scaling technology teams.
+          <div className="mt-14 max-w-sm">
+            <p className="text-sm font-semibold text-gray-800 mb-2">
+              Office Address
             </p>
 
-            <div className="mt-5 flex gap-3">
-              <input
-                type="email"
-                placeholder="name@email.com"
-                className="w-full rounded-md border border-black/40 bg-white px-4 py-3 text-sm placeholder:text-[#818181] focus:outline-none"
-              />
-              <button className="inline-flex items-center bg-[#d9dcdf] text-black gap-2 rounded-md border-[2px] border-black  px-4 py-3 text-sm font-medium">
-                Subscribe
-                <FiMail />
-              </button>
-            </div>
-
-            <label className="mt-4 flex items-start gap-2 text-xs">
-              <input type="checkbox" className="mt-0.5 size-4" />
-              <span>
-                By subscribing I accept the{" "}
-                <Link href="#" className="underline hover:no-underline">
-                  Privacy Policy
-                </Link>
-                .
-              </span>
-            </label>
+            <p className="text-gray-600 text-[14px] leading-relaxed">
+              Plot No. 97, Dakshinpuri - I <br />
+              Shrikishan, Sanganer, Jagatpura <br />
+              Jaipur, Rajasthan, India - 302017
+            </p>
           </div>
 
           <div className="mt-16">
@@ -171,17 +168,33 @@ export default function Footer() {
               Follow us.
             </h3>
             <div className="mt-5 flex items-center gap-6 text-lg">
-              <Link href="https://www.linkedin.com/in/sevenuniquetechsolution/" aria-label="LinkedIn" className="hover:opacity-70">
-                <FaLinkedinIn />
+              <Link
+                href="https://www.linkedin.com/in/sevenuniquetechsolution/"
+                aria-label="LinkedIn"
+                className="hover:opacity-70"
+              >
+                <FaLinkedinIn className="hover:text-orange-600 " />
               </Link>
-              <Link href="https://www.facebook.com/people/SevenUnique-Tech-Solutions-Pvtltd/61556669918427/" aria-label="Facebook" className="hover:opacity-70">
-                <FaFacebookF />
+              <Link
+                href="https://www.facebook.com/people/SevenUnique-Tech-Solutions-Pvtltd/61556669918427/"
+                aria-label="Facebook"
+                className="hover:opacity-70"
+              >
+                <FaFacebookF className="hover:text-orange-600 " />
               </Link>
-              <Link href="https://x.com/Sevenuniqu42041" aria-label="X" className="hover:opacity-70">
-                <FaXTwitter />
+              <Link
+                href="https://x.com/Sevenuniqu42041"
+                aria-label="X"
+                className="hover:opacity-70"
+              >
+                <FaXTwitter className="hover:text-orange-600 " />
               </Link>
-              <Link href="https://www.instagram.com/sevenuniquetech/?hl=en" aria-label="Instagram" className="hover:opacity-70">
-                <FaInstagram />
+              <Link
+                href="https://www.linkedin.com/in/sevenuniquetechsolution/"
+                aria-label="Instagram"
+                className="hover:opacity-70"
+              >
+                <FaInstagram className="hover:text-orange-600 " />
               </Link>
               {/* <Link href="#" aria-label="Youtube" className="hover:opacity-70">
                 <FaYoutube />

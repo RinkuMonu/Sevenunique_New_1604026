@@ -45,7 +45,10 @@ export default function ClientsSection() {
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Card 1 */}
-          <Link href="/google-case-study" className="relative rounded-2xl overflow-hidden group">
+          <Link
+            href="/google-case-study"
+            className="relative rounded-2xl overflow-hidden group"
+          >
             <Image
               src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/google_i0edsb?_a=BAVAfVDW0"
               alt="Google"
@@ -69,7 +72,9 @@ export default function ClientsSection() {
               className="w-full h-[350px] object-cover group-hover:scale-105 transition duration-500"
             />
             <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-6">
-              <h3 className="text-white text-xl font-semibold">ROLLS ROYCE</h3>
+              <h3 className="text-white text-xl font-semibold">
+                <Link href="/google-case-study">ROLLS ROYCE</Link>
+              </h3>
               <p className="text-white text-sm mt-1">Case study →</p>
             </div>
           </div>
@@ -87,7 +92,7 @@ export default function ClientsSection() {
               <h3 className="text-white text-xl font-semibold uppercase">
                 Urban Outfitters
               </h3>
-              <p className="text-white text-sm mt-1">Case study →</p>
+              <Link href="/google-case-study">Case study →</Link>
             </div>
           </div>
         </div>

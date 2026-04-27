@@ -1,11 +1,13 @@
-import PressReleasesPage from "@/components/press-release/PressReleasesPage";
 import PressFooterInfo from "@/components/press-release/PressFooterInfo";
+import GlobalCTA from "@/components/press-release/GlobalCTA";
+import News from "./News";
 
 export default function PressRelease() {
   return (
     <div>
-      <PressReleasesPage />
+      <News />
       <PressFooterInfo />
+      <GlobalCTA />
     </div>
   );
 }

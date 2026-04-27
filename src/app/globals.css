@@ -1,4 +1,4 @@
-@import "tailwindcss";            
+@import "tailwindcss";
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -22,11 +22,23 @@ body {
   color: var(--foreground);
   font-family: "outfit", sans-serif;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
   }
- 
+
   body {
     @apply bg-white text-[#1a1a18];
   }
@@ -109,4 +121,3 @@ body {
     transform: translateY(0);
   }
 }
-
