@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { MdLockOutline, MdOutlineVerified } from "react-icons/md";
@@ -94,11 +94,16 @@ export default function AiTeamSection({ teamSection }) {
           </p>
 
           {/* BUTTON */}
-          <button className="bg-[#128662] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#127455] transition cursor-pointer">
+         
+
+          <Link
+            href="/schedule-a-call-page"
+            className="inline-block bg-[#128662] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#127455] transition cursor-pointer"
+          >
             <span className="font-bold text-[20px]">
               {teamSection?.buttonLabel || "Speak With Our Team"}
             </span>
-          </button>
+          </Link>
         </div>
 
         {/* RIGHT SIDE */}
@@ -111,20 +116,19 @@ export default function AiTeamSection({ teamSection }) {
                 key={tab.id || tab.title}
                 onClick={() => setActiveTab(tab.id || index + 1)}
                 className={`cursor-pointer border rounded-xl p-5 w-full transition-all duration-300
-                  ${
-                    activeTab === (tab.id || index + 1)
-                      ? "border-orange-500"
-                      : "border-gray-300 hover:border-orange-400"
+                  ${activeTab === (tab.id || index + 1)
+                    ? "border-orange-500"
+                    : "border-gray-300 hover:border-orange-400"
                   }`}
               >
                 {(() => {
-                 const Icon = tab.icon || MdOutlineVerified; // fallback icon
+                  const Icon = tab.icon || MdOutlineVerified; // fallback icon
 
-return (
-  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#f5f6f7]">
-    <Icon className="h-6 w-6 text-orange-500" />
-  </div>
-);
+                  return (
+                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#f5f6f7]">
+                      <Icon className="h-6 w-6 text-orange-500" />
+                    </div>
+                  );
                 })()}
                 <p className="font-medium text-black text-sm leading-snug">
                   {tab.title}

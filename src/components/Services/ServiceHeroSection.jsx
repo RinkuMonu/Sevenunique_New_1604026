@@ -1,4 +1,9 @@
-﻿function renderHighlightedHeading(heading) {
+﻿"use client";
+
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+
+function renderHighlightedHeading(heading) {
   if (!heading) return null;
 
   const match = heading.match(/\bAI\b/);
@@ -13,7 +18,9 @@
   return (
     <>
       {heading.slice(0, start)}
-      <span className="text-[#ff6433]">{heading.slice(start, end)}</span>
+      <span className="text-[#ff6433]">
+        {heading.slice(start, end)}
+      </span>
       {heading.slice(end)}
     </>
   );
@@ -21,11 +28,57 @@
 
 export default function ServiceHeroSection({ data }) {
   const hero = data?.hero;
+  const router = useRouter();
+
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({});
 
   if (!hero) return null;
 
   const breadcrumb = hero.breadcrumb || [];
   const rating = hero.rating || {};
+
+  // ✅ Handle input change
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.id]: e.target.value });
+  };
+
+  // ✅ Validation function
+  const validate = () => {
+    const newErrors = {};
+
+    if (!form.name.trim()) {
+      newErrors.name = "Name is required";
+    }
+
+    if (!form.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(form.email)) {
+      newErrors.email = "Invalid email format";
+    }
+
+    if (!form.message.trim()) {
+      newErrors.message = "Message is required";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  // ✅ Handle submit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (validate()) {
+      // 🔗 Redirect after success
+      router.push("/schedule-a-call-page");
+    }
+  };
 
   return (
     <section className="bg-[#f1f2f4] px-6 py-12 md:px-10 md:py-16">
@@ -35,7 +88,9 @@ export default function ServiceHeroSection({ data }) {
           <span>{">"}</span>
           <span>{breadcrumb[0]}</span>
           <span>{">"}</span>
-          <span className="font-semibold text-black">{breadcrumb[1]}</span>
+          <span className="font-semibold text-black">
+            {breadcrumb[1]}
+          </span>
         </div>
 
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.7fr)_minmax(340px,0.9fr)] lg:gap-12">
@@ -65,7 +120,9 @@ export default function ServiceHeroSection({ data }) {
                     {"*****"}
                   </span>
                 </div>
-                <p className="mt-1 text-sm text-[#2f4057]">{rating.reviews}</p>
+                <p className="mt-1 text-sm text-[#2f4057]">
+                  {rating.reviews}
+                </p>
               </div>
 
               <div className="hidden h-16 w-px bg-[#cfd5dd] md:block" />
@@ -84,55 +141,65 @@ export default function ServiceHeroSection({ data }) {
                 {hero.formTitle}
               </h2>
 
-              <form className="space-y-6">
+              {/* ✅ Form with submit handler */}
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div>
-                  <label
-                    htmlFor="service-name"
-                    className="mb-2 block text-[16px] font-medium text-[#26354a]"
-                  >
+                  <label className="mb-2 block text-[16px] font-medium text-[#26354a]">
                     Your name
                   </label>
                   <input
-                    id="service-name"
+                    id="name"
                     type="text"
                     placeholder="Full name"
-                    className="h-11 w-full rounded-[4px] border border-[#c9d0d8] bg-white px-4 text-[#111111] outline-none transition focus:border-[#ff6433]"
+                    onChange={handleChange}
+                    className="h-11 w-full rounded-[4px] border border-[#c9d0d8] bg-white px-4"
                   />
+                  {errors.name && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.name}
+                    </p>
+                  )}
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="service-email"
-                    className="mb-2 block text-[16px] font-medium text-[#26354a]"
-                  >
+                  <label className="mb-2 block text-[16px] font-medium text-[#26354a]">
                     Your email
                   </label>
                   <input
-                    id="service-email"
+                    id="email"
                     type="email"
                     placeholder="name@company.com"
-                    className="h-11 w-full rounded-[4px] border border-[#c9d0d8] bg-white px-4 text-[#111111] outline-none transition focus:border-[#ff6433]"
+                    onChange={handleChange}
+                    className="h-11 w-full rounded-[4px] border border-[#c9d0d8] bg-white px-4"
                   />
+                  {errors.email && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.email}
+                    </p>
+                  )}
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="service-message"
-                    className="mb-2 block text-[16px] font-medium text-[#26354a]"
-                  >
+                  <label className="mb-2 block text-[16px] font-medium text-[#26354a]">
                     What we can do for you?
                   </label>
                   <textarea
-                    id="service-message"
+                    id="message"
                     rows={4}
                     placeholder="Tell us about your needs."
-                    className="w-full rounded-[4px] border border-[#c9d0d8] bg-white px-4 py-3 text-[#111111] outline-none transition focus:border-[#ff6433]"
+                    onChange={handleChange}
+                    className="w-full rounded-[4px] border border-[#c9d0d8] bg-white px-4 py-3"
                   />
+                  {errors.message && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.message}
+                    </p>
+                  )}
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full rounded-[8px] bg-[#ff6433] px-6 py-4 text-[17px] font-semibold text-white transition hover:bg-[#ef5728]"
+                  className="w-full rounded-[8px] bg-[#ff6433] px-6 py-4 text-[17px] font-semibold text-white hover:bg-[#ef5728]"
                 >
                   Jump-start Your Project
                 </button>
@@ -143,4 +210,4 @@ export default function ServiceHeroSection({ data }) {
       </div>
     </section>
   );
-}
+} 

@@ -6,6 +6,9 @@ import Testimonials from "@/components/about-us/Testimonials";
 import AwardsSection from "@/components/about-us/AwardsSection";
 import LeadershipHighlight from "@/components/about-us/LeadershipHighlight";
 import MediaCoverage from "@/components/about-us/MediaCoverage";
+import CultureSection from "@/components/about-us/CultureSection";
+import TrustSection from "@/components/about-us/TrustSection";
+
 
 export default function AboutPage() {
   return (
@@ -17,6 +20,8 @@ export default function AboutPage() {
       <AwardsSection />
       <LeadershipHighlight />
       <MediaCoverage />
+      <CultureSection />
+     <TrustSection />
     </>
   );
 }

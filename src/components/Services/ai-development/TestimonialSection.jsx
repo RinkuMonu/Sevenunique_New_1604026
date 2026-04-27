@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import Image from "next/image";
 
 const leftTestimonials = [
@@ -287,13 +287,13 @@ export default function TestimonialSection() {
                                 Join 500+ companies building AI products with our engineers.
                             </p>
                             <div className="mt-5 w-fit overflow-hidden rounded-[8px] border bg-[#2563eb]">
-                                <button
-                                    type="button"
-                                    className="relative z-10 inline-flex rounded-[8px] px-5 py-3 text-[15px] font-semibold text-white"
-                                >
-                                    <span className="relative z-10">Schedule a Call</span>  
-                                </button>
-                            </div>
+  <Link
+    href="/schedule-a-call-page"
+    className="relative z-10 inline-flex rounded-[8px] px-5 py-3 text-[15px] font-semibold text-white"
+  >
+    <span className="relative z-10">Schedule a Call</span>
+  </Link>
+</div>
                             </div>
                         </div>
                     </div>

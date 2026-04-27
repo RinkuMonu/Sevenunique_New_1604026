@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import Image from "next/image";
 import { Outfit } from "next/font/google";
@@ -194,9 +195,12 @@ export default function AwardsSection() {
               Accelerate AI development and delivery with our top-rated nearshore teams.
             </h2>
 
-            <button className="bg-green-500 text-white text-sm px-4 py-2 rounded-md">
-              Schedule a call
-            </button>
+            <Link
+  href="/schedule-a-call-page"
+  className="inline-block bg-green-500 text-white text-sm px-4 py-2 rounded-md"
+>
+  Schedule a call
+</Link>
           </div>
 
         </div>

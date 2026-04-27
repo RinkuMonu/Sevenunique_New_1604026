@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function TestimonialHighlightSection({ testimonial }) {
   if (!testimonial) return null;
@@ -54,14 +55,19 @@ export default function TestimonialHighlightSection({ testimonial }) {
           </div>
         </div>
 
-        <div className="mt-6 flex justify-end pr-2">
-          <button className="flex items-center gap-2 text-[14px] font-medium text-black transition hover:text-[#f4622a]">
-            Watch {testimonial?.name}
-            {"'s "}
-            Testimonial
-            <span className="text-lg text-[#f4622a]">{">"}</span>
-          </button>
-        </div>
+        import Link from "next/link";
+
+<div className="mt-6 flex justify-end pr-2">
+  <Link
+    href={testimonial?.videoLink || "/testimonial-video"}
+    className="flex items-center gap-2 text-[14px] font-medium text-black transition hover:text-[#f4622a]"
+  >
+    Watch {testimonial?.name}
+    {"'s "}
+    Testimonial
+    <span className="text-lg text-[#f4622a]">{">"}</span>
+  </Link>
+</div>
 
         <div className="my-12 border-t border-gray-300"></div>
 
