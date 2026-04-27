@@ -16,7 +16,7 @@ export default function BestPracticesSection({ data }) {
   };
 
   return (
-    <section className="bg-white py-16">
+    <section id="best-practices" className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-6 flex gap-12">
         
         {/* LEFT CONTENT */}

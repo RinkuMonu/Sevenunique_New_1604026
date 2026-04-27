@@ -15,7 +15,7 @@ export default function FaqSection({ data }) {
   };
 
   return (
-    <section className="bg-white py-16">
+    <section id="faq" className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="grid grid-cols-12 gap-10">

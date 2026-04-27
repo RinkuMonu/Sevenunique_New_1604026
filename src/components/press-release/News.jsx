@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+
 import { useState } from "react";
 import Image from "next/image";
 import { ChevronRight, ChevronLeft, Home } from "lucide-react";
@@ -80,7 +80,7 @@ const data = [
 
 ];
 
-export default function PressReleasesPage() {
+export default function News() {
   const itemsPerPage = 6; // 2 rows × 3 columns (matches your layout)
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -97,16 +97,14 @@ export default function PressReleasesPage() {
         <div className="flex items-center gap-2 text-sm text-gray-500 mb-6">
           <Home size={16} />
           <ChevronRight size={16} />
-          <Link href="/media-hub">
-  <span className="cursor-pointer">Press</span>
-</Link>
+          <span>Press</span>
           <ChevronRight size={16} />
-          <span className="text-black font-medium">Press Releases</span>
+          <span className="text-black font-medium">In The News</span>
         </div>
 
         {/* TITLE */}
         <h1 className="text-3xl md:text-4xl font-semibold text-[#1f2937] mb-8">
-          Press Releases (132)
+          In The News (53)
         </h1>
 
         {/* GRID */}

@@ -58,36 +58,34 @@ const cards = [
 export default function TeamRolesSection() {
   return (
     <section className="relative py-28 overflow-hidden bg-[#f5f6f7] pb-45">
-
       {/* BIG CIRCLE BACKGROUND */}
       <div className="absolute inset-0 flex justify-center">
         <div className="w-[1400px] h-[1400px] bg-[#e9eaec] rounded-full" />
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-
         {/* HEADING */}
         <h2 className="text-[40px] font-semibold text-[#111827]">
           Need more than developers?
         </h2>
 
         <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-          In addition to devs, we also provide clients with designers,
-          product managers, QA specialists, and more.
+          In addition to devs, we also provide clients with designers, product
+          managers, QA specialists, and more.
         </p>
 
         {/* BUTTON */}
-        <button className="mt-6 bg-black text-white px-6 py-3 rounded-lg text-sm font-medium inline-flex items-center gap-2">
-          Assemble Your Team →
-        </button>
+        <Link href="/schedule-a-call-page">
+          <button className="mt-6 bg-black text-white px-6 py-3 rounded-lg text-sm font-medium inline-flex items-center gap-2 cursor-pointer">
+            Assemble Your Team →
+          </button>
+        </Link>
 
         {/* GRID */}
         <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-
           {cards.slice(0, 6).map((item, i) => (
             <Link key={i} href={item.link} className="group">
               <div className="bg-white rounded-[20px] shadow-md p-6 text-center relative cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-
                 {/* IMAGE */}
                 <div className="relative w-28 h-28 mx-auto mb-4">
                   <div
@@ -110,18 +108,15 @@ export default function TeamRolesSection() {
                 <p className="text-gray-600 mt-2 text-sm leading-[1.6]">
                   {item.desc}
                 </p>
-
               </div>
             </Link>
           ))}
-
         </div>
 
         {/* DEVOPS CARD */}
         <div className="mt-16 flex justify-center">
           <Link href={cards[6].link} className="group">
             <div className="bg-white rounded-[20px] shadow-md p-6 w-[280px] text-center relative cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-
               <div className="relative w-28 h-28 mx-auto mb-4">
                 <div className="absolute inset-0 rounded-md bg-green-300 rotate-6" />
                 <Image
@@ -140,11 +135,9 @@ export default function TeamRolesSection() {
               <p className="text-gray-600 mt-2 text-sm leading-[1.6]">
                 {cards[6].desc}
               </p>
-
             </div>
           </Link>
         </div>
-
       </div>
     </section>
   );

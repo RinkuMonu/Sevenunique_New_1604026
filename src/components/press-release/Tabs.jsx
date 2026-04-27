@@ -13,7 +13,7 @@ export default function Tabs({ activeTab, setActiveTab }) {
               key={index}
               onClick={() => setActiveTab(index)}
               className={`
-                px-6 py-3 text-base font-bold rounded-lg transition-all duration-200 
+                px-6 py-3 text-base font-bold rounded-lg transition-all duration-200 cursor-pointer 
                 ${
                   isActive
                     ? "bg-[#cfd4da] text-[#1f2937]"
