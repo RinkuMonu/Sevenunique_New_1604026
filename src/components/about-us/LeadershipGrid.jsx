@@ -60,7 +60,7 @@ export default function LeadershipGrid() {
 
               {/* CARD */}
               <div
-                className={`relative h-[220px] rounded-[20px] bg-gray-200 overflow-hidden transition-all duration-300 ${item.color}`}
+                className={`relative h-[220px] rounded-[20px] bg-gray-200 overflow-hidden transition-all duration-300 cursor-pointer ${item.color}`}
               >
                 <Image
                   src={item.img}

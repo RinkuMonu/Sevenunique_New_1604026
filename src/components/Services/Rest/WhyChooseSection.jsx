@@ -25,7 +25,7 @@ export default function WhyChooseSection({ data }) {
     image && image.trim() !== "" ? image : FALLBACK_IMAGE;
 
   return (
-    <section className="bg-white py-16">
+    <section id="why-choose-us" className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="grid grid-cols-12 gap-10">

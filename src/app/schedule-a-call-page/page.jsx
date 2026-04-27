@@ -33,7 +33,7 @@ export default function Page() {
           <main className="mt-8 md:mt-16 mb-16">
             <section className="space-y-10">
               {/* Heading */}
-              <div>
+              <div> 
                 <h2 className="text-[28px] md:text-[32px] text-gray-600 mb-3">
                   Want to discuss a project? Tell us more.
                 </h2>

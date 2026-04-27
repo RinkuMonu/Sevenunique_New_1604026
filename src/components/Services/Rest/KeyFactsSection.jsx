@@ -10,7 +10,7 @@ export default function KeyFactsSection({ data }) {
   const { tabs, content, sidebar } = data;
 
   return (
-    <section className="bg-white py-16">
+    <section id="key-facts" className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* HEADING */}
