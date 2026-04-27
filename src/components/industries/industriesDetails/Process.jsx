@@ -119,6 +119,7 @@
 
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Process({ data }) {
   return (
@@ -180,9 +181,12 @@ export default function Process({ data }) {
   </div>
 
   {/* BUTTON (outside line scope) */}
-  <button className="mt-[50px] bg-[#f45d2d] text-white px-7 py-[14px] rounded-lg">
-    Schedule a Call
-  </button>
+<Link
+  href="/schedule-a-call-page"
+  className="mt-[50px] inline-block bg-[#f45d2d] text-white px-7 py-[14px] rounded-lg hover:bg-[#e14f21] transition"
+>
+  Schedule a Call
+</Link>
 
 </div>
 

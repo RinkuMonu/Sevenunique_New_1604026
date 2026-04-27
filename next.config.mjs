@@ -26,6 +26,13 @@ const nextConfig = {
         hostname: "bairesdev.mo.cloudinary.net",
         pathname: "/**",
       },
+
+            {
+        protocol: "https",
+        hostname: "www.sevenunique.com",
+        pathname: "/**",
+      },
+
     ],
 
   },

@@ -22,7 +22,7 @@ export default function IndustryHero() {
           </h1>
 
           <p className="mt-4 text-lg text-gray-600">
-            We’ve completed 1480+ projects across 130+ industry sectors since 2009.
+            We’ve completed 1480+ projects across 130+ industry sectors since 2024.
           </p>
         </div>
 
