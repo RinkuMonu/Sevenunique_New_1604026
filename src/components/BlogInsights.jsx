@@ -22,6 +22,8 @@ const posts = [
       "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
     alt: "Magnifying glass over a software testing concept",
   },
+  
+  
 ];
 
 function SliderArrow({ direction = "left" }) {
@@ -48,7 +50,7 @@ export default function BlogInsights() {
             Our latest insights.
           </h2>
           <Link
-            href="/blog/history-of-ai"
+            href="/blog"
             className="inline-flex w-fit items-center gap-2 border-b border-[#1f1f1f] pb-1 text-[14px] font-medium text-[#1f1f1f] transition-colors hover:text-[#db6a43] hover:border-[#db6a43]"
           >
             Over 1,100 articles on technology and talent
@@ -72,7 +74,7 @@ export default function BlogInsights() {
                     <span aria-hidden className="text-[#f3672a] text-lg">
                       ◗◖
                     </span>
-                    By BairesDev Editorial Team
+                    By Sevenunique Editorial Team
                   </p>
                 </Link>
               </article>
