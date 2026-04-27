@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function WorkSection({ data }) {
   const tabs = data?.tabs || [];
@@ -12,8 +13,9 @@ export default function WorkSection({ data }) {
   const active = tabs[activeTab];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-white relative">
       <div className="max-w-7xl mx-auto px-6 text-center">
+
         {/* Top Section */}
         <p className="text-[11px] font-bold tracking-[0.2em] text-gray-500 uppercase mb-6">
           {data.eyebrow || "HOW WE WORK"}
@@ -27,7 +29,7 @@ export default function WorkSection({ data }) {
           {data.description}
         </p>
 
-        {/* Pills / Tabs */}
+        {/* Tabs */}
         <div className="flex flex-wrap justify-center gap-3 mb-12 max-w-4xl mx-auto">
           {tabs.map((tab, i) => (
             <button
@@ -39,7 +41,9 @@ export default function WorkSection({ data }) {
                   : "bg-[#f9fafb] border-[#eaecf0] text-[#344054] hover:bg-gray-100"
               }`}
             >
-              <span className={activeTab === i ? "text-[#079455]" : "text-gray-400"}>✓</span>
+              <span className={activeTab === i ? "text-[#079455]" : "text-gray-400"}>
+                ✓
+              </span>
               {tab.label}
             </button>
           ))}
@@ -48,10 +52,10 @@ export default function WorkSection({ data }) {
         {/* Main Card */}
         <div className="relative max-w-6xl mx-auto">
           <div className="bg-white border border-[#eaecf0] rounded-[24px] text-left shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden">
-            
-            {/* Card Content Area */}
+
+            {/* Content */}
             <div className="p-10 md:p-16 grid md:grid-cols-[1fr_1.5fr] gap-12 items-start">
-              {/* Left Column */}
+
               <div>
                 <p className="text-[10px] font-bold tracking-[0.15em] text-gray-400 uppercase mb-4">
                   {active.title}
@@ -61,7 +65,6 @@ export default function WorkSection({ data }) {
                 </h3>
               </div>
 
-              {/* Right Column with Vertical Divider */}
               <div className="flex gap-10">
                 <div className="hidden md:block w-[1px] bg-gray-100 self-stretch"></div>
                 <p className="text-[#475467] text-base md:text-lg leading-relaxed">
@@ -70,16 +73,19 @@ export default function WorkSection({ data }) {
               </div>
             </div>
 
-            {/* Footer Strip (The greenish area) */}
-            <div className="bg-[#f0fdf9] px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-6 border-t border-[#eaecf0]">
-              
+            {/* Footer */}
+            <div className="relative z-10 bg-[#f0fdf9] px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-6 border-t border-[#eaecf0]">
+
+              {/* Left */}
               <div className="flex items-center gap-4">
-                {/* Expert Avatars */}
                 <div className="flex -space-x-2.5">
                   {[1, 2, 3, 4, 5, 6].map((idx) => (
-                    <div key={idx} className="relative w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-gray-200">
+                    <div
+                      key={idx}
+                      className="relative w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-gray-200"
+                    >
                       <Image
-                        src={`/images/man${(idx % 3) + 1}.png`} 
+                        src={`/images/man${(idx % 3) + 1}.png`}
                         fill
                         className="object-cover"
                         alt="Expert"
@@ -92,16 +98,19 @@ export default function WorkSection({ data }) {
                 </p>
               </div>
 
-              {/* CTA Button */}
-              <button className="w-full md:w-auto bg-[#079455] hover:bg-[#067647] text-white text-base font-semibold px-8 py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-green-900/10">
+              {/* CTA BUTTON (FIXED) */}
+              <Link
+                href="/schedule-a-call-page"
+                className="relative z-20 inline-flex flex-shrink-0 items-center justify-center gap-2 bg-[#079455] hover:bg-[#067647] text-white text-base font-semibold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-green-900/10 cursor-pointer"
+              >
                 {data.card?.cta || "Talk to an expert"}
                 <span className="text-xl">→</span>
-              </button>
+              </Link>
             </div>
           </div>
 
-          {/* Bottom Card Stack Visual (The layered effect at the bottom) */}
-          <div className="absolute -bottom-2 left-4 right-4 h-4 bg-white border border-[#eaecf0] rounded-3xl -z-10 opacity-50"></div>
+          {/* Bottom shadow layer (non-clickable) */}
+          <div className="pointer-events-none absolute -bottom-2 left-4 right-4 h-4 bg-white border border-[#eaecf0] rounded-3xl -z-10 opacity-50"></div>
         </div>
       </div>
     </section>
