@@ -5,10 +5,12 @@ import Image from "next/image";
 import { useState } from "react";
 
 const menuItems = [
+  { name: "About", path: "/about-us" },
   { name: "Services", path: "/services" },
   { name: "Technologies", path: "/technologies" },
   { name: "Industries", path: "/industries" },
-{ name: "About", path: "/about-us" }];
+
+];
 
 const servicesCols = [
   {
@@ -161,7 +163,7 @@ const aboutCols = [
   {
     label: "Careers",
     items: [
-      { name: "Working at BairesDev", path: "/Working-at-BairesDev" },
+      { name: "Working at Seven Unique", path: "/Working-at-Sevenunique" },
       { name: "Job Opportunities", path: "/jobOp" },
       { name: "Talent Referrals", path: "/ReferralPageAbout" },
       { name: "Our Circles Program", path: "/circle" },
@@ -425,7 +427,7 @@ export default function Header() {
                     <div className="flex">
                       <LeftPanel
                         title="Industries"
-                        subtitle="We've delivered 1250+ projects across 130+ sectors. Experience in your industry? We have it."
+                        subtitle="We've delivered 3500+ projects across 130+ sectors. Experience in your industry? We have it."
                         links={[]}
                         brand="IQVIA"
                         blurb="We scaled IQVIA's clinical research platforms with React. Read case study."

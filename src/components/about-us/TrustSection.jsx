@@ -11,13 +11,13 @@ export default function TrustSection() {
         {/* LEFT SIDE */}
         <div>
           <h2 className="text-[34px] md:text-[44px] font-semibold leading-tight text-[#111] mb-6">
-            Ultimately, we were founded on and are driven by our{" "}
-            <span className="text-[#f15c2d]">trust in talent</span>.
+            Our foundation and growth are driven by our commitment {" "}
+            <span className="text-[#f15c2d]">to excellence</span>.
           </h2>
 
           <p className="text-gray-500 text-[16px] leading-7 mb-8 max-w-md">
-            Over 4,000 people help drive our clients' success every day.
-            Our proudest achievement is what they say about working here.
+            Every day, our talented team works together to drive our clients’ success through innovation, dedication, and quality service.
+
           </p>
 
           <button className="group flex items-center gap-2 border-b border-black pb-1 text-[14px]">
@@ -41,12 +41,12 @@ export default function TrustSection() {
                 icon={<FaThumbsUp />}
                 text="Leaders provide all the guidance and help you need to grow and perform well."
               />
-              <ImageCard src="/images/man1.png" />
+              <ImageCard src="/images/1.png" />
             </div>
 
             {/* MIDDLE ROW */}
-            <div className="grid grid-cols-2 gap-6 mb-6 items-end">
-              <ImageCard src="/images/man2.png" small />
+            <div className="grid grid-cols-2 gap-6 my-6 items-end">
+              <ImageCard src="/images/3.png"  />
               <Card
                 bg="bg-[#22a06b]"
                 icon={<FaSmile />}
@@ -61,7 +61,7 @@ export default function TrustSection() {
                 text="The company does what they say they are going to do. Leadership takes great care of employees."
                 small
               />
-              <ImageCard src="/images/man3.png" />
+              <ImageCard src="/images/2.png" />
               <Card
                 bg="bg-[#f5a300]"
                 icon={<FaSmile />}

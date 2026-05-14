@@ -17,18 +17,16 @@ export const HeroAboutSection = () => {
         <div className="flex-4 max-w-[840px]">
           {/* Heading */}
           <h4 className="font-extrabold text-[clamp(1rem,4.5vw,3.25rem)] leading-[1.12] tracking-tight text-gray-900 mb-6">
-            We build better software because{" "}
+            We build better software because our talent is {" "}
             <span className="relative">
-              our talent is always upskilling
+            always learning and improving
               <span className="text-orange-500">.</span>
             </span>
           </h4>
 
           {/* Description */}
           <p className="text-[clamp(0.95rem,1.5vw,1.1rem)] leading-relaxed text-gray-700 max-w-[660px] mb-10">
-            Deliver better results on each and every project. Join the BairesDev
-            Circles program to continually level up your technical, soft, and
-            leadership skills.
+           Deliver stronger results in every project. Join the Sevenunique Circles program to continuously upgrade your technical, soft, and leadership skills.
           </p>
 
           {/* CTA buttons */}

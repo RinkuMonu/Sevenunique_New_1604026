@@ -28,8 +28,9 @@ export default function DarkShowcase() {
       {/* CONTENT */}
       <div className="max-w-4xl mx-auto text-center mt-40">
         <h2 className="text-white text-[34px] md:text-[40px] leading-[1.3] font-semibold ">
-          Accelerate your roadmap with an <br />
-          <span className="text-[#f15c2d]">award-winning</span> software
+         Speed up your product development with a
+ <br />
+          <span className="text-[#f15c2d]">trusted and experienced</span> software
           development <br />
           partner.
         </h2>

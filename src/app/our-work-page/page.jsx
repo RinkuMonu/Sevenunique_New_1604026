@@ -32,13 +32,13 @@ export default function ClientsSection() {
           </p>
 
           <h1 className="relative text-[54px] font-[600] height-[5rem] text-[#1e1e1e] leading-tight tracking-wide">
-            Over 10 Years of <br /> Over Delivering
+            Over 2 Years of <br /> Over Delivering
             <p className="text-orange-500 rounded-full bg-orange-500 ml-1 h-2 w-2 absolute top-28 left-104 bottom-0"></p>
           </h1>
 
           <p className="mt-4 text-gray-500 text-lg text-[32px] tracking-wide">
-            500+ active clients with an average relationship of over 3 years.
-            And a 96% retention rate.
+            500+ active clients with long-term partnerships built on trust and results.
+Maintaining a 96% client retention rate through consistent delivery and support.
           </p>
         </div>
 

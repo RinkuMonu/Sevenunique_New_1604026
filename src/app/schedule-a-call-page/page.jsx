@@ -155,37 +155,30 @@ export default function Page() {
 
         <div className="flex flex-col gap-8 items-center mb-8">
           <img
-            src="https://assets.bairesdev.com/image/upload/v1/www/static/clientlogos/Client_Rolls-Royce_Type_Neutral-500_Boxed_True_zepums.svg"
+            src="/images/axis.png"
             className="w-28"
           />
           <img
-            src="https://assets.bairesdev.com/image/upload/v1/www/static/clientlogos/google-gray_1754315625.svg"
+            src="/images/pays.png"
             className="w-28"
           />
           <img
-            src="https://assets.bairesdev.com/image/upload/v1/www/static/clientlogos/univision_lshbwz.svg"
+            src="/images/signzy.jpg"
             className="w-28"
           />
           <img
-            src="https://assets.bairesdev.com/image/upload/v1/www/static/clientlogos/pinterest-gray_1754315622.svg"
+            src="/images/sirji.jpg"
             className="w-28"
           />
           <img
-            src="https://assets.bairesdev.com/image/upload/v1/www/static/clientlogos/Client_Panasonic_Type_Neutral-500_Boxed_True_lkpsq1.svg"
+            src="/images/surepass.png"
             className="w-28"
           />
           <img
-            src="https://assets.bairesdev.com/image/upload/v1/www/static/clientlogos/microsoft-gray_1754315739.svg"
+            src="/images/travelboutique.jpg"
             className="w-28"
           />
-          <img
-            src="https://assets.bairesdev.com/image/upload/v1/www/static/clientlogos/Client_Forcepoint_Type_Neutral-500_Boxed_True_asabjd.svg"
-            className="w-28"
-          />
-          <img
-            src="https://assets.bairesdev.com/image/upload/v1/www/static/clientlogos/paramount_ijkvhh.svg"
-            className="w-28"
-          />
+                                                  
         </div>
 
         {/* 🔥 Bottom Fade Effect */}

@@ -31,8 +31,7 @@ export default function RecognizedExcellenceSection() {
           Recognized Excellence
         </h2>
         <p className="text-gray-600 text-base leading-relaxed max-w-2xl mx-auto">
-          Our work speaks for itself. We've been recognized by industry leaders
-          for our commitment to quality and innovation.
+         Awards that reflect our commitment to innovation and quality. We’re proud to be recognized for our achievements.
         </p>
       </div>
 

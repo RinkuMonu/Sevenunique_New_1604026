@@ -11,7 +11,7 @@ export default function TeamShowcase() {
 
         {/* ✅ TEXT (always above) */}
         <h2 className="relative z-10 text-[28px] md:text-[36px] font-semibold text-[#111] leading-snug mb-16 max-w-4xl mx-auto">
-          Every year our software developers, QA engineers, designers, and project managers work on hundreds of exciting projects...
+         Each year, our expert team delivers hundreds of impactful software projects across industries.
         </h2>
 
         {/* ✅ SHAPES CONTAINER (below text) */}
@@ -26,7 +26,7 @@ export default function TeamShowcase() {
                 src="/team/p1.png"
                 alt=""
                 fill
-                className="object-contain relative z-10"
+                className="object-cover relative z-10"
               />
             </div>
 
@@ -57,10 +57,10 @@ export default function TeamShowcase() {
             <div className="relative w-[140px] h-[140px]">
               <div className="absolute inset-0 bg-[#f97316] rounded-b-full z-0" />
               <Image
-                src="/team/p4.png"
+                src="/images/rinkusir.png"
                 alt=""
                 fill
-                className="object-contain relative z-10"
+                className="object-cover relative z-10"
               />
             </div>
 

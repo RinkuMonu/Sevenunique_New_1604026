@@ -274,7 +274,7 @@ export default function AwardsSection1() {
                 >
                   <span className="text-blue-500">Excellence.</span>
                   <br />
-                  Our minimum bar for client delivery.
+                Our standard for delivering high-quality work to clients. 
                 </h3>
                 <p className="text-sm text-white/50 leading-relaxed mb-8">
                   Over 130 awards, accolades, and achievements showcase our

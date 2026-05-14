@@ -6,17 +6,17 @@ import Image from "next/image";
 export default function BaiTestimonialSection() {
   const data = [
     {
-      name: "Federico",
+      name: "Hemant Verma",
       role: "Engineering Manager",
-      text: "From small projects to working with large multinational companies, BairesDev lets you test your skills with the best developers out there and play in the big leagues of IT development.",
+      text: "From small projects to working with large multinational companies, Sevenunique lets you test your skills with top developers and work at a global IT level.",
     },
     {
-      name: "Alejandro",
+      name: "Raman Singh",
       role: "Engineering Manager",
       text: "I really enjoy working with a team of specialists in several technologies. At BairesDev we have a great social environment and a lot of room for technical and personal growth.",
     },
     {
-      name: "Matias",
+      name: "Priyanshi Goyal",
       role: "Service Manager",
       text: "My career has greatly improved alongside the company’s growth. I enjoy working at BairesDev and I’m proud to be part of this amazing community.",
     },
@@ -37,8 +37,7 @@ export default function BaiTestimonialSection() {
         </h2>
 
         <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-          We believe in continuous growth, driven by your feedback. At
-          BairesDev, every voice matters and shapes our collective journey.
+          We grow through feedback and every voice helps shape our journey at Sevenunique.
         </p>
       </div>
 

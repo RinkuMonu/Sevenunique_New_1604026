@@ -9,20 +9,20 @@ const outfit = Outfit({
 
 const features = [
   {
-    title: "The right people",
-    desc: "Our strict selection process guarantees experienced and capable experts on every project.",
+    title: "Expert Development Team",
+    desc: "Our skilled developers, designers, and engineers deliver high-quality digital solutions tailored to your business goals.",
   },
   {
-    title: "The right team",
-    desc: "Scale from a single engineer to dedicated teams with flexible project support.",
+    title: "Scalable Technology Solutions",
+    desc: "From startups to enterprises, we build scalable web, mobile, and cloud solutions that grow with your business.",
   },
   {
-    title: "The right place",
-    desc: "Aligned with your working hours, our teams communicate clearly and collaborate efficiently.",
+    title: "Modern & Innovative Approach",
+    desc: "We use the latest technologies and industry best practices to create secure, fast, and future-ready applications.",
   },
   {
-    title: "The right time",
-    desc: "Start quickly and scale your team up or down whenever required.",
+    title: "Fast & Reliable Delivery",
+    desc: "Our agile development process ensures smooth communication, timely delivery, and consistent project success.",
   },
 ];
 
@@ -34,9 +34,7 @@ export default function WhyChooseUs() {
         {/* HEADING */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-semibold text-[#1a1a1a] leading-tight">
-           No doubts, just results.
-            <br />
-           Working with us is simple and smooth.
+          We make software development smooth, scalable, and stress-free from start to finish
             <span className="text-[#f4622a]">.</span>
           </h2>
         </div>

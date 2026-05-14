@@ -4,32 +4,32 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function PassionSection() {
-  const items = [
-    {
-      title: "Technology and Development",
-      desc: "Deliver groundbreaking projects for global clients.",
-    },
-    {
-      title: "Talent Team & HR",
-      desc: "Spotlight and elevate our diverse, globalized team.",
-    },
-    {
-      title: "Marketing & Growth",
-      desc: "Drive growth and shape our brand.",
-    },
-    {
-      title: "Sales & Client Services",
-      desc: "Forge impactful relationships and spearhead organizational growth.",
-    },
-    {
-      title: "Continuous Improvement",
-      desc: "Streamline our internal processes.",
-    },
-    {
-      title: "Admin & Finance",
-      desc: "Ensure smooth operations and a sustainable future.",
-    },
-  ];
+const items = [
+  {
+    title: "Technology and Development",
+    desc: "Deliver innovative projects for global clients.",
+  },
+  {
+    title: "Talent Team & HR",
+    desc: "Build and support a diverse global team.",
+  },
+  {
+    title: "Marketing & Growth",
+    desc: "Drive growth and strengthen the brand.",
+  },
+  {
+    title: "Sales & Client Services",
+    desc: "Build strong client relationships and support business growth.",
+  },
+  {
+    title: "Continuous Improvement",
+    desc: "Improve and streamline internal processes.",
+  },
+  {
+    title: "Admin & Finance",
+    desc: "Keep operations smooth and ensure financial stability.",
+  },
+];
 
   return (
     <section className="bg-[#f5f5f5] py-20">
@@ -39,13 +39,13 @@ export default function PassionSection() {
           {/* LEFT */}
           <div className="lg:col-span-2">
             <h2 className="text-[45px] font-semibold text-[#0b0e16] mb-6">
-              What drives your passion?
+               More work samples from different industries.
             </h2>
 
-            <p className="text-[#475569] text-lg max-w-xl">
+            {/* <p className="text-[#475569] text-lg max-w-xl">
               Be it tech mastery, management and leadership, or niche expertise,
               there's a path for you with us.
-            </p>
+            </p> */}
             <div className="grid md:grid-cols-2 gap-y-14 gap-x-12 mt-10">
               {items.map((item, i) => (
                 <div key={i}>

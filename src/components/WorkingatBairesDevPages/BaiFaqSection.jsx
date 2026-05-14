@@ -8,17 +8,18 @@ export default function BaiContactSection() {
         <div className="md:w-1/2">
           <h2 className="text-[42px] md:text-[56px] leading-tight font-semibold text-[#1f2937]">
             Got questions? <br />
-            Let&apos;s chat!
+            Let&apos;s talk !
           </h2>
         </div>
 
         {/* RIGHT SIDE */}
         <div className="md:w-1/2 text-[#374151] flex flex-col gap-6 text-[18px] leading-relaxed">
           <p>
-            Our friendly team is ready to answer your questions and guide you
-            through your journey with us.
+            Our friendly team is here to answer your questions and guide you through your journey with us.
           </p>
-
+          <p className="font-bold text-gray-600">Contact us via</p>
+<p>Live Chat on our application site
+</p>
           <p>
             {/* Contact us via <br />
             Live Chat on our{" "}
@@ -34,7 +35,7 @@ export default function BaiContactSection() {
               info@7uniqune.in
             </a>{" "}
             <br />
-            We offer support in English, Spanish, and Portuguese.
+           We provide support in English, Spanish, and Portuguese.
           </p>
         </div>
       </div>

@@ -20,24 +20,16 @@ export default function OneTeamSection() {
           {/* PARAGRAPHS */}
           <div className="text-gray-600 text-[16px] leading-relaxed space-y-10 max-w-xl">
             <p>
-              At BairesDev, we believe in empowering talent from every corner
-              of the world and from every walk of life.
+              At Sevenunique, we empower talent from around the world and all walks of life.
+As a multicultural company, we value diverse perspectives and work to reduce bias in technology.
             </p>
 
             <p>
-              Our multicultural company embraces unique perspectives and
-              actively challenges biases in technology. Through support for the
-              LGBTQIA+ community, remote work opportunities, investments in
-              bias-reducing technology, and a focus on gender equality, we offer
-              an environment where diversity thrives.
+               We support the LGBTQIA+ community, promote remote work, invest in fairer tech, and focus on gender equality to create an inclusive environment.
+We’ve been recognized by Comparably, IT World Awards, and others for diversity and inclusion. Our goal is to make tech careers accessible and rewarding for everyone, regardless of background or identity.
+
             </p>
 
-            <p>
-              We've been recognized by Comparably, IT World Awards, and more, as
-              leaders in diversity and inclusion. Together, we're building a
-              future where tech careers are accessible and rewarding for all,
-              regardless of background or identity.
-            </p>
           </div>
 
           {/* LINK */}

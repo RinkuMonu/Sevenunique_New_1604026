@@ -20,9 +20,9 @@ export default function GlobalCTA() {
 
         {/* TEXT */}
         <h2 className="text-2xl md:text-3xl font-semibold text-white leading-snug max-w-2xl">
-          Delivering{" "}
-          <span className="text-[#ff5a2f]">end-to-end</span>{" "}
-          tech solutions worldwide.
+          We provide complete{" "}
+          <span className="text-[#ff5a2f]"> technology solutions</span>{" "}
+          to clients across the globe.
         </h2>
 
         {/* BUTTON */}

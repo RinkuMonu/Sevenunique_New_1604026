@@ -273,6 +273,7 @@ export default function App() {
           {/* SMALL LABEL */}
           <p className="text-[12px] tracking-[0.25em] uppercase text-gray-400 mb-6 font-semibold">
             Awards & Recognitions
+
           </p>
 
           {/* HEADING */}
@@ -283,8 +284,7 @@ export default function App() {
 
           {/* DESCRIPTION */}
           <p className="text-gray-500 text-base md:text-lg leading-relaxed max-w-xl mx-auto">
-            We are proud to be recognized by many organizations for our client
-            service, growth rate, and company culture.
+            We are proud to be recognized by leading global organizations for our strong client service, rapid growth, and positive company culture.
           </p>
         </div>
       </section>
@@ -401,9 +401,8 @@ export default function App() {
         <div className="bg-black pt-42 pb-20 md:pt-40 md:pb-24 text-center flex flex-col items-center gap-10">
           {/* HEADING */}
           <p className="text-white font-bold text-2xl  leading-tight max-w-3xl">
-            Accelerate your roadmap with an
-            <span className="text-orange-500">award-winning</span>. software
-            development partner.
+            Speed up your product delivery by working with a trusted, 
+            <span className="text-orange-500"> award-recognized</span> software development team.
           </p>
 
           {/* BUTTONS */}

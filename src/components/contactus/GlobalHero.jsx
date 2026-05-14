@@ -22,11 +22,11 @@ export default function GlobalHero() {
         
         <div className="max-w-xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight">
-            Accelerate your roadmap
+            Work with a global partner to 
             <br />
-            with a{" "}
+            move your {" "}
             <span className="text-orange-500">
-              global partner.
+              projects faster.
             </span>
           </h1>
 <Link

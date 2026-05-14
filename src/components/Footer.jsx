@@ -157,9 +157,9 @@ export default function Footer() {
             </p>
 
             <p className="text-gray-600 text-[14px] leading-relaxed">
-              Plot No. 97, Dakshinpuri - I <br />
-              Shrikishan, Sanganer, Jagatpura <br />
-              Jaipur, Rajasthan, India - 302017
+              No. 101/2, Vakratunda Corporate Park Premises Co-operative
+                    Society Limited, Off Aarey Road, Goregaon (East), Mumbai –
+                    400 063
             </p>
           </div>
 

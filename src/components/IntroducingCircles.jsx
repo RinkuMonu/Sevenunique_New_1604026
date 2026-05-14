@@ -73,15 +73,11 @@ export function IntroducingCircles() {
             </h1>
 
             <h2 className="text-lg font-bold text-gray-900 mb-4 border-b border-gray-900 pb-3 inline-block">
-              Where the best devs get even better, across the entire development
-              lifecycle.
+              Where top developers become even better across the entire development lifecycle.
             </h2>
 
             <p className="text-base text-gray-600 mb-8 leading-relaxed max-w-md">
-              Become an expert who never stops improving. Software engineers and
-              tech professionals in the Circles program continuously sharpen
-              their skills and expertise through collaboration, knowledge
-              sharing, and specialized training.
+        Become an expert who keeps growing. Software engineers and tech professionals in Circles continuously improve through collaboration, knowledge sharing, and focused training.
             </p>
 
             <a

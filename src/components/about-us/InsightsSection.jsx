@@ -36,7 +36,7 @@ export default function InsightsSection() {
 
         {/* HEADING */}
         <h2 className="text-[34px] md:text-[38px] font-semibold text-[#111827] mb-12 leading-tight">
-          Insights from our leaders on the future of technology and talent.
+        Perspectives from our leaders on the future of technology and talent.
         </h2>
 
         {/* GRID */}

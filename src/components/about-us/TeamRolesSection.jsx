@@ -6,49 +6,49 @@ import Link from "next/link";
 const cards = [
   {
     title: "Software developers",
-    desc: "Create intuitive, beautiful and easy-to-use user interfaces for websites and applications.",
+    desc: "Build intuitive, visually appealing, and user-friendly interfaces for websites and applications. ",
     img: "/images/l1.png",
     bg: "bg-orange-200",
     link: "/roles/software-developers",
   },
   {
     title: "Back-end Developers",
-    desc: "Focus on non-visible software components such as logic, performance, servers, databases, and system design.",
+    desc: "They work on server-side logic, databases, and system performance to keep applications running smoothly.",
     img: "/images/l2.png",
     bg: "bg-blue-200",
     link: "/roles/backend-developers",
   },
   {
     title: "Project Managers/ Product Owners",
-    desc: "Lead and manage the entire development process to ensure a project’s success.",
+    desc: "They lead the development process and make sure projects are delivered successfully on time and as planned.",
     img: "/images/l3.png",
     bg: "bg-green-200",
     link: "/roles/project-managers",
   },
   {
     title: "QA Engineers",
-    desc: "Ensure applications work as intended without errors.",
+    desc: "They test applications to make sure everything works correctly and is free of errors.",
     img: "/images/l4.png",
     bg: "bg-blue-300",
     link: "/roles/qa-engineers",
   },
   {
     title: "Business Analysts",
-    desc: "Identify and share valuable data insights that improve business and development processes.",
+    desc: "They analyze data and provide insights to improve business decisions and development processes.",
     img: "/images/l5.png",
     bg: "bg-yellow-200",
     link: "/roles/business-analysts",
   },
   {
     title: "UX/UI Designers",
-    desc: "Create delightful digital experiences by wireframing and prototyping user interfaces.",
+    desc: "They design user-friendly interfaces and create wireframes and prototypes for better digital experiences.",
     img: "/images/l6.png",
     bg: "bg-red-200",
     link: "/roles/ui-ux-designers",
   },
   {
     title: "DevOps Engineers",
-    desc: "Ensures the reliability, scalability, and security of underlying infrastructure",
+    desc: "They manage infrastructure to ensure systems are reliable, scalable, and secure.",
     img: "/images/l7.png",
     bg: "bg-green-300",
     link: "/roles/devops-engineers",
@@ -70,8 +70,7 @@ export default function TeamRolesSection() {
         </h2>
 
         <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-          In addition to devs, we also provide clients with designers, product
-          managers, QA specialists, and more.
+          Along with developers, we also offer designers, product managers, QA specialists, and other experts.
         </p>
 
         {/* BUTTON */}

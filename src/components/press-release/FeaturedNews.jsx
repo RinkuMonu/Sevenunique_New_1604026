@@ -40,14 +40,12 @@ export default function FeaturedNews() {
           
           {/* Title */}
           <h2 className="text-2xl md:text-3xl font-semibold text-[#1f2937] leading-snug">
-            64% of Women Developers Say AI Has Increased Their Career Agency,
-            BairesDev’s Survey Finds
+            64% of Women Developers Say AI Has Increased Their Career Agency, Sevenunique’s Survey Finds
           </h2>
 
           {/* Subtitle */}
           <p className="mt-3 text-gray-600 text-base">
-            Only 56% of women trust AI tools to be fair, and 1 in 2 say
-            accountability for AI outcomes falls on them
+            According to a survey, 64% of women developers feel AI improves their career control, while 56% trust it to be fair and half feel responsible for its outcomes.
           </p>
 
           {/* Orange Line */}

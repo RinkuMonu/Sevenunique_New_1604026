@@ -25,9 +25,10 @@ export default function CTASection() {
 
         <div className="max-w-2xl">
           <h2 className="text-2xl md:text-4xl bold leading-snug">
-            Want to accelerate software <br /> development at your company?{" "}
+           Speed up your product delivery by working with a trusted, <br /> award-recognized {" "}
             <span className="text-orange-500">
-              See how we can help.
+              software development team.
+
             </span>
           </h2>
 

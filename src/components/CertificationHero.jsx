@@ -41,8 +41,7 @@ export default function CertificationHero() {
 
                 {/* DESCRIPTION */}
                 <p className="text-[20px] leading-[34px] text-gray-500 max-w-[700px] mx-auto">
-                    Work with a certified, award-winning software development partner.
-                    1,200 projects completed and 500+ clients helped since 2009.
+                    Work with a certified, award-winning software development partner trusted for delivering expertise and quality. Since 2024, we’ve completed 1,200+ projects and supported 500+ clients worldwide.
                 </p>
 
             </div>

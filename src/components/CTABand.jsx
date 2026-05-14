@@ -9,12 +9,11 @@ export default function CTABand() {
         {/* LEFT SIDE (TEXT + BUTTON) */}
         <div className="flex-1 text-center lg:text-left">
           <h2 className="text-[28px] sm:text-[34px] md:text-[40px] lg:text-[46px] font-semibold text-white tracking-tight leading-[1.15]">
-           Want to build and 
+         Build, Launch & Scale With Confidence
 
+            <br />Partner with us for reliable and 
             <br />
-           scale software faster?
-            <br />
-            <span className="text-[#f4622a]">See how we can help.</span>
+            <span className="text-[#f4622a]">future-ready software solutions.</span>
           </h2>
 
           <Link
@@ -28,11 +27,11 @@ export default function CTABand() {
         {/* RIGHT SIDE (IMAGE) */}
         <div className="flex-1 flex justify-center lg:justify-end">
           <div className="relative w-full max-w-[310px] sm:max-w-[420px] lg:max-w-[520px]">
-            <div className="absolute inset-0 rounded-md bg-black/50 -rotate-6 scale-[0.985]" />
+            <div className="absolute inset-0 rounded-md bg-black/50 " />
             <img
-              src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/bottom_cta_1_rnejgz?_a=BAVAfVDW0"
+              src="/images/build-img.jpg"
               alt="Two developers collaborating"
-              className="relative rounded-md shadow-2xl -rotate-3 sm:-rotate-2 object-cover w-full aspect-[16/10]"
+              className="relative rounded-md shadow-2xl  object-cover w-full aspect-[16/10]"
             />
           </div>
         </div>

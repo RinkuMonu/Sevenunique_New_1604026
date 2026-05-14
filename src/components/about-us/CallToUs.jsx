@@ -20,18 +20,16 @@ export default function CallToAction() {
       {/* Text Content */}
       <div className="max-w-2xl px-4">
         <h2 className="text-2xl md:text-3xl font-medium leading-relaxed text-gray-300">
-          500+ companies accelerate their tech <br />
-          roadmaps with us.
+         Over 500 companies fast-track their technology roadmaps with us.
+Discover how we can support your goals.
         </h2>
 
-        <p className="text-lg md:text-xl mt-3 text-orange-500">
-          See how we can help you.
-        </p>
+       
 
         {/* Button */}
         <Link href="/schedule-a-call-page">
           <button className="mt-8 bg-green-700 hover:bg-green-800 transition px-6 py-3 rounded-lg text-sm font-medium text-white cursor-pointer">
-            Book a Discovery Call
+         Schedule a Discovery Call
           </button>
         </Link>
       </div>

@@ -35,7 +35,7 @@ export default function Hero() {
       {/* FULL WIDTH IMAGE */}
       <div className="absolute inset-0">
         <Image
-          src="/hero.avif"
+          src="/images/hero-banner-img.jpg"
           alt="Team working"
           fill
           priority
@@ -49,9 +49,9 @@ export default function Hero() {
         <div className="max-w-2xl">
 
           <h1 className="text-[53.92px] font-semibold leading-[1.1] text-black mb-6 font-sans">
-            Speed Up Your Roadmap with Trusted
+           Trusted Software Development Partner For 
             <br />
-            Nearshore Talent <br />
+            Modern Businesses <br />
 
             {/* 🔥 Animated Text */}
             <span
@@ -65,7 +65,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-gray-600 text-lg mb-8">
-            Get access to 4,000+ timezone–compatible developers skilled in AI and over 100 technologies.
+           We help startups and enterprises build high-performance websites, mobile apps, cloud platforms, and AI-powered solutions with cutting-edge technologies.
 
           </p>
 

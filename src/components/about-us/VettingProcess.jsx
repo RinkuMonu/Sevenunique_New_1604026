@@ -3,36 +3,37 @@
 import { useState, useEffect, useRef } from "react";
 
 const steps = [
-    {
-        id: 1,
-        count: 6,
-        label: "Job application",
-        desc: "We receive more than 2.5M+ applications from talented developers each year.",
-    },
-    {
-        id: 2,
-        count: 5,
-        label: "Coding test",
-        desc: "Candidates complete a timed algorithmic challenge to demonstrate core programming ability.",
-    },
-    {
-        id: 3,
-        count: 4,
-        label: "Technical interview",
-        desc: "A senior engineer assesses real-world problem-solving and system design skills.",
-    },
-    {
-        id: 4,
-        count: 3,
-        label: "HR interview",
-        desc: "Next, we screen professionalism, adaptability, and communication skills with a deep-dive HR interview.",
-    },
-    {
-        id: 5,
-        count: 2,
-        label: "Test project",
-        desc: "Finalists complete a real-world project evaluated on code quality, delivery, and communication.",
-    },
+   
+  {
+    id: 1,
+    count: 5,
+    label: "Job Application",
+    desc: "We receive over 2.5 million applications from skilled developers every year.",
+  },
+  {
+    id: 2,
+    count: 4,
+    label: "Online Tests",
+    desc: "The most promising candidates are given a range of online assessments.",
+  },
+  {
+    id: 3,
+    count: 3,
+    label: "HR Interview",
+    desc: "Next, we evaluate professionalism, adaptability, and communication skills through an in-depth HR interview.",
+  },
+  {
+    id: 4,
+    count: 2,
+    label: "Written Test",
+    desc: "If all goes well, we assess creativity and problem-solving abilities through written tests.",
+  },
+  {
+    id: 5,
+    count: 1,
+    label: "Technical Interview",
+    desc: "The final step is a comprehensive technical interview conducted by our in-house experts.",
+  },
 ];
 
 const FUNNEL_WIDTHS = [260, 228, 196, 164, 128];
@@ -152,7 +153,7 @@ export default function VettingProcess() {
     return (
         <section style={styles.section}>
             <h2 style={styles.heading}>
-                Your Success Starts With Our Vetting Process
+                Your success begins with our rigorous vetting process. 
                 <span style={styles.dot}>.</span>
             </h2>
 
@@ -236,7 +237,7 @@ export default function VettingProcess() {
                     </p>
                     <p style={styles.infoText}>
                         {active === steps.length - 1
-                            ? "The top 1% of tech talent are hired and can start client delivery."
+                            ? "The top 1% of tech talent are selected and ready to begin client delivery."
                             : steps[active].desc}
                     </p>
                 </div>

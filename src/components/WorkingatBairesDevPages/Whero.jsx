@@ -19,15 +19,16 @@ export default function HeroSectionW() {
             <span className="text-orange-500">Anywhere.</span>
           </h1>
           <p className="text-gray-600 text-lg leading-relaxed max-w-2xl mb-8">
-            Build your team from around the globe with the best software
-            developers. Augment your workforce and create market-ready tech
-            without the overhead.
+            Innovate from anywhere with a remote-first company. Work with global brands like Google, Pinterest, and Rolls-Royce, along with innovative startups shaping the future.
+
           </p>
           <Link
             href="/schedule-a-call-page"
             className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded text-sm transition-colors"
           >
-            APPLY FOR A FREE CONSULTATION
+           Explore Job Opportunities
+Associate Program
+
           </Link>
         </div>
         <div className="mb-12  overflow-x-hidden">

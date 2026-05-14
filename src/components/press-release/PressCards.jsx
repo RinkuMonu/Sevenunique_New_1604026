@@ -6,27 +6,27 @@ export default function PressCards() {
 const data = [
   {
     title: "About Us",
-    desc: "Dive into our story, mission, vision, and the values driving us forward.",
+    desc: "Learn about our story, mission, vision, and the values that guide us forward.",
     btn: "Explore Our Story",
     link: "/about-us",
   },
   {
     title: "Our Leadership",
-    desc: "Meet the leaders steering us forward and shaping the future of tech innovation.",
+    desc: "Meet the leaders guiding us and shaping the future of tech innovation.",
     btn: "Meet The Leaders",
     link: "/about-us/Leadership",
   },
   {
     title: "Brand Resources",
-    desc: "Essential elements resources for accurate representation in your features.",
+    desc: "Key resources to help ensure accurate representation of our brand in your content.",
     btn: "Download Guidelines",
-    link: "/files/brand-guidelines.pdf", // or external link
+    link: "/files/brand-guidelines.pdf",
     icon: <Download size={16} />,
     download: true,
   },
   {
     title: "Contact Us",
-    desc: "Connect directly with our media relations team.",
+    desc: "Get in touch directly with our media relations team.",
     btn: "Email Press Relations",
     link: "mailto:press@yourcompany.com",
     icon: <Mail size={16} />,

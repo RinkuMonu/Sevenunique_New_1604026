@@ -13,7 +13,7 @@ const outfit = Outfit({
 const people = [
   { img: "/team/p1.png", role: "Founder & Promoter • CEO", bg: "#ff5a2f", shape: "semi-circle" },
   { img: "/team/p2.png", role: "Company Secretary", bg: "#6c9bd2", shape: "polygon-square" },
-  { img: "/team/p4.png", role: "Vice President", bg: "#f4a300", shape: "triangle-down" },
+  { img: "/images/rinkusir.png", role: "ServerAdmin", bg: "#f4a300", shape: "triangle-down" },
   { img: "/team/p3.png", role: "Sr. Full Stack Developer", bg: "#f49b7d", shape: "circle" },
   { img: "/team/p5.png", role: "Tech Manager", bg: "#7dc3b5", shape: "semi-circle" },
 ];

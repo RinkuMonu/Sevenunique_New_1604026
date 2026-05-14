@@ -6,19 +6,19 @@ import Link from "next/link";
 export default function BaiPortfolioSection() {
   const items = [
     {
-      title: "Built a new US challenger bank.",
+      title: "Created a modern digital banking platform in the US.",
       logo: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/joinus_azlo_orzvnp?_a=BAVAfVDW0",
     },
     {
-      title: "Improved power plant safety.",
+      title: "Enhanced safety systems and operations in power plants.",
       logo: "https://assets.bairesdev.com//image/upload/fl_sanitize/v1/www/core/joinus_rolls-royce_nca2nu.svg",
     },
     {
-      title: "Powered Oscar-worthy 3D visuals.",
+      title: "Created high-quality 3D visuals used in award-level productions.",
       logo: "https://assets.bairesdev.com//image/upload/fl_sanitize/v1/www/core/joinus_autodesk_i4gbui.svg",
     },
     {
-      title: "Revamped the Ads Manager.",
+      title: "Improved and redesigned the Ads Manager platform for better performance and usability.",
       logo: "https://assets.bairesdev.com//image/upload/fl_sanitize/v1/www/core/joinus_pinterest_lrytcg.svg",
     },
   ];
@@ -31,7 +31,7 @@ export default function BaiPortfolioSection() {
           {/* LEFT TEXT */}
           <div className="flex-1">
             <h2 className="text-3xl md:text-5xl font-semibold text-gray-900 leading-tight">
-              A snapshot of some <br /> previous work.
+             A quick look at some of our <br /> past projects and experience.
             </h2>
           </div>
 

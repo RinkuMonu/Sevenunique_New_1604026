@@ -7,23 +7,23 @@ const ORANGE = "#f66135";
 
 const tabs = [
     {
-        label: "Staff Augmentation",
-        heading: "Our software developers in your team.",
-        desc: "We embed our vetted developers directly into your existing team.",
-        center: "Your\nTeam",
-    },
-    {
-        label: "Software Development Teams",
-        heading: "Dedicated development teams for you.",
-        desc: "Get a fully managed team working exclusively on your project.",
-        center: "Dev\nTeam",
-    },
-    {
-        label: "Outsourcing",
-        heading: "End-to-end software built for you.",
-        desc: "We handle everything from planning to delivery.",
-        center: "Your\nProject",
-    },
+    label: "Staff Augmentation",
+    heading: "Our developers join your existing team and work as part of it.",
+    desc: "",
+    center: "Your\nTeam",
+  },
+  {
+    label: "Software Development Teams",
+    heading: "Our dedicated teams work as part of your organization to build and deliver software.",
+    desc: "",
+    center: "Dev\nTeam",
+  },
+  {
+    label: "Software Development Outsourcing",
+    heading: "Our project managers and development teams handle your software projects end-to-end for you.",
+    desc: "",
+    center: "Your\nProject",
+  },
 ];
 
 const avatars = [
@@ -50,7 +50,7 @@ export default function FlexibleWays() {
 
             {/* HEADING */}
             <h2 className="text-[36px] font-semibold mb-14 text-center text-[#0f172a]">
-                Flexible ways we can work with you
+                We offer different engagement models <br />to match your project needs and goals
                 <span style={{ color: ORANGE }}>.</span>
             </h2>
 
