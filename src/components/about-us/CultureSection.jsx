@@ -17,10 +17,9 @@ export default function CultureSection() {
         <div>
           <h2 className="text-[34px] md:text-[44px] font-semibold text-[#111] leading-tight mb-8">
             <span className="text-[#f15c2d]">
-              It's the BairesDev way:
+              It's the Seven Unique way:
             </span>
-            <br />
-            remote-first freedom,
+          
             <br />
             responsibility that matters,
             <br />

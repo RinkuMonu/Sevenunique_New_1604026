@@ -10,74 +10,95 @@ import Criclegrowth from "@/components/criclegrowth";
 import Link from "next/link";
 
 export default function ReferralPageAbout() {
-  const images = [
-    "https://assets.bairesdev.com/image/upload/v1/www/core/ts-1_q2a48d",
-    "https://assets.bairesdev.com/image/upload/v1/www/core/ts-2_and74q",
-    "https://assets.bairesdev.com/image/upload/v1/www/core/ts-3_luh6jt",
-    "https://assets.bairesdev.com/image/upload/v1/www/core/ts-4_cthfuc",
-    "https://assets.bairesdev.com/image/upload/v1/www/core/ts-5_ra3o4x",
-  ];
+
 
   const steps = [
-    {
-      step: "STEP 1",
-      title: "Make the connection.",
-      desc: "Just fill out a short form with your referral's name, email, and LinkedIn URL. Got a whole squad you think would fit right in? Next to the form, we'll provide you with a unique link to refer multiple people at once.",
-      icon: <Clipboard />,
-    },
-    {
-      step: "STEP 2",
-      title: "We'll take it from there.",
-      desc: "Once you've sent us the referral, you can sit back and relax. Our Talent Acquisition team will guide them through our hiring process.",
-      icon: <ConeIcon />,
-    },
-    {
-      step: "STEP 3",
-      title: "Get rewarded.",
-      desc: "If our requirements are met, we will send you your well-deserved referral bonus. For specific details, just head over to our Terms and Conditions.",
-      icon: <RiMoneyRupeeCircleLine />,
-    },
-  ];
+  {
+    step: "STEP 1",
+    title: "Make the connection",
+    desc: "Fill out a short form with your referral’s name, email, and LinkedIn profile. If you’re referring multiple people, you’ll also get a unique link to submit them easily.",
+    icon: <Clipboard />,
+  },
+  {
+    step: "STEP 2",
+    title: "We take it from there",
+    desc: "After you submit the referral, our Talent Acquisition team handles the rest and guides the candidate through the hiring process.",
+    icon: <ConeIcon />,
+  },
+  {
+    step: "STEP 3",
+    title: "Get rewarded",
+    desc: "If the referral meets our requirements, you’ll receive your referral bonus. For full details, check our Terms and Conditions.",
+    icon: <RiMoneyRupeeCircleLine />,
+  },
+];
   const faqs = [
-    {
-      id: 1,
-      question: "How can I refer someone?",
-      answer:
-        "Head over to our referrals hub. There you can enter your referral's information or copy your unique referral link and share it with multiple people at once. If you need another option, feel free to send us an email at referrals@bairesdev.com.",
-    },
-    {
-      id: 2,
-      question: "What information is needed for a valid referral?",
-      answer: "",
-    },
-    {
-      id: 3,
-      question: "How many people can I refer?",
-      answer: "",
-    },
-    {
-      id: 4,
-      question: "Will the candidate know I referred them?",
-      answer: "",
-    },
-    {
-      id: 5,
-      question:
-        "Can non-BairesDev employees participate in the referral program?",
-      answer: "",
-    },
-    {
-      id: 6,
-      question:
-        "What are the requirements for me to receive the referral bonus?",
-      answer: "",
-    },
-    {
-      id: 7,
-      question: "When will you pay the referral bonus?",
-      answer: "",
-    },
-  ];
+  {
+    id: 1,
+    question: "How can I refer someone?",
+    answer:
+      "Go to our referrals hub to add your referral’s details or copy your unique link to share with multiple people. You can also email referrals@Sevenunique.com with your friend’s information.",
+  },
+  {
+    id: 2,
+    question: "What information is needed for a valid referral?",
+    answer:
+      "We require the referral’s full name, email address, primary skill, and LinkedIn profile or CV.",
+  },
+  {
+    id: 3,
+    question: "How many people can I refer?",
+    answer:
+      "There’s no limit — you can refer as many people as you want.",
+  },
+  {
+    id: 4,
+    question: "Will the candidate know I referred them?",
+    answer:
+      "Yes, absolutely. We will notify the candidate once we receive their referral details.",
+  },
+  {
+    id: 5,
+    question:
+      "Can non-Sevenunique employees participate in the referral program?",
+    answer:
+      "Yes, definitely. Anyone can participate, whether they work at Sevenunique or not.",
+  },
+  {
+    id: 6,
+    question:
+      "What are the requirements to receive the referral bonus?",
+    answer:
+      "Your referral should not have applied or been referred in the past 6 months and must not already be in our interview process. They need to be hired within 6 months of the referral and stay with the company for at least 3 months. For full details, please refer to the Terms and Conditions.",
+  },
+  {
+    id: 7,
+    question: "When will you pay the referral bonus?",
+    answer:
+      "The bonus is paid 20–40 days after your referral completes 90 continuous days at the company.",
+  },
+  {
+    id: 8,
+    question:
+      "I’m not a Sevenunique employee. How do I get my referral bonus?",
+    answer:
+      "A member of our referral team will contact you and arrange payment via international bank transfer or PayPal.",
+  },
+  {
+    id: 9,
+    question:
+      "What if I have questions or need further assistance?",
+    answer:
+      "Please refer to our Referral Program Terms and Conditions for more details, or email us at referrals@Sevenunique.com — we’ll be happy to help you.",
+  },
+  {
+    id: 10,
+    question:
+      "What if my referred candidate has questions or needs assistance?",
+    answer:
+      "They can contact us through Live Chat on our applicants site or email recruiting.process@Sevenunique.com for support.",
+  },
+];
 
   // Track which FAQ is open (first one open by default)
   const [openId, setOpenId] = useState(1);
@@ -102,14 +123,13 @@ export default function ReferralPageAbout() {
             </p>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium text-gray-800 leading-tight mb-4">
-              Know someone with a passion for innovation?
+              Know someone passionate about innovation?
               <br />
-              <span className="text-[#ff6a3d]">Send them our way!</span>
+              <span className="text-[#ff6a3d]">Refer them to us!</span>
             </h1>
 
             <p className="text-gray-500 text-lg max-w-lg mb-8">
-              Anyone can join our Referral Program, whether you're a part of
-              BairesDev® or just an admirer of our company.
+             Our Referral Program is open to everyone, including Sevenunique members and people who simply support our company. 
             </p>
 
             <button className="flex items-center gap-2 bg-[#ff6a3d] hover:bg-[#e55a2e] text-white rounded-lg font-medium transition">
@@ -124,18 +144,17 @@ export default function ReferralPageAbout() {
 
           {/* RIGHT (ACTUAL SHAPES IMAGES) */}
           <div className="flex-1 hidden md:flex flex-wrap items-center justify-center gap-4">
-            {images.map((src, i) => (
+          
               <div
-                key={i}
-                className="relative w-24 h-24 md:w-32 md:h-32 lg:w-44 lg:h-44"
+                className="relative"
               >
                 <img
-                  src={src}
+                  src="/images/team-vec.jpg"
                   alt=""
                   className="w-full h-full object-contain"
                 />
               </div>
-            ))}
+          
           </div>
         </div>
       </section>
@@ -146,14 +165,9 @@ export default function ReferralPageAbout() {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1">
               <p className="text-[#000000] text-xl leading-relaxed tracking-wide">
-                To thank you for helping us discover top talent, we'll offer you
-                a <span className="font-bold  text-xl">$1,000 USD</span>{" "}
-                referral bonus. If you refer a woman and support our mission of
-                promoting gender equality in tech, that bonus jumps to{" "}
-                <span className="font-bold text-[#ff6a3d] text-xl">
-                  $1,300 USD
-                </span>
-                !
+               To appreciate your help in finding great talent, we offer a $1,000 USD referral bonus. If you refer to a woman and support our goal of promoting gender equality in tech, the bonus increases to $1,300 USD.
+Together, we can open new opportunities, connect talented people, and build a better future at Sevenunique®.
+
               </p>
               <p className="text-[#000000] text-lg leading-relaxed mt-6 tracking-wide">
                 Together we can forge new paths, connect great minds and build a
@@ -161,9 +175,9 @@ export default function ReferralPageAbout() {
               </p>
             </div>
             <div className="flex-1 flex justify-center">
-              <div className="relative  rounded-3xl overflow-hidden ">
+              <div className="relative rounded-3xl overflow-hidden ">
                 <Image
-                  src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/talent_woman_dca1a2?_a=BAVAfVDW0"
+                  src="/images/mencoffee.jpg"
                   alt="Woman working on laptop"
                   className="object-cover"
                   height={400}
@@ -181,14 +195,14 @@ export default function ReferralPageAbout() {
           {/* LEFT */}
           <div className="flex-1">
             <h2 className="text-4xl md:text-5xl font-medium text-gray-900 leading-tight mb-10">
-              Our referral process is simple and easy
+              Referring someone is quick and straightforward.
               <span className="text-orange-500">.</span>
             </h2>
 
             {/* IMAGE (IMPORTANT — same as original) */}
             <div className="hidden md:block relative w-full h-[320px] rounded-3xl overflow-hidden">
               <img
-                src="https://assets.bairesdev.com/image/upload/v1/www/core/talent_text_shape_mk7gry"
+                src="/images/working.jpg"
                 alt=""
                 className="w-full h-full object-cover"
               />
@@ -234,7 +248,7 @@ export default function ReferralPageAbout() {
                     href="/schedule-a-call-page"
                     className="cursor-pointer  px-6 py-3"
                   >
-                    Submit your Referral
+                    Submit Referral
                   </Link>
                 </button>
               </div>

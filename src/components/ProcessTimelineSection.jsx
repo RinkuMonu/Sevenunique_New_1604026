@@ -10,26 +10,26 @@ const outfit = Outfit({
 });
 
 export default function ProcessTimelineSection() {
-  const steps = [
-    {
-      icon: <Phone size={18} />,
-      step: "STEP 1",
-      title: "Schedule a discovery session.",
-      desc: "Walk us through your requirements, and we’ll explore the right team, timeline, budget, and strategy to move forward.",
-    },
-    {
-      icon: <Users size={18} />,
-      step: "STEP 2",
-      title: "Plan the solution and team.",
-      desc: "In just a few days, we lock in specifications, finalize the model, and onboard the right talent.",
-    },
-    {
-      icon: <TrendingUp size={18} />,
-      step: "STEP 3",
-      title: "Kick off and track results.",
-      desc: "After aligning on milestones, we start right away, providing regular updates and adjusting to your needs.",
-    },
-  ];
+const steps = [
+  {
+    icon: <Phone size={18} />,
+    step: "STEP 1",
+    title: "Discuss Your Project Requirements",
+    desc: "Share your business goals, ideas, and technical requirements with our team to define the best digital solution.",
+  },
+  {
+    icon: <Users size={18} />,
+    step: "STEP 2",
+    title: "Design & Development Planning",
+    desc: "We create the project roadmap, finalize technologies, UI/UX strategy, timelines, and assemble the right development team.",
+  },
+  {
+    icon: <TrendingUp size={18} />,
+    step: "STEP 3",
+    title: "Build, Launch & Grow",
+    desc: "Our team develops, tests, and deploys your solution while providing continuous support, optimization, and growth strategies.",
+  },
+];
 
   return (
     <section className={`${outfit.className} bg-[#f3f3f3] py-28 px-6`}>
@@ -39,9 +39,9 @@ export default function ProcessTimelineSection() {
         {/* 🔥 CENTERED HEADER */}
         <div className="mb-20 text-center">
           <h2 className="text-[44px] leading-[1.2] font-semibold text-[#1a1a18]">
-           Our process.<br />
-            Simple, smooth, <br />
-             and efficient<span className="text-[#f4622a]">.</span>
+           Smooth Execution<br />
+            From Idea <br />
+             To Launch.<span className="text-[#f4622a]">.</span>
           </h2>
         </div>
 

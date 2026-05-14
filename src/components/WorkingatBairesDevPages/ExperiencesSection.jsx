@@ -27,25 +27,22 @@ export default function ExperiencesSection() {
             
             {/* HEADING */}
             <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">
-              We don&apos;t just fill vacancies.
+              We go beyond hiring and focus on finding the right talent.
             </h2>
 
             {/* TEXT */}
             <div className="text-gray-600 text-base leading-relaxed space-y-4 mb-8">
               <p>
-                We go beyond traditional hiring. By spotlighting your strengths
-                and interests, we can connect you to your ideal role.
+               We go beyond traditional hiring by highlighting your strengths and interests to match you with the right role.
+Don’t see your ideal job? Send an open application, we’re always looking for top talent.
               </p>
 
-              <p>
-                Don&apos;t see your dream job listed? Fill out an open
-                application. We&apos;re always looking for top talent!
-              </p>
+            
             </div>
 
             {/* BUTTON */}
             <Link href="/schedule-a-call-page" className="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition w-fit">
-              Send an Open Application
+            Apply Now
             </Link>
           </div>
         </div>

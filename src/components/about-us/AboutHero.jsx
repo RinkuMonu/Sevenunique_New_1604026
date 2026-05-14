@@ -166,11 +166,11 @@ export default function AboutHero() {
           {/* TOP: headline + orange text */}
           <div className="max-w-[700px] relative z-10">
             <h1 className="text-[36px] md:text-[46px] font-extrabold text-[#0f172a] leading-[1.15] mb-9">
-              For over a decade we've partnered with technology leaders to
-              rapidly scale their teams and meet their business challenges.
+              For more than 2 years, we’ve collaborated with leading technology companies to help them quickly expand their teams and overcome complex business challenges.
+
             </h1>
             <p ref={orangeRef} className="text-[#f15c2d] text-[20px] font-bold inline-block">
-              We think we're pretty good at it
+              We believe we do it exceptionally well
             </p>
           </div>
 
@@ -190,15 +190,13 @@ export default function AboutHero() {
               data-aos-easing="ease-out-cubic"
             >
               <h2 className="text-[34px] md:text-[42px] font-extrabold text-[#0f172a] mb-6 leading-tight">
-                From humble beginnings
+                From a modest start to 
                 <br />
-                to global partner.
+                worldwide collaboration.
               </h2>
               <p className="text-gray-500 text-[16px] leading-8 mb-8 max-w-[500px]">
-                Founded in Buenos Aires, Argentina in 2009 by Nacho De Marco
-                and Paul Azorin. With a mission to connect the top 1% Latin
-                American developers with companies needing top-quality software
-                solutions.
+                Founded in Jaipur in 2024 by Dinesh Kumar, with a mission to deliver innovative fintech solutions and connect businesses with reliable, high-quality software services.
+
               </p>
               <p className="text-[20px] font-bold text-[#0f172a]">
                 We were fully remote
@@ -211,7 +209,7 @@ export default function AboutHero() {
             <div className="flex justify-center md:justify-end" data-aos="fade-left" data-aos-delay="200">
               <div className="relative w-[400px] h-[400px] lg:w-[500px] lg:h-[500px]">
                 <Image
-                  src="/images/team.png.png"
+                  src="/images/team.jpg"
                   alt="Founders"
                   fill
                   className="object-contain"
@@ -240,12 +238,12 @@ export default function AboutHero() {
             <div data-aos="fade-up" data-aos-delay="300">
               <h2 className="text-[36px] md:text-[44px] font-bold text-[#0f172a] leading-tight">
                 We've delivered over{" "}
-                <span className="text-[#f15c2d]">1,200</span>
+                <span className="text-[#f15c2d]">3500</span>
                 <br />
                 projects for over{" "}
-                <span className="text-[#f15c2d]">500</span>
+                <span className="text-[#f15c2d]">2700</span>
                 <br />
-                different companies...
+                happy clients...
               </h2>
             </div>
 

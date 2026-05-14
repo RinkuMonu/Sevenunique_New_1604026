@@ -13,23 +13,19 @@ export default function TalentHero() {
             The Top 1%
           </p>
           <h1 className="text-[48px] md:text-[56px] leading-[1.1] font-semibold text-[#111827]">
-            We vet <span className="text-[#f66135]">over 2.5M+</span> <br />
-            people per year to bring <br />
-            you only the <span className="text-[#f66135]">top 1%</span> of{" "}
-            <br />
+            We evaluate <span className="text-[#f66135]">over 2.5 million</span> <br />
+            candidates each year to provide <br />
+             you with only the <span className="text-[#f66135]">top 1%</span> of{" "}
             tech talent.
           </h1>
 
           <p className="mt-6 text-[16px] leading-[1.7] text-gray-600 max-w-xl">
-            Since 2009, we’ve built thousands of high-performing development
-            teams. Behind that track record is a rigorous vetting process
-            designed to identify professionals with the technical depth,
-            collaboration skills, and AI fluency modern software teams need.
+            Since 2024, we have built thousands of high-performing development teams. This success is driven by a rigorous vetting process that identifies professionals with strong technical expertise, collaboration abilities, and the AI proficiency required for modern software teams.
           </p>
 
           <Link href="/schedule-a-call-page">
             <button className="mt-8 bg-[#f66135] hover:bg-[#f66135] transition text-white px-6 py-3 rounded-lg text-base cursor-pointer">
-              Get The Top 1% On Your Team
+           Bring the Top 1% onto Your Team 
             </button>
           </Link>
         </div>

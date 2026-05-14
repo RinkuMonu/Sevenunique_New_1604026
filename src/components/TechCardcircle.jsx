@@ -261,8 +261,7 @@ export default function CircleLeadersSection() {
             Meet our Circle Leaders
           </h1>
           <p className="text-gray-500 text-base mt-3 max-w-2xl">
-            These talented professionals are the top experts in their respective
-            technologies at BairesDev.
+          Top experts at Sevenunique who lead in their respective technologies.
           </p>
         </div>
 

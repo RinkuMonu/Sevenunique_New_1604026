@@ -15,7 +15,7 @@ export default function ContactHero() {
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-black leading-tight">
             How Can We <br />
-            <span className="text-orange-500">Help?</span>
+            <span className="text-orange-500">Help You?</span>
           </h1>
         </div>
 

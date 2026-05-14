@@ -32,69 +32,63 @@ export default function BenefitsSection() {
           {/* ITEM */}
           <div className="flex gap-5">
             <FiMonitor className="text-[#f66135] text-[22px] mt-1" />
-            <div>
-              <h3 className="text-[20px] font-semibold text-[#111827]">
-                Proficient in English
-              </h3>
-              <p className="text-gray-600 mt-2 leading-[1.7] max-w-xl">
-                Communicate with ease, and get your questions answered fast. All
-                of our LATAM specialists speak English - no language barriers
-                here.
-              </p>
-            </div>
-          </div>
+           <div>
+  <h3 className="text-[20px] font-semibold text-[#111827]">
+    Proficient in English
+  </h3>
+  <p className="text-gray-600 mt-2 leading-[1.7] max-w-xl">
+    Communicate effortlessly and get quick responses to your queries. All our LATAM specialists are fluent in English eliminating any language barriers.
+  </p>
+</div>
+</div>
 
-          <div className="flex gap-5">
-            <FiClock className="text-[#f66135] text-[22px] mt-1" />
-            <div>
-              <h3 className="text-[20px] font-semibold text-[#111827]">
-                Aligned to Your Time Zone
-              </h3>
-              <p className="text-gray-600 mt-2 leading-[1.7] max-w-xl">
-                We work the same hours you do. Nearshoring helps you increase
-                productivity and streamline the development process.
-              </p>
-            </div>
-          </div>
+<div className="flex gap-5">
+  <FiClock className="text-[#f66135] text-[22px] mt-1" />
+  <div>
+    <h3 className="text-[20px] font-semibold text-[#111827]">
+      Aligned to Your Time Zone
+    </h3>
+    <p className="text-gray-600 mt-2 leading-[1.7] max-w-xl">
+      We operate during your working hours. Our nearshore model helps improve productivity and streamline the entire development process.
+    </p>
+  </div>
+</div>
 
-          <div className="flex gap-5">
-            <FiUsers className="text-[#f66135] text-[22px] mt-1" />
-            <div>
-              <h3 className="text-[20px] font-semibold text-[#111827]">
-                10+ Years of Experience
-              </h3>
-              <p className="text-gray-600 mt-2 leading-[1.7] max-w-xl">
-                We only hire the most experienced and qualified candidates. Our
-                devs have, on average, 10+ years of experience.
-              </p>
-            </div>
-          </div>
+<div className="flex gap-5">
+  <FiUsers className="text-[#f66135] text-[22px] mt-1" />
+  <div>
+    <h3 className="text-[20px] font-semibold text-[#111827]">
+      10+ Years of Experience
+    </h3>
+    <p className="text-gray-600 mt-2 leading-[1.7] max-w-xl">
+      We hire only highly experienced and qualified professionals. On average, our developers bring over 10 years of experience and have delivered dozens of projects.
+    </p>
+  </div>
+</div>
 
-          <div className="flex gap-5">
-            <FiCode className="text-[#f66135] text-[22px] mt-1" />
-            <div>
-              <h3 className="text-[20px] font-semibold text-[#111827]">
-                Every Technology Covered
-              </h3>
-              <p className="text-gray-600 mt-2 leading-[1.7] max-w-xl">
-                Whatever expertise you need, we can work within your tech stack.
-                Our engineers are proficient in modern technologies.
-              </p>
-            </div>
-          </div>
+<div className="flex gap-5">
+  <FiCode className="text-[#f66135] text-[22px] mt-1" />
+  <div>
+    <h3 className="text-[20px] font-semibold text-[#111827]">
+      Every Technology Covered
+    </h3>
+    <p className="text-gray-600 mt-2 leading-[1.7] max-w-xl">
+      Whatever expertise you require, we can adapt to your tech stack. Our engineers are skilled in all modern and even some legacy programming languages and technologies.
+    </p>
+  </div>
+</div>
 
-          <div className="flex gap-5">
-            <FiAward className="text-[#f66135] text-[22px] mt-1" />
-            <div>
-              <h3 className="text-[20px] font-semibold text-[#111827]">
-                Award-winning Partner
-              </h3>
-              <p className="text-gray-600 mt-2 leading-[1.7] max-w-xl">
-                We’re currently working with 500+ active clients across 130+
-                industry sectors. Our client retention rate sits at 96%.
-              </p>
-            </div>
-          </div>
+<div className="flex gap-5">
+  <FiAward className="text-[#f66135] text-[22px] mt-1" />
+  <div>
+    <h3 className="text-[20px] font-semibold text-[#111827]">
+      Award-Winning Partner
+    </h3>
+    <p className="text-gray-600 mt-2 leading-[1.7] max-w-xl">
+      We currently support 500+ active clients across more than 130 industry sectors, maintaining a client retention rate of 96%.
+    </p>
+  </div>
+</div>
 
           {/* BUTTON */}
           <Link href="/schedule-a-call-page">

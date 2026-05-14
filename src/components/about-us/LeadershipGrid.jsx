@@ -48,8 +48,8 @@ export default function LeadershipGrid() {
 
         {/* HEADING */}
         <h2 className="text-[40px] leading-[1.2] font-semibold text-[#111827] mb-16 max-w-4xl">
-          <span className="text-[#f66135]">Meet our leaders.</span>{" "}
-          Under their stewardship, we secured many industry-recognized accolades
+          <span className="text-[#f66135]">Meet our leadership team.</span>{" "}
+          With their guidance, we have achieved numerous accolades recognized across the industry
           <span className="text-[#f66135]">.</span>
         </h2>
 

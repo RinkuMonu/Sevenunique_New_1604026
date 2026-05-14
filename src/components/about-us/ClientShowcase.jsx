@@ -3,21 +3,21 @@
 import Image from "next/image";
 
 const logos = [
-  "/images/chime.svg",
-  "/images/rollsroyce.svg",
-  "/images/abott.svg",
-  "/images/adobe1.svg",
-  "/images/salesforce1.svg",
-  "/images/sirisum.svg",
-  "/images/iqvia1.svg",
-  "/images/associated1.svg",
-  "/images/pinterest2.svg",
-  "/images/net.svg",
-  "/images/google1.svg",
-  "/images/viacom.svg",
-  "/images/panasonic.svg",
-  "/images/hp1.svg",
-  "/images/groupon.svg",
+  "/images/tbo.png",
+  "/images/icici.png",
+  "/images/qro.jpg",
+  "/images/policyongo.jpg",
+  "/images/paysprint.png",
+  "/images/emitra.svg",
+  "/images/axis.png",
+  "/logos/nsdl.png",
+  "/logos/irctc.png",
+  "/images/travelboutique.jpg",
+  "/images/surepass.png",
+  "/images/exotel.png",
+  "/logos/logo4.png",
+  "/images/sirji.jpg",
+  "/images/signzy.jpg",
 ];
 
 export default function ClientShowcase() {
@@ -36,8 +36,7 @@ export default function ClientShowcase() {
         {/* LEFT CONTENT */}
         <div>
           <h2 className="text-[32px] md:text-[40px] font-semibold text-[#111] leading-tight mb-8 max-w-lg">
-            ...in startups to Fortune 500 companies, such as Google,
-            Pinterest, Rolls Royce, and many, many more...
+           ...in collaboration with many leading brands....
           </h2>
 
           <div className="mt-6">

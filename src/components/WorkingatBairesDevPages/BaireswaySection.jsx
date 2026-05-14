@@ -18,12 +18,10 @@ export default function BaireswaySection() {
         </div>
         <div className="rounded-lg aspect-square flex flex-col items-center gap-10 justify-center px-5">
           <span className="text-gray-700 text-3xl font-semibold">
-            The BairesDev Way
+            The Sevenunique Way
           </span>
           <p className="text-gray-500 text-[15px] font-semibold">
-            We do things differently. Our edge comes from our beliefs and how we
-            bring them to life. This fuels our growth and plays a big role in
-            what we look for when hiring, what we value, and why we stay.
+            We do things differently. Our approach is shaped by our values and how we apply them every day. This drives our growth and influences how we hire, what we value, and why people stay with us.
           </p>
           <Link href="/culture" className="text-gray-800 flex justify-center items-center gap-4 font-bold">
             Discover our Culture <FaLongArrowAltRight />

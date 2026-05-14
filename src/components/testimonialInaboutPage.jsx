@@ -7,11 +7,11 @@ export default function TestimonialSectionInAboutPage() {
         {/* LEFT SIDE */}
         <div>
           <h2 className="text-3xl md:text-5xl font-semibold text-gray-800 mb-4">
-            Amazing opportunities await.
+            Great opportunities await.
           </h2>
 
           <p className="text-gray-500 text-lg mb-8">
-            See why others love it here — and why your referrals will too.
+            See why others love it here and why your referrals will too.
           </p>
 
           {/* IMAGE */}
@@ -43,12 +43,10 @@ export default function TestimonialSectionInAboutPage() {
                 “
               </span>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                A great company with a wonderful work environment
+               A highly supportive company with a great work environment
               </h3>
               <p className="text-gray-600 mb-2">
-                An excellent overall atmosphere with very helpful teammates and
-                a lot of the best latest technologies, plus a professional
-                growing opportunities.
+                A positive workplace with helpful teammates, modern technologies, and strong opportunities for professional growth
               </p>
               <span className="text-sm text-gray-400">
                 Infrastructure Engineer
@@ -61,12 +59,10 @@ export default function TestimonialSectionInAboutPage() {
                 “
               </span>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                Remote-first company that offers excellent benefits
+                A remote-first company with strong benefits
               </h3>
               <p className="text-gray-600 mb-2">
-                Employees have access to various learning platforms, allowing
-                them to continuously enhance their skills...These benefits
-                contribute to a positive work environment.
+                Employees get access to learning platforms to continuously improve their skills. These benefits support a work environment focused on growth and well-being.
               </p>
               <span className="text-sm text-gray-400">Content Manager</span>
             </div>
@@ -77,11 +73,10 @@ export default function TestimonialSectionInAboutPage() {
                 “
               </span>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                Great company!
+                A great company to work for!
               </h3>
               <p className="text-gray-600 mb-2">
-                They have an Experience Partner who is constantly asking about
-                your feelings and helping you with blockers.
+              They provide an Experience Partner who regularly checks in on your well-being, along with a project account manager to help resolve any blockers.
               </p>
               <span className="text-sm text-gray-400">
                 Senior Software Engineer

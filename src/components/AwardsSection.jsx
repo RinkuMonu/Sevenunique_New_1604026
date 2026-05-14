@@ -23,14 +23,12 @@ export default function AwardsSection() {
             </p>
 
             <h2 className="text-4xl lg:text-5xl font-semibold leading-tight mb-6 text-white">
-              <span className="text-[#f4622a]">Excellence </span>
+              <span className="text-[#f4622a]">Quality Driven </span>
               <br />
-              By <br />
               Default.            </h2>
 
             <p className="text-white/60 text-sm leading-relaxed mb-8 max-w-sm">
-            The standard we deliver every time.
-130+ awards highlight our focus on quality and long-term client value.
+            Our dedication to quality, innovation, and client satisfaction drives every digital solution we create.
 
 
             </p>
@@ -66,7 +64,7 @@ export default function AwardsSection() {
 
               {/* INNER CONTENT */}
               <div className="text-center z-10">
-                <p className="text-3xl font-semibold text-white">1,250+</p>
+                <p className="text-3xl font-semibold text-white">3500+</p>
                 <p className="text-sm text-white/60">projects delivered</p>
               </div>
             </div>
@@ -93,8 +91,8 @@ export default function AwardsSection() {
               </svg>
               {/* INNER CONTENT */}
               <div className="text-center z-10">
-                <p className="text-3xl font-semibold text-white">130+</p>
-                <p className="text-sm text-white/60">industry sectors</p>
+                <p className="text-3xl font-semibold text-white">375+</p>
+                <p className="text-sm text-white/60">Active Members</p>
               </div>
             </div>
 
@@ -105,57 +103,41 @@ export default function AwardsSection() {
 
             <div className="text-center space-y-3">
               <div className="w-24 h-12 mx-auto relative">
-                <Image src="/logos/ft2.png" alt="Financial Times" fill className="object-contain" />
+                <Image src="/images/certified.avif" alt="Financial Times" fill className="object-contain" />
               </div>
               <p className="text-xs text-white/40">
-                America's Fastest-Growing Companies 2025
+                India's Fastest-Growing Companies 
               </p>
             </div>
 
             <div className="text-center space-y-3">
               <div className="w-24 h-12 mx-auto relative">
-                <Image src="/logos/c10.png" alt="CIO100 Awards" fill className="object-contain" />
+                <Image src="/images/msme.png" alt="CIO100 Awards" fill className="object-contain" />
               </div>
               <p className="text-xs text-white/40">
-                Top 100 U.S. IT Innovators 2025
+                Ministry of Micro, Small and Medium Enterprises (MSME) certificate
               </p>
             </div>
 
             <div className="text-center space-y-3">
               <div className="w-16 h-16 mx-auto relative">
-                <Image src="/logos/clutch-new.png" alt="Clutch" fill className="object-contain" />
+                <Image src="/images/pcidss.png" alt="Clutch" fill className="object-contain" />
               </div>
               <p className="text-xs text-white/40">
-                Nearshore North America Top Software Developers 2025
+               Payment Card Industry Security Standards Council
               </p>
             </div>
 
             <div className="text-center space-y-3">
               <div className="w-16 h-16 mx-auto relative">
-                <Image src="/logos/out.png" alt="Outsourcing" fill className="object-contain" />
+                <Image src="/images/iso.png" alt="Outsourcing" fill className="object-contain" />
               </div>
               <p className="text-xs text-white/40">
-                Top 100 Global Outsourcing Providers 2024
+                International Organization for Standardization ISO certification 
               </p>
             </div>
 
-            <div className="text-center space-y-3">
-              <div className="w-16 h-16 mx-auto relative">
-                <Image src="/logos/inc.png" alt="Inc5000" fill className="object-contain" />
-              </div>
-              <p className="text-xs text-white/40">
-                America's fastest-growing companies 2024
-              </p>
-            </div>
-
-            <div className="text-center space-y-3">
-              <div className="w-16 h-16 mx-auto relative">
-                <Image src="/logos/globee-new.png" alt="Globee" fill className="object-contain" />
-              </div>
-              <p className="text-xs text-white/40">
-                Company of the Year Artificial Intelligence 2024
-              </p>
-            </div>
+           
 
           </div>
 

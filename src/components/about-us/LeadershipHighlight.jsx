@@ -11,8 +11,7 @@ export default function LeadershipHighlight() {
         {/* LEFT CONTENT */}
         <div className="text-center lg:text-left">
           <h2 className="text-[26px] md:text-[34px] lg:text-[40px] font-semibold text-[#111] leading-tight mb-8 max-w-lg mx-auto lg:mx-0">
-            ...including the honor of our CEO speaking at the World Economic
-            Forum in Davos...
+            ....including our CEO speaking about the company’s fintech growth journey and innovation-driven vision.
           </h2>
 
           <button className="group text-[14px] font-medium text-[#111] border-b border-black pb-1 flex items-center gap-2 hover:text-[#f46b45] transition mx-auto lg:mx-0">
@@ -25,37 +24,16 @@ export default function LeadershipHighlight() {
         <div className="flex flex-col gap-4 md:gap-6">
 
           {/* TOP BIG IMAGE */}
-          <div className="relative w-full h-[220px] sm:h-[260px] md:h-[300px] lg:h-[320px] rounded-2xl overflow-hidden">
+          <div className="relative w-full h-[220px] sm:h-[260px] md:h-[400px] lg:h-[420px] rounded-2xl overflow-hidden">
             <Image
-              src="/Team/ceo1.png"
+              src="/images/dineshsir.jpeg"
               alt="CEO speaking"
               fill
-              className="object-cover"
+              className="object-contain"
             />
           </div>
 
-          {/* BOTTOM 2 IMAGES */}
-          <div className="grid grid-cols-2 gap-4 md:gap-6">
-            
-            <div className="relative w-full h-[120px] sm:h-[140px] md:h-[150px] lg:h-[160px] rounded-2xl overflow-hidden">
-              <Image
-                src="/Team/ceo2.png"
-                alt="CEO event"
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            <div className="relative w-full h-[120px] sm:h-[140px] md:h-[150px] lg:h-[160px] rounded-2xl overflow-hidden">
-              <Image
-                src="/Team/ceo3.png"
-                alt="CEO talk"
-                fill
-                className="object-cover"
-              />
-            </div>
-
-          </div>
+        
 
         </div>
 

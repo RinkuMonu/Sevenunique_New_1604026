@@ -8,9 +8,9 @@ export default function TrustedStrip() {
         {/* Left Text */}
         <div className="text-[16px] leading-6 font-medium whitespace-nowrap">
           <p>
-            500+ companies rely on <br />
+           A trusted partner for startups and  <br />
             <span className="font-semibold underline decoration-white/40">
-              our top 1% tech talent.
+            Fortune 500 companies.
             </span>
           </p>
         </div>

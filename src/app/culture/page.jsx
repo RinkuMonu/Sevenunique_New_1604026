@@ -19,13 +19,13 @@ const beliefs = [
   {
     id: 1,
     icon: Globe,
-    title: "Remote work is not just how we work—it's why we thrive.",
+    title: "Remote work drives how we succeed",
     description:
-      "Our remote-first culture was designed to bring together the most talented people in each field, regardless of location. A mix of cultures, backgrounds, and experiences makes us stronger and gives people from capital cities and small towns equal access to global impact roles.",
+      "Remote work isn’t just our setup, it’s a key part of our success. Our remote-first culture brings together top talent from anywhere, combining diverse backgrounds and experiences. It gives equal opportunities to people everywhere and supports flexible, async collaboration across time zones.",
     bullets: [
       "Share updates early",
-      "Skip meetings without agendas",
-      "Work async across time zones",
+      "Avoid meetings without clear agendas",
+      "Collaborate asynchronously",
       "Support and onboard teammates quickly",
     ],
     img: "../culture/Public_1749674003.svg",
@@ -34,12 +34,12 @@ const beliefs = [
   {
     id: 2,
     icon: Premium,
-    title: "To reach further, we set no limits.",
+    title: "To go further, we set no limits",
     description:
-      "We don't settle—aiming higher is what sets us apart. You're trusted to take ownership, encouraged to push boundaries, and equipped with the tools and feedback to sharpen our expertise.",
+      "We don’t settle, aiming higher is what sets us apart. You’re trusted to take ownership, push boundaries, and use feedback to keep improving. That’s how you grow into a top professional.",
     bullets: [
       "Lead by example",
-      "Apply feedback fast",
+      "Act on feedback quickly",
       "Focus on high-impact work",
       "Move with urgency",
     ],
@@ -50,14 +50,14 @@ const beliefs = [
   {
     id: 3,
     icon: Handshake,
-    title: "We grow and win together.",
+    title: "We grow and win together",
     description:
-      "Collaboration is at the heart of how we work. Teams work across roles and time zones always aligned around shared goals. Everyone's willing to dive in and solve problems together.",
+      "Collaboration is at the core of how we work, helping people succeed. Teams across roles and time zones stay aligned on shared goals, working together to solve challenges without silos or egos.",
     bullets: [
-      "Solve instead of blame",
-      'Ask "Why?" to go deeper',
-      "Align early with others",
-      "Step outside your role to support the team",
+      "Solve problems, don’t blame",
+      'Ask “why” to understand better',
+      "Align early with your team",
+      "Step in beyond your role when needed",
     ],
     img: "../culture/Handshake_1749674000.svg",
     color: "bg-gradient-to-br from-green-200 to-green-600",
@@ -65,14 +65,14 @@ const beliefs = [
   {
     id: 4,
     icon: Bulb,
-    title: "Thinking ahead drives our success.",
+    title: "Thinking ahead drives our success",
     description:
-      "Every challenge is an opportunity to create something better. We move quickly, anticipate challenges, and find a way forward. Your ideas influence what we build and how people experience it.",
+      "We see every challenge as a chance to improve. We act fast, anticipate problems, and find better solutions building trust with our clients. You’re encouraged to go beyond delivery, share ideas, and shape what comes next.",
     bullets: [
-      "Push ideas forward",
-      "Fix issues fast",
-      "Lead tough conversations",
-      "Defend what's right for the client",
+      "Move ideas forward",
+      "Resolve issues quickly",
+      "Lead difficult conversations",
+      "Stand up for what’s best for the client",
     ],
     img: "../culture/FramePerson_1749674005.svg",
     color: "bg-gradient-to-br from-yellow-100 to-yellow-500",
@@ -83,33 +83,33 @@ const values = [
   {
     id: 1,
     title: "One Team, One Mission",
-    subtitle: "We show up for each other—always.",
+    subtitle: "We always support one another.",
     description:
-      "As one global team, we share knowledge and lift each other up. We go further because we go together.",
+      "As a global team, we share knowledge, help each other grow, and achieve more together.",
     img: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/we_value_1_1750182255?_a=BAVAfVDW0",
   },
   {
     id: 2,
-    title: "Speed is King",
-    subtitle: "We move with momentum, clarity, and intention.",
+    title: "Speed is key",
+    subtitle: "We move with focus, clarity, and purpose.",
     description:
-      "We prioritize impact, make fast decisions, and help each other move forward without delays.",
+      "We prioritize impact, make quick decisions, and keep progress moving without delays.",
     img: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/we_value_2_1750182254?_a=BAVAfVDW0",
   },
   {
     id: 3,
-    title: "Find a Way",
-    subtitle: "We're problem-solvers, and challenges ignite us.",
+    title: "Find a way",
+    subtitle: "We thrive on solving problems and tackling challenges.",
     description:
-      "When the way forward isn't obvious, we get creative, test ideas, and pivot quickly.",
+      "When the path isn’t clear, we think creatively, try new ideas, and adapt quickly.",
     img: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/we_value_3_1750182253?_a=BAVAfVDW0",
   },
   {
     id: 4,
-    title: "Own it & Learn it",
-    subtitle: "We are accountable for our work and our development.",
+    title: "Own it & Learn from it",
+    subtitle: "We take responsibility for our work and our growth.",
     description:
-      "From the first draft to the final result, we take full ownership and treat every mistake as a stepping stone.",
+      "From start to finish, we own the results and learn from every mistake. Feedback helps us improve, so we actively seek it and use it to get better.",
     img: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/we_value_4_1750182252?_a=BAVAfVDW0",
   },
   {
@@ -117,15 +117,15 @@ const values = [
     title: "No Surprises, No Silos",
     subtitle: "We communicate early and often.",
     description:
-      "Whether starting a project, sharing progress, or flagging risks, we speak up and bring the right people in at the right time!",
+      "We share updates, raise risks, and involve the right people at the right time. Clear, open communication keeps teams aligned across roles and time zones.",
     img: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/we_value_5_1750182251?_a=BAVAfVDW0",
   },
   {
     id: 6,
     title: "Raise the Bar",
-    subtitle: "Being better at what we do is our passion.",
+    subtitle: "We’re passionate about improving what we do.",
     description:
-      "We love trying different solutions, learning from them, and the thrill of pushing them further once again.",
+      "We explore new solutions, learn from them, and keep pushing ourselves to do better every time.",
     img: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/we_value_6_1750182295?_a=BAVAfVDW0",
   },
 ];
@@ -298,11 +298,11 @@ export default function CulturePage() {
                 Company Culture
               </p>
               <h1 className="text-6xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
-                Built on culture,{" "}
-                <span className="text-orange-500">Driven by talent.</span>
+                Built on strong values,{" "}
+                <span className="text-orange-500">driven by talent .</span>
               </h1>
               <p className="text-2xl text-gray-600 leading-relaxed">
-                At BairesDev, how we work is just as important as what we build.
+               At Sevenunique, the way we work matters just as much as what we build.
               </p>
             </div>
 
@@ -331,8 +331,7 @@ export default function CulturePage() {
                 What we believe in<span className="text-orange-500">.</span>
               </h2>
               <p className="text-gray-600 text-sm md:text-base mt-4 leading-relaxed">
-                These principles shape our decisions, spark our ambition, and
-                connect us across every role and region.
+               These values guide our decisions, fuel our ambition, and connect us across teams and locations. 
               </p>
             </div>
 
@@ -356,8 +355,7 @@ export default function CulturePage() {
                 What we value<span className="text-orange-500">.</span>
               </h2>
               <p className="text-gray-600 text-sm md:text-base mt-4 leading-relaxed">
-                Our values don't describe who we hope to be—they reflect who we
-                already are. They bring our beliefs into motion.
+               Our values reflect who we are today, not just who we aim to be. They guide how we work, shape our actions, and drive success for both our team and our clients. 
               </p>
             </div>
 
@@ -399,15 +397,13 @@ export default function CulturePage() {
 
               {/* HEADING */}
               <h2 className="text-3xl md:text-5xl font-semibold leading-tight mb-6 text-end">
-                It all comes together in <br />
-                what we do
+             It all comes together in <br />
+               what we do
               </h2>
 
               {/* TEXT */}
               <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto md:mx-0">
-                Our beliefs are our compass. Our values are our action plan.
-                Together, they create a workplace where we’re challenged,
-                supported, and inspired to do our best work.
+                Our beliefs guide us, and our values shape how we act. Together, they create a workplace where we are challenged, supported, and motivated to do our best work.
               </p>
             </div>
 

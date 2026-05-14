@@ -11,33 +11,33 @@ import {
 } from "react-icons/fa";
 
 export default function ContactCards() {
-  const cards = [
-    {
-      title: "Discuss Our Services",
-      desc: "Looking to outsource your software development? Discuss your needs with one of our reps.",
-      btn: "Book A Call",
-      link: "/schedule-a-call-page",
-      highlight: true,
-    },
-    {
-      title: "Careers at BairesDev",
-      desc: "Shape the future of tech in a dynamic company with over 4,000 experts worldwide.",
-      btn: "View Job Openings",
-      link: "/schedule-a-call-page",
-    },
-    {
-      title: "Press and Media",
-      desc: "For enquiries related to speaking engagements, quotes, company history, and articles.",
-      btn: "Contact Press",
-      link: "/schedule-a-call-page",
-    },
-    {
-      title: "General Inquiries",
-      desc: "Any other queries or support needs",
-      btn: "Fill Contact Form",
-      link: "/schedule-a-call-page",
-    },
-  ];
+ const cards = [
+  {
+    title: "Discuss Our Services",
+    desc: "Looking to outsource software development? Talk with our team about your needs.",
+    btn: "Book a Call",
+    link: "/schedule-a-call-page",
+    highlight: true,
+  },
+  {
+    title: "Careers at Sevenunique",
+    desc: "Join a global company with 4,000+ experts and help shape the future of technology.",
+    btn: "View Job Openings",
+    link: "/schedule-a-call-page",
+  },
+  {
+    title: "Press and Media",
+    desc: "For inquiries about speaking engagements, quotes, company history, or articles.",
+    btn: "Contact Press",
+    link: "/schedule-a-call-page",
+  },
+  {
+    title: "General Inquiries",
+    desc: "For any other questions or support needs.",
+    btn: "Fill Contact Form",
+    link: "/schedule-a-call-page",
+  },
+];
 
   return (
     <section className="bg-[#f5f7fa] py-16">

@@ -23,9 +23,10 @@ export default function Criclegrowth() {
       <div className="bg-black pt-32 pb-20 md:pt-40 md:pb-24 text-center flex flex-col items-center gap-10">
         {/* HEADING */}
         <p className="text-white font-bold text-2xl  leading-tight max-w-3xl">
-          We&apos;re software experts
+         We are software experts focused on 
           <br />
-          committed to <span className="text-orange-500">continous growth</span>
+         continuous learning<span className="text-orange-500"> and improvement.
+</span>
           .
         </p>
 

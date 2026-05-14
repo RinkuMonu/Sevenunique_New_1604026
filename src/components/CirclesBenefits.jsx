@@ -8,19 +8,19 @@ const features = [
     id: 1,
     title: "Smarter Problem-Solving",
     description:
-      "Thanks to continuous upskilling, our senior software engineers bring fresh perspectives and advanced expertise to software projects.",
+      "Continuous learning helps our senior engineers bring fresh ideas and stronger expertise to every project.",
   },
   {
     id: 2,
     title: "Faster Project Delivery",
     description:
-      "Circle members leverage their ever-evolving skills to overcome challenges efficiently while meeting the highest quality standards.",
+      "Circles members use their growing skills to solve challenges efficiently while maintaining high quality.",
   },
   {
     id: 3,
     title: "Latest Technologies",
     description:
-      "With ample learning opportunities, our developers stay current with the latest trends and tech. So they can bring our clients future-ready solutions.",
+      "Our developers stay updated with the latest trends and tools to deliver future-ready solutions for clients.",
   },
 ];
 
@@ -150,7 +150,7 @@ export default function CirclesBenefits() {
 
             {/* Subheading */}
             <p className="text-[clamp(1.1rem,2vw,1.5rem)] font-semibold text-gray-800 mt-5 mb-8">
-              Stronger devs. Smarter solutions.
+              Better developers lead to better solutions. 
             </p>
 
             {/* ── Image with floating labels ── */}

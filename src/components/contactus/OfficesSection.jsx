@@ -56,7 +56,7 @@ export default function OfficesSection() {
       <div className="max-w-7xl mx-auto px-6">
         
         <h2 className="text-2xl md:text-3xl font-semibold mb-10">
-          BairesDev Around the World - Our Offices
+          SevenUnique Around the World - Our Offices
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
