@@ -17,13 +17,13 @@ import TestimonialHighlightSection from "@/components/Services/ai-development/Te
 import CaseStudySection from "@/components/Services/CaseStudySection";
 import ToolsTechSection from "@/components/Services/ToolsTechSection";
 import EngagementSection from "@/components/EngagementSection";
-import WorkSection from "@/components/services/WorkSection";
 import AwardsSectionFull from "@/components/AwardsSectionFull";
 import UsefulAIResources from "@/components/UsefulAIResources";
 import IndustrySection from "@/components/IndustrySection";
 import ProcessSliderSection from "@/components/ProcessSliderSection";
 import FAQSection from "@/components/FAQSection";
 import RestServicePage from "./RestServicePage";
+import WorkSection from "@/components/Services/WorkSection";
 
 // page.jsx logic update
 export default async function ServicePage({ params }) {
@@ -89,7 +89,7 @@ export default async function ServicePage({ params }) {
         
 
         {normalizedSlug !== "ai-development" && data.workSection ? (
-  <WorkSection data={data.workSection} />
+  <WorkSection  data={data.workSection} />
 ) : null}
 
 

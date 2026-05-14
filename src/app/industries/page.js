@@ -1,9 +1,10 @@
 // app/industries/page.jsx
 
-import IndustryHero from "@/components/Industries/IndustryHero";
-import IndustryGrid from "@/components/Industries/IndustryGrid";
-import TechStack from "@/components/Industries/TechStack";
-import CTASection from "@/components/Industries/CTASection";
+
+import CTASection from "@/components/industries/CTASection";
+import IndustryGrid from "@/components/industries/IndustryGrid";
+import IndustryHero from "@/components/industries/IndustryHero";
+import TechStack from "@/components/industries/TechStack";
 
 export default function Page() {
   return (
