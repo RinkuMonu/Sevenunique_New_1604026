@@ -7,73 +7,73 @@ import { ChevronRight, ChevronLeft, Home } from "lucide-react";
 const data = [
   {
     title:
-      "64% of Women Developers Say AI Has Increased Their Career Agency, BairesDev’s Survey Finds",
+      "64% of Women Developers Say AI Has Increased Their Career Agency, Seven Unique Survey Finds",
     date: "March 3, 2026",
     img: "/images/n1.png",
   },
   {
     title:
-      "BairesDev Named Top Global B2B Service Provider by Clutch",
+      "Seven Unique Named Top Global B2B Service Provider by Clutch",
     date: "February 12, 2026",
     img: "/images/n2.png",
   },
   {
     title:
-      "BairesDev Joins World Economic Forum as Associate Partner, Capping a Year of Enterprise Expansion",
+      "Seven Unique Joins World Economic Forum as Associate Partner, Capping a Year of Enterprise Expansion",
     date: "January 7, 2026",
     img: "/images/n3.png",
   },
   {
     title:
-      "BairesDev Joins World Economic Forum as Associate Partner, Capping a Year of Enterprise Expansion",
+      "Seven Unique Joins World Economic Forum as Associate Partner, Capping a Year of Enterprise Expansion",
     date: "January 7, 2026",
     img: "/images/n4.png",
   },
     {
     title:
-      "BairesDev Joins World Economic Forum as Associate Partner, Capping a Year of Enterprise Expansion",
+      "Seven Unique Joins World Economic Forum as Associate Partner, Capping a Year of Enterprise Expansion",
     date: "January 7, 2026",
     img: "/images/n5.png",
   },
     {
     title:
-      "BairesDev Joins World Economic Forum as Associate Partner, Capping a Year of Enterprise Expansion",
+      "Seven Unique Joins World Economic Forum as Associate Partner, Capping a Year of Enterprise Expansion",
     date: "January 7, 2026",
     img: "/images/n6.png",
   },
     {
     title:
-      "BairesDev Joins World Economic Forum as Associate Partner, Capping a Year of Enterprise Expansion",
+      "Seven Unique Joins World Economic Forum as Associate Partner, Capping a Year of Enterprise Expansion",
     date: "January 7, 2026",
     img: "/images/n3.png",
   },
     {
     title:
-      "BairesDev Joins World Economic Forum as Associate Partner, Capping a Year of Enterprise Expansion",
+      "Seven Unique Joins World Economic Forum as Associate Partner, Capping a Year of Enterprise Expansion",
     date: "January 7, 2026",
     img: "/images/n2.png",
   },
     {
     title:
-      "BairesDev Joins World Economic Forum as Associate Partner, Capping a Year of Enterprise Expansion",
+      "Seven Unique Joins World Economic Forum as Associate Partner, Capping a Year of Enterprise Expansion",
     date: "January 7, 2026",
     img: "/images/n5.png",
   },
     {
     title:
-      "BairesDev Joins World Economic Forum as Associate Partner, Capping a Year of Enterprise Expansion",
+      "Seven Unique Joins World Economic Forum as Associate Partner, Capping a Year of Enterprise Expansion",
     date: "January 7, 2026",
     img: "/images/n2.png",
   },
     {
     title:
-      "BairesDev Joins World Economic Forum as Associate Partner, Capping a Year of Enterprise Expansion",
+      "Seven Unique Joins World Economic Forum as Associate Partner, Capping a Year of Enterprise Expansion",
     date: "January 7, 2026",
     img: "/images/n6.png",
   },
     {
     title:
-      "BairesDev Joins World Economic Forum as Associate Partner, Capping a Year of Enterprise Expansion",
+      "Seven Unique Joins World Economic Forum as Associate Partner, Capping a Year of Enterprise Expansion",
     date: "January 7, 2026",
     img: "/images/n5.png",
   },

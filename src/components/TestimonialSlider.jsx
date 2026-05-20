@@ -130,8 +130,8 @@ export default function TestimonialSection() {
                                 </div>
 
                                 <div>
-                                    <p className="font-bold text-sm">{item.name}</p>
-                                    <p className="text-xs text-gray-500">{item.role}</p>
+                                    <p className="font-bold text-sm text-gray-800">{item.name}</p>
+                                    <p className="text-xs text-gray-800">{item.role}</p>
                                 </div>
 
                             </div>

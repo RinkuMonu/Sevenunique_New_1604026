@@ -124,7 +124,7 @@ export const techData = {
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev talent the top 1%?",
+          question: "What makes Seven Unique talent the top 1%?",
           answer:
             "We apply a rigorous multi-stage vetting process that evaluates technical depth, communication skills, and real-world problem-solving. Less than 1% of applicants make it through.",
         },
@@ -220,7 +220,7 @@ export const techData = {
         {
           industry: "Healthcare & MedTech",
           quote:
-            "We are consistently delivering high-quality software on time, in part thanks to the people from BairesDev. They can find talented, high-caliber, sharp developers who will stay with us long-term. Their main strength is their talent.",
+            "We are consistently delivering high-quality software on time, in part thanks to the people from Seven Unique. They can find talented, high-caliber, sharp developers who will stay with us long-term. Their main strength is their talent.",
           name: "David Johnston",
           role: "Product Engagement Lead",
           photo: "/images/man1.png",
@@ -232,7 +232,7 @@ export const techData = {
           industry: "Financial Services",
           subtitle: "Upgraded and Maintained Repay's AWS Infrastructure",
           quote:
-            "They've also been proactive about checking in about the state of the engagement and overall performance. I'm confident we'll continue working with BairesDev for a long time.",
+            "They've also been proactive about checking in about the state of the engagement and overall performance. I'm confident we'll continue working with Seven Unique for a long time.",
           name: "Michael Soltow",
           role: "Software Dev. Manager",
           photo: "/images/man2.png",
@@ -257,7 +257,7 @@ export const techData = {
           industry: "Financial Services",
           subtitle: "Developed new digital banking features",
           quote:
-            "BairesDev has been a fantastic partner. We wanted to put forth a product to help people cope with financial struggles but didn't have the resources we needed, so we turned to them. They could always find us quality talent in a concise amount of time.",
+            "Seven Unique has been a fantastic partner. We wanted to put forth a product to help people cope with financial struggles but didn't have the resources we needed, so we turned to them. They could always find us quality talent in a concise amount of time.",
           name: "Leonardo Shapiro",
           role: "Head of Growth",
           photo: "/images/man3.png",
@@ -279,7 +279,7 @@ export const techData = {
         {
           industry: "Renewable Energy",
           quote:
-            "I was concerned about a possible mismatch of talent levels of our in-house engineers versus contractors. But, as it turns out, many of the BairesDev engineers we hired emerged as top performers. In fact, of our group of 120 developers, all the BairesDev engineers we had were in the top 20 of the organization.",
+            "I was concerned about a possible mismatch of talent levels of our in-house engineers versus contractors. But, as it turns out, many of the Seven Unique engineers we hired emerged as top performers. In fact, of our group of 120 developers, all the Seven Unique engineers we had were in the top 20 of the organization.",
           name: "Matthew Mecham",
           role: "VP of Engineering",
           photo: "/images/man4.png",
@@ -522,7 +522,7 @@ export const techData = {
       leftColumn: [
         {
           industry: "E-commerce",
-          quote: "BairesDev helped us migrate our entire infrastructure to AWS with zero downtime. Their team's expertise in cloud architecture saved us months of trial and error.",
+          quote: "Seven Unique helped us migrate our entire infrastructure to AWS with zero downtime. Their team's expertise in cloud architecture saved us months of trial and error.",
           name: "Sarah Johnson",
           role: "CTO",
           photo: "/images/man1.png",
@@ -799,7 +799,7 @@ export const techData = {
       leftColumn: [
         {
           industry: "E-commerce & Retail",
-          quote: "BairesDev rebuilt our entire customer-facing frontend in React. The performance improvements were immediate — our Time to Interactive dropped by 60%.",
+          quote: "Seven Unique rebuilt our entire customer-facing frontend in React. The performance improvements were immediate — our Time to Interactive dropped by 60%.",
           name: "Sarah Johnson",
           role: "VP of Product",
           photo: "/images/man1.png",
@@ -923,7 +923,7 @@ export const techData = {
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev React talent the top 1%?",
+          question: "What makes Seven Unique React talent the top 1%?",
           answer: "We apply a rigorous multi-stage vetting process that evaluates React fundamentals, state management patterns, performance optimization, accessibility standards, and real-world problem-solving. Less than 1% of applicants make it through.",
         },
         {
@@ -1259,7 +1259,7 @@ export const techData = {
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev Django talent the top 1%?",
+          question: "What makes Seven Unique Django talent the top 1%?",
           answer: "We apply a rigorous multi-stage vetting process that evaluates Django ORM mastery, security implementation, performance optimization, and real-world problem-solving. Less than 1% of applicants make it through.",
         },
         {
@@ -1450,7 +1450,7 @@ export const techData = {
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev Java talent the top 1%?",
+          question: "What makes Seven Unique Java talent the top 1%?",
           answer:
             "We apply a rigorous multi-stage vetting process that evaluates technical depth, JVM internals knowledge, and real-world problem-solving. Less than 1% of applicants make it through.",
         },
@@ -1589,7 +1589,7 @@ export const techData = {
         {
           industry: "Financial Services",
           subtitle: "Developed real-time fraud detection system",
-          quote: "BairesDev's Java engineers built our real-time fraud detection pipeline from scratch. Their expertise in stream processing and low-latency Java was exactly what we needed.",
+          quote: "Seven Unique's Java engineers built our real-time fraud detection pipeline from scratch. Their expertise in stream processing and low-latency Java was exactly what we needed.",
           name: "Leonardo Shapiro",
           role: "Head of Engineering",
           photo: "/images/man3.png",
@@ -1609,7 +1609,7 @@ export const techData = {
         },
         {
           industry: "E-Commerce",
-          quote: "The Java engineers from BairesDev consistently outperformed our internal team. Their deep Spring expertise and code quality standards raised the bar for everyone.",
+          quote: "The Java engineers from Seven Unique consistently outperformed our internal team. Their deep Spring expertise and code quality standards raised the bar for everyone.",
           name: "Matthew Mecham",
           role: "VP of Engineering",
           photo: "/images/man4.png",
@@ -1778,7 +1778,7 @@ export const techData = {
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev ML talent the top 1%?",
+          question: "What makes Seven Unique ML talent the top 1%?",
           answer:
             "We apply a rigorous multi-stage vetting process that evaluates deep learning fundamentals, production ML experience, MLOps practices, and real-world problem-solving. Less than 1% of applicants make it through.",
         },
@@ -1905,7 +1905,7 @@ export const techData = {
         {
           industry: "Financial Services",
           subtitle: "Built Real-Time Anomaly Detection Pipeline",
-          quote: "BairesDev's ML engineers didn't just deliver a model — they delivered a complete MLOps pipeline. We can retrain, monitor, and improve the system ourselves now.",
+          quote: "Seven Unique's ML engineers didn't just deliver a model — they delivered a complete MLOps pipeline. We can retrain, monitor, and improve the system ourselves now.",
           name: "Michael Soltow",
           role: "Head of Data Science",
           photo: "/images/man2.png",
@@ -2116,7 +2116,7 @@ export const techData = {
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev PHP talent the top 1%?",
+          question: "What makes Seven Unique PHP talent the top 1%?",
           answer:
             "We apply a rigorous multi-stage vetting process that evaluates PHP internals, framework expertise, architectural patterns, and real-world problem-solving. Less than 1% of applicants make it through.",
         },
@@ -2243,7 +2243,7 @@ export const techData = {
         {
           industry: "Media",
           subtitle: "Headless WordPress for Global Publisher",
-          quote: "BairesDev's PHP team migrated our WordPress site to a headless architecture, cutting page load times by 60% and enabling our mobile app strategy.",
+          quote: "Seven Unique's PHP team migrated our WordPress site to a headless architecture, cutting page load times by 60% and enabling our mobile app strategy.",
           name: "Michael Soltow",
           role: "VP of Engineering",
           photo: "/images/man2.png",
@@ -2285,7 +2285,7 @@ export const techData = {
         },
         {
           industry: "Enterprise",
-          quote: "The Symfony experts from BairesDev built our B2B portal from scratch. Clean, testable, and well-documented code. Best Symfony partners we've worked with.",
+          quote: "The Symfony experts from Seven Unique built our B2B portal from scratch. Clean, testable, and well-documented code. Best Symfony partners we've worked with.",
           name: "Matthew Mecham",
           role: "VP of Engineering",
           photo: "/images/man4.png",
@@ -2454,7 +2454,7 @@ export const techData = {
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev TypeScript talent the top 1%?",
+          question: "What makes Seven Unique TypeScript talent the top 1%?",
           answer:
             "We apply a rigorous multi-stage vetting process that evaluates TypeScript internals, advanced type patterns, framework integration, and real-world problem-solving. Less than 1% of applicants make it through.",
         },
@@ -2586,7 +2586,7 @@ export const techData = {
         {
           industry: "Enterprise",
           subtitle: "Monorepo Consolidation with Nx",
-          quote: "BairesDev consolidated 12 repos into a single monorepo with shared type libraries. Our developers can now share code across teams with full type safety.",
+          quote: "Seven Unique consolidated 12 repos into a single monorepo with shared type libraries. Our developers can now share code across teams with full type safety.",
           name: "Michael Soltow",
           role: "Director of Engineering",
           photo: "/images/man2.png",
@@ -3129,7 +3129,7 @@ export const techData = {
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev C# talent the top 1%?",
+          question: "What makes Seven Unique C# talent the top 1%?",
           answer:
             "We apply a rigorous multi-stage vetting process that evaluates C# internals, async patterns, memory management, .NET framework expertise, and real-world problem-solving. Less than 1% of applicants make it through.",
         },
@@ -3261,7 +3261,7 @@ export const techData = {
         {
           industry: "Enterprise",
           subtitle: "Legacy .NET Framework to .NET 8 Migration",
-          quote: "BairesDev migrated our 15-year-old .NET Framework app to .NET 8 with zero downtime. Performance improved 3x and maintenance is much easier.",
+          quote: "Seven Unique migrated our 15-year-old .NET Framework app to .NET 8 with zero downtime. Performance improved 3x and maintenance is much easier.",
           name: "Michael Soltow",
           role: "Software Dev. Manager",
           photo: "/images/man2.png",
@@ -3472,7 +3472,7 @@ export const techData = {
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev Go talent the top 1%?",
+          question: "What makes Seven Unique Go talent the top 1%?",
           answer:
             "We apply a rigorous multi-stage vetting process that evaluates Go internals, concurrency patterns, memory profiling, and real-world problem-solving. Less than 1% of applicants make it through.",
         },
@@ -3609,7 +3609,7 @@ export const techData = {
         {
           industry: "Streaming",
           subtitle: "Real-Time Data Pipeline in Go",
-          quote: "BairesDev built a concurrent data processor that reduced our ETL time by 80%. Their Go engineers understood our scale requirements perfectly.",
+          quote: "Seven Unique built a concurrent data processor that reduced our ETL time by 80%. Their Go engineers understood our scale requirements perfectly.",
           name: "Michael Soltow",
           role: "Data Engineering Lead",
           photo: "/images/man2.png",
@@ -3820,7 +3820,7 @@ export const techData = {
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev JavaScript talent the top 1%?",
+          question: "What makes Seven Unique JavaScript talent the top 1%?",
           answer:
             "We apply a rigorous multi-stage vetting process that evaluates JavaScript internals (closures, prototypes, event loop), async patterns, framework expertise, and real-world problem-solving. Less than 1% of applicants make it through.",
         },
@@ -3957,7 +3957,7 @@ export const techData = {
         {
           industry: "SaaS",
           subtitle: "Real-Time Dashboard with WebSockets",
-          quote: "BairesDev built a real-time analytics dashboard that reduced data latency from 30 seconds to under 1 second. Our users love it.",
+          quote: "Seven Unique built a real-time analytics dashboard that reduced data latency from 30 seconds to under 1 second. Our users love it.",
           name: "Michael Soltow",
           role: "Product Manager",
           photo: "/images/man2.png",
@@ -4168,7 +4168,7 @@ export const techData = {
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev Azure talent the top 1%?",
+          question: "What makes Seven Unique Azure talent the top 1%?",
           answer:
             "We apply a rigorous multi-stage vetting process that evaluates Azure architecture, networking, security, infrastructure-as-code, and real-world problem-solving. Every engineer holds active Microsoft certifications. Less than 1% of applicants make it through.",
         },
@@ -4300,7 +4300,7 @@ export const techData = {
         {
           industry: "Enterprise",
           subtitle: "AKS Platform for Microservices",
-          quote: "BairesDev deployed our AKS cluster and taught our team how to manage it. The platform handles 50+ microservices with zero downtime for 18 months.",
+          quote: "Seven Unique deployed our AKS cluster and taught our team how to manage it. The platform handles 50+ microservices with zero downtime for 18 months.",
           name: "Michael Soltow",
           role: "DevOps Manager",
           photo: "/images/man2.png",
@@ -4511,7 +4511,7 @@ export const techData = {
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev Power BI talent the top 1%?",
+          question: "What makes Seven Unique Power BI talent the top 1%?",
           answer:
             "We apply a rigorous multi-stage vetting process that evaluates DAX optimization, M language proficiency, data modeling (star/snowflake schemas), performance tuning, and security implementation (RLS). Less than 1% of applicants make it through.",
         },
@@ -4643,7 +4643,7 @@ export const techData = {
         {
           industry: "Financial Services",
           subtitle: "Enterprise-Wide KPI Dashboard",
-          quote: "BairesDev deployed a company-wide dashboard with row-level security serving 5,000+ users. Performance is excellent despite the scale.",
+          quote: "Seven Unique deployed a company-wide dashboard with row-level security serving 5,000+ users. Performance is excellent despite the scale.",
           name: "Michael Soltow",
           role: "BI Manager",
           photo: "/images/man2.png",
@@ -4854,7 +4854,7 @@ export const techData = {
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev Ruby talent the top 1%?",
+          question: "What makes Seven Unique Ruby talent the top 1%?",
           answer:
             "We apply a rigorous multi-stage vetting process that evaluates Ruby metaprogramming, Rails internals, database optimization (N+1, indexing), testing strategies, and real-world problem-solving. Less than 1% of applicants make it through.",
         },
@@ -4991,7 +4991,7 @@ export const techData = {
         {
           industry: "E-Commerce",
           subtitle: "Multi-Vendor Spree Marketplace",
-          quote: "BairesDev built our multi-vendor marketplace with Spree. It handles 100K+ monthly transactions and scales effortlessly during peak sales.",
+          quote: "Seven Unique built our multi-vendor marketplace with Spree. It handles 100K+ monthly transactions and scales effortlessly during peak sales.",
           name: "Michael Soltow",
           role: "Product Manager",
           photo: "/images/man2.png",
@@ -5201,7 +5201,7 @@ export const techData = {
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev Vue.js talent the top 1%?",
+          question: "What makes Seven Unique Vue.js talent the top 1%?",
           answer:
             "We apply a rigorous multi-stage vetting process that evaluates Vue reactivity system, Composition API, component design patterns, state management (Pinia/Vuex), and real-world problem-solving. Less than 1% of applicants make it through.",
         },
@@ -5338,7 +5338,7 @@ export const techData = {
         {
           industry: "Enterprise",
           subtitle: "Real-Time Analytics Dashboard",
-          quote: "BairesDev built a real-time dashboard with Vue 3 that handles 10,000+ concurrent users. The reactivity is buttery smooth.",
+          quote: "Seven Unique built a real-time dashboard with Vue 3 that handles 10,000+ concurrent users. The reactivity is buttery smooth.",
           name: "Michael Soltow",
           role: "Engineering Manager",
           photo: "/images/man2.png",
@@ -5549,7 +5549,7 @@ export const techData = {
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev Angular talent the top 1%?",
+          question: "What makes Seven Unique Angular talent the top 1%?",
           answer:
             "We apply a rigorous multi-stage vetting process that evaluates Angular internals (change detection, DI, renderer), RxJS mastery, NgRx/NgXS knowledge, performance optimization, and real-world problem-solving. Less than 1% of applicants make it through.",
         },
@@ -5686,7 +5686,7 @@ export const techData = {
         {
           industry: "Financial Services",
           subtitle: "AngularJS to Angular 16 Migration",
-          quote: "BairesDev migrated our 8-year-old AngularJS app to Angular 16 with zero downtime. Performance improved 70% and our developers are finally productive again.",
+          quote: "Seven Unique migrated our 8-year-old AngularJS app to Angular 16 with zero downtime. Performance improved 70% and our developers are finally productive again.",
           name: "Michael Soltow",
           role: "Engineering Manager",
           photo: "/images/man2.png",
@@ -5897,7 +5897,7 @@ export const techData = {
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev C++ talent the top 1%?",
+          question: "What makes Seven Unique C++ talent the top 1%?",
           answer:
             "We apply a rigorous multi-stage vetting process that evaluates memory management, template metaprogramming, concurrency (std::thread, async, atomic), STL, and real-world problem-solving. Less than 1% of applicants make it through.",
         },
@@ -6034,7 +6034,7 @@ export const techData = {
         {
           industry: "Financial Services",
           subtitle: "Low-Latency Trading Platform",
-          quote: "BairesDev built our HFT platform with sub-microsecond latency. Their low-level C++ optimization is world-class.",
+          quote: "Seven Unique built our HFT platform with sub-microsecond latency. Their low-level C++ optimization is world-class.",
           name: "Michael Soltow",
           role: "Trading Systems Lead",
           photo: "/images/man2.png",
@@ -6245,7 +6245,7 @@ export const techData = {
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev GCP talent the top 1%?",
+          question: "What makes Seven Unique GCP talent the top 1%?",
           answer:
             "We apply a rigorous multi-stage vetting process that evaluates GCP architecture, networking, IAM, data services (BigQuery, Dataflow, Pub/Sub), infrastructure-as-code, and real-world problem-solving. Less than 1% of applicants make it through.",
         },
@@ -6382,7 +6382,7 @@ export const techData = {
         {
           industry: "Technology",
           subtitle: "Serverless API with Cloud Run",
-          quote: "BairesDev built our API platform on Cloud Run. It handles 100K+ requests per second and auto-scales perfectly. We never think about infrastructure.",
+          quote: "Seven Unique built our API platform on Cloud Run. It handles 100K+ requests per second and auto-scales perfectly. We never think about infrastructure.",
           name: "Michael Soltow",
           role: "Platform Lead",
           photo: "/images/man2.png",
@@ -6593,7 +6593,7 @@ export const techData = {
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev Kotlin talent the top 1%?",
+          question: "What makes Seven Unique Kotlin talent the top 1%?",
           answer:
             "We apply a rigorous multi-stage vetting process that evaluates Kotlin language features (null safety, extensions, data classes), coroutines, flows, multiplatform, Android architecture, and real-world problem-solving. Less than 1% of applicants make it through.",
         },
@@ -6730,7 +6730,7 @@ export const techData = {
         {
           industry: "Technology",
           subtitle: "Jetpack Compose Android App",
-          quote: "BairesDev built our Android app from scratch with Jetpack Compose. The app has 1M+ downloads and a 4.8-star rating.",
+          quote: "Seven Unique built our Android app from scratch with Jetpack Compose. The app has 1M+ downloads and a 4.8-star rating.",
           name: "Michael Soltow",
           role: "Mobile Engineering Manager",
           photo: "/images/man2.png",
@@ -6941,7 +6941,7 @@ export const techData = {
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev Node.js talent the top 1%?",
+          question: "What makes Seven Unique Node.js talent the top 1%?",
           answer:
             "We apply a rigorous multi-stage vetting process that evaluates event loop understanding, async patterns (Promises, async/await), streams, error handling, performance optimization, and real-world problem-solving. Less than 1% of applicants make it through.",
         },
@@ -7078,7 +7078,7 @@ export const techData = {
         {
           industry: "Technology",
           subtitle: "Real-Time Chat Platform",
-          quote: "BairesDev built our real-time chat platform with Socket.io. It serves 1M+ daily active users with zero downtime.",
+          quote: "Seven Unique built our real-time chat platform with Socket.io. It serves 1M+ daily active users with zero downtime.",
           name: "Michael Soltow",
           role: "Engineering Manager",
           photo: "/images/man2.png",
@@ -7284,7 +7284,7 @@ export const techData = {
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev Python talent the top 1%?",
+          question: "What makes Seven Unique Python talent the top 1%?",
           answer:
             "We apply a rigorous multi-stage vetting process that evaluates Python internals, async/await patterns, type hints, packaging (Poetry, pip), data processing (Pandas, Polars), and real-world problem-solving. Less than 1% of applicants make it through.",
         },
@@ -7421,7 +7421,7 @@ export const techData = {
         {
           industry: "FinTech",
           subtitle: "High-Performance FastAPI Backend",
-          quote: "BairesDev built our FastAPI backend handling 10K+ requests per second. The async support and automatic OpenAPI docs saved us months.",
+          quote: "Seven Unique built our FastAPI backend handling 10K+ requests per second. The async support and automatic OpenAPI docs saved us months.",
           name: "Michael Soltow",
           role: "Backend Lead",
           photo: "/images/man2.png",
@@ -7632,7 +7632,7 @@ export const techData = {
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev Salesforce talent the top 1%?",
+          question: "What makes Seven Unique Salesforce talent the top 1%?",
           answer:
             "We apply a rigorous multi-stage vetting process that evaluates Apex best practices, SOQL/SOSL optimization, Lightning Web Components, governor limit awareness, security patterns, and real-world problem-solving. Less than 1% of applicants make it through.",
         },
@@ -7769,7 +7769,7 @@ export const techData = {
         {
           industry: "Enterprise",
           subtitle: "Salesforce to SAP Integration",
-          quote: "BairesDev built real-time integration between Salesforce and SAP. Our orders now sync instantly with zero errors.",
+          quote: "Seven Unique built real-time integration between Salesforce and SAP. Our orders now sync instantly with zero errors.",
           name: "Michael Soltow",
           role: "Integration Manager",
           photo: "/images/man2.png",
@@ -7980,7 +7980,7 @@ export const techData = {
           defaultOpen: true,
         },
         {
-          question: "What makes BairesDev Xamarin talent the top 1%?",
+          question: "What makes Seven Unique Xamarin talent the top 1%?",
           answer:
             "We apply a rigorous multi-stage vetting process that evaluates Xamarin.Forms, XAML, MVVM patterns, native bindings, platform-specific API access, performance optimization, and real-world problem-solving. Less than 1% of applicants make it through.",
         },
@@ -8117,7 +8117,7 @@ export const techData = {
         {
           industry: "Enterprise",
           subtitle: "Legacy Native App Migration to Xamarin",
-          quote: "BairesDev migrated our separate iOS and Android codebases to a single Xamarin app. Maintenance costs dropped 60%.",
+          quote: "Seven Unique migrated our separate iOS and Android codebases to a single Xamarin app. Maintenance costs dropped 60%.",
           name: "Michael Soltow",
           role: "Mobile Engineering Manager",
           photo: "/images/man2.png",

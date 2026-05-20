@@ -33,9 +33,9 @@ export default function TestimonialCTA() {
               &#8220;
             </div>
             <p className="text-white text-[25px] leading-relaxed max-w-[520px] mb-8">
-              Many of the BairesDev engineers we hired emerged as top
+              Many of the Seven Unique engineers we hired emerged as top
               performers. In fact, of our group of 120 developers, all the
-              BairesDev engineers we had were in the top 20 of the
+              Seven Unique engineers we had were in the top 20 of the
               organization.&#8221;
             </p>
             <p className="text-white font-bold text-[23px]">

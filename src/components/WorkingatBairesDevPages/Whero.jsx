@@ -19,7 +19,7 @@ export default function HeroSectionW() {
             <span className="text-orange-500">Anywhere.</span>
           </h1>
           <p className="text-gray-600 text-lg leading-relaxed max-w-2xl mb-8">
-            Innovate from anywhere with a remote-first company. Work with global brands like Google, Pinterest, and Rolls-Royce, along with innovative startups shaping the future.
+            Innovate from anywhere with a remote-first company. Work with global brands like Axis Bank, IRCTC, and TravelBoutique, along with innovative startups shaping the future.
 
           </p>
           <Link
@@ -33,9 +33,9 @@ Associate Program
         </div>
         <div className="mb-12  overflow-x-hidden">
           <Image
-            src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/join-us-hero_y6nyxq?_a=BAVAfVDW0"
-            width={900}
-            height={900}
+            src="/images/loc-banner.png"
+            width={500}
+            height={600}
             className="object-cover object-right absolute -top-5"
             priority
             alt="img"

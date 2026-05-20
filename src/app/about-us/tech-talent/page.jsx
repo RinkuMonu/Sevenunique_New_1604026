@@ -10,7 +10,7 @@ export default function Page() {
     return (
         <>
             <TalentHero />
-            <TrustedStrip />
+            {/* <TrustedStrip /> */}
             <VettingProcess />
             <BenefitsSection />
             <TeamRolesSection />

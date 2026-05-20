@@ -103,7 +103,7 @@ export default function Services() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 mb-10">
           <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight leading-[1.12] max-w-3xl text-[#191919]">
-           treamlining Development Across 
+           Streamlining Development Across 
             <br />
             The Entire SDLC
             <span className="text-[#f4622a]">.</span>

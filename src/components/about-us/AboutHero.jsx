@@ -130,7 +130,7 @@ export default function AboutHero() {
 
         {/* Label */}
         <p className="text-[11px] tracking-[0.25em] text-gray-400 uppercase mb-6 font-medium">
-          About BairesDev
+          About Seven Unique
         </p>
 
         <div ref={wrapRef} className="relative" style={{ overflow: "visible" }}>

@@ -5,27 +5,27 @@ import Image from "next/image";
 const sidebarData = [
   {
     title:
-      "BairesDev Named Top Global B2B Service Provider by Clutch",
+      "Seven Unique Named Top Global B2B Service Provider by Clutch",
     img: "/images/news1.png",
   },
   {
     title:
-      "BairesDev Joins World Economic Forum as Associate Partner, Capping a Year of Enterpr...",
+      "Seven Unique Joins World Economic Forum as Associate Partner, Capping a Year of Enterpr...",
     img: "/images/news2.png",
   },
   {
     title:
-      "BairesDev Acquires AI Upskilling Startup Modal, Taps Darren Shimkus as President of ...",
+      "Seven Unique Acquires AI Upskilling Startup Modal, Taps Darren Shimkus as President of ...",
     img: "/images/news3.png",
   },
   {
     title:
-      "BairesDev Announces Winners of its Inaugural 2025 Developer’s Choice Awards, Identif...",
+      "Seven Unique Announces Winners of its Inaugural 2025 Developer’s Choice Awards, Identif...",
     img: "/images/news4.png",
   },
     {
     title:
-      "BairesDev Announces Winners of its Inaugural 2025 Developer’s Choice Awards, Identif...",
+      "Seven Unique Announces Winners of its Inaugural 2025 Developer’s Choice Awards, Identif...",
     img: "/images/news5.png",
   },
 ];
@@ -54,7 +54,7 @@ export default function FeaturedNews() {
           {/* Image */}
           <div className="mt-6">
             <Image
-              src="/images/press.png"
+              src="/images/team-women.jpg"
               alt="Main News"
               width={800}
               height={450}

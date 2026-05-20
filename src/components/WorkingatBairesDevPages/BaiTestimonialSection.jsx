@@ -13,12 +13,12 @@ export default function BaiTestimonialSection() {
     {
       name: "Raman Singh",
       role: "Engineering Manager",
-      text: "I really enjoy working with a team of specialists in several technologies. At BairesDev we have a great social environment and a lot of room for technical and personal growth.",
+      text: "I really enjoy working with a team of specialists in several technologies. At Seven Unique we have a great social environment and a lot of room for technical and personal growth.",
     },
     {
       name: "Priyanshi Goyal",
       role: "Service Manager",
-      text: "My career has greatly improved alongside the company’s growth. I enjoy working at BairesDev and I’m proud to be part of this amazing community.",
+      text: "My career has greatly improved alongside the company’s growth. I enjoy working at Seven Unique and I’m proud to be part of this amazing community.",
     },
   ];
 

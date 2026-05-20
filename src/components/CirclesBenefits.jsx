@@ -161,7 +161,7 @@ export default function CirclesBenefits() {
               {/* Developers group image — using a placeholder that looks realistic */}
               <img
                 src="https://assets.bairesdev.com//image/upload/c_limit,w_912/dpr_auto/f_auto/q_auto/v1/www/static/circles/circle_benefits_people_zjybgu?_a=BAVAfVDW0"
-                alt="BairesDev team of senior developers"
+                alt="Seven Unique team of senior developers"
                 className="w-full h-full object-cover object-top rounded-none"
                 style={{ display: "block" }}
               />

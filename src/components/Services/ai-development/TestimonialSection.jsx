@@ -6,7 +6,7 @@ const leftTestimonials = [
   {
     industry: "Healthcare & MedTech",
     quote:
-      "We are consistently delivering high-quality software on time, in part thanks to the people from BairesDev. They can find talented, high-caliber, sharp developers who will stay with us long-term. Their main strength is their talent.",
+      "We are consistently delivering high-quality software on time, in part thanks to the people from Seven Unique. They can find talented, high-caliber, sharp developers who will stay with us long-term. Their main strength is their talent.",
     name: "David Johnston",
     role: "Product Engagement Lead",
     photo: "/images/man1.png",
@@ -18,7 +18,7 @@ const leftTestimonials = [
     industry: "Financial Services",
     subtitle: "Upgraded and Maintained Repay's AWS Infrastructure",
     quote:
-      "They've also been proactive about checking in about the state of the engagement and overall performance. I'm confident we'll continue working with BairesDev for a long time.",
+      "They've also been proactive about checking in about the state of the engagement and overall performance. I'm confident we'll continue working with Seven Unique for a long time.",
     name: "Michael Soltow",
     role: "Software Dev. Manager",
     photo: "/images/man2.png",
@@ -44,7 +44,7 @@ const rightTestimonials = [
     industry: "Financial Services",
     subtitle: "Developed new digital banking features",
     quote:
-      "BairesDev has been a fantastic partner. We wanted to put forth a product to help people cope with financial struggles but didn't have the resources we needed, so we turned to them. They could always find us quality talent in a concise amount of time.",
+      "Seven Unique has been a fantastic partner. We wanted to put forth a product to help people cope with financial struggles but didn't have the resources we needed, so we turned to them. They could always find us quality talent in a concise amount of time.",
     name: "Leonardo Shapiro",
     role: "Head of Growth",
     photo: "/images/man3.png",
@@ -66,7 +66,7 @@ const rightTestimonials = [
   {
     industry: "Renewable Energy",
     quote:
-      "I was concerned about a possible mismatch of talent levels of our in-house engineers versus contractors. But, as it turns out, many of the BairesDev engineers we hired emerged as top performers. In fact, of our group of 120 developers, all the BairesDev engineers we had were in the top 20 of the organization.",
+      "I was concerned about a possible mismatch of talent levels of our in-house engineers versus contractors. But, as it turns out, many of the Seven Unique engineers we hired emerged as top performers. In fact, of our group of 120 developers, all the Seven Unique engineers we had were in the top 20 of the organization.",
     name: "Matthew Mecham",
     role: "VP of Engineering",
     photo: "/images/man4.png",

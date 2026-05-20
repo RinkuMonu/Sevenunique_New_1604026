@@ -80,7 +80,7 @@ function QuoteCard() {
       <div className="p-5">
         <p className="text-[44px] leading-none text-[#f25f2a]">“</p>
         <p className="mt-2 text-[37px] leading-[1.45] text-[#111]">
-          BairesDev assembled a dream team for us and in just a few months our digital offering was completely transformed.
+          Seven Unique assembled a dream team for us and in just a few months our digital offering was completely transformed.
         </p>
         <div className="mt-6 flex items-center gap-3 rounded-md bg-[#faf7f7] p-3">
           <div className="h-8 w-8 rounded-full border border-[#ccc] flex items-center justify-center text-[16px]">R</div>
@@ -151,7 +151,7 @@ export default function BlogDetailPage() {
               </div>
 
               <p className="mt-6 text-[16px] leading-[1.7] text-[#3f4450]">
-                Founded in 2009, BairesDev is the leading nearshore technology solutions company, with 4,000+
+                Founded in 2024, Seven Unique is the leading nearshore technology solutions company, with 4,000+
                 professionals in more than 50 countries, representing the top 1% of tech talent. The company's goal is
                 to create lasting value throughout the entire digital transformation journey.
               </p>

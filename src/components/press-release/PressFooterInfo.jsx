@@ -51,7 +51,7 @@ export default function PressFooterInfo() {
         <div className="flex items-center gap-2 text-sm text-gray-700">
           <Mail size={16} />
           <span className="border-b border-black cursor-pointer">
-            press@bairesdev.com
+            info@sevenunique.com
           </span>
         </div>
       </div>
