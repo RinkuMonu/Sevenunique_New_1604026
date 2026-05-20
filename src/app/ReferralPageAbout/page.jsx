@@ -171,7 +171,7 @@ Together, we can open new opportunities, connect talented people, and build a be
               </p>
               <p className="text-[#000000] text-lg leading-relaxed mt-6 tracking-wide">
                 Together we can forge new paths, connect great minds and build a
-                brighter future at BairesDev®.
+                brighter future at Seven Unique.
               </p>
             </div>
             <div className="flex-1 flex justify-center">

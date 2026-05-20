@@ -62,7 +62,7 @@ const BlogCarouselSectionCricle = () => {
         "The Future of AI in Software Development: Trends to Watch in 2025",
       imageUrl:
         "https://bairesdev.mo.cloudinary.net/blog/2024/06/history-of-artificial-intelligence.jpg?tx=w_1920,q_auto",
-      author: "BairesDev Editorial Team",
+      author: "Seven Unique Editorial Team",
       date: "Dec 15, 2024",
     },
     {
@@ -71,7 +71,7 @@ const BlogCarouselSectionCricle = () => {
         "How to Build Scalable Microservices Architecture for Enterprise Applications",
       imageUrl:
         "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&h=500&fit=crop",
-      author: "BairesDev Editorial Team",
+      author: "Seven Unique Editorial Team",
       date: "Dec 12, 2024",
     },
     {
@@ -80,7 +80,7 @@ const BlogCarouselSectionCricle = () => {
         "Remote Work Best Practices: Managing Global Tech Teams Effectively",
       imageUrl:
         "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=500&fit=crop",
-      author: "BairesDev Editorial Team",
+      author: "Seven Unique Editorial Team",
       date: "Dec 10, 2024",
     },
   ];

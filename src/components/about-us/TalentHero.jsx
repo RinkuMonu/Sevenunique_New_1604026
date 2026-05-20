@@ -13,7 +13,7 @@ export default function TalentHero() {
             The Top 1%
           </p>
           <h1 className="text-[48px] md:text-[56px] leading-[1.1] font-semibold text-[#111827]">
-            We evaluate <span className="text-[#f66135]">over 2.5 million</span> <br />
+            We evaluate <span className="text-[#f66135]">over 1000</span> <br />
             candidates each year to provide <br />
              you with only the <span className="text-[#f66135]">top 1%</span> of{" "}
             tech talent.
@@ -33,7 +33,7 @@ export default function TalentHero() {
         {/* RIGHT IMAGE */}
         <div className="relative w-full h-[520px]">
           <Image
-            src="/images/talenthero.png" // 🔁 replace with your actual image path
+            src="/images/team.jpg" // 🔁 replace with your actual image path
             alt="Team working"
             fill
             className="object-cover rounded-[24px]"

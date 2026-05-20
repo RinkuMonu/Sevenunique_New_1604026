@@ -10,7 +10,7 @@ export default function ClutchSection() {
           {/* MAIN IMAGE */}
           <div className="relative h-[260px] md:h-[300px] rounded-2xl overflow-hidden ">
             <Image
-              src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/clutch_ggh2er?_a=BAVAfVDW0"
+              src="/images/team-img.jpg"
               alt="meeting"
               fill
               className="object-cover"

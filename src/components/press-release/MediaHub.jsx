@@ -12,9 +12,9 @@ export default function MediaHub() {
         <div>
             <PressHero />
             <FeaturedNews />
-            <PressGrid />
-            <FeaturedSection />
-            <NewsSection />
+            {/* <PressGrid /> */}
+            {/* <FeaturedSection /> */}
+            {/* <NewsSection /> */}
             <PressCards />
             <PressFooterInfo />
             <GlobalCTA />

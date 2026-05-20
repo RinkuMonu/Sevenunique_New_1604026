@@ -83,9 +83,9 @@ function createExpertsSection({
 }
 
 function createCompanyTrustSection({
-  eyebrow = "ABOUT BAIRESDEV",
-  heading = "Why work with BairesDev? We're trusted by the world's top tech teams.",
-  description = "BairesDev is a US-based company powered by LATAM dev teams...",
+  eyebrow = "ABOUT SEVEN UNIQUE",
+  heading = "Why work with Seven Unique? We're trusted by the world's top tech teams.",
+  description = "Seven Unique is a US-based company powered by LATAM dev teams...",
   stats,
   image = "/logos/map.png",
 } = {}) {

@@ -144,7 +144,7 @@ const industriesCols = [
 
 const aboutCols = [
   {
-    label: "Inside BairesDev",
+    label: "Inside Seven Unique",
     items: [
       { name: "Leadership Team", path: "/about-us/Leadership" },
       { name: "Our Tech Talent", path: "/about-us/tech-talent" },
@@ -345,6 +345,7 @@ export default function Header() {
                                   return (
                                     <li key={name + index}>
                                       <Link
+                                      onClick={() => setOpen(null)}
                                         href={path}
                                         className="hover:text-[#f46b45]"
                                       >
@@ -393,6 +394,7 @@ export default function Header() {
                               {col.map((entry) => (
                                 <li key={entry.name}>
                                   <Link
+                                  onClick={() => setOpen(null)}
                                     href={entry.path}
                                     className="inline-flex text-[13px] text-[#222] transition-all duration-200 hover:translate-x-1 hover:text-[#f46b45]"
                                   >
@@ -519,7 +521,6 @@ export default function Header() {
               </div>
             );
           })}
-
           <Link href="/our-work-page" className="transition-colors hover:text-[#f46b45]">
             Our Work
           </Link>
@@ -529,7 +530,6 @@ export default function Header() {
           >
             Blog
           </Link>
-
           <Link
             href="/schedule-a-call-page"
             className="rounded-md bg-black px-4 py-2 text-[15px] font-medium text-white transition-colors hover:bg-gray-800"
@@ -617,7 +617,6 @@ export default function Header() {
           </div>
         </div>
       )}
-
     </header>
   );
 }

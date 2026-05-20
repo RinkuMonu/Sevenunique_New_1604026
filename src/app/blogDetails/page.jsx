@@ -557,7 +557,7 @@ function TestimonialWidget() {
           “
         </span>
         <p className="text-gray-900 text-base italic">
-          BairesDev assembled a dream team for us and in just a few months our
+          Seven Unique assembled a dream team for us and in just a few months our
           digital offering was completely transformed.
         </p>
         <div className="bg-[#FEF1ED] mt-4 flex items-center gap-3 px-3 py-3 rounded">

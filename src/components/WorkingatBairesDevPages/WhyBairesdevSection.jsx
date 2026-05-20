@@ -70,7 +70,7 @@ If you’re looking for a place to grow your skills and turn bold ideas into rea
 
           </p>
           <Image
-            src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/joinus_why-baires-dev_frrxg7?_a=BAVAfVDW0"
+            src="/images/help.jpg"
             width={500}
             height={600}
             className="object-cover "

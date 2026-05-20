@@ -8,7 +8,7 @@ export default function JobsPage() {
     title:
       "Sales Director (Healthcare Industry) | Remote Work | New York, New York, United States",
     description:
-      "In this role, you will be in charge of sourcing, nurturing, and closing new BairesDev clients primarily from your network and/or industry that are not inbound leads. This is a Hunter role.",
+      "In this role, you will be in charge of sourcing, nurturing, and closing new Seven Unique clients primarily from your network and/or industry that are not inbound leads. This is a Hunter role.",
     category: "Sales/Business Development",
   });
 
@@ -91,11 +91,11 @@ export default function JobsPage() {
         <div className="max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row justify-between items-center text-sm">
           <div className="flex items-center gap-2 font-semibold">
             <span>▸▸</span>
-            <span>BairesDev</span>
+            <span>Seven Unique</span>
           </div>
 
           <p className="mt-2 md:mt-0">
-            BairesDev 2009 - 2026. All rights reserved.
+            Seven Unique 2024 - 2026. All rights reserved.
           </p>
         </div>
       </footer>

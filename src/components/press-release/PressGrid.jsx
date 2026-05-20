@@ -18,22 +18,22 @@ const data = [
   },
   {
     title:
-      "BairesDev Makes 2025 Inc. 5000 List for the Sixth Time, Highlighting Continued Market Growth",
+      "Seven Unique Makes 2025 Inc. 5000 List for the Sixth Time, Highlighting Continued Market Growth",
     date: "August 12, 2025",
     img: "/images/p3.png",
   },
   {
-    title: "BairesDev’s AI Awarded Initiatives Cut Time-to-Hire by 50% and Drove $40M in Growth",
+    title: "Seven Unique’s AI Awarded Initiatives Cut Time-to-Hire by 50% and Drove $40M in Growth",
     date: "July 10, 2025",
     img: "/images/p4.png",
   },
   {
-    title: "Senior Developer Hiring Trends: Human Skills To Outshine Technical Expertise, Says BairesDev CEO at World Economic Forum",
+    title: "Senior Developer Hiring Trends: Human Skills To Outshine Technical Expertise, Says Seven Unique CEO at World Economic Forum",
     date: "June 24, 2025",
     img: "/images/p5.png",
   },
   {
-    title: "BairesDev Ranked Among Clutch’s Top Software Leaders 2025 with Triple Recognition",
+    title: "Seven Unique Ranked Among Clutch’s Top Software Leaders 2025 with Triple Recognition",
     date: "June 12, 2025",
     img: "/images/p6.png",
   },

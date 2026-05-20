@@ -167,7 +167,7 @@ Cost-effective solutions.`,
   },
 
     whyChoose: {
-  title: "Why Choose BairesDev for Android Mobile App Development?",
+  title: "Why Choose Seven Unique for Android Mobile App Development?",
   image: "/images/choose.png",
 
   points: [

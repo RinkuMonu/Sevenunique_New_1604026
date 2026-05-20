@@ -5,53 +5,46 @@ import Link from "next/link";
 
 const cards = [
   {
-    title: "Software developers",
-    desc: "Build intuitive, visually appealing, and user-friendly interfaces for websites and applications. ",
-    img: "/images/l1.png",
+    title: "Tech Team Lead",
+    desc: "Leads the development team, manages project workflows, and ensures high-quality software delivery through effective technical guidance.",
+    img: "/images/rajyawardhan.png",
     bg: "bg-orange-200",
     link: "/roles/software-developers",
   },
   {
-    title: "Back-end Developers",
-    desc: "They work on server-side logic, databases, and system performance to keep applications running smoothly.",
-    img: "/images/l2.png",
+    title: "Sr. Full Stack Developers",
+    desc: "Develop scalable frontend and backend solutions while handling APIs, databases, and application performance optimization.",
+    img: "/team/p3.png",
     bg: "bg-blue-200",
     link: "/roles/backend-developers",
   },
   {
-    title: "Project Managers/ Product Owners",
-    desc: "They lead the development process and make sure projects are delivered successfully on time and as planned.",
-    img: "/images/l3.png",
+    title: "Server Admin",
+    desc: "Manages servers, hosting environments, security, deployments, and system monitoring to ensure smooth application performance.",
+    img: "/images/Rinkusir.png",
     bg: "bg-green-200",
     link: "/roles/project-managers",
   },
   {
-    title: "QA Engineers",
-    desc: "They test applications to make sure everything works correctly and is free of errors.",
-    img: "/images/l4.png",
+    title: "Frontend Developer",
+    desc: "Builds responsive and interactive user interfaces with modern frontend technologies to deliver seamless user experiences.",
+    img: "/images/devika.png",
     bg: "bg-blue-300",
     link: "/roles/qa-engineers",
   },
   {
-    title: "Business Analysts",
-    desc: "They analyze data and provide insights to improve business decisions and development processes.",
-    img: "/images/l5.png",
+    title: "Rahul Singh",
+    desc: "Contributes to project execution, collaboration, and innovative development solutions to support business and technical goals.",
+    img: "/images/rahul.png",
     bg: "bg-yellow-200",
     link: "/roles/business-analysts",
   },
   {
     title: "UX/UI Designers",
-    desc: "They design user-friendly interfaces and create wireframes and prototypes for better digital experiences.",
-    img: "/images/l6.png",
+    desc: "Design intuitive user interfaces, wireframes, and engaging user experiences focused on usability and modern design principles.",
+    img: "/images/khyati.PNG",
     bg: "bg-red-200",
     link: "/roles/ui-ux-designers",
-  },
-  {
-    title: "DevOps Engineers",
-    desc: "They manage infrastructure to ensure systems are reliable, scalable, and secure.",
-    img: "/images/l7.png",
-    bg: "bg-green-300",
-    link: "/roles/devops-engineers",
   },
 ];
 
@@ -86,9 +79,9 @@ export default function TeamRolesSection() {
             <Link key={i} href={item.link} className="group">
               <div className="bg-white rounded-[20px] shadow-md p-6 text-center relative cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                 {/* IMAGE */}
-                <div className="relative w-28 h-28 mx-auto mb-4">
+                <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
                   <div
-                    className={`absolute inset-0 rounded-full ${item.bg} translate-x-3 translate-y-3`}
+                    className={`absolute inset-0  rounded-full  translate-x-3 translate-y-3`}
                   />
                   <Image
                     src={item.img}
@@ -112,31 +105,7 @@ export default function TeamRolesSection() {
           ))}
         </div>
 
-        {/* DEVOPS CARD */}
-        <div className="mt-16 flex justify-center">
-          <Link href={cards[6].link} className="group">
-            <div className="bg-white rounded-[20px] shadow-md p-6 w-[280px] text-center relative cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-              <div className="relative w-28 h-28 mx-auto mb-4">
-                <div className="absolute inset-0 rounded-md bg-green-300 rotate-6" />
-                <Image
-                  src={cards[6].img}
-                  alt={cards[6].title}
-                  fill
-                  className="object-contain relative z-10"
-                />
-              </div>
-
-              <h3 className="font-semibold text-[18px] text-[#111827] relative inline-block">
-                {cards[6].title}
-                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#111827] transition-all duration-300 group-hover:w-full"></span>
-              </h3>
-
-              <p className="text-gray-600 mt-2 text-sm leading-[1.6]">
-                {cards[6].desc}
-              </p>
-            </div>
-          </Link>
-        </div>
+       
       </div>
     </section>
   );

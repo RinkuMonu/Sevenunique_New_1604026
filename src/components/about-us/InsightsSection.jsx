@@ -5,25 +5,25 @@ import Image from "next/image";
 const insights = [
   {
     title: "Outsource Mobile App Development: Startup Guide",
-    author: "Nacho De Marco",
+    author: "Aman Goswami",
     img: "/images/avatar1.png",
     avatar: "/images/l1.png",
   },
   {
     title: "5 Elements of a High-Performing Agile Team",
-    author: "Paul Azorin",
+    author: "Pankaj Kumar",
     img: "/images/avatar2.png",
     avatar: "/images/l2.png",
   },
   {
     title: "How AI is Transforming Enterprise Software",
-    author: "Maria Lopez",
+    author: "Mayank Rathore",
     img: "/images/avatar3.png",
     avatar: "/images/l3.png",
   },
   {
     title: "Scaling Engineering Teams Efficiently",
-    author: "John Carter",
+    author: "Jyoti Sharma",
     img: "/images/avatar4.png",
     avatar: "/images/l4.png",
   },

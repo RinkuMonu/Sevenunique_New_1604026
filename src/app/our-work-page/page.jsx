@@ -37,8 +37,7 @@ export default function ClientsSection() {
           </h1>
 
           <p className="mt-4 text-gray-500 text-lg text-[32px] tracking-wide">
-            500+ active clients with long-term partnerships built on trust and results.
-Maintaining a 96% client retention rate through consistent delivery and support.
+           Trusted by 500+ active clients worldwide, fostering long-term partnerships through exceptional service and consistent results, with a 96% client retention rate.
           </p>
         </div>
 
@@ -50,14 +49,14 @@ Maintaining a 96% client retention rate through consistent delivery and support.
             className="relative rounded-2xl overflow-hidden group"
           >
             <Image
-              src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/google_i0edsb?_a=BAVAfVDW0"
+              src="/images/icici.png"
               alt="Google"
               width={500}
               height={500}
-              className="w-full h-[350px] object-cover group-hover:scale-105 transition duration-500"
+              className="w-full h-[350px] object-contain group-hover:scale-105 transition duration-500"
             />
             <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-6">
-              <h3 className="text-white text-2xl font-semibold">Google</h3>
+              <h3 className="text-white text-2xl font-semibold">ICICI Bank</h3>
               <p className="text-white text-sm mt-1">Case study →</p>
             </div>
           </Link>
@@ -65,15 +64,15 @@ Maintaining a 96% client retention rate through consistent delivery and support.
           {/* Card 2 */}
           <div className="relative rounded-2xl overflow-hidden group">
             <Image
-              src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/rollssmall_zf24j6?_a=BAVAfVDW0"
-              alt="Rolls Royce"
+              src="/images/axis.png"
+              alt="Axis Bank"
               width={500}
               height={500}
-              className="w-full h-[350px] object-cover group-hover:scale-105 transition duration-500"
+              className="w-full h-[350px] object-contain group-hover:scale-105 transition duration-500"
             />
             <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-6">
               <h3 className="text-white text-xl font-semibold">
-                <Link href="/google-case-study">ROLLS ROYCE</Link>
+                <Link href="/google-case-study">Axis Bank</Link>
               </h3>
               <p className="text-white text-sm mt-1">Case study →</p>
             </div>
@@ -82,15 +81,15 @@ Maintaining a 96% client retention rate through consistent delivery and support.
           {/* Card 3 */}
           <div className="relative rounded-2xl overflow-hidden group">
             <Image
-              src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/urban-outfitters_1761320585?_a=BAVAfVDW0"
-              alt="Urban Outfitters"
+              src="/logos/nsdl.png"
+              alt="NSDL"
               width={500}
               height={500}
-              className="w-full h-[350px] object-cover group-hover:scale-105 transition duration-500"
+              className="w-full h-[350px] object-contain group-hover:scale-105 transition duration-500"
             />
             <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-6">
               <h3 className="text-white text-xl font-semibold uppercase">
-                Urban Outfitters
+                NSDL
               </h3>
               <Link href="/google-case-study">Case study →</Link>
             </div>

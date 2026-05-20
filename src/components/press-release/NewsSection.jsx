@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 const data = [
   {
     title:
-      "Interview with Paul Azorin – Co-Founder and Managing Partner Europe at BairesDev",
+      "Interview with Paul Azorin – Co-Founder and Managing Partner Europe at Seven Unique",
     date: "October 8, 2025",
     img: "/images/n1.png",
   },

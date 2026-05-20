@@ -8,7 +8,7 @@ export default function BaireswaySection() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="rounded-lg aspect-square flex items-center justify-center">
           <Image
-            src="https://assets.bairesdev.com//image/upload/c_limit,w_480/dpr_auto/f_auto/q_auto/v1/www/static/dev-maria_dmnth8?_a=BAVAfVDW0"
+            src="/images/support.jpg"
             width={400}
             height={500}
             className="object-cover w-full h-full rounded-lg"
@@ -18,7 +18,7 @@ export default function BaireswaySection() {
         </div>
         <div className="rounded-lg aspect-square flex flex-col items-center gap-10 justify-center px-5">
           <span className="text-gray-700 text-3xl font-semibold">
-            The Sevenunique Way
+            The Seven Unique Way
           </span>
           <p className="text-gray-500 text-[15px] font-semibold">
             We do things differently. Our approach is shaped by our values and how we apply them every day. This drives our growth and influences how we hire, what we value, and why people stay with us.

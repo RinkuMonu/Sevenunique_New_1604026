@@ -27,11 +27,11 @@ const tabs = [
 ];
 
 const avatars = [
-    "/images/l1.png",
-    "/images/man2.png",
-    "/images/man3.png",
-    "/images/man4.png",
-    "/images/man5.png",
+    "/images/rajyawardhan.png",
+    "/images/rinkusir.png",
+    "/images/devika.png",
+    "/images/rahul.png",
+    "/team/p3.png",
 ];
 
 export default function FlexibleWays() {
