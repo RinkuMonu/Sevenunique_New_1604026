@@ -112,7 +112,7 @@ export default async function TechnologyPage({ params }) {
         </div>
       </div>
 
-      <TrustedClientsStrip />
+      {/* <TrustedClientsStrip /> */}
        {/* <TrustedCompanies /> */}
       <AIUseCasesSection useCases={data.useCases}/>
       <ReactServicesSection  data={data}/>

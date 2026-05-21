@@ -32,7 +32,7 @@ const TestimonialSectionCircle = () => {
 
             {/* Author info */}
             <div className="mt-8">
-              <p className="font-bold text-gray-900 text-lg">Diana Remache</p>
+              <p className="font-bold text-gray-900 text-lg">Divyanshi Verma</p>
               <p className="text-gray-800 font-medium">
                 Agile/Scrum Circle Leader
               </p>
@@ -48,7 +48,7 @@ const TestimonialSectionCircle = () => {
               {/* IMAGE */}
               <div className="relative z-10">
                 <Image
-                  src="https://assets.bairesdev.com/image/upload/v1/www/static/circles/leaders/Diana-Remache_pkbfma"
+                  src="/images/u4.jpg"
                   alt="Diana"
                   width={260}
                   height={260}

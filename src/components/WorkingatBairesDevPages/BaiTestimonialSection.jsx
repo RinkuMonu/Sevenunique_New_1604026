@@ -47,9 +47,9 @@ export default function BaiTestimonialSection() {
           {/* LEFT IMAGE */}
           {/* LEFT IMAGE */}
           <div className="md:w-[40%] relative min-h-[320px]">
-            <div className="absolute bottom-0 left-[-40px] md:left-[-60px] h-[120%] w-[120%]">
+            <div className="absolute bottom-0 left-[-60px] md:left-[-60px] h-[120%] w-[120%]">
               <Image
-                src="https://assets.bairesdev.com/image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/join-us-testimonial-fede_ovj9jg"
+                src="/images/u3.png"
                 fill
                 alt="img"
                 className="object-contain object-bottom"

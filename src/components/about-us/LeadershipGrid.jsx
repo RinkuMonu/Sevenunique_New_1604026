@@ -36,7 +36,7 @@ const leaders = [
   {
     name: "Bhumika Soni",
     role: "HR Manager",
-    img: "/images/l6.png",
+    img: "/images/hr.png",
     color: "hover:bg-[#26F0DF]",
   },
 ];
@@ -83,9 +83,6 @@ export default function LeadershipGrid() {
             </div>
           ))}
         </div>
-
-
-
       </div>
     </section>
   );

@@ -16,7 +16,7 @@ export default function LandingPage() {
       <HeroSectionW />
       <WhyBairesdevSection />
       <BaireswaySection />
-      <RecognizedExcellenceSection />
+      {/* <RecognizedExcellenceSection /> */}
       <BaiPortfolioSection />
       <PassionSection />
       <BaiTestimonialSection />

@@ -177,7 +177,7 @@ Together, we can open new opportunities, connect talented people, and build a be
             <div className="flex-1 flex justify-center">
               <div className="relative rounded-3xl overflow-hidden ">
                 <Image
-                  src="/images/mencoffee.jpg"
+                  src="/images/u4.jpg"
                   alt="Woman working on laptop"
                   className="object-cover"
                   height={400}
@@ -202,7 +202,7 @@ Together, we can open new opportunities, connect talented people, and build a be
             {/* IMAGE (IMPORTANT — same as original) */}
             <div className="hidden md:block relative w-full h-[320px] rounded-3xl overflow-hidden">
               <img
-                src="/images/working.jpg"
+                src="/images/team.jpg"
                 alt=""
                 className="w-full h-full object-cover"
               />

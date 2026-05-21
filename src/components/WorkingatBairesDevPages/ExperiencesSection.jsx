@@ -15,7 +15,7 @@ export default function ExperiencesSection() {
           {/* RIGHT IMAGE */}
           <div className="relative h-60 md:h-auto md:w-[35%]">
             <Image
-              src="https://assets.bairesdev.com/image/upload/v1/www/core/joinus_open-application_gtu4vp"
+              src="/images/help.jpg"
               fill
               alt="open application"
               className="object-cover md:rounded-tr-[28px] md:rounded-br-[28px]"

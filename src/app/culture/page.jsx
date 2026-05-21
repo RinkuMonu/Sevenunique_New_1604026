@@ -310,7 +310,7 @@ export default function CulturePage() {
             <div className="relative">
               <div className="w-full rounded-2xl flex items-center justify-center text-gray-500 text-lg font-semibold">
                 <Image
-                  src="https://assets.bairesdev.com//image/upload/c_limit,w_600/dpr_auto/f_auto/q_auto/v1/www/static/african-male_v22eef?_a=BAVAfVDW0"
+                  src="/images/team2.png"
                   alt="Company Culture"
                   width={700}
                   height={900}

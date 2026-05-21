@@ -68,7 +68,7 @@ const items = [
               <div className="w-[40%] h-44 bg-[#F66135] rounded-[20px] relative overflow-hidden">
                 <span className="absolute inset-0 flex items-center justify-center text-white text-xs">
                   <Image
-                    src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/joinus_what-drives-2_jocucg?_a=BAVAfVDW0"
+                    src="/images/u1.png"
                     fill
                     className="object-cover"
                     alt="img"
@@ -79,7 +79,7 @@ const items = [
               <div className="w-[60%] h-44 bg-[#FFD785] rounded-[20px] relative overflow-hidden">
                 <span className="absolute inset-0 flex items-center justify-center text-black text-xs">
                   <Image
-                    src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/joinus_what-drives-2_jocucg?_a=BAVAfVDW0"
+                    src="/images/u2.png"
                     fill
                     alt="img"
                     className="object-cover"
@@ -93,7 +93,7 @@ const items = [
               <div className="w-[60%] h-44 bg-[#FFAC00] rounded-[20px] relative overflow-hidden">
                 <span className="absolute inset-0 flex items-center justify-center text-white text-xs">
                   <Image
-                    src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/joinus_what-drives-1_wfqly4?_a=BAVAfVDW00"
+                    src="/images/u1.png"
                     fill
                     alt="img"
                     className="object-cover"
@@ -104,7 +104,7 @@ const items = [
               <div className="w-[40%] h-44 bg-[#FBB39E] rounded-[20px] relative overflow-hidden">
                 <span className="absolute inset-0 flex items-center justify-center text-black text-xs">
                   <Image
-                    src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/joinus_what-drives-2_jocucg?_a=BAVAfVDW0"
+                    src="/images/u3.png"
                     fill
                     alt="img"
                     className="object-cover"
@@ -113,30 +113,7 @@ const items = [
               </div>
             </div>
 
-            {/* ROW 3 */}
-            <div className="flex gap-4">
-              <div className="w-[40%] h-44 bg-[#16A87A] rounded-[20px] relative overflow-hidden">
-                <span className="absolute inset-0 flex items-center justify-center text-white text-xs">
-                  <Image
-                    src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/joinus_what-drives-1_wfqly4?_a=BAVAfVDW00"
-                    fill
-                    alt="img"
-                    className="object-cover"
-                  />
-                </span>
-              </div>
-
-              <div className="w-[60%] h-44 bg-[#2F6FD3] rounded-[20px] relative overflow-hidden">
-                <span className="absolute inset-0 flex items-center justify-center text-white text-xs">
-                  <Image
-                    src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/joinus_what-drives-2_jocucg?_a=BAVAfVDW0"
-                    fill
-                    alt="img"
-                    className="object-cover"
-                  />
-                </span>
-              </div>
-            </div>
+           
           </div>
         </div>
 
