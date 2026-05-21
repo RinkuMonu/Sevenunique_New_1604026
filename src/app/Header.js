@@ -242,18 +242,16 @@ export default function Header() {
 
   return (
     <header className="w-full border-b border-gray-200 bg-white">
-      <div className="mx-auto flex max-w-[1280px] items-center justify-between px-4 py-4 sm:px-6">
-        <Link href="/">
-          <Image
-            // src="https://assets.bairesdev.com/image/upload/www/static/bairesdev-logo_mdbbsh.svg"
-            src="/sevenLogo.png"
-            alt="logo"
-            width={170}
-            height={80}
-            className="w-32 h-auto"
-          />
-        </Link>
-
+      <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-4 sm:px-6">
+      <Link href="/" className="  block">
+  <Image
+    src="/sevenLogo.png"
+    alt="logo"
+    width={250}
+    height={140}
+    className="w-60 h-auto object-contain"
+  />
+</Link>
         <button
           type="button"
           aria-label="Toggle menu"

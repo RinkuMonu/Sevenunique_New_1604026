@@ -1,98 +1,119 @@
-import Link from 'next/link';
+"use client";
+
+import Link from "next/link";
 
 const services = [
   {
-    title: "Front-End Development",
-    desc: "Create high-performance, accessible, and scalable user interfaces.",
+    title: "Website Development",
+    desc: "Build fast, responsive, and scalable websites designed for startups, businesses, and enterprises.",
     tags: [
-      { name: "Front-End", link: "/services/frontend-development" },
-      { name: "Web Development", link: "/services/web-development" },
-      { name: "React", link: "/technologies/react" },
-      { name: "Angular", link: "/technologies/angular" }
+      { name: "Business Website", link: "/services/web-development" },
+      { name: "React.js", link: "/technologies/react" },
+      { name: "Next.js", link: "/technologies/nextjs" },
+      { name: "Responsive Design", link: "/services/frontend-development" },
     ],
-    iconBg: "bg-[#e25d35]",
+
     icon: (
-      <svg viewBox="0 0 20 20" fill="white" className="w-5 h-5">
-        <path d="M3 4h14v1.5H3zm0 5h9v1.5H3zm0 5h11v1.5H3z" />
-      </svg>
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+        alt="React"
+        className="w-8 h-8"
+      />
     ),
   },
+
   {
-    title: "Back-End Development",
-    desc: "Create strong, scalable architectures built for stability and efficiency.",
+    title: "Software Development",
+    desc: "Develop custom ERP, CRM, billing, automation, and enterprise software solutions.",
     tags: [
-      { name: "Back-End", link: "/services/backend-development" },
-      { name: "Database", link: "/services/data-engineering" },
-      { name: "Go", link: "/technologies/golang" },
-      { name: ".NET", link: "/technologies/dotnet" },
-      { name: "Java", link: "/technologies/java" },
-      { name: "Node.js", link: "/technologies/nodejs" }
+      { name: "ERP Software", link: "/services/software-development" },
+      { name: "CRM Development", link: "/services/crm-development" },
+      { name: "School ERP", link: "/services/school-management" },
+      { name: "Automation", link: "/services/automation" },
     ],
-    iconBg: "bg-[#232f3f]",
+
     icon: (
-      <svg viewBox="0 0 20 20" fill="white" className="w-5 h-5">
-        <path d="M3 5h14a1 1 0 011 1v8a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v6h12V7H4zm2 1h2v1.5H6zm3.5 0H14v1.5h-4.5z" />
-      </svg>
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+        alt="Node"
+        className="w-8 h-8"
+      />
     ),
   },
+
   {
-    title: "AI and Machine Learning",
-    desc: "Implement reliable AI solutions that drive meaningful business outcomes.",
+    title: "AI & Automation",
+    desc: "Integrate AI-powered tools, automation systems, and smart workflows into your business.",
     tags: [
-      { name: "AI", link: "/technologies/ai" },
-      { name: "Machine Learning", link: "/technologies/machine-learning" },
-      { name: "Data Science", link: "/services/data-engineering" },
-      { name: "LLMs", link: "/technologies/ai" },
-      { name: "Generative AI", link: "/technologies/ai" },
-      { name: "Python", link: "/technologies/python" }
+      { name: "AI Chatbot", link: "/services/ai-chatbot" },
+      { name: "Automation", link: "/services/automation" },
+      { name: "Machine Learning", link: "/services/machine-learning" },
+      { name: "OpenAI", link: "/technologies/openai" },
     ],
-    iconBg: "bg-[#0f4f93]",
+
     icon: (
-      <svg viewBox="0 0 20 20" fill="white" className="w-5 h-5">
-        <path d="M9.2 3.3l.8 2.2 2.3.9-2.3.9-.8 2.2-.8-2.2-2.3-.9 2.3-.9.8-2.2zm5.3 3.4l.5 1.3 1.3.5-1.3.5-.5 1.3-.5-1.3-1.3-.5 1.3-.5.5-1.3zM6.4 10.2l.7 1.9 1.9.7-1.9.7-.7 1.9-.7-1.9-1.9-.7 1.9-.7.7-1.9z" />
-      </svg>
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+        alt="Python"
+        className="w-8 h-8"
+      />
     ),
   },
+
   {
-    title: "Mobile Development",
-    desc: "Build high-performance iOS and Android apps with seamless user experiences and strong data security.",
+    title: "Mobile App Development",
+    desc: "Create modern Android and iOS apps with secure APIs and smooth user experiences.",
     tags: [
-      { name: "Mobile Applications", link: "/services/mobile-app-development" },
-      { name: "iOS", link: "/services/ios-app-development" },
-      { name: "Android", link: "/services/android-app-development" }
+      { name: "Android App", link: "/services/android-app-development" },
+      { name: "iOS App", link: "/services/ios-app-development" },
+      { name: "React Native", link: "/technologies/react-native" },
+      { name: "Flutter", link: "/technologies/flutter" },
     ],
-    iconBg: "bg-[#1e5dc0]",
+
     icon: (
-      <svg viewBox="0 0 20 20" fill="white" className="w-5 h-5">
-        <path d="M7 2h6a2 2 0 012 2v12a2 2 0 01-2 2H7a2 2 0 01-2-2V4a2 2 0 012-2zm0 1.5a.5.5 0 00-.5.5v12c0 .28.22.5.5.5h6a.5.5 0 00.5-.5V4a.5.5 0 00-.5-.5H7zm2.5 11h1v1h-1z" />
-      </svg>
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+        alt="Flutter"
+        className="w-8 h-8"
+      />
     ),
   },
+
   {
-    title: "UX/UI Design",
-    desc: "Create intuitive designs with clear user journeys, scalable components, and accessible interfaces.",
+    title: "UI/UX Designing",
+    desc: "Design clean, modern, and user-focused interfaces that improve customer experience.",
     tags: [
-      { name: "UX Design", link: "/services/ui-ux-design" },
-      { name: "UI Design", link: "/services/ui-ux-design" }
+      { name: "UI Design", link: "/services/ui-ux-design" },
+      { name: "UX Research", link: "/services/ui-ux-design" },
+      { name: "Figma Design", link: "/technologies/figma" },
+      { name: "Prototype", link: "/services/prototype-design" },
     ],
-    iconBg: "bg-[#3f9ea6]",
+
     icon: (
-      <svg viewBox="0 0 20 20" fill="white" className="w-5 h-5">
-        <path d="M3 4h14a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V5a1 1 0 011-1zm0 1.5v10h14v-10H3zm2 2h4v6H5v-6zm5.5 0h4.5v2.5h-4.5V7.5zm0 3.5h4.5v2.5h-4.5V11z" />
-      </svg>
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+        alt="Figma"
+        className="w-8 h-8"
+      />
     ),
   },
+
   {
-    title: "QA and Testing",
-    desc: "Ensure high-quality releases with end-to-end testing covering both manual and automated processes.",
+    title: "Digital Marketing & SEO",
+    desc: "Boost your online presence with SEO, branding, social media, and performance marketing.",
     tags: [
-      { name: "Quality Assurance", link: "/services/qa-testing" }
+      { name: "SEO", link: "/services/seo" },
+      { name: "Google Ads", link: "/services/google-ads" },
+      { name: "Social Media", link: "/services/social-media-marketing" },
+      { name: "Branding", link: "/services/branding" },
     ],
-    iconBg: "bg-[#1f9f71]",
+
     icon: (
-      <svg viewBox="0 0 20 20" fill="white" className="w-5 h-5">
-        <path d="M3 10.5l3.2 3.2L17 3.9l-1.2-1.2-9.6 9.6-2-2zM2.5 15h10v1.5h-10z" />
-      </svg>
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg"
+        alt="Google"
+        className="w-8 h-8"
+      />
     ),
   },
 ];
@@ -101,45 +122,58 @@ export default function Services() {
   return (
     <section className="px-6 py-16 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 mb-10">
+
+        {/* HEADING */}
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 mb-12">
+
           <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight leading-[1.12] max-w-3xl text-[#191919]">
-           Streamlining Development Across 
+            Your Trusted Partner For
             <br />
-            The Entire SDLC
+            Web, App & Software Solutions
             <span className="text-[#f4622a]">.</span>
           </h2>
+
           <Link
             href="/services"
-            className="shrink-0 inline-flex items-center gap-2 text-[15px] text-[#1f1f1f] border-b border-[#1f1f1f] pb-1 hover:text-[#f4622a] hover:border-[#f4622a] transition-colors"
+            className="shrink-0 inline-flex items-center gap-2 text-[15px] text-[#1f1f1f] border-b border-[#1f1f1f] pb-1 transition-colors"
           >
-            Everything we do
+            Explore All Services
             <span aria-hidden>→</span>
           </Link>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {/* CARDS */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
           {services.map((svc) => (
             <div
               key={svc.title}
-              className="bg-[#f4f4f6] border border-[#ececef] rounded-md p-7 min-h-[248px]"
+              className="group bg-[#f4f4f6] border border-[#ececef] rounded-2xl p-8 min-h-[290px] hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
-              <div
-                className={`w-10 h-10 ${svc.iconBg} rounded-lg flex items-center justify-center mb-5`}
-              >
+
+              {/* ICON */}
+              <div className="w-16 h-16 bg-white border border-[#ececef] text-[#191919]  group-hover:text-white rounded-2xl flex items-center justify-center mb-6 transition-all duration-300">
                 {svc.icon}
               </div>
-              <h3 className="text-3xl font-medium mb-2 text-[#1f1f1f] leading-[1.2]">
+
+              {/* TITLE */}
+              <h3 className="text-2xl font-semibold mb-3 text-[#1f1f1f] leading-[1.3]">
                 {svc.title}
               </h3>
-              <p className="text-[15px] text-[#4f4f56] leading-relaxed mb-5">
+
+              {/* DESCRIPTION */}
+              <p className="text-[15px] text-[#4f4f56] leading-relaxed mb-6">
                 {svc.desc}
               </p>
+
+              {/* TAGS */}
               <div className="flex flex-wrap gap-2">
+
                 {svc.tags.map((tag) => (
                   <Link
                     key={tag.name}
                     href={tag.link}
-                    className="inline-flex items-center px-2.5 py-1 text-[15px] leading-none text-[#1764ca] border border-[#8db2e2] rounded-md bg-transparent hover:bg-blue-500 hover:text-white hover:cursor-pointer transition-colors"
+                    className="inline-flex items-center px-3 py-1.5 text-[14px] text-[#1764ca] border border-[#8db2e2] rounded-lg hover:bg-[#1764ca] hover:text-white transition-all duration-200"
                   >
                     {tag.name}
                   </Link>

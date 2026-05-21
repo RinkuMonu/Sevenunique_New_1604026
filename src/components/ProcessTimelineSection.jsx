@@ -1,97 +1,92 @@
 "use client";
 
-import { Phone, Users, TrendingUp } from "lucide-react";
+import {
+  PhoneCall,
+  LayoutDashboard,
+  Rocket,
+} from "lucide-react";
+
 import Link from "next/link";
 import { Outfit } from "next/font/google";
 
 const outfit = Outfit({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
 });
 
-export default function ProcessTimelineSection() {
 const steps = [
   {
-    icon: <Phone size={18} />,
-    step: "STEP 1",
-    title: "Discuss Your Project Requirements",
-    desc: "Share your business goals, ideas, and technical requirements with our team to define the best digital solution.",
+    number: "01",
+    icon: <PhoneCall size={22} />,
+    title: "Project Discussion",
+    desc: "We understand your business goals, project scope, and technical requirements.",
   },
   {
-    icon: <Users size={18} />,
-    step: "STEP 2",
-    title: "Design & Development Planning",
-    desc: "We create the project roadmap, finalize technologies, UI/UX strategy, timelines, and assemble the right development team.",
+    number: "02",
+    icon: <LayoutDashboard size={22} />,
+    title: "Planning & Development",
+    desc: "Our team designs, plans, and develops scalable digital solutions efficiently.",
   },
   {
-    icon: <TrendingUp size={18} />,
-    step: "STEP 3",
-    title: "Build, Launch & Grow",
-    desc: "Our team develops, tests, and deploys your solution while providing continuous support, optimization, and growth strategies.",
+    number: "03",
+    icon: <Rocket size={22} />,
+    title: "Launch & Support",
+    desc: "We deploy your product with optimization, maintenance, and ongoing support.",
   },
 ];
 
+export default function ProcessTimelineSection() {
   return (
-    <section className={`${outfit.className} bg-[#f3f3f3] py-28 px-6`}>
-      
-      <div className="max-w-4xl mx-auto relative">
+    <section
+      className={`${outfit.className} bg-[#f7f7f7] mb-4 px-14`}
+    >
+      <div className="max-w-6xl mx-auto">
 
-        {/* 🔥 CENTERED HEADER */}
-        <div className="mb-20 text-center">
-          <h2 className="text-[44px] leading-[1.2] font-semibold text-[#1a1a18]">
-           Smooth Execution<br />
-            From Idea <br />
-             To Launch.<span className="text-[#f4622a]">.</span>
-          </h2>
-        </div>
+        
 
-        {/* TIMELINE WRAPPER */}
-        <div className="relative">
+        {/* STEPS */}
+        <div className="grid lg:grid-cols-3 gap-6">
 
-          {/* Vertical Line (centered with icons) */}
-          <div className="absolute left-6 top-0 bottom-0 border-l border-dashed border-gray-300"></div>
+          {steps.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-[28px] p-8 border border-[#ececec] hover:border-[#ff5a2f] transition-all duration-300 hover:-translate-y-2 group"
+            >
 
-          {/* Steps */}
-          <div className="flex flex-col gap-14">
-            {steps.map((item, i) => (
-              <div key={i} className="flex gap-6">
+              {/* TOP */}
+              <div className="flex items-center justify-between mb-10">
 
-                {/* ICON */}
-                <div className="relative z-10">
-                  <div className="w-12 h-12 rounded-full bg-[#f4622a] flex items-center justify-center text-white shadow-md">
-                    {item.icon}
-                  </div>
+                <div className="w-14 h-14 rounded-2xl bg-[#f7f7f7] group-hover:bg-[#ff5a2f] text-[#111] group-hover:text-white flex items-center justify-center transition-all duration-300">
+                  {item.icon}
                 </div>
 
-                {/* CONTENT */}
-                <div>
-                  <p className="text-[12px] tracking-[0.15em] text-gray-400 mb-2">
-                    {item.step}
-                  </p>
-
-                  <h3 className="text-[30px] font-semibold text-[#1a1a18] leading-[1.3] tracking-[-0.3px] mb-2">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-gray-600 text-[15px] leading-[1.7]">
-                    {item.desc}
-                  </p>
-                </div>
+                <span className="text-[18px] font-semibold text-[#d1d1d1]">
+                  {item.number}
+                </span>
               </div>
-            ))}
-          </div>
+
+              {/* CONTENT */}
+              <h3 className="text-[28px] leading-[1.2] font-semibold text-[#111] mb-4">
+                {item.title}
+              </h3>
+
+              <p className="text-[#666] leading-7 text-[15px]">
+                {item.desc}
+              </p>
+            </div>
+          ))}
         </div>
 
-        {/* BUTTON (centered) */}
-        <div className="mt-16 text-center">
+        {/* CTA */}
+        <div className="mt-10 mb-4 text-center">
+
           <Link
             href="/schedule-a-call-page"
-            className="inline-block bg-[#f4622a] hover:bg-[#d94f1e] text-white px-6 py-3 rounded-md font-medium transition"
+            className="inline-flex items-center gap-3 bg-[#111] hover:bg-[#ff5a2f] text-white px-8 py-4 rounded-2xl text-[16px] font-medium transition-all duration-300"
           >
             Schedule a Call
           </Link>
         </div>
-
       </div>
     </section>
   );

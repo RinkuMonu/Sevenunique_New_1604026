@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function CTABand() {
   return (
-    <section className="bg-[#020202] px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-28 overflow-hidden">
+    <section className="bg-[#020202]   mt-10 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-28 overflow-hidden">
       
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-10">
         
@@ -29,7 +29,8 @@ export default function CTABand() {
           <div className="relative w-full max-w-[310px] sm:max-w-[420px] lg:max-w-[520px]">
             <div className="absolute inset-0 rounded-md bg-black/50 " />
             <img
-              src="/images/build-img.jpg"
+              // src="/images/1779359281185.png"
+              src="/images/1779359110276.png"
               alt="Two developers collaborating"
               className="relative rounded-md shadow-2xl  object-cover w-full aspect-[16/10]"
             />
