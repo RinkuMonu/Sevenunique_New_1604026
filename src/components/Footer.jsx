@@ -1,207 +1,352 @@
-"use client"
-import { MailIcon } from "lucide-react";
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+
 import {
   FaFacebookF,
-  FaLinkedinIn,
   FaInstagram,
+  FaLinkedinIn,
   FaYoutube,
 } from "react-icons/fa";
+
 import { FaXTwitter } from "react-icons/fa6";
-import { FiMail, FiPhone } from "react-icons/fi";
+
+import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 
 export default function Footer() {
-  const discoverLinks = [
-    { name: "Technologies", to: "/technologies" },
-    { name: "Certifications", to: "/certifications" },
-    { name: "Software Development Services", to: "/services" },
-    { name: "Working at sevenunique", to: "/Working-at-BairesDev" },
-    { name: "Backend Development", to: "/services/backend-development" },
-    { name: "Business Intelligence", to: "/services/backend-development" },
-    { name: "Finance", to: "/industries/insurance" },
-    { name: "Travel and Hospitality", to: "/industries/travel-hospitality" },
-    { name: "Company Culture", to: "/culture" },
-    { name: "Job Opportunities", to: "jobOp" },
-  ];
-
-  const resourceLinks = [
-    { name: "Case Studies", to: "/google-case-study" },
-    { name: "AI Development", to: "/services/ai-development" },
-    { name: "Blog", to: "/blog" },
-    { name: "About us", to: "/about-us" },
-    { name: "Industries Insights", to: "/industries" },
-    { name: "Technology Resource Center", to: "/technologies" },
-    { name: "Client Referral Program", to: "/ReferralPageAbout" },
-    { name: "Our Work", to: "/our-work-page" },
-  ];
-
   return (
-    <footer className="bg-white text-[#111827]">
-      <div className="mx-auto max-w-[1280px] lg:grid lg:grid-cols-[1fr_360px]">
-        <div className="px-6 py-14 sm:px-10 lg:px-12">
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[96px_1fr_1fr_1fr] lg:gap-8">
-            <div className="pt-1">
-              <Link href="#" aria-label="BairesDev">
-                <Image
-                  // src="https://assets.bairesdev.com//image/upload/c_limit,w_60/fl_sanitize/v1/www/static/bairesdev-logo-footer_wbvcp2.svg"
-                  src="/sevenLogo.png"
-                  alt="BairesDev"
-                  width={170}
-                  height={160}
-                />
+    <footer className="bg-[#f7f7f7] text-[#111] overflow-hidden border-t border-[#ececec]">
+
+      {/* TOP */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
+
+        {/* MAIN GRID */}
+        <div className="grid lg:grid-cols-[340px_1fr] gap-16">
+
+          {/* LEFT SIDE */}
+          <div>
+
+            {/* LOGO */}
+            <Link href="/">
+              <Image
+                src="/sevenLogo.png"
+                alt="Sevenunique"
+                width={220}
+                height={70}
+                className="object-contain"
+              />
+            </Link>
+
+            {/* HOOK LINE */}
+            <p className="mt-5 text-[16px] leading-7 text-[#555] max-w-[300px]">
+              Building scalable websites, mobile apps, AI solutions, and
+              enterprise software for modern businesses.
+            </p>
+
+            {/* WORKING HOURS */}
+            <div className="mt-8">
+              <h3 className="text-[17px] font-semibold tracking-wide">
+                Monday - Friday
+              </h3>
+
+              <p className="text-[#f4622a] text-[17px] mt-2 tracking-wide font-medium">
+                10:00 AM to 07:00 PM
+              </p>
+            </div>
+
+            {/* SOCIAL */}
+            <div className="mt-8 flex items-center gap-4">
+
+              <Link
+                href="#"
+                className="w-11 h-11 rounded-full bg-white border border-[#e7e7e7] flex items-center justify-center hover:bg-[#f4622a] hover:text-white transition-all duration-300"
+              >
+                <FaFacebookF />
               </Link>
-            </div>
 
-            <div>
-              <h3 className="mb-4 text-[16px] font-semibold leading-none tracking-tight">
-                Discover Sevenunique.
-              </h3>
-              <ul className="space-y-2 text-sm leading-5 text-[#202124]">
-                {discoverLinks.map((item, i) => (
-                  <li key={i}>
-                    <Link href={item.to || "/"} className="hover:underline">
-                      {item.name || ""}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+              <Link
+                href="#"
+                className="w-11 h-11 rounded-full bg-white border border-[#e7e7e7] flex items-center justify-center hover:bg-[#f4622a] hover:text-white transition-all duration-300"
+              >
+                <FaInstagram />
+              </Link>
 
-            <div>
-              <h3 className="mb-4 text-[16px] font-semibold leading-none tracking-tight">
-                Resources.
-              </h3>
-              <ul className="space-y-2 text-sm leading-5 text-[#202124]">
-                {resourceLinks.map((item, i) => (
-                  <li key={i}>
-                    <Link href={item.to} className="hover:underline">
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+              <Link
+                href="#"
+                className="w-11 h-11 rounded-full bg-white border border-[#e7e7e7] flex items-center justify-center hover:bg-[#f4622a] hover:text-white transition-all duration-300"
+              >
+                <FaLinkedinIn />
+              </Link>
 
-            <div>
-              <h3 className="mb-4 text-[16px] font-semibold leading-none tracking-tight">
-                Careers.
-              </h3>
-              <ul className="space-y-2 text-sm leading-5 text-[#202124]">
-                <li>
-                  <Link href="/jobOp" className="hover:underline">
-                    Job Opportunities
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/ReferralPageAbout" className="hover:underline">
-                    Talent Referrals
-                  </Link>
-                </li>
-              </ul>
+              <Link
+                href="#"
+                className="w-11 h-11 rounded-full bg-white border border-[#e7e7e7] flex items-center justify-center hover:bg-[#f4622a] hover:text-white transition-all duration-300"
+              >
+                <FaXTwitter />
+              </Link>
+
+              <Link
+                href="#"
+                className="w-11 h-11 rounded-full bg-white border border-[#e7e7e7] flex items-center justify-center hover:bg-[#f4622a] hover:text-white transition-all duration-300"
+              >
+                <FaYoutube />
+              </Link>
             </div>
           </div>
 
-          <div className="mt-14 text-xs text-[#202124]">
-            <div className="flex flex-wrap items-center gap-2">
-              <Link href="/privacy-policy" className="hover:underline">
-                Privacy Policy
-              </Link>
-              <span>|</span>
-              <Link href="/termsAndCondition" className="hover:underline">
-                Terms of Service
-              </Link>
-              <span>|</span>
-              {/* <Link href="#" className="hover:underline">
-                Do Not Sell My Personal Information
-              </Link> */}
+          {/* RIGHT SIDE LINKS */}
+          <div className="grid sm:grid-cols-3 gap-12">
+
+            {/* COMPANY */}
+            <div>
+
+              <h3 className="text-[24px] font-semibold mb-6 text-[#111]">
+                Company
+              </h3>
+
+              <ul className="space-y-4 text-[16px] text-[#555]">
+
+                <li>
+                  <Link
+                    href="/about-us"
+                    className="hover:text-[#f4622a] transition"
+                  >
+                    About Us
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href="/our-work-page"
+                    className="hover:text-[#f4622a] transition"
+                  >
+                    Portfolio
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href="/about-us"
+                    className="hover:text-[#f4622a] transition"
+                  >
+                    Our Team
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href="/contact-us"
+                    className="hover:text-[#f4622a] transition"
+                  >
+                    Contact Us
+                  </Link>
+                </li>
+              </ul>
             </div>
-            <p className="mt-5">Sevenunique 2026. All rights reserved.</p>
+
+            {/* SERVICES */}
+            <div>
+
+              <h3 className="text-[24px] font-semibold mb-6 text-[#111]">
+                Services
+              </h3>
+
+              <ul className="space-y-4 text-[16px] text-[#555]">
+
+                <li>
+                  <Link
+                    href="/services/web-development"
+                    className="hover:text-[#f4622a] transition"
+                  >
+                    Web Development
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href="/services/software-development"
+                    className="hover:text-[#f4622a] transition"
+                  >
+                    Software Solution
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href="/technologies"
+                    className="hover:text-[#f4622a] transition"
+                  >
+                    Technology
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href="/services/ai-development"
+                    className="hover:text-[#f4622a] transition"
+                  >
+                    AI Development
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* QUICK LINKS */}
+            <div>
+
+              <h3 className="text-[24px] font-semibold mb-6 text-[#111]">
+                Quick Links
+              </h3>
+
+              <ul className="space-y-4 text-[16px] text-[#555]">
+
+                <li>
+                  <Link
+                    href="/jobOp"
+                    className="hover:text-[#f4622a] transition"
+                  >
+                    Careers
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href="/blog"
+                    className="hover:text-[#f4622a] transition"
+                  >
+                    Blogs
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href="/contact-us"
+                    className="hover:text-[#f4622a] transition"
+                  >
+                    Support
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href="/privacy-policy"
+                    className="hover:text-[#f4622a] transition"
+                  >
+                    Privacy Policy
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
           </div>
         </div>
 
-        <aside className="bg-[#d9dcdf] px-6 py-14 sm:px-10 lg:px-8">
-          <div>
-            <h3 className="mb-6 text-[16px] font-semibold leading-none tracking-tight">
-              Get in touch.
-            </h3>
+        {/* OFFICES */}
+        <div className="grid md:grid-cols-2 gap-8 mt-20">
 
-            <div className="mb-4 flex flex-wrap gap-3">
-              <Link
-                href="/contact-us"
-                className="rounded-md border-[2px] border-black bg-transparent px-5 py-2 text-[16px] font-medium leading-none"
-              >
-                Contact Us
-              </Link>
-              <Link
-                href="/schedule-a-call-page"
-                className="rounded-md bg-[#ff5b1f] px-2 py-2 text-[16px] font-semibold leading-none text-white"
-              >
-                Schedule a Call &rarr;
-              </Link>
-            </div>
+          {/* JAIPUR */}
+          <div className="bg-white rounded-[24px] p-8 border border-[#ececec] hover:shadow-lg transition-all duration-300">
 
-            <p className="flex items-center gap-2 text-[16px] leading-none">
-              <FiPhone className="text-lg" />
-              0141-4511098
-            </p>
-            <p className="flex items-center gap-2 text-[16px] leading-none mt-4">
-              <MailIcon className="text-lg" />
-              info@7unique.in
-            </p>
-          </div>
+            <Image
+              src="https://www.avendus.com/uploads/City-Icons-Jaipur.svg"
+              alt="Jaipur"
+              width={170}
+              height={50}
+              className="object-contain mb-6"
+            />
 
-          <div className="mt-14 max-w-sm">
-            <p className="text-sm font-semibold text-gray-800 mb-2">
-              Office Address
-            </p>
+            <h4 className="text-[24px] font-semibold mb-4">
+              Jaipur Head Office
+            </h4>
 
-            <p className="text-gray-600 text-[14px] leading-relaxed">
-              No. 101/2, Vakratunda Corporate Park Premises Co-operative
-                    Society Limited, Off Aarey Road, Goregaon (East), Mumbai –
-                    400 063
-            </p>
-          </div>
+            <div className="space-y-4">
 
-          <div className="mt-16">
-            <h3 className="text-[20px] font-semibold leading-none tracking-tight">
-              Follow us.
-            </h3>
-            <div className="mt-5 flex items-center gap-6 text-lg">
-              <Link
-                href="https://www.linkedin.com/in/sevenuniquetechsolution/"
-                aria-label="LinkedIn"
-                className="hover:opacity-70"
-              >
-                <FaLinkedinIn className="hover:text-orange-600 " />
-              </Link>
-              <Link
-                href="https://www.facebook.com/people/SevenUnique-Tech-Solutions-Pvtltd/61556669918427/"
-                aria-label="Facebook"
-                className="hover:opacity-70"
-              >
-                <FaFacebookF className="hover:text-orange-600 " />
-              </Link>
-              <Link
-                href="https://x.com/Sevenuniqu42041"
-                aria-label="X"
-                className="hover:opacity-70"
-              >
-                <FaXTwitter className="hover:text-orange-600 " />
-              </Link>
-              <Link
-                href="https://www.linkedin.com/in/sevenuniquetechsolution/"
-                aria-label="Instagram"
-                className="hover:opacity-70"
-              >
-                <FaInstagram className="hover:text-orange-600 " />
-              </Link>
-              {/* <Link href="#" aria-label="Youtube" className="hover:opacity-70">
-                <FaYoutube />
-              </Link> */}
+              <div className="flex gap-3">
+                <FiMapPin className="text-[#f4622a] mt-1 text-lg shrink-0" />
+
+                <p className="text-[16px] leading-7 text-[#555]">
+                  Plot No 97, Dakshinpuri - I Shrikishan, Sanganer, Jagatpura, Jaipur, Shri Kishanpura, Rajasthan 302017
+                </p>
+              </div>
+
+              <div className="flex items-center gap-3 text-[16px]">
+                <FiPhone className="text-[#f4622a]" />
+                +91 141-4511098
+              </div>
+
+              <div className="flex items-center gap-3 text-[16px]">
+                <FiMail className="text-[#f4622a]" />
+                info@sevenunique.com
+              </div>
             </div>
           </div>
-        </aside>
+
+          {/* GURUGRAM */}
+          <div className="bg-white rounded-[24px] p-8 border border-[#ececec] hover:shadow-lg transition-all duration-300">
+
+            <Image
+              src="https://www.avendus.com/uploads/Kolkata_83b7a1c794.svg"
+              alt="Gurugram"
+              width={190}
+              height={50}
+              className="object-contain mb-6"
+            />
+
+            <h4 className="text-[24px] font-semibold mb-4">
+              Mumbai Office
+            </h4>
+
+            <div className="space-y-4">
+
+              <div className="flex gap-3">
+                <FiMapPin className="text-[#f4622a] mt-1 text-lg shrink-0" />
+
+                <p className="text-[16px] leading-7 text-[#555]">
+                  No. 101/2, Vakratunda Corporate Park Premises Co-operative Society Limited, Off Aarey Road, Goregaon (East), Mumbai – 400 063
+                </p>
+              </div>
+
+              <div className="flex items-center gap-3 text-[16px]">
+                <FiPhone className="text-[#f4622a]" />
+                +91 141-4511098
+              </div>
+
+              <div className="flex items-center gap-3 text-[16px]">
+                <FiMail className="text-[#f4622a]" />
+                info@sevenunique.com
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* BOTTOM BAR */}
+      <div className="bg-[#111] py-5 px-6">
+
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+
+          <p className="text-white/70 text-[14px] text-center md:text-left">
+            © 2026 Sevenunique Tech Solution Pvt. Ltd. All rights reserved.
+          </p>
+
+          <div className="flex items-center gap-5 text-[14px] text-white/70">
+
+            <Link
+              href="/privacy-policy"
+              className="hover:text-[#f4622a] transition"
+            >
+              Privacy Policy
+            </Link>
+
+            <Link
+              href="/termsAndCondition"
+              className="hover:text-[#f4622a] transition"
+            >
+              Terms & Conditions
+            </Link>
+          </div>
+        </div>
       </div>
     </footer>
   );

@@ -1,155 +1,235 @@
 "use client";
 
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
+
 import "swiper/css";
 import "swiper/css/navigation";
-import { IoIosArrowRoundForward } from "react-icons/io";
+
+import {
+  IoIosArrowBack,
+  IoIosArrowForward,
+  IoIosArrowRoundForward,
+} from "react-icons/io";
 
 export default function TestimonialSection() {
-   const testimonials = [
-  {
-    logo: "/images/person.png",
-    text: "Their team delivered a modern and highly responsive website that completely transformed our online presence. The design, performance, and user experience exceeded our expectations.",
-    name: "Rahul Sharma",
-    role: "Founder at Nexora Solutions",
-  },
-  {
-    logo: "/images/person.png",
-    text: "We partnered with them for mobile app development, and the results were outstanding. The Android and iOS applications were smooth, scalable, and delivered on time.",
-    name: "Jessica Williams",
-    role: "Product Manager at UrbanGo",
-  },
-  {
-    logo: "/images/person.png",
-    text: "Their SEO and digital marketing strategies significantly improved our search rankings and online visibility. We saw a major increase in leads within a few months.",
-    name: "Amit Verma",
-    role: "Marketing Head at Growify Media",
-  },
-  {
-    logo: "/images/person.png",
-    text: "The UI/UX design team created an intuitive and visually stunning interface for our platform. Our customer engagement improved dramatically after the redesign.",
-    name: "Sophia Carter",
-    role: "CEO at BrightTech",
-  },
-  {
-    logo: "/images/person.png",
-    text: "From backend architecture to frontend development, their developers handled the entire project professionally. Communication and delivery were excellent throughout.",
-    name: "Daniel Lee",
-    role: "CTO at Innovexa",
-  },
-  {
-    logo: "/images/person.png",
-    text: "Their ecommerce development expertise helped us launch a fast and secure online store that boosted our sales and customer experience.",
-    name: "Priya Mehta",
-    role: "Owner at StyleCart",
-  },
-  {
-    logo: "/images/person.png",
-    text: "The cloud and DevOps solutions they implemented improved our deployment process and overall application performance. A reliable technology partner for growing businesses.",
-    name: "Michael Brown",
-    role: "Operations Director at CloudNet",
-  },
-];
+  const testimonials = [
+    {
+      logo:
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop",
+      text: "Their team delivered a modern and highly responsive website that completely transformed our online presence. The design and performance exceeded our expectations.",
+      name: "Rahul Sharma",
+      role: "Founder at Nexora Solutions",
+    },
 
-    return (
-        <section className="w-full flex bg-white relative overflow-visible py-32">
+    {
+      logo:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop",
+      text: "We partnered with them for mobile app development, and the results were outstanding. The Android and iOS applications were smooth and scalable.",
+      name: "Priya Verma",
+      role: "Director at UrbanTech",
+    },
 
-            {/* LEFT IMAGE */}
-            <div className="w-1/3 flex items-start justify-end">
-                <img
-                    src="/images/n3.png"
-                    alt="Team"
-                    className="w-[90%] h-[650px] object-cover rounded-xl"
-                />
+    {
+      logo:
+        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=400&auto=format&fit=crop",
+      text: "Their SEO and digital marketing strategies significantly improved our search rankings and online visibility within a short time.",
+      name: "Amit Singh",
+      role: "Marketing Head at Growify",
+    },
+
+    {
+      logo:
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop",
+      text: "The UI/UX design team created an intuitive and visually stunning interface for our platform that improved customer engagement.",
+      name: "Neha Kapoor",
+      role: "CEO at Bright India Tech",
+    },
+
+    {
+      logo:
+        "https://images.unsplash.com/photo-1504257432389-52343af06ae3?q=80&w=400&auto=format&fit=crop",
+      text: "From backend architecture to frontend development, their developers handled the entire project professionally and efficiently.",
+      name: "Vikram Patel",
+      role: "CTO at Innovexa India",
+    },
+  ];
+
+  return (
+    <section className="relative bg-white py-24 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6">
+
+        {/* TOP SECTION */}
+        <div className="grid lg:grid-cols-2 gap-14 items-center mb-20">
+
+          {/* LEFT IMAGE */}
+          <div className="relative">
+
+            <div className="absolute -top-10 -left-10 w-40 h-40 bg-[#f4622a]/10 rounded-full blur-3xl"></div>
+
+            <Image
+              src="/images/Gemini_Generated_Image_dpcwdmdpcwdmdpcw.png"
+              alt="team"
+              width={700}
+              height={700}
+              className="rounded-[30px] object-cover h-[550px] w-full shadow-2xl"
+            />
+          </div>
+
+          {/* RIGHT CONTENT */}
+          <div>
+
+            <p className="text-[#f4622a] font-semibold uppercase tracking-[4px] mb-4">
+              Client Testimonials
+            </p>
+
+            <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-[#191919]">
+              Trusted By Startups,
+              <br />
+              Businesses & IT Companies
+              <span className="text-[#f4622a]">.</span>
+            </h2>
+
+            <p className="text-gray-600 text-lg leading-8 mt-6 max-w-xl">
+              We create scalable websites, mobile apps, and software solutions
+              that help businesses grow faster with modern technology and
+              premium digital experiences.
+            </p>
+
+            {/* STATS */}
+            <div className="flex items-center gap-10 mt-10">
+
+              <div>
+                <h3 className="text-4xl font-bold text-[#f4622a]">
+                  1200+
+                </h3>
+                <p className="text-gray-500 text-sm mt-2">
+                  Projects Delivered
+                </p>
+              </div>
+
+              <div className="w-px h-14 bg-gray-300"></div>
+
+              <div>
+                <h3 className="text-4xl font-bold text-[#f4622a]">
+                  98%
+                </h3>
+                <p className="text-gray-500 text-sm mt-2">
+                  Client Satisfaction
+                </p>
+              </div>
             </div>
 
-            {/* RIGHT CONTENT */}
-            <div className="w-2/3 bg-[#f3f3f3] flex flex-col justify-start pl-16 pr-10">
+            {/* BUTTON */}
+            <button className="mt-10 group inline-flex items-center gap-3 bg-[#f4622a] text-white px-8 py-4 rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-orange-300">
 
-                {/* TEXT */}
-                <div className="mt-10 max-w-2xl">
-                    <h1 className="text-[40px] font-semibold leading-[1.2] text-gray-800">
-                        Empowering our Clients With Innovative Solutions
-                    </h1>
+              Explore Case Studies
 
-                    <p className="text-[14px] text-gray-500 mt-5 mb-8">
-                        1,200+ projects executed successfully and an average relationship of over 3 years.
+              <IoIosArrowRoundForward
+                size={30}
+                className="group-hover:translate-x-1 transition-all"
+              />
+            </button>
+          </div>
+        </div>
+
+        {/* TESTIMONIAL SLIDER */}
+        <div className="relative">
+
+          <Swiper
+            modules={[Navigation, Autoplay]}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            navigation={{
+              nextEl: ".next-btn",
+              prevEl: ".prev-btn",
+            }}
+            spaceBetween={24}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1200: {
+                slidesPerView: 3,
+              },
+            }}
+          >
+            {testimonials.map((item, i) => (
+              <SwiperSlide key={i}>
+
+                <div className="group bg-white border border-gray-100 rounded-[28px] p-8 h-[360px] flex flex-col justify-between shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+
+                  {/* TOP */}
+                  <div className="flex items-center justify-between">
+
+                    <div className="flex items-center gap-4">
+
+                      {/* USE IMG INSTEAD OF NEXT IMAGE */}
+                      <img
+                        src={item.logo}
+                        alt={item.name}
+                        className="w-[60px] h-[60px] rounded-full object-cover border-2 border-[#f4622a]"
+                      />
+
+                      <div>
+                        <h4 className="font-semibold text-[17px] text-[#191919]">
+                          {item.name}
+                        </h4>
+
+                        <p className="text-sm text-gray-500 mt-1">
+                          {item.role}
+                        </p>
+                      </div>
+                    </div>
+
+                    <button className="w-12 h-12 rounded-full bg-[#fff3ee] flex items-center justify-center text-[#f4622a] group-hover:bg-[#f4622a] group-hover:text-white transition-all duration-300">
+
+                      <IoIosArrowRoundForward size={28} />
+                    </button>
+                  </div>
+
+                  {/* REVIEW */}
+                  <div>
+
+                    <p className="text-6xl text-[#f4622a]/20 font-bold leading-none mb-3">
+                      “
                     </p>
 
-                    <button className="text-black flex items-center gap-2 border-b border-black pb-1 cursor-pointer">
-                        Our greatest hits →
-                    </button>
+                    <p className="text-[15px] leading-7 text-gray-600">
+                      {item.text}
+                    </p>
+                  </div>
+
+                  {/* STARS */}
+                  <div className="flex items-center gap-1 text-[#f4622a] text-lg">
+                    ★ ★ ★ ★ ★
+                  </div>
                 </div>
-            </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-            {/* SLIDER */}
-            <div className="absolute left-0 bottom-20 w-full z-10">
-                <Swiper
-                    modules={[Navigation]}
-                    slidesPerView={3.5}
-                    spaceBetween={20}
-                    slidesOffsetBefore={60}
-                    navigation={{
-                        nextEl: ".next-btn",
-                        prevEl: ".prev-btn",
-                    }}
-                    className="px-6"
-                >
-                    {testimonials.map((item, i) => (
-                        <SwiperSlide key={i}>
-                            <div className="bg-white p-8 rounded-2xl shadow-xl min-h-[320px] flex flex-col justify-between">
+          {/* NAVIGATION BUTTONS */}
+          <div className="flex items-center justify-center gap-4 mt-14">
 
-                                <div className="flex items-center justify-between mb-4">
+            <button className="prev-btn w-14 h-14 rounded-full border border-gray-300 bg-white flex items-center justify-center text-gray-700 hover:bg-[#f4622a] hover:text-white hover:border-[#f4622a] transition-all duration-300 shadow-md">
 
-                                    <img src={item.logo} className="h-12" />
+              <IoIosArrowBack size={24} />
+            </button>
 
-                                    <a
-                                        href="#"
-                                        className="group flex items-center gap-2 text-gray-400 hover:text-orange-500 transition-all duration-300"
-                                    >
-                                        {/* TEXT (hidden → visible on hover) */}
-                                        <span className="text-sm opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                                            View case study
-                                        </span>
+            <button className="next-btn w-14 h-14 rounded-full border border-gray-300 bg-white flex items-center justify-center text-gray-700 hover:bg-[#f4622a] hover:text-white hover:border-[#f4622a] transition-all duration-300 shadow-md">
 
-                                        {/* ARROW */}
-                                        <IoIosArrowRoundForward
-                                            size={40}
-                                            className="transition-all duration-300 group-hover:text-orange-500 group-hover:translate-x-1"
-                                        />
-                                    </a>
-
-                                </div>
-
-                                <div>
-                                    <p className="text-red-500 text-3xl">"</p>
-                                    <p className="text-[15px] text-gray-700 leading-relaxed">
-                                        {item.text}
-                                    </p>
-                                </div>
-
-                                <div>
-                                    <p className="font-bold text-sm text-gray-800">{item.name}</p>
-                                    <p className="text-xs text-gray-800">{item.role}</p>
-                                </div>
-
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
-
-            {/* NAV BUTTONS */}
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-4 z-20">
-                <button className="prev-btn w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center bg-white text-gray-600 hover:bg-black hover:text-white transition">
-                    ←
-                </button>
-                <button className="next-btn w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center bg-white text-gray-600 hover:bg-black hover:text-white transition">
-                    →
-                </button>
-            </div>
-
-        </section>
-    );
+              <IoIosArrowForward size={24} />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

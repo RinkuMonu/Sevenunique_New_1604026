@@ -35,13 +35,13 @@ export default function Hero() {
       {/* FULL WIDTH IMAGE */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-banner-img.jpg"
+          src="/images/1779359281185.png"
           alt="Team working"
           fill
           priority
           className="object-cover object-right"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/70 to-transparent"></div>
       </div>
 
       {/* CONTENT */}
@@ -81,7 +81,7 @@ export default function Hero() {
       {/* CURVE */}
       <div className="absolute bottom-0 left-0 w-full leading-none">
         <svg
-          viewBox="0 0 1440 200"
+          viewBox="0 0 1460 200"
           className="w-full h-[180px]"
           preserveAspectRatio="none"
         >

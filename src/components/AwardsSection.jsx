@@ -8,141 +8,196 @@ const outfit = Outfit({
   weight: ["400", "500", "600", "700"],
 });
 
+const stats = [
+  {
+    number: "3500+",
+    label: "Projects Completed",
+    text: "projects completed • projects completed •",
+  },
+  {
+    number: "375+",
+    label: "Expert Members",
+    text: "expert members • expert members •",
+  },
+  {
+    number: "2700+",
+    label: "Happy Clients",
+    text: "happy clients • happy clients •",
+  },
+  {
+    number: "235+",
+    label: "Running Project",
+    text: "running projects • running projects •",
+  },
+];
+
+const certificates = [
+  {
+    image: "/images/certified.avif",
+    title: "India's Fastest-Growing Companies",
+  },
+  {
+    image: "/images/msme.png",
+    title:
+      "Ministry of Micro, Small and Medium Enterprises Certificate",
+  },
+  {
+    image: "/images/pcidss.png",
+    title:
+      "Payment Card Industry Security Standards Council",
+  },
+  {
+    image: "/images/iso.png",
+    title:
+      "International Organization for Standardization ISO",
+  },
+];
+
 export default function AwardsSection() {
   return (
-    <section className={`${outfit.className} bg-[#f3f3f3] py-10 px-6`}>
+    <>
+      {/* ANIMATION */}
+      <style jsx>{`
+        @keyframes spinSlow {
+          from {
+            transform: rotate(0deg);
+          }
 
-      <div className=" mx-auto bg-[#0b0b0b] rounded-2xl px-10 py-14">
+          to {
+            transform: rotate(360deg);
+          }
+        }
 
-        <div className="grid lg:grid-cols-3 gap-12 items-center">
+        .spin-slow {
+          animation: spinSlow 14s linear infinite;
+          transform-origin: center;
+        }
 
-          {/* LEFT CONTENT */}
-          <div>
-            <p className="text-xs tracking-widest text-white/50 mb-4 uppercase">
-              Our Awards
-            </p>
+        @keyframes scrollDown {
+          0% {
+            transform: translateY(0%);
+          }
 
-            <h2 className="text-4xl lg:text-5xl font-semibold leading-tight mb-6 text-white">
-              <span className="text-[#f4622a]">Quality Driven </span>
-              <br />
-              Default.            </h2>
+          100% {
+            transform: translateY(-50%);
+          }
+        }
 
-            <p className="text-white/60 text-sm leading-relaxed mb-8 max-w-sm">
-            Our dedication to quality, innovation, and client satisfaction drives every digital solution we create.
+        .scroll-certificates {
+          animation: scrollDown 18s linear infinite;
+        }
 
+        .scroll-certificates:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
 
-            </p>
+      <section
+        className={`${outfit.className} bg-[#f3f3f3] py-10 px-4 lg:px-6`}
+      >
+        <div className="mx-auto bg-[#0b0b0b] rounded-3xl px-6 lg:px-10 py-14 overflow-hidden">
+          <div className="grid lg:grid-cols-3 gap-14 items-center">
 
-            <button className="text-[#f4622a] text-sm font-medium border-b border-[#f4622a] pb-1 hover:opacity-80 transition">
-              Our trophy cabinet →
-            </button>
+            {/* LEFT CONTENT */}
+            <div>
+              <p className="text-xs tracking-[4px] text-white/50 mb-4 uppercase">
+                Our Awards
+              </p>
+
+              <h2 className="text-4xl lg:text-5xl font-semibold leading-tight mb-6 text-white">
+                <span className="text-[#f4622a]">
+                  Quality Driven
+                </span>
+                <br />
+                Excellence.
+              </h2>
+
+              <p className="text-white/60 text-sm leading-7 mb-8 max-w-sm">
+                Our dedication to quality, innovation, and
+                client satisfaction drives every digital
+                solution we create for businesses worldwide.
+              </p>
+
+              <button className="text-[#f4622a] text-sm font-medium border-b border-[#f4622a] pb-1 hover:opacity-80 transition">
+                Our trophy cabinet →
+              </button>
+            </div>
+
+            {/* CENTER STATS */}
+            <div className="grid grid-cols-2 gap-10">
+              {stats.map((item, index) => (
+                <div
+                  key={index}
+                  className="relative w-44 h-44 mx-auto flex items-center justify-center"
+                >
+                  {/* ROTATING TEXT */}
+                  <svg
+                    className="absolute w-full h-full spin-slow"
+                    viewBox="0 0 200 200"
+                  >
+                    <defs>
+                      <path
+                        id={`circlePath${index}`}
+                        d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0"
+                      />
+                    </defs>
+
+                    <text
+                      fill="#6b7280"
+                      fontSize="12"
+                      letterSpacing="3"
+                    >
+                      <textPath href={`#circlePath${index}`}>
+                        {item.text}
+                      </textPath>
+                    </text>
+                  </svg>
+
+                  {/* INNER CONTENT */}
+                  <div className="text-center z-10">
+                    <p className="text-3xl font-bold text-white">
+                      {item.number}
+                    </p>
+
+                    <p className="text-sm text-white/60 mt-1">
+                      {item.label}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* RIGHT CERTIFICATES SCROLL */}
+            <div className="h-[450px] overflow-hidden border-l border-white/10 pl-6 relative">
+
+              <div className="scroll-certificates flex flex-col gap-8">
+
+                {[...certificates, ...certificates].map(
+                  (item, index) => (
+                    <div
+                      key={index}
+                      className="bg-white/[0.03] border border-white/10 rounded-2xl p-6 text-center backdrop-blur-sm"
+                    >
+                      <div className="w-24 h-20 mx-auto relative mb-4">
+                        <Image
+                          src={item.image}
+                          alt={item.title}
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
+
+                      <p className="text-sm text-white/60 leading-6">
+                        {item.title}
+                      </p>
+                    </div>
+                  )
+                )}
+              </div>
+            </div>
           </div>
-
-          {/* CENTER STATS */}
-          <div className="flex flex-col items-center gap-20">
-
-            {/* STAT 1 */}
-            <div className="relative w-44 h-44 flex items-center justify-center">
-
-              {/* ROTATING TEXT */}
-              <svg
-                className="absolute w-full h-full spin-slow"
-                viewBox="0 0 200 200"
-              >
-                <defs>
-                  <path
-                    id="circlePath1"
-                    d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0"
-                  />
-                </defs>
-                <text fill="#6b7280" fontSize="18" letterSpacing="2">
-                  <textPath href="#circlePath1">
-                    projects executed successfully • projects executed successfully •
-                  </textPath>
-                </text>
-              </svg>
-
-              {/* INNER CONTENT */}
-              <div className="text-center z-10">
-                <p className="text-3xl font-semibold text-white">3500+</p>
-                <p className="text-sm text-white/60">projects delivered</p>
-              </div>
-            </div>
-
-            {/* STAT 2 */}
-            <div className="relative w-44 h-44 flex items-center justify-center">
-
-              {/* ROTATING TEXT */}
-              <svg
-                className="absolute w-full h-full spin-slow"
-                viewBox="0 0 200 200"
-              >
-                <defs>
-                  <path
-                    id="circlePath2"
-                    d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0"
-                  />
-                </defs>
-                <text fill="#6b7280" fontSize="18" letterSpacing="2">
-                  <textPath href="#circlePath2">
-                    industry sectors • industry sectors • industry sectors •
-                  </textPath>
-                </text>
-              </svg>
-              {/* INNER CONTENT */}
-              <div className="text-center z-10">
-                <p className="text-3xl font-semibold text-white">375+</p>
-                <p className="text-sm text-white/60">Active Members</p>
-              </div>
-            </div>
-
-          </div>
-
-          {/* RIGHT AWARDS */}
-          <div className="grid grid-cols-2 gap-8 border-l border-white/10 pl-4">
-
-            <div className="text-center space-y-3">
-              <div className="w-24 h-12 mx-auto relative">
-                <Image src="/images/certified.avif" alt="Financial Times" fill className="object-contain" />
-              </div>
-              <p className="text-xs text-white/40">
-                India's Fastest-Growing Companies 
-              </p>
-            </div>
-
-            <div className="text-center space-y-3">
-              <div className="w-24 h-12 mx-auto relative">
-                <Image src="/images/msme.png" alt="CIO100 Awards" fill className="object-contain" />
-              </div>
-              <p className="text-xs text-white/40">
-                Ministry of Micro, Small and Medium Enterprises (MSME) certificate
-              </p>
-            </div>
-
-            <div className="text-center space-y-3">
-              <div className="w-16 h-16 mx-auto relative">
-                <Image src="/images/pcidss.png" alt="Clutch" fill className="object-contain" />
-              </div>
-              <p className="text-xs text-white/40">
-               Payment Card Industry Security Standards Council
-              </p>
-            </div>
-
-            <div className="text-center space-y-3">
-              <div className="w-16 h-16 mx-auto relative">
-                <Image src="/images/iso.png" alt="Outsourcing" fill className="object-contain" />
-              </div>
-              <p className="text-xs text-white/40">
-                International Organization for Standardization ISO certification 
-              </p>
-            </div>
-
-           
-
-          </div>
-
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

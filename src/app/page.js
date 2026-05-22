@@ -27,7 +27,7 @@ export default function Home() {
      <WhyChooseUs />
      <TeamMorphSection />
      <ProcessTimelineSection />  
-     <BlogInsights />
+     {/* <BlogInsights /> */}
      <CTABand />
     </div>
   );
