@@ -59,28 +59,28 @@ export default function Footer() {
             <div className="mt-8 flex items-center gap-4">
 
               <Link
-                href="#"
+                href="https://www.facebook.com/people/SevenUnique-Tech-Solutions-Pvtltd/61556669918427/"
                 className="w-11 h-11 rounded-full bg-white border border-[#e7e7e7] flex items-center justify-center hover:bg-[#f4622a] hover:text-white transition-all duration-300"
               >
                 <FaFacebookF />
               </Link>
 
               <Link
-                href="#"
+                href="https://www.instagram.com/sevenuniquetech/?hl=en"
                 className="w-11 h-11 rounded-full bg-white border border-[#e7e7e7] flex items-center justify-center hover:bg-[#f4622a] hover:text-white transition-all duration-300"
               >
                 <FaInstagram />
               </Link>
 
               <Link
-                href="#"
+                href="https://www.linkedin.com/company/sevenuniquetech/posts/?feedView=all"
                 className="w-11 h-11 rounded-full bg-white border border-[#e7e7e7] flex items-center justify-center hover:bg-[#f4622a] hover:text-white transition-all duration-300"
               >
                 <FaLinkedinIn />
               </Link>
 
               <Link
-                href="#"
+                href="https://x.com/sevenuniqu42041"
                 className="w-11 h-11 rounded-full bg-white border border-[#e7e7e7] flex items-center justify-center hover:bg-[#f4622a] hover:text-white transition-all duration-300"
               >
                 <FaXTwitter />
@@ -136,10 +136,10 @@ export default function Footer() {
 
                 <li>
                   <Link
-                    href="/contact-us"
+                    href="/about-us/Leadership"
                     className="hover:text-[#f4622a] transition"
                   >
-                    Contact Us
+                   Leadership Team
                   </Link>
                 </li>
               </ul>
@@ -221,7 +221,7 @@ export default function Footer() {
 
                 <li>
                   <Link
-                    href="/contact-us"
+                    href="/schedule-a-call-page"
                     className="hover:text-[#f4622a] transition"
                   >
                     Support
@@ -242,83 +242,165 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* OFFICES */}
-        <div className="grid md:grid-cols-2 gap-8 mt-20">
+      {/* OFFICES */}
+<div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8 mt-20">
 
-          {/* JAIPUR */}
-          <div className="bg-white rounded-[24px] p-8 border border-[#ececec] hover:shadow-lg transition-all duration-300">
+  {/* JAIPUR */}
+  <div className="bg-white rounded-[24px] p-8 border border-[#ececec] hover:shadow-lg transition-all duration-300">
 
-            <Image
-              src="https://www.avendus.com/uploads/City-Icons-Jaipur.svg"
-              alt="Jaipur"
-              width={170}
-              height={50}
-              className="object-contain mb-6"
-            />
+    <img
+      src="https://www.avendus.com/uploads/City-Icons-Jaipur.svg"
+      alt="Jaipur"
+      width={170}
+      height={50}
+      className="object-contain mb-6"
+    />
 
-            <h4 className="text-[24px] font-semibold mb-4">
-              Jaipur Head Office
-            </h4>
+    <h4 className="text-[24px] font-semibold mb-4">
+      Jaipur Head Office
+    </h4>
 
-            <div className="space-y-4">
+    <div className="space-y-4">
 
-              <div className="flex gap-3">
-                <FiMapPin className="text-[#f4622a] mt-1 text-lg shrink-0" />
+      <div className="flex gap-3">
+        <FiMapPin className="text-[#f4622a] mt-1 text-lg shrink-0" />
 
-                <p className="text-[16px] leading-7 text-[#555]">
-                  Plot No 97, Dakshinpuri - I Shrikishan, Sanganer, Jagatpura, Jaipur, Shri Kishanpura, Rajasthan 302017
-                </p>
-              </div>
+        <p className="text-[16px] leading-7 text-[#555]">
+          Plot No 97, Dakshinpuri - I Shrikishan,
+          Sanganer, Jagatpura, Jaipur,
+          Rajasthan 302017
+        </p>
+      </div>
 
-              <div className="flex items-center gap-3 text-[16px]">
-                <FiPhone className="text-[#f4622a]" />
-                +91 141-4511098
-              </div>
+      <div className="flex items-center gap-3 text-[16px]">
+        <FiPhone className="text-[#f4622a]" />
+        +91 141-4511098
+      </div>
 
-              <div className="flex items-center gap-3 text-[16px]">
-                <FiMail className="text-[#f4622a]" />
-                info@sevenunique.com
-              </div>
-            </div>
-          </div>
+      <div className="flex items-center gap-3 text-[16px]">
+        <FiMail className="text-[#f4622a]" />
+        info@sevenunique.com
+      </div>
+    </div>
+  </div>
 
-          {/* GURUGRAM */}
-          <div className="bg-white rounded-[24px] p-8 border border-[#ececec] hover:shadow-lg transition-all duration-300">
+  {/* MUMBAI */}
+  <div className="bg-white rounded-[24px] p-8 border border-[#ececec] hover:shadow-lg transition-all duration-300">
 
-            <Image
-              src="https://www.avendus.com/uploads/Kolkata_83b7a1c794.svg"
-              alt="Gurugram"
-              width={190}
-              height={50}
-              className="object-contain mb-6"
-            />
+    <img
+      src="https://www.avendus.com/uploads/Kolkata_83b7a1c794.svg"
+      alt="Mumbai"
+      width={170}
+      height={50}
+      className="object-contain mb-6"
+    />
 
-            <h4 className="text-[24px] font-semibold mb-4">
-              Mumbai Office
-            </h4>
+    <h4 className="text-[24px] font-semibold mb-4">
+      Mumbai Office
+    </h4>
 
-            <div className="space-y-4">
+    <div className="space-y-4">
 
-              <div className="flex gap-3">
-                <FiMapPin className="text-[#f4622a] mt-1 text-lg shrink-0" />
+      <div className="flex gap-3">
+        <FiMapPin className="text-[#f4622a] mt-1 text-lg shrink-0" />
 
-                <p className="text-[16px] leading-7 text-[#555]">
-                  No. 101/2, Vakratunda Corporate Park Premises Co-operative Society Limited, Off Aarey Road, Goregaon (East), Mumbai – 400 063
-                </p>
-              </div>
+        <p className="text-[16px] leading-7 text-[#555]">
+          No. 101/2, Vakratunda Corporate Park,
+          Off Aarey Road, Goregaon East,
+          Mumbai – 400063
+        </p>
+      </div>
 
-              <div className="flex items-center gap-3 text-[16px]">
-                <FiPhone className="text-[#f4622a]" />
-                +91 141-4511098
-              </div>
+      <div className="flex items-center gap-3 text-[16px]">
+        <FiPhone className="text-[#f4622a]" />
+        +91 141-4511098
+      </div>
 
-              <div className="flex items-center gap-3 text-[16px]">
-                <FiMail className="text-[#f4622a]" />
-                info@sevenunique.com
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="flex items-center gap-3 text-[16px]">
+        <FiMail className="text-[#f4622a]" />
+        info@sevenunique.com
+      </div>
+    </div>
+  </div>
+
+  {/* UAE */}
+  <div className="bg-white rounded-[24px] p-8 border border-[#ececec] hover:shadow-lg transition-all duration-300">
+
+    <img
+      src="https://ezulix.com/assets/image/icons/uk.webp"
+      alt="Dubai"
+      width={170}
+      height={50}
+      className="object-contain mb-6"
+    />
+
+    <h4 className="text-[24px] font-semibold mb-4">
+      UAE Office
+    </h4>
+
+    <div className="space-y-4">
+
+      <div className="flex gap-3">
+        <FiMapPin className="text-[#f4622a] mt-1 text-lg shrink-0" />
+
+        <p className="text-[16px] leading-7 text-[#555]">
+          Office Number 01-02, C-1 Building,
+          Ajman Free Zone, Dubai,
+          United Arab Emirates
+        </p>
+      </div>
+
+      <div className="flex items-center gap-3 text-[16px]">
+        <FiPhone className="text-[#f4622a]" />
+        +971 55 000 0000
+      </div>
+
+      <div className="flex items-center gap-3 text-[16px]">
+        <FiMail className="text-[#f4622a]" />
+        salesuae@sevenunique.com
+      </div>
+    </div>
+  </div>
+
+  {/* USA */}
+  <div className="bg-white rounded-[24px] p-8 border border-[#ececec] hover:shadow-lg transition-all duration-300">
+
+    <img
+      src="https://ezulix.com/assets/image/icons/uae.webp"
+      alt="USA"
+      width={170}
+      height={50}
+      className="object-contain mb-6"
+    />
+
+    <h4 className="text-[24px] font-semibold mb-4">
+      USA Office
+    </h4>
+
+    <div className="space-y-4">
+
+      <div className="flex gap-3">
+        <FiMapPin className="text-[#f4622a] mt-1 text-lg shrink-0" />
+
+        <p className="text-[16px] leading-7 text-[#555]">
+          514 State Shelton Street Garden,
+          Wisconsin, USA – 55309
+        </p>
+      </div>
+
+      <div className="flex items-center gap-3 text-[16px]">
+        <FiPhone className="text-[#f4622a]" />
+        +1 414 000 0000
+      </div>
+
+      <div className="flex items-center gap-3 text-[16px]">
+        <FiMail className="text-[#f4622a]" />
+        salesusa@sevenunique.com
+      </div>
+    </div>
+  </div>
+
+</div>
       </div>
 
       {/* BOTTOM BAR */}

@@ -1,590 +1,328 @@
 "use client";
-import { HomeIcon } from "lucide-react";
+
+import { HomeIcon, Trophy, Sparkles, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { FaAngleRight } from "react-icons/fa";
-
-const categories = [
-  { id: "technology", label: "Technology Solutions" },
-  { id: "management", label: "Management & Growth" },
-  { id: "employer", label: "Employer & Brand Citizenship" },
-];
 
 const featuredAwards = [
   {
-    logo: "https://assets.bairesdev.com//image/upload/c_limit,w_180/dpr_auto/f_auto/q_auto/v1/www/core/Inc500white_143c84388d?_a=BAVAfVDW0",
+    logo:"https://ezulix.com/assets/image/awards/2.webp",
     title: "Top Software Development Company",
-    year: "2024",
+    year: "2026",
   },
   {
-    logo: "https://assets.bairesdev.com//image/upload/c_limit,w_180/fl_sanitize/v1/www/core/clutch_software_developer_6c18c23f65.svg?_a=BAVAfVDW0",
-    title: "Inc. 5000 Fastest Growing Companies",
-    year: "2024",
+    logo:
+      "https://assets.bairesdev.com//image/upload/c_limit,w_180/fl_sanitize/v1/www/core/clutch_software_developer_6c18c23f65.svg?_a=BAVAfVDW0",
+    title: "Fastest Growing Tech Company",
+    year: "2025",
   },
   {
-    logo: "https://assets.bairesdev.com//image/upload/c_limit,w_180/fl_sanitize/v1/www/core/CIO_100_8e2cb7f330.svg?_a=BAVAfVDW0",
-    title: "Great Place to Work Certified",
-    year: "2024",
+    logo:
+      "https://assets.bairesdev.com//image/upload/c_limit,w_180/fl_sanitize/v1/www/core/CIO_100_8e2cb7f330.svg?_a=BAVAfVDW0",
+    title: "Innovation Excellence Award",
+    year: "2025",
   },
   {
-    logo: "https://assets.bairesdev.com//image/upload/c_limit,w_180/fl_sanitize/v1/www/core/EY_43aa5098c6.svg?_a=BAVAfVDW0",
-    title: "Forbes Best Employers for Diversity",
+    logo:
+      "https://assets.bairesdev.com//image/upload/c_limit,w_180/fl_sanitize/v1/www/core/EY_43aa5098c6.svg?_a=BAVAfVDW0",
+    title: "Best Workplace Culture",
     year: "2024",
   },
 ];
 
-const awardsByCategory = {
-  technology: [
-    {
-      year: "2026",
-      items: [
-        {
-          logo: "https://assets.bairesdev.com/uploads/2023/09/clutch-logo.svg",
-          title: "Top Software Development Company",
-          desc: "Recognized as a global leader in software development services by Clutch, based on client reviews and market presence.",
-        },
-        {
-          logo: "https://assets.bairesdev.com/uploads/2023/09/goodfirms-logo.svg",
-          title: "Top Software Development Company",
-          desc: "GoodFirms ranked BairesDev among the top software development firms worldwide for its quality and delivery.",
-        },
-        {
-          logo: "https://assets.bairesdev.com/uploads/2023/09/technavio-logo.svg",
-          title: "Top IT Outsourcing Company",
-          desc: "Technavio recognized BairesDev as one of the most impactful IT outsourcing vendors in North America.",
-        },
-      ],
-    },
-    {
-      year: "2025",
-      items: [
-        {
-          logo: "https://assets.bairesdev.com/uploads/2023/09/clutch-logo.svg",
-          title: "Global Leader in IT Services",
-          desc: "Clutch named BairesDev a global leader for IT staffing and software outsourcing.",
-        },
-        {
-          logo: "https://assets.bairesdev.com/uploads/2023/09/g2-logo.svg",
-          title: "High Performer in IT Staffing",
-          desc: "G2 users rated BairesDev highly for client satisfaction and service quality in technology staffing.",
-        },
-        {
-          logo: "https://assets.bairesdev.com/uploads/2023/09/forbes-logo.svg",
-          title: "America's Best Startup Employers",
-          desc: "Forbes recognized BairesDev for exceptional workplace culture and employee satisfaction.",
-        },
-        {
-          logo: "https://assets.bairesdev.com/uploads/2023/09/iaop-logo.svg",
-          title: "Best of The Global Outsourcing 100",
-          desc: "IAOP honored BairesDev in its annual list of the world's best outsourcing service providers.",
-        },
-      ],
-    },
-    {
-      year: "2024",
-      items: [
-        {
-          logo: "https://assets.bairesdev.com/uploads/2023/09/clutch-logo.svg",
-          title: "Top Custom Software Development",
-          desc: "Clutch recognized BairesDev for excellence in custom software development services.",
-        },
-        {
-          logo: "https://assets.bairesdev.com/uploads/2023/09/goodfirms-logo.svg",
-          title: "Top Artificial Intelligence Company",
-          desc: "GoodFirms highlighted BairesDev's AI capabilities and client outcomes.",
-        },
-      ],
-    },
-  ],
-  management: [
-    {
-      year: "2026",
-      items: [
-        {
-          logo: "https://assets.bairesdev.com/uploads/2023/09/inc5000-logo.svg",
-          title: "Inc. 5000 Fastest Growing",
-          desc: "BairesDev earned a spot on the Inc. 5000 list for consecutive years, marking rapid revenue growth.",
-        },
-        {
-          logo: "https://assets.bairesdev.com/uploads/2023/09/financial-times-logo.svg",
-          title: "Americas' Fastest Growing Companies",
-          desc: "Financial Times named BairesDev among the fastest-growing companies in the Americas.",
-        },
-      ],
-    },
-    {
-      year: "2025",
-      items: [
-        {
-          logo: "https://assets.bairesdev.com/uploads/2023/09/inc5000-logo.svg",
-          title: "Inc. 5000 Fastest Growing Companies",
-          desc: "Recognized again for sustained growth and market leadership.",
-        },
-      ],
-    },
-  ],
-  employer: [
-    {
-      year: "2026",
-      items: [
-        {
-          logo: "https://assets.bairesdev.com/uploads/2023/09/gptw-logo.svg",
-          title: "Great Place to Work Certified",
-          desc: "BairesDev was certified as a Great Place to Work based on extensive employee surveys.",
-        },
-        {
-          logo: "https://assets.bairesdev.com/uploads/2023/09/forbes-logo.svg",
-          title: "Best Employers for Diversity",
-          desc: "Forbes recognized BairesDev for its inclusive culture and diverse workforce initiatives.",
-        },
-      ],
-    },
-    {
-      year: "2025",
-      items: [
-        {
-          logo: "https://assets.bairesdev.com/uploads/2023/09/gptw-logo.svg",
-          title: "Great Place to Work — Argentina",
-          desc: "Certified for the second year in Argentina, acknowledging the company's outstanding work environment.",
-        },
-        {
-          logo: "https://assets.bairesdev.com/uploads/2023/09/comparably-logo.svg",
-          title: "Best Company Culture",
-          desc: "Comparably awarded BairesDev for its strong internal culture and employee engagement.",
-        },
-        {
-          logo: "https://assets.bairesdev.com/uploads/2023/09/comparably-logo.svg",
-          title: "Best Company for Women",
-          desc: "Comparably recognized BairesDev for gender equity programs and female leadership development.",
-        },
-      ],
-    },
-  ],
-};
+const awards = [
+  {
+    year: "2026",
+    items: [
+      {
+        title: "Top MERN Stack Development Company",
+        desc: "Recognized globally for delivering scalable MERN stack applications with enterprise-grade architecture and high performance.",
+      },
+      {
+        title: "Best Ecommerce Development Partner",
+        desc: "Awarded for building high-converting ecommerce experiences with secure payment integration and advanced admin systems.",
+      },
+    ],
+  },
+  {
+    year: "2025",
+    items: [
+      {
+        title: "Top Software Innovation Award",
+        desc: "Honored for innovative digital transformation solutions helping startups and enterprises scale faster.",
+      },
+      {
+        title: "Client Excellence Recognition",
+        desc: "Recognized for maintaining outstanding client satisfaction, project delivery, and long-term partnerships.",
+      },
+      {
+        title: "Fastest Growing IT Brand",
+        desc: "Awarded for rapid business growth and impactful technology solutions across multiple industries.",
+      },
+    ],
+  },
+];
 
-function FallbackLogo({ label }) {
+function AwardCard({ item, index }) {
   return (
-    <div className="w-16 h-14 bg-gray-100 rounded flex items-center justify-center text-gray-400 text-xs font-medium">
-      {label.slice(0, 3)}
+    <div
+      className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-8 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl"
+    >
+      {/* Glow */}
+      <div className="absolute -top-20 -right-20 w-40 h-40 bg-orange-200 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-all duration-500" />
+
+      {/* Number */}
+      <div className="absolute top-6 right-6 text-6xl font-black text-gray-100">
+        0{index + 1}
+      </div>
+
+      {/* Icon */}
+      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-400 flex items-center justify-center shadow-lg mb-6">
+        <Trophy className="text-white" size={30} />
+      </div>
+
+      {/* Content */}
+      <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-tight">
+        {item.title}
+      </h3>
+
+      <p className="text-gray-500 leading-relaxed text-[15px]">
+        {item.desc}
+      </p>
+
+      {/* Hover line */}
+      <div className="w-0 h-1 bg-orange-500 rounded-full mt-6 group-hover:w-full transition-all duration-500" />
     </div>
   );
 }
 
-function AwardRow({ logo, title, desc }) {
-  const [hovered, setHovered] = useState(false);
-  const [imgError, setImgError] = useState(false);
-
+export default function AwardsPage() {
   return (
-    <div
-      className="flex items-start gap-5 py-5 border-b border-gray-100 group cursor-default"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
-      <div
-        className="flex-shrink-0 overflow-hidden transition-all duration-300 ease-in-out"
-        style={{ width: hovered ? "96px" : "64px" }}
-      >
-        {imgError ? (
-          <FallbackLogo label={title} />
-        ) : (
-          <Image
-            width={400}
-            height={400}
-            // src={logo}
-            src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/Inc_Power_Partner_2025_Alt_Badge_A00_b31cedb2f6?_a=BAVAfVDW0"
-            alt={title}
-            className="h-14 object-contain"
-            style={{
-              width: hovered ? "96px" : "64px",
-              transition: "width 0.3s ease",
-            }}
-            onError={() => setImgError(true)}
-          />
-        )}
-      </div>
-      <div className="flex-1 min-w-0">
-        <h4 className="text-sm font-semibold text-gray-900 leading-snug mb-1">
-          {title}
-        </h4>
-        <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>
-      </div>
-    </div>
-  );
-}
-
-function FeaturedAwardLogo({ logo, title }) {
-  const [err, setErr] = useState(false);
-  if (err) {
-    return (
-      <div className="h-14 w-full flex items-center justify-center">
-        <div className="w-20 h-10 bg-gray-700 rounded flex items-center justify-center text-gray-400 text-xs">
-          {title.slice(0, 6)}
-        </div>
-      </div>
-    );
-  }
-  return (
-    <Image
-      height={300}
-      width={400}
-      src={logo}
-      alt={title}
-      className="max-h-16 max-w-full object-contain filter brightness-0 invert opacity-80"
-      onError={() => setErr(true)}
-    />
-  );
-}
-
-export default function App() {
-  const [activeCategory, setActiveCategory] = useState("technology");
-  const [mobileTab, setMobileTab] = useState("technology");
-  const contentRef = useRef(null);
-
-  const desktopData = awardsByCategory[activeCategory] ?? [];
-  const mobileData = awardsByCategory[mobileTab] ?? [];
-
-  return (
-    <div
-      className="min-h-screen bg-[#f5f5f5]"
-      style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
-    >
-      {/* ── HERO ── */}
-      <div className="flex items-center gap-5 pt-5 pl-10">
-        <HomeIcon size={16} className="text-gray-500 font-semibold" />{" "}
-        <FaAngleRight size={16} className="text-gray-500 font-semibold" />
-        <span className="text-gray-800 font-semibold">Awards</span>
+    <div className="min-h-screen bg-white overflow-hidden">
+      {/* BREADCRUMB */}
+      <div className="flex items-center gap-3 px-6 md:px-16 py-6 border-b border-gray-100">
+        <HomeIcon size={16} className="text-gray-400" />
+        <FaAngleRight className="text-gray-400 text-sm" />
+        <span className="text-sm font-semibold text-gray-700">
+          Awards & Recognition
+        </span>
       </div>
 
-      <section className="relative bg-[#f5f5f5] pt-20 pb-52 px-6 overflow-hidden text-center h-[90vh]">
-        {/* TROPHY IMAGE (CENTER BACKGROUND) */}
-        <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
-          <Image
-            src="https://assets.bairesdev.com/image/upload/c_limit,w_429/dpr_auto/f_auto/q_auto/v1/www/core/awards_hero_98b9563c32"
-            width={420}
-            height={600}
-            alt="trophy"
-            className="object-contain"
-          />
-        </div>
+      {/* HERO SECTION */}
+      <section className="relative bg-[#0d0d0d] overflow-hidden">
+        {/* Background Glow */}
+        <div className="absolute top-[-150px] left-[-100px] w-[400px] h-[400px] bg-orange-500/20 blur-[120px]" />
+        <div className="absolute bottom-[-200px] right-[-100px] w-[500px] h-[500px] bg-orange-400/10 blur-[140px]" />
 
-        {/* CONTENT */}
-        <div className="relative z-10 max-w-3xl mx-auto">
-          {/* SMALL LABEL */}
-          <p className="text-[12px] tracking-[0.25em] uppercase text-gray-400 mb-6 font-semibold">
-            Awards & Recognitions
-
-          </p>
-
-          {/* HEADING */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#111827] leading-tight mb-6 tracking-tight">
-            Welcome to our trophy cabinet
-            <span className="text-orange-500">.</span>
-          </h1>
-
-          {/* DESCRIPTION */}
-          <p className="text-gray-500 text-base md:text-lg leading-relaxed max-w-xl mx-auto">
-            We are proud to be recognized by leading global organizations for our strong client service, rapid growth, and positive company culture.
-          </p>
-        </div>
-      </section>
-
-      {/* ── FEATURED AWARDS CARD ── */}
-      <section className="relative z-10 px-4 sm:px-8 lg:px-20 mt-24">
-        <div className="max-w-8xl mx-auto bg-gray-950 rounded-2xl px-8 py-10 md:px-14 md:py-12 shadow-2xl">
-          <h2 className="text-center text-orange-500 text-2xl font-semibold tracking-wide mb-10">
-            Featured Awards &amp; Recognitions
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6">
-            {featuredAwards.map((award, i) => (
-              <div key={i} className="flex flex-col items-center text-center">
-                <div className="h-18 w-full flex items-center justify-center mb-5">
-                  <FeaturedAwardLogo logo={award.logo} title={award.title} />
-                </div>
-                <div className="w-12 h-px bg-orange-700 mb-4" />
-                <p className="text-gray-300 text-md font-medium leading-snug mb-1.5">
-                  {award.title}
-                </p>
-                <p className="text-gray-300 text-md">{award.year}</p>
+        <div className="max-w-7xl mx-auto px-6 md:px-16 py-24 md:py-32 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* LEFT */}
+            <div>
+              <div className="inline-flex items-center gap-2 bg-white/10 border border-white/10 px-4 py-2 rounded-full text-orange-400 text-sm mb-8 backdrop-blur-md">
+                <Sparkles size={16} />
+                Awards & Achievements
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* ── MAIN CONTENT ── */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-8 lg:px-20 pt-20 pb-24">
-        {/* Mobile tabs */}
-        <div className="flex md:hidden border-b border-gray-200 mb-10 overflow-x-auto gap-0">
-          {categories.map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => setMobileTab(cat.id)}
-              className={`flex-shrink-0 px-5 py-3 text-sm font-medium whitespace-nowrap border-b-2 -mb-px transition-all duration-200 ${
-                mobileTab === cat.id
-                  ? "border-orange-500 text-orange-500"
-                  : "border-transparent text-gray-400 hover:text-gray-700"
-              }`}
-            >
-              {cat.label}
-            </button>
-          ))}
-        </div>
+              <h1 className="text-5xl md:text-7xl font-black text-white leading-[1.1] tracking-tight mb-8">
+                Excellence <br />
+                That Speaks <span className="text-orange-500">Louder.</span>
+              </h1>
 
-        <div className="flex gap-14">
-          {/* Desktop Sidebar */}
-          <aside className="hidden md:block w-56 flex-shrink-0">
-            <div className="sticky top-10 space-y-0.5">
-              {categories.map((cat) => (
-                <button
-                  key={cat.id}
-                  onClick={() => setActiveCategory(cat.id)}
-                  className={`w-full text-left px-4 py-3 text-sm font-medium rounded-r-lg border-l-2 transition-all duration-200 ${
-                    activeCategory === cat.id
-                      ? "border-orange-500 text-gray-900 bg-orange-50/60"
-                      : "border-transparent text-gray-500 hover:text-gray-800 hover:bg-gray-50"
-                  }`}
+              <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mb-10">
+                We are proud to be recognized globally for delivering innovative
+                software solutions, outstanding client experiences, and scalable
+                digital products.
+              </p>
+
+              <div className="flex flex-wrap gap-5">
+                <Link
+                  href="/schedule-a-call-page"
+                  className="bg-orange-500 hover:bg-orange-600 transition-all duration-300 text-white px-8 py-4 rounded-2xl font-semibold inline-flex items-center gap-3 shadow-xl shadow-orange-500/20"
                 >
-                  {cat.label}
-                </button>
-              ))}
-            </div>
-          </aside>
+                  Start Your Project
+                  <ArrowRight size={18} />
+                </Link>
 
-          {/* Desktop Content */}
-          <div className="hidden md:block flex-1 min-w-0" ref={contentRef}>
-            {desktopData.map((group) => (
-              <div key={group.year} className="mb-10">
-                <h3 className="text-2xl font-black text-gray-950 mb-1 tracking-tight">
-                  {group.year}
-                </h3>
-                {group.items.map((item, idx) => (
-                  <AwardRow key={idx} {...item} />
-                ))}
+                <Link
+                  href="/our-work-page"
+                  className="border border-white/20 hover:border-orange-400 hover:bg-orange-500/10 transition-all duration-300 text-white px-8 py-4 rounded-2xl font-semibold"
+                >
+                  View Portfolio
+                </Link>
               </div>
-            ))}
+            </div>
+
+            {/* RIGHT */}
+            <div className="relative flex justify-center">
+              {/* Floating Card */}
+              <div className="absolute top-10 left-0 bg-white/10 backdrop-blur-lg border border-white/10 p-5 rounded-2xl shadow-2xl animate-bounce">
+                <p className="text-3xl font-black text-white">50+</p>
+                <span className="text-gray-300 text-sm">
+                  Global Recognitions
+                </span>
+              </div>
+
+              {/* Main Image */}
+              <div className="relative">
+                <div className="absolute inset-0 bg-orange-500/20 blur-3xl rounded-full scale-125" />
+
+                <img
+                  src="https://assets.bairesdev.com/image/upload/c_limit,w_429/dpr_auto/f_auto/q_auto/v1/www/core/awards_hero_98b9563c32"
+                  width={500}
+                  height={650}
+                  alt="Awards"
+                  className="relative z-10 object-contain drop-shadow-[0_30px_60px_rgba(249,115,22,0.4)]"
+                />
+              </div>
+
+              {/* Floating Badge */}
+              <div className="absolute bottom-10 right-0 bg-white rounded-2xl p-5 shadow-2xl">
+                <p className="text-3xl font-black text-gray-900">100%</p>
+                <span className="text-gray-500 text-sm">
+                  Client Satisfaction
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURED AWARDS */}
+      <section className="relative -mt-20 z-20 px-6 md:px-16">
+        <div className="max-w-7xl mx-auto bg-white rounded-[35px] shadow-[0_20px_80px_rgba(0,0,0,0.08)] border border-gray-100 p-8 md:p-14">
+          <div className="flex items-center justify-between flex-wrap gap-6 mb-14">
+            <div>
+              <p className="text-orange-500 font-semibold uppercase tracking-[0.25em] text-sm mb-3">
+                Featured Recognition
+              </p>
+
+              <h2 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
+                Trusted By <br />
+                Industry Leaders
+              </h2>
+            </div>
+
+            <div className="max-w-md">
+              <p className="text-gray-500 leading-relaxed">
+                Our commitment to innovation, quality, and client success has
+                earned us recognition from leading global organizations.
+              </p>
+            </div>
           </div>
 
-          {/* Mobile Content */}
-          <div className="md:hidden flex-1 min-w-0">
-            {mobileData.map((group) => (
-              <div key={group.year} className="mb-10">
-                <h3 className="text-2xl font-black text-gray-950 mb-1 tracking-tight">
-                  {group.year}
-                </h3>
-                {group.items.map((item, idx) => (
-                  <AwardRow key={idx} {...item} />
-                ))}
+          {/* AWARDS GRID */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredAwards.map((award, index) => (
+              <div
+                key={index}
+                className="group relative bg-[#0d0d0d] rounded-3xl p-8 hover:-translate-y-3 transition-all duration-500 overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-orange-500/20 opacity-0 group-hover:opacity-100 transition-all duration-500" />
+
+                <div className="relative z-10">
+                  <div className="h-20 flex items-center justify-center mb-8">
+                    <img
+                      src={award.logo}
+                      alt={award.title}
+                      width={140}
+                      height={80}
+                      className="object-contain brightness-0 invert opacity-90"
+                    />
+                  </div>
+
+                  <div className="w-14 h-[2px] bg-orange-500 mb-5" />
+
+                  <p className="text-white font-semibold leading-relaxed mb-2">
+                    {award.title}
+                  </p>
+
+                  <span className="text-gray-400 text-sm">
+                    {award.year}
+                  </span>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── BOTTOM CTA ── */}
-      <section className="w-full relative -mt-20 ">
-        {/* TOP SECTION */}
-        <div className="bg-[#f5f5f5] h-[40vh]" />
+      {/* AWARDS TIMELINE */}
+      <section className="py-28 px-6 md:px-16 bg-[#fafafa]">
+        <div className="max-w-7xl mx-auto">
+          {/* HEADING */}
+          <div className="text-center mb-20">
+            <p className="text-orange-500 uppercase tracking-[0.25em] text-sm font-semibold mb-4">
+              Recognition Timeline
+            </p>
 
-        {/* CENTER IMAGE (OVERLAP FIX) */}
-        <div className="absolute left-1/2 top-[30%] -translate-x-1/2 -translate-y-1/2 z-20">
-          <div className="">
-            <img
-              src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/static/circles-bottom-cta_suha1s?_a=BAVAfVDW0"
-              alt=""
-              className="w-[360px] object-cover"
-            />
+            <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">
+              Awards That <br />
+              Define Our Journey
+            </h2>
+
+            <p className="text-gray-500 max-w-2xl mx-auto text-lg leading-relaxed">
+              Every recognition reflects our passion for building impactful
+              digital experiences and long-term client success.
+            </p>
+          </div>
+
+          {/* TIMELINE */}
+          <div className="space-y-20">
+            {awards.map((group, idx) => (
+              <div key={idx} className="relative">
+                {/* YEAR */}
+                <div className="sticky top-10 z-10 inline-flex items-center gap-3 bg-white border border-orange-100 shadow-lg px-8 py-4 rounded-full mb-10">
+                  <div className="w-3 h-3 bg-orange-500 rounded-full" />
+                  <h3 className="text-3xl font-black text-gray-900">
+                    {group.year}
+                  </h3>
+                </div>
+
+                {/* CARDS */}
+                <div className="grid md:grid-cols-2 gap-8">
+                  {group.items.map((item, i) => (
+                    <AwardCard key={i} item={item} index={i} />
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
+      </section>
 
-        {/* BLACK SECTION */}
-        <div className="bg-black pt-42 pb-20 md:pt-40 md:pb-24 text-center flex flex-col items-center gap-10">
-          {/* HEADING */}
-          <p className="text-white font-bold text-2xl  leading-tight max-w-3xl">
-            Speed up your product delivery by working with a trusted, 
-            <span className="text-orange-500"> award-recognized</span> software development team.
+      {/* CTA SECTION */}
+      <section className="relative bg-[#0d0d0d] overflow-hidden">
+        {/* Glow */}
+        <div className="absolute left-0 top-0 w-[400px] h-[400px] bg-orange-500/10 blur-[120px]" />
+        <div className="absolute right-0 bottom-0 w-[400px] h-[400px] bg-orange-500/10 blur-[120px]" />
+
+        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-16 py-24 text-center">
+          <div className="inline-flex items-center gap-2 bg-white/10 px-5 py-2 rounded-full text-orange-400 mb-8">
+            <Sparkles size={16} />
+            Let’s Build Something Amazing
+          </div>
+
+          <h2 className="text-4xl md:text-6xl font-black text-white leading-tight mb-8">
+            Partner With An <br />
+            Award-Winning Team
+          </h2>
+
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed mb-12">
+            Transform your ideas into scalable digital products with a trusted
+            software development company focused on quality, speed, and growth.
           </p>
 
-          {/* BUTTONS */}
-          <div className="flex flex-col md:flex-row items-center gap-6">
-            <Link
-              href="0/schedule-a-call-page"
-              className="bg-[#13926A] hover:bg-[#0a825c] px-5 py-3 rounded-lg text-white font-semibold transition"
-            >
-              Schedule a Call
-            </Link>
-          </div>
+          <Link
+            href="/schedule-a-call-page"
+            className="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 transition-all duration-300 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-2xl shadow-orange-500/20"
+          >
+            Schedule A Call
+            <ArrowRight size={20} />
+          </Link>
         </div>
       </section>
     </div>
-  );
-}
-
-function DevIllustration() {
-  return (
-    <svg
-      viewBox="0 0 280 300"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="w-full"
-    >
-      {/* Monitor */}
-      <rect
-        x="20"
-        y="30"
-        width="200"
-        height="140"
-        rx="10"
-        fill="#1F2937"
-        stroke="#374151"
-        strokeWidth="2"
-      />
-      <rect x="30" y="42" width="180" height="112" rx="5" fill="#111827" />
-      {/* Code lines */}
-      <rect
-        x="44"
-        y="60"
-        width="60"
-        height="7"
-        rx="3"
-        fill="#4ADE80"
-        opacity="0.8"
-      />
-      <rect
-        x="44"
-        y="76"
-        width="100"
-        height="7"
-        rx="3"
-        fill="#60A5FA"
-        opacity="0.8"
-      />
-      <rect
-        x="44"
-        y="92"
-        width="80"
-        height="7"
-        rx="3"
-        fill="#F59E0B"
-        opacity="0.7"
-      />
-      <rect
-        x="44"
-        y="108"
-        width="120"
-        height="7"
-        rx="3"
-        fill="#60A5FA"
-        opacity="0.6"
-      />
-      <rect
-        x="44"
-        y="124"
-        width="50"
-        height="7"
-        rx="3"
-        fill="#4ADE80"
-        opacity="0.5"
-      />
-      <rect
-        x="44"
-        y="140"
-        width="90"
-        height="7"
-        rx="3"
-        fill="#F87171"
-        opacity="0.5"
-      />
-      {/* Stand */}
-      <rect x="108" y="170" width="24" height="30" rx="2" fill="#374151" />
-      <rect x="82" y="198" width="76" height="10" rx="4" fill="#4B5563" />
-      {/* Person sitting */}
-      <ellipse cx="200" cy="232" rx="30" ry="6" fill="#1F2937" />
-      {/* Body */}
-      <rect x="182" y="190" width="36" height="46" rx="10" fill="#374151" />
-      {/* Head */}
-      <circle cx="200" cy="174" r="20" fill="#4B5563" />
-      <circle cx="194" cy="170" r="3" fill="#9CA3AF" />
-      <circle cx="206" cy="170" r="3" fill="#9CA3AF" />
-      <path
-        d="M194 182 Q200 187 206 182"
-        stroke="#9CA3AF"
-        strokeWidth="1.5"
-        fill="none"
-        strokeLinecap="round"
-      />
-      {/* Hair */}
-      <path d="M181 168 Q183 152 200 154 Q217 152 219 168" fill="#1F2937" />
-      {/* Arms */}
-      <rect
-        x="162"
-        y="196"
-        width="20"
-        height="10"
-        rx="5"
-        fill="#374151"
-        transform="rotate(-20 162 196)"
-      />
-      <rect
-        x="218"
-        y="196"
-        width="20"
-        height="10"
-        rx="5"
-        fill="#374151"
-        transform="rotate(20 218 196)"
-      />
-      {/* Laptop */}
-      <rect
-        x="160"
-        y="226"
-        width="80"
-        height="52"
-        rx="5"
-        fill="#1F2937"
-        stroke="#374151"
-        strokeWidth="1.5"
-      />
-      <rect x="166" y="232" width="68" height="38" rx="3" fill="#111827" />
-      <rect
-        x="172"
-        y="240"
-        width="30"
-        height="5"
-        rx="2"
-        fill="#4ADE80"
-        opacity="0.7"
-      />
-      <rect
-        x="172"
-        y="250"
-        width="50"
-        height="5"
-        rx="2"
-        fill="#60A5FA"
-        opacity="0.6"
-      />
-      <rect
-        x="172"
-        y="260"
-        width="40"
-        height="5"
-        rx="2"
-        fill="#F59E0B"
-        opacity="0.5"
-      />
-      {/* Laptop base */}
-      <rect x="148" y="276" width="104" height="8" rx="3" fill="#374151" />
-      {/* Stars / award */}
-      <text x="30" y="260" fontSize="18" fill="#F59E0B" opacity="0.9">
-        ★
-      </text>
-      <text x="240" y="100" fontSize="14" fill="#4ADE80" opacity="0.7">
-        ★
-      </text>
-      <text x="14" y="150" fontSize="12" fill="#60A5FA" opacity="0.5">
-        ★
-      </text>
-    </svg>
   );
 }
