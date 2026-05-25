@@ -9,7 +9,7 @@ export default function CallToAction() {
       {/* Top Image */}
       <div className="relative w-[420px] h-[260px] mb-10">
         <Image
-          src="/images/team.jpg"
+          src="/images/handonhand.png"
           alt="Team working"
           fill
           className="object-contain"

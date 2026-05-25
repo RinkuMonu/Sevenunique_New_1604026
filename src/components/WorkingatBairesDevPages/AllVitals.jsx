@@ -47,7 +47,7 @@ We’ve been recognized by Comparably, IT World Awards, and others for diversity
           {/* IMAGE 1 */}
           <div className="hidden md:block relative h-40 w-[16rem] rounded-2xl overflow-hidden">
             <Image
-              src="/images/team-goa.jpg"
+              src="/images/goa-celeb.jpeg"
               fill
               alt="img1"
               className="object-cover"

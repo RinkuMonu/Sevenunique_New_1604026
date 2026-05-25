@@ -15,7 +15,7 @@ export default function ExperiencesSection() {
           {/* RIGHT IMAGE */}
           <div className="relative h-60 md:h-auto md:w-[35%]">
             <Image
-              src="/images/help.jpg"
+              src="/images/workingp2.png"
               fill
               alt="open application"
               className="object-cover md:rounded-tr-[28px] md:rounded-br-[28px]"

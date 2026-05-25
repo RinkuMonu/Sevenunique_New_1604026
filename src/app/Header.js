@@ -148,7 +148,7 @@ const aboutCols = [
     items: [
       { name: "Leadership Team", path: "/about-us/Leadership" },
       { name: "Our Tech Talent", path: "/about-us/tech-talent" },
-      { name: "Press Releases", path: "/about-us/press" },
+      // { name: "Press Releases", path: "/about-us/press" },
       { name: "Contact Us", path: "/contact-us" },
       { name: "FAQs", path: "/faq" },
     ],
@@ -249,7 +249,7 @@ export default function Header() {
     alt="logo"
     width={250}
     height={140}
-    className="w-60 h-auto object-contain"
+    className="w-60 h-auto object-cover"
   />
 </Link>
         <button
@@ -322,7 +322,7 @@ export default function Header() {
                           "Dedicated Teams",
                           "Software Outsourcing",
                         ]}
-                        brand="Rolls-Royce"
+                        brand="E-commerce"
                         blurb="We built an app for real-time nuclear plant monitoring. Read case study."
                       />
                       <div className="mx-auto flex-1 max-w-[1280px] px-12 py-10">

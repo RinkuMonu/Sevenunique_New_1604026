@@ -19,7 +19,7 @@ export default function BenefitsSection() {
 
           <div className="mt-10 relative w-full h-[540px]">
             <Image
-              src="/images/benefits.png"
+              src="/images/working-person.png"
               alt="Team working"
               fill
               className="object-cover rounded-[20px]"
@@ -31,7 +31,7 @@ export default function BenefitsSection() {
         <div className="space-y-12">
           {/* ITEM */}
           <div className="flex gap-5">
-            <FiMonitor className="text-[#f66135] text-[22px] mt-1" />
+            <FiMonitor className="text-[#f66135] text-[32px] mt-1" />
            <div>
   <h3 className="text-[20px] font-semibold text-[#111827]">
     Proficient in English
@@ -43,7 +43,7 @@ export default function BenefitsSection() {
 </div>
 
 <div className="flex gap-5">
-  <FiClock className="text-[#f66135] text-[22px] mt-1" />
+  <FiClock className="text-[#f66135] text-[32px] mt-1" />
   <div>
     <h3 className="text-[20px] font-semibold text-[#111827]">
       Aligned to Your Time Zone
@@ -55,7 +55,7 @@ export default function BenefitsSection() {
 </div>
 
 <div className="flex gap-5">
-  <FiUsers className="text-[#f66135] text-[22px] mt-1" />
+  <FiUsers className="text-[#f66135] text-[32px] mt-1" />
   <div>
     <h3 className="text-[20px] font-semibold text-[#111827]">
       10+ Years of Experience
@@ -67,7 +67,7 @@ export default function BenefitsSection() {
 </div>
 
 <div className="flex gap-5">
-  <FiCode className="text-[#f66135] text-[22px] mt-1" />
+  <FiCode className="text-[#f66135] text-[32px] mt-1" />
   <div>
     <h3 className="text-[20px] font-semibold text-[#111827]">
       Every Technology Covered
@@ -79,7 +79,7 @@ export default function BenefitsSection() {
 </div>
 
 <div className="flex gap-5">
-  <FiAward className="text-[#f66135] text-[22px] mt-1" />
+  <FiAward className="text-[#f66135] text-[32px] mt-1" />
   <div>
     <h3 className="text-[20px] font-semibold text-[#111827]">
       Award-Winning Partner

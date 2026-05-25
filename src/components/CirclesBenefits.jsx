@@ -126,7 +126,7 @@ export default function CirclesBenefits() {
             >
               {/* Developers group image — using a placeholder that looks realistic */}
               <img
-                src="/images/team.jpg"
+                src="/images/team-handjoin.png"
                 alt="Seven Unique team of senior developers"
                 className="w-full h-full object-cover object-top rounded-none"
                 style={{ display: "block" }}

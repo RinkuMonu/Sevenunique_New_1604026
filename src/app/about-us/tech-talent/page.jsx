@@ -14,7 +14,7 @@ export default function Page() {
             <VettingProcess />
             <BenefitsSection />
             <TeamRolesSection />
-            <FlexibleWays />
+            {/* <FlexibleWays /> */}
             <DarkShowcase />
         </>
     );

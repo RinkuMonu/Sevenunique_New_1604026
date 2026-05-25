@@ -68,7 +68,7 @@ const items = [
               <div className="w-[40%] h-44 bg-[#F66135] rounded-[20px] relative overflow-hidden">
                 <span className="absolute inset-0 flex items-center justify-center text-white text-xs">
                   <Image
-                    src="/images/u1.png"
+                    src="/images/t1.png"
                     fill
                     className="object-cover"
                     alt="img"
@@ -79,7 +79,7 @@ const items = [
               <div className="w-[60%] h-44 bg-[#FFD785] rounded-[20px] relative overflow-hidden">
                 <span className="absolute inset-0 flex items-center justify-center text-black text-xs">
                   <Image
-                    src="/images/u2.png"
+                    src="/images/t4.png"
                     fill
                     alt="img"
                     className="object-cover"
@@ -93,7 +93,7 @@ const items = [
               <div className="w-[60%] h-44 bg-[#FFAC00] rounded-[20px] relative overflow-hidden">
                 <span className="absolute inset-0 flex items-center justify-center text-white text-xs">
                   <Image
-                    src="/images/u1.png"
+                    src="/images/t3.png"
                     fill
                     alt="img"
                     className="object-cover"
@@ -104,7 +104,7 @@ const items = [
               <div className="w-[40%] h-44 bg-[#FBB39E] rounded-[20px] relative overflow-hidden">
                 <span className="absolute inset-0 flex items-center justify-center text-black text-xs">
                   <Image
-                    src="/images/u3.png"
+                    src="/images/t2.png"
                     fill
                     alt="img"
                     className="object-cover"

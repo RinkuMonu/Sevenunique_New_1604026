@@ -45,44 +45,49 @@ export default function LeadershipGrid() {
   return (
     <section className="bg-[#f5f6f7] py-20">
       <div className="max-w-7xl mx-auto px-6">
-
         {/* HEADING */}
         <h2 className="text-[40px] leading-[1.2] font-semibold text-[#111827] mb-16 max-w-4xl">
-          <span className="text-[#f66135]">Meet our leadership team.</span>{" "}
-          With their guidance, we have achieved numerous accolades recognized across the industry
+          <span className="text-[#f66135]">Meet our leadership team.</span> With
+          their guidance, we have achieved numerous accolades recognized across
+          the industry
           <span className="text-[#f66135]">.</span>
         </h2>
 
         {/* GRID */}
-        <div className="grid md:grid-cols-3 gap-10">
-          {leaders.map((item, i) => (
-            <div key={i} className="group">
+   <div className="grid md:grid-cols-3 gap-8">
+  {leaders.map((item, i) => (
+    <div
+      key={i}
+      className="group text-center"
+    >
+      {/* IMAGE */}
+      <div className="relative mx-auto w-full h-[320px] overflow-hidden rounded-[28px] bg-[#f7f7f7]">
+        <Image
+          src={item.img}
+          alt={item.name}
+          fill
+          className="object-contain grayscale-[8%] transition-all duration-500 group-hover:scale-[1.02]"
+        />
 
-              {/* CARD */}
-              <div
-                className={`relative h-[220px] rounded-[20px] bg-gray-200 overflow-hidden transition-all duration-300 cursor-pointer ${item.color}`}
-              >
-                <Image
-                  src={item.img}
-                  alt={item.name}
-                  fill
-                  className="object-contain object-bottom transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
+        {/* Soft Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
+      </div>
 
-              {/* TEXT */}
-              <div className="mt-4 text-center">
-                <h3 className="text-[18px] font-semibold text-[#111827]">
-                  {item.name}
-                </h3>
-                <p className="text-[14px] text-gray-500 mt-1">
-                  {item.role}
-                </p>
-              </div>
+      {/* TEXT */}
+      <div className="mt-5">
+        <h3 className="text-[20px] font-medium tracking-[-0.3px] text-[#111827]">
+          {item.name}
+        </h3>
 
-            </div>
-          ))}
-        </div>
+        <div className="w-10 h-[2px] bg-[#f66135] mx-auto my-3 rounded-full" />
+
+        <p className="text-[14px] text-gray-500 tracking-[0.2px]">
+          {item.role}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
       </div>
     </section>
   );
