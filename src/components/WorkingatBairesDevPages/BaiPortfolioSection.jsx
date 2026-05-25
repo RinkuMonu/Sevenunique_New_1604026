@@ -11,7 +11,7 @@ export default function BaiPortfolioSection() {
     },
     {
       title: "Enhanced safety systems and operations in power plants.",
-      logo: "/team/tbo.png",
+      logo: "/team/tbo.PNG",
     },
     {
       title: "Created high-quality 3D visuals used in award-level productions.",

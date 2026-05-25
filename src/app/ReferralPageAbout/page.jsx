@@ -23,13 +23,13 @@ export default function ReferralPageAbout() {
     step: "STEP 2",
     title: "We take it from there",
     desc: "After you submit the referral, our Talent Acquisition team handles the rest and guides the candidate through the hiring process.",
-    imgg: "/images/connection.png",
+    imgg: "/images/hiring.png",
   },
   {
     step: "STEP 3",
     title: "Get rewarded",
     desc: "If the referral meets our requirements, you’ll receive your referral bonus. For full details, check our Terms and Conditions.",
-    imgg: "/images/connection.png",
+    imgg: "/images/rewarded.png",
   },
 ];
   const faqs = [

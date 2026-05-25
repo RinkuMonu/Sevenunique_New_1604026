@@ -109,145 +109,153 @@ export default function CircleLeadersSection() {
   ];
 
   // Data mapping for right panel based on selected technology
-  const leadersData = {
-    "Frontend Circle Leaders": {
-      title: "Frontend Circle Leaders",
-      leaders: [
-        {
-          name: "João B.",
-          role: "Tech Lead",
-          experience: "16 years experience",
-          img: "/",
-        },
-        {
-          name: "Emilio D.",
-          role: "Sr. Frontend Developer",
-          experience: "10 years experience",
-          img: "/",
-        },
-      ],
-    },
-    "UX/UI Circle Leaders": {
-      title: "UX/UI Circle Leaders",
-      leaders: [
-        {
-          name: "Anna K.",
-          role: "Lead UX Designer",
-          experience: "12 years experience",
-        },
-        {
-          name: "Carlos M.",
-          role: "Senior UI Designer",
-          experience: "8 years experience",
-        },
-      ],
-    },
-    "Data Engineering Circle Leaders": {
-      title: "Data Engineering Circle Leaders",
-      leaders: [
-        {
-          name: "Sophia L.",
-          role: "Data Architect",
-          experience: "15 years experience",
-        },
-        {
-          name: "Liam W.",
-          role: "Senior Data Engineer",
-          experience: "9 years experience",
-        },
-      ],
-    },
-    "Quality Assurance Circle Leaders": {
-      title: "Quality Assurance Circle Leaders",
-      leaders: [
-        {
-          name: "Elena R.",
-          role: "QA Director",
-          experience: "14 years experience",
-        },
-        {
-          name: "David P.",
-          role: "Senior QA Engineer",
-          experience: "7 years experience",
-        },
-      ],
-    },
-    "AI & ML Circle Leaders": {
-      title: "AI & ML Circle Leaders",
-      leaders: [
-        {
-          name: "Alex T.",
-          role: "AI Research Lead",
-          experience: "18 years experience",
-        },
-        {
-          name: "Nina S.",
-          role: "ML Engineer",
-          experience: "6 years experience",
-        },
-      ],
-    },
-    "DevOps Circle Leaders": {
-      title: "DevOps Circle Leaders",
-      leaders: [
-        {
-          name: "Marco V.",
-          role: "DevOps Lead",
-          experience: "13 years experience",
-        },
-        {
-          name: "Julia B.",
-          role: "Cloud Architect",
-          experience: "11 years experience",
-        },
-      ],
-    },
-    "Backend Circle Leaders": {
-      title: "Backend Circle Leaders",
-      leaders: [
-        {
-          name: "Ricardo N.",
-          role: "Backend Lead",
-          experience: "17 years experience",
-        },
-        {
-          name: "Camila F.",
-          role: "Senior Backend Dev",
-          experience: "9 years experience",
-        },
-      ],
-    },
-    "Agile Circle Leaders": {
-      title: "Agile Circle Leaders",
-      leaders: [
-        {
-          name: "Sofia M.",
-          role: "Agile Coach",
-          experience: "12 years experience",
-        },
-        {
-          name: "Oscar H.",
-          role: "Scrum Master",
-          experience: "8 years experience",
-        },
-      ],
-    },
-    "Product Circle Leaders": {
-      title: "Product Circle Leaders",
-      leaders: [
-        {
-          name: "Tom G.",
-          role: "Product Director",
-          experience: "16 years experience",
-        },
-        {
-          name: "Lisa R.",
-          role: "Senior PM",
-          experience: "10 years experience",
-        },
-      ],
-    },
-  };
+ const leadersData = {
+  "Frontend Circle Leaders": {
+    title: "Frontend Circle Leaders",
+    leaders: [
+      {
+        name: "Aarav Sharma",
+        role: "Tech Lead",
+        experience: "16 years experience",
+        img: "/",
+      },
+      {
+        name: "Rohan Mehta",
+        role: "Sr. Frontend Developer",
+        experience: "10 years experience",
+        img: "/",
+      },
+    ],
+  },
+
+  "UX/UI Circle Leaders": {
+    title: "UX/UI Circle Leaders",
+    leaders: [
+      {
+        name: "Ananya Kapoor",
+        role: "Lead UX Designer",
+        experience: "12 years experience",
+      },
+      {
+        name: "Priya Verma",
+        role: "Senior UI Designer",
+        experience: "8 years experience",
+      },
+    ],
+  },
+
+  "Data Engineering Circle Leaders": {
+    title: "Data Engineering Circle Leaders",
+    leaders: [
+      {
+        name: "Vikram Singh",
+        role: "Data Architect",
+        experience: "15 years experience",
+      },
+      {
+        name: "Kunal Joshi",
+        role: "Senior Data Engineer",
+        experience: "9 years experience",
+      },
+    ],
+  },
+
+  "Quality Assurance Circle Leaders": {
+    title: "Quality Assurance Circle Leaders",
+    leaders: [
+      {
+        name: "Neha Agarwal",
+        role: "QA Director",
+        experience: "14 years experience",
+      },
+      {
+        name: "Aditya Nair",
+        role: "Senior QA Engineer",
+        experience: "7 years experience",
+      },
+    ],
+  },
+
+  "AI & ML Circle Leaders": {
+    title: "AI & ML Circle Leaders",
+    leaders: [
+      {
+        name: "Arjun Malhotra",
+        role: "AI Research Lead",
+        experience: "18 years experience",
+      },
+      {
+        name: "Sneha Iyer",
+        role: "ML Engineer",
+        experience: "6 years experience",
+      },
+    ],
+  },
+
+  "DevOps Circle Leaders": {
+    title: "DevOps Circle Leaders",
+    leaders: [
+      {
+        name: "Rahul Bhatia",
+        role: "DevOps Lead",
+        experience: "13 years experience",
+      },
+      {
+        name: "Ishita Rao",
+        role: "Cloud Architect",
+        experience: "11 years experience",
+      },
+    ],
+  },
+
+  "Backend Circle Leaders": {
+    title: "Backend Circle Leaders",
+    leaders: [
+      {
+        name: "Manish Gupta",
+        role: "Backend Lead",
+        experience: "17 years experience",
+      },
+      {
+        name: "Pooja Kulkarni",
+        role: "Senior Backend Dev",
+        experience: "9 years experience",
+      },
+    ],
+  },
+
+  "Agile Circle Leaders": {
+    title: "Agile Circle Leaders",
+    leaders: [
+      {
+        name: "Meera Khanna",
+        role: "Agile Coach",
+        experience: "12 years experience",
+      },
+      {
+        name: "Siddharth Jain",
+        role: "Scrum Master",
+        experience: "8 years experience",
+      },
+    ],
+  },
+
+  "Product Circle Leaders": {
+    title: "Product Circle Leaders",
+    leaders: [
+      {
+        name: "Ritika Sinha",
+        role: "Product Director",
+        experience: "16 years experience",
+      },
+      {
+        name: "Yash Patel",
+        role: "Senior PM",
+        experience: "10 years experience",
+      },
+    ],
+  },
+};
 
   const [activeTech, setActiveTech] = useState(techList[0].title);
   const currentData = leadersData[activeTech];

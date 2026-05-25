@@ -21,7 +21,7 @@ export default function Home() {
       <TestimonialCTA />
       <CircleLeadersSection />
       <TestimonialSectionCircle />
-      <BlogCarouselSectionCricle />
+      {/* <BlogCarouselSectionCricle /> */}
       <Criclegrowth />
     </main>
   );

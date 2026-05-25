@@ -323,7 +323,7 @@ export default function Header() {
                           "Software Outsourcing",
                         ]}
                         brand="E-commerce"
-                        blurb="We built an app for real-time nuclear plant monitoring. Read case study."
+                        blurb="We built a scalable eCommerce platform with real-time inventory tracking, secure payments, and seamless shopping experiences."
                       />
                       <div className="mx-auto flex-1 max-w-[1280px] px-12 py-10">
                         <div className="grid grid-cols-3 gap-10">

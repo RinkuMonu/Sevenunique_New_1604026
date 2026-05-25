@@ -57,7 +57,7 @@ We’ve been recognized by Comparably, IT World Awards, and others for diversity
           {/* IMAGE 2 */}
           <div className="relative h-28 w-full md:w-[24rem] rounded-2xl overflow-hidden">
             <Image
-              src="/images/team-goa.jpg"
+              src="/images/team-goa.JPG"
               fill
               alt="img2"
               className="object-cover"
@@ -67,7 +67,7 @@ We’ve been recognized by Comparably, IT World Awards, and others for diversity
           {/* IMAGE 3 */}
           <div className="hidden md:block relative h-52 w-[21rem] rounded-2xl overflow-hidden">
             <Image
-              src="/images/team-nainital.jpg"
+              src="/images/team-nainital.JPG"
               fill
               alt="img3"
               className="object-cover"

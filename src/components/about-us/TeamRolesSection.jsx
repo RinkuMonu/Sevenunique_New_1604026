@@ -19,7 +19,7 @@ const cards = [
   {
     title: "Server Admin",
     desc: "Manages servers, hosting environments, security, deployments, and system monitoring to ensure smooth application performance.",
-    img: "/images/Rinkusir.png",
+    img: "/images/rinkusir.png",
     link: "/roles/project-managers",
   },
   {
