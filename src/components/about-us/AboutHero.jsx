@@ -1,271 +1,424 @@
 "use client";
+
 import Image from "next/image";
-import { useEffect, useRef } from "react";
-import { GoHome } from "react-icons/go";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import Link from "next/link";
+import {
+  ArrowRight,
+  CheckCircle2,
+  ShieldCheck,
+  Wallet,
+  GraduationCap,
+  ShoppingBag,
+} from "lucide-react";
 
-export default function AboutHero() {
-  const pathRef = useRef(null);
-  const wrapRef = useRef(null);
-  const orangeRef = useRef(null);
-  const svgRef = useRef(null);
-  const bottomRef = useRef(null); // invisible marker above bottom section — NOT inside AOS
+const stats = [
+  {
+    number: "3500+",
+    label: "Projects Delivered",
+  },
+  {
+    number: "2700+",
+    label: "Happy Clients",
+  },
+  {
+    number: "200+",
+    label: "API Integrations",
+  },
+  {
+    number: "99.9%",
+    label: "Server Uptime",
+  },
+];
 
-  useEffect(() => {
-    const path = pathRef.current;
-    const wrap = wrapRef.current;
-    const orange = orangeRef.current;
-    const svg = svgRef.current;
-    const bottom = bottomRef.current;
-    if (!path || !wrap || !orange || !svg || !bottom) return;
+const projects = [
+  {
+    title: "Jajam Block Prints",
+    desc: "Premium ecommerce clothing platform built with MERN stack and Mobikwik payment gateway integration.",
+    icon: ShoppingBag,
+    image: "/images/team.jpg",
+    tags: ["React", "Node.js", "MongoDB", "Mobikwik"],
+  },
+  {
+    title: "Verify Panel",
+    desc: "Advanced verification platform with 200+ APIs including PAN, GST, Aadhaar and license verification.",
+    icon: ShieldCheck,
+    image: "/logos/office1.jpg",
+    tags: ["Verification", "Wallet", "APIs"],
+  },
+  {
+    title: "BBPS Utility Portal",
+    desc: "Retailer & distributor utility service platform with wallet system and BBPS services.",
+    icon: Wallet,
+    image: "/images/team.jpg",
+    tags: ["BBPS", "Fintech", "Wallet"],
+  },
+  {
+    title: "PV Classes",
+    desc: "Educational platform for courses, PDFs, lectures and current affairs content.",
+    icon: GraduationCap,
+    image: "/logos/office1.jpg",
+    tags: ["Courses", "Learning", "PDF"],
+  },
+];
 
-    AOS.init({ duration: 1000, once: true, easing: "ease-out-cubic" });
+const awards = [
+  {
+    title: "Jaipur's fastest-growing companies",
+    year: "2025",
+  },
+  {
+    title: "Enterprise excellence and IT Innovation",
+    year: "2025",
+  },
+  {
+    title: "Computerworld's Best Places to Work in IT",
+    year: "2026",
+  },
+  {
+    title: "Women in AI Awards - Finalist",
+    year: "2025",
+  },
+];
 
-    const footer = document.querySelector("footer") || document.querySelector("[data-footer]");
+const faq = [
+  {
+    q: "What technologies do you work with?",
+    a: "We mainly work with MERN Stack, Next.js, fintech APIs, ecommerce systems and scalable backend architectures.",
+  },
+  {
+    q: "Do you build fintech platforms?",
+    a: "Yes, we build wallet systems, BBPS portals, payment integrations and verification systems.",
+  },
+  {
+    q: "Do you provide long-term support?",
+    a: "Yes, we provide scaling, maintenance and support for all client projects.",
+  },
+];
 
-    const build = () => {
-      const wrapRect = wrap.getBoundingClientRect();
-      const orangeRect = orange.getBoundingClientRect();
-      const bottomRect = bottom.getBoundingClientRect();
-      const scrollY = window.scrollY;
-
-      const svgTopDoc = wrapRect.top + scrollY;
-
-      let endDoc;
-      if (footer) {
-        const footerRect = footer.getBoundingClientRect();
-        endDoc = footerRect.top + scrollY;
-      } else {
-        endDoc = document.documentElement.scrollHeight - 200;
-      }
-
-      const svgHeight = endDoc - svgTopDoc;
-      const svgWidth = wrapRect.width;
-
-      svg.setAttribute("viewBox", `0 0 ${svgWidth} ${svgHeight}`);
-      svg.style.height = `${svgHeight}px`;
-
-      const startX = orangeRect.right - wrapRect.left;
-      const startY = (orangeRect.top + scrollY + orangeRect.height / 2) - svgTopDoc + 28;
-      const rightX = svgWidth * 0.72;
-      const midY = (bottomRect.top + scrollY) - svgTopDoc; // marker sits exactly where line turns
-      const endY = svgHeight;
-      const leftX = -52;
-
-      path.setAttribute("d", `M${startX} ${startY} H${rightX} V${midY} H${leftX} V${endY}`);
-
-      [
-        { sel: ".dot-1-c", cx: startX, cy: startY },
-        { sel: ".dot-2-c", cx: leftX, cy: midY },
-        { sel: ".dot-3-c", cx: leftX, cy: endY },
-      ].forEach(({ sel, cx, cy }) => {
-        const el = svg.querySelector(sel);
-        if (!el) return;
-        el.setAttribute("cx", cx);
-        el.setAttribute("cy", cy);
-        el.style.transformOrigin = `${cx}px ${cy}px`;
-      });
-
-      return path.getTotalLength();
-    };
-
-    // Build path, measure total length, hide fully
-    const len = build();
-    path.style.strokeDasharray = `${len}`;
-    path.style.strokeDashoffset = `${len}`;
-    path.style.transition = "none";
-
-    // Force reflow so browser registers the hidden state
-    path.getBoundingClientRect();
-
-    // Animate: draw the full line slowly over 6 seconds with a linear ease
-    // so each segment slides in at a constant, steady pace
-    path.style.transition = "stroke-dashoffset 6s linear 0.4s";
-    path.style.strokeDashoffset = "0";
-
-    // Dots appear at timed intervals matching when line reaches them
-    // Segment lengths (approximate fractions of total path):
-    //   start→right: ~8%  → ~0.5s into animation
-    //   right→left corner: ~50% → ~3s
-    //   left→footer bottom: 100% → ~6s
-    const d1 = svg.querySelector(".dot-1-c");
-    const d2 = svg.querySelector(".dot-2-c");
-    const d3 = svg.querySelector(".dot-3-c");
-
-    const t1 = setTimeout(() => { if (d1) d1.style.opacity = "1"; }, 500);
-    const t2 = setTimeout(() => { if (d2) d2.style.opacity = "1"; }, 3000);
-    const t3 = setTimeout(() => { if (d3) d3.style.opacity = "1"; }, 6200);
-
-    // Rebuild on resize (keep geometry correct, re-trigger animation from current progress)
-    const onResize = () => { build(); };
-    window.addEventListener("resize", onResize, { passive: true });
-
-    return () => {
-      clearTimeout(t1);
-      clearTimeout(t2);
-      clearTimeout(t3);
-      window.removeEventListener("resize", onResize);
-    };
-  }, []);
-
+export default function AboutPage() {
   return (
-    <section className="bg-white py-16 px-6 md:px-20 lg:px-32">
-      <style>{`
-        .dot-1-c, .dot-2-c, .dot-3-c {
-          opacity: 0;
-          transition: opacity 0.4s ease;
-        }
-      `}</style>
-
-      {/* Increased max-width from 960px to 1440px */}
-      <div className="max-w-[1440px] mx-auto">
-
-        {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-gray-400 mb-10">
-          <GoHome />
-          <span>›</span>
-          <span className="text-gray-800 font-medium">About Us</span>
-        </div>
-
-        {/* Label */}
-        <p className="text-[11px] tracking-[0.25em] text-gray-400 uppercase mb-6 font-medium">
-          About Seven Unique
-        </p>
-
-        <div ref={wrapRef} className="relative" style={{ overflow: "visible" }}>
-
-          {/* SVG — absolute, tall, covers wrap top → footer top */}
-          <svg
-            ref={svgRef}
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              pointerEvents: "none",
-              overflow: "visible",
-              zIndex: 0,
-            }}
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              ref={pathRef}
-              d=""
-              stroke="#f15c2d"
-              strokeWidth="4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <circle className="dot-1-c" cx="0" cy="0" r="7" fill="#f15c2d" />
-            <circle className="dot-2-c" cx="0" cy="0" r="7" fill="#f15c2d" />
-            <circle className="dot-3-c" cx="0" cy="0" r="9" fill="#f15c2d" />
-          </svg>
-
-          {/* TOP: headline + orange text */}
-          <div className="max-w-[700px] relative z-10">
-            <h1 className="text-[36px] md:text-[46px] font-extrabold text-[#0f172a] leading-[1.15] mb-9">
-              For more than 2 years, we’ve collaborated with leading technology companies to help them quickly expand their teams and overcome complex business challenges.
-
-            </h1>
-            <p ref={orangeRef} className="text-[#f15c2d] text-[20px] font-bold inline-block">
-              We believe we do it exceptionally well
-            </p>
+    <div className="bg-[#f8f8f8] overflow-hidden">
+      {/* HERO */}
+      <section className="relative px-6 md:px-16 lg:px-24 pt-10 pb-24 bg-white">
+        <div className="max-w-7xl mx-auto">
+          {/* Breadcrumb */}
+          <div className="flex items-center gap-3 text-sm text-gray-400 mb-16">
+            <span>Home</span>
+            <span>/</span>
+            <span className="text-black font-medium">About Us</span>
           </div>
 
-          {/* Vertical gap — the line travels through this space */}
-          <div className="h-80" />
-
-          {/* Invisible marker — measures where line turns, outside any AOS wrapper */}
-          <div ref={bottomRef} style={{ height: 0, visibility: "hidden" }} />
-
-          {/* BOTTOM: "From humble beginnings" + image */}
-          <div className="grid md:grid-cols-2 gap-14 items-center relative z-10">
-
-            <div
-              data-aos="fade-up"
-              data-aos-delay="600"
-              data-aos-duration="1000"
-              data-aos-easing="ease-out-cubic"
-            >
-              <h2 className="text-[34px] md:text-[42px] font-extrabold text-[#0f172a] mb-6 leading-tight">
-                From a modest start to 
-                <br />
-                worldwide collaboration.
-              </h2>
-              <p className="text-gray-500 text-[16px] leading-8 mb-8 max-w-[500px]">
-                Founded in Jaipur in 2024 by Dinesh Kumar, with a mission to deliver innovative fintech solutions and connect businesses with reliable, high-quality software services.
-
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* LEFT */}
+            <div>
+              <p className="uppercase tracking-[0.3em] text-orange-500 text-xs font-semibold mb-5">
+                About Seven Unique
               </p>
-              <p className="text-[20px] font-bold text-[#0f172a]">
-                We were fully remote
-              </p>
-              <p className="text-[#f15c2d] text-[20px] font-bold">
-                before fully remote was trendy.
-              </p>
-            </div>
 
-            <div className="flex justify-center md:justify-end" data-aos="fade-left" data-aos-delay="200">
-              <div className="relative w-[400px] h-[400px] lg:w-[500px] lg:h-[500px]">
-                <Image
-                  src="/images/team.jpg"
-                  alt="Founders"
-                  fill
-                  className="object-contain"
-                />
+              <h1 className="text-5xl md:text-7xl font-black text-[#111827] leading-[1.05] mb-8">
+                Building Digital
+                <span className="text-orange-500"> Products </span>
+                That Help
+                Businesses Grow.
+              </h1>
+
+              <p className="text-gray-500 text-lg leading-9 max-w-2xl mb-10">
+                We help startups and enterprises build scalable fintech,
+                ecommerce, verification and utility platforms with modern
+                technologies and premium user experiences.
+              </p>
+
+              <div className="flex flex-wrap gap-5">
+                <Link
+                  href="/contact"
+                  className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 flex items-center gap-3"
+                >
+                  Schedule a Call
+                  <ArrowRight size={18} />
+                </Link>
+
+                <Link
+                  href="/projects"
+                  className="border border-gray-300 hover:border-orange-500 hover:text-orange-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300"
+                >
+                  View Projects
+                </Link>
               </div>
-            </div>
-
-          </div>
-          {/* Since then section */}
-          <div
-            className="mt-24 mb-8"
-            data-aos="fade-up"
-            data-aos-delay="1200"  // ⬅️ clearly after everything
-            data-aos-duration="1000"
-          >
-            <h2 className="text-[40px] md:text-[56px] font-bold text-[#0f172a] tracking-tight">
-              Since then...
-            </h2>
-          </div>
-
-
-          {/* STATS SECTION — ALIGNED WITH LINE */}
-          <div className="grid md:grid-cols-2 gap-14 items-center mt-20 relative z-10">
-
-            {/* LEFT CONTENT (aligned with line) */}
-            <div data-aos="fade-up" data-aos-delay="300">
-              <h2 className="text-[36px] md:text-[44px] font-bold text-[#0f172a] leading-tight">
-                We've delivered over{" "}
-                <span className="text-[#f15c2d]">3500</span>
-                <br />
-                projects for over{" "}
-                <span className="text-[#f15c2d]">2700</span>
-                <br />
-                happy clients...
-              </h2>
             </div>
 
             {/* RIGHT IMAGE */}
-            <div
-              className="flex justify-center md:justify-end"
-              data-aos="fade-left"
-              data-aos-delay="500"
-            >
-              <div className="relative w-full max-w-[600px] h-[400px]">
+            <div className="relative">
+              <div className="relative h-[620px] rounded-[35px] overflow-hidden shadow-2xl">
                 <Image
-                  src="/logos/office1.jpg"
-                  alt="Team working"
+                  src="/images/team.jpg"
+                  alt="team"
                   fill
-                  className="object-cover rounded-xl"
+                  className="object-cover"
                 />
+
+                {/* FLOATING CARD */}
+                <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-xl p-6 rounded-3xl shadow-xl">
+                  <h3 className="text-4xl font-black text-orange-500">
+                    3500+
+                  </h3>
+                  <p className="text-gray-600">
+                    Successfully Delivered Projects
+                  </p>
+                </div>
               </div>
             </div>
-
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* STATS */}
+      <section className="px-6 md:px-16 lg:px-24 py-20">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {stats.map((item, i) => (
+            <div
+              key={i}
+              className="bg-white rounded-[28px] p-10 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100"
+            >
+              <h2 className="text-5xl font-black text-orange-500 mb-4">
+                {item.number}
+              </h2>
+
+              <p className="text-gray-500 text-lg">
+                {item.label}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CEO SECTION */}
+      <section className="px-6 md:px-16 lg:px-24 py-24 bg-[#fffaf6]">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+          {/* IMAGE */}
+       
+
+          {/* CONTENT */}
+          <div>
+            <p className="uppercase tracking-[0.3em] text-orange-500 text-xs font-semibold mb-5">
+              Leadership & Vision
+            </p>
+
+            <h2 className="text-4xl md:text-6xl font-black text-[#111827] leading-tight mb-8">
+              Innovation-driven
+              growth journey.
+            </h2>
+
+            <p className="text-gray-500 text-lg leading-9 mb-10">
+              Including our CEO speaking about the company’s fintech growth
+              journey and innovation-driven vision focused on scalable digital
+              solutions.
+            </p>
+
+            <div className="space-y-5">
+              {[
+                "Scalable fintech systems",
+                "Enterprise-grade architecture",
+                "Modern MERN applications",
+                "Client-first development process",
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-4"
+                >
+                  <div className="w-7 h-7 rounded-full bg-orange-500 flex items-center justify-center text-white">
+                    ✓
+                  </div>
+
+                  <p className="text-lg text-gray-700 font-medium">
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+             <div className="relative">
+            <div className="relative h-[550px] overflow-hidden rounded-2xl">
+              <Image
+                 src="/images/dineshsir.jpeg"
+                alt="CEO"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PROJECTS */}
+      <section className="px-6 md:px-16 lg:px-24 py-28 bg-white">
+        <div className="max-w-7xl mx-auto">
+          {/* TOP */}
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-20">
+            <div>
+              <p className="uppercase tracking-[0.3em] text-orange-500 text-xs font-semibold mb-5">
+                Featured Work
+              </p>
+
+              <h2 className="text-4xl md:text-6xl font-black text-[#111827] leading-tight">
+                Successful Projects
+              </h2>
+            </div>
+
+            <p className="max-w-xl text-gray-500 text-lg leading-8">
+              We build fintech, ecommerce, utility and educational platforms
+              with scalable architecture and premium experiences.
+            </p>
+          </div>
+
+          {/* GRID */}
+          <div className="grid lg:grid-cols-2 gap-8">
+            {projects.map((project, i) => {
+              const Icon = project.icon;
+
+              return (
+                <div
+                  key={i}
+                  className="bg-[#fafafa] rounded-[35px] overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500"
+                >
+                  {/* IMAGE */}
+                  <div className="relative h-[300px] overflow-hidden">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover hover:scale-105 transition-all duration-700"
+                    />
+
+                    <div className="absolute top-6 left-6 w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-lg">
+                      <Icon className="text-orange-500" size={26} />
+                    </div>
+                  </div>
+
+                  {/* CONTENT */}
+                  <div className="p-8">
+                    <h3 className="text-3xl font-bold text-[#111827] mb-5">
+                      {project.title}
+                    </h3>
+
+                    <p className="text-gray-500 leading-8 text-lg mb-8">
+                      {project.desc}
+                    </p>
+
+                    <div className="flex flex-wrap gap-3">
+                      {project.tags.map((tag, idx) => (
+                        <span
+                          key={idx}
+                          className="px-4 py-2 rounded-full bg-orange-50 text-orange-500 border border-orange-100 text-sm font-medium"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* AWARDS */}
+      <section className="px-6 md:px-16 lg:px-24 py-28 bg-[#fffaf6]">
+        <div className="max-w-7xl mx-auto">
+          {/* TOP */}
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 mb-20">
+            <div>
+              <p className="uppercase tracking-[0.3em] text-orange-500 text-xs font-semibold mb-5">
+                Recognition
+              </p>
+
+              <h2 className="text-4xl md:text-6xl font-black text-[#111827] leading-tight">
+                Awards &
+                Recognitions
+              </h2>
+            </div>
+
+            <p className="max-w-xl text-gray-500 text-lg leading-8">
+              Our work continues to receive recognition for innovation,
+              technology excellence and scalable digital solutions.
+            </p>
+          </div>
+
+          {/* GRID */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {awards.map((award, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-[28px] p-8 border border-gray-100 hover:shadow-xl transition-all duration-500"
+              >
+                <div className="flex items-center justify-between mb-10">
+                  <div className="w-14 h-14 rounded-2xl bg-orange-50 flex items-center justify-center text-2xl">
+                    🏆
+                  </div>
+
+                  <span className="text-gray-400 text-sm">
+                    {award.year}
+                  </span>
+                </div>
+
+                <h3 className="text-2xl font-bold text-[#111827] leading-snug">
+                  {award.title}
+                </h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHY US */}
+      <section className="px-6 md:px-16 lg:px-24 py-28 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <p className="uppercase tracking-[0.3em] text-orange-500 text-xs font-semibold mb-5">
+              Why Choose Us
+            </p>
+
+            <h2 className="text-4xl md:text-6xl font-black text-[#111827]">
+              Built for Modern Businesses
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+            {[
+              "Fast Project Delivery",
+              "Secure Payment Systems",
+              "Modern UI/UX",
+              "Scalable Architecture",
+              "24/7 Support",
+              "Enterprise APIs",
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="bg-[#fafafa] rounded-[28px] p-8 border border-gray-100 hover:shadow-xl transition-all duration-500"
+              >
+                <CheckCircle2
+                  className="text-orange-500 mb-6"
+                  size={34}
+                />
+
+                <h3 className="text-2xl font-bold text-[#111827] mb-4">
+                  {item}
+                </h3>
+
+                <p className="text-gray-500 leading-8">
+                  We deliver scalable solutions with premium development
+                  standards and modern technologies.
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+     
+     
+
+      
+    </div>
   );
 }
