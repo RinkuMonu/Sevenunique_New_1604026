@@ -96,7 +96,7 @@ function createCompanyTrustSection({
     stats:
       stats || [
         { value: "450+", label: "Projects Delivered" },
-        { value: "1200+", label: "Developers On Staff" },
+        { value: "3500+", label: "Developers On Staff" },
         { value: "96%", label: "Client Retention Rate" },
         { value: "500+", label: "Active Clients" },
       ],

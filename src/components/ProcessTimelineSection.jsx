@@ -81,8 +81,9 @@ export default function ProcessTimelineSection() {
         <div className="mt-10 mb-4 text-center">
 
           <Link
+           
             href="/schedule-a-call-page"
-            className="inline-flex items-center gap-3 bg-[#111] hover:bg-[#ff5a2f] text-white px-8 py-4 rounded-2xl text-[16px] font-medium transition-all duration-300"
+            className="inline-block bg-[#f4622a] hover:bg-[#d94f1e] text-white px-6 py-3 rounded-md font-medium transition"
           >
             Schedule a Call
           </Link>

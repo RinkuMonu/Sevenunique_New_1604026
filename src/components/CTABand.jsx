@@ -17,8 +17,9 @@ export default function CTABand() {
           </h2>
 
           <Link
-            href="/start/basic-details"
-            className="mt-8 inline-flex items-center justify-center bg-[#19b28c] hover:bg-[#149978] text-white font-semibold text-[14px] sm:text-[15px] px-6 sm:px-7 py-3 rounded-lg transition-colors duration-150"
+           
+            href="/schedule-a-call-page"
+            className="inline-block bg-[#f4622a] hover:bg-[#d94f1e] text-white px-6 py-3 rounded-md font-medium transition"
           >
             Explore how we can help.
           </Link>
