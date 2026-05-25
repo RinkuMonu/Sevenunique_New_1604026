@@ -5,42 +5,38 @@ import Link from "next/link";
 
 const cards = [
   {
-    title: "Tech Team Lead",
+    title: "Sr. Mern Stack Developer",
     desc: "Leads the development team, manages project workflows, and ensures high-quality software delivery through effective technical guidance.",
     img: "/images/rajyawardhan.png",
-    bg: "bg-orange-200",
     link: "/roles/software-developers",
   },
   {
-    title: "Sr. Full Stack Developers",
+    title: "Sr. Full Stack Developer",
     desc: "Develop scalable frontend and backend solutions while handling APIs, databases, and application performance optimization.",
     img: "/team/p3.png",
-    bg: "bg-blue-200",
     link: "/roles/backend-developers",
   },
   {
     title: "Server Admin",
     desc: "Manages servers, hosting environments, security, deployments, and system monitoring to ensure smooth application performance.",
     img: "/images/Rinkusir.png",
-    bg: "bg-green-200",
     link: "/roles/project-managers",
   },
   {
     title: "Frontend Developer",
     desc: "Builds responsive and interactive user interfaces with modern frontend technologies to deliver seamless user experiences.",
     img: "/images/devika.png",
-    bg: "bg-blue-300",
     link: "/roles/qa-engineers",
   },
   {
-    title: "Rahul Singh",
+    title: "Backend Developer",
     desc: "Contributes to project execution, collaboration, and innovative development solutions to support business and technical goals.",
     img: "/images/rahul.png",
     bg: "bg-yellow-200",
     link: "/roles/business-analysts",
   },
   {
-    title: "UX/UI Designers",
+    title: "UI/UX Designer",
     desc: "Design intuitive user interfaces, wireframes, and engaging user experiences focused on usability and modern design principles.",
     img: "/images/khyati.PNG",
     bg: "bg-red-200",
@@ -68,7 +64,7 @@ export default function TeamRolesSection() {
 
         {/* BUTTON */}
         <Link href="/schedule-a-call-page">
-          <button className="mt-6 bg-black text-white px-6 py-3 rounded-lg text-sm font-medium inline-flex items-center gap-2 cursor-pointer">
+          <button className="mt-6 bg-black text-white px-6 py-3 rounded-lg text-sm font-medium inline:flex items-center gap-2 hover:bg-gray-800 transition">
             Assemble Your Team →
           </button>
         </Link>

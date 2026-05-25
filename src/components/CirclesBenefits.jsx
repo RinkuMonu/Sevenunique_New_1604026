@@ -24,41 +24,7 @@ const features = [
   },
 ];
 
-// Floating label config — positions are tuned to match screenshot proportions
-const labels = [
-  {
-    id: "paul",
-    name: "Paul",
-    role: "Sr. Backend Dev.",
-    // bottom-left area
-    style: { bottom: "13%", left: "2%" },
-    pointer: "bottom-left",
-  },
-  {
-    id: "sara",
-    name: "Sara",
-    role: "Sr. UX/UI Designer",
-    // mid-left, slightly higher
-    style: { bottom: "6%", left: "28%" },
-    pointer: "bottom-left",
-  },
-  {
-    id: "andre",
-    name: "Andre",
-    role: "Sr. Frontend Dev.",
-    // top-center
-    style: { top: "4%", left: "46%" },
-    pointer: "top-right",
-  },
-  {
-    id: "david",
-    name: "David",
-    role: "Sr. Data Scientist",
-    // bottom-right
-    style: { bottom: "6%", right: "4%" },
-    pointer: "bottom-left",
-  },
-];
+
 
 function GreenCheck() {
   return (
@@ -160,22 +126,13 @@ export default function CirclesBenefits() {
             >
               {/* Developers group image — using a placeholder that looks realistic */}
               <img
-                src="https://assets.bairesdev.com//image/upload/c_limit,w_912/dpr_auto/f_auto/q_auto/v1/www/static/circles/circle_benefits_people_zjybgu?_a=BAVAfVDW0"
+                src="/images/team-handjoin.png"
                 alt="Seven Unique team of senior developers"
                 className="w-full h-full object-cover object-top rounded-none"
                 style={{ display: "block" }}
               />
 
-              {/* Floating labels */}
-              {labels.map((label) => (
-                <FloatingLabel
-                  key={label.id}
-                  name={label.name}
-                  role={label.role}
-                  style={label.style}
-                  pointer={label.pointer}
-                />
-              ))}
+             
             </div>
           </div>
 

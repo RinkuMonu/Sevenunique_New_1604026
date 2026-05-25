@@ -70,7 +70,7 @@ If you’re looking for a place to grow your skills and turn bold ideas into rea
 
           </p>
           <Image
-            src="/images/help.jpg"
+            src="/images/workingp2.png"
             width={500}
             height={600}
             className="object-cover "

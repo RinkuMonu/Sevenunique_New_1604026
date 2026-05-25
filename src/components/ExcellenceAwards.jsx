@@ -426,22 +426,25 @@ function OutsourcingBadge() {
 const awards = [
   {
     id: "stevie",
-    badge: <StevieAwardBadge />,
+    img: "/images/pcidss.png",
     label: "Most Innovative Tech Company 2024",
   },
+
   {
     id: "globee",
-    badge: <GlobeeAwardBadge />,
-    label: "Achievement in Costumer Satisfaction 2024",
+    img: "/images/msme.png",
+    label: "Achievement in Customer Satisfaction 2024",
   },
+
   {
     id: "inc5000",
-    badge: <Inc5000Badge />,
+    img: "/images/iaf.png",
     label: "America's Fastest-growing Companies 2024",
   },
+
   {
     id: "outsourcing",
-    badge: <OutsourcingBadge />,
+    img: "/images/kab.png",
     label: "Top 100 Global Outsourcing Providers and Advisors 2024",
   },
 ];
@@ -484,7 +487,7 @@ export default function ExcellenceAwards() {
               >
                 {/* Badge */}
                 <div className="flex items-center justify-center h-[120px]">
-                  {award.badge}
+                  <img src={award.img} alt={award.label} className="w-full h-full object-contain" />
                 </div>
                 {/* Label */}
                 <p className="text-center text-[0.78rem] text-gray-600 leading-snug font-normal max-w-[140px]">

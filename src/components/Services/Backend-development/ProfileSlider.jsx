@@ -8,35 +8,35 @@ import "swiper/css";
 export default function ProfileSlider() {
   const profiles = [
     {
-      name: "Ricardo F.",
+      name: "Richa Agarwal.",
       role: "Sr. Backend Architect",
       exp: "14 years of experience",
       person: "/images/man1.png",
       company: "/images/bbva.svg",
     },
     {
-      name: "Aman S.",
+      name: "Aman Sharma.",
       role: "DevOps Engineer",
       exp: "10 years of experience",
       person: "/images/man2.png",
       company: "/images/J-2.svg",
     },
     {
-      name: "Neha K.",
+      name: "Aashish Rana.",
       role: "Backend Engineer",
       exp: "8 years of experience",
       person: "/images/man3.png",
       company: "/images/a-3.svg",
     },
     {
-      name: "Neha K.",
+      name: "Neha Kapoor.",
       role: "Backend Engineer",
       exp: "8 years of experience",
       person: "/images/man4.png",
       company: "/images/siriusxm-4.svg",
     },
     {
-      name: "Neha K.",
+      name: "Naman Verma.",
       role: "Backend Engineer",
       exp: "8 years of experience",
       person: "/images/man5.png",

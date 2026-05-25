@@ -24,7 +24,7 @@ export default function LeadershipHero() {
                     {/* Image */}
                     <div className="relative w-[720px] h-[380px] rounded-2xl overflow-hidden shadow-lg">
                         <Image
-                            src="/images/leadership.png" // replace with your image
+                            src="/images/team-nainital.jpg" // replace with your image
                             alt="Leadership"
                             fill
                             className="object-cover"

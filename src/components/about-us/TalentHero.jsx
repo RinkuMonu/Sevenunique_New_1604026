@@ -33,7 +33,7 @@ export default function TalentHero() {
         {/* RIGHT IMAGE */}
         <div className="relative w-full h-[520px]">
           <Image
-            src="/images/team.jpg" // 🔁 replace with your actual image path
+            src="/images/team-handjoin.png" // 🔁 replace with your actual image path
             alt="Team working"
             fill
             className="object-cover rounded-[24px]"

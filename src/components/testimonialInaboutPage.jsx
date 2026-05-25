@@ -17,7 +17,7 @@ export default function TestimonialSectionInAboutPage() {
           {/* IMAGE */}
           <div className="relative w-full h-[240px] md:h-[300px] lg:h-[340px]">
             <img
-              src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/static/dev_remote_mpu8f0?_a=BAVAfVDW0"
+              src="/images/working-person.png"
               alt=""
               className="w-full h-full object-cover rounded-2xl"
             />

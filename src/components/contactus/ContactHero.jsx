@@ -23,7 +23,7 @@ export default function ContactHero() {
         <div className="flex-1 w-full">
           <div className="relative w-full h-[300px] md:h-[400px] lg:h-[450px] rounded-2xl overflow-hidden">
             <Image
-              src="/images/support.jpg"
+              src="/images/workingp2.png"
               alt="contact"
               fill
               className="object-cover"

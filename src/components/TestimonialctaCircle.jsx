@@ -4,10 +4,10 @@
 import Link from "next/link";
 
 const avatars = [
-  "https://randomuser.me/api/portraits/men/32.jpg",
-  "https://randomuser.me/api/portraits/men/54.jpg",
-  "https://randomuser.me/api/portraits/women/44.jpg",
-  "https://randomuser.me/api/portraits/men/22.jpg",
+  "/images/man1.png",
+  "/images/man1.png",
+  "/images/u3.png",
+  "/images/u3.png",
 ];
 
 export default function TestimonialCTA() {
