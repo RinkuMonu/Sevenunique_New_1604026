@@ -144,41 +144,75 @@ const certifications = [
 
 export default function CertificationsGrid() {
   return (
-    <section className="bg-white py-[80px]">
-      <div className="max-w-[1200px] mx-auto px-6">
+   <section className="bg-[#f8f9fb] py-24">
+  <div className="max-w-7xl mx-auto px-6">
 
-        <div className="grid md:grid-cols-2 gap-8">
+    {/* SECTION HEADING */}
+    <div className="text-center mb-16">
+      <p className="text-[#f45d2d] uppercase tracking-[3px] text-sm font-semibold mb-4">
+        Certifications & Recognition
+      </p>
 
-          {certifications.map((item, i) => (
-            <div
-              key={i}
-              className="border border-gray-200 rounded-2xl px-8 py-6 bg-white flex items-center gap-8 hover:shadow-sm transition"
-            >
+      <h2 className="text-[36px] md:text-[48px] font-semibold text-[#111827] leading-tight">
+        Trusted Standards. Proven Excellence.
+      </h2>
 
-              {/* LEFT IMAGE (FIXED WIDTH LIKE ORIGINAL) */}
-              <div className="w-[180px] flex-shrink-0 flex justify-center">
-                <Image
-                  src={item.img}
-                  alt={item.title}
-                  width={160}
-                  height={120}
-                  className="object-contain mix-blend-multiply"
-                />
-              </div>
+      <p className="mt-5 text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+        Our certifications reflect our commitment to quality, security,
+        innovation, and delivering world-class digital solutions.
+      </p>
+    </div>
 
-              {/* RIGHT CONTENT */}
-              <div className="flex-1">
-                <h3 className="text-[22px] font-medium text-[#2b2f33] mb-3">
-                  {item.title}
-                </h3>
+    {/* CARDS GRID */}
+   <div className="container p-8 bg-orange-100 rounded-2xl shadow-sm border border-gray-100">
+     <div className="grid md:grid-cols-2 gap-8">
 
-              </div>
+      {certifications.map((item, i) => (
+        <div
+          key={i}
+          className="group relative overflow-hidden rounded-[28px] bg-white border border-gray-200 p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-300"
+        >
+          
+          {/* Gradient Glow */}
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-orange-50 via-transparent to-transparent"></div>
 
+          <div className="relative z-10 flex flex-col sm:flex-row items-center gap-8">
+
+            {/* LOGO */}
+            <div className="relative flex items-center justify-center w-[170px] h-[120px] rounded-2xl bg-[#f8f9fb] border border-gray-100 group-hover:bg-white transition">
+              <Image
+                src={item.img}
+                alt={item.title}
+                width={130}
+                height={100}
+                className="object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
+              />
             </div>
-          ))}
 
+            {/* CONTENT */}
+            <div className="flex-1 text-center sm:text-left">
+              
+              <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-[#fff4ef] text-[#f45d2d] text-sm font-medium mb-4">
+                Certified
+              </div>
+
+              <h3 className="text-[24px] font-semibold text-[#111827] leading-snug group-hover:text-[#f45d2d] transition-colors duration-300">
+                {item.title}
+              </h3>
+
+              <p className="mt-4 text-gray-600 leading-relaxed text-[15px]">
+                Recognized for maintaining high standards in operational
+                excellence, innovation, and customer-focused delivery.
+              </p>
+            </div>
+
+          </div>
         </div>
-      </div>
-    </section>
+      ))}
+
+    </div>
+   </div>
+  </div>
+</section>
   );
 }

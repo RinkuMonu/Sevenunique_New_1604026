@@ -1,6 +1,3 @@
-// CirclesBenefits.jsx
-// Next.js (App Router) — Tailwind CSS — JSX
-
 "use client";
 
 const features = [
@@ -24,42 +21,6 @@ const features = [
   },
 ];
 
-// Floating label config — positions are tuned to match screenshot proportions
-const labels = [
-  {
-    id: "paul",
-    name: "Paul",
-    role: "Sr. Backend Dev.",
-    // bottom-left area
-    style: { bottom: "13%", left: "2%" },
-    pointer: "bottom-left",
-  },
-  {
-    id: "sara",
-    name: "Sara",
-    role: "Sr. UX/UI Designer",
-    // mid-left, slightly higher
-    style: { bottom: "6%", left: "28%" },
-    pointer: "bottom-left",
-  },
-  {
-    id: "andre",
-    name: "Andre",
-    role: "Sr. Frontend Dev.",
-    // top-center
-    style: { top: "4%", left: "46%" },
-    pointer: "top-right",
-  },
-  {
-    id: "david",
-    name: "David",
-    role: "Sr. Data Scientist",
-    // bottom-right
-    style: { bottom: "6%", right: "4%" },
-    pointer: "bottom-left",
-  },
-];
-
 function GreenCheck() {
   return (
     <svg
@@ -67,7 +28,7 @@ function GreenCheck() {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      className="shrink-0 mt-0.5"
+      className="shrink-0 mt-1"
       aria-hidden="true"
     >
       <circle cx="12" cy="12" r="11" stroke="#22c55e" strokeWidth="1.8" />
@@ -82,125 +43,75 @@ function GreenCheck() {
   );
 }
 
-// Tooltip-style floating label with a small triangle pointer
-function FloatingLabel({ name, role, style, pointer }) {
-  // pointer direction: "bottom-left" | "top-right"
-  const isBottomLeft = pointer === "bottom-left";
-
-  return (
-    <div className="absolute z-20" style={style}>
-      <div
-        className="relative bg-white rounded-md px-3 py-1.5 shadow-md border border-gray-100"
-        style={{ fontSize: "0.72rem", whiteSpace: "nowrap", lineHeight: 1.4 }}
-      >
-        <span className="font-bold text-gray-900">{name}</span>
-        <span className="text-gray-600">, {role}</span>
-
-        {/* Triangle pointer */}
-        {isBottomLeft ? (
-          // Points down-left
-          <span
-            className="absolute"
-            style={{
-              bottom: "-6px",
-              left: "14px",
-              width: 0,
-              height: 0,
-              borderLeft: "6px solid transparent",
-              borderRight: "6px solid transparent",
-              borderTop: "6px solid white",
-              filter: "drop-shadow(0 1px 0 rgba(0,0,0,0.07))",
-            }}
-          />
-        ) : (
-          // Points up-right (Andre label above)
-          <span
-            className="absolute"
-            style={{
-              top: "-6px",
-              right: "14px",
-              width: 0,
-              height: 0,
-              borderLeft: "6px solid transparent",
-              borderRight: "6px solid transparent",
-              borderBottom: "6px solid white",
-              filter: "drop-shadow(0 -1px 0 rgba(0,0,0,0.07))",
-            }}
-          />
-        )}
-      </div>
-    </div>
-  );
-}
-
 export default function CirclesBenefits() {
   return (
-    <section className="w-full bg-gray-50 py-16 px-6 sm:px-10 lg:px-20 xl:px-24 overflow-hidden">
-      <div className="max-w-[1280px] mx-auto">
-        {/* ── TOP ROW: Left heading + Right features ── */}
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
-          {/* ── LEFT: Heading + subheading + image ── */}
-          <div className="flex-1 min-w-0">
+    <section className="w-full bg-gray-50 py-20 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        
+        {/* Main Grid */}
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          
+          {/* LEFT SIDE */}
+          <div className="max-w-xl">
+            
             {/* Heading */}
-            <h2 className="font-extrabold text-[30px] leading-tight tracking-tight text-gray-900 mb-1">
-              How does Circles benefit <br className="hidden sm:block" />
-              <span className="text-orange-500">you</span>
-              <span className="text-gray-900">?</span>
+            <p className="text-orange-500 uppercase tracking-[3px] font-semibold mb-4">
+              Why Circles
+            </p>
+
+            <h2 className="text-[38px] md:text-[52px] leading-tight font-semibold text-gray-900">
+              How does Circles benefit{" "}
+              <span className="text-orange-500">you?</span>
             </h2>
 
             {/* Subheading */}
-            <p className="text-[clamp(1.1rem,2vw,1.5rem)] font-semibold text-gray-800 mt-5 mb-8">
-              Better developers lead to better solutions. 
+            <p className="text-lg text-gray-600 leading-relaxed mt-6">
+              Better developers lead to better solutions. We empower engineers
+              with continuous learning, modern technologies, and a collaborative
+              environment to create exceptional digital experiences.
             </p>
 
-            {/* ── Image with floating labels ── */}
-            <div
-              className="relative w-full max-w-[560px]"
-            //   style={{ aspectRatio: "560/520" }}
-            >
-              {/* Developers group image — using a placeholder that looks realistic */}
+            {/* Image */}
+            <div className="relative mt-10 w-full h-[420px] rounded-[28px] overflow-hidden">
               <img
-                src="https://assets.bairesdev.com//image/upload/c_limit,w_912/dpr_auto/f_auto/q_auto/v1/www/static/circles/circle_benefits_people_zjybgu?_a=BAVAfVDW0"
-                alt="Seven Unique team of senior developers"
-                className="w-full h-full object-cover object-top rounded-none"
-                style={{ display: "block" }}
+                src="/images/team-handjoin.png"
+                alt="Seven Unique team"
+                className="w-full h-full object-cover object-center"
               />
-
-              {/* Floating labels */}
-              {labels.map((label) => (
-                <FloatingLabel
-                  key={label.id}
-                  name={label.name}
-                  role={label.role}
-                  style={label.style}
-                  pointer={label.pointer}
-                />
-              ))}
             </div>
           </div>
 
-          {/* ── RIGHT: Feature list ── */}
-          <div className="flex-1 min-w-0 flex flex-col justify-start">
-            {features.map((feature, index) => (
-              <div key={feature.id}>
-                <div className="flex items-start gap-3 py-7">
-                  <GreenCheck />
-                  <div>
-                    <h3 className="font-bold text-[1.1rem] text-gray-900 mb-2 leading-snug">
-                      {feature.title}
-                    </h3>
-                    <p className="text-[0.93rem] text-gray-600 leading-relaxed max-w-[460px]">
-                      {feature.description}
-                    </p>
+          {/* RIGHT SIDE */}
+          <div className="w-full">
+            <div className="bg-white rounded-[28px] shadow-sm border border-gray-100 p-8 md:p-10">
+              
+              {features.map((feature, index) => (
+                <div key={feature.id}>
+                  
+                  <div className="flex items-start gap-5 py-6">
+                    <GreenCheck />
+
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                        {feature.title}
+                      </h3>
+
+                      <p className="text-gray-600 leading-relaxed text-[15px]">
+                        {feature.description}
+                      </p>
+                    </div>
                   </div>
+
+                  {/* Divider */}
+                  {index < features.length - 1 && (
+                    <div className="border-t border-gray-200" />
+                  )}
                 </div>
-                {/* Divider — not after last item */}
-                {index < features.length - 1 && (
-                  <hr className="border-0 border-t border-gray-200" />
-                )}
-              </div>
-            ))}
+              ))}
+
+            </div>
           </div>
+
         </div>
       </div>
     </section>

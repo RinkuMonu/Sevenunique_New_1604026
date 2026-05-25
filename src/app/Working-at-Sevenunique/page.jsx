@@ -15,7 +15,7 @@ export default function LandingPage() {
     <div className="w-full bg-white">
       <HeroSectionW />
       <WhyBairesdevSection />
-      <BaireswaySection />
+      {/* <BaireswaySection /> */}
       <RecognizedExcellenceSection />
       <BaiPortfolioSection />
       <PassionSection />

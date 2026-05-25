@@ -148,8 +148,8 @@ const aboutCols = [
     items: [
       { name: "Leadership Team", path: "/about-us/Leadership" },
       { name: "Our Tech Talent", path: "/about-us/tech-talent" },
-      { name: "Press Releases", path: "/about-us/press" },
-      { name: "Contact Us", path: "/contact-us" },
+      // { name: "Press Releases", path: "/about-us/press" },
+      // { name: "Contact Us", path: "/contact-us" },
       { name: "FAQs", path: "/faq" },
     ],
   },
@@ -249,7 +249,7 @@ export default function Header() {
     alt="logo"
     width={250}
     height={140}
-    className="w-60 h-auto object-contain"
+    className="w-60 h-auto object-cover"
   />
 </Link>
         <button
@@ -322,7 +322,7 @@ export default function Header() {
                           "Dedicated Teams",
                           "Software Outsourcing",
                         ]}
-                        brand="Rolls-Royce"
+                        brand="E-commerce"
                         blurb="We built an app for real-time nuclear plant monitoring. Read case study."
                       />
                       <div className="mx-auto flex-1 max-w-[1280px] px-12 py-10">
@@ -476,7 +476,7 @@ export default function Header() {
                     <div className="flex">
                       <LeftPanel
                         title="About"
-                        subtitle="Since 2023, we've built software for companies of all types, from startups to Fortune 500 giants."
+                        subtitle="Since 2024, we've built software for companies of all types, from startups to Fortune 500 giants."
                         links={[]}
                         // brand="Our CEO, speaking at the World Economic Forum at Davos 2025. Read more"
                         blurb=""
@@ -501,17 +501,7 @@ export default function Header() {
                             </div>
                           ))}
                         </div>
-                        <div className="mt-9">
-                          <Link
-                            href="#"
-                            className="group inline-flex items-center gap-2 text-[12px] font-medium text-[#111] hover:text-[#f46b45]"
-                          >
-                            Our Story
-                            <span className="transition-transform group-hover:translate-x-1">
-                              →
-                            </span>
-                          </Link>
-                        </div>
+                        
                       </div>
                     </div>
                   </div>
@@ -522,12 +512,12 @@ export default function Header() {
           <Link href="/our-work-page" className="transition-colors hover:text-[#f46b45]">
             Our Work
           </Link>
-          <Link
+          {/* <Link
             href="/blog"
             className="transition-colors hover:text-[#f46b45]"
           >
             Blog
-          </Link>
+          </Link> */}
           <Link
             href="/schedule-a-call-page"
             className="rounded-md bg-black px-4 py-2 text-[15px] font-medium text-white transition-colors hover:bg-gray-800"

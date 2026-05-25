@@ -11,12 +11,10 @@ export default function DarkShowcase() {
           {/* CLIPPED SHAPE */}
           <div
             className="w-full h-full overflow-hidden rounded-xl"
-            style={{
-              transform: "rotate(-6deg)", // keep slight tilt
-            }}
+           
           >
             <Image
-              src="/images/team.png"
+              src="/images/handonhand.png"
               alt="team"
               fill
               className="object-cover"

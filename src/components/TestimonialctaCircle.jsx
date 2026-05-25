@@ -4,10 +4,10 @@
 import Link from "next/link";
 
 const avatars = [
-  "https://randomuser.me/api/portraits/men/32.jpg",
-  "https://randomuser.me/api/portraits/men/54.jpg",
-  "https://randomuser.me/api/portraits/women/44.jpg",
-  "https://randomuser.me/api/portraits/men/22.jpg",
+  "/images/man1.png",
+  "/images/man1.png",
+  "/images/u3.png",
+  "/images/u3.png",
 ];
 
 export default function TestimonialCTA() {
@@ -15,8 +15,7 @@ export default function TestimonialCTA() {
     <section className="w-full bg-gray-100 py-10 px-6 sm:px-10 lg:px-20 xl:px-24">
       <div className="max-w-[1280px] mx-auto">
         <div
-          className="rounded-2xl px-10 sm:px-14 lg:px-20 py-16 flex flex-col lg:flex-row gap-12 lg:gap-16 items-start relative"
-          style={{ backgroundColor: "#3a4a5c" }}
+          className="rounded-2xl px-10 sm:px-14 lg:px-20 py-16 flex flex-col lg:flex-row gap-12 lg:gap-16 items-start relative bg-[#1f2a33]"
         >
           {/* LEFT: Quote */}
           <div className="flex-1 min-w-0">

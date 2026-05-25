@@ -93,56 +93,96 @@ export default function FAQCategories() {
   };
 
   return (
-    <section className="bg-[#f6f7f9] py-[80px]">
-      <div className="max-w-[1000px] px-6">
+   <section className="bg-[#f8f9fb] py-24">
+  <div className="max-w-6xl mx-auto px-6">
 
-        {faqData.map((category, catIndex) => (
-          <div key={catIndex} className="mb-[60px]">
+    {faqData.map((category, catIndex) => (
+      <div key={catIndex} className="mb-20">
 
-            {/* CATEGORY TITLE */}
-            <h2 className="text-[30px] font-semibold text-[#1f2933] mb-[30px]">
-              {category.category}
-            </h2>
+        {/* CATEGORY HEADING */}
+        <div className="mb-10">
+          <p className="text-[#f45d2d] uppercase tracking-[3px] text-sm font-semibold mb-3">
+            FAQs
+          </p>
 
-            <div className="border-t border-gray-300">
+          <h2 className="text-[34px] md:text-[42px] leading-tight font-semibold text-[#111827]">
+            {category.category}
+          </h2>
+        </div>
 
-              {category.items.map((item, itemIndex) => {
-                const isActive =
-                  activeIndex[catIndex] === itemIndex;
+        {/* FAQ CONTAINER */}
+        <div className="space-y-5">
 
-                return (
-                  <div
-                    key={itemIndex}
-                    className="border-b border-gray-300 py-6"
+          {category.items.map((item, itemIndex) => {
+            const isActive = activeIndex[catIndex] === itemIndex;
+
+            return (
+              <div
+                key={itemIndex}
+                className={`group rounded-[24px] border transition-all duration-300 overflow-hidden
+                  ${
+                    isActive
+                      ? "bg-white border-[#f45d2d]/20 shadow-lg shadow-orange-100"
+                      : "bg-white border-gray-200 hover:border-[#f45d2d]/30 hover:shadow-md"
+                  }`}
+              >
+                
+                {/* QUESTION */}
+                <button
+                  onClick={() => toggle(catIndex, itemIndex)}
+                  className="w-full flex items-start justify-between gap-6 text-left px-7 py-7"
+                >
+                  <h3
+                    className={`text-[19px] md:text-[21px] leading-relaxed font-medium transition-colors duration-300
+                    ${
+                      isActive
+                        ? "text-[#111827]"
+                        : "text-[#1f2933] group-hover:text-[#f45d2d]"
+                    }`}
                   >
-                    {/* QUESTION */}
-                    <div
-                      onClick={() => toggle(catIndex, itemIndex)}
-                      className="flex items-center justify-between cursor-pointer"
-                    >
-                      <h3 className="text-[20px] font-medium text-[#1f2933] max-w-[800px]">
-                        {item.question}
-                      </h3>
+                    {item.question}
+                  </h3>
 
-                      {/* ICON */}
-                      <div className="w-9 h-9 rounded-full bg-[#f45d2d] flex items-center justify-center text-white text-lg shrink-0">
-                        {isActive ? "↑" : "↓"}
-                      </div>
-                    </div>
+                  {/* ICON */}
+                  <div
+                    className={`min-w-[42px] h-[42px] rounded-full flex items-center justify-center text-lg transition-all duration-300
+                    ${
+                      isActive
+                        ? "bg-[#f45d2d] text-white rotate-180"
+                        : "bg-[#fff3ef] text-[#f45d2d]"
+                    }`}
+                  >
+                    ↓
+                  </div>
+                </button>
 
-                    {/* ANSWER */}
-                    {isActive && (
-                      <p className="mt-4 text-[16px] leading-[28px] text-gray-500 max-w-[850px]">
+                {/* ANSWER */}
+                <div
+                  className={`grid transition-all duration-500 ease-in-out
+                  ${
+                    isActive
+                      ? "grid-rows-[1fr] opacity-100"
+                      : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-7 pb-7">
+                      <div className="h-px bg-gray-100 mb-6"></div>
+
+                      <p className="text-[16px] leading-[30px] text-gray-600 max-w-4xl">
                         {item.answer}
                       </p>
-                    )}
+                    </div>
                   </div>
-                );
-              })}
-            </div>
-          </div>
-        ))}
+                </div>
+
+              </div>
+            );
+          })}
+        </div>
       </div>
-    </section>
+    ))}
+  </div>
+</section>
   );
 }

@@ -47,7 +47,7 @@ We’ve been recognized by Comparably, IT World Awards, and others for diversity
           {/* IMAGE 1 */}
           <div className="hidden md:block relative h-40 w-[16rem] rounded-2xl overflow-hidden">
             <Image
-              src="https://assets.bairesdev.com/image/upload/v1/www/core/joinus_one-team-1_ckbxxt"
+              src="/images/goa-celeb.jpeg"
               fill
               alt="img1"
               className="object-cover"
@@ -57,7 +57,7 @@ We’ve been recognized by Comparably, IT World Awards, and others for diversity
           {/* IMAGE 2 */}
           <div className="relative h-28 w-full md:w-[24rem] rounded-2xl overflow-hidden">
             <Image
-              src="https://assets.bairesdev.com/image/upload/v1/www/core/joinus_one-team-2_fhst3y"
+              src="/images/team-goa.jpg"
               fill
               alt="img2"
               className="object-cover"
@@ -67,7 +67,7 @@ We’ve been recognized by Comparably, IT World Awards, and others for diversity
           {/* IMAGE 3 */}
           <div className="hidden md:block relative h-52 w-[21rem] rounded-2xl overflow-hidden">
             <Image
-              src="https://assets.bairesdev.com/image/upload/v1/www/core/joinus_one-team-3_m27vo0"
+              src="/images/team-nainital.jpg"
               fill
               alt="img3"
               className="object-cover"

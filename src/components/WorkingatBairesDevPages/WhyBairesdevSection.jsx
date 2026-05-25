@@ -56,7 +56,7 @@ export default function WhyBairesdevSection() {
 ];
   return (
     <section className="max-w-6xl mx-auto px-4 py-16 md:py-24 ">
-      <div className="grid grid-cols-1 md:grid-cols-2 ">
+      <div className="flex md:grid-cols-2 ">
         <div>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
         Why Sevenunique?
@@ -69,16 +69,20 @@ We’re a global, diverse team powered by the Top 1%. We support each other to t
 If you’re looking for a place to grow your skills and turn bold ideas into real impact, this is the right place.
 
           </p>
-          <Image
-            src="/images/help.jpg"
+         <div className="rounded-lg mt-8 flex items-center justify-center">
+           <Image
+            src="/images/workingp2.png"
             width={500}
             height={600}
-            className="object-cover "
+            className="object-cover rounded-lg shadow-lg"
             priority
             alt="img"
           />
+         </div>
         </div>
-        <div className="rounded-lg aspect-video flex items-center justify-center">
+       
+      </div>
+ <div className="rounded-lg mt-8 flex items-center justify-center">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {features.map((feature, idx) => (
               <div key={idx} className="flex gap-4">
@@ -93,8 +97,6 @@ If you’re looking for a place to grow your skills and turn bold ideas into rea
             ))}
           </div>
         </div>
-      </div>
-
       {/* Image section below */}
       {/* <div className="grid grid-cols-1 md:grid-cols-2 relative"></div> */}
     </section>

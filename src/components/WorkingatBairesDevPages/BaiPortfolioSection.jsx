@@ -7,19 +7,19 @@ export default function BaiPortfolioSection() {
   const items = [
     {
       title: "Created a modern digital banking platform in the US.",
-      logo: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/joinus_azlo_orzvnp?_a=BAVAfVDW0",
+      logo: "/images/tripjack.jpg",
     },
     {
       title: "Enhanced safety systems and operations in power plants.",
-      logo: "https://assets.bairesdev.com//image/upload/fl_sanitize/v1/www/core/joinus_rolls-royce_nca2nu.svg",
+      logo: "/team/tbo.png",
     },
     {
       title: "Created high-quality 3D visuals used in award-level productions.",
-      logo: "https://assets.bairesdev.com//image/upload/fl_sanitize/v1/www/core/joinus_autodesk_i4gbui.svg",
+      logo: "/images/surepass.png",
     },
     {
       title: "Improved and redesigned the Ads Manager platform for better performance and usability.",
-      logo: "https://assets.bairesdev.com//image/upload/fl_sanitize/v1/www/core/joinus_pinterest_lrytcg.svg",
+      logo: "/images/exotel.png",
     },
   ];
 

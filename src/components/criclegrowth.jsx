@@ -9,12 +9,13 @@ export default function Criclegrowth() {
       <div className="bg-white h-[40vh]" />
 
       {/* CENTER IMAGE (OVERLAP FIX) */}
-      <div className="absolute left-1/2 top-[47%] -translate-x-1/2 -translate-y-1/2 z-20">
+      <div className="absolute left-1/2 top-[30%] -translate-x-1/2 -translate-y-1/2 z-20">
         <div className="">
           <img
-            src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/static/circles-bottom-cta_suha1s?_a=BAVAfVDW0"
+            src="/images/handonhand.png"
             alt=""
-            className="w-[360px] object-cover"
+            className="w-[360px] object-cover rounded-lg shadow-lg"
+            style={{ transform: "rotate(90deg)" }}
           />
         </div>
       </div>

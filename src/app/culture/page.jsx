@@ -57,7 +57,6 @@ const beliefs = [
       "Solve problems, don’t blame",
       'Ask “why” to understand better',
       "Align early with your team",
-      "Step in beyond your role when needed",
     ],
     img: "../culture/Handshake_1749674000.svg",
     color: "bg-gradient-to-br from-green-200 to-green-600",
@@ -72,7 +71,7 @@ const beliefs = [
       "Move ideas forward",
       "Resolve issues quickly",
       "Lead difficult conversations",
-      "Stand up for what’s best for the client",
+      // "Stand up for what’s best for the client",
     ],
     img: "../culture/FramePerson_1749674005.svg",
     color: "bg-gradient-to-br from-yellow-100 to-yellow-500",
@@ -269,9 +268,9 @@ function ValueCard({ value }) {
         </div>
 
         {/* EYE ICON */}
-        <div className="absolute top-4 right-4 bg-white/80 backdrop-blur rounded-full p-2">
+        {/* <div className="absolute top-4 right-4 bg-white/80 backdrop-blur rounded-full p-2">
           <Eye className="w-5 h-5 text-gray-800" />
-        </div>
+        </div> */}
       </div>
     </div>
   );
@@ -310,7 +309,7 @@ export default function CulturePage() {
             <div className="relative">
               <div className="w-full rounded-2xl flex items-center justify-center text-gray-500 text-lg font-semibold">
                 <Image
-                  src="https://assets.bairesdev.com//image/upload/c_limit,w_600/dpr_auto/f_auto/q_auto/v1/www/static/african-male_v22eef?_a=BAVAfVDW0"
+                  src="/images/team2.png"
                   alt="Company Culture"
                   width={700}
                   height={900}
