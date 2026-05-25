@@ -1,73 +1,77 @@
 "use client";
 
-import { Search } from "lucide-react";
-
+import { useState } from "react";
+import { Search, X } from "lucide-react";
 
 export default function JobsPage() {
-const jobs = [
-  {
-    title: "Frontend Developer | React.js | Jaipur, Rajasthan",
-    description:
-      "We are looking for a skilled React.js developer to build responsive and high-performance web applications for international clients. Experience with Tailwind CSS and API integration is preferred.",
-    category: "Frontend Development",
-    image:
-      "/images/frontend.jpeg",
-  },
+  const [openModal, setOpenModal] = useState(false);
+  const [selectedRole, setSelectedRole] = useState("");
 
-  {
-    title: "UI/UX Designer | IT Company | Jaipur, Rajasthan",
-    description:
-      "Join our creative design team to craft modern user experiences for web and mobile platforms. Strong knowledge of Figma, wireframing, and responsive design systems is required.",
-    category: "UI/UX Design",
-    image:
-      "/images/uiux.jpeg",
-  },
+  const [formData, setFormData] = useState({
+    name: "",
+    mobile: "",
+    email: "",
+    location: "",
+    role: "",
+  });
 
-  {
-    title: "Backend Developer | Node.js & MongoDB | Jaipur",
-    description:
-      "Seeking a backend developer with experience in Node.js, Express, and MongoDB to develop scalable APIs and secure server-side applications for enterprise projects.",
-    category: "Backend Development",
-    image:
-      "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop",
-  },
+  const jobs = [
+    {
+      title: "Frontend Developer | React.js | Jaipur, Rajasthan",
+      description:
+        "We are looking for a skilled React.js developer to build responsive and high-performance web applications.",
+      category: "Frontend Development",
+      image: "/images/frontend.jpeg",
+    },
 
-  {
-    title: "Digital Marketing Executive | SEO & Social Media | Jaipur",
-    description:
-      "Looking for a marketing professional to manage SEO campaigns, social media growth, and content strategies for our IT and software development services.",
-    category: "Digital Marketing",
-    image:
-      "/images/seo.png",
-  },
+    {
+      title: "UI/UX Designer | IT Company | Jaipur, Rajasthan",
+      description:
+        "Join our creative design team to craft modern user experiences for web and mobile platforms.",
+      category: "UI/UX Design",
+      image: "/images/uiux.jpeg",
+    },
+  ];
 
-  {
-    title: "Full Stack Developer | MERN Stack | Jaipur, India",
-    description:
-      "Work on dynamic web applications using MongoDB, Express.js, React.js, and Node.js. Collaborate with cross-functional teams to deliver scalable digital solutions.",
-    category: "Full Stack Development",
-    image:
-      "/images/fullstack.png",
-  },
+  // OPEN MODAL
+  const handleOpenModal = (jobTitle) => {
+    setSelectedRole(jobTitle);
 
-  {
-    title: "Business Development Executive | IT Sales | Jaipur",
-    description:
-      "We are hiring energetic business development executives to generate leads, manage client communication, and grow international software service partnerships.",
-    category: "Business Development",
-    image:
-      "/images/bde.jpeg",
-  },
+    setFormData({
+      name: "",
+      mobile: "",
+      email: "",
+      location: "",
+      role: jobTitle,
+    });
 
-  {
-    title: "QA Engineer | Manual & Automation Testing | Jaipur",
-    description:
-      "Join our QA team to ensure software quality through detailed testing, bug tracking, and automation frameworks for web and mobile applications.",
-    category: "Quality Assurance",
-    image:
-      "/images/qa.png",
-  },
-];
+    setOpenModal(true);
+  };
+
+  // HANDLE INPUT
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // SUBMIT
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    alert("Your application has been submitted successfully!");
+
+    setOpenModal(false);
+
+    setFormData({
+      name: "",
+      mobile: "",
+      email: "",
+      location: "",
+      role: "",
+    });
+  };
 
   return (
     <div className="bg-[#f5f6f8] min-h-screen flex flex-col">
@@ -82,121 +86,199 @@ const jobs = [
         <div className="mt-6 max-w-5xl mx-auto relative">
           <Search
             size={18}
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 py-10"
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
           />
 
           <input
             type="text"
             placeholder="Job title, company, and keyword"
-            className="py-5 w-full pl-10 pr-4 py-3 rounded-lg border text-gray-600 border-gray-300 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400"
+            className="w-full pl-10 pr-4 py-4 rounded-lg border text-gray-600 border-gray-300 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400"
           />
         </div>
       </section>
 
       {/* ================= JOB GRID ================= */}
-     <section className="px-4 pb-14 max-w-6xl mx-auto w-full">
-  <div className="space-y-6">
+      <section className="px-4 pb-14 max-w-6xl mx-auto w-full">
+        <div className="space-y-6">
 
-    {jobs.map((job, index) => (
-      <div
-        key={index}
-        className="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
-      >
-        <div className="flex flex-col md:flex-row">
+          {jobs.map((job, index) => (
+            <div
+              key={index}
+              className="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
+            >
+              <div className="flex flex-col md:flex-row">
 
-          {/* LEFT IMAGE */}
-          <div className="md:w-[280px] w-full h-[220px] md:h-auto overflow-hidden">
-            <img
-              src={job.image}
-              alt={job.title}
-              className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-            />
-          </div>
-
-          {/* RIGHT CONTENT */}
-          <div className="flex-1 p-6 flex flex-col justify-between">
-
-            {/* TOP CONTENT */}
-            <div>
-
-              {/* CATEGORY + TYPE */}
-              <div className="flex flex-wrap items-center gap-3 mb-4">
-                <span className="bg-orange-100 text-[#ff6a3d] text-xs font-semibold px-3 py-1 rounded-full">
-                  {job.category}
-                </span>
-
-                <span className="text-sm text-gray-500">
-                  Full Time
-                </span>
-              </div>
-
-              {/* TITLE */}
-              <h3 className="text-2xl font-bold text-gray-800 leading-snug">
-                {job.title}
-              </h3>
-
-              {/* DESCRIPTION */}
-              <p className="mt-4 text-gray-600 leading-relaxed text-[15px] max-w-3xl">
-                {job.description}
-              </p>
-
-              {/* EXTRA INFO */}
-              <div className="flex flex-wrap gap-5 mt-5 text-sm text-gray-500">
-
-                <div className="flex items-center gap-2">
-                  <i className="fa-solid fa-location-dot text-[#ff6a3d]"></i>
-                  Jaipur, Rajasthan
+                {/* LEFT IMAGE */}
+                <div className="md:w-[280px] w-full h-[220px] overflow-hidden">
+                  <img
+                    src={job.image}
+                    alt={job.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                  />
                 </div>
 
-                <div className="flex items-center gap-2">
-                  <i className="fa-solid fa-briefcase text-[#ff6a3d]"></i>
-                  2+ Years Experience
-                </div>
+                {/* RIGHT CONTENT */}
+                <div className="flex-1 p-6 flex flex-col justify-between">
 
-                <div className="flex items-center gap-2">
-                  <i className="fa-solid fa-indian-rupee-sign text-[#ff6a3d]"></i>
-                  Competitive Salary
-                </div>
+                  <div>
+                    <div className="flex flex-wrap items-center gap-3 mb-4">
+                      <span className="bg-orange-100 text-[#ff6a3d] text-xs font-semibold px-3 py-1 rounded-full">
+                        {job.category}
+                      </span>
 
+                      <span className="text-sm text-gray-500">
+                        Full Time
+                      </span>
+                    </div>
+
+                    <h3 className="text-2xl font-bold text-gray-800 leading-snug">
+                      {job.title}
+                    </h3>
+
+                    <p className="mt-4 text-gray-600 leading-relaxed text-[15px]">
+                      {job.description}
+                    </p>
+                  </div>
+
+                  {/* BUTTON */}
+                  <div className="mt-8 pt-5 border-t border-gray-100">
+                    <button
+                      onClick={() => handleOpenModal(job.title)}
+                      className="bg-[#ff6a3d] hover:bg-[#e85c32] text-white px-6 py-3 rounded-xl text-sm font-medium transition-all duration-300"
+                    >
+                      Apply Now
+                    </button>
+                  </div>
+
+                </div>
               </div>
             </div>
-
-            {/* BOTTOM */}
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-8 pt-5 border-t border-gray-100">
-
-              <div className="flex items-center gap-3">
-                <img
-                  src="https://randomuser.me/api/portraits/men/32.jpg"
-                  alt="recruiter"
-                  className="w-11 h-11 rounded-full object-cover"
-                />
-
-                <div>
-                  <p className="text-sm font-semibold text-gray-800">
-                    HR Department
-                  </p>
-
-                  <p className="text-xs text-gray-500">
-                    Posted 2 days ago
-                  </p>
-                </div>
-              </div>
-
-              <button className="bg-[#ff6a3d] hover:bg-[#e85c32] text-white px-6 py-3 rounded-xl text-sm font-medium transition-all duration-300">
-                Apply Now
-              </button>
-
-            </div>
-          </div>
+          ))}
 
         </div>
-      </div>
-    ))}
+      </section>
 
-  </div>
+      {/* ================= MODAL ================= */}
+      {openModal && (
+        <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center px-4">
 
-  
-</section>1
+          <div className="bg-white w-full max-w-lg rounded-3xl p-8 relative animate-[fadeIn_.3s_ease]">
+
+            {/* CLOSE BUTTON */}
+            <button
+              onClick={() => setOpenModal(false)}
+              className="absolute top-5 right-5 text-gray-500 hover:text-black"
+            >
+              <X size={22} />
+            </button>
+
+            {/* TITLE */}
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">
+              Apply Now
+            </h2>
+
+            <p className="text-gray-500 mb-8">
+              Fill in your details to apply for this role.
+            </p>
+
+            {/* FORM */}
+            <form onSubmit={handleSubmit} className="space-y-5">
+
+              {/* NAME */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Full Name
+                </label>
+
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Enter your full name"
+                  className="w-full border text-gray-500 border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                />
+              </div>
+
+              {/* MOBILE */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Mobile Number
+                </label>
+
+                <input
+                  type="tel"
+                  name="mobile"
+                  required
+                  value={formData.mobile}
+                  onChange={handleChange}
+                  placeholder="Enter your mobile number"
+                  className="w-full border text-gray-500 text-gray-500 border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                />
+              </div>
+
+              {/* EMAIL */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Email Address
+                </label>
+
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Enter your email"
+                  className="w-full border text-gray-500 border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                />
+              </div>
+
+              {/* LOCATION */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Location
+                </label>
+
+                <input
+                  type="text"
+                  name="location"
+                  required
+                  value={formData.location}
+                  onChange={handleChange}
+                  placeholder="Enter your location"
+                  className="w-full border text-gray-500 border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                />
+              </div>
+
+              {/* ROLE */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Applying For
+                </label>
+
+                <input
+                  type="text"
+                  name="role"
+                  value={formData.role}
+                  readOnly
+                  className="w-full border text-gray-500 border-gray-300 rounded-xl px-4 py-3 bg-gray-100 text-gray-600"
+                />
+              </div>
+
+              {/* SUBMIT BUTTON */}
+              <button
+                type="submit"
+                className="w-full bg-[#ff6a3d] hover:bg-[#e85c32] text-white py-4 rounded-xl font-medium transition-all duration-300"
+              >
+                Submit Application
+              </button>
+
+            </form>
+          </div>
+        </div>
+      )}
 
       {/* ================= FOOTER ================= */}
       <footer className="bg-[#ff6a3d] text-white mt-auto">

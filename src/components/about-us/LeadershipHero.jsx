@@ -31,14 +31,14 @@ export default function LeadershipHero() {
                         />
 
                         {/* Overlay Text */}
-                        <div className="absolute bottom-5 left-6 text-left text-white">
+                        {/* <div className="absolute bottom-5 left-6 text-left text-white">
                             <p className="text-lg font-medium">
                                 Arora <span className="text-sm">University</span>
                             </p>
                             <p className="text-sm mt-1 opacity-90">
                                 Vinay sharing his entrepreneurial journey with Stanford MBA students.
                             </p>
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Orange Quote Card */}
@@ -52,12 +52,11 @@ export default function LeadershipHero() {
                         </p>
 
                         <p className="mt-4 text-sm font-semibold">
-                           Vinay Arora, CEO
+                    Dinesh Kumar Prajapat, CEO
                         </p>
 
                         <p className="mt-4 text-xs opacity-80">
-                             Entrepreneur Of The Year® <br />
-                            2024 Award Winner
+                             Seven Unique Tech Solutions PVT. LTD.
                         </p>
                     </div>
 
