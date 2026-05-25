@@ -137,31 +137,7 @@ export default function ElegantHiringProcess() {
           })}
         </div>
 
-        {/* Final Box */}
-        <div className="mt-16">
-          <div className="rounded-[28px] border border-[#f66135]/15 bg-[#fff8f5] px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-5">
-              <div className="w-16 h-16 rounded-2xl bg-[#f66135] flex items-center justify-center text-white shadow-md">
-                <Trophy size={30} />
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-semibold text-gray-900">
-                  Top 1% Talent Selection
-                </h3>
-
-                <p className="text-gray-500 mt-2 max-w-2xl leading-relaxed">
-                  Only the most skilled and qualified candidates successfully
-                  complete our recruitment process and join our team.
-                </p>
-              </div>
-            </div>
-
-            <button className="px-6 py-3 rounded-full bg-[#f66135] text-white text-sm font-medium hover:opacity-90 transition">
-              Join Our Team
-            </button>
-          </div>
-        </div>
+       
       </div>
     </section>
   );

@@ -6,7 +6,7 @@ const leaders = [
   {
     name: "Dinesh Kumar Prajapat",
     role: "Founder & Promoter • CEO",
-    img: "/team/p1.png",
+    img: "/team/person1.png",
     color: "hover:bg-[#E7BE17]",
   },
   {
@@ -24,7 +24,7 @@ const leaders = [
   {
     name: "Krishan Prajapat",
     role: "Office Admin",
-    img: "/images/krishan.png",
+    img: "/team/krishan.png",
     color: "hover:bg-[#2EE66E]",
   },
   {

@@ -17,19 +17,19 @@ export default function ReferralPageAbout() {
     step: "STEP 1",
     title: "Make the connection",
     desc: "Fill out a short form with your referral’s name, email, and LinkedIn profile. If you’re referring multiple people, you’ll also get a unique link to submit them easily.",
-    icon: <Clipboard />,
+    imgg: "/images/connection.png",
   },
   {
     step: "STEP 2",
     title: "We take it from there",
     desc: "After you submit the referral, our Talent Acquisition team handles the rest and guides the candidate through the hiring process.",
-    icon: <ConeIcon />,
+    imgg: "/images/connection.png",
   },
   {
     step: "STEP 3",
     title: "Get rewarded",
     desc: "If the referral meets our requirements, you’ll receive your referral bonus. For full details, check our Terms and Conditions.",
-    icon: <RiMoneyRupeeCircleLine />,
+    imgg: "/images/connection.png",
   },
 ];
   const faqs = [
@@ -149,7 +149,7 @@ export default function ReferralPageAbout() {
                 className="relative"
               >
                 <img
-                  src="/images/team-vec.jpg"
+                  src="/images/referral.png"
                   alt=""
                   className="w-full h-full object-contain"
                 />
@@ -218,9 +218,15 @@ Together, we can open new opportunities, connect talented people, and build a be
               {steps.map((item, i) => (
                 <div key={i} className="flex relative lg:pl-[10px]">
                   {/* ICON */}
-                  <div className="relative z-10 w-12 h-12 flex items-center justify-center rounded-full bg-orange-500">
-                    {item.icon}
-                  </div>
+                <div className="relative z-10 w-14 h-14 flex items-center justify-center rounded-full bg-orange-500">
+  <Image
+    src={item.imgg}
+    alt={item.title}
+    width={28}
+    height={28}
+    className="object-contain brightness-0 invert"
+  />
+</div>
 
                   {/* TEXT */}
                   <div className="ml-5 md:ml-6 max-w-md">

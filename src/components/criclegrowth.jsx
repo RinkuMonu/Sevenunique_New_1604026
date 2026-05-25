@@ -14,7 +14,7 @@ export default function Criclegrowth() {
           <img
             src="/images/handonhand.png"
             alt=""
-            className="w-[360px] object-cover"
+            className="w-[360px] object-cover rounded-lg shadow-lg"
             style={{ transform: "rotate(90deg)" }}
           />
         </div>

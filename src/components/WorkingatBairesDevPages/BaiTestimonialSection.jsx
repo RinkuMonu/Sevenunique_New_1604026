@@ -43,18 +43,18 @@ export default function BaiTestimonialSection() {
 
       {/* CARD */}
       <div className="max-w-6xl mx-auto px-6 relative">
-        <div className="bg-black rounded-[32px] overflow-hiddn flex flex-col md:flex-row">
+        <div className="bg-[#1f2a33] rounded-[32px] overflow-hiddn flex flex-col md:flex-row">
           {/* LEFT IMAGE */}
           {/* LEFT IMAGE */}
           <div className="md:w-[40%] relative min-h-[320px]">
-            <div className="absolute bottom-0 left-[-60px] md:left-[-60px] h-[120%] w-[120%]">
-              <Image
-                src="/images/u3.png"
-                fill
-                alt="img"
-                className="object-contain object-bottom"
-              />
-            </div>
+           <div className="absolute bottom-0 right-[-6px] md:right-[-60px] h-[120%] w-[120%]">
+  <Image
+    src="/images/u3.png"
+    fill
+    alt="img"
+    className="object-contain object-bottom"
+  />
+</div>
           </div>
 
           {/* RIGHT CONTENT */}
