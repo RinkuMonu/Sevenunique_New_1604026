@@ -101,42 +101,42 @@ const certifications = [
 
   {
     title: "IAF certificate",
-    img: "https://www.sevenunique.com/images/iaf-logo.png",
+    img: "/images/iaf.png",
    
   },
   {
     title: "QRO Certifications",
-    img: "https://www.sevenunique.com/images/qro.png",
+    img: "/images/qro.jpg",
    
   },
   {
     title: "KAB Certifications",
-    img: "https://www.sevenunique.com/images/kab-logo.png",
+    img: "/images/kab.png",
     
   },
   {
     title: "EGAC Accredited CAB",
-    img: "https://www.sevenunique.com/images/EGAC-logo.png",
+    img: "/images/egca.png",
     
   },
   {
-    title: "AWS Certified Cloud Practitioner",
-    img: "https://www.sevenunique.com/images/CERTIFIED-logo.png",
+    title: "PCI DSS Certification",
+    img: "/images/pcidss.png",
    
   },
   {
     title: "EU CERT",
-    img: "https://www.sevenunique.com/images/eu-logo.webp",
+    img: "/images/eu.webp",
     
   },
   {
     title: "MSME Certification",
-    img: "https://www.sevenunique.com/images/msme-logo.jpg",
+    img: "/images/msme.png",
    
   },
   {
-    title: "DPIIT",
-    img: "https://www.sevenunique.com/images/startupindia-logo.png",
+    title: "ISO",
+    img: "/images/iso.png",
    
   },
  

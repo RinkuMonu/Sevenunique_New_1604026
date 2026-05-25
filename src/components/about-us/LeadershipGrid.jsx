@@ -24,7 +24,7 @@ const leaders = [
   {
     name: "Krishan Prajapat",
     role: "Office Admin",
-    img: "/team/krishan.png",
+    img: "/team/krishan.PNG",
     color: "hover:bg-[#2EE66E]",
   },
   {

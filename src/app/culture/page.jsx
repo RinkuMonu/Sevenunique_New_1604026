@@ -195,7 +195,7 @@ function BeliefCard({ belief }) {
       {/* 🔥 RIGHT SLIDE PANEL */}
       <div
         className="
-        absolute top-40 right-0 h-full w-full bg-white z-20
+        absolute top-35 right-0 h-full w-full bg-white z-20
         translate-x-full group-hover:translate-x-0
         transition-transform duration-500 ease-in-out
         p-6 md:p-8 flex flex-col

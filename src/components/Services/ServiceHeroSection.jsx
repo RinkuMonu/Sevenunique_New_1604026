@@ -144,7 +144,7 @@ export default function ServiceHeroSection({ data }) {
               {/* ✅ Form with submit handler */}
               <form className="space-y-6" onSubmit={handleSubmit}>
                 <div>
-                  <label className="mb-2 block text-[16px] font-medium text-[#26354a]">
+                  <label className=" mb-2 block text-[16px] font-medium text-[#26354a]">
                     Your name
                   </label>
                   <input
@@ -152,7 +152,7 @@ export default function ServiceHeroSection({ data }) {
                     type="text"
                     placeholder="Full name"
                     onChange={handleChange}
-                    className="h-11 w-full rounded-[4px] border border-[#c9d0d8] bg-white px-4"
+                    className="h-11 w-full rounded-[4px] border border-[#c9d0d8] text-gray-500 bg-white px-4"
                   />
                   {errors.name && (
                     <p className="text-red-500 text-sm mt-1">
@@ -162,7 +162,7 @@ export default function ServiceHeroSection({ data }) {
                 </div>
 
                 <div>
-                  <label className="mb-2 block text-[16px] font-medium text-[#26354a]">
+                  <label className=" mb-2 block text-[16px] font-medium text-[#26354a]">
                     Your email
                   </label>
                   <input
@@ -170,7 +170,7 @@ export default function ServiceHeroSection({ data }) {
                     type="email"
                     placeholder="name@company.com"
                     onChange={handleChange}
-                    className="h-11 w-full rounded-[4px] border border-[#c9d0d8] bg-white px-4"
+                    className="h-11 w-full rounded-[4px] border text-gray-500 border-[#c9d0d8] bg-white px-4"
                   />
                   {errors.email && (
                     <p className="text-red-500 text-sm mt-1">
@@ -180,7 +180,7 @@ export default function ServiceHeroSection({ data }) {
                 </div>
 
                 <div>
-                  <label className="mb-2 block text-[16px] font-medium text-[#26354a]">
+                  <label className=" mb-2 block text-[16px] font-medium text-[#26354a]">
                     What we can do for you?
                   </label>
                   <textarea
@@ -188,10 +188,10 @@ export default function ServiceHeroSection({ data }) {
                     rows={4}
                     placeholder="Tell us about your needs."
                     onChange={handleChange}
-                    className="w-full rounded-[4px] border border-[#c9d0d8] bg-white px-4 py-3"
+                    className="w-full rounded-[4px] border text-gray-500 border-[#c9d0d8] bg-white px-4 py-3"
                   />
                   {errors.message && (
-                    <p className="text-red-500 text-sm mt-1">
+                    <p className="text-red-500 text-sm text-gray-500 mt-1">
                       {errors.message}
                     </p>
                   )}
