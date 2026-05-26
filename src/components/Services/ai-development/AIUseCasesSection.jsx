@@ -11,68 +11,92 @@ export default function AIUseCasesSection({ useCases }) {
   const { sectionLabel, heading, description, image, services } = useCases;
 
   return (
-    <section className="bg-[#f5f5f5] py-24 px-6">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">
+   <section className="relative overflow-hidden bg-gradient-to-b from-white to-[#f8fafc] py-24 px-6">
 
-        {/* LEFT */}
-        <div>
-          <p className="text-[12px] tracking-[0.2em] text-gray-500 mb-4 uppercase">
-            {sectionLabel}
+  {/* BACKGROUND BLUR */}
+  <div className="absolute top-0 right-0 w-[350px] h-[350px] bg-orange-100 blur-[140px] rounded-full opacity-70"></div>
+
+  <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center relative z-10">
+
+    {/* LEFT SIDE */}
+    <div>
+      {/* LABEL */}
+      <div className="inline-flex items-center gap-2 rounded-full bg-orange-50 border border-orange-100 px-4 py-2 mb-6">
+        <span className="w-2 h-2 rounded-full bg-[#ff6433]"></span>
+
+        <p className="text-[11px] tracking-[0.22em] font-semibold text-[#ff6433] uppercase">
+          {sectionLabel}
+        </p>
+      </div>
+
+      {/* HEADING */}
+      <h2 className="text-[40px] md:text-[52px] leading-[1.12] font-bold text-[#111827] mb-6">
+        {heading}
+      </h2>
+
+      {/* DESCRIPTION */}
+      <p className="text-gray-600 text-[16px] leading-[1.9] max-w-xl mb-10">
+        {description}
+      </p>
+
+      {/* IMAGE */}
+      <div className="relative overflow-hidden rounded-[30px] shadow-2xl shadow-black/10 group">
+        <Image
+          src={image}
+          alt={sectionLabel}
+          width={700}
+          height={500}
+          className="w-full h-[340px] object-cover transition duration-700 group-hover:scale-105"
+        />
+
+        {/* OVERLAY */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
+
+        {/* FLOATING BADGE */}
+        <div className="absolute bottom-5 left-5 bg-white/90 backdrop-blur-md rounded-2xl px-5 py-4 shadow-lg">
+          <p className="text-sm text-gray-500">
+            Trusted by Global Businesses
           </p>
 
-          <h2 className="text-[42px] leading-[1.2] font-semibold text-black mb-6">
-            {heading}
-          </h2>
+          <h4 className="text-lg font-semibold text-[#111827]">
+            Innovative Digital Solutions
+          </h4>
+        </div>
+      </div>
+    </div>
 
-          <p className="text-black/80 text-[15px] leading-[1.7] mb-8 max-w-lg">
-            {description}
-          </p>
+    {/* RIGHT SIDE */}
+    <div className="space-y-8">
 
-          <div className="relative w-full h-[240px] rounded-xl overflow-hidden">
-            <Image
-              src={image}
-              alt={sectionLabel}
-              fill
-              className="object-cover"
-            />
+      {services.map((item, i) => (
+        <div
+          key={i}
+          className="group flex gap-5 rounded-3xl bg-white border border-gray-200 p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-orange-100 hover:border-orange-200"
+        >
+          {/* ICON / NUMBER */}
+          <div className="flex-shrink-0">
+            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#ff6433] to-[#ff8b66] text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-orange-200">
+              {String(i + 1).padStart(2, "0")}
+            </div>
+          </div>
+
+          {/* CONTENT */}
+          <div>
+            <h3 className="text-[22px] font-semibold text-[#111827] mb-3 group-hover:text-[#ff6433] transition">
+              {item.title}
+            </h3>
+
+            <div className="text-gray-600 text-[15px] leading-[1.9] space-y-4">
+              {item.content.split("\n\n").map((para, idx) => (
+                <p key={idx}>{para}</p>
+              ))}
+            </div>
           </div>
         </div>
+      ))}
 
-        {/* RIGHT */}
-        <div className="space-y-6">
-          {services.map((item, i) => {
-            const isOpen = active === i;
-
-            return (
-              <div
-                key={i}
-                className="border-l-2 pl-5 cursor-pointer transition-all duration-300"
-                style={{ borderColor: isOpen ? "#22c55e" : "#d1d5db" }}
-                onClick={() => setActive(i)}
-              >
-                <h3
-                  className={`text-[18px] font-medium transition ${isOpen ? "text-black" : "text-black/70"
-                    }`}
-                >
-                  {item.title}
-                </h3>
-
-                <div
-                  className={`overflow-hidden transition-all duration-500 ${isOpen ? "max-h-[300px] mt-3" : "max-h-0"
-                    }`}
-                >
-                  <div className="text-black/80 text-[14px] leading-[1.7] space-y-3">
-                    {item.content.split("\n\n").map((para, idx) => (
-                      <p key={idx}>{para}</p>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-      </div>
-    </section>
+    </div>
+  </div>
+</section>
   );
 }
