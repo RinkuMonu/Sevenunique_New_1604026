@@ -14,14 +14,13 @@ export default function AboutPage() {
   return (
     <>
       <AboutHero />
-      <TeamShowcase />
-      <ClientShowcase />
-      <Testimonials />
-      <AwardsSection />
-      <LeadershipHighlight />
+      
+      
+    
+   
+    
       <MediaCoverage />
-      <CultureSection />
-     <TrustSection />
+   
     </>
   );
 }
