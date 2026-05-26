@@ -18,9 +18,11 @@ function renderHighlightedHeading(heading) {
   return (
     <>
       {heading.slice(0, start)}
+
       <span className="text-[#ff6433]">
         {heading.slice(start, end)}
       </span>
+
       {heading.slice(end)}
     </>
   );
@@ -40,15 +42,27 @@ export default function ServiceHeroSection({ data }) {
 
   if (!hero) return null;
 
-  const breadcrumb = hero.breadcrumb || [];
-  const rating = hero.rating || {};
+  // ✅ ALL DATA COMING FROM PROPS
+  const {
+    breadcrumb = [],
+    title,
+    heading,
+    description,
+    label,
+    formTitle,
+    backgroundImage,
+    rating = {},
+  } = hero;
 
-  // ✅ Handle input change
+  // INPUT CHANGE
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.id]: e.target.value });
+    setForm({
+      ...form,
+      [e.target.id]: e.target.value,
+    });
   };
 
-  // ✅ Validation function
+  // VALIDATION
   const validate = () => {
     const newErrors = {};
 
@@ -67,141 +81,199 @@ export default function ServiceHeroSection({ data }) {
     }
 
     setErrors(newErrors);
+
     return Object.keys(newErrors).length === 0;
   };
 
-  // ✅ Handle submit
+  // SUBMIT
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (validate()) {
-      // 🔗 Redirect after success
       router.push("/schedule-a-call-page");
     }
   };
 
   return (
-    <section className="bg-[#f1f2f4] px-6 py-12 md:px-10 md:py-16">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-10 flex flex-wrap items-center gap-3 text-sm text-[#2c3444]">
+    <section className="relative overflow-hidden bg-[#0f172a] px-6 py-16 md:px-10 md:py-18">
+
+      {/* BACKGROUND IMAGE FROM PROPS */}
+      <div className="absolute inset-0">
+        <img
+          src={backgroundImage}
+          alt="background"
+          className="w-full h-full object-cover opacity-15"
+        />
+      </div>
+
+      {/* OVERLAY */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0f172a] via-[#0f172ae8] to-[#111827d9]"></div>
+
+      {/* GLOW */}
+      <div className="absolute top-[-120px] left-[-100px] w-[350px] h-[350px] bg-[#ff6433]/20 blur-[120px] rounded-full"></div>
+
+      <div className="relative z-10 mx-auto max-w-7xl">
+
+        {/* BREADCRUMB */}
+        <div className="mb-10 flex flex-wrap items-center gap-3 text-sm text-white/70">
           <span>Home</span>
+
           <span>{">"}</span>
+
           <span>{breadcrumb[0]}</span>
+
           <span>{">"}</span>
-          <span className="font-semibold text-black">
+
+          <span className="font-semibold text-white">
             {breadcrumb[1]}
           </span>
         </div>
 
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,1.7fr)_minmax(340px,0.9fr)] lg:gap-12">
-          <div className="lg:pr-12">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#24456f]">
-              {hero.title}
-            </p>
+        {/* GRID */}
+        <div className="grid gap-14 lg:grid-cols-[minmax(0,1.7fr)_minmax(380px,0.9fr)] items-center">
 
-            <h1 className="max-w-4xl text-[42px] font-semibold leading-[1.08] text-[#111111] md:text-[58px]">
-              {renderHighlightedHeading(hero.heading)}
+          {/* LEFT */}
+          <div className="lg:pr-10">
+
+            {/* TAG */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2 backdrop-blur-md">
+              <span className="w-2 h-2 rounded-full bg-[#ff6433]"></span>
+
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white">
+                {title}
+              </p>
+            </div>
+
+            {/* HEADING */}
+            <h1 className="mt-7 max-w-4xl text-[42px] font-bold leading-[1.05] text-white md:text-[52px]">
+              {renderHighlightedHeading(heading)}
             </h1>
 
-            <p className="mt-8 max-w-4xl text-[18px] leading-[1.7] text-[#2f4057]">
-              {hero.description}
+            {/* DESCRIPTION */}
+            <p className="mt-8 max-w-3xl text-[18px] leading-[1.9] text-gray-300">
+              {description}
             </p>
 
-            <div className="mt-12 flex flex-wrap items-center gap-8">
-              <div>
-                <p className="text-[20px] font-semibold text-black">
+            {/* STATS */}
+            <div className="mt-12 flex flex-wrap items-center gap-10">
+
+              {/* RATING */}
+              <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md px-6 py-5">
+                <p className="text-[18px] font-semibold text-white">
                   {rating.platform}
                 </p>
+
                 <div className="mt-2 flex items-center gap-3">
-                  <span className="text-[20px] font-medium text-black">
+                  <span className="text-[24px] font-bold text-white">
                     {rating.score}
                   </span>
+
                   <span className="text-[16px] tracking-[0.2em] text-[#ff6433]">
-                    {"*****"}
+                    ★★★★★
                   </span>
                 </div>
-                <p className="mt-1 text-sm text-[#2f4057]">
+
+                <p className="mt-1 text-sm text-gray-400">
                   {rating.reviews}
                 </p>
               </div>
 
-              <div className="hidden h-16 w-px bg-[#cfd5dd] md:block" />
-
-              <div>
-                <p className="max-w-[120px] text-lg font-semibold leading-tight text-[#4c3bff]">
-                  {hero.label}
+              {/* LABEL */}
+              <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md px-6 py-5 max-w-[220px]">
+                <p className="text-lg font-semibold leading-snug text-white">
+                  {label}
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="lg:border-l lg:border-[#cfd5dd] lg:pl-12">
-            <div>
-              <h2 className="mb-8 text-[24px] font-semibold leading-tight text-[#111111]">
-                {hero.formTitle}
-              </h2>
+          {/* RIGHT FORM */}
+          <div className="relative">
+            <div className="rounded-[30px] border border-white/10 bg-white/95 backdrop-blur-xl p-8 md:p-10 shadow-2xl shadow-black/30">
 
-              {/* ✅ Form with submit handler */}
+              {/* TITLE */}
+              <div className="mb-8">
+                <h2 className="text-[30px] font-bold leading-tight text-[#111827]">
+                  {formTitle}
+                </h2>
+
+                <p className="mt-3 text-gray-500 leading-relaxed">
+                  Let’s discuss your project and explore how we can help.
+                </p>
+              </div>
+
+              {/* FORM */}
               <form className="space-y-6" onSubmit={handleSubmit}>
+
+                {/* NAME */}
                 <div>
-                  <label className=" mb-2 block text-[16px] font-medium text-[#26354a]">
+                  <label className="mb-2 block text-[15px] font-medium text-[#26354a]">
                     Your name
                   </label>
+
                   <input
                     id="name"
                     type="text"
-                    placeholder="Full name"
+                    placeholder="Enter your full name"
                     onChange={handleChange}
-                    className="h-11 w-full rounded-[4px] border border-[#c9d0d8] text-gray-500 bg-white px-4"
+                    className="h-14 w-full rounded-xl border border-gray-200 bg-[#f8fafc] px-5 text-gray-700 outline-none transition focus:border-[#ff6433] focus:ring-4 focus:ring-orange-100"
                   />
+
                   {errors.name && (
-                    <p className="text-red-500 text-sm mt-1">
+                    <p className="mt-2 text-sm text-red-500">
                       {errors.name}
                     </p>
                   )}
                 </div>
 
+                {/* EMAIL */}
                 <div>
-                  <label className=" mb-2 block text-[16px] font-medium text-[#26354a]">
+                  <label className="mb-2 block text-[15px] font-medium text-[#26354a]">
                     Your email
                   </label>
+
                   <input
                     id="email"
                     type="email"
                     placeholder="name@company.com"
                     onChange={handleChange}
-                    className="h-11 w-full rounded-[4px] border text-gray-500 border-[#c9d0d8] bg-white px-4"
+                    className="h-14 w-full rounded-xl border border-gray-200 bg-[#f8fafc] px-5 text-gray-700 outline-none transition focus:border-[#ff6433] focus:ring-4 focus:ring-orange-100"
                   />
+
                   {errors.email && (
-                    <p className="text-red-500 text-sm mt-1">
+                    <p className="mt-2 text-sm text-red-500">
                       {errors.email}
                     </p>
                   )}
                 </div>
 
+                {/* MESSAGE */}
                 <div>
-                  <label className=" mb-2 block text-[16px] font-medium text-[#26354a]">
-                    What we can do for you?
+                  <label className="mb-2 block text-[15px] font-medium text-[#26354a]">
+                    What can we help you with?
                   </label>
+
                   <textarea
                     id="message"
-                    rows={4}
-                    placeholder="Tell us about your needs."
+                    rows={5}
+                    placeholder="Tell us about your project requirements..."
                     onChange={handleChange}
-                    className="w-full rounded-[4px] border text-gray-500 border-[#c9d0d8] bg-white px-4 py-3"
+                    className="w-full rounded-xl border border-gray-200 bg-[#f8fafc] px-5 py-4 text-gray-700 outline-none transition focus:border-[#ff6433] focus:ring-4 focus:ring-orange-100"
                   />
+
                   {errors.message && (
-                    <p className="text-red-500 text-sm text-gray-500 mt-1">
+                    <p className="mt-2 text-sm text-red-500">
                       {errors.message}
                     </p>
                   )}
                 </div>
 
+                {/* BUTTON */}
                 <button
                   type="submit"
-                  className="w-full rounded-[8px] bg-[#ff6433] px-6 py-4 text-[17px] font-semibold text-white hover:bg-[#ef5728]"
+                  className="w-full rounded-xl bg-[#ff6433] px-6 py-4 text-[17px] font-semibold text-white transition-all duration-300 hover:bg-[#ef5728]"
                 >
-                  Jump-start Your Project
+                  Jump-start Your Project →
                 </button>
               </form>
             </div>
@@ -210,4 +282,4 @@ export default function ServiceHeroSection({ data }) {
       </div>
     </section>
   );
-} 
+}

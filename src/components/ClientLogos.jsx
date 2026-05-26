@@ -38,7 +38,7 @@ export default function ClientLogos() {
                   alt="logo"
                   width={120}
                   height={60}
-                  className="grayscale object-contain opacity-80"
+                  className="object-contain"
                 />
               </div>
             ))}

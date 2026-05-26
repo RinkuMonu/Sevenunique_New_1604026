@@ -61,7 +61,7 @@ export const techData = {
     testimonial: {
       quote:
         "Their engineers perform at very high standards. We've had a strong relationship for almost 7 years.",
-      name: "Patrick Mee",
+      name: "Prateek Garg",
       role: "EVP Of Engineering",
       company: "NextRoll",
       image: "/logos/img2.png",
@@ -697,7 +697,7 @@ export const techData = {
     testimonial: {
       quote:
         "Their engineers perform at very high standards. We've had a strong relationship for almost 7 years.",
-      name: "Patrick Mee",
+      name: "Prateek Garg",
       role: "EVP Of Engineering",
       company: "NextRoll",
       image: "/logos/img2.png",
@@ -1028,10 +1028,10 @@ export const techData = {
     testimonial: {
       quote:
         "Their engineers perform at very high standards. We've had a strong relationship for almost 7 years.",
-      name: "Patrick Mee",
+      name: "Prateek Garg",
       role: "EVP Of Engineering",
       company: "NextRoll",
-      image: "/logos/img2.png",
+      image: "/images/10.png",
       image1: "/logos/nextroll-new.png",
     },
     teamSection: {

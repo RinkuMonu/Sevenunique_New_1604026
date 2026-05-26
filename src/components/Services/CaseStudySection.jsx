@@ -81,7 +81,7 @@ export default function CaseStudySection({ caseStudies }) {
         </p>
 
         {/* HEADING */}
-        <h2 className="max-w-5xl text-[24px] font-semibold leading-[1.4] text-[#101010]">
+        <h2 className="max-w-5xl text-[36px] font-bold leading-[1.4] text-[#101010]">
           {caseStudies.heading}
         </h2>
 

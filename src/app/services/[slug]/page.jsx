@@ -24,6 +24,7 @@ import ProcessSliderSection from "@/components/ProcessSliderSection";
 import FAQSection from "@/components/FAQSection";
 import RestServicePage from "./RestServicePage";
 import WorkSection from "@/components/Services/WorkSection";
+import ClientLogos from "@/components/ClientLogos";
 
 // page.jsx logic update
 export default async function ServicePage({ params }) {
@@ -51,12 +52,15 @@ export default async function ServicePage({ params }) {
 )}
 
 {/* TRUSTED CLIENTS */}
-{data.sections?.trustedClientsStrip && (
+{/* {data.sections?.trustedClientsStrip && (
   <TrustedClientsStrip clients={data.trustedClients} />
-)}
-      <div className="bg-[#f5f6f7] px-6 py-10 md:px-10">
+)} */}
+
+
+
+      {/* <div className="bg-[#f5f6f7] px-6 py-10 md:px-10">
         <TableContent />
-      </div>
+      </div> */}
 {normalizedSlug !== "ai-development" && data.backendServices && (
   <BackendServices servicesSection={data.backendServices} />
 )}
@@ -69,9 +73,9 @@ export default async function ServicePage({ params }) {
           <AIUseCasesSection useCases={data.useCases} />
         )}
 
-        {data.testimonialHighlight && (
+        {/* {data.testimonialHighlight && (
           <TestimonialHighlightSection testimonial={data.testimonialHighlight} />
-        )}
+        )} */}
 
         {normalizedSlug === "ai-development" ? (
           <AiTeamSection teamSection={data.teamSection} />

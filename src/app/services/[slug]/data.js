@@ -951,11 +951,11 @@ export const serviceData = {
     testimonialHighlight: {
       quote:
         "Their engineers perform at very high standards. We've had a strong relationship for almost 7 years.",
-      name: "Patrick Mee",
+      name: "Prateek Garg",
       role: "EVP of Engineering",
       companyName: "NextRoll",
       companyLogo: "/logos/nr.png",
-      personImage: "/logos/img2.png",
+      personImage: "/images/10.png",
       summary:
         "The best partnerships are the ones you do not have to worry about. We deliver the kind of technical execution and reliability that builds long-term trust and consistent results.",
     },
@@ -1001,7 +1001,7 @@ export const serviceData = {
     hero: {
       breadcrumb: ["Services", "AI"],
       title: "AI DEVELOPMENT SERVICES",
-      heading: "Work with AI experts trusted by the world’s top tech teams.",
+      heading: "Work with AI experts trusted by the India's top tech teams.",
       description:
         "As a leading AI development company, we deliver AI-powered solutions that go beyond experimentation. Our AI engineers help organizations integrate agentic AI, custom LLMs, and generative AI into their products.",
 
