@@ -249,7 +249,7 @@ export default function Header() {
     alt="logo"
     width={250}
     height={140}
-    className="w-60 h-auto object-cover"
+    className="w-60 h-auto object-contain"
   />
 </Link>
         <button

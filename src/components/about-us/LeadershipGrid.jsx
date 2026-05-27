@@ -46,12 +46,16 @@ export default function LeadershipGrid() {
     <section className="bg-[#f5f6f7] py-20">
       <div className="max-w-7xl mx-auto px-6">
         {/* HEADING */}
-        <h2 className="text-[40px] leading-[1.2] font-semibold text-[#111827] mb-16 max-w-4xl">
-          <span className="text-[#f66135]">Meet our leadership team.</span> With
-          their guidance, we have achieved numerous accolades recognized across
-          the industry
-          <span className="text-[#f66135]">.</span>
-        </h2>
+        <div className="max-w-4xl mx-auto text-center mb-16">
+  <h2 className="text-[40px] leading-[1.2] font-semibold text-[#f66135]">
+    Meet our leadership team
+  </h2>
+
+  <p className="text-3xl leading-[1.2] font-semibold text-[#111827] mt-2">
+    With their guidance, we have achieved numerous accolades recognized across
+    the industry
+  </p>
+</div>
 
         {/* GRID */}
    <div className="grid md:grid-cols-3 gap-8">
@@ -75,7 +79,7 @@ export default function LeadershipGrid() {
 
       {/* TEXT */}
       <div className="mt-5">
-        <h3 className="text-[20px] font-medium tracking-[-0.3px] text-[#111827]">
+        <h3 className="text-[20px] font-bold tracking-[-0.3px] text-[#111827]">
           {item.name}
         </h3>
 

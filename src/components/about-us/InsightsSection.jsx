@@ -110,14 +110,14 @@ const sections = [
     type: "Vision",
     title: "Building the Future Through Innovation",
     description:
-      "Our vision is to empower businesses worldwide with cutting-edge technology solutions that drive growth, inspire innovation, and create meaningful digital experiences.",
+      "To become a globally recognized technology company that empowers businesses through innovative digital solutions and creates a strong impact in the technology ecosystem by delivering excellence, trust, and long-term value.",
     img: "/images/vision.png",
   },
   {
     type: "Mission",
     title: "Delivering Excellence with Purpose",
     description:
-      "We are committed to providing scalable, reliable, and people-focused digital solutions while fostering creativity, collaboration, and long-term partnerships with our clients.",
+      "Our mission is to provide high-quality, cost-effective, and technology-driven solutions that help startups and enterprises achieve digital success. We aim to build innovative products, maintain long-term client relationships, and continuously evolve with emerging technologies while delivering exceptional user experiences and business value.",
     img: "/images/mission.png",
   },
 ];
@@ -126,9 +126,8 @@ export default function VisionMissionSection() {
   return (
     <section className="bg-[#f5f6f7] py-24">
       <div className="max-w-7xl mx-auto px-6">
-        
         {/* HEADING */}
-        <div className="max-w-4xl mb-20">
+        <div className=" mb-20">
           <p className="text-[#f66135] font-semibold uppercase tracking-[3px] mb-4">
             Who We Are
           </p>
@@ -137,9 +136,31 @@ export default function VisionMissionSection() {
             Driven by Purpose. Powered by Innovation.
           </h2>
 
-          <p className="mt-6 text-[18px] text-gray-600 leading-relaxed max-w-3xl">
-            We believe technology should create impact, simplify challenges,
-            and help businesses grow sustainably in a rapidly evolving digital world.
+          <p className="mt-6 text-[18px] text-gray-600 leading-relaxed w-full">
+            SevenUnique Tech Solutions Private Limited is an emerging IT and
+            technology-driven startup established in 2019 with a vision to
+            deliver innovative, scalable, and result-oriented digital solutions
+            to businesses worldwide. Under the leadership of Director Dinesh
+            Kumar Prrajapat, the company is committed to transforming ideas into
+            powerful digital products and helping businesses grow through
+            technology.
+            <br />
+            Since its inception, SevenUnique Tech Solutions Private Limited has
+            been focused on delivering high-quality web and mobile application
+            development services, customized software solutions, fintech
+            platforms, and next-generation digital products. Our team combines
+            technical expertise with creative thinking to build secure,
+            efficient, and user-friendly applications tailored to client
+            requirements.
+            <br />
+            With a customer-centric approach and a passion for innovation, we
+            strive to provide affordable and cutting-edge solutions that empower
+            startups, enterprises, and businesses across multiple industries.
+            Our goal is not only to develop software but also to build long-term
+            relationships based on trust, quality, and consistent delivery. At
+            SevenUnique Tech Solutions, we believe technology is the foundation
+            of future success, and we are dedicated to creating solutions that
+            drive growth and digital transformation globally.
           </p>
         </div>
 
@@ -153,7 +174,7 @@ export default function VisionMissionSection() {
               }`}
             >
               {/* IMAGE */}
-              <div className="relative h-[350px] md:h-[450px] rounded-[28px] overflow-hidden group">
+              <div className="relative h-[150px] md:h-[250px] rounded-[18px] overflow-hidden group">
                 <Image
                   src={item.img}
                   alt={item.title}
@@ -178,16 +199,16 @@ export default function VisionMissionSection() {
                   {item.type}
                 </p>
 
-                <h3 className="text-[32px] md:text-[42px] font-semibold text-[#111827] leading-tight">
+                {/* <h3 className="text-[32px] md:text-[42px] font-semibold text-[#111827] leading-tight">
                   {item.title}
-                </h3>
+                </h3> */}
 
                 <p className="mt-6 text-[18px] text-gray-600 leading-relaxed">
                   {item.description}
                 </p>
 
                 {/* POINTS */}
-                <div className="mt-8 space-y-4">
+                {/* <div className="mt-8 space-y-4">
                   <div className="flex items-start gap-3">
                     <span className="text-[#f66135] text-xl">✓</span>
                     <p className="text-gray-700">
@@ -208,7 +229,7 @@ export default function VisionMissionSection() {
                       Long-term partnerships built on trust and excellence.
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
@@ -220,9 +241,12 @@ export default function VisionMissionSection() {
             Together, we create solutions that make a lasting impact.
           </h4>
 
-          <Link href="/schedule-a-call-page" className="mt-12 bg-[#f66135] hover:bg-[#e9552b] transition-all duration-300 text-white px-8 py-4 rounded-full text-[16px] font-medium shadow-lg hover:scale-105">
+          <Link
+            href="/schedule-a-call-page"
+            className="mt-12 bg-[#f66135] hover:bg-[#e9552b] transition-all duration-300 text-white px-8 py-4 rounded-full text-[16px] font-medium shadow-lg hover:scale-105"
+          >
             Explore Our Services
-          </Link >
+          </Link>
         </div>
       </div>
     </section>

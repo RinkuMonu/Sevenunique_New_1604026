@@ -1,27 +1,41 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
+import Link from "next/link";
 import {
   MessageCircle,
   Phone,
   X,
   Send,
+  User,
+  Briefcase,
+  CalendarDays,
+  CheckCircle2,
 } from "lucide-react";
-
-import Link from "next/link";
 
 export default function ChatBot() {
   const [open, setOpen] = useState(false);
 
+  const [step, setStep] = useState(1);
+
+  const [userData, setUserData] = useState({
+    name: "",
+    mobile: "",
+    service: "",
+  });
+
+  const [input, setInput] = useState("");
+
   const [messages, setMessages] = useState([
     {
       type: "bot",
-      text: "👋 Welcome to Sevenunique.\nHow can we help you today?",
+      text: "👋 Welcome to Sevenunique.\nBefore we connect you with our team, let's get a few details.",
+    },
+    {
+      type: "bot",
+      text: "What's your good name?",
     },
   ]);
-
-  const [input, setInput] = useState("");
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -31,164 +45,178 @@ export default function ChatBot() {
     return () => clearTimeout(timer);
   }, []);
 
-  const faqs = [
-    {
-      q: "Website",
-      a: "We build modern business websites using React & Next.js.",
-    },
-
-    {
-      q: "Mobile App",
-      a: "We develop Android & iOS applications with secure backend systems.",
-    },
-
-    {
-      q: "AI Solutions",
-      a: "We provide AI chatbots, automation tools & OpenAI integrations.",
-    },
-
-    {
-      q: "ERP Software",
-      a: "We build ERP, CRM, HRMS & School Management software.",
-    },
+  const services = [
+    "Website Development",
+    "Mobile App Development",
+    "AI Solutions",
+    "ERP / CRM Software",
+    "Fintech Solutions",
+    "E-Commerce Development",
   ];
 
-  const handleFAQ = (item) => {
-    setMessages((prev) => [
-      ...prev,
-      {
-        type: "user",
-        text: item.q,
-      },
-
-      {
-        type: "bot",
-        text: item.a,
-      },
-    ]);
+  const addMessage = (type, text) => {
+    setMessages((prev) => [...prev, { type, text }]);
   };
 
   const handleSend = () => {
     if (!input.trim()) return;
 
-    const userMsg = input;
+    const value = input.trim();
 
-    setMessages((prev) => [
-      ...prev,
-      {
-        type: "user",
-        text: userMsg,
-      },
-    ]);
+    addMessage("user", value);
+
+    // STEP 1 → NAME
+    if (step === 1) {
+      setUserData((prev) => ({
+        ...prev,
+        name: value,
+      }));
+
+      setTimeout(() => {
+        addMessage(
+          "bot",
+          `Nice to meet you ${value} 👋\nPlease enter your mobile number.`
+        );
+      }, 500);
+
+      setStep(2);
+    }
+
+    // STEP 2 → MOBILE
+    else if (step === 2) {
+      if (!/^[0-9]{10}$/.test(value)) {
+        setTimeout(() => {
+          addMessage(
+            "bot",
+            "Please enter a valid 10-digit mobile number."
+          );
+        }, 400);
+
+        setInput("");
+        return;
+      }
+
+      setUserData((prev) => ({
+        ...prev,
+        mobile: value,
+      }));
+
+      setTimeout(() => {
+        addMessage(
+          "bot",
+          "Perfect ✅\nWhat service are you looking for?"
+        );
+      }, 500);
+
+      setStep(3);
+    }
+
+    // STEP 3 → SERVICE
+    else if (step === 3) {
+      setUserData((prev) => ({
+        ...prev,
+        service: value,
+      }));
+
+      setTimeout(() => {
+        addMessage(
+          "bot",
+          `Awesome 🚀\nOur ${value} team will contact you shortly.\n\nYou can also schedule a consultation call directly below.`
+        );
+      }, 500);
+
+      setStep(4);
+    }
 
     setInput("");
+  };
+
+  const handleServiceSelect = (service) => {
+    addMessage("user", service);
+
+    setUserData((prev) => ({
+      ...prev,
+      service,
+    }));
 
     setTimeout(() => {
-      let reply =
-        "Thank you for contacting Sevenunique.";
+      addMessage(
+        "bot",
+        `Great choice ✅\nOur ${service} experts will connect with you shortly.\n\nYou can now schedule a consultation call.`
+      );
+    }, 500);
 
-      const msg = userMsg.toLowerCase();
-
-      if (msg.includes("website")) {
-        reply =
-          "We create scalable websites for startups and enterprises.";
-      }
-
-      else if (msg.includes("app")) {
-        reply =
-          "We build Android & iOS applications with modern UI.";
-      }
-
-      else if (msg.includes("ai")) {
-        reply =
-          "We provide AI chatbots & automation systems.";
-      }
-
-      else if (msg.includes("price")) {
-        reply =
-          "Pricing depends on project requirements. Schedule a consultation call.";
-      }
-
-      setMessages((prev) => [
-        ...prev,
-        {
-          type: "bot",
-          text: reply,
-        },
-      ]);
-    }, 600);
+    setStep(4);
   };
 
   return (
     <>
-      {/* BUTTON */}
+      {/* FLOAT BUTTON */}
       <button
         onClick={() => setOpen(!open)}
-        className="fixed bottom-4 right-4 z-[999] w-12 h-12 rounded-full bg-[#f4622a] hover:bg-[#df4e1f] shadow-xl text-white flex items-center justify-center transition-all duration-300"
+        className="fixed bottom-5 right-5 z-[999] w-14 h-14 rounded-full bg-[#f4622a] hover:bg-[#df4e1f] shadow-[0_15px_40px_rgba(244,98,42,0.35)] text-white flex items-center justify-center transition-all duration-300"
       >
-        {open ? <X size={20} /> : <MessageCircle size={20} />}
+        {open ? <X size={22} /> : <MessageCircle size={22} />}
       </button>
 
       {/* CHATBOX */}
       <div
-        className={`fixed bottom-20 right-4 z-[999] w-[300px] max-w-[calc(100vw-20px)] bg-white rounded-[22px] shadow-2xl border border-[#ececec] overflow-hidden transition-all duration-500 ${
+        className={`fixed bottom-24 right-5 z-[999] w-[360px] max-w-[calc(100vw-20px)] bg-white rounded-[30px] shadow-[0_25px_80px_rgba(0,0,0,0.12)] border border-[#efefef] overflow-hidden transition-all duration-500 ${
           open
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-10 pointer-events-none"
         }`}
       >
         {/* HEADER */}
-        <div className="bg-[#111] text-white p-3">
+        <div className="relative overflow-hidden bg-gradient-to-br from-[#111] to-[#1f1f1f] p-5">
+          <div className="absolute top-0 right-0 w-28 h-28 bg-[#f4622a]/10 rounded-full blur-3xl" />
 
-          <div className="flex items-center gap-3">
-
-            <div className="w-9 h-9 rounded-full overflow-hidden border border-white/20 bg-white flex items-center justify-center">
-  <img
-    src="/sevenLogo.png"
-    alt="Sevenunique"
-    className="w-full h-full object-cover"
-  />
-</div>
+          <div className="relative flex items-center gap-3">
+            <div className="w-11 h-11 rounded-full overflow-hidden bg-white p-1">
+              <img
+                src="/sevenLogo.png"
+                alt="Sevenunique"
+                className="w-full h-full object-contain rounded-full "
+              />
+            </div>
 
             <div>
-              <h3 className="font-semibold text-[14px]">
+              <h3 className="text-white font-semibold text-[15px]">
                 Sevenunique Support
               </h3>
 
-              <p className="text-white/60 text-[11px]">
-                Online
+              <p className="text-white/60 text-[12px] mt-0.5">
+                Typically replies instantly
               </p>
             </div>
           </div>
         </div>
 
         {/* BODY */}
-        <div className="h-[330px] overflow-y-auto p-3 bg-[#fafafa]">
+        <div className="h-[440px] overflow-y-auto bg-[#fafafa] px-4 py-4">
+          {/* SERVICE BUTTONS */}
+          {step === 3 && (
+            <div className="mb-5">
+              <p className="text-[12px] font-semibold text-[#111] mb-3">
+                Select Service
+              </p>
 
-          {/* FAQ */}
-          <div className="mb-4">
-
-            <p className="text-[12px] font-semibold text-[#111] mb-2">
-              Quick Questions
-            </p>
-
-            <div className="flex flex-wrap gap-2">
-
-              {faqs.map((item, i) => (
-                <button
-                  key={i}
-                  onClick={() => handleFAQ(item)}
-                  className="px-3 py-1.5 rounded-full bg-white border border-[#e7e7e7] text-[11px] font-medium text-[#111] hover:bg-[#f4622a] hover:text-white transition-all duration-300"
-                >
-                  {item.q}
-                </button>
-              ))}
+              <div className="flex flex-wrap gap-2">
+                {services.map((service, i) => (
+                  <button
+                    key={i}
+                    onClick={() => handleServiceSelect(service)}
+                    className="px-3 py-2 rounded-full bg-white border border-[#ececec] hover:border-[#f4622a] hover:bg-[#fff4ef] text-[11px] font-medium text-[#111] transition-all duration-300"
+                  >
+                    {service}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* MESSAGES */}
           <div className="space-y-3">
-
             {messages.map((msg, i) => (
               <div
                 key={i}
@@ -199,10 +227,10 @@ export default function ChatBot() {
                 }`}
               >
                 <div
-                  className={`max-w-[85%] px-3 py-2 rounded-2xl text-[12px] leading-6 whitespace-pre-line ${
+                  className={`max-w-[85%] px-4 py-3 rounded-3xl text-[13px] leading-6 whitespace-pre-line ${
                     msg.type === "user"
-                      ? "bg-[#f4622a] text-white rounded-br-sm"
-                      : "bg-white text-[#111] border border-[#ececec] rounded-bl-sm font-medium"
+                      ? "bg-[#f4622a] text-white rounded-br-md"
+                      : "bg-white border border-[#ececec] text-[#111] rounded-bl-md shadow-sm"
                   }`}
                 >
                   {msg.text}
@@ -211,51 +239,129 @@ export default function ChatBot() {
             ))}
           </div>
 
-          {/* CTA */}
-          <div className="mt-4 bg-[#fff4ef] border border-[#ffd9cc] rounded-2xl p-3">
+          {/* USER INFO CARD */}
+          {step >= 2 && (
+            <div className="mt-5 bg-white border border-[#ececec] rounded-2xl p-4">
+              <h4 className="text-[13px] font-semibold text-[#111] mb-3">
+                Your Details
+              </h4>
 
-            <h4 className="text-[13px] font-semibold text-[#111] mb-1">
-              Need Consultation?
-            </h4>
+              <div className="space-y-3">
+                {userData.name && (
+                  <div className="flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-xl bg-[#fff4ef] flex items-center justify-center">
+                      <User size={16} className="text-[#f4622a]" />
+                    </div>
 
-            <p className="text-[11px] text-[#555] leading-5 mb-3">
-              Talk directly with our team.
-            </p>
+                    <div>
+                      <p className="text-[11px] text-gray-500">Name</p>
+                      <p className="text-[13px] font-medium text-[#111]">
+                        {userData.name}
+                      </p>
+                    </div>
+                  </div>
+                )}
 
-            <Link
-              href="/schedule-a-call-page"
-              className="w-full flex items-center justify-center gap-2 bg-[#f4622a] hover:bg-[#df4e1f] text-white py-2.5 rounded-xl text-[12px] font-medium transition-all duration-300"
-            >
-              <Phone size={14} />
-              Schedule a Call
-            </Link>
-          </div>
+                {userData.mobile && (
+                  <div className="flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-xl bg-[#fff4ef] flex items-center justify-center">
+                      <Phone size={16} className="text-[#f4622a]" />
+                    </div>
+
+                    <div>
+                      <p className="text-[11px] text-gray-500">
+                        Mobile Number
+                      </p>
+                      <p className="text-[13px] font-medium text-[#111]">
+                        {userData.mobile}
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {userData.service && (
+                  <div className="flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-xl bg-[#fff4ef] flex items-center justify-center">
+                      <Briefcase
+                        size={16}
+                        className="text-[#f4622a]"
+                      />
+                    </div>
+
+                    <div>
+                      <p className="text-[11px] text-gray-500">
+                        Selected Service
+                      </p>
+                      <p className="text-[13px] font-medium text-[#111]">
+                        {userData.service}
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* SCHEDULE CALL */}
+          {step === 4 && (
+            <div className="mt-5 bg-gradient-to-br from-[#fff4ef] to-[#fffaf8] border border-[#ffd8ca] rounded-[24px] p-5">
+              <div className="flex items-start gap-3">
+                <div className="w-11 h-11 rounded-2xl bg-[#f4622a] text-white flex items-center justify-center flex-shrink-0">
+                  <CheckCircle2 size={20} />
+                </div>
+
+                <div>
+                  <h4 className="text-[15px] font-semibold text-[#111] mb-1">
+                    Consultation Ready
+                  </h4>
+
+                  <p className="text-[12px] text-[#555] leading-6 mb-4">
+                    Our expert team will understand your requirements and guide you with the best solution.
+                  </p>
+
+                  <Link
+                    href="/schedule-a-call-page"
+                    className="inline-flex items-center gap-2 bg-[#f4622a] hover:bg-[#df4e1f] text-white px-4 py-3 rounded-xl text-[13px] font-medium transition-all duration-300"
+                  >
+                    <CalendarDays size={16} />
+                    Schedule a Call
+                  </Link>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* INPUT */}
-        <div className="p-3 border-t border-[#ececec] bg-white">
+        {step !== 4 && (
+          <div className="p-4 border-t border-[#ececec] bg-white">
+            <div className="flex items-center gap-2">
+              <input
+                type={step === 2 ? "number" : "text"}
+                placeholder={
+                  step === 1
+                    ? "Enter your name..."
+                    : step === 2
+                    ? "Enter mobile number..."
+                    : "Type here..."
+                }
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyDown={(e) =>
+                  e.key === "Enter" && handleSend()
+                }
+                className="flex-1 h-12 px-4 rounded-2xl border border-[#e5e5e5] bg-[#fafafa] text-[#111] text-[13px] outline-none focus:border-[#f4622a]"
+              />
 
-          <div className="flex items-center gap-2">
-
-            <input
-              type="text"
-              placeholder="Type message..."
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) =>
-                e.key === "Enter" && handleSend()
-              }
-              className="flex-1 h-10 px-3 rounded-xl border border-[#dcdcdc] bg-white text-[#111] text-[12px] placeholder:text-[#888] outline-none focus:border-[#f4622a]"
-            />
-
-            <button
-              onClick={handleSend}
-              className="w-10 h-10 rounded-xl bg-[#f4622a] hover:bg-[#df4e1f] text-white flex items-center justify-center transition-all duration-300"
-            >
-              <Send size={15} />
-            </button>
+              <button
+                onClick={handleSend}
+                className="w-12 h-12 rounded-2xl bg-[#f4622a] hover:bg-[#df4e1f] text-white flex items-center justify-center transition-all duration-300"
+              >
+                <Send size={17} />
+              </button>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </>
   );

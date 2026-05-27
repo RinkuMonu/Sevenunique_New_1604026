@@ -156,35 +156,38 @@ export default function AwardsPage() {
 
             {/* RIGHT */}
             <div className="relative flex justify-center">
-              {/* Floating Card */}
-              <div className="absolute top-10 left-0 bg-white/10 backdrop-blur-lg border border-white/10 p-5 rounded-2xl shadow-2xl animate-bounce">
-                <p className="text-3xl font-black text-white">50+</p>
-                <span className="text-gray-300 text-sm">
-                  Global Recognitions
-                </span>
-              </div>
 
-              {/* Main Image */}
-              <div className="relative">
-                <div className="absolute inset-0 bg-orange-500/20 blur-3xl rounded-full scale-125" />
+  {/* Floating Card */}
+  <div className="absolute top-10 left-0 z-30 bg-white/25 backdrop-blur-2xl border border-white/30 p-5 rounded-2xl shadow-[0_8px_40px_rgba(0,0,0,0.35)] animate-bounce">
+    <p className="text-3xl font-black text-white">50+</p>
 
-                <img
-                  src="https://assets.bairesdev.com/image/upload/c_limit,w_429/dpr_auto/f_auto/q_auto/v1/www/core/awards_hero_98b9563c32"
-                  width={500}
-                  height={650}
-                  alt="Awards"
-                  className="relative z-10 object-contain drop-shadow-[0_30px_60px_rgba(249,115,22,0.4)]"
-                />
-              </div>
+    <span className="text-white/90 text-sm font-medium">
+      Global Recognitions
+    </span>
+  </div>
 
-              {/* Floating Badge */}
-              <div className="absolute bottom-10 right-0 bg-white rounded-2xl p-5 shadow-2xl">
-                <p className="text-3xl font-black text-gray-900">100%</p>
-                <span className="text-gray-500 text-sm">
-                  Client Satisfaction
-                </span>
-              </div>
-            </div>
+  {/* Main Image */}
+  <div className="relative z-10">
+    <div className="absolute inset-0 bg-orange-500/20 blur-3xl rounded-full scale-125" />
+
+    <img
+      src="/images/trophy.PNG"
+      width={500}
+      height={650}
+      alt="Awards"
+      className="relative z-10 object-contain drop-shadow-[0_30px_60px_rgba(249,115,22,0.4)]"
+    />
+  </div>
+
+  {/* Floating Badge */}
+  <div className="absolute bottom-10 right-0 z-30 bg-white/90 backdrop-blur-xl rounded-2xl p-5 shadow-[0_8px_40px_rgba(0,0,0,0.2)]">
+    <p className="text-3xl font-black text-gray-900">100%</p>
+
+    <span className="text-gray-600 text-sm font-medium">
+      Client Satisfaction
+    </span>
+  </div>
+</div>
           </div>
         </div>
       </section>

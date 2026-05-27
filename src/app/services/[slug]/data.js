@@ -491,58 +491,57 @@ toolsTech: toolsTech ?? (typeof defaultToolsTech !== "undefined" ? defaultToolsT
     expertsSection: createExpertsSection({
       serviceLine: label,
       experts: [
-        {
-          name: "Mateo L.",
-          role: "Sr. Backend Engineer",
-          experience: "11 years of experience",
-          skills: ["Python", "Node.js", "PostgreSQL"],
-          certifications: [
-            "AWS Certified Solutions Architect – Professional",
-            "Microsoft Certified: Azure Developer Associate",
-          ],
-        },
-        {
-          name: "Ricardo F.",
-          role: "Sr. Backend Architect",
-          experience: "14 years of experience",
-          skills: ["Kubernetes", "Terraform", "AWS"],
-          certifications: [
-            "AWS Certified Solutions Architect – Professional",
-            "Google Professional Cloud Architect",
-          ],
-        },
-        {
-          name: "Andrés M.",
-          role: "Sr. Database Engineer",
-          experience: "9 years of experience",
-          skills: ["PostgreSQL", "MongoDB", "Redis"],
-          certifications: [
-            "MongoDB Associate DBA",
-            "Oracle Database Administration",
-          ],
-        },
-        {
-          name: "Luciana V.",
-          role: "Sr. API Engineer",
-          experience: "10 years of experience",
-          skills: ["Kong", "Postman", "Node.js"],
-          certifications: [
-            "AWS Certified Developer – Associate",
-            "Kong Gateway Certified Associate",
-          ],
-        },
-        {
-          name: "Carlos D.",
-          role: "Sr. DevOps Engineer",
-          experience: "12 years of experience",
-          skills: ["Docker", "Jenkins", "GitHub Actions"],
-          certifications: [
-            "Certified Kubernetes Administrator",
-            "HashiCorp Certified: Terraform Associate",
-          ],
-        },
-
-      ],
+  {
+    name: "Aarav Sharma",
+    role: "Sr. Backend Engineer",
+    experience: "11 years of experience",
+    skills: ["Python", "Node.js", "PostgreSQL"],
+    certifications: [
+      "AWS Certified Solutions Architect – Professional",
+      "Microsoft Certified: Azure Developer Associate",
+    ],
+  },
+  {
+    name: "Rohan Mehta",
+    role: "Sr. Backend Architect",
+    experience: "14 years of experience",
+    skills: ["Kubernetes", "Terraform", "AWS"],
+    certifications: [
+      "AWS Certified Solutions Architect – Professional",
+      "Google Professional Cloud Architect",
+    ],
+  },
+  {
+    name: "Priyansh Verma",
+    role: "Sr. Database Engineer",
+    experience: "9 years of experience",
+    skills: ["PostgreSQL", "MongoDB", "Redis"],
+    certifications: [
+      "MongoDB Associate DBA",
+      "Oracle Database Administration",
+    ],
+  },
+  {
+    name: "Ananya Kapoor",
+    role: "Sr. API Engineer",
+    experience: "10 years of experience",
+    skills: ["Kong", "Postman", "Node.js"],
+    certifications: [
+      "AWS Certified Developer – Associate",
+      "Kong Gateway Certified Associate",
+    ],
+  },
+  {
+    name: "Vikram Singh",
+    role: "Sr. DevOps Engineer",
+    experience: "12 years of experience",
+    skills: ["Docker", "Jenkins", "GitHub Actions"],
+    certifications: [
+      "Certified Kubernetes Administrator",
+      "HashiCorp Certified: Terraform Associate",
+    ],
+  },
+]
     })
   };
 }

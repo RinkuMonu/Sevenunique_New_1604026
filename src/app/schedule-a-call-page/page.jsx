@@ -7,17 +7,54 @@ import {
   MapPin,
   Phone,
 } from "lucide-react";
+
 import { useState } from "react";
 
 export default function Page() {
   const [form, setForm] = useState({
     name: "",
     email: "",
+    phone: "",
     service: "",
     comments: "",
   });
 
   const [success, setSuccess] = useState(false);
+
+  const offices = [
+    {
+      city: "Jaipur",
+      title: "Jaipur Head Office",
+      address:
+        "Plot No 97, Dakshinpuri - I Shrikishan, Sanganer, Jagatpura, Jaipur, Rajasthan 302017",
+      phone: "+91 141-4511098",
+      email: "info@sevenunique.com",
+    },
+    {
+      city: "Mumbai",
+      title: "Mumbai Office",
+      address:
+        "No. 101/2, Vakratunda Corporate Park, Off Aarey Road, Goregaon East, Mumbai – 400063",
+      phone: "+91 141-4511098",
+      email: "info@sevenunique.com",
+    },
+    {
+      city: "Dubai",
+      title: "UAE Office",
+      address:
+        "Office Number 01-02, C-1 Building, Ajman Free Zone, Dubai, United Arab Emirates",
+      phone: "+971 55 000 0000",
+      email: "salesuae@sevenunique.com",
+    },
+    {
+      city: "USA",
+      title: "USA Office",
+      address:
+        "514 State Shelton Street Garden, Wisconsin, USA – 55309",
+      phone: "+1 414 000 0000",
+      email: "salesusa@sevenunique.com",
+    },
+  ];
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -28,42 +65,41 @@ export default function Page() {
 
     setSuccess(true);
 
-    // reset form
     setForm({
       name: "",
       email: "",
+      phone: "",
       service: "",
       comments: "",
     });
 
-    // hide alert after 3 sec
     setTimeout(() => {
       setSuccess(false);
     }, 3000);
   };
 
   return (
-    <div className="min-h-screen bg-[#f5f7fb] px-4 py-10">
+    <div className="min-h-screen bg-[#f6f7fb] px-4 py-10 md:py-16">
       <div className="max-w-[1180px] mx-auto">
-        {/* TOP HEADING */}
-        <div className="text-center mb-14">
-          <span className="text-sm text-gray-500 uppercase tracking-[3px]">
+        {/* HEADING */}
+        <div className="text-center mb-10">
+          <span className="text-[12px] tracking-[4px] uppercase text-[#f4622a] font-semibold">
             Contact Us
           </span>
 
-          <h1 className="text-[38px] md:text-[52px] leading-[1.1] font-semibold text-[#111] mt-4">
-            Let’s discuss your next project
+          <h1 className="text-[34px] md:text-[54px] font-bold text-[#111] leading-[1.1] mt-4">
+            Let’s build something amazing
           </h1>
 
-          <p className="text-gray-500 text-[17px] leading-8 mt-5 max-w-[700px] mx-auto">
-            Share your requirements with us and our team will connect
-            with you to build the perfect solution for your business.
+          <p className="text-gray-500 text-[15px] md:text-[17px] leading-7 max-w-[700px] mx-auto mt-5">
+            Connect with our team for web development, mobile apps,
+            AI solutions, ERP systems, and custom software services.
           </p>
         </div>
 
-        {/* SUCCESS ALERT */}
+        {/* SUCCESS */}
         {success && (
-          <div className="fixed top-6 right-6 z-50 bg-white border border-green-200 shadow-lg rounded-2xl px-5 py-4 flex items-center gap-3 animate-bounce">
+          <div className="fixed top-6 right-6 z-50 bg-white border border-green-200 rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3">
             <div className="w-11 h-11 rounded-full bg-green-100 flex items-center justify-center">
               <CheckCircle2
                 size={22}
@@ -73,128 +109,130 @@ export default function Page() {
 
             <div>
               <h3 className="font-semibold text-[#111]">
-                Success
+                Inquiry Submitted
               </h3>
 
               <p className="text-sm text-gray-500">
-                Inquiry submitted successfully 🚀
+                Our team will contact you soon 🚀
               </p>
             </div>
           </div>
         )}
 
-        {/* MAIN SECTION */}
-        <div className="grid lg:grid-cols-2 gap-8 items-stretch">
-          {/* LEFT CONTACT CARD */}
-          <div className="bg-white rounded-[32px] p-8 md:p-10 border border-gray-200 flex flex-col justify-between">
-            {/* LOGO */}
-            <div>
+        {/* MAIN CARD */}
+        <div className="bg-white border border-gray-200 rounded-[32px] overflow-hidden shadow-sm">
+          <div className="grid lg:grid-cols-[1.1fr_0.9fr]">
+            {/* LEFT */}
+            <div className="p-6 md:p-10 border-b lg:border-b-0 lg:border-r border-gray-200">
+              {/* LOGO */}
               <img
                 src="/sevenLogo.png"
-                alt="logo"
+                alt="Sevenunique"
                 className="w-[140px]"
               />
 
-              <div className="mt-10">
-                <h2 className="text-[34px] font-semibold text-[#111] leading-[46px]">
-                  Get in touch with us
+              <div className="mt-8">
+                <h2 className="text-[32px] md:text-[42px] leading-[1.15] font-bold text-[#111]">
+                  Get in touch with our team
                 </h2>
 
-                <p className="text-gray-500 leading-7 mt-4">
-                  We help startups and businesses create scalable
-                  web, mobile, and software solutions.
+                <p className="text-gray-500 leading-7 mt-4 text-[15px]">
+                  We help startups and enterprises create scalable
+                  digital products with modern technologies.
                 </p>
               </div>
 
-              {/* CONTACT ITEMS */}
-              <div className="space-y-7 mt-12">
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-[#f5f5f5] flex items-center justify-center shrink-0">
-                    <MapPin size={20} />
-                  </div>
+              {/* OFFICES */}
+              <div className="grid sm:grid-cols-2 gap-4 mt-10">
+                {offices.map((office, index) => (
+                  <div
+                    key={index}
+                    className="rounded-3xl border border-gray-200 p-5 hover:border-[#f4622a] transition-all duration-300"
+                  >
+                    <div className="flex items-center gap-2 mb-4">
+                      <div className="w-10 h-10 rounded-2xl bg-[#fff4ef] flex items-center justify-center">
+                        <MapPin
+                          size={18}
+                          className="text-[#f4622a]"
+                          strokeWidth={2.4}
+                        />
+                      </div>
 
-                  <div>
-                    <p className="text-sm text-gray-400 mb-1">
-                      Office Location
+                      <div>
+                        <h3 className="font-semibold text-[#111] text-[15px]">
+                          {office.city}
+                        </h3>
+
+                        <p className="text-[12px] text-gray-400">
+                          {office.title}
+                        </p>
+                      </div>
+                    </div>
+
+                    <p className="text-[13px] leading-6 text-gray-600 mb-4">
+                      {office.address}
                     </p>
 
-                    <h3 className="font-medium text-[#111] leading-7">
-                      Plot No 97, Dakshinpuri - I Shrikishan,
-                      Sanganer, Jagatpura, Jaipur, Rajasthan
-                      302017
-                    </h3>
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2 text-[13px] text-[#111] font-medium">
+                        <Phone
+                          size={15}
+                          className="text-[#f4622a]"
+                          strokeWidth={2.5}
+                        />
+                        {office.phone}
+                      </div>
+
+                      <div className="flex items-center gap-2 text-[13px] text-[#111] font-medium break-all">
+                        <Mail
+                          size={15}
+                          className="text-[#f4622a]"
+                          strokeWidth={2.5}
+                        />
+                        {office.email}
+                      </div>
+                    </div>
                   </div>
-                </div>
+                ))}
+              </div>
 
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-[#f5f5f5] flex items-center justify-center shrink-0">
-                    <Mail size={20} />
-                  </div>
-
-                  <div>
-                    <p className="text-sm text-gray-400 mb-1">
-                      Email Address
-                    </p>
-
-                    <h3 className="font-medium text-[#111]">
-                      info@sevenunique.com
-                    </h3>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-[#f5f5f5] flex items-center justify-center shrink-0">
-                    <Phone size={20} />
-                  </div>
-
-                  <div>
-                    <p className="text-sm text-gray-400 mb-1">
-                      Phone Number
-                    </p>
-
-                    <h3 className="font-medium text-[#111]">
-                      +91 141-4511098
-                    </h3>
-                  </div>
-                </div>
+              {/* MAP */}
+              <div className="mt-8 overflow-hidden rounded-[28px] border border-gray-200">
+                <iframe
+                  src="https://www.google.com/maps?q=Jaipur,Rajasthan&output=embed"
+                  width="100%"
+                  height="240"
+                  loading="lazy"
+                  className="w-full"
+                ></iframe>
               </div>
             </div>
 
-            {/* MAP */}
-            <div className="mt-10 overflow-hidden rounded-3xl border border-gray-200">
-              <iframe
-                src="https://www.google.com/maps?q=Jaipur,Rajasthan&output=embed"
-                width="100%"
-                height="250"
-                loading="lazy"
-                className="w-full"
-              ></iframe>
-            </div>
-          </div>
-
-          {/* RIGHT FORM */}
-          <div className="bg-white rounded-[32px] p-8 md:p-10 border border-gray-200 flex flex-col justify-between">
-            <div>
-              <div className="mb-10">
-                <h2 className="text-[34px] font-semibold text-[#111]">
+            {/* RIGHT FORM */}
+            <div className="p-6 md:p-10 bg-[#fcfcfc]">
+              <div className="mb-8">
+                <span className="text-[12px] uppercase tracking-[3px] text-[#f4622a] font-semibold">
                   Start a Project
+                </span>
+
+                <h2 className="text-[32px] md:text-[42px] font-bold text-[#111] leading-[1.15] mt-4">
+                  Tell us about your idea
                 </h2>
 
-                <p className="text-gray-500 mt-4 leading-7">
-                  Fill out the form below and our team will get
-                  back to you within 24 hours.
+                <p className="text-gray-500 leading-7 mt-4 text-[15px]">
+                  Fill out the form and our experts will connect
+                  with you within 24 hours.
                 </p>
               </div>
 
-              {/* FORM */}
               <form
                 onSubmit={handleSubmit}
-                className="space-y-7"
+                className="space-y-5"
               >
                 {/* NAME */}
                 <div>
-                  <label className="text-sm text-gray-600 block mb-2">
-                    Your Name
+                  <label className="text-sm font-medium text-[#111] block mb-2">
+                    Full Name
                   </label>
 
                   <input
@@ -210,14 +248,14 @@ export default function Page() {
                       }
                     }}
                     placeholder="Enter your name"
-                    className="w-full h-[58px] px-5 rounded-2xl border border-gray-200 outline-none focus:border-black transition text-[#111] placeholder:text-gray-400"
+                    className="w-full h-[56px] rounded-2xl border border-gray-200 bg-white px-5 outline-none focus:border-[#f4622a] text-[#111] placeholder:text-gray-400 transition"
                   />
                 </div>
 
                 {/* EMAIL */}
                 <div>
-                  <label className="text-sm text-gray-600 block mb-2">
-                    Work Email
+                  <label className="text-sm font-medium text-[#111] block mb-2">
+                    Email Address
                   </label>
 
                   <input
@@ -227,29 +265,53 @@ export default function Page() {
                     required
                     onChange={handleChange}
                     placeholder="example@gmail.com"
-                    className="w-full h-[58px] px-5 rounded-2xl border border-gray-200 outline-none focus:border-black transition text-[#111] placeholder:text-gray-400"
+                    className="w-full h-[56px] rounded-2xl border border-gray-200 bg-white px-5 outline-none focus:border-[#f4622a] text-[#111] placeholder:text-gray-400 transition"
+                  />
+                </div>
+
+                {/* PHONE */}
+                <div>
+                  <label className="text-sm font-medium text-[#111] block mb-2">
+                    Phone Number
+                  </label>
+
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={form.phone}
+                    required
+                    maxLength={10}
+                    onChange={(e) => {
+                      const value = e.target.value;
+
+                      if (/^[0-9]*$/.test(value)) {
+                        handleChange(e);
+                      }
+                    }}
+                    placeholder="Enter mobile number"
+                    className="w-full h-[56px] rounded-2xl border border-gray-200 bg-white px-5 outline-none focus:border-[#f4622a] text-[#111] placeholder:text-gray-400 transition"
                   />
                 </div>
 
                 {/* SERVICES */}
                 <div>
-                  <label className="text-sm text-gray-600 block mb-3">
+                  <label className="text-sm font-medium text-[#111] block mb-3">
                     Select Service
                   </label>
 
-                  <div className="flex flex-wrap gap-3">
+                  <div className="grid grid-cols-2 gap-3">
                     {[
                       "Web Development",
                       "Mobile App",
-                      "UI/UX Design",
-                      "Software Development",
+                      "AI Solutions",
+                      "ERP Software",
                     ].map((item) => (
                       <label
                         key={item}
-                        className={`px-5 py-3 rounded-2xl border cursor-pointer text-sm font-medium transition ${
+                        className={`h-[52px] rounded-2xl border flex items-center justify-center text-[13px] font-medium cursor-pointer transition ${
                           form.service === item
-                            ? "bg-black text-white border-black"
-                            : "border-gray-200 text-gray-700 hover:border-black"
+                            ? "bg-[#111] text-white border-[#111]"
+                            : "bg-white border-gray-200 text-[#111] hover:border-[#111]"
                         }`}
                       >
                         <input
@@ -269,36 +331,36 @@ export default function Page() {
 
                 {/* MESSAGE */}
                 <div>
-                  <label className="text-sm text-gray-600 block mb-2">
+                  <label className="text-sm font-medium text-[#111] block mb-2">
                     Project Details
                   </label>
 
                   <textarea
-                    rows={6}
+                    rows={5}
                     name="comments"
                     value={form.comments}
                     required
                     onChange={handleChange}
                     placeholder="Tell us about your project..."
-                    className="w-full px-5 py-4 rounded-2xl border border-gray-200 outline-none resize-none focus:border-black transition text-[#111] placeholder:text-gray-400"
+                    className="w-full rounded-2xl border border-gray-200 bg-white px-5 py-4 outline-none resize-none focus:border-[#f4622a] text-[#111] placeholder:text-gray-400 transition"
                   />
                 </div>
 
                 {/* BUTTON */}
                 <button
                   type="submit"
-                  className="w-full h-[58px] rounded-2xl bg-black text-white font-medium flex items-center justify-center gap-2 hover:bg-gray-900 transition cursor-pointer"
+                  className="w-full h-[58px] rounded-2xl bg-[#111] hover:bg-[#000] text-white font-medium flex items-center justify-center gap-2 transition-all duration-300"
                 >
                   Submit Inquiry
                   <ArrowRight size={18} />
                 </button>
               </form>
-            </div>
 
-            {/* FOOTER */}
-            <div className="flex gap-6 mt-10 text-sm text-gray-400">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
+              {/* FOOTER */}
+              <div className="flex gap-5 mt-8 text-sm text-gray-400">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+              </div>
             </div>
           </div>
         </div>

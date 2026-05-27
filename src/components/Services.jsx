@@ -4,185 +4,146 @@ import Link from "next/link";
 
 const services = [
   {
-    title: "Website Development",
-    desc: "Build fast, responsive, and scalable websites designed for startups, businesses, and enterprises.",
-    tags: [
-      { name: "Business Website", link: "/services/web-development" },
-      { name: "React.js", link: "/technologies/react" },
-      { name: "Next.js", link: "/technologies/nextjs" },
-      { name: "Responsive Design", link: "/services/frontend-development" },
-    ],
-
-    icon: (
-      <img
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-        alt="React"
-        className="w-8 h-8"
-      />
-    ),
+    title: "Web Development",
+    image:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    height: "h-[250px]",
+    link: "/services/web-development",
   },
-
   {
     title: "Software Development",
-    desc: "Develop custom ERP, CRM, billing, automation, and enterprise software solutions.",
-    tags: [
-      { name: "ERP Software", link: "/services/software-development" },
-      { name: "CRM Development", link: "/services/crm-development" },
-      { name: "School ERP", link: "/services/school-management" },
-      { name: "Automation", link: "/services/automation" },
-    ],
-
-    icon: (
-      <img
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-        alt="Node"
-        className="w-8 h-8"
-      />
-    ),
+    image:
+      "https://images.unsplash.com/photo-1515879218367-8466d910aaa4",
+    height: "h-[520px]",
+    link: "/services/saas-development",
   },
-
   {
-    title: "AI & Automation",
-    desc: "Integrate AI-powered tools, automation systems, and smart workflows into your business.",
-    tags: [
-      { name: "AI Chatbot", link: "/services/ai-chatbot" },
-      { name: "Automation", link: "/services/automation" },
-      { name: "Machine Learning", link: "/services/machine-learning" },
-      { name: "OpenAI", link: "/technologies/openai" },
-    ],
-
-    icon: (
-      <img
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-        alt="Python"
-        className="w-8 h-8"
-      />
-    ),
+    title: "UI/UX Development",
+    image:
+      "https://images.unsplash.com/photo-1558655146-9f40138edfeb",
+    height: "h-[250px]",
+    link: "/services/ui-ux-design",
   },
-
   {
     title: "Mobile App Development",
-    desc: "Create modern Android and iOS apps with secure APIs and smooth user experiences.",
-    tags: [
-      { name: "Android App", link: "/services/android-app-development" },
-      { name: "iOS App", link: "/services/ios-app-development" },
-      { name: "React Native", link: "/technologies/react-native" },
-      { name: "Flutter", link: "/technologies/flutter" },
-    ],
-
-    icon: (
-      <img
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
-        alt="Flutter"
-        className="w-8 h-8"
-      />
-    ),
+    image:
+      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c",
+    height: "h-[250px]",
+    link: "/services/mobile-app-development",
   },
-
   {
-    title: "UI/UX Designing",
-    desc: "Design clean, modern, and user-focused interfaces that improve customer experience.",
-    tags: [
-      { name: "UI Design", link: "/services/ui-ux-design" },
-      { name: "UX Research", link: "/services/ui-ux-design" },
-      { name: "Figma Design", link: "/technologies/figma" },
-      { name: "Prototype", link: "/services/prototype-design" },
-    ],
-
-    icon: (
-      <img
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-        alt="Figma"
-        className="w-8 h-8"
-      />
-    ),
+    title: "Hire Remote Developers",
+    image:
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+    height: "h-[250px]",
+    link: "/services/jobOp",
   },
-
   {
-    title: "Digital Marketing & SEO",
-    desc: "Boost your online presence with SEO, branding, social media, and performance marketing.",
-    tags: [
-      { name: "SEO", link: "/services/seo" },
-      { name: "Google Ads", link: "/services/google-ads" },
-      { name: "Social Media", link: "/services/social-media-marketing" },
-      { name: "Branding", link: "/services/branding" },
-    ],
-
-    icon: (
-      <img
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg"
-        alt="Google"
-        className="w-8 h-8"
-      />
-    ),
+    title: "QA Solutions",
+    image:
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+    height: "h-[520px]",
+    link: "/services/qa-testing",
   },
 ];
 
 export default function Services() {
   return (
-    <section className="px-6 py-16 lg:py-20 bg-white">
+    <section className="bg-white py-16 px-4 md:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto">
 
-        {/* HEADING */}
-        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 mb-12">
+        {/* Heading */}
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
 
-          <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight leading-[1.12] max-w-3xl text-[#191919]">
-            Your Trusted Partner For
-            <br />
-            Web, App & Software Solutions
-            <span className="text-[#f4622a]">.</span>
-          </h2>
+          <div>
+            <p className="text-[#f4622a] font-semibold mb-3 tracking-wide uppercase text-sm">
+              Our Expertise
+            </p>
+
+            <h2 className="text-4xl md:text-5xl font-bold text-[#111827] leading-tight max-w-4xl">
+              Transforming Ideas Into
+              <span className="text-[#f4622a]">
+                {" "}Digital Solutions
+              </span>
+            </h2>
+          </div>
 
           <Link
             href="/services"
-            className="shrink-0 inline-flex items-center gap-2 text-[15px] text-[#1f1f1f] border-b border-[#1f1f1f] pb-1 transition-colors"
+            className="inline-flex items-center gap-2 text-[#111827] border border-gray-300 px-6 py-3 rounded-full hover:bg-[#f4622a] hover:text-white hover:border-[#f4622a] transition-all duration-300 w-fit"
           >
-            Explore All Services
-            <span aria-hidden>→</span>
+            Explore Services →
           </Link>
         </div>
 
-        {/* CARDS */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {/* Masonry Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
-          {services.map((svc) => (
-            <div
-              key={svc.title}
-              className="group bg-[#f4f4f6] border border-[#ececef] rounded-2xl p-8 min-h-[290px] hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-            >
+          {/* LEFT COLUMN */}
+          <div className="flex flex-col gap-5">
+            <ServiceCard service={services[0]} />
+            <ServiceCard service={services[3]} />
+          </div>
 
-              {/* ICON */}
-              <div className="w-16 h-16 bg-white border border-[#ececef] text-[#191919]  group-hover:text-white rounded-2xl flex items-center justify-center mb-6 transition-all duration-300">
-                {svc.icon}
-              </div>
+          {/* CENTER LARGE */}
+          <div>
+            <ServiceCard service={services[1]} />
+          </div>
 
-              {/* TITLE */}
-              <h3 className="text-2xl font-semibold mb-3 text-[#1f1f1f] leading-[1.3]">
-                {svc.title}
-              </h3>
+          {/* CENTER SMALL */}
+          <div className="flex flex-col gap-5">
+            <ServiceCard service={services[2]} />
+            <ServiceCard service={services[4]} />
+          </div>
 
-              {/* DESCRIPTION */}
-              <p className="text-[15px] text-[#4f4f56] leading-relaxed mb-6">
-                {svc.desc}
-              </p>
+          {/* RIGHT LARGE */}
+          <div>
+            <ServiceCard service={services[5]} />
+          </div>
 
-              {/* TAGS */}
-              <div className="flex flex-wrap gap-2">
-
-                {svc.tags.map((tag) => (
-                  <Link
-                    key={tag.name}
-                    href={tag.link}
-                    className="inline-flex items-center px-3 py-1.5 text-[14px] text-[#1764ca] border border-[#8db2e2] rounded-lg hover:bg-[#1764ca] hover:text-white transition-all duration-200"
-                  >
-                    {tag.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
+  );
+}
+
+/* CARD */
+function ServiceCard({ service }) {
+  return (
+    <Link
+      href={service.link}
+      className={`group relative overflow-hidden rounded-[28px] ${service.height} cursor-pointer shadow-lg block`}
+    >
+      {/* Background Image */}
+      <img
+        src={service.image}
+        alt={service.title}
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+      />
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/45 group-hover:bg-black/55 transition-all duration-300" />
+
+      {/* Orange Glow */}
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-t from-[#f4622a]/30 to-transparent" />
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col justify-between h-full p-7">
+        
+        {/* Title */}
+        <div>
+          <h3 className="text-white text-3xl font-bold leading-tight max-w-[220px]">
+            {service.title}
+          </h3>
+        </div>
+
+        {/* Button */}
+        <div className="translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+          <span className="inline-block bg-white text-black px-5 py-2.5 rounded-full font-medium hover:bg-[#f4622a] hover:text-white transition">
+            View Service →
+          </span>
+        </div>
+      </div>
+    </Link>
   );
 }

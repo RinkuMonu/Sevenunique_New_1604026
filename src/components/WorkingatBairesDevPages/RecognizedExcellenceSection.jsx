@@ -5,22 +5,56 @@ export default function RecognizedExcellenceSection() {
     {
       title: "CLUTCH",
       subtitle: "Top web development company",
+      image:
+        "https://assets.bairesdev.com/image/upload/c_limit,w_160/dpr_auto/f_auto/q_auto/v1/www/static/award-clutch_gz9kek?_a=BAVAfVDW0",
     },
     {
-      title: "G2",
+      title: "ISO Certified",
       subtitle: "Leader in software development",
+      image:
+        "/images/iso.png",
     },
     {
-      title: "DELOITTE",
+      title: "MSME Certified",
       subtitle: "Technology fast 500",
+      image:
+        "/images/msme.png",
     },
     {
-      title: "Inc.",
+      title: "PCI DSS Certified",
       subtitle: "Top 5000 fastest growing",
+      image:
+        "/images/pcidss.png",
     },
     {
-      title: "Inc.",
-      subtitle: "Top 5000 fastest growing",
+      title: "KAB Award",
+      subtitle: "Best innovation company",
+      image:
+        "/images/kab.png",
+    },
+      {
+      title: "QRO Award",
+      subtitle: "Best innovation company",
+      image:
+        "/images/qro.jpg"
+    },
+      {
+      title: "DPIIT Certified",
+      subtitle: "Best innovation company",
+      image:
+        "/images/dpiit-logo.png"
+    },
+      {
+      title: "Certified Company",
+      subtitle: "Best innovation company",
+      image:
+        "/images/certified.avif"
+    },
+      {
+      title: "IAF Award",
+      subtitle: "Best innovation company",
+      image:
+        "/images/iaf.png"
     },
   ];
 
@@ -30,28 +64,37 @@ export default function RecognizedExcellenceSection() {
         <h2 className="text-4xl font-bold text-gray-900 mb-6">
           Recognized Excellence
         </h2>
+
         <p className="text-gray-600 text-base leading-relaxed max-w-2xl mx-auto">
-         Awards that reflect our commitment to innovation and quality. We’re proud to be recognized for our achievements.
+          Awards that reflect our commitment to innovation and quality. We’re
+          proud to be recognized for our achievements.
         </p>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+      <div className="grid grid-cols-4 md:grid-cols-3 gap-6">
         {awards.map((award, idx) => (
-          <div key={idx} className="p-8 rounded-lg text-center">
-            <div className=" w-35 h-35 rounded-lg mx-auto mb-4 flex items-center justify-center">
+          <div
+            key={idx}
+            className="p-6 rounded-2xl border border-gray-300 hover:shadow-lg transition-all duration-300 text-center bg-white"
+          >
+            <div className="relative w-full h-[90px] mb-6 flex items-center justify-center">
               <Image
-                src="https://assets.bairesdev.com//image/upload/c_limit,w_160/dpr_auto/f_auto/q_auto/v1/www/static/award-clutch_gz9kek?_a=BAVAfVDW0"
-                width={700}
-                height={600}
-                className="object-cover w-full h-full"
+                src={award.image}
+                width={160}
+                height={80}
+                className="object-contain w-auto h-full"
                 priority
-                alt="img"
+                alt={award.title}
               />
             </div>
+
             <p className="font-semibold text-gray-900 text-lg mb-2">
               {award.title}
             </p>
-            <p className="text-gray-600 text-md">{award.subtitle}</p>
+
+            <p className="text-gray-600 text-sm leading-6">
+              {award.subtitle}
+            </p>
           </div>
         ))}
       </div>

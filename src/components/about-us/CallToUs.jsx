@@ -7,15 +7,15 @@ export default function CallToAction() {
     <section className="w-full bg-black text-white py-20 flex flex-col items-center justify-center text-center relative overflow-hidden">
 
       {/* Top Image */}
-      <div className="relative w-[420px] h-[260px] mb-10">
-        <Image
-          src="/images/handonhand.png"
-          alt="Team working"
-          fill
-          className="object-contain"
-          priority
-        />
-      </div>
+   <div className="relative w-[420px] h-[260px] mb-10">
+  <Image
+    src="/images/handonhand.png"
+    alt="Team working"
+    fill
+    className="object-contain rotate-90"
+    priority
+  />
+</div>
 
       {/* Text Content */}
       <div className="max-w-2xl px-4">

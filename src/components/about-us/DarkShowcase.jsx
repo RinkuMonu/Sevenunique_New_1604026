@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function DarkShowcase() {
   return (
-    <section className="relative bg-black py-32 px-6 overflow-visible mt-10">
+    <section className="relative bg-black pt-32 pb-10 px-6 overflow-visible mt-10">
       {/* FLOATING IMAGE */}
       <div className="absolute top-[-40px] left-1/2 -translate-x-1/2 z-20">
         <div className="w-[450px] h-[300px] relative">
