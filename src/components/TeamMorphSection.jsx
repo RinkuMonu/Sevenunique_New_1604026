@@ -184,22 +184,10 @@ export default function TeamSection() {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="mt-24 text-center">
-
-          <h3 className="text-[38px] sm:text-[52px] font-semibold text-[#111] mb-6">
-            Let’s Build Future-Ready Digital Solutions
-          </h3>
-
-          <p className="text-[#666] max-w-2xl mx-auto leading-8 text-[17px] mb-10">
-            From web applications and enterprise software
-            to scalable cloud-based systems, our team helps
-            businesses transform ideas into impactful digital products.
-          </p>
-
+       
         
-        </div>
       </div>
     </section>
+    
   );
 }

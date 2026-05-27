@@ -17,7 +17,7 @@ export default function TestimonialSection() {
   const testimonials = [
     {
       logo:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop",
+        "/images/1.png",
       text: "Their team delivered a modern and highly responsive website that completely transformed our online presence. The design and performance exceeded our expectations.",
       name: "Rahul Sharma",
       role: "Founder at Nexora Solutions",
@@ -25,7 +25,7 @@ export default function TestimonialSection() {
 
     {
       logo:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop",
+        "/images/2.jpeg",
       text: "We partnered with them for mobile app development, and the results were outstanding. The Android and iOS applications were smooth and scalable.",
       name: "Priya Verma",
       role: "Director at UrbanTech",
@@ -33,7 +33,7 @@ export default function TestimonialSection() {
 
     {
       logo:
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=400&auto=format&fit=crop",
+        "/images/5.png",
       text: "Their SEO and digital marketing strategies significantly improved our search rankings and online visibility within a short time.",
       name: "Amit Singh",
       role: "Marketing Head at Growify",
@@ -41,7 +41,7 @@ export default function TestimonialSection() {
 
     {
       logo:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop",
+        "/images/8.png",
       text: "The UI/UX design team created an intuitive and visually stunning interface for our platform that improved customer engagement.",
       name: "Neha Kapoor",
       role: "CEO at Bright India Tech",
@@ -49,7 +49,7 @@ export default function TestimonialSection() {
 
     {
       logo:
-        "https://images.unsplash.com/photo-1504257432389-52343af06ae3?q=80&w=400&auto=format&fit=crop",
+        "/images/7.png",
       text: "From backend architecture to frontend development, their developers handled the entire project professionally and efficiently.",
       name: "Vikram Patel",
       role: "CTO at Innovexa India",
@@ -102,7 +102,7 @@ export default function TestimonialSection() {
 
               <div>
                 <h3 className="text-4xl font-bold text-[#f4622a]">
-                  1200+
+                  3500+
                 </h3>
                 <p className="text-gray-500 text-sm mt-2">
                   Projects Delivered

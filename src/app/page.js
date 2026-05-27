@@ -14,6 +14,9 @@ import AwardsSection from "@/components/AwardsSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import TeamMorphSection from "@/components/TeamMorphSection";
 import ProcessTimelineSection from "@/components/ProcessTimelineSection";
+import SlidingProjectsSection from "@/components/ProjectBanner";
+import NewsCTASection from "@/components/NewsSection";
+
 
 export default function Home() {
   return (
@@ -21,10 +24,12 @@ export default function Home() {
      <Hero />
      <ClientLogos />
       <Services />
+      <NewsCTASection />
      {/* <FeaturedSection /> */}
      <TestimonialSlider />
      <AwardsSection />
      <WhyChooseUs />
+  <SlidingProjectsSection />
      <TeamMorphSection />
      <ProcessTimelineSection />  
      {/* <BlogInsights /> */}
