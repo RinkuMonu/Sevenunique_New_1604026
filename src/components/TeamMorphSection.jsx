@@ -49,7 +49,7 @@ export default function TeamSection() {
               Our Team
             </p>
 
-            <h2 className="text-[42px] sm:text-[58px] leading-[1.1] font-semibold text-[#111] mb-7">
+            <h2 className="text-[42px] md:text-[50px] leading-[1.1] font-semibold text-[#111] mb-7">
               The Experts Behind <br />
               Every Successful Project
             </h2>
@@ -119,25 +119,25 @@ export default function TeamSection() {
                 src="/team/p1.png"
                 alt="Founder"
                 fill
-                className="object-cover object-top"
+                className="object-contain object-top"
               />
 
               {/* OVERLAY */}
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
 
               {/* CONTENT */}
-              <div className="absolute bottom-0 left-0 p-10 text-white">
+              <div className="absolute -bottom-6 left-0 p-10 text-white">
 
                 <p className="uppercase tracking-[4px] text-sm text-white/60 mb-4">
                   Leadership & Innovation
                 </p>
 
-                <h3 className="text-[38px] leading-tight font-semibold mb-5">
+                <h3 className="text-[32px] leading-tight font-semibold mb-5">
                   Delivering Digital Excellence <br />
                   Through Innovation
                 </h3>
 
-                <p className="text-white/70 leading-7 text-[16px] max-w-md">
+                <p className="text-white/70 leading-7 text-[14px] max-w-md">
                   We focus on creating secure, scalable, and
                   modern digital solutions that help businesses
                   streamline operations and accelerate growth.

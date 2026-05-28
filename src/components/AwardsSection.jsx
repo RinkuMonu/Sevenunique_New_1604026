@@ -118,9 +118,7 @@ export default function AwardsSection() {
                 solution we create for businesses worldwide.
               </p>
 
-              <button className="text-[#f4622a] text-sm font-medium border-b border-[#f4622a] pb-1 hover:opacity-80 transition">
-                Our trophy cabinet →
-              </button>
+
             </div>
 
             {/* CENTER STATS */}

@@ -66,7 +66,7 @@ export default function ProjectsBannerSlider() {
     Our Utility Service Finunique Mobile Application, Website & Admin Panel
   </h2>
 
-  <p className="max-w-3xl mx-auto text-[#666] text-[17px] leading-8">
+  <p className="max-w-4xl mx-auto text-[#666] text-[17px] leading-8">
     We build powerful utility service mobile apps, responsive websites,
     and advanced admin panels designed for seamless management,
     automation, secure transactions, and exceptional user experiences.

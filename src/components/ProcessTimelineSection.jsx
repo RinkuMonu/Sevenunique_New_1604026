@@ -67,16 +67,16 @@ export default function ProcessTimelineSection() {
             <div key={index} className="relative">
               {/* CONNECTING LINE */}
               {index !== steps.length - 1 && (
-                <div className="hidden lg:block absolute top-[78px] -right-[70px] w-[0px] z-10">
+           <div className="hidden lg:block absolute top-[130px] right-[30px] w-[0px] z-10">
                   <div className="relative border-t border-dashed border-gray-300">
                     <motion.div
-                      animate={{ x: [0, 100, 0] }}
+                      animate={{ x: [0, 50, 0] }}
                       transition={{
                         duration: 3,
                         repeat: Infinity,
                         ease: "linear",
                       }}
-                      className="absolute -top-[11px] left-0"
+                      className="absolute -top-[12px] left-0"
                     >
                       <ArrowRight
                         size={44}
