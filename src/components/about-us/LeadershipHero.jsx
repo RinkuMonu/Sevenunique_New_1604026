@@ -8,7 +8,7 @@ export default function LeadershipHero() {
   
   {/* Background Image */}
   <Image
-    src="/images/team-nainital.JPG"
+    src="/images/team-goa.JPG"
     alt="Leadership Team"
     fill
     className="object-cover"
@@ -19,7 +19,7 @@ export default function LeadershipHero() {
   <div className="absolute inset-0 bg-gradient-to-l from-black/20 via-black/30 to-black/80" />
 
   {/* Content */}
-  <div className="relative z-10 max-w-7xl mx-auto h-full flex items-center justify-start px-6">
+<div className="relative z-10 max-w-7xl mx-auto h-full flex items-end justify-start px-6 pb-16 sm:pb-20">
     
     {/* Text Card */}
     <div className="max-w-md text-white text-left">

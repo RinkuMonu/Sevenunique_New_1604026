@@ -49,23 +49,22 @@ export default function TeamSection() {
               Our Team
             </p>
 
-            <h2 className="text-[42px] md:text-[50px] leading-[1.1] font-semibold text-[#111] mb-7">
+            <h2 className="text-[42px] md:text-[46px] leading-[1.1] font-semibold text-[#111] mb-7">
               The Experts Behind <br />
               Every Successful Project
             </h2>
 
             <p className="text-[#666] text-[17px] leading-8 max-w-xl mb-10">
-              Our team consists of experienced developers,
-              designers, strategists, and project managers
-              dedicated to building scalable digital products
-              for startups, enterprises, and growing businesses.
+            Behind every successful project is a passionate team driven by innovation, creativity, and a commitment to excellence. As a founder, I believe great digital products are built through collaboration, transparency, and a deep understanding of client goals.<br />
+            Our team of experienced developers, designers, strategists, and project managers works closely with businesses to create scalable websites, mobile applications, and software solutions that deliver real impact. From startups to enterprises, we focus on building reliable, future-ready products that help brands grow faster and stay ahead in the digital world.<br />
+Every project we take on is treated like our own business — with attention to detail, modern technology, and a dedication to delivering premium digital experiences that create lasting value .
             </p>
 
             {/* STATS */}
             <div className="grid grid-cols-2 gap-5">
 
-              <div className="bg-white rounded-[28px] p-6 border border-[#ececec] shadow-sm hover:shadow-xl transition-all duration-300">
-                <h3 className="text-[40px] font-bold text-[#111]">
+              <div className="bg-white rounded-[10px] p-4 border border-[#ececec] shadow-sm hover:shadow-xl transition-all duration-300">
+                <h3 className="text-[30px] font-bold text-[#111]">
                   3500+
                 </h3>
 
@@ -74,8 +73,8 @@ export default function TeamSection() {
                 </p>
               </div>
 
-              <div className="bg-white rounded-[28px] p-6 border border-[#ececec] shadow-sm hover:shadow-xl transition-all duration-300">
-                <h3 className="text-[40px] font-bold text-[#111]">
+              <div className="bg-white rounded-[10px] p-4 border border-[#ececec] shadow-sm hover:shadow-xl transition-all duration-300">
+                <h3 className="text-[30px] font-bold text-[#111]">
                   2700+
                 </h3>
 
@@ -84,8 +83,8 @@ export default function TeamSection() {
                 </p>
               </div>
 
-              <div className="bg-white rounded-[28px] p-6 border border-[#ececec] shadow-sm hover:shadow-xl transition-all duration-300">
-                <h3 className="text-[40px] font-bold text-[#111]">
+              <div className="bg-white rounded-[10px] p-4 border border-[#ececec] shadow-sm hover:shadow-xl transition-all duration-300">
+                <h3 className="text-[30px] font-bold text-[#111]">
                   375+
                 </h3>
 
@@ -94,8 +93,8 @@ export default function TeamSection() {
                 </p>
               </div>
 
-              <div className="bg-white rounded-[28px] p-6 border border-[#ececec] shadow-sm hover:shadow-xl transition-all duration-300">
-                <h3 className="text-[40px] font-bold text-[#111]">
+              <div className="bg-white rounded-[10px] p-4 border border-[#ececec] shadow-sm hover:shadow-xl transition-all duration-300">
+                <h3 className="text-[30px] font-bold text-[#111]">
                   235+
                 </h3>
 
@@ -148,29 +147,29 @@ export default function TeamSection() {
         </div>
 
         {/* TEAM MEMBERS */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-7 items-stretch">
 
           {team.map((item, index) => (
             <div
               key={index}
-              className="group bg-white rounded-[30px] overflow-hidden border border-[#ececec] shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-3"
+            className="group h-full flex flex-col bg-white rounded-[28px] overflow-hidden border border-[#ececec] shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
             >
 
               {/* IMAGE */}
-              <div className="relative h-[320px] overflow-hidden">
+            <div className="relative h-[260px] sm:h-[300px] overflow-hidden bg-[#f4f4f4]">
 
                 <Image
                   src={item.image}
                   alt={item.name}
                   fill
-                  className="object-cover object-top group-hover:scale-105 transition-all duration-700"
+                 className="object-contain object-top p-4 group-hover:scale-105 transition-all duration-700"
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               </div>
 
               {/* TEXT */}
-              <div className="p-6">
+          <div className="p-6 flex flex-col flex-grow justify-between">
 
                 <h3 className="text-[22px] font-semibold text-[#111] mb-2">
                   {item.name}
