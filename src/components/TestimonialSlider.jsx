@@ -188,10 +188,6 @@ export default function TestimonialSection() {
                       </div>
                     </div>
 
-                    <button className="w-12 h-12 rounded-full bg-[#fff3ee] flex items-center justify-center text-[#f4622a] group-hover:bg-[#f4622a] group-hover:text-white transition-all duration-300">
-
-                      <IoIosArrowRoundForward size={28} />
-                    </button>
                   </div>
 
                   {/* REVIEW */}

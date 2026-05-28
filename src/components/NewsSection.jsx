@@ -73,7 +73,7 @@ export default function NewsCTASection() {
 
       {/* Marquee */}
     <div className="marquee-wrapper">
-  <div className="marquee">
+  <div className="marquee pt-2">
    {[...newsLogos, ...newsLogos].map((item, index) => (
   <div
     key={index}

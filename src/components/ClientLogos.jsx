@@ -58,7 +58,7 @@ export default function ClientLogos() {
         {/* Slider */}
         <div className="relative overflow-hidden">
 
-          <div className="flex w-max animate-marquee gap-6">
+          <div className="flex w-max animate-marquee gap-6 py-2">
 
             {[...logos, ...logos].map((item, index) => (
               <div
