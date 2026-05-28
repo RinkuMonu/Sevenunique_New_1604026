@@ -63,7 +63,7 @@ export default function ProjectsBannerSlider() {
         {/* HEADING */}
        <div className="text-center mb-14">
   <h2 className="text-[34px] sm:text-[38px] leading-[1.1] font-semibold text-[#111] mb-5">
-    Our Utility Service Finunique Mobile Application, Website & Admin Panel
+    Our <span className="text-orange-500">Fintech Services</span> Mobile Application, Website & Admin Panel
   </h2>
 
   <p className="max-w-4xl mx-auto text-[#666] text-[17px] leading-8">

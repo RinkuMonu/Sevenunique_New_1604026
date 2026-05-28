@@ -66,13 +66,13 @@ export default function TestimonialSection() {
           {/* LEFT IMAGE */}
           <div className="relative">
 
-            <div className="absolute -top-10 -left-10 w-40 h-40 bg-[#f4622a]/10 rounded-full blur-3xl"></div>
+            <div className="absolute -top-10 -left-10 w-30 h-30 bg-[#f4622a]/10 rounded-full blur-3xl"></div>
 
             <Image
               src="/images/Gemini_Generated_Image_dpcwdmdpcwdmdpcw.png"
               alt="team"
-              width={700}
-              height={700}
+              width={600}
+              height={600}
               className="rounded-[30px] object-cover h-[550px] w-full shadow-2xl"
             />
           </div>
@@ -84,24 +84,24 @@ export default function TestimonialSection() {
               Client Testimonials
             </p>
 
-            <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-[#191919]">
-              Trusted By Startups,
+            <h2 className="text-3xl lg:text-4xl font-bold leading-tight text-[#191919]">
+             Trusted by startups, growing businesses, 
               <br />
-              Businesses & IT Companies
+           and leading IT companies
               <span className="text-[#f4622a]">.</span>
             </h2>
 
-            <p className="text-gray-600 text-lg leading-8 mt-6 max-w-xl">
-              We create scalable websites, mobile apps, and software solutions
-              that help businesses grow faster with modern technology and
-              premium digital experiences.
+            <p className="text-gray-600 text-base leading-8 mt-6 max-w-xl">
+               We deliver innovative digital solutions tailored for long-term success. Our team specializes in creating high-performance websites, scalable mobile applications, and custom software platforms that combine modern technology with exceptional user experience.
+               <br />
+               From idea to deployment, we help businesses streamline operations, strengthen their online presence, and accelerate growth through reliable, secure, and future-ready digital products. With a focus on quality, creativity, and performance, we turn business ideas into powerful digital experiences that drive real results.
             </p>
 
             {/* STATS */}
             <div className="flex items-center gap-10 mt-10">
 
               <div>
-                <h3 className="text-4xl font-bold text-[#f4622a]">
+                <h3 className="text-2xl font-bold text-[#f4622a]">
                   3500+
                 </h3>
                 <p className="text-gray-500 text-sm mt-2">
@@ -112,7 +112,7 @@ export default function TestimonialSection() {
               <div className="w-px h-14 bg-gray-300"></div>
 
               <div>
-                <h3 className="text-4xl font-bold text-[#f4622a]">
+                <h3 className="text-2xl font-bold text-[#f4622a]">
                   98%
                 </h3>
                 <p className="text-gray-500 text-sm mt-2">
@@ -122,7 +122,7 @@ export default function TestimonialSection() {
             </div>
 
             {/* BUTTON */}
-            <button className="mt-10 group inline-flex items-center gap-3 bg-[#f4622a] text-white px-8 py-4 rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-orange-300">
+            {/* <button className="mt-10 group inline-flex items-center gap-3 bg-[#f4622a] text-white px-8 py-4 rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-orange-300">
 
               Explore Case Studies
 
@@ -130,7 +130,7 @@ export default function TestimonialSection() {
                 size={30}
                 className="group-hover:translate-x-1 transition-all"
               />
-            </button>
+            </button> */}
           </div>
         </div>
 
