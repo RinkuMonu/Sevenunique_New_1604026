@@ -15,118 +15,53 @@ import { BiLeftArrow } from "react-icons/bi";
 import { FaAngleRight } from "react-icons/fa";
 import Link from "next/link";
 
-const beliefs = [
+const galleryMoments = [
   {
     id: 1,
-    icon: Globe,
-    title: "Remote work drives how we succeed",
-    description:
-      "Remote work isn’t just our setup, it’s a key part of our success. Our remote-first culture brings together top talent from anywhere, combining diverse backgrounds and experiences. It gives equal opportunities to people everywhere and supports flexible, async collaboration across time zones.",
-    bullets: [
-      "Share updates early",
-      "Avoid meetings without clear agendas",
-      "Collaborate asynchronously",
-      "Support and onboard teammates quickly",
-    ],
-    img: "../culture/Public_1749674003.svg",
-    color: "bg-gradient-to-br from-orange-200 to-orange-500",
+    image: "/images/goa3.JPG",
+    hoverImage: "/images/goa4.JPG",
+    title: "2st Anniversary Trip To Goa",
+    description: "A memorable team getaway by the sea.",
   },
   {
     id: 2,
-    icon: Premium,
-    title: "To go further, we set no limits",
-    description:
-      "We don’t settle, aiming higher is what sets us apart. You’re trusted to take ownership, push boundaries, and use feedback to keep improving. That’s how you grow into a top professional.",
-    bullets: [
-      "Lead by example",
-      "Act on feedback quickly",
-      "Focus on high-impact work",
-      "Move with urgency",
-    ],
-    img: "../culture/WorkspacePremium_1749674007.svg",
-    color: "bg-gradient-to-br from-blue-200 to-blue-500",
+    image: "/images/team-nainital.JPG",
+    hoverImage: "/images/nainital2.jpg",
+    title: "Nainital Getaway for 1st Company Anniversary",
+    description: "A peaceful retreat in the hills.",
   },
-
   {
     id: 3,
-    icon: Handshake,
-    title: "We grow and win together",
-    description:
-      "Collaboration is at the core of how we work, helping people succeed. Teams across roles and time zones stay aligned on shared goals, working together to solve challenges without silos or egos.",
-    bullets: [
-      "Solve problems, don’t blame",
-      'Ask “why” to understand better',
-      "Align early with your team",
-    ],
-    img: "../culture/Handshake_1749674000.svg",
-    color: "bg-gradient-to-br from-green-200 to-green-600",
-  },
-  {
-    id: 4,
-    icon: Bulb,
-    title: "Thinking ahead drives our success",
-    description:
-      "We see every challenge as a chance to improve. We act fast, anticipate problems, and find better solutions building trust with our clients. You’re encouraged to go beyond delivery, share ideas, and shape what comes next.",
-    bullets: [
-      "Move ideas forward",
-      "Resolve issues quickly",
-      "Lead difficult conversations",
-      // "Stand up for what’s best for the client",
-    ],
-    img: "../culture/FramePerson_1749674005.svg",
-    color: "bg-gradient-to-br from-yellow-100 to-yellow-500",
+    image: "/images/mumbai1.JPG",
+    hoverImage: "/images/team-nainital.JPG",
+        title: "Mumbai Office Inauguration",
+    description: "A memorable team getaway by the sea.",
   },
 ];
 
-const values = [
+const officeMemories = [
   {
     id: 1,
-    title: "One Team, One Mission",
-    subtitle: "We always support one another.",
+    image: "/images/15aug.jpeg",
+    title: "Independence Day",
     description:
-      "As a global team, we share knowledge, help each other grow, and achieve more together.",
-    img: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/we_value_1_1750182255?_a=BAVAfVDW0",
+      "Celebrating freedom, unity, and patriotism together.",
   },
   {
     id: 2,
-    title: "Speed is key",
-    subtitle: "We move with focus, clarity, and purpose.",
+    image: "/images/sakrat.JPG",
+    title: "Makar Sankranti",
     description:
-      "We prioritize impact, make quick decisions, and keep progress moving without delays.",
-    img: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/we_value_2_1750182254?_a=BAVAfVDW0",
+      "Festive moments, laughter, and team bonding.",
   },
   {
     id: 3,
-    title: "Find a way",
-    subtitle: "We thrive on solving problems and tackling challenges.",
+    image: "/images/navratri.PNG",
+    title: "Navratri Celebration",
     description:
-      "When the path isn’t clear, we think creatively, try new ideas, and adapt quickly.",
-    img: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/we_value_3_1750182253?_a=BAVAfVDW0",
+      "Creating memories that strengthen our culture.",
   },
-  {
-    id: 4,
-    title: "Own it & Learn from it",
-    subtitle: "We take responsibility for our work and our growth.",
-    description:
-      "From start to finish, we own the results and learn from every mistake. Feedback helps us improve, so we actively seek it and use it to get better.",
-    img: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/we_value_4_1750182252?_a=BAVAfVDW0",
-  },
-  {
-    id: 5,
-    title: "No Surprises, No Silos",
-    subtitle: "We communicate early and often.",
-    description:
-      "We share updates, raise risks, and involve the right people at the right time. Clear, open communication keeps teams aligned across roles and time zones.",
-    img: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/we_value_5_1750182251?_a=BAVAfVDW0",
-  },
-  {
-    id: 6,
-    title: "Raise the Bar",
-    subtitle: "We’re passionate about improving what we do.",
-    description:
-      "We explore new solutions, learn from them, and keep pushing ourselves to do better every time.",
-    img: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/we_value_6_1750182295?_a=BAVAfVDW0",
-  },
+  
 ];
 
 function Globe() {
@@ -156,66 +91,38 @@ function Bulb() {
 function BeliefCard({ belief }) {
   const Icon = belief.icon;
 
+
+
+
+
+  
   return (
-    <div className="relative group rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-      {/* BACKGROUND */}
-      <div className="absolute inset-0 bg-white z-0" />
+   <div className="group relative rounded-xl overflow-hidden h-[350px]">
 
-      {/* MAIN CARD */}
-      <div className="relative z-10 p-6 md:p-8 h-full flex flex-col bg-white transition-all duration-500 group-hover:bg-gray-50">
-        {/* ICON + TITLE */}
-        <div className="flex flex-col gap-3 mb-6">
-          {/* ICON */}
-          <div
-            className={`w-14 h-14 ${belief.color}`}
-            style={{
-              mask: `url(${belief.img})`,
-              WebkitMask: `url(${belief.img})`,
-              maskRepeat: "no-repeat",
-              WebkitMaskRepeat: "no-repeat",
-              maskSize: "contain",
-              WebkitMaskSize: "contain",
-              maskPosition: "center",
-              WebkitMaskPosition: "center",
-            }}
-          />
+  {/* Background Image */}
+  <Image
+    src={belief.image}
+    alt={belief.title}
+    fill
+    className="object-cover transition-transform duration-700 group-hover:scale-110"
+  />
 
-          {/* TITLE */}
-          <h3 className="text-xl md:text-2xl font-semibold text-gray-900 leading-snug">
-            {belief.title}
-          </h3>
-        </div>
+  {/* Black Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-t from-black/90
+  
+via-black/40 to-transparent z-10" />
 
-        {/* DESCRIPTION */}
-        <p className="text-gray-600 text-sm md:text-base leading-relaxed flex-1">
-          {belief.description}
-        </p>
-      </div>
+  {/* Content */}
+  <div className="absolute bottom-0 left-0 z-20 p-6">
+    <h3 className="text-2xl font-semibold text-white">
+      {belief.title}
+    </h3>
 
-      {/* 🔥 RIGHT SLIDE PANEL */}
-      <div
-        className="
-        absolute top-35 right-0 h-full w-full bg-white z-20
-        translate-x-full group-hover:translate-x-0
-        transition-transform duration-500 ease-in-out
-        p-6 md:p-8 flex flex-col
-      "
-      >
-        <h4 className="text-lg font-semibold mb-4 text-gray-900">Key Points</h4>
-
-        <ul className="space-y-3">
-          {belief.bullets.map((bullet, idx) => (
-            <li
-              key={idx}
-              className="flex items-start gap-2 text-gray-600 text-sm"
-            >
-              <span className="w-2 h-2 mt-2 rounded-full bg-green-500" />
-              {bullet}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
+    <p className="text-gray-200 mt-2 text-sm">
+      {belief.description}
+    </p>
+  </div>
+</div>
   );
 }
 
@@ -276,99 +183,196 @@ function ValueCard({ value }) {
   );
 }
 
+function GalleryCard({ image, hoverImage, title, description }) {
+  return (
+    <div className="group relative h-[320px] overflow-hidden rounded-2xl shadow-lg">
+
+      {/* Default Image */}
+      <Image
+        src={image}
+        alt={title}
+        fill
+        className="absolute inset-0 z-0 object-cover transition-opacity duration-700 group-hover:opacity-0"
+      />
+
+      {/* Hover Image */}
+      <Image
+        src={hoverImage}
+        alt={title}
+        fill
+        className="absolute inset-0 z-0 object-cover opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+      />
+
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+
+      {/* Text */}
+      <div className="absolute bottom-0 left-0 z-20 p-6">
+        <h3 className="text-white text-2xl font-bold">
+          {title}
+        </h3>
+
+        <p className="mt-2 text-sm text-white/90">
+          {description}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+
+
+function MemoryCard({ image, title, description }) {
+  return (
+    <div className="group relative h-[320px] overflow-hidden rounded-2xl shadow-lg">
+      {/* Image */}
+      <Image
+        src={image}
+        alt={title}
+        fill
+        className="object-cover transition-all duration-700 group-hover:scale-110"
+      />
+
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/60 to-transparent" />
+
+      {/* Content */}
+      <div className="absolute bottom-0 left-0 z-20 p-6 w-full">
+        {/* Title Always Visible */}
+        <h3 className="text-white text-xl md:text-2xl font-bold">
+          {title}
+        </h3>
+
+        {/* Description Appears On Hover */}
+        <p
+          className="
+            text-gray-200 text-sm mt-3
+            opacity-0 max-h-0 overflow-hidden
+            group-hover:opacity-100
+            group-hover:max-h-24
+            transition-all duration-500
+          "
+        >
+          {description}
+        </p>
+      </div>
+    </div>
+  );
+}
+
 export default function CulturePage() {
   return (
     <div className="min-h-screen ">
       {/* Hero Section */}
-      <section className="bg-[#F9FAFB] py-16 ">
-        <div className="max-w-7xl px-8 mx-auto ">
-          <div className="flex justify-start items-center gap-5 text-black">
-            <HomeIcon size={20} />{" "}
-            <span>
-              <FaAngleRight size={20} />{" "}
-            </span>
-            <span className="text-gray-700 font-semibold text-sm">
-              Company Culture
-            </span>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div>
-              <p className="text-xs md:text-sm font-bold text-gray-500 uppercase tracking-widest mb-3">
-                Company Culture
-              </p>
-              <h1 className="text-6xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
-                Built on strong values,{" "}
-                <span className="text-orange-500">driven by talent .</span>
-              </h1>
-              <p className="text-2xl text-gray-600 leading-relaxed">
-               At Sevenunique, the way we work matters just as much as what we build.
-              </p>
-            </div>
+    <section className="relative h-[105vh] md:py-24 py-10  min-h-[650px] overflow-hidden">
+  {/* Background Image */}
+ <Image
+  src="/images/goa-celeb.jpeg"
+  alt="Company Culture"
+  fill
+  priority
+  className="object-cover object-top scale-105"
+/>
 
-            {/* Hero Image Placeholder */}
-            <div className="relative">
-              <div className="w-full rounded-2xl flex items-center justify-center text-gray-500 text-lg font-semibold">
-                <Image
-                  src="/images/team2.png"
-                  alt="Company Culture"
-                  width={700}
-                  height={900}
-                  className="w-full h-full object-cover "
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/10"></div>
+
+  {/* Content */}
+  <div className="relative z-10 max-w-7xl mx-auto h-full px-6 lg:px-8 flex flex-col justify-end pb-16">
+    
+    {/* Breadcrumb */}
+    <div className="flex items-center gap-3 text-white/80 mb-6">
+      <HomeIcon size={18} />
+      <FaAngleRight size={14} />
+      <span className="text-sm font-medium">
+        Company Culture
+      </span>
+    </div>
+
+    {/* Hero Content */}
+   {/* Hero Content */}
+<div className="max-w-4xl">
+  <p className="text-white uppercase tracking-[4px] font-semibold text-sm mb-4">
+    Gallery & Memories
+  </p>
+
+  <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+    Every Picture
+    <br />
+    <span className="text-orange-500">
+      Tells a Story.
+    </span>
+  </h1>
+
+  <p className="text-lg md:text-xl text-gray-200 max-w-3xl leading-relaxed">
+    Explore the moments that define our journey—from team outings and
+    celebrations to achievements, events, and everyday memories.
+    Each photograph reflects the passion, collaboration, and culture
+    that make Sevenunique more than just a workplace.
+  </p>
+</div>
+  </div>
+</section>
 
       {/* What We Believe In Section */}
-      <section className="py-10 md:py-20 ">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-6 mb-12">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                What we believe in<span className="text-orange-500">.</span>
-              </h2>
-              <p className="text-gray-600 text-sm md:text-base mt-4 leading-relaxed">
-               These values guide our decisions, fuel our ambition, and connect us across teams and locations. 
-              </p>
-            </div>
+  <section className="py-20">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="grid md:grid-cols-12 gap-8 mb-12">
+      <div>
+        <h2 className="text-4xl md:text-5xl text-gray-700 font-bold">
+          Team Trips<span className="text-orange-500">.</span>
+        </h2>
 
-            <div className="md:col-span-3">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {beliefs.map((belief, idx) => (
-                  <BeliefCard key={belief.id} belief={belief} index={idx} />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        <p className="text-gray-600 mt-4">
+          Exploring new places together and creating unforgettable memories.
+        </p>
+      </div>
+
+     <div className="grid md:grid-cols-2 gap-6">
+  {galleryMoments.map((item) => (
+<GalleryCard
+  key={item.id}
+  image={item.image}
+  hoverImage={item.hoverImage}
+  title={item.title}
+  description={item.description}
+/>
+  ))}
+</div>
+    </div>
+  </div>
+</section>
 
       {/* What We Value Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-6 mb-12">
-            <div className="md:col-span-1">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                What we value<span className="text-orange-500">.</span>
-              </h2>
-              <p className="text-gray-600 text-sm md:text-base mt-4 leading-relaxed">
-               Our values reflect who we are today, not just who we aim to be. They guide how we work, shape our actions, and drive success for both our team and our clients. 
-              </p>
-            </div>
+     <section className="py-20 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="grid md:grid-cols-4 gap-8 mb-12">
+      <div>
+        <h2 className="text-4xl md:text-5xl text-gray-700 font-bold">
+          Celebrations & Events
+          <span className="text-orange-500">.</span>
+        </h2>
 
-            <div className="md:col-span-3">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-max">
-                {values.map((value) => (
-                  <ValueCard key={value.id} value={value} />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        <p className="text-gray-600 mt-4">
+          A glimpse into the moments that bring our team together.
+        </p>
+      </div>
 
+      <div className="md:col-span-3">
+      <div className="grid md:grid-cols-3 gap-6">
+  {officeMemories.map((item) => (
+    <MemoryCard
+      key={item.id}
+      image={item.image}
+      title={item.title}
+      description={item.description}
+    />
+  ))}
+</div>
+      </div>
+    </div>
+  </div>
+</section>
       {/* Team Section */}
       <section className="py-20 md:py-28 bg-[#1f2a33] text-white">
         <div className="max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8">
