@@ -451,6 +451,18 @@ export default function Footer() {
             >
               Terms & Conditions
             </Link>
+              <Link
+              href="/cancellationpolicy"
+              className="hover:text-[#f4622a] transition"
+            >
+              Cancellation & Refund Policy
+            </Link>
+             <Link
+              href="/kycpolicy"
+              className="hover:text-[#f4622a] transition"
+            >
+              KYC & Chargeback Policy
+            </Link>
           </div>
         </div>
       </div>

@@ -71,21 +71,8 @@ export default function CircleLeadersSection() {
       icon: "https://assets.bairesdev.com/image/upload/v1/www/icons/Image.svg",
       color: "bg-green-500",
     },
-    {
-      title: "Data Engineering Circle Leaders",
-      icon: "https://assets.bairesdev.com/image/upload/v1/www/icons/Database.svg",
-      color: "bg-yellow-500",
-    },
-    {
-      title: "Quality Assurance Circle Leaders",
-      icon: "https://assets.bairesdev.com/image/upload/v1/www/icons/DoneAll.svg",
-      color: "bg-blue-400",
-    },
-    {
-      title: "AI & ML Circle Leaders",
-      icon: "https://assets.bairesdev.com/image/upload/v1/www/icons/BubbleChart.svg",
-      color: "bg-orange-600",
-    },
+   
+  
     {
       title: "DevOps Circle Leaders",
       icon: "https://assets.bairesdev.com/image/upload/v1/www/icons/FlipToBack.svg",
@@ -96,13 +83,9 @@ export default function CircleLeadersSection() {
       icon: "https://assets.bairesdev.com/image/upload/v1/www/icons/Code.svg",
       color: "bg-orange-400",
     },
+    
     {
-      title: "Agile Circle Leaders",
-      icon: "https://assets.bairesdev.com/image/upload/v1/www/icons/Hub.svg",
-      color: "bg-yellow-400",
-    },
-    {
-      title: "Product Circle Leaders",
+      title: "Product Circle Leader",
       icon: "https://assets.bairesdev.com/image/upload/v1/www/icons/EventAvailable.svg",
       color: "bg-blue-500",
     },
@@ -114,17 +97,12 @@ export default function CircleLeadersSection() {
     title: "Frontend Circle Leaders",
     leaders: [
       {
-        name: "Aarav Sharma",
+        name: "Devika Chhipa",
         role: "Tech Lead",
         experience: "16 years experience",
-        img: "/",
+        img: "/images/devika.png",
       },
-      {
-        name: "Rohan Mehta",
-        role: "Sr. Frontend Developer",
-        experience: "10 years experience",
-        img: "/",
-      },
+    
     ],
   },
 
@@ -132,15 +110,12 @@ export default function CircleLeadersSection() {
     title: "UX/UI Circle Leaders",
     leaders: [
       {
-        name: "Ananya Kapoor",
-        role: "Lead UX Designer",
+        name: "Khyati Jain",
+        role: "UI-UX Designer",
         experience: "12 years experience",
+        img: "/images/khyati.png",
       },
-      {
-        name: "Priya Verma",
-        role: "Senior UI Designer",
-        experience: "8 years experience",
-      },
+    
     ],
   },
 
@@ -196,15 +171,12 @@ export default function CircleLeadersSection() {
     title: "DevOps Circle Leaders",
     leaders: [
       {
-        name: "Rahul Bhatia",
+        name: "Rinku Yadav",
         role: "DevOps Lead",
         experience: "13 years experience",
+        img: "/images/rinkusir.png",
       },
-      {
-        name: "Ishita Rao",
-        role: "Cloud Architect",
-        experience: "11 years experience",
-      },
+    
     ],
   },
 
@@ -212,14 +184,16 @@ export default function CircleLeadersSection() {
     title: "Backend Circle Leaders",
     leaders: [
       {
-        name: "Manish Gupta",
+        name: "Rajyawardhan Singh",
         role: "Backend Lead",
         experience: "17 years experience",
+        img: "/images/rajyawardhan.png",
       },
       {
-        name: "Pooja Kulkarni",
+        name: "Rahul Singh",
         role: "Senior Backend Dev",
         experience: "9 years experience",
+        img: "/images/rahul.png",
       },
     ],
   },
@@ -320,17 +294,22 @@ export default function CircleLeadersSection() {
                 </div>
 
                 {/* Two Profile Cards */}
-                <div className="flex flex-col sm:flex-row gap-6">
-                  {currentData.leaders.map((leader, idx) => (
-                    <ProfileCard
-                      key={idx}
-                      name={leader.name}
-                      role={leader.role}
-                      experience={leader.experience}
-                      img={leader.img}
-                    />
-                  ))}
-                </div>
+               <div
+  className={`flex gap-6 ${
+    currentData.leaders.length === 1
+      ? "justify-center"
+      : "flex-col sm:flex-row"
+  }`}
+>
+  {currentData.leaders.map((leader, idx) => (
+    <ProfileCard
+      key={idx}
+      name={leader.name}
+      role={leader.role}
+      img={leader.img}
+    />
+  ))}
+</div>
               </div>
             </div>
           </div>

@@ -8,27 +8,27 @@ import { FaAngleRight } from "react-icons/fa";
 
 const featuredAwards = [
   {
-    logo:"https://ezulix.com/assets/image/awards/2.webp",
+    logo:"/images/pcidss.png",
     title: "Top Software Development Company",
-    year: "2026",
+    year: "2025",
   },
   {
     logo:
-      "https://assets.bairesdev.com//image/upload/c_limit,w_180/fl_sanitize/v1/www/core/clutch_software_developer_6c18c23f65.svg?_a=BAVAfVDW0",
+      "/images/kab.png",
     title: "Fastest Growing Tech Company",
     year: "2025",
   },
   {
     logo:
-      "https://assets.bairesdev.com//image/upload/c_limit,w_180/fl_sanitize/v1/www/core/CIO_100_8e2cb7f330.svg?_a=BAVAfVDW0",
+      "/images/iso.png",
     title: "Innovation Excellence Award",
     year: "2025",
   },
   {
     logo:
-      "https://assets.bairesdev.com//image/upload/c_limit,w_180/fl_sanitize/v1/www/core/EY_43aa5098c6.svg?_a=BAVAfVDW0",
+      "/images/msme.png",
     title: "Best Workplace Culture",
-    year: "2024",
+    year: "2025",
   },
 ];
 
@@ -216,11 +216,11 @@ export default function AwardsPage() {
           </div>
 
           {/* AWARDS GRID */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 bg-gray-100 p-4 rounded-xl">
             {featuredAwards.map((award, index) => (
               <div
                 key={index}
-                className="group relative bg-[#0d0d0d] rounded-3xl p-8 hover:-translate-y-3 transition-all duration-500 overflow-hidden"
+                className="group relative bg-[#dedada] rounded-3xl p-8 hover:-translate-y-3 transition-all duration-500 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-orange-500/20 opacity-0 group-hover:opacity-100 transition-all duration-500" />
 
@@ -231,13 +231,13 @@ export default function AwardsPage() {
                       alt={award.title}
                       width={140}
                       height={80}
-                      className="object-contain brightness-0 invert opacity-90"
+                      className="object-contain"
                     />
                   </div>
 
                   <div className="w-14 h-[2px] bg-orange-500 mb-5" />
 
-                  <p className="text-white font-semibold leading-relaxed mb-2">
+                  <p className="text-black font-semibold leading-relaxed mb-2">
                     {award.title}
                   </p>
 

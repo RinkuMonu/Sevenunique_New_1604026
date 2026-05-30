@@ -12,7 +12,7 @@ export const HeroAboutSection = () => {
   return (
     <section className="relative w-full min-h-screen bg-white overflow-hidden flex items-center">
       {/* Main content wrapper */}
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 xl:px-24 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-0 py-24 lg:py-0 lg:min-h-screen mt-18">
+      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-20 xl:px-24 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-0 py-24 lg:py-0 lg:min-h-screen">
         {/* ── LEFT SIDE ── */}
         <div className="flex-4 max-w-[840px]">
           {/* Heading */}
@@ -42,11 +42,17 @@ export const HeroAboutSection = () => {
 
         {/* ── RIGHT SIDE — Orbit canvas ── */}
         {/* ── RIGHT SIDE — Orbit ── */}
-        <div className="hidden lg:block absolute right-[-240px] top-1/2 -translate-y-1/2 w-[700px] h-[700px]">
+        {/* <div className="hidden lg:block absolute right-[-240px] top-1/2 -translate-y-1/2 w-[700px] h-[700px]">
           <div className="relative w-full h-full">
             <OrbitAnimation />
           </div>
-        </div>
+        </div> */}
+
+        <img
+          src="/images/orbit-img.PNG"
+          alt="Hero Image"
+          className="hidden lg:block w-[460px] h-[400px] object-contain rounded-xl"
+        />
       </div>
     </section>
   );
