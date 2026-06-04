@@ -41,7 +41,7 @@ const TeamSection = ({ teamSection }) => {
 
           {/* AVATARS */}
           <div className="mb-6 flex flex-wrap items-center gap-4">
-            <div className="flex flex-wrap items-center gap-2 sm:-space-x-3 sm:gap-0">
+            {/* <div className="flex flex-wrap items-center gap-2 sm:-space-x-3 sm:gap-0">
               {teamImages.length > 0 &&
                 teamImages.map((img, i) => (
                   <div
@@ -49,7 +49,7 @@ const TeamSection = ({ teamSection }) => {
                     className="flex h-[50px] w-[50px] items-end justify-center overflow-hidden rounded-full border-2 border-white"
                     style={{ backgroundColor: img?.bg }}
                   >
-                    {/* ✅ Safe image render */}
+                   
                     {img?.src && (
                       <Image
                         src={`/images/${img.src}`}
@@ -61,7 +61,7 @@ const TeamSection = ({ teamSection }) => {
                     )}
                   </div>
                 ))}
-            </div>
+            </div> */}
 
             <div className="text-sm text-gray-600">
               <p>Backed by</p>

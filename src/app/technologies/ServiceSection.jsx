@@ -2,16 +2,16 @@
 
 const avatars = [
   {
-    src: "https://assets.bairesdev.com//image/upload/c_limit,w_256/dpr_auto/f_auto/q_auto/v1/www/static/Edward-Batten_vyckul?_a=BAVAfVDW0",
-    alt: "Edward Batten",
+    src: "/images/1.png",
+    alt: "Raman Dutta",
   },
   {
-    src: "https://assets.bairesdev.com//image/upload/c_limit,w_256/dpr_auto/f_auto/q_auto/v1/www/static/Paige-Hanlon_jlfqll?_a=BAVAfVDW0",
-    alt: "Paige Hanlon",
+    src: "/images/t3.png",
+    alt: "Priyanshi Mehta",
   },
   {
-    src: "https://assets.bairesdev.com//image/upload/c_limit,w_256/dpr_auto/f_auto/q_auto/v1/www/static/Adam-Kuchyt_ukn48q?_a=BAVAfVDW0",
-    alt: "Adam Kuchyt",
+    src: "/images/3.png",
+    alt: "Aditya Singh",
   },
 ];
 

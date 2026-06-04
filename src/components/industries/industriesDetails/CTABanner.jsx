@@ -13,7 +13,7 @@ export default function CTABanner() {
           <div className="relative flex-shrink-0">
             <Image
             //   src="https://assets.bairesdev.com/image/upload/v1/www/core/silos_schedule-a-call-banner_o6a2fa"
-            src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/silos_schedule-a-call-banner_o6a2fa?_a=BAVAfVDW0"
+            src="/images/data-engg.png"
               alt="team"
               className="object-cover"
               height={160}

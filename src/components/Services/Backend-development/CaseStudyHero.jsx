@@ -118,15 +118,15 @@ export default function CaseStudyHero() {
         </div>
 
         {/* FORM */}
-        <div className="relative z-20 mx-auto -mt-6 w-full max-w-[385px] rounded-[22px] bg-[#d9d9d9] p-8 shadow-[0_24px_60px_rgba(0,0,0,0.18)] lg:absolute lg:-right-[8px] lg:top-[326px] lg:mx-0 lg:mt-0">
+        <div className="relative z-20 mx-auto -mt-6 w-full max-w-[385px] rounded-[22px] bg-[#d9d9d9] p-8 shadow-[0_24px_60px_rgba(0,0,0,0.18)] lg:absolute lg:-right-[8px] lg:top-[60px] lg:mx-0 lg:mt-0">
 
           <h3 className="mb-8 max-w-[260px] text-[24px] font-semibold leading-[1.25] text-[#0f172a]">
             Get expert help for your Backend project.
           </h3>
 
-          <form className="space-y-6" onSubmit={handleSubmit}>
+          {/* <form className="space-y-6" onSubmit={handleSubmit}>
 
-            {/* NAME */}
+           
             <div>
               <label className="mb-2 block text-[13px] font-medium text-[#374151]">
                 Your name
@@ -143,7 +143,7 @@ export default function CaseStudyHero() {
               )}
             </div>
 
-            {/* EMAIL */}
+           
             <div>
               <label className="mb-2 block text-[13px] font-medium text-[#374151]">
                 Your email
@@ -160,7 +160,7 @@ export default function CaseStudyHero() {
               )}
             </div>
 
-            {/* MESSAGE */}
+            
             <div>
               <label className="mb-2 block text-[13px] font-medium text-[#374151]">
                 What can we do for you?
@@ -184,7 +184,7 @@ export default function CaseStudyHero() {
               Jump-start Your Project
             </button>
 
-          </form>
+          </form> */}
         </div>
 
       </div>

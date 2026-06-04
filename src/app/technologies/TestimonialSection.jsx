@@ -140,12 +140,12 @@ function TestimonialCard({ item, featured = false }) {
 
 function AvatarRow({ colors }) {
   const defaultAvatars = [
-    { src: "/images/img1.png", bg: "#FBB39E" },
-    { src: "/images/img2.png", bg: "#90BBF3" },
-    { src: "/images/img3.png", bg: "#8FD5BF" },
-    { src: "/images/img4.png", bg: "#FFD785" },
-    { src: "/images/img5.png", bg: "#FDDC43" },
-    { src: "/images/img6.png", bg: "#CDE8FA" },
+    { src: "/images/1.png", bg: "#FBB39E" },
+    { src: "/images/2.png", bg: "#90BBF3" },
+    { src: "/images/3.png", bg: "#8FD5BF" },
+    { src: "/images/7.png", bg: "#FFD785" },
+    { src: "/images/5.png", bg: "#FDDC43" },
+    { src: "/images/6.png", bg: "#CDE8FA" },
   ];
 
   const avatars = colors?.map((color, index) => ({

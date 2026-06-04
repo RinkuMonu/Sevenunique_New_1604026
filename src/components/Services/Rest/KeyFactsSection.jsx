@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function KeyFactsSection({ data }) {
   const [activeTab, setActiveTab] = useState(0);
@@ -64,16 +65,14 @@ export default function KeyFactsSection({ data }) {
           </div>
 
           {/* RIGHT SIDEBAR */}
-          <div className="col-span-12 lg:col-span-3 space-y-6">
-            {sidebar?.map((item, i) => (
-              <div key={i} className="bg-gray-50 rounded-xl p-4">
-                <div className="h-36 bg-gray-200 rounded-lg mb-4" />
-                <p className="font-medium text-[#0f172a] hover:text-orange-600 cursor-pointer">
-                  {item.title}
-                </p>
-              </div>
-            ))}
-          </div>
+          {/* <div className="relative h-100 rounded-lg overflow-hidden mb-4">
+  <Image
+    src="/images/qa.png"
+    alt="img"
+    fill
+    className="object-contain transition-transform duration-300 hover:scale-105"
+  />
+</div> */}
 
         </div>
       </div>

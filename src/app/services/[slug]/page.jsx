@@ -25,6 +25,7 @@ import FAQSection from "@/components/FAQSection";
 import RestServicePage from "./RestServicePage";
 import WorkSection from "@/components/Services/WorkSection";
 import ClientLogos from "@/components/ClientLogos";
+import AiServicesSection from "@/components/Services/ai-development/Aiservicesweoffer";
 
 // page.jsx logic update
 export default async function ServicePage({ params }) {
@@ -51,6 +52,15 @@ export default async function ServicePage({ params }) {
   <BackendHero data={data} />
 )}
 
+
+
+{normalizedSlug === "backend-development" && <CaseStudyHero />}
+      <div className="bg-[#f5f6f7] px-6 py-10 md:px-10">
+        {normalizedSlug !== "backend-development" && (
+          <AIUseCasesSection useCases={data.useCases} />
+        )}
+
+
 {/* TRUSTED CLIENTS */}
 {/* {data.sections?.trustedClientsStrip && (
   <TrustedClientsStrip clients={data.trustedClients} />
@@ -61,29 +71,31 @@ export default async function ServicePage({ params }) {
       {/* <div className="bg-[#f5f6f7] px-6 py-10 md:px-10">
         <TableContent />
       </div> */}
-{normalizedSlug !== "ai-development" && data.backendServices && (
+{/* {normalizedSlug !== "ai-development" && data.backendServices && (
   <BackendServices servicesSection={data.backendServices} />
-)}
+)} */}
 {normalizedSlug !== "ai-development" && data.caseStudies && (
   <CaseStudySection caseStudies={data.caseStudies} />
 )}
-{normalizedSlug === "backend-development" && <CaseStudyHero />}
-      <div className="bg-[#f5f6f7] px-6 py-10 md:px-10">
-        {normalizedSlug !== "backend-development" && (
-          <AIUseCasesSection useCases={data.useCases} />
-        )}
+
+
+
+
+  {/* {data.aiServicesSection && (
+  <AiServicesSection data={data.aiServicesSection} />
+)} */}
 
         {/* {data.testimonialHighlight && (
           <TestimonialHighlightSection testimonial={data.testimonialHighlight} />
         )} */}
 
-        {normalizedSlug === "ai-development" ? (
+        {/* {normalizedSlug === "ai-development" ? (
           <AiTeamSection teamSection={data.teamSection} />
         ) : data.expertsSection ? (
           <ServiceExpertsSection expertsSection={data.expertsSection} />
         ) : data.teamSection ? (
           <AiTeamSection teamSection={data.teamSection} />
-        ) : null}
+        ) : null} */}
         
 
         {normalizedSlug !== "ai-development" && data.companyTrustSection ? (
@@ -101,9 +113,9 @@ export default async function ServicePage({ params }) {
           <EngagementSection engagementData={data.engagementData} />
         )}
 
-{normalizedSlug !== "ai-development" && data.industrySection && (
+{/* {normalizedSlug !== "ai-development" && data.industrySection && (
   <IndustrySection data={data.industrySection} />
-)}
+)} */}
  <CtaBanner ctaBanner={data.ctaBanner} />
 
 {normalizedSlug !== "ai-development" && data.processSection && (
@@ -114,11 +126,13 @@ export default async function ServicePage({ params }) {
           <CaseStudySection caseStudies={data.caseStudies} />
         )}
 
-       
-<ToolsTechSection toolsTech={data.toolsTech || defaultToolsTech} />
-        <TestimonialSection testimonials={data.testimonials} />
+
 
        
+{/* <ToolsTechSection toolsTech={data.toolsTech || defaultToolsTech} /> */}
+        {/* <TestimonialSection testimonials={data.testimonials} /> */}
+
+    
         <AwardsSectionFull />
 
 

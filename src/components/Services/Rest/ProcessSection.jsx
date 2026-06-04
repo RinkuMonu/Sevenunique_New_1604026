@@ -44,7 +44,7 @@ export default function ProcessSection({ data }) {
                 {/* Image */}
                 <div className="relative w-full h-[300px] rounded-[40px] overflow-hidden">
                   <Image
-                    src={safeImage}
+                    src="/images/qa.png"
                     alt="process"
                     fill
                     className="object-cover"

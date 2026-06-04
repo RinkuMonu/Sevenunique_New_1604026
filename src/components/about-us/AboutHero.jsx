@@ -35,28 +35,28 @@ const projects = [
     title: "Jajam Block Prints",
     desc: "Premium ecommerce clothing platform built with MERN stack and Mobikwik payment gateway integration.",
     icon: ShoppingBag,
-    image: "/images/team.jpg",
+    image: "/images/jajam.jpeg",
     tags: ["React", "Node.js", "MongoDB", "Mobikwik"],
   },
   {
     title: "Verify Panel",
     desc: "Advanced verification platform with 200+ APIs including PAN, GST, Aadhaar and license verification.",
     icon: ShieldCheck,
-    image: "/logos/office1.jpg",
+    image: "/images/verify.png",
     tags: ["Verification", "Wallet", "APIs"],
   },
   {
     title: "BBPS Utility Portal",
     desc: "Retailer & distributor utility service platform with wallet system and BBPS services.",
     icon: Wallet,
-    image: "/images/team.jpg",
+    image: "/images/bbps.jpeg",
     tags: ["BBPS", "Fintech", "Wallet"],
   },
   {
     title: "PV Classes",
     desc: "Educational platform for courses, PDFs, lectures and current affairs content.",
     icon: GraduationCap,
-    image: "/logos/office1.jpg",
+    image: "/images/pvv.jpeg",
     tags: ["Courses", "Learning", "PDF"],
   },
 ];
@@ -137,12 +137,12 @@ export default function AboutPage() {
                   <ArrowRight size={18} />
                 </Link>
 
-                <Link
+                {/* <Link
                   href="/projects"
                   className="border border-gray-300 hover:border-orange-500 hover:text-orange-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300"
                 >
                   View Projects
-                </Link>
+                </Link> */}
               </div>
             </div>
 
@@ -150,7 +150,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="relative h-[620px] rounded-[35px] overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/team.jpg"
+                  src="/images/team-handjoin.png"
                   alt="team"
                   fill
                   className="object-cover"

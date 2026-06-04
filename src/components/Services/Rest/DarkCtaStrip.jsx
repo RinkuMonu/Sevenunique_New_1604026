@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-const FALLBACK_IMAGE = "/images/dark.png";
+const FALLBACK_IMAGE = "/images/team-handjoin.png";
 
 export default function DarkCtaStrip({ data }) {
   if (!data) return null;

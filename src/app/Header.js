@@ -241,7 +241,7 @@ export default function Header() {
   const panelAnimationStyle = { animation: "dropdownFadeSlide 220ms ease-out" };
 
   return (
-    <header className="w-full border-b border-gray-200 bg-white">
+    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-4 sm:px-6">
       <Link href="/" className="  block">
   <Image
