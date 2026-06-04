@@ -5,13 +5,13 @@ import Link from "next/link";
 
 export default function CTASection() {
   return (
-    <section className="bg-black text-white pt-32 pb-20 relative">
+    <section className="bg-[#6c6b6b] text-black pt-32 pb-20 relative">
 
       {/* TOP IMAGE (OVERLAP) */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[30%] z-10">
-        <div className="relative w-[400px] md:w-[450px] h-[200px] md:h-[260px] rotate-[-5deg] shadow-xl">
+        <div className="relative w-[400px] md:w-[450px] h-[200px] md:h-[260px] shadow-xl">
           <Image
-            src="/CTAImage.avif"
+            src="/images/crm.png"
             alt="cta"
             fill
             className="object-cover rounded-lg"

@@ -57,7 +57,7 @@ export default function BackendHero({ data }) {
   };
 
   return (
-    <div className="w-full min-h-screen bg-[#f5f6f7] flex items-center justify-center px-10">
+    <div className="w-full min-h-screen bg-[#0f172a] px-6 py-16 md:px-10 md:py-18 flex items-center justify-center px-10">
       <div className="max-w-7xl w-full flex gap-16 items-start">
 
         {/* LEFT SIDE */}
@@ -65,28 +65,28 @@ export default function BackendHero({ data }) {
           <div className="flex items-center text-sm text-gray-500 mb-6">
             <GoHome className="mr-2 text-lg" />
             <span className="mx-2">›</span>
-            <Link href="/solutions" className="hover:text-black transition hover:underline">
+            <Link href="/solutions" className="hover:text-white transition hover:underline">
               Solutions
             </Link>
             <span className="mx-2">›</span>
-            <span className="text-black font-medium">
+            <span className="text-gray-500 font-medium">
               {hero.breadcrumb[1]}
             </span>
           </div>
 
-          <h2 className="text-[14px] font-bold text-black uppercase">
+          <h2 className="text-[14px] font-bold text-white uppercase">
             {hero.title}
           </h2>
 
-          <h1 className="text-[53px] font-bold leading-tight text-black mb-6">
+          <h1 className="text-[53px] font-bold leading-tight text-white mb-6">
             {hero.heading}
           </h1>
 
-          <p className="text-gray-600 text-[20px] max-w-xl leading-relaxed mb-10">
+          <p className="text-gray-300 text-[20px] max-w-xl leading-relaxed mb-10">
             {hero.description}
           </p>
 
-          <ProfileSlider />
+          {/* <ProfileSlider /> */}
 
           <div className="flex gap-2 mt-4">
             {[1, 2, 3, 4, 5].map((_, i) => (
@@ -113,7 +113,7 @@ export default function BackendHero({ data }) {
               name="name"
               placeholder="Full name"
               onChange={handleChange}
-              className="w-full border border-gray-300 rounded-md px-4 py-3 mb-1 outline-none focus:border-orange-500"
+              className="w-full border border-gray-300 rounded-md px-4 py-3 mb-1 outline-none focus:border-orange-500 text-gray-600"
             />
             {errors.name && (
               <p className="text-red-500 text-sm mb-3">{errors.name}</p>
@@ -125,7 +125,7 @@ export default function BackendHero({ data }) {
               name="email"
               placeholder="name@company.com"
               onChange={handleChange}
-              className="w-full border border-gray-300 rounded-md px-4 py-3 mb-1 outline-none focus:border-orange-500"
+              className="w-full border border-gray-300 rounded-md px-4 py-3 mb-1 outline-none focus:border-orange-500 text-gray-600"
             />
             {errors.email && (
               <p className="text-red-500 text-sm mb-3">{errors.email}</p>
@@ -137,7 +137,7 @@ export default function BackendHero({ data }) {
               rows={4}
               placeholder="Tell us about your needs."
               onChange={handleChange}
-              className="w-full border border-gray-300 rounded-md px-4 py-3 mb-1 outline-none focus:border-orange-500"
+              className="w-full border border-gray-300 rounded-md px-4 py-3 mb-1 outline-none focus:border-orange-500 text-gray-600"
             />
             {errors.message && (
               <p className="text-red-500 text-sm mb-4">{errors.message}</p>

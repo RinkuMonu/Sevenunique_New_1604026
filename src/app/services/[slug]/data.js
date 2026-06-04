@@ -8,10 +8,10 @@ const trustedClients = [
 ];
 
 const defaultExpertImages = [
-  "/images/man1.png",
-  "/images/man2.png",
-  "/images/man3.png",
-  "/images/man4.png",
+  "/images/1.png",
+  "/images/t1.png",
+  "/images/t1.png",
+  "/images/t3.png",
   "/images/man5.png",
 ];
 
@@ -84,8 +84,8 @@ function createExpertsSection({
 
 function createCompanyTrustSection({
   eyebrow = "ABOUT SEVEN UNIQUE",
-  heading = "Why work with Seven Unique? We're trusted by the world's top tech teams.",
-  description = "Seven Unique is a US-based company powered by LATAM dev teams...",
+  heading = "Why work with Seven Unique? We're trusted by the India's top tech teams.",
+  description = "Seven Unique is a fintech company...",
   stats,
   image = "/logos/map.png",
 } = {}) {
@@ -220,43 +220,63 @@ faq = null,
   ],
 },
 processSection = {
-  eyebrow: "BACKEND DEVELOPMENT PROCESS",
-  heading: "How we deliver backend solutions that drive business value:",
+  eyebrow: "OUR DELIVERY PROCESS",
+
+  heading:
+    "How we transform ideas into scalable digital products and business solutions:",
+
   description:
-    "We've refined our backend development services across hundreds of projects.",
+    "Our proven delivery framework helps organizations launch, scale, and optimize digital products efficiently while maintaining quality, security, and long-term business value.",
 
   image: "/logos/office3.jpg",
 
   steps: [
     {
-      title: "Requirements & Technical Discovery",
+      title: "Discovery & Strategy",
       description:
-        "We work with stakeholders to understand goals, constraints, and integration requirements.",
+        "We collaborate with stakeholders to understand business objectives, user needs, technical requirements, and success metrics before defining the roadmap.",
     },
+
     {
-      title: "Architecture Design",
+      title: "Research & Solution Design",
       description:
-        "We design scalable backend systems optimized for performance and reliability.",
+        "Our experts design the optimal solution architecture, workflows, user experiences, and technology stack tailored to your project goals.",
     },
+
     {
-      title: "Database Design",
+      title: "Planning & Roadmapping",
       description:
-        "We define schemas and relationships for scalable and efficient queries.",
+        "We define project milestones, delivery timelines, resource allocation, and implementation priorities to ensure smooth execution.",
     },
+
     {
-      title: "API Contract Definition",
+      title: "Development & Implementation",
       description:
-        "We define APIs with proper validation and integration handling.",
+        "Our teams build, integrate, and configure solutions using modern technologies and best practices while maintaining transparency throughout the process.",
     },
+
     {
-      title: "Development & CI/CD",
+      title: "Testing & Quality Assurance",
       description:
-        "We build systems with structured pipelines and testing workflows.",
+        "Every solution undergoes comprehensive testing, validation, performance optimization, and security reviews to ensure production readiness.",
     },
+
     {
-      title: "Testing & QA",
+      title: "Deployment & Launch",
       description:
-        "We validate performance, security, and stability.",
+        "We manage deployment, release planning, infrastructure setup, and go-live activities to ensure a seamless launch experience.",
+    },
+
+    {
+      title: "Monitoring & Optimization",
+      description:
+        "After launch, we continuously monitor performance, gather insights, and optimize the solution to maximize efficiency and user satisfaction.",
+    },
+
+    {
+      title: "Support & Growth",
+      description:
+        "We provide ongoing maintenance, enhancements, scaling support, and strategic guidance to help your business grow with confidence.",
     },
   ],
 },
@@ -269,6 +289,73 @@ processSection = {
   }));
 
   return {
+ 
+
+
+  aiServicesSection: {
+    sectionLabel: "SERVICES WE OFFER",
+    heading: "Services We Offer",
+    description:
+      "We build practical AI solutions that help businesses automate workflows, improve efficiency, and create intelligent digital experiences.",
+
+    services: [
+      {
+        title: "AI Chatbot Development",
+        image: "/services/chatbot.jpg",
+        points: [
+          "Custom AI-powered chatbots",
+          "Website & WhatsApp assistants",
+          "24/7 customer support automation",
+        ],
+      },
+      {
+        title: "Generative AI Solutions",
+        image: "/services/generative-ai.jpg",
+        points: [
+          "Content generation tools",
+          "Text, image & code generation",
+          "Business process automation",
+        ],
+      },
+      {
+        title: "AI Agent Development",
+        image: "/services/ai-agent.jpg",
+        points: [
+          "Autonomous AI agents",
+          "Workflow automation",
+          "Multi-agent systems",
+        ],
+      },
+      {
+        title: "Machine Learning Solutions",
+        image: "/services/ml.jpg",
+        points: [
+          "Predictive analytics",
+          "Recommendation systems",
+          "Custom ML model development",
+        ],
+      },
+      {
+        title: "Computer Vision",
+        image: "/services/computer-vision.jpg",
+        points: [
+          "Object detection systems",
+          "Image & video analysis",
+          "OCR and facial recognition",
+        ],
+      },
+      {
+        title: "Natural Language Processing",
+        image: "/services/nlp.jpg",
+        points: [
+          "Sentiment analysis",
+          "Language translation",
+          "Text summarization & classification",
+        ],
+      },
+    ],
+  },
+
     sections: {
       trustedClientsStrip: true,
     },
@@ -378,7 +465,7 @@ toolsTech: toolsTech ?? (typeof defaultToolsTech !== "undefined" ? defaultToolsT
             `Their ${label.toLowerCase()} team integrated quickly, improved delivery confidence, and consistently produced work our internal stakeholders could trust.`,
           name: "Jordan Blake",
           role: "VP of Engineering",
-          photo: "/images/man1.png",
+          photo: "/images/1.png",
           companyType: "text",
           companyText: "NEXORA",
           companyClassName:
@@ -391,7 +478,7 @@ toolsTech: toolsTech ?? (typeof defaultToolsTech !== "undefined" ? defaultToolsT
             `They brought structure, technical depth, and strong follow-through. The team helped us move faster without lowering quality.`,
           name: "Melissa Grant",
           role: "Director of Engineering",
-          photo: "/images/man2.png",
+          photo: "/images/t1.png",
           companyType: "text",
           companyText: "STACKLANE",
           companyClassName:
@@ -416,7 +503,7 @@ toolsTech: toolsTech ?? (typeof defaultToolsTech !== "undefined" ? defaultToolsT
             `They helped us simplify delivery, strengthen technical quality, and create a foundation our team could keep building on.`,
           name: "Nina Romero",
           role: "Head of Platform",
-          photo: "/images/man3.png",
+          photo: "/images/t1.png",
           companyType: "text",
           companyText: "coreOS",
           companyClassName: "text-[20px] font-semibold text-[#101828]",
@@ -438,7 +525,7 @@ toolsTech: toolsTech ?? (typeof defaultToolsTech !== "undefined" ? defaultToolsT
             `The engineers worked as a true extension of our team and delivered improvements that were practical, reliable, and easy for us to build on.`,
           name: "Daniel Brooks",
           role: "CTO",
-          photo: "/images/man4.png",
+          photo: "/images/t3.png",
           companyType: "text",
           companyText: "MEDSYNC",
           companyClassName: "text-[20px] font-semibold text-[#101828]",
@@ -549,10 +636,12 @@ toolsTech: toolsTech ?? (typeof defaultToolsTech !== "undefined" ? defaultToolsT
 const generatedServices = {
   "cms-development": createServiceEntry({
     breadcrumb: "CMS",
-    title: "CMS DEVELOPMENT SERVICES",
-    heading: "Deliver content-rich digital experiences with scalable CMS solutions.",
-    description:
-      "We build CMS platforms that give marketing teams flexibility while keeping performance, governance, and maintainability under control.",
+   title: "CMS DEVELOPMENT SERVICES",
+
+heading: "Empower your team with flexible and scalable CMS solutions.",
+
+description:
+  "We develop custom content management systems that simplify content publishing, streamline workflows, and ensure exceptional performance across digital channels.",
     label: "CMS Development",
     useCasesLabel: "CMS SOLUTIONS",
     useCasesHeading: "CMS Development Use Cases",
@@ -612,331 +701,361 @@ const generatedServices = {
       },
     ],
   }),
-  blockchain: createServiceEntry({
-    breadcrumb: "Blockchain",
-    title: "BLOCKCHAIN DEVELOPMENT SERVICES",
-    heading: "Build secure blockchain products and distributed systems with confidence.",
-    description:
-      "We help teams design blockchain solutions, smart contract systems, and crypto-enabled platforms with a focus on security, maintainability, and practical delivery.",
-    label: "Blockchain Development",
-    useCasesLabel: "BLOCKCHAIN SOLUTIONS",
-    useCasesHeading: "Blockchain Development Use Cases",
-    useCasesDescription:
-      "From smart contracts to token-enabled products, we build blockchain solutions that align with real product goals and operational needs.",
-    useCasesServices: [
-      {
-        title: "Smart Contract Development",
-        content:
-          "Develop secure smart contracts for blockchain-based products.\n\nWe help teams design core contract logic, review flows, and reduce avoidable implementation risks.",
-      },
-      {
-        title: "Blockchain Platforms",
-        content:
-          "Build end-to-end blockchain applications and supporting infrastructure.\n\nWe connect wallet flows, data services, and operational tooling into cohesive product experiences.",
-      },
-    ],
-    teamEyebrow: "Our blockchain development team",
-    teamHeading: "Why companies work with our blockchain engineers:",
-    teamDescription:
-      "We help organizations ship blockchain products with stronger engineering discipline, practical architecture, and clearer delivery processes.",
-    ctaTitle: "Need a blockchain team that can build beyond prototypes?",
-    ctaSubtitle: "Tell us about your smart contracts, platform architecture, or blockchain product goals.",
-    testimonialHeading: "Blockchain delivery you can support in production.",
-    testimonialDescription:
-      "Our blockchain work focuses on security, maintainability, and product readiness instead of experimentation alone.",
-    highlightQuote:
-      "They helped us turn an ambitious blockchain concept into a product we could actually operate.",
-    highlightName: "Victor Hale",
-    highlightRole: "Head of Product",
-    highlightCompany: "LedgerWave",
-    caseStudiesLabel: "BLOCKCHAIN CASE STUDIES",
-    caseStudiesHeading: "Blockchain products delivered with security and structure.",
-    caseStudiesDescription:
-      "We support blockchain initiatives that need dependable implementation, scalable architecture, and practical operational planning.",
-    caseStudyCards: [
-      {
-        tag: "FINTECH",
-        title: "Built Smart Contract Workflows for a Digital Asset Platform",
-        description:
-          "Designed contract logic and supporting services for secure transaction handling.",
-        image: "/logos/office1.jpg",
-      },
-      {
-        tag: "WEB3",
-        title: "Developed Wallet and Identity Flows for a Blockchain Product",
-        description:
-          "Created user-facing and backend flows to support secure blockchain interactions.",
-        image: "/logos/office2.jpg",
-      },
-      {
-        tag: "ENTERPRISE",
-        title: "Implemented Audit-Friendly Blockchain Operations",
-        description:
-          "Improved visibility, maintainability, and risk controls across a distributed platform.",
-        image: "/logos/office3.jpg",
-      },
-    ],
-  }),
-  "frontend-development": createServiceEntry({
-    breadcrumb: "Frontend",
-    title: "FRONT-END DEVELOPMENT SERVICES",
-    heading: "Create responsive frontend experiences that feel fast, polished, and scalable.",
-    description:
-      "We build modern frontend applications with strong performance, accessible interfaces, and component systems teams can maintain over time.",
-    label: "Frontend Development",
-    useCasesLabel: "FRONTEND SOLUTIONS",
-    useCasesHeading: "Frontend Development Use Cases",
-    useCasesDescription:
-      "From marketing sites to complex product interfaces, we build frontend systems that support speed, clarity, and maintainable growth.",
-    useCasesServices: [
-      {
-        title: "Web App Interfaces",
-        content:
-          "Build high-performance interfaces for modern web applications.\n\nWe focus on clarity, responsiveness, and component patterns that help teams ship quickly.",
-      },
-      {
-        title: "Design System Implementation",
-        content:
-          "Turn design language into reusable frontend components.\n\nWe help teams align product consistency, accessibility, and development efficiency across the UI stack.",
-      },
-    ],
-    teamEyebrow: "Our front-end development team",
-    teamHeading: "Why product teams choose our frontend engineers:",
-    teamDescription:
-      "We help companies ship frontend experiences that are polished for users, practical for teams, and maintainable as products evolve.",
-    ctaTitle: "Need a frontend team that can move fast without losing quality?",
-    ctaSubtitle: "Tell us about your product UI, performance, or design system needs.",
-    testimonialHeading: "Frontend delivery users notice and teams can maintain.",
-    testimonialDescription:
-      "Our frontend work improves product usability, interface quality, and implementation speed without creating long-term complexity.",
-    highlightQuote:
-      "They raised the quality of our frontend experience while making the codebase easier to work with.",
-    highlightName: "Sophie Turner",
-    highlightRole: "Head of Product Design",
-    highlightCompany: "BrightPixel",
-    caseStudiesLabel: "FRONTEND CASE STUDIES",
-    caseStudiesHeading: "Frontend systems built for performance and product quality.",
-    caseStudiesDescription:
-      "We build frontend experiences that improve usability, support growth, and help internal teams ship with more consistency.",
-    caseStudyCards: [
-      {
-        tag: "SaaS",
-        title: "Built a Component-Driven Frontend for a B2B Platform",
-        description:
-          "Improved design consistency and development speed with reusable UI patterns.",
-        image: "/logos/office1.jpg",
-      },
-      {
-        tag: "RETAIL",
-        title: "Improved Frontend Performance Across High-Traffic Pages",
-        description:
-          "Reduced friction in key flows by focusing on responsiveness and UX polish.",
-        image: "/logos/office2.jpg",
-      },
-      {
-        tag: "ENTERPRISE",
-        title: "Standardized UI Delivery with a Shared Design System",
-        description:
-          "Created scalable frontend building blocks for multiple product teams.",
-        image: "/logos/office3.jpg",
-      },
-    ],
-  }),
-  "machine-learning": createServiceEntry({
-    breadcrumb: "Machine Learning",
-    title: "MACHINE LEARNING SERVICES",
-    heading: "Build machine learning systems that move from experimentation to practical value.",
-    description:
-      "We help teams design, train, and operationalize machine learning solutions that support real business decisions and scalable product experiences.",
-    label: "Machine Learning",
-    useCasesLabel: "ML SOLUTIONS",
-    useCasesHeading: "Machine Learning Use Cases",
-    useCasesDescription:
-      "From predictive systems to recommendation engines, we build machine learning solutions that can be deployed, monitored, and improved over time.",
-    useCasesServices: [
-      {
-        title: "Predictive Modeling",
-        content:
-          "Build machine learning models that support forecasting and decision-making.\n\nWe help teams turn available data into practical predictions with measurable business value.",
-      },
-      {
-        title: "ML Operations",
-        content:
-          "Operationalize machine learning systems for real production use.\n\nWe focus on deployment workflows, monitoring, retraining, and long-term maintainability.",
-      },
-    ],
-    teamEyebrow: "Our machine learning team",
-    teamHeading: "Why teams trust our machine learning engineers:",
-    teamDescription:
-      "We help organizations turn ML initiatives into production-ready systems with stronger engineering, clearer iteration cycles, and better operational reliability.",
-    ctaTitle: "Need an ML team that can ship beyond experimentation?",
-    ctaSubtitle: "Tell us about your models, data workflows, or ML product goals.",
-    testimonialHeading: "Machine learning delivery grounded in real operations.",
-    testimonialDescription:
-      "Our machine learning work focuses on measurable outcomes, maintainable systems, and deployment-ready engineering.",
-    highlightQuote:
-      "They helped us make machine learning useful in production instead of keeping it trapped in experiments.",
-    highlightName: "Priya Nair",
-    highlightRole: "Data Science Lead",
-    highlightCompany: "SignalWorks",
-    caseStudiesLabel: "ML CASE STUDIES",
-    caseStudiesHeading: "Machine learning systems delivered for impact and maintainability.",
-    caseStudiesDescription:
-      "We help teams apply machine learning where it creates practical value, stronger decisions, and sustainable delivery workflows.",
-    caseStudyCards: [
-      {
-        tag: "ANALYTICS",
-        title: "Built Predictive Models for Demand Forecasting",
-        description:
-          "Supported planning teams with more reliable projections and clearer data pipelines.",
-        image: "/logos/office1.jpg",
-      },
-      {
-        tag: "SaaS",
-        title: "Operationalized Recommendation Models for Product Growth",
-        description:
-          "Connected model outputs to user-facing product experiences with production support.",
-        image: "/logos/office2.jpg",
-      },
-      {
-        tag: "ENTERPRISE",
-        title: "Improved ML Deployment and Monitoring Workflows",
-        description:
-          "Created better visibility, retraining processes, and release discipline for model systems.",
-        image: "/logos/office3.jpg",
-      },
-    ],
-  }),
-  "qa-testing": createServiceEntry({
-    breadcrumb: "QA",
-    title: "QA TESTING & AUTOMATION SERVICES",
-    heading: "Protect release quality with structured QA and test automation services.",
-    description:
-      "We help teams improve release confidence through manual QA, automated testing, and quality processes that scale with product complexity.",
-    label: "QA Testing & Automation",
-    useCasesLabel: "QA SOLUTIONS",
-    useCasesHeading: "QA and Automation Use Cases",
-    useCasesDescription:
-      "From release validation to automated regression coverage, we build QA processes that help teams move faster with fewer production issues.",
-    useCasesServices: [
-      {
-        title: "Manual QA Coverage",
-        content:
-          "Support product quality with structured manual testing workflows.\n\nWe help teams validate functionality, user flows, and edge cases before releases reach production.",
-      },
-      {
-        title: "Automation Frameworks",
-        content:
-          "Build automated testing systems for repeatable release confidence.\n\nWe create regression coverage and quality workflows that scale alongside product complexity.",
-      },
-    ],
-    teamEyebrow: "Our QA and automation team",
-    teamHeading: "Why teams choose our QA specialists:",
-    teamDescription:
-      "We help organizations improve software quality through clear test strategy, disciplined execution, and automation that supports faster releases.",
-    ctaTitle: "Need QA support that improves quality without slowing delivery?",
-    ctaSubtitle: "Tell us about your testing gaps, automation goals, or release quality challenges.",
-    testimonialHeading: "Quality outcomes that improve release confidence.",
-    testimonialDescription:
-      "Our QA work helps teams reduce regressions, increase release stability, and create more predictable delivery cycles.",
-    highlightQuote:
-      "They gave our team a much stronger release process and far more confidence in every deployment.",
-    highlightName: "Aaron Cole",
-    highlightRole: "Engineering Manager",
-    highlightCompany: "LaunchGrid",
-    caseStudiesLabel: "QA CASE STUDIES",
-    caseStudiesHeading: "Quality programs delivered for speed, coverage, and stability.",
-    caseStudiesDescription:
-      "We help teams improve release quality with structured QA execution and automation strategies that fit the product lifecycle.",
-    caseStudyCards: [
-      {
-        tag: "SaaS",
-        title: "Built Automated Regression Coverage for Core Workflows",
-        description:
-          "Improved release confidence and reduced manual repetition for a growing product team.",
-        image: "/logos/office1.jpg",
-      },
-      {
-        tag: "FINTECH",
-        title: "Strengthened QA for High-Risk Transaction Flows",
-        description:
-          "Added structured test coverage and validation processes around critical releases.",
-        image: "/logos/office2.jpg",
-      },
-      {
-        tag: "ENTERPRISE",
-        title: "Standardized Cross-Team Testing Practices",
-        description:
-          "Created better quality visibility and more dependable release workflows across teams.",
-        image: "/logos/office3.jpg",
-      },
-    ],
-  }),
+ blockchain: createServiceEntry({
+  breadcrumb: "Blockchain",
+
+  title: "BLOCKCHAIN DEVELOPMENT SERVICES",
+
+  heading: "Build secure, scalable blockchain solutions for the future of digital business.",
+
+  description:
+    "We design and develop blockchain-powered applications, smart contracts, and decentralized platforms that enhance transparency, security, and operational efficiency.",
+
+  label: "Blockchain Development",
+
+  useCasesLabel: "BLOCKCHAIN SOLUTIONS",
+
+  useCasesHeading: "Blockchain Development Use Cases",
+
+  useCasesDescription:
+    "From decentralized applications to enterprise blockchain platforms, we deliver solutions that create trust, automate processes, and unlock new business opportunities.",
+
+  useCasesServices: [
+    {
+      title: "Smart Contract Development",
+      content:
+        "Create secure and reliable smart contracts tailored to your business requirements.\n\nOur experts develop, test, and optimize contract logic to ensure transparency, efficiency, and risk mitigation.",
+    },
+    {
+      title: "Blockchain Application Development",
+      content:
+        "Build end-to-end blockchain solutions with seamless user experiences.\n\nWe develop decentralized applications, wallet integrations, and blockchain infrastructures that support scalable growth.",
+    },
+  ],
+
+  teamEyebrow: "Our blockchain development team",
+
+  teamHeading: "Why businesses choose our blockchain experts:",
+
+  teamDescription:
+    "We combine deep blockchain expertise with proven engineering practices to deliver secure, scalable, and production-ready solutions that drive measurable value.",
+
+  ctaTitle: "Ready to turn your blockchain vision into reality?",
+
+  ctaSubtitle:
+    "Let's discuss your smart contracts, decentralized applications, tokenization strategy, or blockchain platform requirements.",
+
+  testimonialHeading: "Blockchain solutions built for real-world success.",
+
+  testimonialDescription:
+    "Our focus is on delivering reliable, secure, and scalable blockchain products that create lasting business impact.",
+
+  highlightQuote:
+    "Their team transformed our blockchain concept into a secure, scalable platform that exceeded expectations.",
+
+  highlightName: "Victor Hale",
+
+  highlightRole: "Head of Product",
+
+  highlightCompany: "LedgerWave",
+
+  caseStudiesLabel: "BLOCKCHAIN CASE STUDIES",
+
+  caseStudiesHeading: "Driving innovation through blockchain technology.",
+
+  caseStudiesDescription:
+    "Explore how we've helped organizations launch secure blockchain products, streamline operations, and create new digital opportunities.",
+
+  caseStudyCards: [
+    {
+      tag: "FINTECH",
+      title: "Developed Secure Smart Contract Infrastructure for a Digital Finance Platform",
+      description:
+        "Implemented automated transaction workflows with enhanced security and compliance controls.",
+      image: "/logos/office1.jpg",
+    },
+    {
+      tag: "WEB3",
+      title: "Built a Decentralized Identity and Wallet Management Solution",
+      description:
+        "Created seamless authentication and digital asset management experiences for users.",
+      image: "/logos/office2.jpg",
+    },
+    {
+      tag: "ENTERPRISE",
+      title: "Modernized Business Operations with Enterprise Blockchain Technology",
+      description:
+        "Enabled transparent, auditable workflows while improving efficiency across distributed systems.",
+      image: "/logos/office3.jpg",
+    },
+  ],
+}),
+ "frontend-development": createServiceEntry({
+  breadcrumb: "Frontend",
+  title: "FRONT-END DEVELOPMENT SERVICES",
+  heading: "Build exceptional digital experiences with modern frontend engineering.",
+  description:
+    "We create fast, responsive, and scalable user interfaces that combine seamless user experiences with maintainable frontend architectures.",
+  label: "Frontend Development",
+  useCasesLabel: "FRONTEND SOLUTIONS",
+  useCasesHeading: "Frontend Development Use Cases",
+  useCasesDescription:
+    "From customer-facing platforms to enterprise applications, we build frontend solutions that enhance usability, performance, and long-term scalability.",
+  useCasesServices: [
+    {
+      title: "Web Application Development",
+      content:
+        "Create engaging and high-performing web interfaces.\n\nWe build responsive applications that deliver intuitive user experiences across devices and platforms.",
+    },
+    {
+      title: "Design Systems & Component Libraries",
+      content:
+        "Establish consistency with reusable UI foundations.\n\nWe develop scalable design systems and component libraries that improve collaboration and accelerate development.",
+    },
+  ],
+  teamEyebrow: "Our frontend development team",
+  teamHeading: "Why businesses choose our frontend specialists:",
+  teamDescription:
+    "We combine design precision with engineering excellence to create frontend experiences that delight users and scale with business growth.",
+  ctaTitle: "Ready to build a frontend experience users will love?",
+  ctaSubtitle:
+    "Tell us about your application, user experience goals, or frontend modernization plans.",
+  testimonialHeading: "Frontend solutions built for performance and engagement.",
+  testimonialDescription:
+    "Our frontend development approach focuses on usability, speed, accessibility, and long-term maintainability.",
+  highlightQuote:
+    "Their team transformed our user experience and helped us deliver a faster, more intuitive product.",
+  highlightName: "Sophie Turner",
+  highlightRole: "Head of Product Design",
+  highlightCompany: "BrightPixel",
+  caseStudiesLabel: "FRONTEND CASE STUDIES",
+  caseStudiesHeading: "Frontend experiences designed for growth and performance.",
+  caseStudiesDescription:
+    "We help organizations create modern digital products that improve engagement, increase conversions, and support future scalability.",
+  caseStudyCards: [
+    {
+      tag: "SaaS",
+      title: "Built a Modern Frontend Platform for a Growing SaaS Business",
+      description:
+        "Improved usability, consistency, and development velocity through reusable components.",
+      image: "/logos/office1.jpg",
+    },
+    {
+      tag: "RETAIL",
+      title: "Optimized User Experience Across High-Traffic E-Commerce Pages",
+      description:
+        "Enhanced responsiveness and customer engagement with a performance-first approach.",
+      image: "/logos/office2.jpg",
+    },
+    {
+      tag: "ENTERPRISE",
+      title: "Created a Scalable Design System for Multiple Product Teams",
+      description:
+        "Standardized UI delivery and accelerated development across business units.",
+      image: "/logos/office3.jpg",
+    },
+  ],
+}),
+
+"machine-learning": createServiceEntry({
+  breadcrumb: "Machine Learning",
+  title: "MACHINE LEARNING SERVICES",
+  heading: "Unlock business intelligence with advanced machine learning solutions.",
+  description:
+    "We design, develop, and deploy machine learning systems that transform data into actionable insights, automation, and competitive advantage.",
+  label: "Machine Learning",
+  useCasesLabel: "ML SOLUTIONS",
+  useCasesHeading: "Machine Learning Use Cases",
+  useCasesDescription:
+    "From predictive analytics to intelligent automation, we build machine learning solutions that deliver measurable business outcomes.",
+  useCasesServices: [
+    {
+      title: "Predictive Analytics",
+      content:
+        "Leverage data-driven forecasting for smarter decisions.\n\nWe develop machine learning models that identify patterns, predict outcomes, and support business growth.",
+    },
+    {
+      title: "MLOps & Deployment",
+      content:
+        "Scale machine learning beyond experimentation.\n\nWe implement deployment, monitoring, and retraining workflows that keep models reliable and effective in production.",
+    },
+  ],
+  teamEyebrow: "Our machine learning team",
+  teamHeading: "Why organizations trust our ML experts:",
+  teamDescription:
+    "We help businesses transform data into intelligent systems that improve efficiency, enhance decision-making, and drive innovation.",
+  ctaTitle: "Ready to turn your data into a competitive advantage?",
+  ctaSubtitle:
+    "Let's discuss your machine learning initiatives, predictive analytics needs, or AI-driven product ideas.",
+  testimonialHeading: "Machine learning solutions built for measurable impact.",
+  testimonialDescription:
+    "Our machine learning services focus on delivering scalable systems that generate real business value.",
+  highlightQuote:
+    "Their expertise helped us move from raw data to actionable intelligence that transformed our operations.",
+  highlightName: "Priya Nair",
+  highlightRole: "Data Science Lead",
+  highlightCompany: "SignalWorks",
+  caseStudiesLabel: "ML CASE STUDIES",
+  caseStudiesHeading: "Machine learning projects delivering real business outcomes.",
+  caseStudiesDescription:
+    "We help organizations apply machine learning to solve complex challenges and unlock new opportunities.",
+  caseStudyCards: [
+    {
+      tag: "ANALYTICS",
+      title: "Developed Predictive Forecasting Models for Business Planning",
+      description:
+        "Improved forecasting accuracy and enabled more informed strategic decisions.",
+      image: "/logos/office1.jpg",
+    },
+    {
+      tag: "SaaS",
+      title: "Built Recommendation Engines to Increase User Engagement",
+      description:
+        "Delivered personalized experiences that improved retention and product adoption.",
+      image: "/logos/office2.jpg",
+    },
+    {
+      tag: "ENTERPRISE",
+      title: "Implemented Scalable MLOps Workflows for Production AI Systems",
+      description:
+        "Enhanced model monitoring, deployment reliability, and operational efficiency.",
+      image: "/logos/office3.jpg",
+    },
+  ],
+}),
+
+"qa-testing": createServiceEntry({
+  breadcrumb: "QA",
+  title: "QA TESTING & AUTOMATION SERVICES",
+  heading: "Deliver reliable software with comprehensive QA and test automation.",
+  description:
+    "We help organizations improve software quality through structured testing strategies, automation frameworks, and continuous quality assurance processes.",
+  label: "QA Testing & Automation",
+  useCasesLabel: "QA SOLUTIONS",
+  useCasesHeading: "QA and Automation Use Cases",
+  useCasesDescription:
+    "From manual testing to enterprise-scale automation, we create quality assurance processes that reduce risk and accelerate releases.",
+  useCasesServices: [
+    {
+      title: "Quality Assurance Testing",
+      content:
+        "Ensure software quality across every release cycle.\n\nWe perform comprehensive testing to validate functionality, usability, performance, and reliability.",
+    },
+    {
+      title: "Test Automation Solutions",
+      content:
+        "Accelerate delivery with automated quality workflows.\n\nWe build scalable automation frameworks that improve test coverage and reduce repetitive manual effort.",
+    },
+  ],
+  teamEyebrow: "Our QA and automation team",
+  teamHeading: "Why businesses trust our QA specialists:",
+  teamDescription:
+    "We help organizations achieve higher release confidence through robust testing strategies, automation, and continuous quality improvement.",
+  ctaTitle: "Looking to improve release confidence and product quality?",
+  ctaSubtitle:
+    "Tell us about your testing challenges, automation goals, or software quality requirements.",
+  testimonialHeading: "Quality assurance that supports faster, safer releases.",
+  testimonialDescription:
+    "Our QA services help teams reduce defects, improve stability, and deliver better user experiences.",
+  highlightQuote:
+    "Their QA processes significantly improved our release quality and reduced production issues.",
+  highlightName: "Aaron Cole",
+  highlightRole: "Engineering Manager",
+  highlightCompany: "LaunchGrid",
+  caseStudiesLabel: "QA CASE STUDIES",
+  caseStudiesHeading: "Quality programs built for reliability and scale.",
+  caseStudiesDescription:
+    "We help organizations strengthen product quality through structured testing and intelligent automation.",
+  caseStudyCards: [
+    {
+      tag: "SaaS",
+      title: "Implemented Automated Regression Testing for Core Products",
+      description:
+        "Reduced manual effort and increased confidence in every release cycle.",
+      image: "/logos/office1.jpg",
+    },
+    {
+      tag: "FINTECH",
+      title: "Enhanced Testing Coverage for Critical Financial Workflows",
+      description:
+        "Improved reliability and compliance across high-risk transaction processes.",
+      image: "/logos/office2.jpg",
+    },
+    {
+      tag: "ENTERPRISE",
+      title: "Established Enterprise-Wide QA Standards and Automation",
+      description:
+        "Created consistent testing practices and improved release predictability.",
+      image: "/logos/office3.jpg",
+    },
+  ],
+}),
   "ui-ux-design": createServiceEntry({
-    breadcrumb: "UI/UX",
-    title: "UX/UI DESIGN SERVICES",
-    heading: "Design digital experiences that are intuitive, consistent, and built for growth.",
-    description:
-      "We help teams improve product usability, design systems, and digital journeys through practical UX research and scalable UI design.",
-    label: "UX/UI Design",
-    useCasesLabel: "DESIGN SOLUTIONS",
-    useCasesHeading: "UX/UI Design Use Cases",
-    useCasesDescription:
-      "From product redesigns to new platform launches, we design user experiences that support clarity, conversion, and maintainable implementation.",
-    useCasesServices: [
-      {
-        title: "Product UX Design",
-        content:
-          "Design user journeys that make complex products easier to understand and use.\n\nWe support discovery, flow mapping, wireframing, and interface design grounded in real product needs.",
-      },
-      {
-        title: "Design Systems",
-        content:
-          "Create scalable UI systems for more consistent product delivery.\n\nWe help teams align design quality, accessibility, and implementation across growing digital products.",
-      },
-    ],
-    teamEyebrow: "Our UX/UI design team",
-    teamHeading: "Why product teams choose our designers:",
-    teamDescription:
-      "We help organizations improve product quality through clearer journeys, more consistent interfaces, and design work that supports engineering execution.",
-    ctaTitle: "Need a design team that balances usability and execution?",
-    ctaSubtitle: "Tell us about your redesign, product UX, or design system goals.",
-    testimonialHeading: "Design outcomes that improve product clarity and adoption.",
-    testimonialDescription:
-      "Our design work helps teams reduce friction, improve usability, and create interfaces that support long-term product growth.",
-    highlightQuote:
-      "They helped us simplify a complicated product experience without losing depth or capability.",
-    highlightName: "Laura Finch",
-    highlightRole: "VP of Product",
-    highlightCompany: "Northbeam",
-    caseStudiesLabel: "DESIGN CASE STUDIES",
-    caseStudiesHeading: "Product design systems delivered for clarity and scale.",
-    caseStudiesDescription:
-      "We help teams improve UX and UI quality with design processes that connect strategy, research, and implementation.",
-    caseStudyCards: [
-      {
-        tag: "SaaS",
-        title: "Redesigned Core Product Flows to Reduce User Friction",
-        description:
-          "Improved navigation, clarity, and task completion across a complex product experience.",
-        image: "/logos/office1.jpg",
-      },
-      {
-        tag: "FINTECH",
-        title: "Built a Reusable Design System for Faster Delivery",
-        description:
-          "Supported more consistent product design and stronger handoff to engineering.",
-        image: "/logos/office2.jpg",
-      },
-      {
-        tag: "ENTERPRISE",
-        title: "Improved Usability Across Multi-Step Business Workflows",
-        description:
-          "Refined information architecture and interface patterns for a more intuitive product.",
-        image: "/logos/office3.jpg",
-      },
-    ],
-  }),
+  breadcrumb: "UI/UX",
+  title: "UI/UX DESIGN SERVICES",
+  heading: "Create user experiences that engage, convert, and inspire.",
+  description:
+    "We design intuitive digital products that combine user-centered experiences, modern interfaces, and scalable design systems to drive business growth.",
+  label: "UI/UX Design",
+  useCasesLabel: "DESIGN SOLUTIONS",
+  useCasesHeading: "UI/UX Design Use Cases",
+  useCasesDescription:
+    "From new product concepts to enterprise redesigns, we create digital experiences that improve usability, strengthen engagement, and support long-term success.",
+  useCasesServices: [
+    {
+      title: "User Experience Design",
+      content:
+        "Design seamless user journeys that make digital products simple and enjoyable to use.\n\nWe conduct research, map workflows, create wireframes, and develop intuitive experiences tailored to user needs.",
+    },
+    {
+      title: "Design Systems & UI Frameworks",
+      content:
+        "Build scalable design foundations for consistent product experiences.\n\nWe create reusable design systems and component libraries that improve collaboration, accessibility, and development efficiency.",
+    },
+  ],
+  teamEyebrow: "Our UI/UX design team",
+  teamHeading: "Why businesses choose our design experts:",
+  teamDescription:
+    "We blend creativity, strategy, and usability to create digital experiences that delight users while supporting business objectives and technical implementation.",
+  ctaTitle: "Ready to transform your product experience?",
+  ctaSubtitle:
+    "Tell us about your design challenges, product vision, or user experience goals.",
+  testimonialHeading: "Design solutions that drive engagement and growth.",
+  testimonialDescription:
+    "Our UI/UX design services help organizations improve usability, strengthen customer satisfaction, and create memorable digital experiences.",
+  highlightQuote:
+    "Their design expertise helped us simplify complex workflows and create a product our users genuinely enjoy using.",
+  highlightName: "Laura Finch",
+  highlightRole: "VP of Product",
+  highlightCompany: "Northbeam",
+  caseStudiesLabel: "DESIGN CASE STUDIES",
+  caseStudiesHeading: "Digital experiences designed for impact and scalability.",
+  caseStudiesDescription:
+    "We help organizations build intuitive, visually engaging products that improve adoption, increase retention, and support business growth.",
+  caseStudyCards: [
+    {
+      tag: "SaaS",
+      title: "Redesigned a Complex SaaS Platform for Better User Adoption",
+      description:
+        "Improved navigation, workflow efficiency, and user satisfaction through a user-centered redesign.",
+      image: "/logos/office1.jpg",
+    },
+    {
+      tag: "FINTECH",
+      title: "Created a Scalable Design System for a Financial Platform",
+      description:
+        "Established consistent UI patterns that accelerated product development and improved accessibility.",
+      image: "/logos/office2.jpg",
+    },
+    {
+      tag: "ENTERPRISE",
+      title: "Enhanced Enterprise Workflow Experiences Through UX Research",
+      description:
+        "Optimized information architecture and interaction design to improve productivity and ease of use.",
+      image: "/logos/office3.jpg",
+    },
+  ],
+}),
 };
 
 
@@ -960,7 +1079,7 @@ export const serviceData = {
     },
 
 
-    faq: {
+  faq: {
   sectionLabel: "FAQ",
   heading: "Frequently asked questions about AI development",
   items: [
@@ -1000,9 +1119,11 @@ export const serviceData = {
     hero: {
       breadcrumb: ["Services", "AI"],
       title: "AI DEVELOPMENT SERVICES",
-      heading: "Work with AI experts trusted by the India's top tech teams.",
-      description:
-        "As a leading AI development company, we deliver AI-powered solutions that go beyond experimentation. Our AI engineers help organizations integrate agentic AI, custom LLMs, and generative AI into their products.",
+
+heading: "Partner with AI specialists driving innovation for modern businesses.",
+
+description:
+  "We build intelligent AI solutions that move beyond prototypes. Our team helps organizations leverage generative AI, custom AI models, and autonomous AI systems to automate processes, enhance customer experiences, and accelerate growth.",
 
       label: "Artificial Intelligence",
 
@@ -1123,219 +1244,259 @@ export const serviceData = {
     },
   },
 
-  "backend-development": createServiceEntry({
-    breadcrumb: "Backend",
-    title: "BACK-END DEVELOPMENT SERVICES",
-    heading: "Build robust backend systems engineered for performance and scale.",
-    description:
-      "We design and develop secure backend architectures, APIs, databases, and cloud-ready systems that keep your products fast, reliable, and easy to grow.",
-    label: "Backend Development",
+"backend-development": createServiceEntry({
+  breadcrumb: "Backend",
 
-    useCasesLabel: "BACKEND SYSTEMS",
-    useCasesHeading: "Backend Use Cases",
-    useCasesDescription:
-      "We build backend platforms that support high traffic, clean integrations, and stable performance as your product and team grow.",
+  title: "BACK-END DEVELOPMENT SERVICES",
 
-    useCasesServices: [
-      {
-        title: "API Development",
-        content:
-          "Create scalable REST and GraphQL APIs for web and mobile products.\n\nDesign service contracts, authentication flows, and data access layers that are easy to maintain and extend.",
-      },
-      {
-        title: "Cloud Architecture",
-        content:
-          "Build resilient backend systems optimized for cloud deployment and growth.\n\nSupport reliability, observability, and future scaling with cloud-ready architecture and strong infrastructure foundations.",
-      },
-      {
-        title: "Microservices Architecture",
-        content:
-          "Design service-oriented backend systems for products that need cleaner scaling paths and better service boundaries.\n\nWe help teams break down monoliths, define communication patterns, and reduce operational complexity as platforms grow.",
-      },
-      {
-        title: "Database Architecture & Optimization",
-        content:
-          "Build database layers that support performance, consistency, and long-term maintainability.\n\nWe design schemas, indexing strategies, and query patterns that help products stay responsive under increasing load.",
-      },
-      {
-        title: "Authentication & Authorization Systems",
-        content:
-          "Implement secure access control across products, APIs, and internal platforms.\n\nWe support identity flows, permissions models, and token-based authentication strategies that fit real production requirements.",
-      },
-      {
-        title: "Backend Modernization & Migration",
-        content:
-          "Upgrade outdated backend systems without disrupting business-critical workflows.\n\nWe help teams modernize architecture, reduce technical debt, and improve long-term maintainability through phased engineering plans.",
-      },
-      {
-        title: "Real-Time Processing",
-        content:
-          "Support products that rely on live updates, event-driven workflows, and streaming data.\n\nWe build backend systems that can process and deliver real-time information reliably across customer-facing and internal use cases.",
-      },
-      {
-        title: "Monitoring & Observability",
-        content:
-          "Create stronger production visibility across backend systems and infrastructure.\n\nWe help teams instrument services, surface useful alerts, and improve response speed when performance or reliability issues appear.",
-      },
-    ],
+  heading: "Reliable backend systems built for scale and performance.",
 
-    teamEyebrow: "Our backend development team",
-    teamHeading: "Why product teams choose our backend engineers:",
-    teamDescription:
-      "We help companies build backend systems that stay reliable under real production pressure. Our engineers focus on clean architecture, maintainable services, and infrastructure that supports long-term growth.",
+  description:
+    "We develop secure, scalable, and cloud-ready backend infrastructures that power seamless user experiences, accelerate development, and support future growth.",
 
-    ctaTitle: "Looking for a backend team with this kind of track record?",
-    ctaSubtitle:
-      "Tell us more about your platform, APIs, or infrastructure needs.",
+  label: "Backend Development",
 
-    testimonialHeading: "Get backend results you can build on.",
-    testimonialDescription:
-      "Our backend work stands up under production traffic, product growth, and long-term operational demands.",
+  useCasesLabel: "BACKEND SOLUTIONS",
 
-    highlightQuote:
-      "They helped us strengthen our backend architecture and gave us the confidence to scale without sacrificing stability.",
-    highlightName: "Aarav Shah",
-    highlightRole: "Head of Engineering",
-    highlightCompany: "CloudForge",
+  useCasesHeading: "Backend Development Use Cases",
 
-    caseStudiesLabel: "BACKEND CASE STUDIES",
-    caseStudiesHeading:
-      "Backend systems built for scale, speed, and reliability.",
-    caseStudiesDescription:
-      "We help teams support growth without sacrificing performance through strong backend engineering.",
+  useCasesDescription:
+    "From API-driven platforms to enterprise-grade cloud architectures, we build backend systems that ensure reliability, performance, and long-term scalability.",
 
-    caseStudyCards: [
-      {
-        tag: "FINTECH",
-        title:
-          "Built Secure Transaction APIs for a High-Volume Finance Platform",
-        description:
-          "Engineered resilient backend APIs with strong security controls.",
-        image: "/logos/office1.jpg",
-      },
-      {
-        tag: "SAAS",
-        title:
-          "Modernized Backend Services to Support Multi-Tenant Growth",
-        description:
-          "Improved scalability and maintainability for a SaaS platform.",
-        image: "/logos/office2.jpg",
-      },
-      {
-        tag: "ENTERPRISE",
-        title:
-          "Re-Architected Core Systems for Reliability and Observability",
-        description:
-          "Improved monitoring and system stability.",
-        image: "/logos/office3.jpg",
-      },
-    ],
-  }),
+  useCasesServices: [
+    {
+      title: "API Development & Integration",
+      content:
+        "Build secure, scalable APIs that connect applications, services, and data seamlessly.\n\nWe create RESTful and GraphQL APIs that improve interoperability, performance, and developer productivity.",
+    },
+    {
+      title: "Cloud-Native Architecture",
+      content:
+        "Design backend infrastructures optimized for cloud environments.\n\nOur solutions improve availability, scalability, and resilience while reducing operational complexity.",
+    },
+    {
+      title: "Microservices Development",
+      content:
+        "Create modular backend systems that scale efficiently.\n\nWe design service-oriented architectures that improve flexibility, maintainability, and deployment speed.",
+    },
+    {
+      title: "Database Design & Optimization",
+      content:
+        "Build high-performance data architectures that support business growth.\n\nWe optimize database structures, queries, and indexing strategies to ensure reliability and responsiveness.",
+    },
+    {
+      title: "Identity & Access Management",
+      content:
+        "Secure applications with robust authentication and authorization systems.\n\nWe implement modern identity solutions that protect users, data, and business-critical services.",
+    },
+    {
+      title: "Legacy System Modernization",
+      content:
+        "Transform outdated backend infrastructures into modern, scalable platforms.\n\nWe help businesses reduce technical debt and improve agility through strategic modernization initiatives.",
+    },
+    {
+      title: "Real-Time Data Processing",
+      content:
+        "Enable live experiences with event-driven backend systems.\n\nWe build solutions capable of handling real-time messaging, analytics, notifications, and streaming workloads.",
+    },
+    {
+      title: "Monitoring & Performance Management",
+      content:
+        "Gain complete visibility into backend operations.\n\nWe implement observability, logging, and monitoring solutions that improve reliability and speed up issue resolution.",
+    },
+  ],
+
+  teamEyebrow: "Our backend development team",
+
+  teamHeading: "Why businesses trust our backend engineers:",
+
+  teamDescription:
+    "We combine deep technical expertise with proven engineering practices to build backend systems that remain secure, reliable, and scalable as your business grows.",
+
+  ctaTitle: "Ready to strengthen the foundation of your digital products?",
+
+  ctaSubtitle:
+    "Let's discuss your APIs, cloud infrastructure, architecture challenges, or backend modernization goals.",
+
+  testimonialHeading: "Backend solutions engineered for long-term success.",
+
+  testimonialDescription:
+    "Our backend development services help organizations improve reliability, accelerate innovation, and support sustained business growth.",
+
+  highlightQuote:
+    "Their expertise helped us build a highly scalable backend platform that continues to support our rapid growth.",
+
+  highlightName: "Aarav Shah",
+
+  highlightRole: "Head of Engineering",
+
+  highlightCompany: "CloudForge",
+
+  caseStudiesLabel: "BACKEND CASE STUDIES",
+
+  caseStudiesHeading:
+    "Scalable backend systems powering modern digital businesses.",
+
+  caseStudiesDescription:
+    "Explore how we've helped organizations improve performance, reliability, and scalability through strategic backend engineering.",
+
+  caseStudyCards: [
+    {
+      tag: "FINTECH",
+      title:
+        "Developed Secure API Infrastructure for a Financial Services Platform",
+      description:
+        "Built high-performance backend services with advanced security controls and transaction processing capabilities.",
+      image: "/logos/office1.jpg",
+    },
+    {
+      tag: "SAAS",
+      title:
+        "Scaled Multi-Tenant Backend Architecture for a Growing SaaS Company",
+      description:
+        "Enhanced platform scalability, reliability, and operational efficiency to support rapid customer growth.",
+      image: "/logos/office2.jpg",
+    },
+    {
+      tag: "ENTERPRISE",
+      title:
+        "Modernized Legacy Backend Systems for Improved Reliability",
+      description:
+        "Implemented cloud-native services, monitoring solutions, and performance optimizations across critical business systems.",
+      image: "/logos/office3.jpg",
+    },
+  ],
+}),
   ...generatedServices,
 
-  "web-development": {
-    sections: {
-      trustedClientsStrip: false,
-    },
-    companyTrustSection: createCompanyTrustSection(),
-    backendServices: {
-      sectionLabel: "WEB DEVELOPMENT SERVICES",
-      heading: "No matter what you're building, we can help.",
-      description:
-        "Our web development teams help companies build fast, maintainable web applications with stronger user experience and reliable delivery.",
-      logos: [
-        { src: "/images/gcp.png", alt: "Google Cloud" },
-        { src: "/images/aws.png", alt: "AWS" },
-        { src: "/images/ipo.png", alt: "Azure" },
-      ],
-      items: [
-        {
-          title: "Custom Web Applications",
-          content:
-            "Build high-performance web applications tailored to your product and business workflows.",
-        },
-        {
-          title: "Frontend Architecture",
-          content:
-            "Create scalable UI systems and maintainable frontend foundations for growing products.",
-        },
-        {
-          title: "Platform Modernization",
-          content:
-            "Upgrade legacy web systems to improve performance, maintainability, and release speed.",
-        },
-      ],
-    },
-    hero: {
-      breadcrumb: ["Services", "Web"],
-      title: "WEB DEVELOPMENT SERVICES",
-      heading: "Modern web apps built for scale",
-      description:
-        "We create high-performance web applications using React, Next.js, and modern stacks.",
-
-      label: "Web Development",
-
-      rating: {
-        platform: "Clutch",
-        score: "4.9/5",
-        reviews: "50+ client reviews",
-      },
-
-      formTitle: "Get expert help for your web project.",
-    },
-    trustedClients,
+"web-development": {
+  sections: {
+    trustedClientsStrip: false,
   },
 
-  "mobile-development": {
-    sections: {
-      trustedClientsStrip: false,
-    },
-    companyTrustSection: createCompanyTrustSection(),
-    backendServices: {
-      sectionLabel: "MOBILE APP DEVELOPMENT",
-      heading: "No matter what you're building, we can help.",
-      description:
-        "Our mobile app teams help companies launch and scale reliable products across iOS and Android with strong engineering support.",
-      logos: [
-        { src: "/images/gcp.png", alt: "Google Cloud" },
-        { src: "/images/aws.png", alt: "AWS" },
-        { src: "/images/ipo.png", alt: "Azure" },
-      ],
-      items: [
-        {
-          title: "Cross-Platform Apps",
-          content:
-            "Build mobile applications that support efficient delivery across major platforms.",
-        },
-        {
-          title: "Native App Development",
-          content:
-            "Deliver polished mobile experiences optimized for platform performance and usability.",
-        },
-        {
-          title: "Mobile Modernization",
-          content:
-            "Improve app stability, release quality, and long-term maintainability across evolving products.",
-        },
-      ],
-    },
-    hero: {
-      breadcrumb: ["Services", "Mobile"],
-      title: "MOBILE APP DEVELOPMENT",
-      heading: "iOS & Android apps that scale",
-      description:
-        "We build cross-platform and native mobile apps for startups and enterprises.",
+  companyTrustSection: createCompanyTrustSection(),
 
-      label: "Mobile Development",
+  backendServices: {
+    sectionLabel: "WEB DEVELOPMENT SERVICES",
 
-      rating: {
-        platform: "Clutch",
-        score: "4.8/5",
-        reviews: "40+ client reviews",
+    heading: "Build powerful web experiences that drive business growth.",
+
+    description:
+      "We design and develop scalable web applications that combine modern user experiences, robust performance, and long-term maintainability.",
+
+    logos: [
+      { src: "/images/gcp.png", alt: "Google Cloud" },
+      { src: "/images/aws.png", alt: "AWS" },
+      { src: "/images/ipo.png", alt: "Azure" },
+    ],
+
+    items: [
+      {
+        title: "Custom Web Application Development",
+        content:
+          "Create tailored web solutions that align with your business goals, streamline operations, and deliver exceptional user experiences.",
       },
-
-      formTitle: "Get expert help for your mobile project.",
-    },
-    trustedClients,
+      {
+        title: "Frontend Engineering",
+        content:
+          "Build responsive, accessible, and high-performance user interfaces using modern frameworks and scalable component architectures.",
+      },
+      {
+        title: "Web Platform Modernization",
+        content:
+          "Transform legacy systems into agile, cloud-ready applications that improve performance, security, and development efficiency.",
+      },
+    ],
   },
+
+  hero: {
+    breadcrumb: ["Services", "Web"],
+
+    title: "WEB DEVELOPMENT SERVICES",
+
+    heading:
+      "Build scalable web applications that deliver exceptional user experiences.",
+
+    description:
+      "We develop high-performance web solutions using modern technologies, helping businesses create secure, responsive, and future-ready digital products.",
+
+    label: "Web Development",
+
+    rating: {
+      platform: "Clutch",
+      score: "4.9/5",
+      reviews: "50+ client reviews",
+    },
+
+    formTitle: "Let's discuss your web development project.",
+  },
+
+  trustedClients,
+},
+
+"mobile-development": {
+  sections: {
+    trustedClientsStrip: false,
+  },
+
+  companyTrustSection: createCompanyTrustSection(),
+
+  backendServices: {
+    sectionLabel: "MOBILE APP DEVELOPMENT SERVICES",
+
+    heading:
+      "Create mobile experiences that engage users and accelerate growth.",
+
+    description:
+      "We build intuitive, high-performance mobile applications that deliver seamless experiences across iOS and Android platforms.",
+
+    logos: [
+      { src: "/images/gcp.png", alt: "Google Cloud" },
+      { src: "/images/aws.png", alt: "AWS" },
+      { src: "/images/ipo.png", alt: "Azure" },
+    ],
+
+    items: [
+      {
+        title: "Cross-Platform App Development",
+        content:
+          "Launch feature-rich mobile applications faster with scalable cross-platform solutions that reduce development time and cost.",
+      },
+      {
+        title: "Native Mobile Development",
+        content:
+          "Build premium iOS and Android applications optimized for performance, security, and platform-specific user experiences.",
+      },
+      {
+        title: "Mobile App Modernization",
+        content:
+          "Enhance existing applications with modern technologies, improved performance, and scalable architectures to support future growth.",
+      },
+    ],
+  },
+
+  hero: {
+    breadcrumb: ["Services", "Mobile"],
+
+    title: "MOBILE APP DEVELOPMENT SERVICES",
+
+    heading:
+      "Build mobile applications that users love and businesses trust.",
+
+    description:
+      "From native iOS and Android apps to cross-platform solutions, we create secure, scalable, and engaging mobile experiences that drive results.",
+
+    label: "Mobile Development",
+
+    rating: {
+      platform: "Clutch",
+      score: "4.8/5",
+      reviews: "40+ client reviews",
+    },
+
+    formTitle: "Let's discuss your mobile app idea.",
+  },
+
+  trustedClients,
+},
 };

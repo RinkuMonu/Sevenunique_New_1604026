@@ -3,7 +3,8 @@
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
+
 
 import "swiper/css";
 
@@ -36,10 +37,10 @@ export default function ProcessSliderSection({ data }) {
           {/* Left Column: Increased Height Image (680px) */}
           <div className="relative w-full md:w-[500px] h-[680px] rounded-[2.5rem] overflow-hidden z-10 shrink-0 shadow-2xl">
             <Image
-              src={data.image || "/images/process-bg.png"}
+              src="/images/working-person.png"
               alt="Process"
               fill
-              className="object-cover"
+              className="object-contain"
               priority
             />
           </div>
@@ -61,30 +62,35 @@ export default function ProcessSliderSection({ data }) {
         {/* THE SLIDER: Positioned to overlap the image and extend right */}
         {/* mt-[-380px] pulls it higher to account for the extra image height */}
         <div className="relative z-40 mt-[-380px] md:ml-[220px]">
-          <Swiper
-            modules={[Navigation]}
-            onSwiper={setSwiper}
-            allowTouchMove={false} 
-            speed={600}
-            spaceBetween={16}
-            slidesPerView={1.2}
-            breakpoints={{
-              640: { slidesPerView: 2.2 },
-              1024: { slidesPerView: 3.5 },
-              1440: { slidesPerView: 4.8 },
-            }}
-            className="!overflow-visible"
-          >
+        <Swiper
+  modules={[Navigation, Autoplay]}
+  onSwiper={setSwiper}
+  autoplay={{
+    delay: 2500,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  }}
+  loop={true}
+  speed={800}
+  spaceBetween={16}
+  slidesPerView={1.2}
+  breakpoints={{
+    640: { slidesPerView: 2.2 },
+    1024: { slidesPerView: 3.5 },
+    1440: { slidesPerView: 4.8 },
+  }}
+  className="!overflow-visible"
+>
             {steps.map((step, i) => (
               <SwiperSlide key={i} className="h-auto pb-10">
                 <div className="bg-white p-6 md:p-8 rounded-xl shadow-[0_15px_45px_rgba(0,0,0,0.07)] border border-gray-100 h-full flex flex-col relative transition-shadow">
                   
                   {/* Number Badge */}
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-7 h-7 flex items-center justify-center text-[10px] font-bold bg-[#3b82f6] text-white rounded-md shadow-md z-50">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-7 h-7 flex items-center justify-center text-[10px] font-bold bg-orange-500 text-white rounded-md shadow-md z-50">
                     {i + 1}
                   </div>
 
-                  <h4 className="text-[15px] font-bold text-[#2563eb] mb-4 leading-snug">
+                  <h4 className="text-[15px] font-bold text-orange-500 mb-4 leading-snug">
                     {step.title}
                   </h4>
 

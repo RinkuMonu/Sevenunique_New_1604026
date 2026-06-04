@@ -54,7 +54,7 @@ export default function AiTeamSection({ teamSection }) {
             {teamSection?.eyebrow || "Our AI development team"}
           </p>
 
-          <div className="mb-6 flex flex-wrap items-center gap-4">
+          {/* <div className="mb-6 flex flex-wrap items-center gap-4">
             <div className="flex flex-wrap items-center gap-2 sm:-space-x-3 sm:gap-0">
               {teamImages.map((img, i) => (
                 <div
@@ -79,7 +79,7 @@ export default function AiTeamSection({ teamSection }) {
                 {teamSection?.supporterValue || "4000+ devs"}
               </p>
             </div>
-          </div>
+          </div> */}
 
           {/* HEADING */}
           <h2 className="text-4xl font-semibold leading-tight text-black mb-4">

@@ -13,7 +13,7 @@ export default function PortfolioPage() {
     id: 1,
     title: "Jajam Block Prints",
     product_category: "E-Commerce Platform",
-    image: "/images/pv.jpeg",
+    image: "/images/jajam.jpeg",
     summary:
       "A modern clothing e-commerce platform developed for a fashion brand with smooth shopping experience, secure checkout and scalable architecture.",
     description:

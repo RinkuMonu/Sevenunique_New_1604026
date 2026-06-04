@@ -4,8 +4,8 @@
 import Link from "next/link";
 
 const avatars = [
-  "/images/man1.png",
-  "/images/man1.png",
+  "/images/1.png",
+  "/images/1.png",
   "/images/u3.png",
   "/images/u3.png",
 ];
@@ -38,7 +38,7 @@ export default function TestimonialCTA() {
               organization.&#8221;
             </p>
             <p className="text-white font-bold text-[23px]">
-              Matthew Mecham
+              Rama Mahajan
             </p>
             <p className="text-gray-100 text-[20px] mt-0.5">
               Director of Program Management at Lumio

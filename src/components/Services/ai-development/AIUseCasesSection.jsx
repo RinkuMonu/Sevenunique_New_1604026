@@ -42,7 +42,7 @@ export default function AIUseCasesSection({ useCases }) {
       {/* IMAGE */}
       <div className="relative overflow-hidden rounded-[30px] shadow-2xl shadow-black/10 group">
         <Image
-          src={image}
+          src="/images/usecases.png"
           alt={sectionLabel}
           width={700}
           height={500}

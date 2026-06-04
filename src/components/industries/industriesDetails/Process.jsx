@@ -135,7 +135,7 @@ export default function Process({ data }) {
 
           <div className="relative w-[380px] h-[380px] overflow-hidden">
             <Image
-              src={data.image}
+              src="/images/qa.png"
               alt="process"
               fill
               className="object-cover rounded-[120px]"

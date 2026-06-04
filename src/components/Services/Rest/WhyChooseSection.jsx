@@ -13,7 +13,7 @@ const iconMap = {
 };
 
 // ✅ fallback image
-const FALLBACK_IMAGE = "/images/choose.png";
+const FALLBACK_IMAGE = "/images/qa.png";
 
 export default function WhyChooseSection({ data }) {
   if (!data) return null;

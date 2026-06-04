@@ -25,6 +25,34 @@ function ServiceCard({ service }) {
   );
 }
 
+
+  const services = [
+    {
+      title: "AI DEVELOPMENT SERVICES",
+      description:
+        "We build intelligent AI solutions that move beyond prototypes. Our team helps organizations leverage generative AI, custom AI models, and autonomous AI systems to automate processes, enhance customer experiences, and accelerate growth.",
+      image: "/images/services/ai-development.jpg",
+    },
+    {
+      title: "BACK-END DEVELOPMENT SERVICES",
+      description:
+        "We develop secure, scalable, and cloud-ready backend infrastructures that power seamless user experiences, accelerate development, and support future growth.",
+      image: "/images/services/backend-development.jpg",
+    },
+    {
+      title: "CMS DEVELOPMENT SERVICES",
+      description:
+        "We develop custom content management systems that simplify content publishing, streamline workflows, and ensure exceptional performance across digital channels.",
+      image: "/images/services/cms-development.jpg",
+    },
+    {
+      title: "BLOCKCHAIN DEVELOPMENT SERVICES",
+      description:
+        "We design and develop blockchain-powered applications, smart contracts, and decentralized platforms that enhance transparency, security, and operational efficiency.",
+      image: "/images/services/blockchain-development.jpg",
+    },
+  ];
+
 export default function ServicesPage() {
   const services = Object.keys(serviceData).map((key) => ({
     slug: key,
@@ -32,61 +60,73 @@ export default function ServicesPage() {
     description: serviceData[key].hero.description,
   }));
 
+
+  
+
   return (
-    <div className="min-h-screen bg-[#f5f6f7]">
+    <div className="min-h-screen bg-[#325980]">
 
       {/* HERO */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-12 items-center gap-10">
+    <section className="relative min-h-[600px] flex items-center overflow-hidden">
+  {/* Background Image */}
+  <Image
+    src="/images/services-banner.png"
+    alt="Solutions"
+    fill
+    priority
+    className="object-cover"
+  />
 
-          {/* LEFT */}
-          <div className="col-span-12 lg:col-span-7">
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/60" />
 
-            {/* Breadcrumb */}
-            <div className="flex items-center gap-2 text-sm text-gray-500 mb-6">
-              <GoHome />
-              <span>›</span>
-              <span className="font-medium text-gray-700">Solutions</span>
-            </div>
-            
+  {/* Optional Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/30" />
 
-            {/* Label */}
-            <p className="text-xs tracking-[0.2em] text-gray-500 uppercase mb-4">
-              Software Development Solutions
-            </p>
+  {/* Content */}
+  <div className="relative z-10 max-w-7xl mx-auto w-full px-6 py-24">
+    {/* Breadcrumb */}
+    <div className="flex items-center gap-2 text-sm text-gray-300 mb-6">
+      <GoHome />
+      <span>›</span>
+      <span className="font-medium text-white">Solutions</span>
+    </div>
 
-            {/* Heading */}
-            <h1 className="text-[52px] leading-[1.1] font-semibold text-[#111827]">
-              finto our end-to-end <br />
-              <span className="text-[#c2410c]">tech solutions.</span>
-            </h1>
+    {/* Label */}
+    <p className="text-xs tracking-[0.2em] text-orange-300 uppercase mb-4">
+      Software Development Solutions
+    </p>
 
-          </div>
+    {/* Heading */}
+    <h1 className="max-w-4xl text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight text-white">
+      Build, scale, and grow
+      <br />
+      with expert
+      <br />
+      <span className="text-[#ff6b3d]">tech solutions.</span>
+    </h1>
 
-          {/* RIGHT IMAGE (FIXED) */}
-          <div className="col-span-12 lg:col-span-5 flex justify-end">
-            <div className="relative w-[420px] h-[320px] overflow-hidden">
+    {/* Description */}
+    <p className="mt-6 max-w-2xl text-lg text-gray-200 leading-8">
+      From AI and cloud engineering to web, mobile, and enterprise software,
+      we help businesses launch, scale, and transform through technology.
+    </p>
 
-              <Image
-                src="/images/solutions.png"
-                alt="solutions"
-                fill
-                priority
-                className="object-cover"
-                style={{
-                  clipPath:
-                    "ellipse(80% 65% at 50% 50%)",
-                }}
-              />
+    {/* CTA */}
+    <div className="mt-10 flex flex-wrap gap-4">
+      <Link
+        href="/schedule-a-call-page"
+        className="rounded-xl bg-[#ff6b3d] px-7 py-4 text-white font-medium hover:bg-[#f45d2e] transition"
+      >
+        Schedule a Call
+      </Link>
 
-            </div>
-          </div>
-
-        </div>
-      </section>
+    </div>
+  </div>
+</section>
                 
       {/* TITLE */}
-      <section className="max-w-6xl mx-auto px-6 pb-6">
+      <section className="max-w-6xl mx-auto px-6 pb-6 py-10 lg:py-14">
         <h2 className="text-[32px] font-semibold text-[#111827]">
           Software Development & Design
         </h2>
@@ -100,6 +140,8 @@ export default function ServicesPage() {
           ))}
         </div>
       </section>
+
+      
 
       <CaseStudySection />
     </div>

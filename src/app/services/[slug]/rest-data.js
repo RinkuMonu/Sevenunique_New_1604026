@@ -32,7 +32,7 @@ export const restServiceData = {
   description:
     "Access the top 1% of LATAM tech talent within 2 weeks.",
   buttonLabel: "Get Android App Developers",
-  image: "/images/man.png",
+  image: "/images/android.png",
 
   sections: {
     androidServices: {
@@ -160,7 +160,7 @@ Cost-effective solutions.`,
 
 
   greenCta: {
-    image: "/images/green.png",
+    image: "/images/generative.png",
     text: "100s of companies worldwide trust us for their Android services.",
     buttonLabel: "Schedule a Call",
     buttonLink: "/schedule-a-call-page",
@@ -168,7 +168,7 @@ Cost-effective solutions.`,
 
     whyChoose: {
   title: "Why Choose Seven Unique for Android Mobile App Development?",
-  image: "/images/choose.png",
+  image: "/images/qa.png",
 
   points: [
     {
@@ -245,7 +245,7 @@ process: {
   highlight: "See how we can help.",
   buttonLabel: "Schedule a Call",
   buttonLink: "/schedule-a-call-page",
-  image: "/images/dark.png",
+  image: "/images/team-handjoin.png",
 },
   },
 }),
@@ -259,7 +259,7 @@ process: {
   description:
     "Empower smarter decisions with advanced BI dashboards and analytics.",
   buttonLabel: "Access BI Services",
-  image: "/images/man2.png",
+  image: "/images/business-intell.png",
 
   sections: {
     androidServices: {
@@ -375,7 +375,7 @@ Improve forecasting accuracy.`,
 
     // ✅ GREEN CTA
     greenCta: {
-      image: "/images/green.png",
+      image: "/images/generative.png",
       text: "Companies worldwide trust our BI expertise to unlock insights.",
       buttonLabel: "Talk to BI Experts",
       buttonLink: "/schedule-a-call-page",
@@ -384,7 +384,7 @@ Improve forecasting accuracy.`,
     // ✅ WHY CHOOSE (FIXED STRUCTURE)
     whyChoose: {
       title: "Why Choose Us for Business Intelligence?",
-      image: "/images/choose.png",
+      image: "/images/qa.png",
 
       points: [
         {
@@ -465,7 +465,7 @@ Improve forecasting accuracy.`,
       highlight: "Let’s build your BI system.",
       buttonLabel: "Get Started",
       buttonLink: "/schedule-a-call-page",
-      image: "/images/dark.png",
+      image: "/images/team-handjoin.png",
     },
   },
 }),
@@ -479,7 +479,7 @@ Improve forecasting accuracy.`,
   description:
     "Strengthen your data foundation with scalable, reliable, and high-performance data systems.",
   buttonLabel: "Access Data Engineering",
-  image: "/images/man3.png",
+  image: "/images/data-engg.png",
 
   sections: {
     androidServices: {
@@ -583,7 +583,7 @@ Scale your data infrastructure easily.`,
 
     // ✅ GREEN CTA
     greenCta: {
-      image: "/images/green.png",
+      image: "/images/generative.png",
       text: "Companies trust our data engineering expertise to scale their systems.",
       buttonLabel: "Consult Data Experts",
       buttonLink: "/schedule-a-call-page",
@@ -592,7 +592,7 @@ Scale your data infrastructure easily.`,
     // ✅ FIXED WHY CHOOSE
     whyChoose: {
       title: "Why Choose Us for Data Engineering?",
-      image: "/images/choose.png",
+      image: "/images/qa.png",
 
       points: [
         {
@@ -673,7 +673,7 @@ Scale your data infrastructure easily.`,
       highlight: "Let’s build your pipelines.",
       buttonLabel: "Get Started",
       buttonLink: "/schedule-a-call-page",
-      image: "/images/dark.png",
+      image: "/images/team-handjoin.png",
     },
   },
 }),
@@ -686,7 +686,7 @@ Scale your data infrastructure easily.`,
   description:
     "Build scalable, high-performance web platforms.",
   buttonLabel: "Access Web Services",
-  image: "/images/man3.png",
+  image: "/images/webd.png",
 
   sections: {
     androidServices: {
@@ -792,7 +792,7 @@ Scalable systems grow with your business.`,
 
     // ✅ GREEN CTA
     greenCta: {
-      image: "/images/green.png",
+      image: "/images/generative.png",
       text: "Companies trust us to build scalable web platforms.",
       buttonLabel: "Talk to Web Experts",
       buttonLink: "/schedule-a-call-page",
@@ -801,7 +801,7 @@ Scalable systems grow with your business.`,
     // ✅ WHY CHOOSE
     whyChoose: {
       title: "Why Choose Us for Web Development?",
-      image: "/images/choose.png",
+      image: "/images/qa.png",
 
       points: [
         {
@@ -882,7 +882,7 @@ Scalable systems grow with your business.`,
       highlight: "Let’s make it happen.",
       buttonLabel: "Get Started",
       buttonLink: "/schedule-a-call-page",
-      image: "/images/dark.png",
+      image: "/images/team-handjoin.png",
     },
   },
 }),
@@ -896,7 +896,7 @@ Scalable systems grow with your business.`,
   description:
     "Launch scalable, high-performance eCommerce platforms tailored to your business goals.",
   buttonLabel: "Get eCommerce Experts",
-  image: "/images/man3.png",
+  image: "/images/ecomm.png",
 
   sections: {
     androidServices: {
@@ -969,6 +969,7 @@ Scalable platforms for business growth.`,
         {
           title: "What We Deliver",
           body: `We build online stores, marketplaces, and custom commerce platforms with high performance and security.`,
+              image: "/images/generative.png",
         },
       ],
 
@@ -1002,7 +1003,7 @@ Scalable platforms for business growth.`,
 
     // ✅ GREEN CTA
     greenCta: {
-      image: "/images/green.png",
+      image: "/images/generative.png",
       text: "Businesses trust us to build high-converting eCommerce platforms.",
       buttonLabel: "Talk to eCommerce Experts",
       buttonLink: "/schedule-a-call-page",
@@ -1011,7 +1012,7 @@ Scalable platforms for business growth.`,
     // ✅ WHY CHOOSE
     whyChoose: {
       title: "Why Choose Us for eCommerce Development?",
-      image: "/images/choose.png",
+      image: "/images/qa.png",
 
       points: [
         {
@@ -1092,7 +1093,7 @@ Scalable platforms for business growth.`,
       highlight: "Let’s build your store.",
       buttonLabel: "Get Started",
       buttonLink: "/schedule-a-call-page",
-      image: "/images/dark.png",
+      image: "/images/team-handjoin.png",
     },
   },
 }),
@@ -1100,12 +1101,14 @@ Scalable platforms for business growth.`,
 "ios-app-development": createRestServiceEntry({
   slug: "ios-app-development",
   breadcrumb: "iOS",
-  title: "iOS APP DEVELOPMENT SERVICES",
-  heading: "Build premium iOS apps that users love.",
-  description:
-    "Create high-performance, secure, and scalable iOS applications for Apple devices.",
+  title: "IOS APP DEVELOPMENT SERVICES",
+
+heading: "Craft powerful iOS experiences for the Apple ecosystem.",
+
+description:
+  "Design and develop secure, high-performing iOS applications that deliver seamless user experiences across iPhone, iPad, and Apple devices.",
   buttonLabel: "Get iOS Developers",
-  image: "/images/man.png",
+  image: "/images/ios.png",
 
   sections: {
     androidServices: {
@@ -1211,7 +1214,7 @@ Strong brand perception.`,
 
     // ✅ GREEN CTA
     greenCta: {
-      image: "/images/green.png",
+      image: "/images/generative.png",
       text: "Top companies trust us for premium iOS app development.",
       buttonLabel: "Talk to iOS Experts",
       buttonLink: "/schedule-a-call-page",
@@ -1220,7 +1223,7 @@ Strong brand perception.`,
     // ✅ WHY CHOOSE
     whyChoose: {
       title: "Why Choose Us for iOS Development?",
-      image: "/images/choose.png",
+      image: "/images/qa.png",
 
       points: [
         {
@@ -1301,7 +1304,7 @@ Strong brand perception.`,
       highlight: "Let’s launch it together.",
       buttonLabel: "Get Started",
       buttonLink: "/schedule-a-call-page",
-      image: "/images/dark.png",
+      image: "/images/team-handjoin.png",
     },
   },
 }),
@@ -1314,7 +1317,7 @@ Strong brand perception.`,
   description:
     "Design, develop, and scale mobile applications for Android, iOS, and cross-platform environments.",
   buttonLabel: "Hire Mobile App Developers",
-  image: "/images/man.png",
+  image: "/images/mobileapp.png",
 
   sections: {
     androidServices: {
@@ -1420,7 +1423,7 @@ Gain valuable customer insights through analytics.`,
 
     // ✅ GREEN CTA
     greenCta: {
-      image: "/images/green.png",
+      image: "/images/generative.png",
       text: "Leading companies trust us to build scalable mobile apps.",
       buttonLabel: "Talk to Experts",
       buttonLink: "/schedule-a-call-page",
@@ -1429,7 +1432,7 @@ Gain valuable customer insights through analytics.`,
     // ✅ WHY CHOOSE
     whyChoose: {
       title: "Why Choose Us for Mobile App Development?",
-      image: "/images/choose.png",
+      image: "/images/qa.png",
 
       points: [
         {
@@ -1510,7 +1513,7 @@ Gain valuable customer insights through analytics.`,
       highlight: "Let’s turn your idea into reality.",
       buttonLabel: "Get Started",
       buttonLink: "/schedule-a-call-page",
-      image: "/images/dark.png",
+      image: "/images/team-handjoin.png",
     },
   },
 }),
@@ -1523,7 +1526,7 @@ Gain valuable customer insights through analytics.`,
   description:
     "Design, develop, and launch secure, multi-tenant SaaS platforms with subscription-based models.",
   buttonLabel: "Build Your SaaS Product",
-  image: "/images/man3.png",
+  image: "/images/saas.png",
 
   sections: {
     androidServices: {
@@ -1631,7 +1634,7 @@ Faster go-to-market.`,
 
     // ✅ GREEN CTA
     greenCta: {
-      image: "/images/green.png",
+      image: "/images/generative.png",
       text: "Businesses trust us to build scalable SaaS platforms.",
       buttonLabel: "Talk to SaaS Experts",
       buttonLink: "/schedule-a-call-page",
@@ -1640,7 +1643,7 @@ Faster go-to-market.`,
     // ✅ WHY CHOOSE
     whyChoose: {
       title: "Why Choose Us for SaaS Development?",
-      image: "/images/choose.png",
+      image: "/images/qa.png",
 
       points: [
         {
@@ -1721,7 +1724,7 @@ Faster go-to-market.`,
       highlight: "Let’s build it together.",
       buttonLabel: "Get Started",
       buttonLink: "/schedule-a-call-page",
-      image: "/images/dark.png",
+      image: "/images/team-handjoin.png",
     },
   },
 }),
@@ -1735,7 +1738,7 @@ Faster go-to-market.`,
   description:
     "Secure, automated, and scalable backup solutions to safeguard your critical data.",
   buttonLabel: "Get Backup Solutions",
-  image: "/images/man3.png",
+  image: "/images/backup.png",
 
   sections: {
     androidServices: {
@@ -1843,7 +1846,7 @@ Quick disaster recovery.`,
 
     // ✅ GREEN CTA
     greenCta: {
-      image: "/images/green.png",
+      image: "/images/generative.png",
       text: "Businesses trust us to protect their critical data and systems.",
       buttonLabel: "Talk to Experts",
       buttonLink: "/schedule-a-call-page",
@@ -1852,7 +1855,7 @@ Quick disaster recovery.`,
     // ✅ WHY CHOOSE
     whyChoose: {
       title: "Why Choose Us for Backup Solutions?",
-      image: "/images/choose.png",
+      image: "/images/qa.png",
 
       points: [
         {
@@ -1933,7 +1936,7 @@ Quick disaster recovery.`,
       highlight: "Let’s protect it today.",
       buttonLabel: "Get Started",
       buttonLink: "/schedule-a-call-page",
-      image: "/images/dark.png",
+      image: "/images/team-handjoin.png",
     },
   },
 }),
@@ -1946,7 +1949,7 @@ Quick disaster recovery.`,
   description:
     "Process, analyze, and scale large datasets with powerful big data technologies and architectures.",
   buttonLabel: "Explore Big Data Solutions",
-  image: "/images/man3.png",
+  image: "/images/bigdata.png",
 
   sections: {
     androidServices: {
@@ -2054,7 +2057,7 @@ Enable predictive analytics.`,
 
     // ✅ GREEN CTA
     greenCta: {
-      image: "/images/green.png",
+      image: "/images/generative.png",
       text: "Enterprises trust us to handle and scale their big data systems.",
       buttonLabel: "Talk to Data Experts",
       buttonLink: "/schedule-a-call-page",
@@ -2063,7 +2066,7 @@ Enable predictive analytics.`,
     // ✅ WHY CHOOSE
     whyChoose: {
       title: "Why Choose Us for Big Data Solutions?",
-      image: "/images/choose.png",
+      image: "/images/qa.png",
 
       points: [
         {
@@ -2144,7 +2147,7 @@ Enable predictive analytics.`,
       highlight: "Let’s build your data platform.",
       buttonLabel: "Get Started",
       buttonLink: "/schedule-a-call-page",
-      image: "/images/dark.png",
+      image: "/images/team-handjoin.png",
     },
   },
 }),
@@ -2158,7 +2161,7 @@ Enable predictive analytics.`,
   description:
     "Design, develop, and deploy high-performance applications on modern cloud infrastructure.",
   buttonLabel: "Build Cloud Applications",
-  image: "/images/man3.png",
+  image: "/images/cloud.png",
 
   sections: {
     androidServices: {
@@ -2266,7 +2269,7 @@ Better reliability and uptime.`,
 
     // ✅ GREEN CTA
     greenCta: {
-      image: "/images/green.png",
+      image: "/images/generative.png",
       text: "Businesses trust us to build scalable cloud applications.",
       buttonLabel: "Talk to Cloud Experts",
       buttonLink: "/schedule-a-call-page",
@@ -2275,7 +2278,7 @@ Better reliability and uptime.`,
     // ✅ WHY CHOOSE
     whyChoose: {
       title: "Why Choose Us for Cloud Applications?",
-      image: "/images/choose.png",
+      image: "/images/qa.png",
 
       points: [
         {
@@ -2356,7 +2359,7 @@ Better reliability and uptime.`,
       highlight: "Let’s build it together.",
       buttonLabel: "Get Started",
       buttonLink: "/schedule-a-call-page",
-      image: "/images/dark.png",
+      image: "/images/team-handjoin.png",
     },
   },
 }),
@@ -2370,7 +2373,7 @@ Better reliability and uptime.`,
   description:
     "Design, develop, and optimize CRM solutions to manage customers, sales, and business workflows efficiently.",
   buttonLabel: "Get CRM Solutions",
-  image: "/images/man3.png",
+  image: "/images/crm.png",
 
   sections: {
     androidServices: {
@@ -2478,7 +2481,7 @@ Better decision-making with insights.`,
 
     // ✅ GREEN CTA
     greenCta: {
-      image: "/images/green.png",
+      image: "/images/generative.png",
       text: "Businesses trust us to build powerful CRM solutions.",
       buttonLabel: "Talk to CRM Experts",
       buttonLink: "/schedule-a-call-page",
@@ -2487,7 +2490,7 @@ Better decision-making with insights.`,
     // ✅ WHY CHOOSE
     whyChoose: {
       title: "Why Choose Us for CRM Systems?",
-      image: "/images/choose.png",
+      image: "/images/qa.png",
 
       points: [
         {
@@ -2568,7 +2571,7 @@ Better decision-making with insights.`,
       highlight: "Let’s build your CRM system.",
       buttonLabel: "Get Started",
       buttonLink: "/schedule-a-call-page",
-      image: "/images/dark.png",
+      image: "/images/team-handjoin.png",
     },
   },
 }),
@@ -2581,7 +2584,7 @@ Better decision-making with insights.`,
   description:
     "Advanced cybersecurity solutions to safeguard your applications, data, and infrastructure.",
   buttonLabel: "Get Cybersecurity Services",
-  image: "/images/man3.png",
+  image: "/images/cybersecurity.png",
 
   sections: {
     androidServices: {
@@ -2689,7 +2692,7 @@ Minimize downtime and disruptions.`,
 
     // ✅ GREEN CTA
     greenCta: {
-      image: "/images/green.png",
+      image: "/images/generative.png",
       text: "Companies trust us to secure their digital infrastructure.",
       buttonLabel: "Talk to Security Experts",
       buttonLink: "/schedule-a-call-page",
@@ -2698,7 +2701,7 @@ Minimize downtime and disruptions.`,
     // ✅ WHY CHOOSE
     whyChoose: {
       title: "Why Choose Us for Cybersecurity?",
-      image: "/images/choose.png",
+      image: "/images/qa.png",
 
       points: [
         {
@@ -2779,7 +2782,7 @@ Minimize downtime and disruptions.`,
       highlight: "Let’s protect your business.",
       buttonLabel: "Get Started",
       buttonLink: "/schedule-a-call-page",
-      image: "/images/dark.png",
+      image: "/images/team-handjoin.png",
     },
   },
 }),
@@ -2792,7 +2795,7 @@ Minimize downtime and disruptions.`,
   description:
     "Streamline workflows, automate deployments, and improve collaboration with scalable DevOps solutions.",
   buttonLabel: "Get DevOps Services",
-  image: "/images/man3.png",
+  image: "/images/devops.png",
 
   sections: {
     androidServices: {
@@ -2900,7 +2903,7 @@ Enhance scalability.`,
 
     // ✅ GREEN CTA
     greenCta: {
-      image: "/images/green.png",
+      image: "/images/generative.png",
       text: "Teams trust us to streamline their DevOps workflows.",
       buttonLabel: "Talk to DevOps Experts",
       buttonLink: "/schedule-a-call-page",
@@ -2909,7 +2912,7 @@ Enhance scalability.`,
     // ✅ WHY CHOOSE
     whyChoose: {
       title: "Why Choose Us for DevOps?",
-      image: "/images/choose.png",
+      image: "/images/qa.png",
 
       points: [
         {
@@ -2990,7 +2993,7 @@ Enhance scalability.`,
       highlight: "Let’s implement DevOps.",
       buttonLabel: "Get Started",
       buttonLink: "/schedule-a-call-page",
-      image: "/images/dark.png",
+      image: "/images/team-handjoin.png",
     },
   },
 }),
@@ -3004,7 +3007,7 @@ Enhance scalability.`,
   description:
     "Leverage digital technologies to improve efficiency, innovation, and customer experience.",
   buttonLabel: "Start Transformation",
-  image: "/images/man3.png",
+  image: "/images/digitaltrans.png",
 
   sections: {
     androidServices: {
@@ -3112,7 +3115,7 @@ Drive data-driven decisions.`,
 
     // ✅ GREEN CTA
     greenCta: {
-      image: "/images/green.png",
+      image: "/images/generative.png",
       text: "Organizations trust us to drive digital transformation.",
       buttonLabel: "Talk to Experts",
       buttonLink: "/schedule-a-call-page",
@@ -3121,7 +3124,7 @@ Drive data-driven decisions.`,
     // ✅ WHY CHOOSE
     whyChoose: {
       title: "Why Choose Us for Digital Transformation?",
-      image: "/images/choose.png",
+      image: "/images/qa.png",
 
       points: [
         {
@@ -3202,7 +3205,7 @@ Drive data-driven decisions.`,
       highlight: "Let’s build your future.",
       buttonLabel: "Get Started",
       buttonLink: "/schedule-a-call-page",
-      image: "/images/dark.png",
+      image: "/images/team-handjoin.png",
     },
   },
 }),
@@ -3216,7 +3219,7 @@ Drive data-driven decisions.`,
   description:
     "Design and build scalable ERP solutions to manage business processes, resources, and data in one place.",
   buttonLabel: "Build ERP System",
-  image: "/images/man3.png",
+  image: "/images/erp.png",
 
   sections: {
     androidServices: {
@@ -3324,7 +3327,7 @@ Enable real-time insights.`,
 
     // ✅ GREEN CTA
     greenCta: {
-      image: "/images/green.png",
+      image: "/images/generative.png",
       text: "Enterprises trust us to build reliable ERP systems.",
       buttonLabel: "Talk to ERP Experts",
       buttonLink: "/schedule-a-call-page",
@@ -3333,7 +3336,7 @@ Enable real-time insights.`,
     // ✅ WHY CHOOSE
     whyChoose: {
       title: "Why Choose Us for ERP Development?",
-      image: "/images/choose.png",
+      image: "/images/qa.png",
 
       points: [
         {
@@ -3414,7 +3417,7 @@ Enable real-time insights.`,
       highlight: "Let’s build your ERP system.",
       buttonLabel: "Get Started",
       buttonLink: "/schedule-a-call-page",
-      image: "/images/dark.png",
+      image: "/images/team-handjoin.png",
     },
   },
 }),

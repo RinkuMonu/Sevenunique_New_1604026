@@ -102,11 +102,11 @@
 import Image from "next/image";
 
 const logos = [
-  "https://www.sevenunique.com/bank/instantpay.png",
-  "https://www.sevenunique.com/bank/exotel.png",
-  "https://www.sevenunique.com/bank/tripjack.png",
-  "https://www.sevenunique.com/bank/nsdl.png",
-  "https://www.sevenunique.com/bank/surepass.png",
+  "/images/nodejs.png",
+  "/images/reactjs.png",
+  "/images/aws-logo.png",
+  "/images/flutter.png",
+  "/images/ai.jpg",
 ];
 
 export default function Logos() {
