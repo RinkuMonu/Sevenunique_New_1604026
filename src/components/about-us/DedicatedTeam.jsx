@@ -22,7 +22,7 @@ const teamMembers = [
   {
     name: "Khyati Jain",
     role: "UI/UX Designer",
-    image: "/images/khyati.png",
+    image: "/images/khyati.PNG",
   },
 
   {
