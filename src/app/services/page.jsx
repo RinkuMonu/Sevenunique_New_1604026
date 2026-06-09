@@ -7,6 +7,18 @@ import { serviceData } from "./[slug]/data";
 import CaseStudySection from "@/components/Services/CaseStudySection";
 import ServicesGrid from "@/components/Services/Servicegridcard";
 
+
+
+export const metadata = {
+  title: "Our Services | Sevenunique",
+  description:
+    "Explore our services including website development, mobile apps, AI development, UI/UX design, SEO, and digital marketing.",
+};
+
+
+
+
+
 /* ── Card Component ── */
 function ServiceCard({ service }) {
   return (

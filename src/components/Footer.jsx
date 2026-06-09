@@ -125,14 +125,14 @@ export default function Footer() {
                   </Link>
                 </li>
 
-                <li>
+                {/* <li>
                   <Link
                     href="/about-us"
                     className="hover:text-[#f4622a] transition"
                   >
                     Our Team
                   </Link>
-                </li>
+                </li> */}
 
                 <li>
                   <Link
@@ -165,7 +165,7 @@ export default function Footer() {
 
                 <li>
                   <Link
-                    href="/services/software-development"
+                    href="/services/backup-solutions"
                     className="hover:text-[#f4622a] transition"
                   >
                     Software Solution

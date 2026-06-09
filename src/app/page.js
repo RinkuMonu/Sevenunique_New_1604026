@@ -18,6 +18,14 @@ import SlidingProjectsSection from "@/components/ProjectBanner";
 import NewsCTASection from "@/components/NewsSection";
 
 
+
+export const metadata = {
+  title: "Sevenunique | Web Development, Mobile Apps & AI Solutions",
+  description:
+    "Sevenunique provides web development, mobile app development, AI solutions, UI/UX design, and digital transformation services.",
+};
+
+
 export default function Home() {
   return (
     <div>

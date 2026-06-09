@@ -4,54 +4,64 @@ const teamMembers = [
   {
     name: "Rajyawardhan Singh",
     role: "Backend Developer",
-    image: "/team/team4.jpg",
+    image: "/images/rajyawardhan.png",
   },
 
-    {
+  {
     name: "Rinku Yadav",
     role: "Server Admin",
-    image: "/team/team6.jpg",
+    image: "/images/rinkusir.png",
   },
 
-
-
-    {
+  {
     name: "Devika Chhipa",
     role: "Frontend Developer",
-    image: "/team/team2.jpg",
+    image: "/images/devika.png",
   },
 
   {
     name: "Khyati Jain",
     role: "UI/UX Designer",
-    image: "/team/team1.jpg",
+    image: "/images/khyati.png",
   },
-
 
   {
     name: "Rahul Singh",
     role: "Backend Developer",
-    image: "/team/team4.jpg",
+    image: "/images/rahul.png",
   },
-  
-
 
   {
-    name: "Deepak",
+    name: "Chandan Sharma",
+    role: "SEO Specialist",
+    image: "/images/chandansir.png",
+  },
+
+  {
+    name: "Deepak Yadav",
     role: "Mobile App Developer",
     image: "/team/team8.jpg",
   },
   {
     name: "Vishal Prajapat",
     role: "Data Analyst & Social Media Manager",
-    image: "/team/team9.jpg",
+    image: "/images/vishal.png",
   },
   {
-    name: "Deepak",
+    name: "Deepak Kumar",
     role: "Vedio Editor",
+    image: "/images/deepakkumar.png",
+  },
+  {
+    name: "Mumtaz Fatima",
+    role: "Graphic Designer",
     image: "/team/team10.jpg",
   },
-
+  {
+    name: "Jai Bhavsar",
+    role: "Frontent Developer",
+    image: "/images/jai.png",
+  },
 ];
 
 export default function DedicatedTeamMembers() {
@@ -76,23 +86,23 @@ export default function DedicatedTeamMembers() {
         </div>
 
         {/* Team Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="group border border-gray-100 rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
+              className="group border border-gray-100 rounded-3xl overflow-hidden hover:shadow-3xl transition-all duration-500 hover:-translate-y-2"
             >
               {/* Image */}
-              <div className="relative h-72 overflow-hidden bg-gray-100">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  fill
-                  className="object-cover"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              </div>
+             <div className="h-80 bg-gray-100 flex items-center justify-center px-4 pt-5 overflow-hidden">
+  <div className="relative w-full h-full">
+    <Image
+      src={member.image}
+      alt={member.name}
+      fill
+      className="object-cover transition-transform duration-500 group-hover:scale-105"
+    />
+  </div>
+</div>
 
               {/* Content */}
               <div className="p-6 text-center">
