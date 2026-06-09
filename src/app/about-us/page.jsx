@@ -10,6 +10,13 @@ import CultureSection from "@/components/about-us/CultureSection";
 import TrustSection from "@/components/about-us/TrustSection";
 
 
+export const metadata = {
+  title: "About Us | Sevenunique",
+  description:
+    "Learn about Sevenunique, our mission, experienced team, and commitment to delivering innovative technology solutions.",
+};
+
+
 export default function AboutPage() {
   return (
     <>

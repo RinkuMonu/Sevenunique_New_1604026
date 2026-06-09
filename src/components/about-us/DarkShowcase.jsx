@@ -38,7 +38,7 @@ export default function DarkShowcase() {
           {/* STATS */}
           <div className="flex flex-wrap gap-8 mt-10">
             <div>
-              <h3 className="text-3xl font-bold text-[#111827]">250+</h3>
+              <h3 className="text-3xl font-bold text-[#111827]">375+</h3>
               <p className="text-gray-600 text-sm mt-1">Tech Experts</p>
             </div>
 
@@ -87,7 +87,7 @@ export default function DarkShowcase() {
 
             {/* FLOATING CARD 1 */}
             <div className="absolute -left-10 top-10 bg-white rounded-2xl px-5 py-4 shadow-xl border border-orange-100">
-              <h4 className="text-2xl font-bold text-[#111827]">50+</h4>
+              <h4 className="text-2xl font-bold text-[#111827]">3500+</h4>
               <p className="text-sm text-gray-500">
                 Projects Delivered
               </p>

@@ -57,7 +57,7 @@ export default function TeamShowcase() {
             <div className="relative w-[140px] h-[140px]">
               <div className="absolute inset-0 bg-[#f97316] rounded-b-full z-0" />
               <Image
-                src="/images/krishan.webp"
+                src="/team/krishan.PNG"
                 alt=""
                 fill
                 className="object-cover relative z-10"

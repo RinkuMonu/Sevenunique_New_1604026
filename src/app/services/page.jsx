@@ -5,6 +5,19 @@ import Image from "next/image";
 import { GoHome } from "react-icons/go";
 import { serviceData } from "./[slug]/data";
 import CaseStudySection from "@/components/Services/CaseStudySection";
+import ServicesGrid from "@/components/Services/Servicegridcard";
+
+
+
+export const metadata = {
+  title: "Our Services | Sevenunique",
+  description:
+    "Explore our services including website development, mobile apps, AI development, UI/UX design, SEO, and digital marketing.",
+};
+
+
+
+
 
 /* ── Card Component ── */
 function ServiceCard({ service }) {
@@ -125,21 +138,7 @@ export default function ServicesPage() {
   </div>
 </section>
                 
-      {/* TITLE */}
-      <section className="max-w-6xl mx-auto px-6 pb-6 py-10 lg:py-14">
-        <h2 className="text-[32px] font-semibold text-[#111827]">
-          Software Development & Design
-        </h2>
-      </section>
-
-      {/* GRID */}
-      <section className="max-w-6xl mx-auto px-6 pb-20">
-        <div className="grid md:grid-cols-2 gap-8">
-          {services.map((service) => (
-            <ServiceCard key={service.slug} service={service} />
-          ))}
-        </div>
-      </section>
+  <ServicesGrid services={services} />
 
       
 

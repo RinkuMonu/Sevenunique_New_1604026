@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import {
-  MessageCircle,
+  ChevronUp ,
   Phone,
   X,
   Send,
@@ -156,7 +156,7 @@ export default function ChatBot() {
         onClick={() => setOpen(!open)}
         className="fixed bottom-5 right-5 z-[999] w-14 h-14 rounded-full bg-[#f4622a] hover:bg-[#df4e1f] shadow-[0_15px_40px_rgba(244,98,42,0.35)] text-white flex items-center justify-center transition-all duration-300"
       >
-        {open ? <X size={22} /> : <MessageCircle size={22} />}
+      {open ? <X size={22} /> : <ChevronUp size={22} />}
       </button>
 
       {/* CHATBOX */}
@@ -168,7 +168,7 @@ export default function ChatBot() {
         }`}
       >
         {/* HEADER */}
-        <div className="relative overflow-hidden bg-gradient-to-br from-[#111] to-[#1f1f1f] p-5">
+        <div className="relative overflow-hidden bg-gradient-to-br from-[#111] to-[#1f1f1f] py-4 px-3">
           <div className="absolute top-0 right-0 w-28 h-28 bg-[#f4622a]/10 rounded-full blur-3xl" />
 
           <div className="relative flex items-center gap-3">
@@ -193,7 +193,7 @@ export default function ChatBot() {
         </div>
 
         {/* BODY */}
-        <div className="h-[440px] overflow-y-auto bg-[#fafafa] px-4 py-4">
+        <div className="h-[340px] overflow-y-auto bg-[#fafafa] px-2 py-2">
           {/* SERVICE BUTTONS */}
           {step === 3 && (
             <div className="mb-5">
@@ -334,7 +334,7 @@ export default function ChatBot() {
 
         {/* INPUT */}
         {step !== 4 && (
-          <div className="p-4 border-t border-[#ececec] bg-white">
+          <div className="p-2 border-t border-[#ececec] bg-white">
             <div className="flex items-center gap-2">
               <input
                 type={step === 2 ? "number" : "text"}

@@ -13,7 +13,7 @@ const team = [
   {
     name: "Mr Dinesh Kumar Parjapat",
     role: "Founder & CEO",
-    image: "/team/p1.png",
+    image: "/team/person1.png",
   },
   {
     name: "Rahul Parjapat",
@@ -28,7 +28,7 @@ const team = [
   {
     name: "Krishan Kumar",
     role: "Project Coordinator",
-    image: "/images/krishan.png",
+    image: "/images/krishan.PNG",
   },
 ];
 
@@ -114,15 +114,20 @@ Every project we take on is treated like our own business — with attention to 
 
             <div className="relative h-[620px] rounded-[40px] overflow-hidden shadow-2xl bg-[#111]">
 
-              <Image
-                src="/team/p1.png"
-                alt="Founder"
-                fill
-                className="object-contain object-top"
-              />
+           <div className="relative w-full h-full overflow-hidden">
+  <Image
+    src="/team/person1.png"
+    alt="Founder"
+    fill
+    className="object-contain p-4"
+  />
+
+  {/* Black gradient from bottom */}
+  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none" />
+</div>
 
               {/* OVERLAY */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+              <div className="team-handjoin." />
 
               {/* CONTENT */}
               <div className="absolute -bottom-6 left-0 p-10 text-white">
@@ -162,7 +167,7 @@ Every project we take on is treated like our own business — with attention to 
                   src={item.image}
                   alt={item.name}
                   fill
-                 className="object-contain object-top p-4 group-hover:scale-105 transition-all duration-700"
+                 className="object-cover  group-hover:scale-105 transition-all duration-700"
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
