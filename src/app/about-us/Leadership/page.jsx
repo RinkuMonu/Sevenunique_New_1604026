@@ -3,6 +3,7 @@ import LeadershipGrid from "@/components/about-us/LeadershipGrid";
 import InsightsSection from "@/components/about-us/InsightsSection";
 import CallToUs from "@/components/about-us/CallToUs";
 import DarkShowcase from "@/components/about-us/DarkShowcase";
+import DedicatedTeamMembers from "@/components/about-us/DedicatedTeam";
 
 
 export default function Page() {
@@ -10,6 +11,7 @@ export default function Page() {
         <>
             <LeadershipHero />
             <LeadershipGrid />
+            <DedicatedTeamMembers />
             <InsightsSection />
             <DarkShowcase />
             {/* <CallToUs /> */}
