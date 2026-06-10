@@ -245,7 +245,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-4 sm:px-6">
       <Link href="/" className="  block">
   <Image
-    src="/sevenLogo.png"
+    src="/images/new-logo.png"
     alt="logo"
     width={250}
     height={140}
