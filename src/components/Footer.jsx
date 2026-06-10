@@ -16,21 +16,17 @@ import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 
 export default function Footer() {
   return (
-<footer className="relative bg-[#f7f7f7] text-[#111] overflow-hidden border-t border-[#ececec]">
-
+    <footer className="relative bg-[#f7f7f7] text-[#111] overflow-hidden border-t border-[#ececec]">
       {/* TOP */}
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
-
         {/* MAIN GRID */}
         <div className="grid lg:grid-cols-[340px_1fr] gap-16">
-
           {/* LEFT SIDE */}
           <div>
-
             {/* LOGO */}
             <Link href="/">
               <Image
-                src="/sevenLogo.png"
+                src="/images/new-logo.png"
                 alt="Sevenunique"
                 width={220}
                 height={70}
@@ -55,11 +51,43 @@ export default function Footer() {
               </p>
             </div>
 
+            {/* CONTACT INFO */}
+            <div className="mt-6 space-y-3">
+              <div>
+                <p className="text-sm font-semibold text-gray-900">
+                  Call or WhatsApp Us on
+                </p>
+                <a
+                  href="tel:+919660339514"
+                  className="text-[#555] hover:text-[#f4622a] transition-colors"
+                >
+                  +91 9660339514
+                </a>
+              </div>
+
+              <div>
+                <p className="text-sm font-semibold text-gray-900">Email Us</p>
+                <a
+                  href="mailto:info@sevenunique.com"
+                  className="text-[#555] hover:text-[#f4622a] transition-colors"
+                >
+                  info@sevenunique.com
+                </a>
+                <br />
+                <a
+                  href="mailto:support@sevenunique.com"
+                  className="text-[#555] hover:text-[#f4622a] transition-colors"
+                >
+                  support@sevenunique.com
+                </a>
+              </div>
+            </div>
+
             {/* SOCIAL */}
             <div className="mt-8 flex items-center gap-4">
-
               <Link
                 href="https://www.facebook.com/people/SevenUnique-Tech-Solutions-Pvtltd/61556669918427/"
+                target="_blank"
                 className="w-11 h-11 rounded-full bg-white border border-[#e7e7e7] flex items-center justify-center hover:bg-[#f4622a] hover:text-white transition-all duration-300"
               >
                 <FaFacebookF />
@@ -67,6 +95,7 @@ export default function Footer() {
 
               <Link
                 href="https://www.instagram.com/sevenuniquetech/?hl=en"
+                target="_blank"
                 className="w-11 h-11 rounded-full bg-white border border-[#e7e7e7] flex items-center justify-center hover:bg-[#f4622a] hover:text-white transition-all duration-300"
               >
                 <FaInstagram />
@@ -74,6 +103,7 @@ export default function Footer() {
 
               <Link
                 href="https://www.linkedin.com/company/sevenuniquetech/posts/?feedView=all"
+                target="_blank"
                 className="w-11 h-11 rounded-full bg-white border border-[#e7e7e7] flex items-center justify-center hover:bg-[#f4622a] hover:text-white transition-all duration-300"
               >
                 <FaLinkedinIn />
@@ -81,6 +111,7 @@ export default function Footer() {
 
               <Link
                 href="https://x.com/sevenuniqu42041"
+                target="_blank"
                 className="w-11 h-11 rounded-full bg-white border border-[#e7e7e7] flex items-center justify-center hover:bg-[#f4622a] hover:text-white transition-all duration-300"
               >
                 <FaXTwitter />
@@ -97,16 +128,13 @@ export default function Footer() {
 
           {/* RIGHT SIDE LINKS */}
           <div className="grid sm:grid-cols-3 gap-12">
-
             {/* COMPANY */}
             <div>
-
               <h3 className="text-[24px] font-semibold mb-6 text-[#111]">
                 Company
               </h3>
 
               <ul className="space-y-4 text-[16px] text-[#555]">
-
                 <li>
                   <Link
                     href="/about-us"
@@ -139,7 +167,7 @@ export default function Footer() {
                     href="/about-us/Leadership"
                     className="hover:text-[#f4622a] transition"
                   >
-                   Leadership Team
+                    Leadership Team
                   </Link>
                 </li>
               </ul>
@@ -147,13 +175,11 @@ export default function Footer() {
 
             {/* SERVICES */}
             <div>
-
               <h3 className="text-[24px] font-semibold mb-6 text-[#111]">
                 Services
               </h3>
 
               <ul className="space-y-4 text-[16px] text-[#555]">
-
                 <li>
                   <Link
                     href="/services/web-development"
@@ -194,13 +220,11 @@ export default function Footer() {
 
             {/* QUICK LINKS */}
             <div>
-
               <h3 className="text-[24px] font-semibold mb-6 text-[#111]">
                 Quick Links
               </h3>
 
               <ul className="space-y-4 text-[16px] text-[#555]">
-
                 <li>
                   <Link
                     href="/jobOp"
@@ -238,51 +262,48 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-
           </div>
         </div>
 
-      {/* OFFICES */}
-<div className="grid md:grid-cols-2 xl:grid-cols-2 gap-5 mt-16 md:mt-30">
-
-  {[
-    {
-      title: "Jaipur Head Office",
-      image: "https://www.avendus.com/uploads/City-Icons-Jaipur.svg",
-      address:
-        "Plot No 97, Dakshinpuri - I Shrikishan, Sanganer, Jagatpura, Jaipur, Rajasthan 302017",
-      phone: "+91 141-4511098",
-      email: "info@sevenunique.com",
-    },
-    {
-      title: "Mumbai Office",
-      image: "https://www.avendus.com/uploads/Kolkata_83b7a1c794.svg",
-      address:
-        "No. 101/2, Vakratunda Corporate Park, Off Aarey Road, Goregaon East, Mumbai – 400063",
-      phone: "+91 141-4511098",
-      email: "info@sevenunique.com",
-    },
-    {
-      title: "UAE Office",
-      image: "https://ezulix.com/assets/image/icons/uk.webp",
-      address:
-        "Office Number 01-02, C-1 Building, Ajman Free Zone, Dubai, United Arab Emirates",
-      phone: "+971 55 000 0000",
-      email: "salesuae@sevenunique.com",
-    },
-    {
-      title: "USA Office",
-      image: "https://ezulix.com/assets/image/icons/uae.webp",
-      address:
-        "514 State Shelton Street Garden, Wisconsin, USA – 55309",
-      phone: "+1 414 000 0000",
-      email: "salesusa@sevenunique.com",
-    },
-  ].map((office, index) => (
-
-    <div
-      key={index}
-      className="
+        {/* OFFICES */}
+        <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-5 mt-16 md:mt-30">
+          {[
+            {
+              title: "Jaipur Head Office",
+              image: "https://www.avendus.com/uploads/City-Icons-Jaipur.svg",
+              address:
+                "Plot No 97, Dakshinpuri - I Shrikishan, Sanganer, Jagatpura, Jaipur, Rajasthan 302017",
+              phone: "+91 141-4511098",
+              email: "info@sevenunique.com",
+            },
+            {
+              title: "Mumbai Office",
+              image: "https://www.avendus.com/uploads/Kolkata_83b7a1c794.svg",
+              address:
+                "No. 101/2, Vakratunda Corporate Park, Off Aarey Road, Goregaon East, Mumbai – 400063",
+              phone: "+91 141-4511098",
+              email: "info@sevenunique.com",
+            },
+            {
+              title: "UAE Office",
+              image: "https://ezulix.com/assets/image/icons/uk.webp",
+              address:
+                "Office Number 01-02, C-1 Building, Ajman Free Zone, Dubai, United Arab Emirates",
+              phone: "+971 55 000 0000",
+              email: "salesuae@sevenunique.com",
+            },
+            {
+              title: "USA Office",
+              image: "https://ezulix.com/assets/image/icons/uae.webp",
+              address:
+                "514 State Shelton Street Garden, Wisconsin, USA – 55309",
+              phone: "+1 414 000 0000",
+              email: "salesusa@sevenunique.com",
+            },
+          ].map((office, index) => (
+            <div
+              key={index}
+              className="
         group relative overflow-hidden
         rounded-[16px]
         bg-white
@@ -292,15 +313,12 @@ export default function Footer() {
         hover:-translate-y-1
         hover:shadow-[0_12px_35px_rgba(0,0,0,0.06)]
       "
-    >
-
-
-      {/* TOP */}
-      <div className="relative z-10 flex items-start gap-3 mb-5">
-
-        {/* FLAG */}
-        <div
-          className="
+            >
+              {/* TOP */}
+              <div className="relative z-10 flex items-start gap-3 mb-5">
+                {/* FLAG */}
+                <div
+                  className="
             w-[56px] h-[56px]
             rounded-full
             bg-[#f8f8f8]
@@ -309,19 +327,18 @@ export default function Footer() {
             shrink-0
             shadow-sm
           "
-        >
-          <img
-            src={office.image}
-            alt={office.title}
-            className="w-[36px] h-[36px] object-cover"
-          />
-        </div>
+                >
+                  <img
+                    src={office.image}
+                    alt={office.title}
+                    className="w-[36px] h-[36px] object-cover"
+                  />
+                </div>
 
-        {/* TITLE + PHONE */}
-        <div>
-
-          <h3
-            className="
+                {/* TITLE + PHONE */}
+                <div>
+                  <h3
+                    className="
               text-[16px] md:text-[18px]
               font-bold
               text-[#111]
@@ -330,41 +347,36 @@ export default function Footer() {
               transition-colors duration-300
               group-hover:text-orange-500
             "
-          >
-            {office.title}
-          </h3>
+                  >
+                    {office.title}
+                  </h3>
 
-          <p className="text-[11px] text-gray-700 font-medium">
-            {office.phone}
-          </p>
+                  <p className="text-[11px] text-gray-700 font-medium">
+                    {office.phone}
+                  </p>
+                </div>
+              </div>
 
-        </div>
-
-      </div>
-
-      {/* EMAIL */}
-      <div className="relative z-10 mb-4">
-
-        <div
-          className="
+              {/* EMAIL */}
+              <div className="relative z-10 mb-4">
+                <div
+                  className="
             inline-flex items-center gap-2
             text-orange-500
             font-semibold
             text-[12px]
             break-all
           "
-        >
-          <FiMail className="text-[14px]" />
-          {office.email}
-        </div>
+                >
+                  <FiMail className="text-[14px]" />
+                  {office.email}
+                </div>
+              </div>
 
-      </div>
-
-      {/* ADDRESS */}
-      <div className="relative z-10 flex items-start gap-3">
-
-        <div
-          className="
+              {/* ADDRESS */}
+              <div className="relative z-10 flex items-start gap-3">
+                <div
+                  className="
             w-9 h-9
             rounded-lg
             bg-orange-50
@@ -372,44 +384,39 @@ export default function Footer() {
             flex items-center justify-center
             shrink-0
           "
-        >
-          <FiMapPin className="text-[14px]" />
-        </div>
+                >
+                  <FiMapPin className="text-[14px]" />
+                </div>
 
-        <p
-          className="
+                <p
+                  className="
             text-[12px]
             leading-6
             text-gray-600
             font-medium
           "
-        >
-          {office.address}
-        </p>
+                >
+                  {office.address}
+                </p>
+              </div>
 
-      </div>
-
-      {/* HOVER BORDER LINE */}
-      <div
-        className="
+              {/* HOVER BORDER LINE */}
+              <div
+                className="
           absolute bottom-0 left-0
           h-[3px] w-0
           bg-orange-500
           transition-all duration-500
           group-hover:w-full
         "
-      />
-
-    </div>
-
-  ))}
-
-</div>
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
-
       {/* RIGHT SIDE FLOATING IMAGE */}
-<div
+     <div
   className="
     absolute
     right-30
@@ -423,21 +430,18 @@ export default function Footer() {
   <img
     src="/images/mapp.png"
     alt="footer shape"
-    className="w-[410px] object-cover opacity-70"
+    className="w-[610px] object-cover opacity-70"
   />
 </div>
 
       {/* BOTTOM BAR */}
       <div className="bg-[#111] py-5 px-6">
-
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-
           <p className="text-white/70 text-[14px] text-center md:text-left">
             © 2026 Sevenunique Tech Solution Pvt. Ltd. All rights reserved.
           </p>
 
           <div className="flex items-center gap-5 text-[14px] text-white/70">
-
             <Link
               href="/privacy-policy"
               className="hover:text-[#f4622a] transition"
@@ -451,16 +455,13 @@ export default function Footer() {
             >
               Terms & Conditions
             </Link>
-              <Link
+            <Link
               href="/cancellationpolicy"
               className="hover:text-[#f4622a] transition"
             >
               Cancellation & Refund Policy
             </Link>
-             <Link
-              href="/kycpolicy"
-              className="hover:text-[#f4622a] transition"
-            >
+            <Link href="/kycpolicy" className="hover:text-[#f4622a] transition">
               KYC & Chargeback Policy
             </Link>
           </div>
