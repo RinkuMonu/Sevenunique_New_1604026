@@ -11,13 +11,13 @@ export default function PortfolioPage() {
   const [portfolio] = useState([
   {
     id: 1,
-    title: "Jajam Block Prints",
+    title: "E-commerce Website for Fashion Brand",
     product_category: "E-Commerce Platform",
     image: "/images/jajam.jpeg",
     summary:
       "A modern clothing e-commerce platform developed for a fashion brand with smooth shopping experience, secure checkout and scalable architecture.",
     description:
-      "Jajam Block Prints is a full-featured e-commerce platform developed using the MERN stack. The platform allows customers to browse clothing collections, place orders, manage accounts and complete secure online payments. We integrated the Mobikwik payment gateway for seamless transactions and built a responsive user experience optimized for mobile and desktop devices.",
+      "E-commerce Website for Fashion Brand is a full-featured e-commerce platform developed using the MERN stack. The platform allows customers to browse clothing collections, place orders, manage accounts and complete secure online payments. We integrated the Mobikwik payment gateway for seamless transactions and built a responsive user experience optimized for mobile and desktop devices.",
     technology_used:
       "React.js || Node.js || Express.js || MongoDB || Mobikwik || Tailwind CSS",
     product_link: "https://jajamblockprints.com/",
@@ -25,7 +25,7 @@ export default function PortfolioPage() {
   },
   {
     id: 2,
-    title: "Verify Panel",
+    title: "Banking Verification Platform",
     product_category: "Verification Platform",
     image: "/images/avatar1.png",
     summary:
@@ -39,7 +39,7 @@ export default function PortfolioPage() {
   },
   {
     id: 3,
-    title: "BBPS Utility Portal",
+    title: "Fintech Utility Services Portal",
     product_category: "Fintech Platform",
     image: "/images/bbps.jpeg",
     summary:
@@ -53,7 +53,7 @@ export default function PortfolioPage() {
   },
   {
     id: 4,
-    title: "PV Classes",
+    title: "Education Website",
     product_category: "EdTech Platform",
     image: "/images/pvv.jpeg",
     summary:
@@ -67,7 +67,7 @@ export default function PortfolioPage() {
   },
   {
     id: 5,
-    title: "DigiHub Electronics",
+    title: "Electronics E-Commerce Website",
     product_category: "Electronics E-Commerce",
     image: "/images/digi.jpeg",
     summary:

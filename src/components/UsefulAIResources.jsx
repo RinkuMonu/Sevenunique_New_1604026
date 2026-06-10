@@ -52,7 +52,7 @@ export default function UsefulAIResources() {
 
       <div className="content-wrapper">
         {/* Left Sidebar */}
-        <aside className="sidebar">
+        {/* <aside className="sidebar">
           <h2 className="sidebar-title">
             AI resources<span className="dot">.</span>
           </h2>
@@ -79,7 +79,7 @@ export default function UsefulAIResources() {
               </li>
             ))}
           </ul>
-        </aside>
+        </aside> */}
 
         {/* Right Articles Panel */}
         <div className="articles-panel">
