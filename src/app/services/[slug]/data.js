@@ -195,7 +195,7 @@ faq = null,
       title: "Financial Services",
       description:
         "Build backend systems that process transactions securely, manage risk calculations, and support regulatory compliance.",
-      image: "/logos/office1.jpg",
+      image: "/logos/office1.jpeg",
       points: [
         "Core banking platform backends",
         "Payment processing systems",
@@ -209,7 +209,7 @@ faq = null,
       label: "Healthcare & Life Sciences",
       title: "Healthcare & Life Sciences",
       description: "Secure backend systems for healthcare platforms.",
-      image: "/logos/office2.jpg",
+      image: "/logos/office2.png",
       points: [
         "Patient data systems",
         "Medical APIs",
@@ -228,7 +228,7 @@ processSection = {
   description:
     "Our proven delivery framework helps organizations launch, scale, and optimize digital products efficiently while maintaining quality, security, and long-term business value.",
 
-  image: "/logos/office3.jpg",
+  image: "/logos/office3.png",
 
   steps: [
     {
@@ -683,21 +683,21 @@ description:
         title: "Built a Multi-Site CMS Platform for Faster Publishing",
         description:
           "Delivered reusable content models and publishing workflows for a growing media brand.",
-        image: "/logos/office1.jpg",
+        image: "/logos/office1.jpeg",
       },
       {
         tag: "ECOMMERCE",
         title: "Migrated Legacy CMS Workflows to a Headless Stack",
         description:
           "Improved flexibility for marketing teams while supporting modern frontend delivery.",
-        image: "/logos/office2.jpg",
+        image: "/logos/office2.png",
       },
       {
         tag: "ENTERPRISE",
         title: "Centralized Content Operations Across Regional Teams",
         description:
           "Created a governed CMS setup that scaled across multiple markets and editorial groups.",
-        image: "/logos/office3.jpg",
+        image: "/logos/office3.png",
       },
     ],
   }),
@@ -772,21 +772,21 @@ description:
       title: "Developed Secure Smart Contract Infrastructure for a Digital Finance Platform",
       description:
         "Implemented automated transaction workflows with enhanced security and compliance controls.",
-      image: "/logos/office1.jpg",
+      image: "/logos/office1.jpeg",
     },
     {
       tag: "WEB3",
       title: "Built a Decentralized Identity and Wallet Management Solution",
       description:
         "Created seamless authentication and digital asset management experiences for users.",
-      image: "/logos/office2.jpg",
+      image: "/logos/office2.png",
     },
     {
       tag: "ENTERPRISE",
       title: "Modernized Business Operations with Enterprise Blockchain Technology",
       description:
         "Enabled transparent, auditable workflows while improving efficiency across distributed systems.",
-      image: "/logos/office3.jpg",
+      image: "/logos/office3.png",
     },
   ],
 }),
@@ -838,21 +838,21 @@ description:
       title: "Built a Modern Frontend Platform for a Growing SaaS Business",
       description:
         "Improved usability, consistency, and development velocity through reusable components.",
-      image: "/logos/office1.jpg",
+      image: "/logos/office1.jpeg",
     },
     {
       tag: "RETAIL",
       title: "Optimized User Experience Across High-Traffic E-Commerce Pages",
       description:
         "Enhanced responsiveness and customer engagement with a performance-first approach.",
-      image: "/logos/office2.jpg",
+      image: "/logos/office2.png",
     },
     {
       tag: "ENTERPRISE",
       title: "Created a Scalable Design System for Multiple Product Teams",
       description:
         "Standardized UI delivery and accelerated development across business units.",
-      image: "/logos/office3.jpg",
+      image: "/logos/office3.png",
     },
   ],
 }),
@@ -905,21 +905,21 @@ description:
       title: "Developed Predictive Forecasting Models for Business Planning",
       description:
         "Improved forecasting accuracy and enabled more informed strategic decisions.",
-      image: "/logos/office1.jpg",
+      image: "/logos/office1.jpeg",
     },
     {
       tag: "SaaS",
       title: "Built Recommendation Engines to Increase User Engagement",
       description:
         "Delivered personalized experiences that improved retention and product adoption.",
-      image: "/logos/office2.jpg",
+      image: "/logos/office2.png",
     },
     {
       tag: "ENTERPRISE",
       title: "Implemented Scalable MLOps Workflows for Production AI Systems",
       description:
         "Enhanced model monitoring, deployment reliability, and operational efficiency.",
-      image: "/logos/office3.jpg",
+      image: "/logos/office3.png",
     },
   ],
 }),
@@ -972,21 +972,21 @@ description:
       title: "Implemented Automated Regression Testing for Core Products",
       description:
         "Reduced manual effort and increased confidence in every release cycle.",
-      image: "/logos/office1.jpg",
+      image: "/logos/office1.jpeg",
     },
     {
       tag: "FINTECH",
       title: "Enhanced Testing Coverage for Critical Financial Workflows",
       description:
         "Improved reliability and compliance across high-risk transaction processes.",
-      image: "/logos/office2.jpg",
+      image: "/logos/office2.png",
     },
     {
       tag: "ENTERPRISE",
       title: "Established Enterprise-Wide QA Standards and Automation",
       description:
         "Created consistent testing practices and improved release predictability.",
-      image: "/logos/office3.jpg",
+      image: "/logos/office3.png",
     },
   ],
 }),
@@ -1038,21 +1038,21 @@ description:
       title: "Redesigned a Complex SaaS Platform for Better User Adoption",
       description:
         "Improved navigation, workflow efficiency, and user satisfaction through a user-centered redesign.",
-      image: "/logos/office1.jpg",
+      image: "/logos/office1.jpeg",
     },
     {
       tag: "FINTECH",
       title: "Created a Scalable Design System for a Financial Platform",
       description:
         "Established consistent UI patterns that accelerated product development and improved accessibility.",
-      image: "/logos/office2.jpg",
+      image: "/logos/office2.png",
     },
     {
       tag: "ENTERPRISE",
       title: "Enhanced Enterprise Workflow Experiences Through UX Research",
       description:
         "Optimized information architecture and interaction design to improve productivity and ease of use.",
-      image: "/logos/office3.jpg",
+      image: "/logos/office3.png",
     },
   ],
 }),
@@ -1167,7 +1167,7 @@ description:
           title: "Developed AI Tool to Summarize 10,000 Legal Transcripts Daily",
           description:
             "Created an AI workflow that processes high-volume legal content with speed, consistency, and reliable summaries for downstream review teams.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
 
         },
         {
@@ -1175,7 +1175,7 @@ description:
           title: "Automated GenAI Video Integration for HubSpot Campaigns",
           description:
             "Built a generative video pipeline that connected campaign systems, reduced manual production work, and accelerated content delivery.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
 
         },
         {
@@ -1183,7 +1183,7 @@ description:
           title: "Built an IDE That Simplifies AI Pipeline Prototyping",
           description:
             "Designed a developer workflow that made AI experimentation easier, faster, and more structured for internal engineering teams.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
 
         },
       ],
@@ -1347,7 +1347,7 @@ description:
         "Developed Secure API Infrastructure for a Financial Services Platform",
       description:
         "Built high-performance backend services with advanced security controls and transaction processing capabilities.",
-      image: "/logos/office1.jpg",
+      image: "/logos/office1.jpeg",
     },
     {
       tag: "SAAS",
@@ -1355,7 +1355,7 @@ description:
         "Scaled Multi-Tenant Backend Architecture for a Growing SaaS Company",
       description:
         "Enhanced platform scalability, reliability, and operational efficiency to support rapid customer growth.",
-      image: "/logos/office2.jpg",
+      image: "/logos/office2.png",
     },
     {
       tag: "ENTERPRISE",
@@ -1363,7 +1363,7 @@ description:
         "Modernized Legacy Backend Systems for Improved Reliability",
       description:
         "Implemented cloud-native services, monitoring solutions, and performance optimizations across critical business systems.",
-      image: "/logos/office3.jpg",
+      image: "/logos/office3.png",
     },
   ],
 }),

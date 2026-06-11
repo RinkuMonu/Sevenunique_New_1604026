@@ -74,9 +74,9 @@ export default function WorkSection({ data }) {
             </div>
 
             {/* Footer */}
-            <div className="relative z-10 bg-[#f0fdf9] px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-6 border-t border-[#eaecf0]">
+            {/* <div className="relative z-10 bg-[#f0fdf9] px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-6 border-t border-[#eaecf0]">
 
-              {/* Left */}
+         
               <div className="flex items-center gap-4">
                 <div className="flex -space-x-2.5">
                   {[1, 2, 3, 4, 5, 6].map((idx) => (
@@ -98,7 +98,7 @@ export default function WorkSection({ data }) {
                 </p>
               </div>
 
-              {/* CTA BUTTON (FIXED) */}
+        
               <Link
                 href="/schedule-a-call-page"
                 className="relative z-20 inline-flex flex-shrink-0 items-center justify-center gap-2 bg-[#079455] hover:bg-[#067647] text-white text-base font-semibold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-green-900/10 cursor-pointer"
@@ -106,7 +106,7 @@ export default function WorkSection({ data }) {
                 {data.card?.cta || "Talk to an expert"}
                 <span className="text-xl">→</span>
               </Link>
-            </div>
+            </div> */}
           </div>
 
           {/* Bottom shadow layer (non-clickable) */}

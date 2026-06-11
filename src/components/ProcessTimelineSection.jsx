@@ -145,7 +145,7 @@ export default function ProcessTimelineSection() {
         {[
           "https://cdn-gnapb.nitrocdn.com/rVKsFrUUJpBqwSXDQLTtMASMDgzFisXl/assets/images/optimized/rev-f95ca0b/d274cmdd0goq94.cloudfront.net/wp-content/uploads/2023/05/mic.webp",
 
-          "https://cdn-gnapb.nitrocdn.com/rVKsFrUUJpBqwSXDQLTtMASMDgzFisXl/assets/images/optimized/rev-f95ca0b/d274cmdd0goq94.cloudfront.net/wp-content/uploads/2023/05/intel.webp",
+         
 
           "https://cdn-gnapb.nitrocdn.com/rVKsFrUUJpBqwSXDQLTtMASMDgzFisXl/assets/images/optimized/rev-f95ca0b/d274cmdd0goq94.cloudfront.net/wp-content/uploads/2025/06/Adobe-Bronze-Solution-Partner.webp",
 

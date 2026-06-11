@@ -49,7 +49,7 @@ export default async function Page({ params }) {
 
       <FAQ data={data.faq} />
 
-      <Industries />
+      {/* <Industries /> */}
       <CTASection />
 
     </main>

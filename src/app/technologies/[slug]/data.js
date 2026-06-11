@@ -304,21 +304,21 @@ export const techData = {
           tag: "MEDIA",
           title: "Built a Multi-Site CMS Platform for Faster Publishing",
           description: "Delivered reusable content models and publishing workflows for a growing media brand.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/media-platform" // optional
         },
         {
           tag: "ECOMMERCE",
           title: "Migrated Legacy CMS Workflows to a Headless Stack",
           description: "Improved flexibility for marketing teams while supporting modern frontend delivery.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/ecommerce-migration"
         },
         {
           tag: "ENTERPRISE",
           title: "Centralized Content Operations Across Regional Teams",
           description: "Created a governed CMS setup that scaled across multiple markets and editorial groups.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/enterprise-content"
         },
       ],
@@ -615,21 +615,21 @@ export const techData = {
           tag: "CLOUD MIGRATION",
           title: "Zero-Downtime Migration to AWS",
           description: "Migrated legacy infrastructure to AWS with 0% downtime and 35% cost reduction.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/aws-migration"
         },
         {
           tag: "SERVERLESS",
           title: "Serverless Banking Platform",
           description: "Built event-driven platform handling 2M+ daily transactions on Lambda.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/serverless-banking"
         },
         {
           tag: "CLOUD OPTIMIZATION",
           title: "Global CDN Performance Optimization",
           description: "Reduced content delivery latency by 60% with CloudFront optimization.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/cdn-optimization"
         },
       ],
@@ -894,21 +894,21 @@ export const techData = {
           tag: "E-COMMERCE",
           title: "Rebuilt Frontend for 10x Faster Checkout",
           description: "Modernized legacy checkout flow with React, reducing cart abandonment by 35%.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/react-ecommerce"
         },
         {
           tag: "FINTECH",
           title: "Real-Time Trading Dashboard",
           description: "Built high-performance dashboard handling 10,000+ concurrent WebSocket connections.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/react-trading-dashboard"
         },
         {
           tag: "HEALTHCARE",
           title: "Patient Portal Modernization",
           description: "Migrated legacy Angular app to React with zero downtime and 3x faster feature velocity.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/react-healthcare"
         },
       ],
@@ -1230,21 +1230,21 @@ export const techData = {
           tag: "E-COMMERCE",
           title: "Custom E-commerce Platform Migration",
           description: "Migrated from Shopify to custom Django Oscar solution, reducing transaction fees by 2.5%.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/django-ecommerce"
         },
         {
           tag: "FINTECH",
           title: "High-Performance API Platform",
           description: "Built Django REST API handling 2M+ daily requests with 99.99% uptime.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/django-fintech-api"
         },
         {
           tag: "HEALTHCARE",
           title: "HIPAA-Compliant Patient Portal",
           description: "Delivered secure Django platform meeting all healthcare compliance requirements.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/django-healthcare"
         },
       ],
@@ -1420,21 +1420,21 @@ export const techData = {
           tag: "FINANCIAL SERVICES",
           title: "Built a High-Throughput Trading Platform",
           description: "Delivered low-latency order processing and real-time market data aggregation for a global investment firm.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/trading-platform"
         },
         {
           tag: "E-COMMERCE",
           title: "Migrated Legacy Monolith to Microservices",
           description: "Improved scalability and deployment velocity for a Fortune 500 retailer's e-commerce backend.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/ecommerce-microservices"
         },
         {
           tag: "ENTERPRISE",
           title: "Real-Time Analytics Pipeline with Kafka",
           description: "Created a stream processing architecture handling millions of events per second for actionable insights.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/analytics-pipeline"
         },
       ],
@@ -1748,21 +1748,21 @@ export const techData = {
           tag: "FINANCIAL SERVICES",
           title: "Real-Time Fraud Detection Engine",
           description: "Reduced fraud losses by 40% with a low-latency ML system processing 10,000+ transactions per second.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/fraud-detection"
         },
         {
           tag: "E-COMMERCE",
           title: "Personalized Recommendation Engine",
           description: "Increased conversion rates by 25% with a hybrid recommendation system serving 50M+ users.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/recommendation-engine"
         },
         {
           tag: "MANUFACTURING",
           title: "Predictive Maintenance System",
           description: "Reduced unplanned downtime by 60% using time series forecasting and anomaly detection on sensor data.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/predictive-maintenance"
         },
       ],
@@ -2086,21 +2086,21 @@ export const techData = {
           tag: "E-COMMERCE",
           title: "Scalable Laravel E-Commerce Platform",
           description: "Built a high-traffic e-commerce platform handling 500K+ daily visitors with zero downtime during peak sales events.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/laravel-ecommerce"
         },
         {
           tag: "MEDIA",
           title: "Headless WordPress at Enterprise Scale",
           description: "Migrated a media company to headless WordPress, reducing page load time by 60% and enabling multi-channel content delivery.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/headless-wordpress"
         },
         {
           tag: "ENTERPRISE",
           title: "Legacy PHP 5 to PHP 8 Migration",
           description: "Modernized a 15-year-old enterprise system, improving performance by 3x and eliminating security vulnerabilities.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/php-modernization"
         },
       ],
@@ -2424,21 +2424,21 @@ export const techData = {
           tag: "SAAS",
           title: "Full-Stack TypeScript Platform Migration",
           description: "Migrated a JavaScript SaaS platform to TypeScript, eliminating 40% of production bugs and improving developer productivity.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/typescript-migration"
         },
         {
           tag: "ENTERPRISE",
           title: "Monorepo Setup with Nx + TypeScript",
           description: "Consolidated 12 separate repositories into a single monorepo with shared type libraries and consistent tooling.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/monorepo-typescript"
         },
         {
           tag: "FINTECH",
           title: "Type-Safe API Layer with tRPC",
           description: "Built end-to-end type-safe APIs connecting React frontend to Node.js backend, eliminating API contract mismatches.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/trpc-typescript"
         },
       ],
@@ -2779,7 +2779,7 @@ export const techData = {
           title: "AI Tool for Legal Transcript Summarization",
           description: "We developed an AI solution to automate the summarization of large legal transcripts, processing 200–300 pages in seconds. The system anonymizes sensitive data, generates editable files, and preserves source references significantly improving efficiency and turnaround time.",
           technologies: ["OpenAI", "Azure", "C#", ".NET", "SQL", "React Native"],
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "https://www.openai.com"
         },
         {
@@ -2787,7 +2787,7 @@ export const techData = {
           title: "GenAI Video Integration for HubSpot",
           description: "We built a custom solution to automate personalized video delivery within HubSpot campaigns. Using workflow automation and webhooks, videos are generated and linked to individual contacts by eliminating manual effort and improving campaign efficiency.",
           technologies: ["Generative AI", "AI Video"],
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "https://www.hubspot.com/ai-video"
         },
         {
@@ -2795,7 +2795,7 @@ export const techData = {
           title: "IDE for AI Pipeline Prototyping",
           description: "We supported the development of an IDE for building and testing AI pipelines with LLMs. By enhancing both frontend usability and backend scalability, we helped streamline experimentation and accelerate iteration cycles.",
           technologies: ["LLMs", "Node.js", "React"],
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "https://www.lms.com"
         },
         {
@@ -2803,7 +2803,7 @@ export const techData = {
           title: "AI-Driven Robotic Automation & Segmentation",
           description: "We enhanced robotic arm automation using AI, improving precision, object segmentation, and human action replication. Our solution enabled smarter learning from demonstrations and more efficient multi-system operation.",
           technologies: ["AI", "Computer Vision", "NLP", "ML"],
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/robotic-automation"
         },
         {
@@ -2811,7 +2811,7 @@ export const techData = {
           title: "Reduced GCP Costs by 80% with AI Optimization",
           description: "We optimized AI/ML workflows to significantly reduce cloud costs and improve performance. By enhancing classification accuracy and streamlining processing, we helped cut latency and achieve up to 80% cost savings.",
           technologies: ["GenAI", "LLMs", "RAG", "OpenAI"],
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/gcp-cost-optimization"
         },
         {
@@ -2819,7 +2819,7 @@ export const techData = {
           title: "AI-Powered Predictive Maintenance & Automation",
           description: "We built AI-driven infrastructure for real-time monitoring and predictive diagnostics, reducing manual effort by 90%. The solution improved detection accuracy and enabled faster, more efficient maintenance operations.",
           technologies: ["AI", "Node.js", "Terraform", "IoT"],
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/predictive-maintenance"
         }
       ]
@@ -3099,21 +3099,21 @@ export const techData = {
           tag: "FINTECH",
           title: "High-Frequency Trading Engine Rebuild",
           description: "Rebuilt a legacy C# trading engine, reducing latency by 60% and eliminating memory leaks.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/csharp-trading-engine"
         },
         {
           tag: "ENTERPRISE",
           title: "WPF Desktop Application Modernization",
           description: "Modernized a 10-year-old WPF application to .NET 8 with MVVM pattern and improved performance.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/wpf-modernization"
         },
         {
           tag: "GAMING",
           title: "Unity Mobile Game Optimization",
           description: "Optimized C# code in a Unity mobile game, improving frame rate by 40% and reducing load times.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/unity-optimization"
         },
       ],
@@ -3442,21 +3442,21 @@ export const techData = {
           tag: "TECHNOLOGY",
           title: "High-Performance API Gateway",
           description: "Built a Go-based API gateway handling 100K+ requests per second with sub-5ms latency.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/go-api-gateway"
         },
         {
           tag: "STREAMING",
           title: "Real-Time Data Processing Pipeline",
           description: "Developed a concurrent data processor in Go, reducing processing time by 80%.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/go-data-pipeline"
         },
         {
           tag: "DEVOPS",
           title: "CLI Tool for Infrastructure Management",
           description: "Created a cross-platform Go CLI tool deployed across 5,000+ developer workstations.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/go-cli-tool"
         },
       ],
@@ -3790,21 +3790,21 @@ export const techData = {
           tag: "E-COMMERCE",
           title: "Real-Time Dashboard with WebSockets",
           description: "Built a live analytics dashboard with WebSockets, reducing data latency from 30s to under 1s.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/js-realtime-dashboard"
         },
         {
           tag: "PRODUCTIVITY",
           title: "Cross-Platform Desktop App with Electron",
           description: "Developed a cross-platform desktop application used by 100,000+ daily active users.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/electron-desktop-app"
         },
         {
           tag: "BROWSER",
           title: "Browser Extension with 1M+ Installs",
           description: "Built a cross-browser extension (Chrome, Firefox, Edge) with 4.8-star rating and 1M+ users.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/browser-extension"
         },
       ],
@@ -4138,21 +4138,21 @@ export const techData = {
           tag: "FINTECH",
           title: "Serverless Architecture with Azure Functions",
           description: "Built an event-driven serverless platform that scales automatically and reduced compute costs by 60%.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/azure-serverless"
         },
         {
           tag: "ENTERPRISE",
           title: "AKS Microservices Platform",
           description: "Deployed a production-grade AKS cluster running 50+ microservices with automated scaling and self-healing.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/azure-aks"
         },
         {
           tag: "FINANCIAL SERVICES",
           title: "Legacy Migration to Azure",
           description: "Migrated on-premise data center to Azure, reducing infrastructure costs by 40% and improving DR capabilities.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/azure-migration"
         },
       ],
@@ -4481,21 +4481,21 @@ export const techData = {
           tag: "LOGISTICS",
           title: "Real-Time Supply Chain Dashboard",
           description: "Built a real-time supply chain dashboard that reduced logistics costs by 15% through better visibility.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/powerbi-supply-chain"
         },
         {
           tag: "FINANCIAL SERVICES",
           title: "Executive KPI Dashboard with RLS",
           description: "Deployed a company-wide dashboard with row-level security, serving 5,000+ users across departments.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/powerbi-executive-dashboard"
         },
         {
           tag: "RETAIL",
           title: "Sales Performance Analytics",
           description: "Created sales performance dashboards that increased forecast accuracy by 25%.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/powerbi-sales-analytics"
         },
       ],
@@ -4824,21 +4824,21 @@ export const techData = {
           tag: "E-COMMERCE",
           title: "Custom Spree Commerce Platform",
           description: "Built a multi-vendor marketplace with Spree, handling 100K+ monthly transactions.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/ruby-spree-marketplace"
         },
         {
           tag: "TECHNOLOGY",
           title: "Rails 5 to 7 Migration & Performance Tuning",
           description: "Migrated a legacy Rails 5 app to Rails 7, improving performance by 60% and reducing technical debt.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/rails-upgrade"
         },
         {
           tag: "SAAS",
           title: "API-First Subscription Platform",
           description: "Developed a GraphQL API with Rails serving 500K+ daily requests for a subscription SaaS.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/ruby-subscription-platform"
         },
       ],
@@ -5171,21 +5171,21 @@ export const techData = {
           tag: "ENTERPRISE",
           title: "Real-Time Analytics Dashboard",
           description: "Built a real-time analytics dashboard with Vue 3 and Pinia, serving 10,000+ concurrent users.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/vue-analytics-dashboard"
         },
         {
           tag: "E-COMMERCE",
           title: "SEO-Optimized Storefront with Nuxt.js",
           description: "Developed a Nuxt.js storefront with SSR, improving SEO rankings and page load speed by 50%.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/nuxt-storefront"
         },
         {
           tag: "TECHNOLOGY",
           title: "Vue Component Library for Design System",
           description: "Built a reusable Vue 3 component library with Storybook, used across 10+ internal applications.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/vue-component-library"
         },
       ],
@@ -5519,21 +5519,21 @@ export const techData = {
           tag: "ENTERPRISE",
           title: "Enterprise Portal with Angular 17",
           description: "Built a scalable enterprise portal serving 50,000+ internal users with role-based access and real-time data.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/angular-enterprise-portal"
         },
         {
           tag: "FINANCIAL SERVICES",
           title: "AngularJS to Angular 16 Migration",
           description: "Migrated a 8-year-old AngularJS app to Angular 16, improving performance by 70% and developer productivity.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/angular-migration"
         },
         {
           tag: "TECHNOLOGY",
           title: "Reusable Angular Component Library",
           description: "Built a reusable component library with Angular CDK, used across 15+ enterprise applications.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/angular-component-library"
         },
       ],
@@ -5867,21 +5867,21 @@ export const techData = {
           tag: "SCIENTIFIC COMPUTING",
           title: "High-Performance Simulation Engine",
           description: "Optimized a scientific simulation engine to run 3x faster using SIMD and parallel algorithms.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/cpp-simulation"
         },
         {
           tag: "GAMING",
           title: "Unreal Engine Game Customization",
           description: "Built custom Unreal Engine gameplay systems for a AAA game title with 1M+ players.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/cpp-unreal-engine"
         },
         {
           tag: "FINANCIAL SERVICES",
           title: "Low-Latency Trading Platform",
           description: "Developed a high-frequency trading platform with sub-microsecond latency for order execution.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/cpp-trading-platform"
         },
       ],
@@ -6215,21 +6215,21 @@ export const techData = {
           tag: "DATA ANALYTICS",
           title: "BigQuery Data Warehouse Migration",
           description: "Migrated an on-premise data warehouse to BigQuery, reducing query times from minutes to seconds.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/gcp-bigquery-migration"
         },
         {
           tag: "TECHNOLOGY",
           title: "Serverless API with Cloud Run",
           description: "Built a serverless API platform on Cloud Run handling 100K+ requests per second with auto-scaling.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/gcp-cloud-run"
         },
         {
           tag: "FINANCIAL SERVICES",
           title: "Real-Time Stream Processing with Dataflow",
           description: "Built a real-time fraud detection pipeline using Dataflow and Pub/Sub with sub-second latency.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/gcp-dataflow-pipeline"
         },
       ],
@@ -6563,21 +6563,21 @@ export const techData = {
           tag: "MOBILE",
           title: "Jetpack Compose Android App",
           description: "Built a modern Android app with Jetpack Compose, MVVM, and clean architecture for 1M+ downloads.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/kotlin-jetpack-compose"
         },
         {
           tag: "MOBILE",
           title: "Java to Kotlin Android Migration",
           description: "Migrated a 5-year-old Java Android codebase to Kotlin, improving developer productivity by 40%.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/kotlin-migration"
         },
         {
           tag: "BACKEND",
           title: "Ktor Microservices Platform",
           description: "Built lightweight backend services with Ktor, handling 50K+ concurrent requests with coroutines.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/kotlin-ktor-backend"
         },
       ],
@@ -6911,21 +6911,21 @@ export const techData = {
           tag: "TECHNOLOGY",
           title: "High-Performance GraphQL API",
           description: "Built a GraphQL API with Apollo Server handling 10K+ concurrent requests with sub-50ms response times.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/nodejs-graphql-api"
         },
         {
           tag: "SAAS",
           title: "Real-Time Chat Platform with Socket.io",
           description: "Developed a real-time chat platform serving 1M+ daily active users with WebSocket connections.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/nodejs-chat-platform"
         },
         {
           tag: "ENTERPRISE",
           title: "Microservices Migration to Node.js",
           description: "Migrated a legacy PHP monolith to Node.js microservices, improving performance by 3x and deployment velocity by 10x.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/nodejs-microservices"
         },
       ],
@@ -7254,21 +7254,21 @@ export const techData = {
           tag: "DATA",
           title: "ETL Pipeline Processing 5TB Daily",
           description: "Built a scalable ETL pipeline processing 5TB of data daily with Pandas, Dask, and Airflow.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/python-etl-pipeline"
         },
         {
           tag: "BACKEND",
           title: "High-Performance FastAPI Backend",
           description: "Built a FastAPI backend with async support handling 10K+ requests per second for a fintech platform.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/python-fastapi"
         },
         {
           tag: "ML/AI",
           title: "ML Model Deployment Pipeline",
           description: "Deployed ML models to production with FastAPI and Docker, reducing inference latency by 70%.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/python-ml-deployment"
         },
       ],
@@ -7602,21 +7602,21 @@ export const techData = {
           tag: "ENTERPRISE",
           title: "Salesforce Sales Cloud Customization",
           description: "Customized Sales Cloud with complex validation rules, flows, and Apex triggers for a 500+ user sales team.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/salesforce-sales-cloud"
         },
         {
           tag: "INTEGRATION",
           title: "Salesforce to ERP Integration",
           description: "Built real-time integration between Salesforce and SAP using REST APIs and middleware.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/salesforce-erp-integration"
         },
         {
           tag: "CUSTOMER PORTAL",
           title: "Experience Cloud Customer Portal",
           description: "Built a branded customer portal with Lightning Web Components and custom Apex controllers.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/salesforce-portal"
         },
       ],
@@ -7950,21 +7950,21 @@ export const techData = {
           tag: "FIELD SERVICE",
           title: "Cross-Platform Field Service App",
           description: "Built a Xamarin.Forms app for field technicians with offline sync and GPS tracking.",
-          image: "/logos/office1.jpg",
+          image: "/logos/office1.jpeg",
           href: "/case-studies/xamarin-field-service"
         },
         {
           tag: "ENTERPRISE",
           title: "Legacy Native App Migration to Xamarin",
           description: "Migrated separate iOS and Android codebases to a single Xamarin app with 90% code reuse.",
-          image: "/logos/office2.jpg",
+          image: "/logos/office2.png",
           href: "/case-studies/xamarin-migration"
         },
         {
           tag: "CONSUMER",
           title: "E-Commerce App with Xamarin.Forms",
           description: "Built a consumer e-commerce app with shared UI and native payment integrations.",
-          image: "/logos/office3.jpg",
+          image: "/logos/office3.png",
           href: "/case-studies/xamarin-ecommerce"
         },
       ],

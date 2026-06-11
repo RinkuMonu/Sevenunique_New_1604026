@@ -59,9 +59,9 @@ export default function AwardsSection() {
                 Over 50 awards, accolades, and achievements showcase our commitment to client success.
               </p>
 
-              <button className="text-[#f4622a] text-sm font-medium border-b border-[#f4622a] pb-1 hover:opacity-80 transition">
+              {/* <button className="text-[#f4622a] text-sm font-medium border-b border-[#f4622a] pb-1 hover:opacity-80 transition">
                 Our trophy cabinet →
-              </button>
+              </button> */}
             </div>
 
             {/* CENTER STATS */}
@@ -85,7 +85,7 @@ export default function AwardsSection() {
                 </svg>
 
                 <div className="text-center z-10">
-                  <p className="text-4xl font-semibold text-white">1,250+</p>
+                  <p className="text-4xl font-semibold text-white">3,500+</p>
                   <p className="text-sm text-white/60 mt-1">projects delivered</p>
                 </div>
               </div>
