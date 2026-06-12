@@ -9,14 +9,12 @@ const menuItems = [
   { name: "Services", path: "/services" },
   { name: "Technologies", path: "/technologies" },
   { name: "Industries", path: "/industries" },
-
 ];
 
 const servicesCols = [
   {
     label: "Top Services",
     items: [
-
       { name: "AI Development", link: "/services/ai-development" },
       { name: "Back-end Development", link: "/services/backend-development" },
       { name: "CMS Development", link: "/services/cms-development" },
@@ -30,12 +28,24 @@ const servicesCols = [
   {
     label: "",
     items: [
-      { name: "Android App Development", link: "/services/android-app-development" },
-      { name: "Business Intelligence", link: "/services/business-intelligence" },
+      {
+        name: "Android App Development",
+        link: "/services/android-app-development",
+      },
+      {
+        name: "Business Intelligence",
+        link: "/services/business-intelligence",
+      },
       { name: "Data Engineering", link: "/services/data-engineering" },
-      { name: "eCommerce Development", link: "/services/ecommerce-development" },
+      {
+        name: "eCommerce Development",
+        link: "/services/ecommerce-development",
+      },
       { name: "iOS App Development", link: "/services/ios-app-development" },
-      { name: "Mobile App Development", link: "/services/mobile-app-development" },
+      {
+        name: "Mobile App Development",
+        link: "/services/mobile-app-development",
+      },
       { name: "SaaS Development", link: "/services/saas-development" },
       { name: "Web Development", link: "/services/web-development" },
     ],
@@ -49,7 +59,10 @@ const servicesCols = [
       { name: "CRM Systems", link: "/services/crm-systems" },
       { name: "Cybersecurity", link: "/services/cybersecurity" },
       { name: "DevOps", link: "/services/devops" },
-      { name: "Digital Transformation", link: "/services/digital-transformation" },
+      {
+        name: "Digital Transformation",
+        link: "/services/digital-transformation",
+      },
       { name: "ERP Development", link: "/services/erp-development" },
     ],
   },
@@ -114,7 +127,6 @@ const technologiesCols = [
 //     "Travel and Hospitality",
 //   ],
 // ];
-
 
 const industriesCols = [
   [
@@ -243,15 +255,15 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-4 sm:px-6">
-      <Link href="/" className="  block">
-  <Image
-    src="/images/new-logo.png"
-    alt="logo"
-    width={250}
-    height={140}
-    className="w-60 h-auto object-contain"
-  />
-</Link>
+        <Link href="/" className="  block">
+          <Image
+            src="/images/new-logo.png"
+            alt="logo"
+            width={250}
+            height={140}
+            className="w-60 h-auto object-contain"
+          />
+        </Link>
         <button
           type="button"
           aria-label="Toggle menu"
@@ -298,8 +310,9 @@ export default function Header() {
               >
                 <Link href={item.path}>
                   <button
-                    className={`relative flex items-center cursor-pointer gap-1 transition-colors ${isOpen ? "text-[#f46b45]" : "hover:text-[#f46b45]"
-                      }`}
+                    className={`relative flex items-center cursor-pointer gap-1 transition-colors ${
+                      isOpen ? "text-[#f46b45]" : "hover:text-[#f46b45]"
+                    }`}
                   >
                     {item.name}
                     <ArrowDown open={isOpen} />
@@ -343,7 +356,7 @@ export default function Header() {
                                   return (
                                     <li key={name + index}>
                                       <Link
-                                      onClick={() => setOpen(null)}
+                                        onClick={() => setOpen(null)}
                                         href={path}
                                         className="hover:text-[#f46b45]"
                                       >
@@ -392,7 +405,7 @@ export default function Header() {
                               {col.map((entry) => (
                                 <li key={entry.name}>
                                   <Link
-                                  onClick={() => setOpen(null)}
+                                    onClick={() => setOpen(null)}
                                     href={entry.path}
                                     className="inline-flex text-[13px] text-[#222] transition-all duration-200 hover:translate-x-1 hover:text-[#f46b45]"
                                   >
@@ -440,11 +453,8 @@ export default function Header() {
                               className="space-y-3"
                             >
                               {col.map((entry) => (
-                                <li key={entry}>
-                                  <Link
-                                    href={`/industries/${entry.slug}`}
-                                    className="inline-flex text-[13px] text-[#222] transition-all duration-200 hover:translate-x-1 hover:text-[#f46b45]"
-                                  >
+                                <li key={entry.slug}>
+                                  <Link href={`/industries/${entry.slug}`}>
                                     {entry.name}
                                   </Link>
                                 </li>
@@ -501,7 +511,6 @@ export default function Header() {
                             </div>
                           ))}
                         </div>
-                        
                       </div>
                     </div>
                   </div>
@@ -509,7 +518,10 @@ export default function Header() {
               </div>
             );
           })}
-          <Link href="/our-work-page" className="transition-colors hover:text-[#f46b45]">
+          <Link
+            href="/our-work-page"
+            className="transition-colors hover:text-[#f46b45]"
+          >
             Our Work
           </Link>
           {/* <Link
