@@ -40,7 +40,7 @@ const teamMembers = [
   {
     name: "Deepak Yadav",
     role: "Mobile App Developer",
-    image: "/team/team8.jpg",
+    image: "/images/deepakyadav.png",
   },
   {
     name: "Vishal Prajapat",
@@ -55,7 +55,7 @@ const teamMembers = [
   {
     name: "Mumtaz Fatima",
     role: "Graphic Designer",
-    image: "/team/team10.jpg",
+    image: "/images/mumtaz.PNG",
   },
   {
     name: "Jai Bhavsar",
