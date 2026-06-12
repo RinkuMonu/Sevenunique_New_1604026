@@ -2831,7 +2831,7 @@ export const techData = {
         {
           question: "What makes you a trusted AI development partner?",
           answer:
-            "We deliver scalable AI solutions across industries with experienced teams in ML, data engineering, and MLOps backed by proven processes and a decade of enterprise experience.",
+            "We deliver scalable AI solutions across Industries We Empower Worldwideith experienced teams in ML, data engineering, and MLOps backed by proven processes and a decade of enterprise experience.",
           defaultOpen: true,
         },
         {

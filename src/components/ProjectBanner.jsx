@@ -1,9 +1,24 @@
 "use client";
 
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Rocket,
+  Building2,
+  Landmark,
+  GraduationCap,
+  HeartPulse,
+  Pill,
+  Dumbbell,
+  UtensilsCrossed,
+  Clapperboard,
+  Wallet,
+  Hotel,
+  Truck,
+  Factory,
+  HardHat,
+  Plane,
+  Scale,
+  ShoppingBag,
+} from "lucide-react";
 import { Outfit } from "next/font/google";
 
 const outfit = Outfit({
@@ -11,139 +26,73 @@ const outfit = Outfit({
   weight: ["400", "500", "600", "700"],
 });
 
-/* PROJECT BANNERS */
-const banners = [
-  {
-    title: "Modern Mobile Applications",
-    subtitle:
-      "Scalable, intuitive, and high-performance mobile applications built for modern businesses.",
-    image: "/images/banner-fin.jpeg",
-  },
-  {
-    title: "Enterprise Web Solutions",
-    subtitle:
-      "Secure and responsive web platforms designed to streamline operations and improve growth.",
-    image: "/images/fin-web-banner.jpeg",
-  },
-  {
-    title: "Creative Website Experiences",
-    subtitle:
-      "Beautiful and user-focused websites crafted to engage users and elevate brands.",
-    image: "/images/fin-panel-banner.jpeg",
-  },
+const industries = [
+  { title: "Startups", icon: Rocket },
+  { title: "Corporates", icon: Building2 },
+  { title: "Government", icon: Landmark },
+  { title: "Education", icon: GraduationCap },
+  { title: "Healthcare", icon: HeartPulse },
+  { title: "Pharmaceutical", icon: Pill },
+  { title: "Fitness & Medical", icon: Dumbbell },
+  { title: "Food & Beverage", icon: UtensilsCrossed },
+  { title: "Media & Entertainment", icon: Clapperboard },
+  { title: "Banking, Finance & FinTech", icon: Wallet },
+  { title: "Hospitality", icon: Hotel },
+  { title: "Transportation", icon: Truck },
+  { title: "Manufacturing", icon: Factory },
+  { title: "Construction", icon: HardHat },
+  { title: "Aviation", icon: Plane },
+  { title: "Legal Tech", icon: Scale },
+  { title: "Retail & E-Commerce", icon: ShoppingBag },
 ];
 
 export default function ProjectsBannerSlider() {
-  const [current, setCurrent] = useState(0);
-
-  /* AUTO SLIDE */
-  useEffect(() => {
-    const slider = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % banners.length);
-    }, 5000);
-
-    return () => clearInterval(slider);
-  }, []);
-
-  const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % banners.length);
-  };
-
-  const prevSlide = () => {
-    setCurrent((prev) =>
-      prev === 0 ? banners.length - 1 : prev - 1
-    );
-  };
-
   return (
-    <section
-      className={`${outfit.className} bg-white py-20 px-5`}
-    >
-      <div className="max-w-5xl mx-auto">
-        {/* HEADING */}
-       <div className="text-center mb-14">
-  <h2 className="text-[34px] sm:text-[38px] leading-[1.1] font-semibold text-[#111] mb-5">
-    Our <span className="text-orange-500">Fintech Services</span> Mobile Application, Website & Admin Panel
-  </h2>
+    <section className={`${outfit.className} bg-white py-20 px-5`}>
+      <div className="max-w-7xl mx-auto">
+        {/* Heading */}
+        <div className="text-center mb-14">
+          <h2 className="text-[34px] sm:text-[38px] leading-[1.1] font-semibold text-[#111] mb-5">
+            Industries we <span className="text-orange-500">Empower</span>{" "}
+            Worldwide
+          </h2>
 
-  <p className="max-w-4xl mx-auto text-[#666] text-[17px] leading-8">
-    We build powerful utility service mobile apps, responsive websites,
-    and advanced admin panels designed for seamless management,
-    automation, secure transactions, and exceptional user experiences.
-  </p>
+          <p className="max-w-4xl mx-auto text-[#666] text-[17px] leading-8">
+            We build cutting-edge digital products, AI-powered solutions,
+            mobile applications, enterprise software, and business automation
+            systems that help organizations innovate, scale, and transform
+            digitally across industries.
+          </p>
+        </div>
+
+        {/* Industries Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {industries.map((item, index) => {
+            const Icon = item.icon;
+
+            return (
+           <div
+  key={index}
+  className="industry-card group relative overflow-hidden bg-[#f8f8f8] rounded-full px-5 py-4 flex items-center gap-4 border border-gray-100 cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(249,115,22,0.15)] hover:border-orange-200"
+>
+  {/* Animated Shine */}
+  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/60 to-transparent" />
+
+  {/* Icon */}
+  <div className="relative w-14 h-14 rounded-full bg-orange-500 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-[0_0_25px_rgba(249,115,22,0.5)]">
+    <Icon
+      size={26}
+      className="text-white transition-all duration-500"
+    />
+  </div>
+
+  {/* Text */}
+  <h3 className="text-[15px] font-semibold text-[#1f2937] leading-snug transition-all duration-300 group-hover:text-orange-500">
+    {item.title}
+  </h3>
 </div>
-
-        {/* SLIDER */}
-        <div className="relative h-[620px] rounded-[10px] overflow-hidden">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={current}
-              initial={{ opacity: 0, x: 120 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -120 }}
-              transition={{ duration: 0.7 }}
-              className="absolute inset-0"
-            >
-              {/* IMAGE */}
-              <Image
-                src={banners[current].image}
-                alt={banners[current].title}
-                fill
-                className="object-contain"
-                priority
-              />
-
-              {/* OVERLAY */}
-              <div className="absolute inset-0 " />
-
-              {/* CONTENT */}
-              {/* <div className="absolute inset-0 flex items-center">
-                <div className="max-w-3xl px-10 sm:px-16 text-white">
-                  <p className="uppercase tracking-[4px] text-sm text-white/70 mb-5">
-                    Featured Project
-                  </p>
-
-                  <h3 className="text-[42px] sm:text-[68px] leading-[1.05] font-semibold mb-6">
-                    {banners[current].title}
-                  </h3>
-
-                  <p className="text-[17px] leading-8 text-white/80 max-w-2xl">
-                    {banners[current].subtitle}
-                  </p>
-                </div>
-              </div> */}
-            </motion.div>
-          </AnimatePresence>
-
-          {/* ARROWS */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300"
-          >
-            <ChevronLeft size={24} />
-          </button>
-
-          <button
-            onClick={nextSlide}
-            className="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300"
-          >
-            <ChevronRight size={24} />
-          </button>
-
-          {/* DOTS */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3">
-            {banners.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrent(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  current === index
-                    ? "w-10 bg-white"
-                    : "w-2 bg-white/50"
-                }`}
-              />
-            ))}
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>

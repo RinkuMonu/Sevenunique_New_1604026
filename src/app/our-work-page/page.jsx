@@ -264,14 +264,14 @@ export default function PortfolioPage() {
 
                 {/* BUTTONS */}
                 <div className="flex flex-wrap gap-4 mt-10">
-                  <Link
+                  {/* <Link
                     href={selectedProject.product_link || "#"}
                     target="_blank"
                     className="h-[56px] px-7 rounded-2xl bg-black text-white inline-flex items-center gap-3 font-medium hover:bg-gray-900 transition"
                   >
                     Visit Live Project
                     <ArrowRight size={18} />
-                  </Link>
+                  </Link> */}
 
                   <button
                     onClick={() => setSelectedProject(null)}

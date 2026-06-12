@@ -121,3 +121,22 @@ html {
     transform: translateY(0);
   }
 }
+
+
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.industry-card:nth-child(odd) {
+  animation: floatCard 4s ease-in-out infinite;
+}
+
+.industry-card:nth-child(even) {
+  animation: floatCard 5s ease-in-out infinite;
+}

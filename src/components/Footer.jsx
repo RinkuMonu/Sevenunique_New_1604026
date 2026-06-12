@@ -17,13 +17,13 @@ import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 export default function Footer() {
   return (
     <footer className="relative bg-[#f7f7f7] text-[#111] overflow-hidden border-t border-[#ececec]">
-      {/* TOP */}
+    
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
-        {/* MAIN GRID */}
+      
         <div className="grid lg:grid-cols-[340px_1fr] gap-16">
-          {/* LEFT SIDE */}
+      
           <div>
-            {/* LOGO */}
+          
             <Link href="/">
               <Image
                 src="/images/new-logo.png"
@@ -34,15 +34,15 @@ export default function Footer() {
               />
             </Link>
 
-            {/* HOOK LINE */}
+          
             <p className="mt-5 text-[16px] leading-7 text-[#555] max-w-[300px]">
               Building scalable websites, mobile apps, AI solutions, and
               enterprise software for modern businesses.
             </p>
 
-            {/* WORKING HOURS */}
+           
             <div className="mt-8">
-              <h3 className="text-[17px] font-semibold tracking-wide">
+              <h3 className="text-[17px] font-semibold text-gray-700 tracking-wide">
                 Monday - Friday
               </h3>
 
@@ -51,10 +51,10 @@ export default function Footer() {
               </p>
             </div>
 
-            {/* CONTACT INFO */}
+         
             <div className="mt-6 space-y-3">
               <div>
-                <p className="text-sm font-semibold text-gray-900">
+                <p className="text-sm font-semibold text-gray-700 text-gray-900">
                   Call or WhatsApp Us on
                 </p>
                 <a
@@ -66,7 +66,7 @@ export default function Footer() {
               </div>
 
               <div>
-                <p className="text-sm font-semibold text-gray-900">Email Us</p>
+                <p className="text-sm font-semibold text-gray-700 text-gray-900">Email Us</p>
                 <a
                   href="mailto:info@sevenunique.com"
                   className="text-[#555] hover:text-[#f4622a] transition-colors"
@@ -82,8 +82,6 @@ export default function Footer() {
                 </a>
               </div>
             </div>
-
-            {/* SOCIAL */}
             <div className="mt-8 flex items-center gap-4">
               <Link
                 href="https://www.facebook.com/people/SevenUnique-Tech-Solutions-Pvtltd/61556669918427/"
@@ -126,11 +124,11 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* RIGHT SIDE LINKS */}
+        
           <div className="grid sm:grid-cols-3 gap-12">
-            {/* COMPANY */}
+       
             <div>
-              <h3 className="text-[24px] font-semibold mb-6 text-[#111]">
+              <h3 className="text-[24px] font-semibold text-gray-700 mb-6 text-[#111]">
                 Company
               </h3>
 
@@ -153,14 +151,7 @@ export default function Footer() {
                   </Link>
                 </li>
 
-                {/* <li>
-                  <Link
-                    href="/about-us"
-                    className="hover:text-[#f4622a] transition"
-                  >
-                    Our Team
-                  </Link>
-                </li> */}
+           
 
                 <li>
                   <Link
@@ -173,9 +164,9 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* SERVICES */}
+      
             <div>
-              <h3 className="text-[24px] font-semibold mb-6 text-[#111]">
+              <h3 className="text-[24px] font-semibold text-gray-700 mb-6 text-[#111]">
                 Services
               </h3>
 
@@ -218,9 +209,9 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* QUICK LINKS */}
+       
             <div>
-              <h3 className="text-[24px] font-semibold mb-6 text-[#111]">
+              <h3 className="text-[24px] font-semibold text-gray-700 mb-6 text-[#111]">
                 Quick Links
               </h3>
 
@@ -265,7 +256,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* OFFICES */}
+    
         <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-5 mt-16 md:mt-30">
           {[
             {
@@ -314,7 +305,7 @@ export default function Footer() {
         hover:shadow-[0_12px_35px_rgba(0,0,0,0.06)]
       "
             >
-              {/* TOP */}
+          
               <div className="relative z-10 flex items-start gap-3 mb-5">
                 {/* FLAG */}
                 <div
@@ -357,13 +348,13 @@ export default function Footer() {
                 </div>
               </div>
 
-              {/* EMAIL */}
+           
               <div className="relative z-10 mb-4">
                 <div
                   className="
             inline-flex items-center gap-2
             text-orange-500
-            font-semibold
+            font-semibold text-gray-700
             text-[12px]
             break-all
           "
@@ -373,7 +364,7 @@ export default function Footer() {
                 </div>
               </div>
 
-              {/* ADDRESS */}
+          
               <div className="relative z-10 flex items-start gap-3">
                 <div
                   className="
@@ -400,7 +391,7 @@ export default function Footer() {
                 </p>
               </div>
 
-              {/* HOVER BORDER LINE */}
+          
               <div
                 className="
           absolute bottom-0 left-0
@@ -415,7 +406,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* RIGHT SIDE FLOATING IMAGE */}
+     
      <div
   className="
     absolute
@@ -434,7 +425,7 @@ export default function Footer() {
   />
 </div>
 
-      {/* BOTTOM BAR */}
+
       <div className="bg-[#111] py-5 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/70 text-[14px] text-center md:text-left">
@@ -470,3 +461,14 @@ export default function Footer() {
     </footer>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
