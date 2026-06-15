@@ -374,7 +374,7 @@ export const industryData = {
             label: "BANKING SOFTWARE DEVELOPMENT",
             title: "Build custom software solutions for banking industry.",
             desc: "Improve customer banking experiences with secure, user-friendly platforms, while optimizing backend operations and ensuring compliance.",
-            image: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/Custom_Banking_Software_Development_Solutions_277d8cba5c?_a=BAVAfVDW0",
+            image: "/images/referral.png",
         },
 
         services: {
@@ -982,7 +982,7 @@ export const industryData = {
             label: "FINANCE SOFTWARE DEVELOPMENT",
             title: "Build custom software solutions for financial industry.",
             desc: "Strengthen financial operations and ensure compliance to support strategic growth and stability in your financial endeavors.",
-            image: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/Custom_Banking_Software_Development_Solutions_277d8cba5c?_a=BAVAfVDW0",
+            image: "/images/referral.png",
         },
 
         services: {
@@ -1470,7 +1470,7 @@ export const industryData = {
             label: "INSURANCE SOFTWARE DEVELOPMENT",
             title: "Build custom software solutions for insurance industry.",
             desc: "Enhance policy management, streamline claims processing, and improve customer engagement with secure and scalable insurance software solutions.",
-            image: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/Custom_Banking_Software_Development_Solutions_277d8cba5c?_a=BAVAfVDW0",
+            image: "/images/referral.png",
         },
 
         services: {
@@ -1812,7 +1812,7 @@ export const industryData = {
             label: "TELECOMMUNICATION SOFTWARE DEVELOPMENT",
             title: "Build custom software solutions for telecom industry.",
             desc: "Enhance network performance, streamline operations, and deliver superior customer experiences with scalable telecom software solutions built for modern connectivity.",
-            image: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/Custom_Banking_Software_Development_Solutions_277d8cba5c?_a=BAVAfVDW0",
+            image: "/images/referral.png",
         },
 
         services: {
@@ -2040,7 +2040,7 @@ export const industryData = {
             label: "STARTUP SOFTWARE DEVELOPMENT",
             title: "Build scalable software solutions for startups.",
             desc: "Accelerate your startup journey with custom software solutions designed for rapid growth, scalability, and innovation.",
-            image: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/Custom_Banking_Software_Development_Solutions_277d8cba5c?_a=BAVAfVDW0",
+            image: "/images/referral.png",
         },
 
         services: {

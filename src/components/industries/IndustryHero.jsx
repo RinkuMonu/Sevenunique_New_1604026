@@ -29,7 +29,7 @@ export default function IndustryHero() {
         {/* RIGHT IMAGE */}
         <div className="relative w-full h-[400px]">
           <Image
-            src="/industriesHero.avif"
+            src="/images/orbit-img.PNG"
             alt="industry"
             width={750}
             height={350}
