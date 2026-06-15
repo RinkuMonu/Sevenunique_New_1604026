@@ -8,78 +8,109 @@ import { ArrowRight, X } from "lucide-react";
 
 
 export default function PortfolioPage() {
-  const [portfolio] = useState([
+const [portfolio] = useState([
   {
     id: 1,
-    title: "E-commerce Website for Fashion Brand",
-    product_category: "E-Commerce Platform",
-    image: "/images/jajam.jpeg",
+    title: "Food Delivery Application",
+    product_category: "Food & Restaurant Platform",
+    image: "/images/port1.jpeg",
     summary:
-      "A modern clothing e-commerce platform developed for a fashion brand with smooth shopping experience, secure checkout and scalable architecture.",
+      "A modern food ordering and delivery platform with real-time order tracking, restaurant management, and secure online payments.",
     description:
-      "E-commerce Website for Fashion Brand is a full-featured e-commerce platform developed using the MERN stack. The platform allows customers to browse clothing collections, place orders, manage accounts and complete secure online payments. We integrated the Mobikwik payment gateway for seamless transactions and built a responsive user experience optimized for mobile and desktop devices.",
+      "Food Delivery Application is a complete online food ordering platform that connects customers with restaurants. Users can browse menus, place orders, track deliveries in real time, and make secure online payments. The platform includes restaurant dashboards, order management, customer accounts, and a responsive user experience optimized for all devices.",
     technology_used:
-      "React.js || Node.js || Express.js || MongoDB || Mobikwik || Tailwind CSS",
-    product_link: "https://jajamblockprints.com/",
+      "React.js || Node.js || Express.js || MongoDB || Payment Gateway || Tailwind CSS",
+    product_link: "#",
     status: "Completed",
   },
   {
     id: 2,
-    title: "Banking Verification Platform",
-    product_category: "Verification Platform",
-    image: "/images/avatar1.png",
+    title: "Healthcare Management System",
+    product_category: "Healthcare Platform",
+    image: "/images/port2.jpeg",
     summary:
-      "Enterprise verification panel with 200+ APIs for Aadhaar, GST, PAN, license and multiple document verification services.",
+      "A digital healthcare solution for hospitals, clinics, doctors, and patients with appointment and record management.",
     description:
-      "Verify Panel is a powerful document verification platform built using React and Node.js. The platform integrates more than 200 APIs for PAN verification, GST verification, driving license verification, Aadhaar validation and many other government and private verification services. The system supports retailer and business verification workflows with per-hit API charging functionality.",
+      "Healthcare Management System is designed to streamline healthcare operations by enabling online appointments, patient record management, doctor scheduling, prescription tracking, and secure communication between patients and healthcare providers. The platform improves efficiency and enhances patient care through a centralized management system.",
     technology_used:
-      "React.js || Node.js || MongoDB || REST APIs || Express.js",
-    product_link: "https://7uniqueverify.com/",
+      "React.js || Node.js || MongoDB || Express.js || REST APIs",
+    product_link: "#",
     status: "Completed",
   },
   {
     id: 3,
-    title: "Fintech Utility Services Portal",
-    product_category: "Fintech Platform",
-    image: "/images/bbps.jpeg",
+    title: "E-Commerce Marketplace",
+    product_category: "E-Commerce Platform",
+    image: "/images/port3.jpeg",
     summary:
-      "A BBPS utility payment platform designed for retailers and distributors with wallet management and utility services.",
+      "A scalable online shopping platform featuring product catalogs, cart management, and secure checkout.",
     description:
-      "The BBPS Utility Service Portal is a fintech-based utility management platform developed for retailers and distributors. The portal provides multiple utility services including bill payments, recharge systems and wallet management. We developed a complete distributor-retailer hierarchy with wallet functionality, transaction management and scalable backend architecture.",
+      "E-Commerce Marketplace is a comprehensive online shopping solution developed for businesses looking to sell products digitally. The platform includes product listings, advanced filtering, shopping cart functionality, order tracking, inventory management, and secure payment gateway integration for a seamless customer experience.",
     technology_used:
-      "React.js || Node.js || MongoDB || BBPS APIs || Wallet System",
-    product_link: "https://finuniques.in/",
+      "React.js || Node.js || MongoDB || Express.js || Payment Gateway",
+    product_link: "#",
     status: "Completed",
   },
   {
     id: 4,
-    title: "Education Website",
-    product_category: "EdTech Platform",
-    image: "/images/pvv.jpeg",
+    title: "Booking Services Platform",
+    product_category: "Booking & Reservation System",
+    image: "/images/port4.jpeg",
     summary:
-      "An educational platform for selling courses, lecture videos, current affairs PDFs and GK study materials.",
+      "An online booking solution for appointments, services, events, and reservations with automated scheduling.",
     description:
-      "PV Classes is an online learning platform built for educational content delivery and course selling. Students can purchase courses, access lecture videos, download PDFs, read current affairs content and study GK materials through an easy-to-use interface. The system includes authentication, content management and secure course access functionality.",
+      "Booking Services Platform enables businesses to manage appointments, reservations, and service bookings efficiently. Customers can browse available slots, make bookings, receive confirmations, and manage their schedules. The platform includes calendar integration, automated notifications, and secure payment support.",
     technology_used:
-      "React.js || Node.js || MongoDB || Video Streaming || Payment Gateway",
-    product_link: "https://pvclasses.in/",
+      "React.js || Node.js || MongoDB || Calendar APIs || Payment Gateway",
+    product_link: "#",
     status: "Completed",
   },
   {
     id: 5,
-    title: "Electronics E-Commerce Website",
-    product_category: "Electronics E-Commerce",
-    image: "/images/digi.jpeg",
+    title: "Business Enterprise Management System",
+    product_category: "Enterprise Solutions",
+    image: "/images/port5.jpeg",
     summary:
-      "A modern electronics e-commerce website designed for selling gadgets, accessories and digital products online.",
+      "A centralized enterprise platform for managing business operations, employees, workflows, and reporting.",
     description:
-      "DigiHub Electronics is a scalable e-commerce platform developed for selling electronic products, gadgets and accessories online. The platform includes product management, secure checkout, responsive UI, category filtering, cart system and payment gateway integration for seamless customer shopping experience across devices.",
+      "Business Enterprise Management System helps organizations streamline operations through employee management, workflow automation, document handling, reporting dashboards, and role-based access controls. The platform is designed to improve productivity, collaboration, and decision-making across departments.",
     technology_used:
-      "React.js || Node.js || MongoDB || Express.js || Payment Gateway",
-    product_link: "https://digihubtech.in/",
+      "React.js || Node.js || MongoDB || Express.js || Analytics Dashboard",
+    product_link: "#",
+    status: "Completed",
+  },
+  {
+    id: 6,
+    title: "Digital Payment Wallet",
+    product_category: "Fintech & Wallet Solution",
+    image: "/images/port6.jpeg",
+    summary:
+      "A secure digital wallet platform for money transfers, bill payments, wallet top-ups, and transaction management.",
+    description:
+      "Digital Payment Wallet is a fintech solution that enables users to store funds, transfer money, pay utility bills, recharge services, and manage transactions securely. The platform includes wallet management, transaction history, user verification, and robust security mechanisms for safe digital payments.",
+    technology_used:
+      "React.js || Node.js || MongoDB || BBPS APIs || Wallet System",
+    product_link: "#",
+    status: "Completed",
+  },
+  {
+    id: 7,
+    title: "Real Estate Property Portal",
+    product_category: "Real Estate Platform",
+    image: "/images/port7.jpeg",
+    summary:
+      "A property listing and management platform for buyers, sellers, agents, and real estate businesses.",
+    description:
+      "Real Estate Property Portal allows users to buy, sell, rent, and manage properties through a modern digital platform. Features include property listings, advanced search filters, agent profiles, inquiry management, virtual property showcases, and customer engagement tools.",
+    technology_used:
+      "React.js || Node.js || MongoDB || Maps API || Express.js",
+    product_link: "#",
     status: "Completed",
   },
 ]);
+
+
+
   const [selectedProject, setSelectedProject] = useState(null);
 
   
@@ -113,12 +144,12 @@ export default function PortfolioPage() {
               className="group bg-white rounded-[32px] border border-gray-200 overflow-hidden hover:border-black transition duration-500"
             >
               {/* IMAGE */}
-              <div className="relative h-[280px] overflow-hidden bg-[#f4f4f4]">
+              <div className="relative h-[420px] overflow-hidden bg-[#f4f4f4]">
                 <Image
                   src={project.image || "/placeholder.png"}
                   alt={project.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition duration-700"
+                  className="object-fill group-hover:scale-105 transition duration-700"
                 />
 
                 {/* OVERLAY */}

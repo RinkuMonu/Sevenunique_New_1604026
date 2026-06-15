@@ -4,6 +4,7 @@ import Header from "@/app/Header";
 import Footer from "@/components/Footer";
 import ChatBot from "@/components/FloatingChatBot";
 import CookieConsent from "@/components/CookieConsent";
+import WhatsAppChat from "@/components/Whatsappchatbot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -83,6 +84,7 @@ export default function RootLayout({ children }) {
 
   <Footer />
   <ChatBot />
+  <WhatsAppChat />
 </body>
     </html>
   );
