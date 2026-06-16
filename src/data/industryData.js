@@ -130,7 +130,7 @@ export const industryData = {
             label: "AGRICULTURE SOFTWARE DEVELOPMENT",
             title: "Build custom software solutions for agriculture industry.",
             desc: "Elevate farming efficiency with sustainable practices and precision technologies for higher crop yields and resource optimization.",
-            image: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/Custom_Agriculture_Software_Solutions_ce98d4d869?_a=BAVAfVDW0",
+            image: "/images/Agriculture.jpeg",
         },
 
         services: {
@@ -253,7 +253,7 @@ export const industryData = {
             label: "AVIATION SOFTWARE DEVELOPMENT",
             title: "Build custom software solutions for aviation industry.",
             desc: "Enhance passenger experiences and streamline flight operations while maintaining the highest safety standards in aviation.",
-            image: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/Custom_Aviation_Software_Development_Solutions_abf6ed3869?_a=BAVAfVDW0",
+            image: "/images/Aviation.jpeg",
         },
 
         services: {
@@ -374,7 +374,7 @@ export const industryData = {
             label: "BANKING SOFTWARE DEVELOPMENT",
             title: "Build custom software solutions for banking industry.",
             desc: "Improve customer banking experiences with secure, user-friendly platforms, while optimizing backend operations and ensuring compliance.",
-            image: "/images/referral.png",
+            image: "/images/Banking.jpeg",
         },
 
         services: {
@@ -495,7 +495,7 @@ export const industryData = {
             label: "CONSTRUCTION SOFTWARE DEVELOPMENT",
             title: "Build custom software solutions for construction industry.",
             desc: "Deliver projects on time and within budget by improving collaboration, optimizing workflows, and ensuring compliance in construction.",
-            image: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/Custom_Construction_Software_Development_Solutions_2873e8647c?_a=BAVAfVDW0",
+            image: "/images/construction.jpeg",
         },
 
 
@@ -982,7 +982,7 @@ export const industryData = {
             label: "FINANCE SOFTWARE DEVELOPMENT",
             title: "Build custom software solutions for financial industry.",
             desc: "Strengthen financial operations and ensure compliance to support strategic growth and stability in your financial endeavors.",
-            image: "/images/referral.png",
+            image: "/images/Finance.jpeg",
         },
 
         services: {
@@ -1103,7 +1103,7 @@ export const industryData = {
             label: "HEALTHCARE SOFTWARE DEVELOPMENT",
             title: "Build custom software solutions for healthcare industry.",
             desc: "Create HIPAA-compliant healthcare software that enhances patient care, streamlines operations, and scales with your evolving needs.",
-            image: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/silo_healthcare_6d1373794e?_a=BAVAfVDW0",
+            image: "/images/healthcare.jpeg",
         },
 
         services: {
@@ -1348,7 +1348,7 @@ export const industryData = {
             label: "TRAVEL & HOSPITALITY SOFTWARE DEVELOPMENT",
             title: "Build custom software solutions for travel & hospitality industry.",
             desc: "Deliver exceptional guest services by personalizing experiences, streamlining reservations, and optimizing operations.",
-            image: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/Custom_Hospitality_Software_Development_Solutions_7c021684ca?_a=BAVAfVDW0",
+            image: "/images/travelsandhospitality.jpeg",
         },
 
         services: {
@@ -1470,7 +1470,7 @@ export const industryData = {
             label: "INSURANCE SOFTWARE DEVELOPMENT",
             title: "Build custom software solutions for insurance industry.",
             desc: "Enhance policy management, streamline claims processing, and improve customer engagement with secure and scalable insurance software solutions.",
-            image: "/images/referral.png",
+            image: "/images/Insurance.png",
         },
 
         services: {
@@ -1584,7 +1584,7 @@ export const industryData = {
             label: "REAL ESTATE SOFTWARE DEVELOPMENT",
             title: "Build custom software solutions for real estate industry.",
             desc: "Transform real estate operations with powerful digital solutions that streamline property management, enhance  processes.",
-            image: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/Custom_Hospitality_Software_Development_Solutions_7c021684ca?_a=BAVAfVDW0",
+            image: "/images/Realestate.jpeg",
         },
 
         services: {
@@ -1698,7 +1698,7 @@ export const industryData = {
             label: "AUTOMOTIVE SOFTWARE DEVELOPMENT",
             title: "Build custom software solutions for automotive industry.",
             desc: "Accelerate innovation in the automotive sector with advanced software solutions that enable connected vehicles, intelligent fleet management, and data-driven mobility services.",
-            image: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/Custom_Aviation_Software_Development_Solutions_abf6ed3869?_a=BAVAfVDW0",
+            image: "/images/Automative.jpeg",
         },
 
         services: {
@@ -1812,7 +1812,7 @@ export const industryData = {
             label: "TELECOMMUNICATION SOFTWARE DEVELOPMENT",
             title: "Build custom software solutions for telecom industry.",
             desc: "Enhance network performance, streamline operations, and deliver superior customer experiences with scalable telecom software solutions built for modern connectivity.",
-            image: "/images/referral.png",
+            image: "/images/Telecommunication.jpeg",
         },
 
         services: {
@@ -1926,7 +1926,7 @@ export const industryData = {
             label: "MARTECH SOFTWARE DEVELOPMENT",
             title: "Build custom software solutions for marketing technology.",
             desc: "Empower your marketing strategies with advanced Martech solutions that enable automation, personalization, and data-driven decision-making.",
-            image: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/Custom_Retail_Software_Development_Solutions_fc0aec98ec?_a=BAVAfVDW0",
+            image: "/images/Martech.jpeg",
         },
 
         services: {
@@ -2040,7 +2040,7 @@ export const industryData = {
             label: "STARTUP SOFTWARE DEVELOPMENT",
             title: "Build scalable software solutions for startups.",
             desc: "Accelerate your startup journey with custom software solutions designed for rapid growth, scalability, and innovation.",
-            image: "/images/referral.png",
+            image: "/images/Startup.jpeg",
         },
 
         services: {
@@ -2154,7 +2154,7 @@ export const industryData = {
             label: "SUPPLY CHAIN SOFTWARE DEVELOPMENT",
             title: "Build custom software solutions for supply chain industry.",
             desc: "Optimize your supply chain operations with intelligent software solutions that enhance visibility, improve coordination, and streamline logistics processes.",
-            image: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/Custom_Aviation_Software_Development_Solutions_abf6ed3869?_a=BAVAfVDW0",
+            image: "/images/Supplychain.jpeg",
         },
 
         services: {
@@ -2268,7 +2268,7 @@ export const industryData = {
             label: "OIL AND GAS SOFTWARE DEVELOPMENT",
             title: "Build custom software solutions for oil and gas industry.",
             desc: "Enhance operational efficiency, improve safety, and optimize resource management with advanced oil and gas software solutions.",
-            image: "https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/Custom_Construction_Software_Development_Solutions_2873e8647c?_a=BAVAfVDW0",
+            image: "/images/oilandgas.jpeg",
         },
 
         services: {
