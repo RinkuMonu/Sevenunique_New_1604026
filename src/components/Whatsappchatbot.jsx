@@ -1,6 +1,6 @@
 "use client";
 
-import { MessageCircle } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function WhatsAppChat() {
   const whatsappNumber = "919660339514"; // Add country code
@@ -17,7 +17,7 @@ export default function WhatsAppChat() {
         rel="noopener noreferrer"
         className="flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-xl hover:scale-110 transition-transform duration-300"
       >
-        <MessageCircle size={30} />
+        <FaWhatsapp size={32} />
       </a>
     </div>
   );

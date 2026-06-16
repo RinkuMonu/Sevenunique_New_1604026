@@ -99,7 +99,7 @@ export default function Hero({ data }) {
 
           {/* RIGHT IMAGE */}
           <div className="relative h-[520px]">
-            <div className="absolute right-[-180px] top-0 w-[620px] h-full rounded-xl overflow-hidden">
+            <div className="absolute right-[-70px] top-0 w-[620px] h-full rounded-xl overflow-hidden">
               
               <Image
                 src={data.image}
