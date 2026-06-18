@@ -32,32 +32,36 @@ const stats = [
 
 const projects = [
   {
-    title: "Jajam Block Prints",
-    desc: "Premium ecommerce clothing platform built with MERN stack and Mobikwik payment gateway integration.",
+    title: "E-Commerce Website & Mobile App Development",
+    desc: "Launch your online business with a powerful E-Commerce Website and Mobile Application designed for seamless shopping experiences. Our solution includes product management, secure payment gateways, order tracking, inventory management, responsive web design, and feature-rich Android & iOS apps. Build a scalable online store that increases sales, enhances customer engagement, and grows your brand across all digital platforms.",
     icon: ShoppingBag,
-    image: "/images/jajam.jpeg",
+    image: "/images/ecomm-img2.PNG",
     tags: ["React", "Node.js", "MongoDB", "Mobikwik"],
+    link: "/services/ecommerce-development",
   },
   {
-    title: "Verify Panel",
-    desc: "Advanced verification platform with 200+ APIs including PAN, GST, Aadhaar and license verification.",
+    title: "KYC Verification Panel & API Integration Development",
+    desc: "Build a secure and scalable KYC Verification Panel with seamless API integrations for instant customer onboarding and identity verification. Our solution supports Aadhaar Verification, PAN Verification, Document Validation, Face Match, OCR, Bank Account Verification, and real-time compliance checks. Available as both Web Portal and Mobile Application with advanced dashboards, automated workflows, secure data processing, and third-party API integration capabilities.",
     icon: ShieldCheck,
-    image: "/images/verify.png",
+    image: "/images/verify-img2.PNG",
     tags: ["Verification", "Wallet", "APIs"],
+    link: "/industries/finance",
   },
   {
-    title: "BBPS Utility Portal",
-    desc: "Retailer & distributor utility service platform with wallet system and BBPS services.",
+    title: "BBPS Utility Website & Mobile App Development",
+    desc: "Build a powerful and secure BBPS Utility Website & Mobile Application with advanced bill payment services. Enable Electricity, Water, Gas, DTH, Broadband, Mobile Recharge, Insurance, and other utility payments through a single platform. Our solution offers a modern 3D UI, real-time transaction tracking, secure payment processing, responsive web & mobile apps, and seamless user experience for customers and agents.",
     icon: Wallet,
-    image: "/images/bbps.jpeg",
+    image: "/images/bbps-img2.PNG",
     tags: ["BBPS", "Fintech", "Wallet"],
+    link: "/services/ecommerce-development",
   },
   {
-    title: "PV Classes",
-    desc: "Educational platform for courses, PDFs, lectures and current affairs content.",
+    title: "Education Website & Mobile App Development",
+    desc: "Create a powerful and interactive Education Website & Mobile Application designed for schools, coaching institutes, universities, and e-learning platforms. Our solution includes online courses, live classes, test series, student management, attendance tracking, digital study materials, progress analytics, payment gateway integration, and advanced admin panels. Deliver seamless learning experiences across web and mobile platforms with modern UI/UX and scalable technology.",
     icon: GraduationCap,
-    image: "/images/pvv.jpeg",
+    image: "/images/edu-img2.PNG",
     tags: ["Courses", "Learning", "PDF"],
+    link: "/services/ecommerce-development",
   },
 ];
 
@@ -276,6 +280,10 @@ export default function AboutPage() {
               const Icon = project.icon;
 
               return (
+                <Link
+  href={project.link}
+  className="block bg-[#fafafa] rounded-[35px] overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500"
+>
                 <div
                   key={i}
                   className="bg-[#fafafa] rounded-[35px] overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500"
@@ -286,21 +294,21 @@ export default function AboutPage() {
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-cover hover:scale-105 transition-all duration-700"
+                      className="object-contain hover:scale-105 transition-all duration-700"
                     />
 
-                    <div className="absolute top-6 left-6 w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-lg">
+                    <div className="absolute top-6 left-2 w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-lg">
                       <Icon className="text-orange-500" size={26} />
                     </div>
                   </div>
 
                   {/* CONTENT */}
                   <div className="p-8">
-                    <h3 className="text-3xl font-bold text-[#111827] mb-5">
+                    <h3 className="text-2xl font-bold text-[#111827] mb-5">
                       {project.title}
                     </h3>
 
-                    <p className="text-gray-500 leading-8 text-lg mb-8">
+                    <p className="text-gray-500 leading-8 text-base mb-8">
                       {project.desc}
                     </p>
 
@@ -316,6 +324,9 @@ export default function AboutPage() {
                     </div>
                   </div>
                 </div>
+
+</Link>
+
               );
             })}
           </div>
