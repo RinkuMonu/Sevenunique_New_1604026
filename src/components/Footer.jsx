@@ -65,6 +65,18 @@ export default function Footer() {
                 </a>
               </div>
 
+                <div>
+                <p className="text-sm font-semibold text-gray-700 text-gray-900">
+                  Contact us on
+                </p>
+                <a
+                  href="tel:+91 141-4511098"
+                  className="text-[#555] hover:text-[#f4622a] transition-colors"
+                >
+                  +91 141-4511098
+                </a>
+              </div>
+
               <div>
                 <p className="text-sm font-semibold text-gray-700 text-gray-900">Email Us</p>
                 <a

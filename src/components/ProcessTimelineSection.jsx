@@ -128,76 +128,69 @@ export default function ProcessTimelineSection() {
         </div>
       </div>
     </section>
-    <section className="py-10 px-6 md:px-16 bg-white overflow-hidden">
+  <section className="py-10 px-6 md:px-16 bg-white overflow-hidden">
   <div className="max-w-7xl mx-auto">
-
-    {/* SLIDER */}
     <div className="relative overflow-hidden rounded-[26px] border border-gray-200 bg-[#fafafa] py-5 shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
 
       {/* LEFT FADE */}
-      <div className="absolute left-0 top-0 z-10 h-full w-16 bg-gradient-to-r from-[#fafafa] to-transparent" />
+      <div className="absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-[#fafafa] to-transparent" />
 
       {/* RIGHT FADE */}
-      <div className="absolute right-0 top-0 z-10 h-full w-16 bg-gradient-to-l from-[#fafafa] to-transparent" />
+      <div className="absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-[#fafafa] to-transparent" />
 
-      <div className="flex items-center gap-10 animate-marquee w-max">
-
-        {[
+      {(() => {
+        const logos = [
           "https://cdn-gnapb.nitrocdn.com/rVKsFrUUJpBqwSXDQLTtMASMDgzFisXl/assets/images/optimized/rev-f95ca0b/d274cmdd0goq94.cloudfront.net/wp-content/uploads/2023/05/mic.webp",
 
-         
-
           "https://cdn-gnapb.nitrocdn.com/rVKsFrUUJpBqwSXDQLTtMASMDgzFisXl/assets/images/optimized/rev-f95ca0b/d274cmdd0goq94.cloudfront.net/wp-content/uploads/2025/06/Adobe-Bronze-Solution-Partner.webp",
-
-          "https://cdn-gnapb.nitrocdn.com/rVKsFrUUJpBqwSXDQLTtMASMDgzFisXl/assets/images/optimized/rev-f95ca0b/d274cmdd0goq94.cloudfront.net/wp-content/uploads/2025/07/salesforce-partner.png",
 
           "https://cdn-gnapb.nitrocdn.com/rVKsFrUUJpBqwSXDQLTtMASMDgzFisXl/assets/images/optimized/rev-f95ca0b/d274cmdd0goq94.cloudfront.net/wp-content/uploads/2023/05/spa.webp",
 
           "https://cdn-gnapb.nitrocdn.com/rVKsFrUUJpBqwSXDQLTtMASMDgzFisXl/assets/images/optimized/rev-f95ca0b/d274cmdd0goq94.cloudfront.net/wp-content/uploads/2023/05/ama.webp",
 
           "https://cdn-gnapb.nitrocdn.com/rVKsFrUUJpBqwSXDQLTtMASMDgzFisXl/assets/images/optimized/rev-f95ca0b/d274cmdd0goq94.cloudfront.net/wp-content/uploads/2023/05/nass.webp",
+        ];
 
-          // duplicate
-
-          "https://cdn-gnapb.nitrocdn.com/rVKsFrUUJpBqwSXDQLTtMASMDgzFisXl/assets/images/optimized/rev-f95ca0b/d274cmdd0goq94.cloudfront.net/wp-content/uploads/2023/05/mic.webp",
-
-          "https://cdn-gnapb.nitrocdn.com/rVKsFrUUJpBqwSXDQLTtMASMDgzFisXl/assets/images/optimized/rev-f95ca0b/d274cmdd0goq94.cloudfront.net/wp-content/uploads/2023/05/intel.webp",
-
-          "https://cdn-gnapb.nitrocdn.com/rVKsFrUUJpBqwSXDQLTtMASMDgzFisXl/assets/images/optimized/rev-f95ca0b/d274cmdd0goq94.cloudfront.net/wp-content/uploads/2025/06/Adobe-Bronze-Solution-Partner.webp",
-
-          "https://cdn-gnapb.nitrocdn.com/rVKsFrUUJpBqwSXDQLTtMASMDgzFisXl/assets/images/optimized/rev-f95ca0b/d274cmdd0goq94.cloudfront.net/wp-content/uploads/2025/07/salesforce-partner.png",
-        ].map((logo, index) => (
-          <div
-            key={index}
-            className="flex-shrink-0 bg-white rounded-xl border border-gray-100 px-6 py-3 shadow-sm hover:shadow-lg transition-all duration-300"
-          >
-            <img
-              src={logo}
-              alt="partner"
-              className="h-[38px] w-auto object-cover transition duration-300"
-            />
+        return (
+          <div className="marquee-track">
+            {[...logos, ...logos].map((logo, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 bg-white rounded-xl border border-gray-100 px-6 py-3 shadow-sm hover:shadow-lg transition-all duration-300"
+              >
+                <img
+                  src={logo}
+                  alt="partner"
+                  className="h-[38px] w-auto object-contain"
+                />
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        );
+      })()}
     </div>
   </div>
 
-  {/* CSS */}
   <style jsx>{`
-    .animate-marquee {
-      animation: marquee 25s linear infinite;
+    .marquee-track {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      width: max-content;
+      animation: marquee 30s linear infinite;
+      will-change: transform;
     }
 
-    .animate-marquee:hover {
+    .marquee-track:hover {
       animation-play-state: paused;
     }
 
     @keyframes marquee {
-      0% {
+      from {
         transform: translateX(0);
       }
 
-      100% {
+      to {
         transform: translateX(-50%);
       }
     }
