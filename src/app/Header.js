@@ -143,6 +143,7 @@ const industriesCols = [
     { name: "Startups", slug: "startups" },
     { name: "Martech", slug: "martech" },
     { name: "Retail", slug: "retail" },
+    { name: "Education", slug: "education" },
   ],
   [
     { name: "Aviation", slug: "aviation" },
@@ -151,6 +152,14 @@ const industriesCols = [
     { name: "Oil and Gas", slug: "oil-gas" },
     { name: "Supply Chain", slug: "supply-chain" },
     { name: "Travel and Hospitality", slug: "travel-hospitality" },
+  ],
+  [
+    { name: "AEPS Software", slug: "aeps-software" },
+    { name: "Recharge Software", slug: "recharge-software" },
+    { name: "BBPS Software", slug: "bbps-software" },
+    { name: "DMT Software", slug: "dmt-software" },
+    { name: "UTI (Pancard) Software", slug: "uti-pancard-software" },
+    { name: "Travel Software", slug: "travel-software" },
   ],
 ];
 
@@ -446,7 +455,7 @@ export default function Header() {
                         blurb="We scaled IQVIA's clinical research platforms with React. Read case study."
                       />
                       <div className="mx-auto flex-1 max-w-[1280px] px-12 py-10">
-                        <div className="grid grid-cols-3 gap-10">
+                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-10">
                           {industriesCols.map((col, index) => (
                             <ul
                               key={`industry-col-${index}`}
