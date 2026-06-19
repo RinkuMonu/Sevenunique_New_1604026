@@ -67,52 +67,98 @@ import Link from "next/link";
 
 export default function Hero({ data }) {
   return (
-    <section className="bg-[#f6f7f9] pt-[60px] pb-[80px] overflow-hidden">
-      
-      <div className="max-w-[1220px] mx-auto pl-6 pr-0">
+  <section className="relative overflow-hidden bg-gradient-to-br from-orange-50 via-white to-orange-100 py-[90px]">
+
+  {/* Decorative Blobs */}
+  <div className="absolute top-[-150px] left-[-100px] w-[350px] h-[350px] bg-orange-300/20 rounded-full blur-3xl"></div>
+
+  <div className="absolute bottom-[-150px] right-[-100px] w-[400px] h-[400px] bg-orange-500/15 rounded-full blur-3xl"></div>
+
+  <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:60px_60px] opacity-40"></div>
+
+  <div className="relative max-w-[1280px] mx-auto px-6">
+
+    <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+      {/* LEFT CONTENT */}
+      <div>
+
+        {/* Label */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-md border border-orange-200 shadow-sm mb-6">
+          <span className="w-2 h-2 rounded-full bg-orange-500"></span>
+          <span className="text-[13px] tracking-[2px] text-orange-600 font-semibold uppercase">
+            {data.label}
+          </span>
+        </div>
+
+        {/* Heading */}
+        <h1 className="text-[48px] lg:text-[64px] leading-[1.05] font-bold text-gray-900 tracking-[-2px]">
+          {data.title}
+        </h1>
+
+        {/* Description */}
+        <p className="mt-8 text-[18px] leading-[32px] text-gray-600 max-w-[600px]">
+          {data.desc}
+        </p>
+
+        {/* Buttons */}
+        <div className="flex flex-wrap gap-4 mt-10">
+
+          <Link
+            href="/schedule-a-call-page"
+            className="
+              inline-flex
+              items-center
+              gap-2
+              bg-orange-500
+              hover:bg-orange-600
+              px-8
+              py-4
+              rounded-xl
+              text-white
+              font-semibold
+              transition-all
+              duration-300
+              hover:-translate-y-1
+              hover:shadow-[0_15px_40px_rgba(249,115,22,0.35)]
+            "
+          >
+            Accelerate Your Roadmap
+            <span>→</span>
+          </Link>
+
         
-        <div className="grid grid-cols-2 items-center">
 
-          {/* LEFT */}
-          <div className="pr-[60px]">
+        </div>
 
-            <p className="text-[13px] tracking-[2px] text-gray-500 font-semibold mb-6 uppercase">
-              {data.label}
-            </p>
+      </div>
 
-            <h1 className="text-[56px] leading-[64px] font-bold text-[#1f2933] tracking-[-0.5px]">
-              {data.title}
-            </h1>
+      {/* RIGHT IMAGE */}
+      <div className="relative">
 
-            <p className="mt-6 text-[18px] leading-[30px] text-gray-500 max-w-[520px]">
-              {data.desc}
-            </p>
+        {/* Glow */}
+        <div className="absolute inset-0 bg-orange-400/20 blur-[100px] rounded-full"></div>
 
-           <Link
-  href="/schedule-a-call-page"
-  className="mt-8 inline-block bg-green-800 hover:bg-green-900 transition px-6 py-3 rounded-lg font-medium text-white"
->
-  Accelerate Your Roadmap
-</Link>
+        <div className="relative">
 
-          </div>
+          <div className="relative h-[600px]">
 
-          {/* RIGHT IMAGE */}
-          <div className="relative h-[520px]">
-            <div className="absolute right-[-70px] top-0 w-[620px] h-full rounded-xl overflow-hidden">
-              
-              <Image
-                src={data.image}
-                alt="hero"
-                fill
-                className="object-cover"
-              />
+            <Image
+              src={data.image}
+              alt={data.title}
+              fill
+              priority
+              className="object-contain"
+            />
 
-            </div>
           </div>
 
         </div>
+
       </div>
-    </section>
+
+    </div>
+  </div>
+</section>
   );
 }

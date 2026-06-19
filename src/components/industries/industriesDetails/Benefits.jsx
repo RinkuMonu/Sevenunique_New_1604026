@@ -65,34 +65,70 @@
 
 export default function Benefits({ data }) {
   return (
-    <section className="bg-[#f6f7f9] py-[90px]">
-      <div className="max-w-[1200px] mx-auto px-6">
+  <section className="bg-gradient-to-b from-[#f8fafc] to-white py-24 overflow-hidden">
+  <div className="max-w-[1200px] mx-auto px-6">
 
-        {/* HEADING */}
-        <h2 className="text-[48px] leading-[56px] font-semibold text-[#1f2933] mb-[60px]">
-          {data.title}
-        </h2>
+    {/* Header */}
+    <div className="max-w-4xl mb-16">
+      <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-600 text-sm font-medium mb-5">
+        <span className="w-2 h-2 rounded-full bg-orange-500"></span>
+        Our Process
+      </span>
 
-        {/* GRID */}
-        <div className="grid grid-cols-2 gap-x-[80px] gap-y-[50px]">
+      <h2 className="text-[42px] md:text-[52px] leading-tight font-bold text-[#1f2933]">
+        {data.title}
+      </h2>
+    </div>
 
-          {data.items.map((item, i) => (
-            <div key={i}>
-              
-              <h3 className="text-[22px] font-semibold text-[#1f2933] mb-4">
-                {i + 1}. {item.title}
-              </h3>
+    {/* Cards */}
+    <div className="grid md:grid-cols-2 gap-8">
+      {data.items.map((item, i) => (
+        <div
+          key={i}
+          className="
+            group
+            relative
+            bg-white
+            border border-gray-200
+            rounded-3xl
+            p-8
+            overflow-hidden
+            transition-all
+            duration-500
+            hover:-translate-y-2
+            hover:border-orange-300
+            hover:shadow-[0_20px_60px_rgba(249,115,22,0.15)]
+          "
+        >
+          {/* Orange top line */}
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-orange-300"></div>
 
-              <p className="text-[17px] leading-[30px] text-gray-600">
-                {item.desc}
-              </p>
+          {/* Background Number */}
+          <div className="absolute right-5 top-4 text-[90px] font-bold text-orange-50 select-none">
+            {String(i + 1).padStart(2, "0")}
+          </div>
 
+          <div className="relative z-10">
+
+            {/* Number Badge */}
+            <div className="w-14 h-14 rounded-2xl bg-orange-100 flex items-center justify-center mb-6 group-hover:bg-orange-500 transition-all duration-500">
+              <span className="text-xl font-bold text-orange-600 group-hover:text-white">
+                {i + 1}
+              </span>
             </div>
-          ))}
 
+            <h3 className="text-2xl font-semibold text-[#1f2933] mb-4 group-hover:text-orange-600 transition-colors duration-300">
+              {item.title}
+            </h3>
+
+            <p className="text-gray-600 leading-8 text-[16px]">
+              {item.desc}
+            </p>
+          </div>
         </div>
-
-      </div>
-    </section>
+      ))}
+    </div>
+  </div>
+</section>
   );
 }

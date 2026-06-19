@@ -53,7 +53,7 @@ const projects = [
     icon: Wallet,
     image: "/images/bbps-img2.PNG",
     tags: ["BBPS", "Fintech", "Wallet"],
-    link: "/services/ecommerce-development",
+    link: "/industries/bbps-software",
   },
   {
     title: "Education Website & Mobile App Development",
@@ -61,7 +61,7 @@ const projects = [
     icon: GraduationCap,
     image: "/images/edu-img2.PNG",
     tags: ["Courses", "Learning", "PDF"],
-    link: "/services/ecommerce-development",
+    link: "/industries/education",
   },
 ];
 
@@ -289,17 +289,17 @@ export default function AboutPage() {
                   className="bg-[#fafafa] rounded-[35px] overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500"
                 >
                   {/* IMAGE */}
-                  <div className="relative h-[300px] overflow-hidden">
+                  <div className="relative h-[360px] overflow-hidden">
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-contain hover:scale-105 transition-all duration-700"
+                      className="object-fill hover:scale-105 transition-all duration-700"
                     />
 
-                    <div className="absolute top-6 left-2 w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-lg">
+                    {/* <div className="absolute top-6 left-2 w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-lg">
                       <Icon className="text-orange-500" size={26} />
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* CONTENT */}

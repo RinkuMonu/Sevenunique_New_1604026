@@ -2377,4 +2377,696 @@ export const industryData = {
         },
     },
 
+
+
+   "aeps-software": {
+  hero: {
+    label: "AEPS SOFTWARE DEVELOPMENT",
+    title: "Build secure and scalable AEPS software solutions.",
+    desc: "Empower banking correspondents, retailers, and fintech businesses with Aadhaar Enabled Payment System (AEPS) software for cash withdrawals, balance inquiries, mini statements, and fund transfers.",
+    image: "/images/aeps.jpeg",
+  },
+
+  services: {
+    title: "AEPS software development services we provide",
+    desc: "We develop robust AEPS software solutions that enable seamless banking transactions through Aadhaar authentication. Our platforms are designed for fintech companies, payment service providers, and banking partners seeking secure, scalable, and RBI-compliant solutions.",
+
+    items: [
+      {
+        title: "AEPS Cash Withdrawal Solutions",
+        desc: "We build secure AEPS platforms that allow customers to withdraw cash using Aadhaar authentication and biometric verification through banking correspondents and retailers.",
+      },
+      {
+        title: "Balance Inquiry Systems",
+        desc: "Our solutions enable customers to instantly check their account balances using Aadhaar-based authentication, ensuring a fast and convenient banking experience.",
+      },
+      {
+        title: "Mini Statement Services",
+        desc: "We develop systems that provide customers with recent transaction details, helping them track account activity securely and efficiently.",
+      },
+      {
+        title: "Fund Transfer Integration",
+        desc: "Our AEPS software can integrate fund transfer capabilities, enabling secure movement of funds between accounts while maintaining compliance and security standards.",
+      },
+      {
+        title: "Retailer & Distributor Management",
+        desc: "We create comprehensive management modules for retailers, distributors, and super distributors, including commission management, reports, and user administration.",
+      },
+    ],
+  },
+
+  benefits: {
+    title: "Benefits of custom AEPS software development",
+    items: [
+      {
+        title: "Financial Inclusion",
+        desc: "Enable banking services in rural and underserved areas through Aadhaar-based transactions, expanding access to financial services.",
+      },
+      {
+        title: "Secure Transactions",
+        desc: "Biometric authentication and Aadhaar verification ensure highly secure transactions and reduce the risk of fraud.",
+      },
+      {
+        title: "Business Growth",
+        desc: "Provide retailers and banking correspondents with additional earning opportunities through AEPS transaction commissions.",
+      },
+      {
+        title: "Scalable Infrastructure",
+        desc: "Custom-built AEPS platforms are designed to handle growing transaction volumes without compromising performance.",
+      },
+      {
+        title: "Real-Time Monitoring",
+        desc: "Access detailed transaction reports, commission tracking, and operational insights through powerful admin dashboards.",
+      },
+    ],
+  },
+
+  process: {
+    title: "Our process. Secure, compliant, fintech-focused.",
+    image: "https://assets.bairesdev.com/image/upload/v1/www/core/silos_solutions_our-process_dudyi1",
+
+    steps: [
+      {
+        title: "Understand business requirements.",
+        desc: "We analyze your AEPS business model, user flow, and operational needs to define the ideal software architecture.",
+        icon: "📋",
+      },
+      {
+        title: "Develop and integrate AEPS APIs.",
+        desc: "We build secure software and integrate AEPS APIs, biometric authentication, wallet systems, and admin management modules.",
+        icon: "🔐",
+      },
+      {
+        title: "Launch and scale.",
+        desc: "After testing and deployment, we continuously optimize the platform for performance, reliability, and business growth.",
+        icon: "🚀",
+      },
+    ],
+  },
+
+  faq: {
+    title: "Who benefits from AEPS software solutions?",
+    desc: "AEPS software serves a wide range of fintech and financial service providers.",
+
+    items: [
+      {
+        title: "Fintech Companies",
+        desc: "Fintech businesses use AEPS software to offer Aadhaar-enabled banking services to customers across India.",
+      },
+      {
+        title: "Banking Correspondents",
+        desc: "BC agents leverage AEPS platforms to facilitate withdrawals, balance inquiries, and other banking transactions.",
+      },
+      {
+        title: "Retailers & Merchants",
+        desc: "Retailers can provide AEPS services to customers and earn commissions on successful transactions.",
+      },
+      {
+        title: "Payment Service Providers",
+        desc: "PSPs use AEPS software to expand their digital financial service offerings and increase transaction volumes.",
+      },
+      {
+        title: "Rural Banking Networks",
+        desc: "Organizations focused on financial inclusion use AEPS solutions to extend banking access to remote locations.",
+      },
+    ],
+  },
+},
+
+
+"recharge-software": {
+  hero: {
+    label: "RECHARGE SOFTWARE DEVELOPMENT",
+    title: "Build powerful and scalable recharge software solutions.",
+    desc: "Launch a feature-rich multi-recharge platform for mobile, DTH, data card, FASTag, electricity, and utility bill payments with secure API integrations and real-time transaction processing.",
+    image: "/images/Recharge.jpeg",
+  },
+
+  services: {
+    title: "Recharge software development services we provide",
+    desc: "We develop advanced recharge software solutions for fintech companies, distributors, retailers, and digital service providers. Our platforms support multiple operators, instant recharge processing, commission management, and secure payment integrations.",
+
+    items: [
+      {
+        title: "Multi-Recharge Software",
+        desc: "We build comprehensive recharge platforms that support prepaid mobile, postpaid, DTH, data card, and FASTag recharges through a single dashboard.",
+      },
+      {
+        title: "Operator API Integration",
+        desc: "Our solutions integrate seamlessly with leading recharge and utility APIs, ensuring fast, reliable, and real-time transaction processing.",
+      },
+      {
+        title: "Retailer & Distributor Portals",
+        desc: "We create dedicated portals for retailers, distributors, and master distributors with wallet management, commission tracking, and reporting features.",
+      },
+      {
+        title: "White Label Recharge Platforms",
+        desc: "Launch your own branded recharge business with customized white-label solutions tailored to your company's identity and requirements.",
+      },
+      {
+        title: "Admin Management Dashboard",
+        desc: "Monitor transactions, commissions, user activities, settlements, and business performance through an intuitive admin control panel.",
+      },
+    ],
+  },
+
+  benefits: {
+    title: "Benefits of custom recharge software development",
+    items: [
+      {
+        title: "Multiple Revenue Streams",
+        desc: "Generate income through mobile recharges, DTH recharges, utility payments, FASTag services, and value-added digital services.",
+      },
+      {
+        title: "Real-Time Transactions",
+        desc: "Ensure instant recharge processing and transaction updates through reliable API integrations and automated workflows.",
+      },
+      {
+        title: "Scalable Business Growth",
+        desc: "Expand your retailer and distributor network effortlessly with software designed to support thousands of daily transactions.",
+      },
+      {
+        title: "Automated Commission Management",
+        desc: "Manage retailer, distributor, and master distributor commissions automatically through configurable commission structures.",
+      },
+      {
+        title: "Enhanced Customer Experience",
+        desc: "Provide users with a seamless recharge experience through fast transactions, secure payments, and easy-to-use interfaces.",
+      },
+    ],
+  },
+
+  process: {
+    title: "Our process. Fast, secure, and recharge-focused.",
+    image: "https://assets.bairesdev.com/image/upload/v1/www/core/silos_solutions_our-process_dudyi1",
+
+    steps: [
+      {
+        title: "Analyze business requirements.",
+        desc: "We understand your recharge business model, target audience, operator requirements, and distribution structure.",
+        icon: "📋",
+      },
+      {
+        title: "Develop and integrate APIs.",
+        desc: "Our team builds your platform and integrates recharge, utility, wallet, payment gateway, and reporting systems.",
+        icon: "⚡",
+      },
+      {
+        title: "Launch and optimize.",
+        desc: "After testing and deployment, we continuously monitor performance and optimize the platform for growth and reliability.",
+        icon: "🚀",
+      },
+    ],
+  },
+
+  faq: {
+    title: "Who benefits from recharge software solutions?",
+    desc: "Recharge software is ideal for businesses operating in the digital payments and fintech ecosystem.",
+
+    items: [
+      {
+        title: "Fintech Companies",
+        desc: "Fintech businesses use recharge software to provide digital payment and recharge services through web and mobile platforms.",
+      },
+      {
+        title: "Recharge Service Providers",
+        desc: "Recharge operators leverage these solutions to automate transactions and manage growing customer bases efficiently.",
+      },
+      {
+        title: "Retailers & Distributors",
+        desc: "Retailers and distributors use recharge software to offer services and earn commissions from transactions.",
+      },
+      {
+        title: "White Label Businesses",
+        desc: "Entrepreneurs launch branded recharge businesses using customizable white-label recharge software platforms.",
+      },
+      {
+        title: "Digital Payment Networks",
+        desc: "Payment service providers integrate recharge solutions to expand their portfolio of digital financial services.",
+      },
+    ],
+  },
+},
+
+
+"bbps-software": {
+  hero: {
+    label: "BBPS SOFTWARE DEVELOPMENT",
+    title: "Build secure and scalable BBPS software solutions.",
+    desc: "Offer seamless utility bill payment services through Bharat Bill Payment System (BBPS) software. Enable customers to pay electricity, gas, water, broadband, insurance, loan EMI, education fees, and other recurring bills from a single platform.",
+    image: "/images/bbps-img.jpeg",
+  },
+
+  services: {
+    title: "BBPS software development services we provide",
+    desc: "We develop robust BBPS software solutions for fintech companies, payment service providers, and digital businesses looking to offer reliable bill payment services. Our platforms ensure secure transactions, real-time bill fetching, instant payment confirmation, and centralized management.",
+
+    items: [
+      {
+        title: "Multi-Biller Payment Platforms",
+        desc: "We build BBPS software that supports multiple bill categories including electricity, water, gas, broadband, mobile postpaid, insurance premiums, loan repayments, and education fees.",
+      },
+      {
+        title: "BBPS API Integration",
+        desc: "Our team integrates BBPS APIs to enable real-time bill fetching, instant payment processing, transaction status updates, and automated reconciliation.",
+      },
+      {
+        title: "Retailer & Distributor Management",
+        desc: "We develop retailer, distributor, and master distributor modules with wallet management, commission tracking, settlement reports, and transaction monitoring.",
+      },
+      {
+        title: "White Label BBPS Solutions",
+        desc: "Launch your own branded bill payment platform with customizable white-label BBPS software designed for rapid business growth.",
+      },
+      {
+        title: "Admin Dashboard & Reporting",
+        desc: "Gain complete control over bill payments, commissions, settlements, user management, and operational analytics through a centralized admin panel.",
+      },
+    ],
+  },
+
+  benefits: {
+    title: "Benefits of custom BBPS software development",
+    items: [
+      {
+        title: "Centralized Bill Payments",
+        desc: "Allow customers to pay multiple utility bills from a single platform, creating a convenient and unified payment experience.",
+      },
+      {
+        title: "Reliable & Secure Transactions",
+        desc: "Leverage BBPS infrastructure to ensure secure, transparent, and trusted bill payment services with instant confirmation.",
+      },
+      {
+        title: "Increased Revenue Opportunities",
+        desc: "Generate recurring income through bill payment commissions, retailer networks, and value-added financial services.",
+      },
+      {
+        title: "Automated Operations",
+        desc: "Reduce manual intervention with automated bill fetching, payment processing, reconciliation, and settlement workflows.",
+      },
+      {
+        title: "Scalable Business Model",
+        desc: "Expand your customer base and retailer network with software designed to handle high transaction volumes efficiently.",
+      },
+    ],
+  },
+
+  process: {
+    title: "Our process. Secure, compliant, and BBPS-focused.",
+    image: "https://assets.bairesdev.com/image/upload/v1/www/core/silos_solutions_our-process_dudyi1",
+
+    steps: [
+      {
+        title: "Understand your business model.",
+        desc: "We analyze your target audience, service offerings, and operational requirements to define the ideal BBPS solution architecture.",
+        icon: "📋",
+      },
+      {
+        title: "Develop and integrate BBPS services.",
+        desc: "Our team builds the platform and integrates BBPS APIs, wallets, payment gateways, retailer modules, and reporting systems.",
+        icon: "🔗",
+      },
+      {
+        title: "Deploy and scale.",
+        desc: "Following rigorous testing, we launch the platform and continuously optimize performance, security, and scalability.",
+        icon: "🚀",
+      },
+    ],
+  },
+
+  faq: {
+    title: "Who benefits from BBPS software solutions?",
+    desc: "BBPS software is ideal for organizations looking to offer utility bill payment services across India.",
+
+    items: [
+      {
+        title: "Fintech Companies",
+        desc: "Fintech businesses use BBPS platforms to provide secure bill payment services and expand their digital financial ecosystem.",
+      },
+      {
+        title: "Payment Service Providers",
+        desc: "PSPs leverage BBPS software to offer utility bill payments and increase transaction volumes across their networks.",
+      },
+      {
+        title: "Retailers & Agents",
+        desc: "Retailers can facilitate bill payments for customers and earn commissions through a wide range of BBPS-supported services.",
+      },
+      {
+        title: "Distributor Networks",
+        desc: "Distributors and master distributors use BBPS software to manage agents, settlements, commissions, and transaction activities.",
+      },
+      {
+        title: "Digital Service Businesses",
+        desc: "Businesses offering financial and digital services integrate BBPS solutions to provide customers with a complete bill payment experience.",
+      },
+    ],
+  },
+},
+
+"dmt-software": {
+  hero: {
+    label: "DMT SOFTWARE DEVELOPMENT",
+    title: "Build secure and scalable domestic money transfer software solutions.",
+    desc: "Enable instant domestic money transfers across India with powerful DMT software. Empower retailers, agents, and fintech businesses to provide fast, secure, and reliable bank transfer services through a single platform.",
+    image: "/images/DMT.jpeg",
+  },
+
+  services: {
+    title: "DMT software development services we provide",
+    desc: "We develop advanced Domestic Money Transfer (DMT) software solutions for fintech companies, payment service providers, and digital banking businesses. Our platforms support real-time fund transfers, beneficiary management, transaction tracking, wallet integration, and commission management.",
+
+    items: [
+      {
+        title: "Domestic Money Transfer Platforms",
+        desc: "We build end-to-end DMT solutions that allow customers to transfer money instantly to any bank account across India through a secure and user-friendly interface.",
+      },
+      {
+        title: "Banking API Integration",
+        desc: "Our team integrates reliable banking and DMT APIs to ensure real-time money transfers, instant status updates, and seamless transaction processing.",
+      },
+      {
+        title: "Beneficiary Management Systems",
+        desc: "Enable customers to add, verify, manage, and securely transfer funds to beneficiaries with built-in validation and verification workflows.",
+      },
+      {
+        title: "Retailer & Agent Management",
+        desc: "We create retailer, distributor, and agent management modules with wallet functionality, commission structures, transaction monitoring, and settlement tools.",
+      },
+      {
+        title: "Admin Dashboard & Analytics",
+        desc: "Gain complete control over transactions, commissions, settlements, user activity, and operational performance through an advanced admin panel.",
+      },
+    ],
+  },
+
+  benefits: {
+    title: "Benefits of custom DMT software development",
+    items: [
+      {
+        title: "Instant Fund Transfers",
+        desc: "Provide customers with real-time money transfer services to any bank account, improving convenience and customer satisfaction.",
+      },
+      {
+        title: "Secure Transactions",
+        desc: "Advanced security protocols, OTP verification, and transaction monitoring help ensure safe and compliant money transfers.",
+      },
+      {
+        title: "Increased Revenue Opportunities",
+        desc: "Generate recurring revenue through transfer commissions, agent networks, and value-added fintech services.",
+      },
+      {
+        title: "Automated Operations",
+        desc: "Streamline beneficiary management, transaction processing, reporting, and settlements with automated workflows.",
+      },
+      {
+        title: "Business Scalability",
+        desc: "Expand your retailer and agent network with a platform designed to handle high transaction volumes efficiently.",
+      },
+    ],
+  },
+
+  process: {
+    title: "Our process. Secure, fast, and DMT-focused.",
+    image: "https://assets.bairesdev.com/image/upload/v1/www/core/silos_solutions_our-process_dudyi1",
+
+    steps: [
+      {
+        title: "Understand your business requirements.",
+        desc: "We analyze your target market, transfer workflows, compliance requirements, and operational goals to design the right DMT solution.",
+        icon: "📋",
+      },
+      {
+        title: "Develop and integrate transfer services.",
+        desc: "Our team builds the platform and integrates DMT APIs, banking systems, wallets, commission engines, and reporting modules.",
+        icon: "💸",
+      },
+      {
+        title: "Launch and scale.",
+        desc: "Following comprehensive testing and deployment, we continuously optimize performance, security, and scalability as your business grows.",
+        icon: "🚀",
+      },
+    ],
+  },
+
+  faq: {
+    title: "Who benefits from DMT software solutions?",
+    desc: "DMT software is ideal for organizations offering domestic money transfer and digital financial services.",
+
+    items: [
+      {
+        title: "Fintech Companies",
+        desc: "Fintech businesses use DMT platforms to offer instant bank transfer services and expand their financial service offerings.",
+      },
+      {
+        title: "Payment Service Providers",
+        desc: "PSPs leverage DMT software to facilitate secure fund transfers and increase transaction volumes across their networks.",
+      },
+      {
+        title: "Retailers & Agents",
+        desc: "Retailers and agents can provide money transfer services to customers while earning commissions on successful transactions.",
+      },
+      {
+        title: "Distributor Networks",
+        desc: "Distributors and master distributors use DMT software to manage agents, commissions, settlements, and transaction activities.",
+      },
+      {
+        title: "Digital Banking Businesses",
+        desc: "Businesses offering digital banking and financial services integrate DMT solutions to provide customers with fast and convenient money transfers.",
+      },
+    ],
+  },
+},
+
+
+
+
+"uti-pancard-software": {
+  hero: {
+    label: "UTI PAN CARD SOFTWARE DEVELOPMENT",
+    title: "Build secure and efficient PAN card service software solutions.",
+    desc: "Empower retailers, agents, and service providers with UTI PAN card software for new PAN applications, PAN corrections, reprints, e-PAN services, and application tracking through a centralized platform.",
+    image: "/images/UTI.jpeg",
+  },
+
+  services: {
+    title: "UTI PAN card software development services we provide",
+    desc: "We develop advanced UTI PAN card software solutions for fintech companies, CSC operators, digital service providers, and agent networks. Our platforms streamline PAN application processing, document management, status tracking, and commission management while ensuring a seamless user experience.",
+
+    items: [
+      {
+        title: "New PAN Application Systems",
+        desc: "We build platforms that enable agents and retailers to submit new PAN card applications with secure document uploads and automated validation processes.",
+      },
+      {
+        title: "PAN Correction Services",
+        desc: "Our software supports PAN card correction requests, including name changes, date of birth updates, address modifications, and other profile corrections.",
+      },
+      {
+        title: "e-PAN & Reprint Solutions",
+        desc: "Enable customers to apply for e-PAN services and PAN card reprints through a simple and efficient digital workflow.",
+      },
+      {
+        title: "Agent & Retailer Management",
+        desc: "Manage retailers, distributors, and service agents through dedicated dashboards with commission tracking, wallet management, and performance monitoring.",
+      },
+      {
+        title: "Application Tracking & Reporting",
+        desc: "Provide real-time status tracking, transaction reports, application history, and business analytics through a centralized admin panel.",
+      },
+    ],
+  },
+
+  benefits: {
+    title: "Benefits of custom UTI PAN card software development",
+    items: [
+      {
+        title: "Simplified PAN Processing",
+        desc: "Automate PAN application workflows and reduce manual effort for agents, retailers, and administrators.",
+      },
+      {
+        title: "Faster Service Delivery",
+        desc: "Enable customers to apply for PAN-related services quickly through a streamlined digital process.",
+      },
+      {
+        title: "Increased Revenue Opportunities",
+        desc: "Generate additional income through PAN card application services, correction requests, and related financial service offerings.",
+      },
+      {
+        title: "Centralized Management",
+        desc: "Monitor applications, agents, commissions, transactions, and customer activities from a single dashboard.",
+      },
+      {
+        title: "Scalable Business Operations",
+        desc: "Expand your retailer and distributor network with software designed to support high application volumes efficiently.",
+      },
+    ],
+  },
+
+  process: {
+    title: "Our process. Secure, efficient, and PAN service-focused.",
+    image: "https://assets.bairesdev.com/image/upload/v1/www/core/silos_solutions_our-process_dudyi1",
+
+    steps: [
+      {
+        title: "Analyze business requirements.",
+        desc: "We understand your PAN service model, operational workflow, user requirements, and growth objectives.",
+        icon: "📋",
+      },
+      {
+        title: "Develop and integrate services.",
+        desc: "Our team builds the platform and integrates PAN application workflows, document management systems, agent modules, and reporting tools.",
+        icon: "🪪",
+      },
+      {
+        title: "Deploy and optimize.",
+        desc: "Following testing and deployment, we continuously optimize performance, security, and scalability to support your business growth.",
+        icon: "🚀",
+      },
+    ],
+  },
+
+  faq: {
+    title: "Who benefits from UTI PAN card software solutions?",
+    desc: "UTI PAN card software is ideal for businesses and organizations providing PAN-related services across India.",
+
+    items: [
+      {
+        title: "Fintech Companies",
+        desc: "Fintech businesses integrate PAN card services into their platforms to expand their portfolio of digital financial services.",
+      },
+      {
+        title: "Retailers & Service Centers",
+        desc: "Retailers can offer PAN application and correction services while generating additional commission-based revenue.",
+      },
+      {
+        title: "CSC & E-Governance Operators",
+        desc: "CSC operators use PAN software to efficiently manage customer applications and document submissions.",
+      },
+      {
+        title: "Distributor Networks",
+        desc: "Distributors and master distributors manage agent onboarding, commissions, settlements, and performance through centralized systems.",
+      },
+      {
+        title: "Digital Service Providers",
+        desc: "Businesses offering digital documentation and citizen services use PAN software to streamline customer onboarding and verification processes.",
+      },
+    ],
+  },
+},
+
+
+
+"travel-software": {
+  hero: {
+    label: "TRAVEL SOFTWARE DEVELOPMENT",
+    title: "Build powerful and scalable travel booking software solutions.",
+    desc: "Launch a complete travel portal with flight booking, hotel reservations, bus ticketing, holiday packages, visa assistance, and travel management services through a unified platform.",
+    image: "/images/travel.jpeg",
+  },
+
+  services: {
+    title: "Travel software development services we provide",
+    desc: "We develop advanced travel software solutions for travel agencies, tour operators, fintech businesses, and online travel companies. Our platforms streamline bookings, automate operations, manage customers, and enhance the overall travel experience.",
+
+    items: [
+      {
+        title: "Flight Booking Systems",
+        desc: "We build flight booking platforms with real-time inventory, fare comparison, ticket issuance, cancellations, and airline API integrations.",
+      },
+      {
+        title: "Hotel Reservation Platforms",
+        desc: "Our software enables users to search, compare, and book hotels through seamless integrations with leading hotel suppliers and aggregators.",
+      },
+      {
+        title: "Bus & Train Ticket Booking",
+        desc: "Offer bus and train reservation services through a single portal with real-time seat availability, booking management, and ticket generation.",
+      },
+      {
+        title: "Holiday Package Management",
+        desc: "Create and manage customized domestic and international holiday packages with itinerary planning, pricing controls, and customer management.",
+      },
+      {
+        title: "B2B/B2C Travel Portals",
+        desc: "Develop dedicated B2B and B2C travel portals with agent management, commission tracking, wallet systems, and booking analytics.",
+      },
+    ],
+  },
+
+  benefits: {
+    title: "Benefits of custom travel software development",
+    items: [
+      {
+        title: "Centralized Booking Management",
+        desc: "Manage flights, hotels, buses, trains, and holiday packages from a single platform, reducing operational complexity.",
+      },
+      {
+        title: "Enhanced Customer Experience",
+        desc: "Provide customers with a seamless booking journey, real-time availability, instant confirmations, and secure payment options.",
+      },
+      {
+        title: "Increased Revenue Opportunities",
+        desc: "Generate revenue through travel bookings, commissions, package sales, service fees, and value-added travel services.",
+      },
+      {
+        title: "Automation & Efficiency",
+        desc: "Automate booking workflows, cancellations, reporting, invoicing, and customer communications to improve operational efficiency.",
+      },
+      {
+        title: "Scalable Business Growth",
+        desc: "Expand your travel business with a platform designed to support growing customer bases, agents, and booking volumes.",
+      },
+    ],
+  },
+
+  process: {
+    title: "Our process. Reliable, scalable, and travel-focused.",
+    image: "https://assets.bairesdev.com/image/upload/v1/www/core/silos_solutions_our-process_dudyi1",
+
+    steps: [
+      {
+        title: "Understand your travel business.",
+        desc: "We analyze your target audience, service offerings, booking requirements, and business goals to design the right travel solution.",
+        icon: "📋",
+      },
+      {
+        title: "Develop and integrate travel services.",
+        desc: "Our team builds the platform and integrates flight, hotel, bus, train, payment gateway, and reporting systems.",
+        icon: "✈️",
+      },
+      {
+        title: "Launch and grow.",
+        desc: "After testing and deployment, we continuously optimize performance, security, and scalability to support long-term growth.",
+        icon: "🚀",
+      },
+    ],
+  },
+
+  faq: {
+    title: "Who benefits from travel software solutions?",
+    desc: "Travel software is ideal for businesses operating in the travel and tourism industry.",
+
+    items: [
+      {
+        title: "Travel Agencies",
+        desc: "Travel agencies use travel software to manage bookings, customers, suppliers, and day-to-day travel operations efficiently.",
+      },
+      {
+        title: "Tour Operators",
+        desc: "Tour operators leverage travel platforms to create, manage, and sell customized travel packages and experiences.",
+      },
+      {
+        title: "Online Travel Companies",
+        desc: "Online travel businesses use booking engines and travel portals to provide customers with a complete digital travel experience.",
+      },
+      {
+        title: "B2B Travel Networks",
+        desc: "Distributors and travel agents manage bookings, commissions, wallets, and agent networks through centralized travel platforms.",
+      },
+      {
+        title: "Fintech & Service Providers",
+        desc: "Fintech companies and digital service providers integrate travel services to diversify offerings and increase revenue streams.",
+      },
+    ],
+  },
+},
 };
