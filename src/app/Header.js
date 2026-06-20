@@ -579,23 +579,29 @@ export default function Header() {
                     </button>
                     {isActive && (
                       <ul className="grid grid-cols-1 gap-y-2 pb-3 text-[13px] text-[#222] sm:grid-cols-2">
-                        {cols.map((entry) => {
-                          const isObject = typeof entry === "object";
-                          const name = isObject ? entry.name : entry;
-                          const path = isObject ? entry.link : "#";
+                      {cols.map((entry) => {
+  const isObject = typeof entry === "object";
 
-                          return (
-                            <li key={name}>
-                              <Link
-                                href={path}
-                                className="block rounded-md py-1 pr-2 transition-colors hover:text-[#f46b45]"
-                                onClick={() => setMobileOpen(false)}
-                              >
-                                {name}
-                              </Link>
-                            </li>
-                          );
-                        })}
+  const name = isObject ? entry.name : entry;
+
+  const path = isObject
+    ? entry.link ||
+      entry.path ||
+      (entry.slug ? `/industries/${entry.slug}` : "#")
+    : "#";
+
+  return (
+    <li key={name}>
+      <Link
+        href={path}
+        className="block rounded-md py-1 pr-2 transition-colors hover:text-[#f46b45]"
+        onClick={() => setMobileOpen(false)}
+      >
+        {name}
+      </Link>
+    </li>
+  );
+})}
                       </ul>
                     )}
                   </div>

@@ -41,6 +41,7 @@ html {
 
   body {
     @apply bg-white text-[#1a1a18];
+    overflow-x: hidden;
   }
 }
 
