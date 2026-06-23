@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  ArrowRight,
-  CheckCircle2,
-  Mail,
-  MapPin,
-  Phone,
-} from "lucide-react";
+import { ArrowRight, CheckCircle2, Mail, MapPin, Phone } from "lucide-react";
 
 import { useState } from "react";
 
@@ -49,8 +43,7 @@ export default function Page() {
     {
       city: "USA",
       title: "USA Office",
-      address:
-        "514 State Shelton Street Garden, Wisconsin, USA – 55309",
+      address: "514 State Shelton Street Garden, Wisconsin, USA – 55309",
       phone: "+1 414 000 0000",
       email: "salesusa@sevenunique.com",
     },
@@ -60,24 +53,57 @@ export default function Page() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   setSuccess(true);
+
+  //   setForm({
+  //     name: "",
+  //     email: "",
+  //     phone: "",
+  //     service: "",
+  //     comments: "",
+  //   });
+
+  //   setTimeout(() => {
+  //     setSuccess(false);
+  //   }, 3000);
+  // };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    setSuccess(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
 
-    setForm({
-      name: "",
-      email: "",
-      phone: "",
-      service: "",
-      comments: "",
-    });
+      const data = await res.json();
 
-    setTimeout(() => {
-      setSuccess(false);
-    }, 3000);
+      if (data.success) {
+        setSuccess(true);
+
+        setForm({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          comments: "",
+        });
+
+        setTimeout(() => {
+          setSuccess(false);
+        }, 3000);
+      }
+    } catch (err) {
+      console.log(err);
+    }
   };
-
   return (
     <div className="min-h-screen bg-[#f6f7fb] px-4 py-10 md:py-16">
       <div className="max-w-[1180px] mx-auto">
@@ -92,8 +118,8 @@ export default function Page() {
           </h1>
 
           <p className="text-gray-500 text-[15px] md:text-[17px] leading-7 max-w-[700px] mx-auto mt-5">
-            Connect with our team for web development, mobile apps,
-            AI solutions, ERP systems, and custom software services.
+            Connect with our team for web development, mobile apps, AI
+            solutions, ERP systems, and custom software services.
           </p>
         </div>
 
@@ -101,16 +127,11 @@ export default function Page() {
         {success && (
           <div className="fixed top-6 right-6 z-50 bg-white border border-green-200 rounded-2xl shadow-xl px-5 py-4 flex items-center gap-3">
             <div className="w-11 h-11 rounded-full bg-green-100 flex items-center justify-center">
-              <CheckCircle2
-                size={22}
-                className="text-green-600"
-              />
+              <CheckCircle2 size={22} className="text-green-600" />
             </div>
 
             <div>
-              <h3 className="font-semibold text-[#111]">
-                Inquiry Submitted
-              </h3>
+              <h3 className="font-semibold text-[#111]">Inquiry Submitted</h3>
 
               <p className="text-sm text-gray-500">
                 Our team will contact you soon 🚀
@@ -137,8 +158,8 @@ export default function Page() {
                 </h2>
 
                 <p className="text-gray-500 leading-7 mt-4 text-[15px]">
-                  We help startups and enterprises create scalable
-                  digital products with modern technologies.
+                  We help startups and enterprises create scalable digital
+                  products with modern technologies.
                 </p>
               </div>
 
@@ -220,15 +241,12 @@ export default function Page() {
                 </h2>
 
                 <p className="text-gray-500 leading-7 mt-4 text-[15px]">
-                  Fill out the form and our experts will connect
-                  with you within 24 hours.
+                  Fill out the form and our experts will connect with you within
+                  24 hours.
                 </p>
               </div>
 
-              <form
-                onSubmit={handleSubmit}
-                className="space-y-5"
-              >
+              <form onSubmit={handleSubmit} className="space-y-5">
                 {/* NAME */}
                 <div>
                   <label className="text-sm font-medium text-[#111] block mb-2">
