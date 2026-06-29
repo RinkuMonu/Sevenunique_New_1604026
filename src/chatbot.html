@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Website Chatbot — Lead Capture & Call Scheduler</title>
+<style>
+  :root{
+    --navy:#13182b;
+    --navy-light:#1c2340;
+    --orange:#ff5a1f;
+    --orange-dark:#e8470f;
+    --bg:#f4f5f9;
+    --card:#ffffff;
+    --text:#1a1c26;
+    --muted:#7a7f93;
+    --radius:16px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,sans-serif;
+    background:linear-gradient(135deg,#eef0f7,#e4e7f2);
+    min-height:100vh;
+  }
+  .demo-page{max-width:760px;margin:60px auto;padding:0 24px;color:var(--text);}
+  .demo-page h1{font-size:28px;margin-bottom:6px;}
+  .demo-page p{color:var(--muted);line-height:1.6;}
+
+  #chat-launcher{
+    position:fixed;bottom:24px;right:24px;width:62px;height:62px;border-radius:50%;
+    background:linear-gradient(135deg,var(--orange),var(--orange-dark));
+    box-shadow:0 8px 24px rgba(255,90,31,0.45);
+    display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;z-index:999;
+    transition:transform .2s ease;
+  }
+  #chat-launcher:hover{transform:scale(1.06);}
+  #chat-launcher svg{width:28px;height:28px;fill:#fff;}
+  #chat-launcher .ping{
+    position:absolute;top:-3px;right:-3px;width:14px;height:14px;border-radius:50%;
+    background:#23d36b;border:2px solid #fff;
+  }
+
+  #chat-window{
+    position:fixed;bottom:24px;right:24px;width:370px;max-width:92vw;height:560px;max-height:80vh;
+    background:var(--card);border-radius:var(--radius);
+    box-shadow:0 20px 60px rgba(20,20,40,0.25);
+    display:none;flex-direction:column;overflow:hidden;z-index:1000;
+  }
+  #chat-window.open{display:flex;}
+
+  .chat-header{
+    background:linear-gradient(135deg,var(--navy),var(--navy-light));
+    color:#fff;padding:16px 18px;display:flex;align-items:center;gap:12px;flex-shrink:0;
+  }
+  .chat-header .avatar{
+    width:38px;height:38px;border-radius:50%;background:var(--orange);
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;flex-shrink:0;
+  }
+  .chat-header .info{flex:1;min-width:0;}
+  .chat-header .info .name{font-weight:600;font-size:15px;}
+  .chat-header .info .status{font-size:12px;color:#9aa3c4;display:flex;align-items:center;gap:5px;}
+  .chat-header .info .status .dot{width:7px;height:7px;border-radius:50%;background:#23d36b;}
+  .chat-header .close-btn{
+    background:rgba(255,255,255,0.08);border:none;color:#fff;width:30px;height:30px;
+    border-radius:8px;cursor:pointer;font-size:16px;line-height:1;flex-shrink:0;
+  }
+  .chat-header .close-btn:hover{background:rgba(255,255,255,0.18);}
+
+  .chat-body{
+    flex:1;overflow-y:auto;padding:18px 14px;background:var(--bg);
+    display:flex;flex-direction:column;gap:10px;
+  }
+  .chat-body::-webkit-scrollbar{width:5px;}
+  .chat-body::-webkit-scrollbar-thumb{background:#d3d6e3;border-radius:4px;}
+
+  .row{display:flex;gap:8px;align-items:flex-end;}
+  .row.bot{justify-content:flex-start;}
+  .row.user{justify-content:flex-end;}
+
+  .bubble{
+    max-width:78%;padding:10px 14px;border-radius:14px;font-size:13.5px;line-height:1.5;
+    white-space:pre-line;animation:rise .25s ease;
+  }
+  .bot .bubble{background:#fff;color:var(--text);border:1px solid #eceef5;border-bottom-left-radius:4px;}
+  .user .bubble{background:linear-gradient(135deg,var(--orange),var(--orange-dark));color:#fff;border-bottom-right-radius:4px;}
+
+  @keyframes rise{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+
+  .bot-icon{
+    width:26px;height:26px;border-radius:50%;background:var(--orange);
+    display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700;flex-shrink:0;
+  }
+
+  .options{display:flex;flex-wrap:wrap;gap:7px;margin-left:34px;max-width:84%;}
+  .opt-btn{
+    background:#fff;border:1.5px solid var(--orange);color:var(--orange-dark);
+    padding:8px 13px;border-radius:20px;font-size:12.5px;font-weight:600;cursor:pointer;
+    transition:.15s;
+  }
+  .opt-btn:hover{background:var(--orange);color:#fff;}
+
+  .typing{
+    margin-left:34px;display:flex;gap:4px;padding:10px 14px;background:#fff;
+    border-radius:14px;border:1px solid #eceef5;width:fit-content;
+  }
+  .typing span{width:6px;height:6px;background:#c4c8d6;border-radius:50%;animation:blink 1.2s infinite;}
+  .typing span:nth-child(2){animation-delay:.2s;}
+  .typing span:nth-child(3){animation-delay:.4s;}
+  @keyframes blink{0%,80%,100%{opacity:.3;}40%{opacity:1;}}
+
+  .chat-input{display:flex;align-items:center;gap:8px;padding:12px;background:#fff;border-top:1px solid #eceef5;flex-shrink:0;}
+  .chat-input input{
+    flex:1;border:1px solid #e2e4ee;background:var(--bg);border-radius:10px;
+    padding:10px 12px;font-size:13.5px;outline:none;
+  }
+  .chat-input input:focus{border-color:var(--orange);}
+  .chat-input input:disabled{background:#ececf2;}
+  .chat-input button{
+    width:38px;height:38px;border-radius:10px;border:none;
+    background:linear-gradient(135deg,var(--orange),var(--orange-dark));
+    color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .chat-input button:disabled{opacity:.45;cursor:not-allowed;}
+  .chat-input button svg{width:16px;height:16px;fill:#fff;}
+
+  .footer-note{font-size:10.5px;text-align:center;color:var(--muted);padding:6px 0 9px;flex-shrink:0;}
+  .error-text{color:#d8462a;font-size:11.5px;margin-left:34px;margin-top:-4px;}
+</style>
+</head>
+<body>
+
+<div class="demo-page">
+  <h1>Your Website</h1>
+  <p>Click the orange chat bubble (bottom-right) to test the flow: name → mobile number → service → schedule a call.</p>
+</div>
+
+<button id="chat-launcher" aria-label="Open chat">
+  <span class="ping"></span>
+  <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.04 2 11c0 2.61 1.28 4.95 3.34 6.6L4 22l4.86-1.74C9.83 20.42 10.9 20.6 12 20.6c5.52 0 10-4.04 10-9.6S17.52 2 12 2z"/></svg>
+</button>
+
+<div id="chat-window">
+  <div class="chat-header">
+    <div class="avatar">AI</div>
+    <div class="info">
+      <div class="name">Company Assistant</div>
+      <div class="status"><span class="dot"></span> Online now</div>
+    </div>
+    <button class="close-btn" id="chat-close">✕</button>
+  </div>
+
+  <div class="chat-body" id="chat-body"></div>
+
+  <div class="chat-input">
+    <input type="text" id="chat-input" placeholder="Type your reply..." autocomplete="off">
+    <button id="chat-send" aria-label="Send">
+      <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+    </button>
+  </div>
+  <div class="footer-note">Guided flow · Edit CONFIG in the code to customize</div>
+</div>
+
+<script>
+(function(){
+
+/* ============================================================
+   CONFIGURATION — edit these to match your business
+   ============================================================ */
+var CONFIG = {
+  companyName: "Company Assistant",
+  services: [
+    "Web Development",
+    "Mobile App Development",
+    "Digital Marketing / SEO",
+    "UI/UX Design",
+    "AI & Chatbot Solutions",
+    "Something else"
+  ],
+  timeSlots: [
+    "Today, 4:00 PM",
+    "Today, 6:00 PM",
+    "Tomorrow, 11:00 AM",
+    "Tomorrow, 3:00 PM",
+    "I'll pick another time"
+  ],
+  // Set this to your backend/CRM/Google Sheet endpoint to actually receive leads.
+  // Example: "https://your-backend.com/api/leads"
+  leadWebhookUrl: null
+};
+
+/* ============================================================
+   STATE
+   ============================================================ */
+var state = {
+  step: "GREET", // GREET -> ASK_NAME -> ASK_MOBILE -> ASK_SERVICE -> ASK_TIME -> DONE
+  lead: { name: "", mobile: "", service: "", time: "" }
+};
+
+var body      = document.getElementById("chat-body");
+var input     = document.getElementById("chat-input");
+var sendBtn   = document.getElementById("chat-send");
+var launcher  = document.getElementById("chat-launcher");
+var win       = document.getElementById("chat-window");
+var closeBtn  = document.getElementById("chat-close");
+
+function scrollDown(){ body.scrollTop = body.scrollHeight; }
+
+function addBotBubble(text){
+  var row = document.createElement("div");
+  row.className = "row bot";
+  var icon = document.createElement("div");
+  icon.className = "bot-icon";
+  icon.textContent = "AI";
+  var bubble = document.createElement("div");
+  bubble.className = "bubble";
+  bubble.textContent = text;
+  row.appendChild(icon);
+  row.appendChild(bubble);
+  body.appendChild(row);
+  scrollDown();
+}
+
+function addUserBubble(text){
+  var row = document.createElement("div");
+  row.className = "row user";
+  var bubble = document.createElement("div");
+  bubble.className = "bubble";
+  bubble.textContent = text;
+  row.appendChild(bubble);
+  body.appendChild(row);
+  scrollDown();
+}
+
+function addOptions(options, onPick){
+  var wrap = document.createElement("div");
+  wrap.className = "options";
+  options.forEach(function(opt){
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "opt-btn";
+    btn.textContent = opt;
+    btn.addEventListener("click", function(){
+      wrap.remove();
+      addUserBubble(opt);
+      onPick(opt);
+    });
+    wrap.appendChild(btn);
+  });
+  body.appendChild(wrap);
+  scrollDown();
+  return wrap;
+}
+
+function showTyping(cb, delay){
+  delay = delay || 550;
+  var t = document.createElement("div");
+  t.className = "typing";
+  t.innerHTML = "<span></span><span></span><span></span>";
+  body.appendChild(t);
+  scrollDown();
+  setTimeout(function(){ t.remove(); cb(); }, delay);
+}
+
+function showError(msg){
+  var e = document.createElement("div");
+  e.className = "error-text";
+  e.textContent = msg;
+  body.appendChild(e);
+  scrollDown();
+  setTimeout(function(){ e.remove(); }, 2800);
+}
+
+function setInputMode(mode){
+  if(mode === "locked"){
+    input.disabled = true;
+    sendBtn.disabled = true;
+    input.placeholder = "Choose an option above...";
+  } else {
+    input.disabled = false;
+    sendBtn.disabled = false;
+    input.placeholder = "Type your reply...";
+    input.focus();
+  }
+}
+
+function isValidMobile(v){
+  var digits = v.replace(/\D/g,"");
+  return digits.length >= 10 && digits.length <= 13;
+}
+
+function isValidName(v){
+  return v.trim().length >= 2;
+}
+
+/* ============================================================
+   FLOW
+   ============================================================ */
+function startFlow(){
+  body.innerHTML = "";
+  state.step = "GREET";
+  state.lead = { name: "", mobile: "", service: "", time: "" };
+  setInputMode("locked");
+
+  showTyping(function(){
+    addBotBubble("Hi \uD83D\uDC4B Welcome! I'm here to help you get started.");
+    showTyping(function(){
+      addBotBubble("First, what's your name?");
+      state.step = "ASK_NAME";
+      setInputMode("text");
+    }, 600);
+  }, 400);
+}
+
+function askMobile(){
+  showTyping(function(){
+    addBotBubble("Nice to meet you, " + firstName() + "! \uD83D\uDE42 Could you share your mobile number so our team can reach you?");
+    state.step = "ASK_MOBILE";
+    setInputMode("text");
+  });
+}
+
+function askService(){
+  showTyping(function(){
+    addBotBubble("Got it! Which service are you interested in?");
+    state.step = "ASK_SERVICE";
+    setInputMode("locked");
+    addOptions(CONFIG.services, function(choice){
+      state.lead.service = choice;
+      askTime(choice);
+    });
+  });
+}
+
+function askTime(serviceChoice){
+  showTyping(function(){
+    addBotBubble("Great choice. When would be a good time for a quick call about " + serviceChoice + "?");
+    state.step = "ASK_TIME";
+    setInputMode("locked");
+    addOptions(CONFIG.timeSlots, function(timeChoice){
+      state.lead.time = timeChoice;
+      finishFlow();
+    });
+  });
+}
+
+function finishFlow(){
+  state.step = "DONE";
+  setInputMode("locked");
+
+  if(state.lead.time === "I'll pick another time"){
+    showTyping(function(){
+      addBotBubble("No problem! We've noted your interest in " + state.lead.service + ". Our team will call " + state.lead.mobile + " to find a time that works.");
+      submitLead();
+      setInputMode("text");
+      state.step = "CHAT";
+    });
+    return;
+  }
+
+  showTyping(function(){
+    addBotBubble(
+      "\u2705 All set, " + firstName() + "! Here's a quick summary:\n" +
+      "\u2022 Service: " + state.lead.service + "\n" +
+      "\u2022 Call scheduled: " + state.lead.time + "\n" +
+      "\u2022 We'll call you on: " + state.lead.mobile + "\n\n" +
+      "Our team will reach out at the scheduled time. Talk soon!"
+    );
+    submitLead();
+    setInputMode("text");
+    state.step = "CHAT";
+  });
+}
+
+function firstName(){
+  return (state.lead.name.split(" ")[0]) || "there";
+}
+
+function submitLead(){
+  console.log("LEAD CAPTURED:", state.lead);
+  if(CONFIG.leadWebhookUrl){
+    fetch(CONFIG.leadWebhookUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(state.lead)
+    }).catch(function(err){ console.error("Lead submission failed:", err); });
+  }
+}
+
+function handleUserText(rawText){
+  var text = (rawText || "").trim();
+  if(!text) return;
+
+  if(state.step === "ASK_NAME"){
+    if(!isValidName(text)){
+      addUserBubble(text);
+      showError("Please enter your full name (at least 2 characters).");
+      return;
+    }
+    addUserBubble(text);
+    state.lead.name = text;
+    askMobile();
+    return;
+  }
+
+  if(state.step === "ASK_MOBILE"){
+    if(!isValidMobile(text)){
+      addUserBubble(text);
+      showError("That doesn't look like a valid number. Please enter a 10-digit mobile number.");
+      return;
+    }
+    addUserBubble(text);
+    state.lead.mobile = text;
+    askService();
+    return;
+  }
+
+  if(state.step === "ASK_SERVICE" || state.step === "ASK_TIME"){
+    // user is typing instead of clicking a button — nudge them
+    addUserBubble(text);
+    showError("Please choose one of the options above \u2191");
+    return;
+  }
+
+  // After flow is complete: simple free-chat fallback
+  addUserBubble(text);
+  showTyping(function(){
+    addBotBubble("Thanks for the message! Our team will follow up with you directly.");
+  });
+}
+
+/* ============================================================
+   UI WIRING
+   ============================================================ */
+launcher.addEventListener("click", function(){
+  win.classList.add("open");
+  launcher.style.display = "none";
+  if(state.step === "GREET") startFlow();
+});
+
+closeBtn.addEventListener("click", function(){
+  win.classList.remove("open");
+  launcher.style.display = "flex";
+});
+
+sendBtn.addEventListener("click", function(){
+  handleUserText(input.value);
+  input.value = "";
+});
+
+input.addEventListener("keydown", function(e){
+  if(e.key === "Enter" && !input.disabled){
+    handleUserText(input.value);
+    input.value = "";
+  }
+});
+
+})();
+</script>
+</body>
+</html>
