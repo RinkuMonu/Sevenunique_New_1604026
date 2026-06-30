@@ -6,6 +6,7 @@ import { useState, useRef, useEffect } from "react";
 const BOT_NAME = "Nova";
 const COMPANY_NAME = "SevenUnique";
 const COMPANY_EMAIL = "hello@sevenunique.com";
+const COMPANY_PHONE = "+91-XXXXXXXXXX";
 const BRAND_PRIMARY = "#FF5B22";   // SevenUnique orange (from logo)
 const BRAND_DARK = "#1a1a2e";
 
@@ -28,6 +29,53 @@ const TIME_SLOTS = [
 
 // Where captured leads get sent. Point this at your backend / CRM / Sheet.
 const LEAD_API_ENDPOINT = "/api/leads"; // e.g. a Next.js API route you create
+
+// Where free-text "ask anything" questions get sent once the lead flow is done.
+// Build this as a Next.js API route (see notes at the bottom of this file) that
+// calls the Anthropic API with COMPANY_KNOWLEDGE as context and returns
+// { reply: "..." }. If this endpoint isn't available, the bot falls back to a
+// simple local FAQ matcher below so it still answers basic questions offline.
+const CHAT_API_ENDPOINT = "/api/chat";
+
+// ── Local knowledge base used as a fallback / quick-match for common
+//    questions so the bot still answers something useful even before you
+//    wire up CHAT_API_ENDPOINT. Edit freely.
+const COMPANY_KNOWLEDGE = [
+  {
+    keywords: ["service", "services", "what do you do", "offer"],
+    answer:
+      `We offer Web Development, Mobile App Development, Digital Marketing/SEO, UI/UX Design, and AI & Chatbot Solutions. Want me to connect you with our team for a specific service?`,
+  },
+  {
+    keywords: ["price", "pricing", "cost", "quote", "charges"],
+    answer:
+      `Pricing depends on project scope, so our team puts together a custom quote after a quick call. Want me to schedule one for you?`,
+  },
+  {
+    keywords: ["contact", "email", "phone", "number", "reach"],
+    answer: `You can reach us at ${COMPANY_EMAIL} or ${COMPANY_PHONE}. I can also have our team call you directly — just share your number.`,
+  },
+  {
+    keywords: ["location", "address", "based", "office", "where are you"],
+    answer: `We're a fintech & IT solutions company — for our exact office address, please check the Contact page or email ${COMPANY_EMAIL}.`,
+  },
+  {
+    keywords: ["hour", "timing", "open", "available", "support"],
+    answer: `Our team is generally available Monday–Saturday during business hours. Leave your number and we'll call you back at a time that works.`,
+  },
+  {
+    keywords: ["who are you", "what is sevenunique", "about", "company"],
+    answer: `${COMPANY_NAME} is a fintech and IT solutions provider specializing in AI, software development, digital payments, and enterprise solutions.`,
+  },
+];
+
+function localAnswer(text) {
+  const lower = text.toLowerCase();
+  for (const entry of COMPANY_KNOWLEDGE) {
+    if (entry.keywords.some((k) => lower.includes(k))) return entry.answer;
+  }
+  return null;
+}
 // ─────────────────────────────────────────────────────────
 
 const now = () =>
@@ -102,11 +150,15 @@ export default function Chatbot() {
   const [showClearConfirm, setShowClearConfirm] = useState(false);
 
   // ── Lead-capture flow state ──
-  // step: ASK_NAME -> ASK_MOBILE -> ASK_SERVICE -> ASK_TIME -> DONE
+  // step: ASK_NAME -> ASK_MOBILE -> ASK_SERVICE -> ASK_TIME -> CHAT (free Q&A)
   const [step, setStep] = useState("ASK_NAME");
   const [lead, setLead] = useState({ name: "", mobile: "", service: "", time: "" });
   const [optionSet, setOptionSet] = useState(null); // { type: 'service'|'time', options: [...] }
-  const inputLocked = optionSet !== null || step === "DONE_LOCKED";
+
+  // Input is only locked while we're waiting on a button click (service/time pick).
+  // Once the lead flow finishes we move to step "CHAT" and re-enable typing.
+  const inputLocked = optionSet !== null;
+  const isChatMode = step === "CHAT";
 
   const bottomRef = useRef(null);
   const inputRef = useRef(null);
@@ -188,6 +240,33 @@ export default function Chatbot() {
     }).catch((err) => console.error("Lead submission failed:", err));
   };
 
+  // ── Ask the backend (or local fallback) to answer a free-text question ──
+  const answerFreeText = async (question) => {
+    setLoading(true);
+    try {
+      const res = await fetch(CHAT_API_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question, lead }),
+      });
+      if (!res.ok) throw new Error("Chat API not available");
+      const data = await res.json();
+      setLoading(false);
+      addBotMessage(
+        data.reply || "Thanks for your question — our team will follow up shortly!"
+      );
+    } catch (err) {
+      // Backend not wired up yet — fall back to local keyword matching
+      const local = localAnswer(question);
+      setLoading(false);
+      addBotMessage(
+        local ||
+          `Thanks for asking! I've noted that down — our team will follow up with details. You can also reach us directly at ${COMPANY_EMAIL}.`
+      );
+    }
+    if (!open || minimized) setBadge((n) => n + 1);
+  };
+
   // ── Option button click (service / time) ──
   const pickOption = (value) => {
     if (!optionSet) return;
@@ -209,11 +288,10 @@ export default function Chatbot() {
     if (type === "time") {
       const finalLead = { ...lead, time: value };
       setLead(finalLead);
-      setStep("DONE_LOCKED");
 
       if (value === "I'll pick another time") {
         botSay(
-          `No problem! We've noted your interest in **${finalLead.service}**. Our team will call **${finalLead.mobile}** to find a time that works.`
+          `No problem! We've noted your interest in **${finalLead.service}**. Our team will call **${finalLead.mobile}** to find a time that works.\n\nMeanwhile, feel free to ask me anything about ${COMPANY_NAME}! 💬`
         );
       } else {
         botSay(
@@ -221,16 +299,18 @@ export default function Chatbot() {
             `• Service: **${finalLead.service}**\n` +
             `• Call scheduled: **${value}**\n` +
             `• We'll call you on: **${finalLead.mobile}**\n\n` +
-            `Our team will reach out at the scheduled time. Talk soon!`
+            `Our team will reach out at the scheduled time. In the meantime, ask me anything! 💬`
         );
       }
       submitLead(finalLead);
+      // Unlock free-text "ask anything" mode
+      setStep("CHAT");
     }
   };
 
   const firstName = (n) => (n || "").trim().split(" ")[0] || "there";
 
-  // ── Free-text send (name + mobile steps, plus post-flow chit-chat) ──
+  // ── Free-text send (name + mobile steps, plus post-flow "ask anything") ──
   const send = (text) => {
     const msg = (text || input).trim();
     if (!msg || loading || inputLocked) return;
@@ -266,7 +346,13 @@ export default function Chatbot() {
       return;
     }
 
-    // After the flow is complete — simple acknowledgement fallback
+    if (step === "CHAT") {
+      // Free Q&A mode — answer using backend or local knowledge base
+      answerFreeText(msg);
+      return;
+    }
+
+    // Fallback (shouldn't normally hit this)
     botSay("Thanks for the message! Our team will follow up with you directly.");
   };
 
@@ -465,11 +551,13 @@ export default function Chatbot() {
                 {!minimized && (
                   <div className="su-header-sub">
                     <span className="su-online-dot" />
-                    Online · Lead assistant
+                    Online · {isChatMode ? "Ask me anything" : "Lead assistant"}
                   </div>
                 )}
                 {!minimized && (
-                  <div className="su-ai-badge"><SparkleIcon /> Book a call instantly</div>
+                  <div className="su-ai-badge">
+                    <SparkleIcon /> {isChatMode ? "Ask anything" : "Book a call instantly"}
+                  </div>
                 )}
               </div>
 
@@ -557,7 +645,13 @@ export default function Chatbot() {
                   <textarea
                     ref={(el) => { inputRef.current = el; textareaRef.current = el; }}
                     className="su-textarea"
-                    placeholder={inputLocked ? "Choose an option above..." : "Type your reply..."}
+                    placeholder={
+                      inputLocked
+                        ? "Choose an option above..."
+                        : isChatMode
+                        ? "Ask anything..."
+                        : "Type your reply..."
+                    }
                     value={input}
                     onChange={handleInputChange}
                     onKeyDown={onKeyDown}
@@ -585,3 +679,33 @@ export default function Chatbot() {
     </>
   );
 }
+
+/* ============================================================
+   OPTIONAL: real AI answers instead of the local keyword matcher
+   ============================================================
+   Create app/api/chat/route.js with something like:
+
+   import Anthropic from "@anthropic-ai/sdk";
+   const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+
+   export async function POST(req) {
+     const { question, lead } = await req.json();
+     const msg = await anthropic.messages.create({
+       model: "claude-sonnet-4-6",
+       max_tokens: 400,
+       system:
+         "You are Nova, SevenUnique's website assistant. Answer questions " +
+         "about SevenUnique Tech Solutions (fintech & IT: web dev, mobile " +
+         "apps, digital marketing/SEO, UI/UX, AI & chatbot solutions) " +
+         "briefly and helpfully. If you don't know something specific, " +
+         "direct them to hello@sevenunique.com.",
+       messages: [{ role: "user", content: question }],
+     });
+     const reply = msg.content.find((b) => b.type === "text")?.text || "";
+     return Response.json({ reply });
+   }
+
+   Then set ANTHROPIC_API_KEY in your environment. The component above
+   already calls CHAT_API_ENDPOINT and falls back to the local FAQ matcher
+   automatically if this route doesn't exist yet, so it works either way.
+*/
