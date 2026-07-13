@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Mail,
   Shield,
@@ -12,6 +10,12 @@ import {
   Share2,
   Cookie,
 } from "lucide-react";
+
+
+// export const metadata = {
+//   title: "KYC Policy & Customer Verification Guide | SevenUnique",
+//   description: "Read the SevenUnique KYC Policy to understand identity verification, compliance requirements, documentation, and customer due diligence for scalable growth.",
+// };
 
 export default function KYCPolicy() {
   return (

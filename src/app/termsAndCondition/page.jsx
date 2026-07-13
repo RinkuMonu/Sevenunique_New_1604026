@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Mail,
   Shield,
@@ -12,6 +10,15 @@ import {
   Share2,
   Cookie,
 } from "lucide-react";
+
+
+
+
+export const metadata = {
+  title: "Website Terms and Conditions Policy Solutions | SevenUnique",
+  description: "Read the SevenUnique Terms and Conditions governing website access, service usage, responsibilities, limitations, and applicable user for scalable growth.",
+};
+
 
 export default function TermsOfUse() {
   return (

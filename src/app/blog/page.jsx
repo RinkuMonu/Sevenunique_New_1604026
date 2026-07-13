@@ -4,6 +4,16 @@ import Navbar from "@/components/blog inner page/navbar";
 import Footer from "@/components/Footer";
 import { ArrowRight } from "lucide-react";
 
+
+
+
+// export const metadata = {
+//   title: "Software Development, AI & Tech Insights | SevenUnique",
+//   description: "Explore expert insights on software development, AI, cloud, engineering, digital transformation, technology strategy, and modern business for scalable growth.",
+// };
+
+
+
 const softwareDevelopmentArticles = [
   {
     title:

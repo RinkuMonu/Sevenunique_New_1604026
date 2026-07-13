@@ -1,28 +1,7 @@
 "use client";
-import Image from "next/image";
-import { useState } from "react";
-import { FaInstagram, FaYoutube } from "react-icons/fa";
-import { FaSquareYoutube, FaXTwitter } from "react-icons/fa6";
-import { IoHomeOutline } from "react-icons/io5";
-import { SiOpenai } from "react-icons/si"; // ChatGPT
-import { SiGoogle } from "react-icons/si"; // Gemini (approx)
-import { SiAnthropic } from "react-icons/si"; // Claude
-import { SiX } from "react-icons/si"; // Grok (X)
-import { TbBrandOpenai } from "react-icons/tb"; // fallback
-import { BsStars } from "react-icons/bs"; // main AI icon
 
+import { useState, useEffect } from "react";
 
-
-
-
-// export const metadata = {
-//   title: "Technology Articles, Guides & Expert Insights | SevenUnique",
-//   description: "Read expert insights on software development, AI, cloud engineering, digital transformation, technology strategy, and modern business for scalable growth.",
-// };
-
-
-
-// ─── Icon helpers ─────────────────────────────────────────────────────────────
 const CalendarIcon = () => (
   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
     <path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z" />
@@ -1111,9 +1090,12 @@ function AISidebar() {
     </>
   );
 }
-// ─── Main Page ────────────────────────────────────────────────────────────────
-export default function JavaMultithreadingPage() {
+
+
+export default function BlogDetailsClient() {
   return (
+    <>
+      return (
     <div className="min-h-screen bg-white font-sans mb-10">
       {/* <ReadingProgress /> */}
 
@@ -1184,4 +1166,10 @@ export default function JavaMultithreadingPage() {
      
     </div>
   );
+    </>
+  );
 }
+
+
+
+

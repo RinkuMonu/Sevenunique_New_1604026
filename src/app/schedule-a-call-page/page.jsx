@@ -4,6 +4,11 @@ import { ArrowRight, CheckCircle2, Mail, MapPin, Phone } from "lucide-react";
 
 import { useState } from "react";
 
+// export const metadata = {
+//   title: "Schedule a Software Development Call | SevenUnique",
+//   description: "Schedule a call with SevenUnique experts to discuss your web, mobile app, AI, SaaS, or custom software development requirements and for scalable growth.",
+// };
+
 export default function Page() {
   const [form, setForm] = useState({
     name: "",

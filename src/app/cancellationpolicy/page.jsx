@@ -1,6 +1,14 @@
 import { Mail, Shield, Phone, RefreshCcw, AlertCircle, Lock, Eye, CheckCircle, Database, Share2, Cookie } from "lucide-react";
 
 
+
+// export const metadata = {
+//   title: "Service Cancellation Policy & Process | SevenUnique",
+//   description: "Review the SevenUnique Cancellation Policy for information about cancellation requests, service conditions, eligibility, and applicable for scalable growth.",
+// };
+
+
+
 export default function CancellationPolicy() {
   return (
     <div className="w-full bg-white">

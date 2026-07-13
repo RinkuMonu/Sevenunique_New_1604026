@@ -140,15 +140,17 @@ export default function ProcessTimelineSection() {
 
       {(() => {
         const logos = [
-          "https://cdn-gnapb.nitrocdn.com/rVKsFrUUJpBqwSXDQLTtMASMDgzFisXl/assets/images/optimized/rev-f95ca0b/d274cmdd0goq94.cloudfront.net/wp-content/uploads/2023/05/mic.webp",
+          "/images/iso.png",
 
-          "https://cdn-gnapb.nitrocdn.com/rVKsFrUUJpBqwSXDQLTtMASMDgzFisXl/assets/images/optimized/rev-f95ca0b/d274cmdd0goq94.cloudfront.net/wp-content/uploads/2025/06/Adobe-Bronze-Solution-Partner.webp",
+          "/images/egca.png",
 
-          "https://cdn-gnapb.nitrocdn.com/rVKsFrUUJpBqwSXDQLTtMASMDgzFisXl/assets/images/optimized/rev-f95ca0b/d274cmdd0goq94.cloudfront.net/wp-content/uploads/2023/05/spa.webp",
+          "/images/eu.webp",
 
-          "https://cdn-gnapb.nitrocdn.com/rVKsFrUUJpBqwSXDQLTtMASMDgzFisXl/assets/images/optimized/rev-f95ca0b/d274cmdd0goq94.cloudfront.net/wp-content/uploads/2023/05/ama.webp",
+          "/images/iaf.png",
 
-          "https://cdn-gnapb.nitrocdn.com/rVKsFrUUJpBqwSXDQLTtMASMDgzFisXl/assets/images/optimized/rev-f95ca0b/d274cmdd0goq94.cloudfront.net/wp-content/uploads/2023/05/nass.webp",
+          "/images/kab.png",
+
+          "/images/exotel.png",
         ];
 
         return (
@@ -161,7 +163,7 @@ export default function ProcessTimelineSection() {
                 <img
                   src={logo}
                   alt="partner"
-                  className="h-[38px] w-auto object-contain"
+                  className="h-[58px] w-auto object-contain"
                 />
               </div>
             ))}

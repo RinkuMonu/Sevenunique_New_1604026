@@ -27,7 +27,68 @@ import WorkSection from "@/components/Services/WorkSection";
 import ClientLogos from "@/components/ClientLogos";
 import AiServicesSection from "@/components/Services/ai-development/Aiservicesweoffer";
 
+
+
+
+
+
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+
+  // Handle both direct slug and "-development" slug
+  const normalizedSlug = serviceData[slug] ? slug : `${slug}-development`;
+
+  const data = serviceData[normalizedSlug] || restServiceData?.[slug];
+
+  if (!data) {
+    return {
+      title: "Service Not Found | SevenUnique",
+      description: "The requested service could not be found.",
+    };
+  }
+
+  return {
+    title:
+      data.seo?.title ||
+      data.hero?.title ||
+      "Services | SevenUnique",
+
+    description:
+      data.seo?.description ||
+      data.hero?.description ||
+      "Explore our software development services.",
+
+    openGraph: {
+      title:
+        data.seo?.title ||
+        data.hero?.title,
+
+      description:
+        data.seo?.description ||
+        data.hero?.description,
+
+      url: `https://www.sevenunique.com/services/${slug}`,
+      type: "website",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title:
+        data.seo?.title ||
+        data.hero?.title,
+
+      description:
+        data.seo?.description ||
+        data.hero?.description,
+    },
+  };
+}
+
+
+
 // page.jsx logic update
+
 export default async function ServicePage({ params }) {
   const { slug } = await params;
   

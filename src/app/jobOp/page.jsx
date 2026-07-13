@@ -3,6 +3,16 @@
 import { useState } from "react";
 import { Search, X } from "lucide-react";
 
+
+
+
+
+// export const metadata = {
+//   title: "Hire Remote Developers & IT Experts Solutions | SevenUnique",
+//   description: "Hire skilled remote developers and technology experts to accelerate software projects with flexible engagement models and scalable development support.",
+// };
+
+
 export default function JobsPage() {
   const [openModal, setOpenModal] = useState(false);
   const [selectedRole, setSelectedRole] = useState("");
