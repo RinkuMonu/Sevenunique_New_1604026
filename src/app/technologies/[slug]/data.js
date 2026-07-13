@@ -1,5 +1,10 @@
 export const techData = {
   dotnet: {
+      seo: {
+    title: ".NET Development Services & Experts Solutions | SevenUnique",
+    description:
+      "Build secure, scalable, and enterprise-ready applications with experienced .NET developers for web, cloud, API, and business software for scalable growth.",
+  },
     title: ".NET Development Services",
     heading: "Work with .NET experts trusted by the India's top tech teams.",
     description:
@@ -326,6 +331,11 @@ export const techData = {
 
   },
   aws: {
+      seo: {
+    title: "AWS Cloud Development Services & Experts | SevenUnique",
+    description:
+      "Build, migrate, and scale secure cloud solutions with AWS experts specializing in cloud-native applications, infrastructure, integration, and optimization.",
+  },
     title: "AWS Development Services",
     heading: "Work with AWS experts trusted by the India's top tech teams.",
     description:
@@ -636,6 +646,11 @@ export const techData = {
     },
   },
   react: {
+      seo: {
+    title: "React Development Services & Expert Developers | SevenUnique",
+    description:
+      "Build fast, responsive, and scalable user interfaces with React experts specializing in modern web apps, dashboards, and digital product for scalable growth.",
+  },
     title: "React Development Services",
     heading: "Work with React experts trusted by the India's top tech teams.",
     description:
@@ -962,6 +977,11 @@ export const techData = {
     },
   },
   django: {
+      seo: {
+    title: "Django Development Services & Experts | SevenUnique",
+    description:
+      "Build secure and scalable Python web applications with Django development experts specializing in APIs, backend systems, and custom digital platforms.",
+  },
     title: "Django Development Services",
     heading: "Work with Django experts trusted by the India's top tech teams.",
     description:
@@ -1298,6 +1318,11 @@ export const techData = {
     },
   },
   java: {
+      seo: {
+    title: "Java Development Services & Expert Developers | SevenUnique",
+    description:
+      "Build secure, scalable, and enterprise-grade applications with Java developers experienced in backend systems, APIs, cloud, and complex software platforms.",
+  },
     title: "JAVA DEVELOPMENT SERVICES",
     heading: "Work with Java experts trusted by the India's top tech teams.",
     description:
@@ -1964,6 +1989,11 @@ export const techData = {
     },
   },
   php: {
+      seo: {
+    title: "PHP Development Services & Expert Developers | SevenUnique",
+    description:
+      "Build and modernize secure PHP applications with experienced developers specializing in Laravel, Symfony, APIs, portals, and scalable web for scalable growth.",
+  },
     title: "PHP DEVELOPMENT SERVICES",
     heading: "Work with PHP experts trusted by the India's top tech teams.",
     description:
@@ -2977,6 +3007,11 @@ export const techData = {
     },
   },
   csharp: {
+      seo: {
+    title: "C# Development Services & Expert Developers | SevenUnique",
+    description:
+      "Hire experienced C# developers to build secure, maintainable, and high-performance applications for enterprise platforms and complex software systems.",
+  },
     title: "C# DEVELOPMENT SERVICES",
     heading: "Work with C# experts trusted by the India's top tech teams.",
     description:
@@ -3320,6 +3355,11 @@ export const techData = {
     },
   },
   golang: {
+      seo: {
+    title: "Golang Development Services & Experts | SevenUnique",
+    description:
+      "Build fast, scalable, and reliable backend systems with Golang experts specializing in APIs, microservices, cloud platforms, and high-performance software.",
+  },
     title: "GOLANG DEVELOPMENT SERVICES",
     heading: "Work with Go experts trusted by the India's top tech teams.",
     description:
@@ -4016,6 +4056,11 @@ export const techData = {
     },
   },
   azure: {
+      seo: {
+    title: "Microsoft Azure Development Services | SevenUnique",
+    description:
+      "Build, migrate, and scale secure cloud solutions with Azure development expertise across cloud applications, infrastructure, integration, and modernization.",
+  },
     title: "AZURE DEVELOPMENT SERVICES",
     heading: "Work with Azure experts trusted by the India's top tech teams.",
     description:
@@ -4702,6 +4747,11 @@ export const techData = {
     },
   },
   ruby: {
+      seo: {
+    title: "Ruby Development Services & Expert Developers | SevenUnique",
+    description:
+      "Build and scale reliable web applications with Ruby experts specializing in custom platforms, backend development, APIs, and maintainable software systems.",
+  },
     title: "RUBY DEVELOPMENT SERVICES",
     heading: "Work with Ruby experts trusted by the India's top tech teams.",
     description:
@@ -5050,6 +5100,11 @@ export const techData = {
     },
   },
   vue: {
+      seo: {
+    title: "Vue.js Development Services & Experts | SevenUnique",
+    description:
+      "Build fast, flexible, and scalable web interfaces with Vue.js experts specializing in modern frontend applications and engaging digital for scalable growth.",
+  },
     title: "VUE.JS DEVELOPMENT SERVICES",
     heading: "Work with Vue.js experts trusted by the India's top tech teams.",
     description:
@@ -5396,7 +5451,14 @@ export const techData = {
       },
     },
   },
-  angular: {
+  angular: 
+  
+  {
+      seo: {
+    title: "Angular Development Services & Experts | SevenUnique",
+    description:
+      "Build fast, scalable, and maintainable web applications with Angular development experts experienced in modern enterprise frontend for scalable growth.",
+  },
     title: "Angular Development Services",
     heading: "Work with Angular experts trusted by the India's top tech teams.",
     description:
@@ -5439,6 +5501,7 @@ export const techData = {
           content:
             "We optimize Angular applications.\n\nChange detection tuning, on-push strategy, and AOT compilation.",
         },
+        
       ],
     },
     servicesSection: {
@@ -5745,6 +5808,11 @@ export const techData = {
     },
   },
   cpp: {
+      seo: {
+    title: "C++ Development Services & Experts Solutions | SevenUnique",
+    description:
+      "Build high-performance and reliable software with C++ development experts for complex applications, backend systems, and performance-critical solutions.",
+  },
     title: "C++ DEVELOPMENT SERVICES",
     heading: "Work with C++ experts trusted by the India's top tech teams.",
     description:
@@ -6093,6 +6161,11 @@ export const techData = {
     },
   },
   "google-cloud": {
+      seo: {
+    title: "Google Cloud Development Services Solutions | SevenUnique",
+    description:
+      "Build and scale secure cloud applications with Google Cloud expertise across migration, infrastructure, data, integration, and cloud-native solutions.",
+  },
     title: "GOOGLE CLOUD DEVELOPMENT SERVICES",
     heading: "Work with Google Cloud experts trusted by the India's top tech teams.",
     description:

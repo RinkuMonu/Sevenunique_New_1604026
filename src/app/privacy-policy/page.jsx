@@ -1,6 +1,13 @@
 import { Mail, Shield, Phone, AlertCircle, Lock, Eye, CheckCircle, Database, Share2, Cookie } from "lucide-react";
 
 
+
+export const metadata = {
+  title: "Privacy Policy & Data Protection Guide | SevenUnique",
+  description: "Read the SevenUnique Privacy Policy to understand how information is collected, used, protected, and managed when you access our website and services.",
+};
+
+
 export default function PrivacyPolicy() {
   return (
     <div className="w-full bg-white">

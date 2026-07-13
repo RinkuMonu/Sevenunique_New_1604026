@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { GoHome } from "react-icons/go";
@@ -9,15 +7,11 @@ import ServicesGrid from "@/components/Services/Servicegridcard";
 
 
 
-// export const metadata = {
-//   title: "Our Services | Sevenunique",
-//   description:
-//     "Explore our services including website development, mobile apps, AI development, UI/UX design, SEO, and digital marketing.",
-// };
-
-
-
-
+export const metadata = {
+  title: "Custom Software Development Services | SevenUnique",
+  description:
+    "Explore web, mobile app, AI, SaaS, UI/UX, QA, and custom software development services designed to help modern businesses innovate and for scalable growth.",
+};
 
 /* ── Card Component ── */
 function ServiceCard({ service }) {

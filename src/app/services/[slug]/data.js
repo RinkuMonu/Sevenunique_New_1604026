@@ -106,6 +106,7 @@ function createCompanyTrustSection({
 
 
 function createServiceEntry({
+  seo,
   breadcrumb,
   title,
   heading,
@@ -290,7 +291,7 @@ processSection = {
 
   return {
  
-
+  seo,
 
   aiServicesSection: {
     sectionLabel: "SERVICES WE OFFER",
@@ -925,6 +926,11 @@ description:
 }),
 
 "qa-testing": createServiceEntry({
+   seo: {
+    title: "QA Testing & Automation Services Solutions | SevenUnique",
+    description:
+      "Improve software quality with manual testing, test automation, performance testing, security validation, and structured quality assurance for scalable growth.",
+  },
   breadcrumb: "QA",
   title: "QA TESTING & AUTOMATION SERVICES",
   heading: "Deliver reliable software with comprehensive QA and test automation.",
@@ -991,6 +997,11 @@ description:
   ],
 }),
   "ui-ux-design": createServiceEntry({
+     seo: {
+    title: "UI UX Design Services for Digital Products | SevenUnique",
+    description:
+      "Create intuitive digital experiences with UI UX design services covering user research, wireframes, prototypes, design systems, and product interfaces.",
+  },
   breadcrumb: "UI/UX",
   title: "UI/UX DESIGN SERVICES",
   heading: "Create user experiences that engage, convert, and inspire.",
@@ -1062,6 +1073,11 @@ description:
 
 export const serviceData = {
   "ai-development": {
+ seo: {
+    title: "AI Development Services Solutions Solutions | SevenUnique",
+    description:
+      "Build custom AI solutions, generative AI applications, intelligent automation, and scalable AI systems designed around your business for scalable growth.",
+  },
 
     sections: {
       trustedClientsStrip: true,
@@ -1376,6 +1392,12 @@ description:
 
   companyTrustSection: createCompanyTrustSection(),
 
+    seo: {
+    title: "Web Development Services | SevenUnique",
+    description:
+      "Professional web development services for scalable, secure, and high-performance websites.",
+  },
+
   backendServices: {
     sectionLabel: "WEB DEVELOPMENT SERVICES",
 
@@ -1441,6 +1463,14 @@ description:
 
   companyTrustSection: createCompanyTrustSection(),
 
+
+    seo: {
+    title: "Mobile App Development Services Solutions | SevenUnique",
+    description:
+      "Create secure and scalable mobile apps for iOS, Android, and cross-platform environments with expert mobile app development services. Get expert support today.",
+  },
+
+  
   backendServices: {
     sectionLabel: "MOBILE APP DEVELOPMENT SERVICES",
 

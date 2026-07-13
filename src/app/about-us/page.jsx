@@ -11,9 +11,9 @@ import TrustSection from "@/components/about-us/TrustSection";
 
 
 export const metadata = {
-  title: "About Us | Sevenunique",
+  title: "About Our Software Development Company | SevenUnique",
   description:
-    "Learn about Sevenunique, our mission, experienced team, and commitment to delivering innovative technology solutions.",
+    "Learn about SevenUnique, a digital product development company helping startups and enterprises build scalable fintech, ecommerce, and software platforms.",
 };
 
 

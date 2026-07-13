@@ -5,6 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, X } from "lucide-react";
 
+// export const metadata = {
+//   title: "Software Development Portfolio & Case Studies | SevenUnique",
+//   description: "Explore SevenUnique projects and digital solutions across web, mobile, AI, fintech, ecommerce, and custom software development. Get expert support today.",
+// };
+
+
 export default function PortfolioPage() {
   const [portfolio] = useState([
     {
@@ -193,6 +199,10 @@ export default function PortfolioPage() {
   ]);
 
   const [selectedProject, setSelectedProject] = useState(null);
+
+
+
+
 
   return (
     <div className="min-h-screen bg-[#f7f8fc]">

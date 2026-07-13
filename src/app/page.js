@@ -20,9 +20,9 @@ import NewsCTASection from "@/components/NewsSection";
 
 
 export const metadata = {
-  title: "Sevenunique | Web Development, Mobile Apps & AI Solutions",
+  title: "Custom Software Development & AI Company | SevenUnique",
   description:
-    "Sevenunique provides web development, mobile app development, AI solutions, UI/UX design, and digital transformation services.",
+    "Build scalable websites, mobile apps, AI solutions, and custom software with SevenUnique. Transform ideas into secure, high-performance digital products.",
 };
 
 

@@ -7,6 +7,59 @@ import { Star } from "lucide-react";
 import ServiceSection from "../ServiceSection";
 import CTASection from "../CTASection";
 
+
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+
+  const data = techData?.[slug];
+
+  if (!data) {
+    return {
+      title: "Technology Not Found | SevenUnique",
+      description: "The requested technology page could not be found.",
+    };
+  }
+
+  return {
+    title:
+      data.seo?.title ||
+      data.title ||
+      "Technologies | SevenUnique",
+
+    description:
+      data.seo?.description ||
+      data.description ||
+      "Explore our technology expertise.",
+
+    openGraph: {
+      title:
+        data.seo?.title ||
+        data.title,
+
+      description:
+        data.seo?.description ||
+        data.description,
+
+      url: `https://www.sevenunique.com/technologies/${slug}`,
+      type: "website",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title:
+        data.seo?.title ||
+        data.title,
+
+      description:
+        data.seo?.description ||
+        data.description,
+    },
+  };
+}
+
+
+
 export default async function TechnologyPage({ params }) {
   const { slug } = await params;
 
@@ -52,6 +105,7 @@ export default async function TechnologyPage({ params }) {
                       size={14}
                       className="fill-orange-400 text-orange-400"
                     />
+
                   ))}
                 </div>
               </div>

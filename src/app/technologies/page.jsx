@@ -98,10 +98,19 @@ function TechIcon({ tech, className = "w-20 h-20" }) {
   );
 }
 
+
+// export const metadata = {
+//   title: "Software Development Technologies & Tools | SevenUnique",
+//   description:
+//     "Explore the modern technologies SevenUnique uses to build scalable web, mobile, cloud, AI, and enterprise software solutions for growing for scalable growth.",
+// };
+
+
 /* ── Clickable tech card that navigates to /technologies/[slug] ── */
 function TechCard({ tech }) {
   return (
     <Link
+
       href={`/technologies/${tech.slug}`}
       className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm
                  hover:shadow-md transition-all duration-300 hover:-translate-y-1
