@@ -21,10 +21,6 @@ export default function AboutPage() {
   return (
     <>
       <AboutHero />
-      
-      
-    
-   
     
       <MediaCoverage />
    
