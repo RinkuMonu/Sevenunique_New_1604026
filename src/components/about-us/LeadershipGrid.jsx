@@ -18,20 +18,20 @@ const leaders = [
   {
     name: "Vijay Gupta",
     role: "Sr. Full Stack Developer",
-    img: "/team/p3.png",
+    img: "/images/gupta-vijay.PNG",
     color: "hover:bg-[#F03333]",
   },
   {
-    name: "Krishan Prajapat",
-    role: "Office Admin",
-    img: "/team/krishan.PNG",
+    name: "Rinku Yadav",
+    role: "Server Admin",
+    img: "/images/yadav-rinku.png",
     color: "hover:bg-[#2EE66E]",
   },
 
   {
     name: "Bhumika Soni",
     role: "HR Manager",
-    img: "/images/hr.png",
+    img: "/images/hrmam-2.png",
     color: "hover:bg-[#26F0DF]",
   },
 ];

@@ -369,7 +369,8 @@ export default function Chatbot() {
         .su-chat * {
           box-sizing: border-box;
           font-family: 'Inter', system-ui, sans-serif;
-          margin: 0;
+          margin: 14px;
+          border-radius: 50%;
           padding: 0;
         }
         .su-launcher {
@@ -377,7 +378,6 @@ export default function Chatbot() {
           cursor: pointer; border: none; background: none; padding: 0;
         }
         .su-launcher-ring {
-          width: 62px; height: 62px; border-radius: 50%;
           background: ${BRAND_PRIMARY};
           display: flex; align-items: center; justify-content: center; color: white;
           box-shadow: 0 6px 28px rgba(255,91,34,0.45), 0 2px 8px rgba(255,91,34,0.2);
@@ -531,7 +531,7 @@ export default function Chatbot() {
             onClick={() => { setOpen(true); setMinimized(false); }}
             aria-label={`Open chat with ${BOT_NAME}`}
           >
-            <div className="su-launcher-ring">
+            <div className="su-launcher-ring left-6 top-5">
               <RobotIcon size={26} />
               {badge > 0 && <span className="su-badge">{badge}</span>}
             </div>

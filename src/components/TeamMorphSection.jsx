@@ -23,12 +23,12 @@ const team = [
   {
     name: "Vijay Gupta",
     role: "Technical Head",
-    image: "/team/p3.png",
+    image: "/images/gupta-vijay.PNG",
   },
   {
-    name: "Krishan Kumar",
-    role: "Project Coordinator",
-    image: "/team/krishan.PNG",
+    name: "Rinku Yadav",
+    role: "Server Admin",
+    image: "/images/yadav-rinku.png",
   },
 ];
 

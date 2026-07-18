@@ -27,17 +27,16 @@ const tabs = [
 ];
 
 const avatars = [
-    "/images/rajyawardhan.png",
+    "/images/rajya-sir.png",
     "/images/rinkusir.png",
     "/images/devika.png",
-    "/images/rahul.png",
+    "/images/rahu-singh.png",
     "/team/p3.png",
 ];
 
 export default function FlexibleWays() {
     const [active, setActive] = useState(0);
     const tab = tabs[active];
-
     const size = 320;
     const centerR = 54;
     const avatarR = 38;
@@ -47,19 +46,15 @@ export default function FlexibleWays() {
 
     return (
         <section className="py-20 flex flex-col items-center bg-white">
-
             {/* HEADING */}
             <h2 className="text-[36px] font-semibold mb-14 text-center text-[#0f172a]">
                 We offer different engagement models <br />to match your project needs and goals
                 <span style={{ color: ORANGE }}>.</span>
             </h2>
-
             {/* CONTENT */}
             <div className="flex flex-wrap items-center justify-between gap-10 max-w-[900px] w-full mb-16">
-
                 {/* LEFT */}
                 <div className="max-w-[380px]">
-
                     {/* ✅ FIXED HEADING SPLIT */}
                     <h3 className="text-[32px] font-semibold mb-4 leading-snug text-[#0f172a]">
                         {tab.heading.split("in your team.")[0]}
@@ -67,12 +62,10 @@ export default function FlexibleWays() {
                             {tab.heading.includes("in your team.") && "in your team."}
                         </span>
                     </h3>
-
                     <p className="text-[#4b5563] text-[15px] leading-[1.7]">
                         {tab.desc}
                     </p>
                 </div>
-
                 {/* RIGHT (ORBIT) */}
                 <div className="relative" style={{ width: size, height: size }}>
 
@@ -107,8 +100,7 @@ export default function FlexibleWays() {
                                     strokeWidth="1"
                                 />
                             );
-                        })}
-
+                        })} 
                     </svg>
 
                     {/* CENTER */}
