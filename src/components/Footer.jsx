@@ -23,50 +23,41 @@ export default function Footer() {
         <div className="grid lg:grid-cols-[340px_1fr] gap-16">
       
           <div>
-          
             <Link href="/">
               <Image
-                src="/images/new-logo.png"
+                src="/images/logo-2.png"
                 alt="Sevenunique"
                 width={220}
                 height={70}
                 className="object-contain"
               />
             </Link>
-
-          
             <p className="mt-5 text-[16px] leading-7 text-[#555] max-w-[300px]">
               Building scalable websites, mobile apps, AI solutions, and
               enterprise software for modern businesses.
             </p>
-
-           
             <div className="mt-8">
               <h3 className="text-[17px] font-semibold text-gray-700 tracking-wide">
                 Monday - Friday
               </h3>
-
               <p className="text-[#f4622a] text-[17px] mt-2 tracking-wide font-medium">
                 10:00 AM to 07:00 PM
               </p>
             </div>
-
-         
             <div className="mt-6 space-y-3">
               <div>
-                <p className="text-sm font-semibold text-gray-700 text-gray-900">
+                <p className="text-sm font-semibold text-gray-700 ">
                   Call or WhatsApp Us on
                 </p>
                 <a
-                  href="tel:+919660339514"
+                  href="tel:+918741886688"
                   className="text-[#555] hover:text-[#f4622a] transition-colors"
                 >
-                  +91 9660339514
+                  +91 8741886688
                 </a>
               </div>
-
                 <div>
-                <p className="text-sm font-semibold text-gray-700 text-gray-900">
+                <p className="text-sm font-semibold text-gray-700 ">
                   Contact us on
                 </p>
                 <a
@@ -78,7 +69,7 @@ export default function Footer() {
               </div>
 
               <div>
-                <p className="text-sm font-semibold text-gray-700 text-gray-900">Email Us</p>
+                <p className="text-sm font-semibold text-gray-700">Email Us</p>
                 <a
                   href="mailto:info@sevenunique.com"
                   className="text-[#555] hover:text-[#f4622a] transition-colors"

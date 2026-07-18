@@ -317,7 +317,7 @@ export default function CulturePage() {
       {/* What We Believe In Section */}
   <section className="py-20">
   <div className="max-w-7xl mx-auto px-6">
-    <div className="grid md:grid-cols-12 gap-8 mb-12">
+    <div className="grid md:grid-cols-1 gap-8 mb-12">
       <div>
         <h2 className="text-4xl md:text-5xl text-gray-700 font-bold">
           Team Trips<span className="text-orange-500">.</span>

@@ -468,11 +468,11 @@ export default function TermsOfUse() {
                   info@sevenunique.com
                 </a>
                 <a
-                  href="tel:+919660339514"
+                  href="tel:+918741886688"
                   className="flex items-center gap-2 rounded-full bg-white/20 px-6 py-3 backdrop-blur-sm transition-all hover:bg-white/30"
                 >
                   <Phone className="h-5 w-5" />
-                  +91-9660339514
+                  +91-8741886688
                 </a>
               </div>
             </div>

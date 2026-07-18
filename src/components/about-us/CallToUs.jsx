@@ -5,31 +5,26 @@ import Image from "next/image";
 export default function CallToAction() {
   return (
     <section className="w-full bg-black text-white py-20 flex flex-col items-center justify-center text-center relative overflow-hidden">
-
       {/* Top Image */}
-   <div className="relative w-[420px] h-[260px] mb-10">
-  <Image
-    src="/images/handonhand.png"
-    alt="Team working"
-    fill
-    className="object-contain rotate-90"
-    priority
-  />
-</div>
-
+      <div className="relative w-[420px] h-[260px] mb-10">
+        <Image
+          src="/images/handonhand.png"
+          alt="Team working"
+          fill
+          className="object-contain rotate-90"
+          priority
+        />
+      </div>
       {/* Text Content */}
       <div className="max-w-2xl px-4">
         <h2 className="text-2xl md:text-3xl font-medium leading-relaxed text-gray-300">
-         Over 500 companies fast-track their technology roadmaps with us.
-Discover how we can support your goals.
+          Over 500 companies fast-track their technology roadmaps with us.
+          Discover how we can support your goals.
         </h2>
-
-       
-
         {/* Button */}
         <Link href="/schedule-a-call-page">
           <button className="mt-8 bg-green-700 hover:bg-green-800 transition px-6 py-3 rounded-lg text-sm font-medium text-white cursor-pointer">
-         Schedule a Discovery Call
+            Schedule a Discovery Call
           </button>
         </Link>
       </div>

@@ -7,7 +7,7 @@ const cards = [
   {
     title: "Sr. Mern Stack Developer",
     desc: "Leads the development team, manages project workflows, and ensures high-quality software delivery through effective technical guidance.",
-    img: "/images/rajyawardhan.png",
+    img: "/images/rajya-sir.png",
     link: "/roles/software-developers",
   },
   {
@@ -19,7 +19,7 @@ const cards = [
   {
     title: "Server Admin",
     desc: "Manages servers, hosting environments, security, deployments, and system monitoring to ensure smooth application performance.",
-    img: "/images/rinkusir.png",
+    img: "/images/yadav-rinku.png",
     link: "/roles/project-managers",
   },
   {
@@ -31,7 +31,7 @@ const cards = [
   {
     title: "Backend Developer",
     desc: "Contributes to project execution, collaboration, and innovative development solutions to support business and technical goals.",
-    img: "/images/rahul.png",
+    img: "/images/rahul-singh.png",
     bg: "bg-yellow-200",
     link: "/roles/business-analysts",
   },
