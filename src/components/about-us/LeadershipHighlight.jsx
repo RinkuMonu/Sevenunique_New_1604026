@@ -19,10 +19,8 @@ export default function LeadershipHighlight() {
             <FaArrowRight className="transition-transform group-hover:translate-x-1" />
           </button>
         </div>
-
         {/* RIGHT IMAGE LAYOUT */}
         <div className="flex flex-col gap-4 md:gap-6">
-
           {/* TOP BIG IMAGE */}
           <div className="relative w-full h-[220px] sm:h-[260px] md:h-[400px] lg:h-[420px] rounded-2xl overflow-hidden">
             <Image
@@ -32,11 +30,7 @@ export default function LeadershipHighlight() {
               className="object-contain"
             />
           </div>
-
-        
-
         </div>
-
       </div>
     </section>
   );

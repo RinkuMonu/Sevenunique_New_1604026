@@ -6,25 +6,21 @@ const teamMembers = [
     role: "Backend Developer",
     image: "/images/rajya-sir.png",
   },
-
   {
     name: "Devika Chhipa",
     role: "Sr. Frontend Developer",
     image: "/images/devika-chhipa.png",
   },
-
   {
     name: "Khyati Jain",
     role: "UI/UX Designer",
     image: "/images/khyati-2.png",
   },
-
   {
     name: "Rahul Singh",
     role: "Backend Developer",
     image: "/images/rahul-singh.png",
   },
-
   {
     name: "Chandan Sharma",
     role: "SEO Specialist",
@@ -66,17 +62,15 @@ const teamMembers = [
     role: "Jr. AI/ML Engineer",
     image: "/images/gupta-sejal.PNG", 
   },
-
   {
     name: "Kratika Sharma",
     role: "Jr. AI/ML Engineer",
     image: "/images/kratika-sharma.PNG", 
   },
-
    {
     name: "Rahul Jain",
     role: "Frontend Developer Intern",
-    image: "/images/rahull-jain.png", 
+    image: "/images/rahull-jain.PNG", 
   },
 ];
 

@@ -19,11 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   metadataBase: new URL("https://www.sevenunique.com"),
 
-  title: "SevenUnique Tech Solutions Pvt. Ltd.",
-  description:
-    "Leading fintech and IT solutions provider specializing in AI, software development, digital payments, and enterprise solutions.",
-
-  openGraph: {
+    openGraph: {
     title: "SevenUnique Tech Solutions Pvt. Ltd.",
     description:
       "Leading fintech and IT solutions provider specializing in AI, software development, digital payments, and enterprise solutions.",
@@ -83,7 +79,7 @@ export default function RootLayout({ children }) {
   </main>
 
   <Footer />
-  <ChatBot />
+  {/* <ChatBot /> */}
   <WhatsAppChat />
 </body>
     </html>

@@ -16,6 +16,7 @@ import TeamMorphSection from "@/components/TeamMorphSection";
 import ProcessTimelineSection from "@/components/ProcessTimelineSection";
 import SlidingProjectsSection from "@/components/ProjectBanner";
 import NewsCTASection from "@/components/NewsSection";
+import ServicesClientSection from "@/components/ServicesClient";
 
 
 
@@ -42,6 +43,7 @@ export default function Home() {
      <ProcessTimelineSection />  
      {/* <BlogInsights /> */}
      <CTABand />
+     <ServicesClientSection />
     </div>
   );
 }
