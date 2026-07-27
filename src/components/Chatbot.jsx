@@ -369,15 +369,15 @@ export default function Chatbot() {
         .su-chat * {
           box-sizing: border-box;
           font-family: 'Inter', system-ui, sans-serif;
-          margin: 14px;
-          border-radius: 50%;
+          margin: 0;
           padding: 0;
         }
         .su-launcher {
-          position: fixed; bottom: 28px; right: 28px; z-index: 9999;
+          position: fixed; bottom: 170px; right: 30px; z-index: 9999;
           cursor: pointer; border: none; background: none; padding: 0;
         }
         .su-launcher-ring {
+          width: 60px; height: 60px; border-radius: 50%;
           background: ${BRAND_PRIMARY};
           display: flex; align-items: center; justify-content: center; color: white;
           box-shadow: 0 6px 28px rgba(255,91,34,0.45), 0 2px 8px rgba(255,91,34,0.2);
@@ -394,7 +394,7 @@ export default function Chatbot() {
         }
         @keyframes su-pop { from { transform: scale(0); } to { transform: scale(1); } }
         .su-window {
-          position: fixed; bottom: 104px; right: 28px; width: 390px; max-height: 600px;
+          position: fixed; bottom: 24px; right: 30px; width: 390px; height: 600px; max-height: calc(100vh - 48px);
           z-index: 9998; display: flex; flex-direction: column; border-radius: 20px; overflow: hidden;
           background: #ffffff;
           box-shadow: 0 32px 80px rgba(0,0,0,0.16), 0 8px 24px rgba(255,91,34,0.08), 0 0 0 1px rgba(0,0,0,0.05);

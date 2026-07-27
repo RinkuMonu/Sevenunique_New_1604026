@@ -79,7 +79,7 @@ export default function RootLayout({ children }) {
   </main>
 
   <Footer />
-  {/* <ChatBot /> */}
+  <ChatBot />
   <WhatsAppChat />
 </body>
     </html>
