@@ -135,16 +135,264 @@ export default function KYCPolicy() {
                 <div className="rounded-full bg-blue-100 p-2">
                   <AlertCircle className="h-6 w-6 text-blue-600" />
                 </div>
-               Purpose
+               Know Your Customer (KYC) Policy
               </div>
             </div>
             <div className="p-8">
               <p className="text-lg leading-relaxed text-muted-foreground text-gray-500">
-                This Know Your Customer (KYC) Policy outlines the standards followed by SevenUnique Tech Solutions Pvt. Ltd. to verify the identity and address of customers before onboarding, in compliance with applicable legal and regulatory requirements.
+                SevenUnique Tech Solutions Private Limited (SevenUnique,Company,we,our, or us) is
+                committed to implementing robust Know Your Customer (KYC) procedures to verify the identity of
+                merchants, customers, partners, and authorized representatives before providing technology services,
+                payment integrations, API access, merchant onboarding, or related solutions.
+                Where our services involve payment processing or merchant onboarding through regulated banking or
+                payment partners, KYC verification is conducted in accordance with applicable laws, contractual
+                requirements, and the compliance standards of our regulated partners.
+              </p>
+            </div>
+          </div>
+ {/* Overview Section */}
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600 p-3">
+                <div className="rounded-full bg-blue-100 p-2">
+                  <AlertCircle className="h-6 w-6 text-blue-600" />
+                </div>
+               Purpose of KYC
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-muted-foreground text-gray-500">
+                The objectives of this KYC Policy are to:
+                <ul className="my-5 space-y-4 text-sm text-gray-500 leading-relaxed list-disc pl-5">
+  <li>Verify the identity of merchants and customers.</li>
+  <li>Prevent identity theft and fraud.</li>
+  <li>Comply with applicable Anti-Money Laundering (AML) and Counter-Terrorist Financing (CTF) requirements where applicable.</li>
+  <li>Support secure onboarding of merchants using our technology platform.</li>
+  <li>Protect the integrity of our services.</li>
+</ul>
+
               </p>
             </div>
           </div>
 
+         {/* Overview Section */}
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600 p-3">
+                <div className="rounded-full bg-blue-100 p-2">
+                  <AlertCircle className="h-6 w-6 text-blue-600" />
+                </div>
+                Regulatory Framework
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-muted-foreground text-gray-500">
+               This policy is designed considering applicable requirements, including:
+              <ul className="my-5 space-y-4 text-sm text-gray-500 leading-relaxed list-disc pl-5">
+  <li>
+    Reserve Bank of India (RBI) directions applicable to regulated payment entities and merchant onboarding through regulated partners.
+  </li>
+  <li>
+    Prevention of Money Laundering Act, 2002 (PMLA), where applicable.
+  </li>
+  <li>
+    Digital Personal Data Protection Act, 2023 (India).
+  </li>
+  <li>
+    Information Technology Act, 2000.
+  </li>
+  <li>
+    Applicable contractual requirements imposed by our banking, payment, or financial service partners.
+  </li>
+</ul>
+<p className="text-sm text-gray-500 leading-relaxed">
+  <strong className="font-semibold text-gray-700">Important:</strong>{" "}
+  SevenUnique Tech Solutions Private Limited is a technology service provider.
+  Where regulated financial services are offered, KYC approval and regulatory
+  compliance may be performed by the relevant licensed bank, payment
+  aggregator, payment service provider, or other regulated financial
+  institution.
+</p>
+
+
+              </p>
+            </div>
+          </div>
+ {/* Overview Section */}
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600 p-3">
+                <div className="rounded-full bg-blue-100 p-2">
+                  <AlertCircle className="h-6 w-6 text-blue-600" />
+                </div>
+                Customer Due Diligence (CDD)
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-muted-foreground text-gray-500">
+               Before activation of services, we may verify:
+               <ul className="my-5 space-y-4 text-sm text-gray-500 leading-relaxed list-disc pl-5">
+  <li>Identity of the applicant.</li>
+  <li>Business existence.</li>
+  <li>Authorized signatory.</li>
+  <li>Ultimate Beneficial Owner (UBO), where required.</li>
+  <li>Business address.</li>
+  <li>Bank account details.</li>
+  <li>Contact information.</li>
+  <li>Nature of business.</li>
+  <li>Risk profile.</li>
+</ul>
+Enhanced verification may be required for higher-risk businesses.
+
+
+              </p>
+            </div>
+          </div>
+ {/* Overview Section */}
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600 p-3">
+                <div className="rounded-full bg-blue-100 p-2">
+                  <AlertCircle className="h-6 w-6 text-blue-600" />
+                </div>
+              Documents Required
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-muted-foreground text-gray-500">
+               Depending on the customer type, documents may include:
+<h4 className="mt-4 mb-3 text-base font-semibold text-gray-700">
+  Individual
+</h4>
+
+<ul className="my-5 space-y-4 text-sm text-gray-500 leading-relaxed list-disc pl-5">
+  <li>PAN Card</li>
+  <li>Aadhaar or other officially valid identity document (where legally permissible)</li>
+  <li>Passport / Driving Licence / Voter ID (as applicable)</li>
+  <li>Photograph</li>
+  <li>Mobile Number</li>
+  <li>Email Address</li>
+</ul>
+<h4 className="mt-4 mb-3 text-base font-semibold text-gray-700">
+  Proprietorship
+</h4>
+
+<ul className="my-5 space-y-4 text-sm text-gray-500 leading-relaxed list-disc pl-5">
+  <li>PAN</li>
+  <li>GST Registration (if applicable)</li>
+  <li>Business Registration</li>
+  <li>Address Proof</li>
+  <li>Cancelled Cheque</li>
+  <li>Bank Statement</li>
+</ul>
+<h4 className="mt-4 mb-3 text-base font-semibold text-gray-700">
+  Partnership / LLP
+</h4>
+
+<ul className="my-5 space-y-4 text-sm text-gray-500 leading-relaxed list-disc pl-5">
+  <li>PAN</li>
+  <li>Partnership Deed / LLP Incorporation Documents</li>
+  <li>GST Certificate (if applicable)</li>
+  <li>Bank Proof</li>
+  <li>Authorized Signatory Documents</li>
+</ul>
+<h4 className="mt-4 mb-3 text-base font-semibold text-gray-700">
+  Private Limited / Public Limited Company
+</h4>
+
+<ul className="my-5 space-y-4 text-sm text-gray-500 leading-relaxed list-disc pl-5">
+  <li>Certificate of Incorporation</li>
+  <li>PAN</li>
+  <li>Memorandum &amp; Articles of Association</li>
+  <li>GST Registration (if applicable)</li>
+  <li>Board Resolution</li>
+  <li>Director KYC</li>
+  <li>UBO Declaration (where required)</li>
+  <li>Cancelled Cheque</li>
+  <li>Bank Verification</li>
+  <li>Business Address Proof</li>
+</ul>
+Additional documents may be requested depending on the risk profile or partner requirements. 
+              </p>
+            </div>
+          </div>
+ {/* Overview Section */}
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600 p-3">
+                <div className="rounded-full bg-blue-100 p-2">
+                  <AlertCircle className="h-6 w-6 text-blue-600" />
+                </div>
+               Risk-Based Verification
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-muted-foreground text-gray-500">
+                Customers may be classified into Low, Medium, or High Risk based on factors such as:
+               <ul className="my-5 space-y-4 text-sm text-gray-500 leading-relaxed list-disc pl-5">
+                <li>Business category.</li>
+                 <li>Transaction profile.</li>
+                  <li>Geographic exposure.</li>
+                   <li>Regulatory requirements.</li> 
+                   <li>Nature of products or services.</li>
+               </ul>
+               Higher-risk customers may undergo Enhanced Due Diligence (EDD).
+              </p>
+            </div>
+          </div>
+ {/* Overview Section */}
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600 p-3">
+                <div className="rounded-full bg-blue-100 p-2">
+                  <AlertCircle className="h-6 w-6 text-blue-600" />
+                </div>
+            Data Protection
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-muted-foreground text-gray-500">
+                <p className="text-lg leading-relaxed text-gray-500">
+               KYC information is stored using appropriate technical and organizational safeguards.
+                <br />
+                Information is used only for authorised business purposes.
+                </p>
+                <ul className="my-5 space-y-4 text-lg leading-relaxed text-gray-500 list-disc pl-5">
+                <li>Identity verification.</li>
+                <li>Fraud prevention.</li>
+                <li>Security.</li>
+                <li>Regulatory compliance.</li>
+              <li>Contractual obligations.</li>
+              </ul>
+              Data is processed in accordance with our Privacy Policy and applicable data protection laws.
+
+              </p>
+            </div>
+          </div>
+ {/* Overview Section */}
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600 p-3">
+                <div className="rounded-full bg-blue-100 p-2">
+                  <AlertCircle className="h-6 w-6 text-blue-600" />
+                </div>
+                  Refusal or Suspension
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-muted-foreground text-gray-500">
+               SevenUnique may refuse onboarding or suspend services where:
+              <ul className="my-5 space-y-3 text-lg leading-relaxed text-gray-500 list-disc pl-5">
+              <li>False information is provided.</li>
+              <li>Documents appear fraudulent.</li>
+               <li>Required KYC information is not submitted.</li>
+               <li>Applicable legal or partner compliance requirements are not satisfied.</li>
+               <li>Continued service presents legal, security, or fraud risks.</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+ 
          
 
          <div className="border-0 shadow-lg rounded-2xl overflow-hidden bg-white">
