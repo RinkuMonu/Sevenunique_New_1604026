@@ -42,32 +42,63 @@ const CHAT_API_ENDPOINT = "/api/chat";
 //    wire up CHAT_API_ENDPOINT. Edit freely.
 const COMPANY_KNOWLEDGE = [
   {
-    keywords: ["service", "services", "what do you do", "offer"],
+    keywords: ["service", "services", "what do you do", "offer", "what can you build", "top service"],
     answer:
-      `We offer Web Development, Mobile App Development, Digital Marketing/SEO, UI/UX Design, and AI & Chatbot Solutions. Want me to connect you with our team for a specific service?`,
+      `We offer a wide range of services:\n\n**Top Services:**\n• AI Development\n• Web Development\n• Mobile App Development (Android & iOS)\n• Back-end Development\n• Front-end Development\n• Machine Learning\n• CMS Development\n• Cryptocurrency & Blockchain\n• QA Testing & Automation\n• UX/UI Design\n• eCommerce Development\n• SaaS Development\n• Data Engineering\n• Business Intelligence\n\n**Enterprise Services:**\n• Big Data, Cloud Applications, CRM Systems\n• Cybersecurity, DevOps, ERP Development\n• Backup Solutions, Digital Transformation\n\n**Engagement Models:**\n• Staff Augmentation, Dedicated Teams, Software Outsourcing\n\nWould you like to know more about any specific service?`,
   },
   {
-    keywords: ["price", "pricing", "cost", "quote", "charges"],
+    keywords: ["technology", "technologies", "tech stack", "framework", "language", "tools", "tech"],
     answer:
-      `Pricing depends on project scope, so our team puts together a custom quote after a quick call. Want me to schedule one for you?`,
+      `We work with **100+ technologies** across all major stacks:\n\n**Frontend:** React, Angular, Vue.js, Next.js, TypeScript, JavaScript\n**Backend:** Node.js, Python, Java, PHP, Django, Spring Boot, Ruby, Golang, .NET\n**Mobile:** Android, iOS, Swift, Kotlin, React Native, Flutter, Xamarin\n**Cloud:** AWS, Google Cloud, Microsoft Azure\n**DevOps:** Docker, Kubernetes, Terraform, GitHub Actions, Linux\n**Databases:** MongoDB, PostgreSQL, Redis\n**AI/Data:** TensorFlow, Machine Learning, Power BI, Pandas\n**Other:** Blockchain, Shopify, Salesforce, GraphQL, Cardano, C#, C++\n\nNeed experts in a specific technology? Our team can help!`,
   },
   {
-    keywords: ["contact", "email", "phone", "number", "reach"],
-    answer: `You can reach us at ${COMPANY_EMAIL} or ${COMPANY_PHONE}. I can also have our team call you directly — just share your number.`,
+    keywords: ["industry", "industries", "sector", "domain", "which industry", "field"],
+    answer:
+      `We have delivered **3500+ projects across 130+ sectors** including:\n\n**General Industries:**\nAgriculture, Automotive, Aviation, Banking, Construction, Education, Entertainment, Finance, Healthcare, Insurance, Martech, Oil and Gas, Real Estate, Retail, Startups, Supply Chain, Telecommunications, Travel and Hospitality\n\n**Fintech Products:**\n• AEPS Software\n• BBPS Software\n• DMT Software\n• Recharge Software\n• UTI / Pancard Software\n• Travel Software\n\nWe have experience in your industry too! Want to discuss your project?`,
   },
   {
-    keywords: ["location", "address", "based", "office", "where are you"],
-    answer: `We're a fintech & IT solutions company — for our exact office address, please check the Contact page or email ${COMPANY_EMAIL}.`,
+    keywords: ["price", "pricing", "cost", "quote", "charges", "how much", "budget"],
+    answer:
+      `Pricing depends on project scope (features, timeline, complexity), so our team puts together a **custom quote** after a short discovery call. Want me to schedule one for you?`,
   },
   {
-    keywords: ["hour", "timing", "open", "available", "support"],
-    answer: `Our team is generally available Monday–Saturday during business hours. Leave your number and we'll call you back at a time that works.`,
+    keywords: ["contact", "email", "phone", "number", "reach", "call us"],
+    answer: `You can reach us at **hello@sevenunique.com** or call **+91-8741886688**. Our team is available Monday–Saturday during business hours. I can also connect you directly — just share your details!`,
   },
   {
-    keywords: ["who are you", "what is sevenunique", "about", "company"],
-    answer: `${COMPANY_NAME} is a fintech and IT solutions provider specializing in AI, software development, digital payments, and enterprise solutions.`,
+    keywords: ["location", "address", "office", "where are you", "based"],
+    answer: `We're a global fintech & IT solutions company. For our exact office address, please check the Contact page or email **hello@sevenunique.com**.`,
+  },
+  {
+    keywords: ["hour", "timing", "open", "available", "support hours", "working hours"],
+    answer: `Our team is available **Monday–Saturday** during business hours (IST). Outside that, leave your details and we'll follow up on the next business day.`,
+  },
+  {
+    keywords: ["who are you", "about", "what is sevenunique", "company info", "tell me about"],
+    answer: `**SevenUnique Tech Solutions Pvt. Ltd.** is a fintech & IT company helping businesses grow with modern digital solutions. Since 2024, we've delivered **3500+ projects** across **130+ sectors**, working with companies from startups to Fortune 500 giants.\n\nWe specialise in AI, Web & Mobile Development, Digital Payments, and Enterprise Solutions.`,
+  },
+  {
+    keywords: ["ai development", "artificial intelligence", "machine learning", "ml"],
+    answer: `Our **AI & Machine Learning** services include:\n• Custom AI model development\n• Machine Learning solutions\n• Natural Language Processing (NLP)\n• Computer Vision\n• AI Chatbots & Virtual Assistants\n• Data Engineering & Business Intelligence\n• TensorFlow, Python, and cloud AI services\n\nWant to discuss your AI project? Our experts are ready!`,
+  },
+  {
+    keywords: ["web development", "website", "web app"],
+    answer: `Our **Web Development** services include:\n• Custom Website & Web App Development\n• Front-end (React, Next.js, Vue.js, Angular)\n• Back-end (Node.js, Python, Java, PHP)\n• eCommerce Development\n• CMS Development\n• SaaS Development\n• API Development & Integration\n\nWe build scalable, fast, and modern web solutions. Want a quote?`,
+  },
+  {
+    keywords: ["mobile app", "android", "ios", "app development", "flutter", "react native"],
+    answer: `Our **Mobile App Development** services include:\n• Android App Development (Kotlin, Java)\n• iOS App Development (Swift)\n• Cross-platform apps (React Native, Flutter)\n• Xamarin development\n\nWe've delivered hundreds of mobile apps across industries. Shall we discuss yours?`,
+  },
+  {
+    keywords: ["blockchain", "cryptocurrency", "crypto", "web3"],
+    answer: `Our **Blockchain & Cryptocurrency** services include:\n• Smart Contract Development\n• DeFi (Decentralised Finance) apps\n• Cryptocurrency Exchange platforms\n• NFT Marketplace Development\n• Cardano, Ethereum-based solutions\n\nInterested? Let's schedule a call with our blockchain team!`,
+  },
+  {
+    keywords: ["career", "job", "hiring", "vacancy", "join", "work with you"],
+    answer: `We're always looking for great talent! Check our **Job Opportunities** page or reach out to us at **hello@sevenunique.com**. We also have a **Talent Referral** program and **Our Circles Program** for community engagement.`,
   },
 ];
+
 
 function localAnswer(text) {
   const lower = text.toLowerCase();
@@ -240,8 +271,20 @@ export default function Chatbot() {
     }).catch((err) => console.error("Lead submission failed:", err));
   };
 
-  // ── Ask the backend (or local fallback) to answer a free-text question ──
+  // ── Ask the local KB first, then the backend for questions KB can't answer ──
   const answerFreeText = async (question) => {
+    // Try local knowledge base FIRST — it has comprehensive services/technologies data
+    const local = localAnswer(question);
+    if (local) {
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);
+        addBotMessage(local);
+      }, 500);
+      return;
+    }
+
+    // No local match — ask the backend AI
     setLoading(true);
     try {
       const res = await fetch(CHAT_API_ENDPOINT, {
@@ -256,12 +299,10 @@ export default function Chatbot() {
         data.reply || "Thanks for your question — our team will follow up shortly!"
       );
     } catch (err) {
-      // Backend not wired up yet — fall back to local keyword matching
-      const local = localAnswer(question);
+      // Backend not available — give a helpful fallback
       setLoading(false);
       addBotMessage(
-        local ||
-          `Thanks for asking! I've noted that down — our team will follow up with details. You can also reach us directly at ${COMPANY_EMAIL}.`
+        `Thanks for asking! Our team will follow up with details. You can also reach us directly at **${COMPANY_EMAIL}** or call **+91-8741886688**.`
       );
     }
     if (!open || minimized) setBadge((n) => n + 1);
@@ -320,6 +361,12 @@ export default function Chatbot() {
     addUserMessage(msg);
 
     if (step === "ASK_NAME") {
+      // If it looks like a question/keyword, answer it first without advancing the flow
+      const localReplyName = localAnswer(msg);
+      if (localReplyName) {
+        botSay(localReplyName);
+        return;
+      }
       if (msg.length < 2) {
         botSay("Please enter your full name so I can address you correctly 🙂");
         return;
@@ -332,6 +379,12 @@ export default function Chatbot() {
     }
 
     if (step === "ASK_MOBILE") {
+      // If it looks like a question/keyword, answer it without consuming the mobile step
+      const localReplyMobile = localAnswer(msg);
+      if (localReplyMobile) {
+        botSay(localReplyMobile);
+        return;
+      }
       if (!isValidMobile(msg)) {
         botSay("That doesn't look like a valid number. Please enter a 10-digit mobile number.");
         return;
@@ -349,6 +402,15 @@ export default function Chatbot() {
     if (step === "CHAT") {
       // Free Q&A mode — answer using backend or local knowledge base
       answerFreeText(msg);
+      return;
+    }
+
+    // During lead-capture steps (ASK_SERVICE / future steps), if user types
+    // a question instead of clicking a button, try to answer it from the
+    // local knowledge base so they're never left hanging.
+    const localReply = localAnswer(msg);
+    if (localReply) {
+      botSay(localReply);
       return;
     }
 
