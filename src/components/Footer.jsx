@@ -442,6 +442,12 @@ export default function Footer() {
             >
               Privacy Policy
             </Link>
+            <Link
+              href="/apiterms"
+              className="hover:text-[#f4622a] transition"
+            >
+              ApiTerms
+            </Link>
 
             <Link
               href="/termsAndCondition"
