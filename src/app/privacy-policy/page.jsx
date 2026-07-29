@@ -126,18 +126,21 @@ export default function PrivacyPolicy() {
                 <div className="rounded-full bg-blue-100 p-2">
                   <AlertCircle className="h-6 w-6 text-blue-600" />
                 </div>
-                Salient features that we offer seclusion of your data
+                Introduction
               </div>
             </div>
             <div className="p-8">
               <p className="text-lg leading-relaxed text-muted-foreground text-gray-500">
-                Our privacy policy prioritizes the protection of your personal data, ensuring that any information we
-                collect is securely stored and used exclusively for the purpose of delivering and enhancing our
-                services. We are committed to respecting your privacy and will never share your data with third parties
-                without your explicit consent. Additionally, we adhere to all applicable data protection laws and
-                regulations, including GDPR and other relevant frameworks. Our policy ensures transparency, providing
-                you with clear information on how your data is collected, processed, and stored, so you can make
-                informed decisions about your privacy and security when interacting with our services.
+                This Enterprise Privacy Policy governs the collection, use, disclosure, storage,
+                processing and protection of information handled by SevenUnique Tech Solutions
+                Private Limited while providing software development, SaaS, API, cloud, AI, fintech
+                integrations, enterprise applications and managed IT services. We implement
+                organizational, administrative and technical safeguards to ensure confidentiality,
+                integrity and availability of information. Policies are reviewed periodically, employees
+                receive security awareness training, vendors are evaluated, and privacy-by-design
+                principles are considered throughout the software development lifecycle. This section
+                should be read together with applicable customer agreements, API documentation and
+                security standards.
               </p>
             </div>
           </div>
@@ -150,21 +153,24 @@ export default function PrivacyPolicy() {
                 <div className="rounded-full bg-green-100 p-2">
                   <Lock className="h-6 w-6 text-green-600" />
                 </div>
-                Data Security
+                Definitions
               </div>
             </div>
             <div className="p-8">
               <p className="text-lg leading-relaxed text-muted-foreground text-gray-500 mb-6">
-                We take reasonable precautions to protect your personal data from unauthorized access, disclosure,
-                alteration, or destruction. We use encryption, secure servers, and other measures to safeguard your
-                information. These are measures and practices that protect digital data from unauthorized access,
-                corruption, theft, or loss. It is a critical aspect of safeguarding sensitive information and ensuring
-                the privacy of individuals and organizations. The goal of data security is to maintain the
-                confidentiality, integrity, and availability of data.
+                Defines Personal Data, Sensitive Data, Customer Data, API Data, Processing, Controller,
+                Processor, User, Client and Service Provider. We implement organizational,
+                administrative and technical safeguards to ensure confidentiality, integrity and
+                availability of information. Policies are reviewed periodically, employees receive
+                security awareness training, vendors are evaluated, and privacy-by-design principles
+                are considered throughout the software development lifecycle. This section should be
+                read together with applicable customer agreements, API documentation and security
+                standards.
+
               </p>
 
               {/* Security Principles */}
-              <div className="grid gap-6 md:grid-cols-3">
+              {/* <div className="grid gap-6 md:grid-cols-3">
                 <div className="border-2 border-dashed border-gray-200 bg-gradient-to-br from-white to-gray-50 transition-all hover:border-green-300 hover:shadow-md">
                   <div className="p-6 text-center">
                     <div className="mb-4 flex justify-center">
@@ -214,9 +220,10 @@ export default function PrivacyPolicy() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
+        
 
           {/* Information Sharing Section */}
           <div className="border-0 shadow-lg">
@@ -225,46 +232,20 @@ export default function PrivacyPolicy() {
                 <div className="rounded-full bg-purple-100 p-2">
                   <Share2 className="h-6 w-6 text-purple-600" />
                 </div>
-                Sharing Your Information
+                Scope
               </div>
             </div>
             <div className="p-8">
               <p className="text-lg leading-relaxed text-muted-foreground  text-gray-500">
-                At our company, we prioritize the protection of your personal information and respect your privacy. We
-                do not engage in the sale, trade, or rental of your personal data to third parties for any marketing or
-                commercial purposes.
-                <br />
-                <br />
-                Your information is solely used to enhance your experience with our services and to ensure we can
-                provide the best possible service to you.
-                <br />
-                <br />
-                However, there are instances where we may need to share your information with trusted partners or
-                service providers who assist us in operating our website or conducting business operations. These
-                partners may include web hosting companies, payment processors, customer support services, or analytics
-                providers. In these cases, we ensure that all third-party partners sign strict confidentiality
-                agreements.
-                <br />
-                <br />
-                These agreements are designed to protect your data and ensure that it is used only for the purposes we
-                have outlined, such as processing transactions or improving our services.
-                <br />
-                <br />
-                The third-party service providers we work with are required to follow industry standards for data
-                protection and must adhere to similar privacy and security measures as we do. They are not permitted to
-                use your information for any purpose other than to provide the specific services we have contracted them
-                for.
-                <br />
-                <br />
-                We are transparent about these practices and make it clear to you when your information is being shared
-                with such third parties. Additionally, we ensure that your personal data is only shared to the extent
-                necessary for these partners to fulfill their role in helping us deliver the services you need. We take
-                every precaution to prevent misuse or unauthorized access to your information, ensuring your data
-                remains secure and confidential.
-                <br />
-                <br />
-                We will never disclose, sell, or lease your personal information to any entity without your explicit
-                consent, except when required by law or as part of a legal process.
+                Applies to websites, portals, dashboards, APIs, SDKs, mobile apps, cloud platforms,
+                customer support, integrations and partner ecosystems. We implement organizational,
+                administrative and technical safeguards to ensure confidentiality, integrity and
+                availability of information. Policies are reviewed periodically, employees receive
+                security awareness training, vendors are evaluated, and privacy-by-design principles
+                are considered throughout the software development lifecycle. This section should be
+                read together with applicable customer agreements, API documentation and security
+                standards.
+
               </p>
             </div>
           </div>
@@ -276,34 +257,365 @@ export default function PrivacyPolicy() {
                 <div className="rounded-full bg-orange-100 p-2">
                   <Cookie className="h-6 w-6 text-orange-600" />
                 </div>
-                Concern for Cookies
+                Legal Compliance
               </div>
             </div>
             <div className="p-8">
               <p className="text-lg leading-relaxed  text-gray-500 ">
-                While cookies offer significant benefits, they also raise concerns about privacy. As a result, you have
-                control over them. Most modern browsers allow you to manage cookies by adjusting your settings. You can
-                choose to block or delete cookies, although doing so might affect your experience on certain websites,
-                as some features may no longer work as intended.
-                <br />
-                <br />
-                Our team implements a robust cookie policy that complies with privacy regulations like GDPR and CCPA.
-                <br />
-                <br />
-                This includes informing users about the types of cookies being used (such as necessary, performance, and
-                advertising cookies) and providing them with clear options to consent or manage preferences. We deploy a
-                cookie consent banner or pop-up when users first visit the website, allowing them to accept, reject, or
-                customize cookie settings.
-                <br />
-                <br />
-                Additionally, it is important to ensure that only necessary cookies are used by default, with
-                non-essential cookies activated only after user consent. We also maintain transparency in our privacy
-                policy, regularly audit cookie practices for security and compliance, and offer users an easy way to
-                opt-out or delete cookies at any time.
+                Our privacy program aligns with the Digital Personal Data Protection Act 2023 (India),
+                GDPR, Information Technology Act 2000, ISO 27001 principles and applicable
+                international privacy obligations. We implement organizational, administrative and
+                technical safeguards to ensure confidentiality, integrity and availability of information.
+                Policies are reviewed periodically, employees receive security awareness training,
+                vendors are evaluated, and privacy-by-design principles are considered throughout the
+                software development lifecycle. This section should be read together with applicable
+                customer agreements, API documentation and security standards.
+
               </p>
             </div>
           </div>
 
+            {/* Info Section */}
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600 p-3">
+                <div className="rounded-full bg-blue-100 p-2">
+                  <AlertCircle className="h-6 w-6 text-blue-600" />
+                </div>
+                Information Collected
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-muted-foreground text-gray-500">
+               Identity, business information, billing, GST, contact details, authentication data, IP
+                address, browser details, cookies, audit logs, API credentials, usage analytics, crash
+                reports and communications. We implement organizational, administrative and
+                technical safeguards to ensure confidentiality, integrity and availability of information.
+                Policies are reviewed periodically, employees receive security awareness training,
+                vendors are evaluated, and privacy-by-design principles are considered throughout the
+                software development lifecycle. This section should be read together with applicable
+                customer agreements, API documentation and security standards.
+              </p>
+            </div>
+          </div>
+
+           {/* Information Sharing Section */}
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-purple-50 to-pink-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+                <div className="rounded-full bg-purple-100 p-2">
+                  <Share2 className="h-6 w-6 text-purple-600" />
+                </div>
+                 AI Services
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-muted-foreground  text-gray-500">
+                AI features process submitted content only for requested functionality, security
+                monitoring and service quality. Customers remain responsible for ensuring lawful
+                submission of data. We implement organizational, administrative and technical
+                safeguards to ensure confidentiality, integrity and availability of information. Policies
+                are reviewed periodically, employees receive security awareness training, vendors are
+                evaluated, and privacy-by-design principles are considered throughout the software
+                development lifecycle. This section should be read together with applicable customer
+                agreements, API documentation and security standards.
+              </p>
+            </div>
+          </div>
+            
+          {/* Overview Section */}
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600 p-3">
+                <div className="rounded-full bg-blue-100 p-2">
+                  <AlertCircle className="h-6 w-6 text-blue-600" />
+                </div>
+                 Purpose of Processing
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-muted-foreground text-gray-500">
+                Service delivery, onboarding, authentication, fraud prevention, billing, compliance,
+                analytics, customer support, system improvement and legal obligations. We implement
+                organizational, administrative and technical safeguards to ensure confidentiality,
+                integrity and availability of information. Policies are reviewed periodically, employees
+                receive security awareness training, vendors are evaluated, and privacy-by-design
+                principles are considered throughout the software development lifecycle. This section
+                should be read together with applicable customer agreements, API documentation and
+                security standards.
+              </p>
+            </div>
+          </div>
+
+
+            {/* Cookie Policy Section */}
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-orange-50 to-yellow-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+                <div className="rounded-full bg-orange-100 p-2">
+                  <Cookie className="h-6 w-6 text-orange-600" />
+                </div>
+                 Cookies
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed  text-gray-500 ">
+              Necessary cookies operate the platform. Analytics, preference and marketing cookies
+              require consent where applicable. Users may modify preferences anytime. We
+              implement organizational, administrative and technical safeguards to ensure
+              confidentiality, integrity and availability of information. Policies are reviewed
+              periodically, employees receive security awareness training, vendors are evaluated,
+              and privacy-by-design principles are considered throughout the software development
+              lifecycle. This section should be read together with applicable customer agreements,
+              API documentation and security standards.
+              </p>
+            </div>
+          </div>
+
+          {/* Data Security Section */}
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-green-50 to-blue-50">
+
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+                <div className="rounded-full bg-green-100 p-2">
+                  <Lock className="h-6 w-6 text-green-600" />
+                </div>
+                Data Sharing
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-muted-foreground text-gray-500 mb-6">
+                We never sell personal information. Data may be shared only with cloud providers,
+                payment processors, communication providers, regulators or legal authorities where
+                required. We implement organizational, administrative and technical safeguards to
+                ensure confidentiality, integrity and availability of information. Policies are reviewed
+                periodically, employees receive security awareness training, vendors are evaluated,
+                and privacy-by-design principles are considered throughout the software development
+                lifecycle. This section should be read together with applicable customer agreements,
+                API documentation and security standards.
+
+              </p>
+              </div>
+              </div>
+
+            
+           {/* Information Sharing Section */}
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-purple-50 to-pink-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+                <div className="rounded-full bg-purple-100 p-2">
+                  <Share2 className="h-6 w-6 text-purple-600" />
+                </div>
+                  International Transfers
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-muted-foreground  text-gray-500">
+                Cross-border transfers are protected using appropriate contractual and technical
+                safeguards. We implement organizational, administrative and technical safeguards to
+                 ensure confidentiality, integrity and availability of information. Policies are reviewed
+                periodically, employees receive security awareness training, vendors are evaluated,
+                and privacy-by-design principles are considered throughout the software development
+                lifecycle. This section should be read together with applicable customer agreements,
+                API documentation and security standards
+              </p>
+            </div>
+          </div>
+                    {/* Data Security Section */}
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-green-50 to-blue-50">
+
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+                <div className="rounded-full bg-green-100 p-2">
+                  <Lock className="h-6 w-6 text-green-600" />
+                </div>
+                Security
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-muted-foreground text-gray-500 mb-6">
+               Encryption in transit and at rest, RBAC, MFA, firewalls, secure SDLC, logging, SIEM
+              monitoring, vulnerability assessments, penetration testing, backups and disaster
+              recovery. We implement organizational, administrative and technical safeguards to
+                ensure confidentiality, integrity and availability of information. Policies are reviewed
+                periodically, employees receive security awareness training, vendors are evaluated,
+                and privacy-by-design principles are considered throughout the software development
+                lifecycle. This section should be read together with applicable customer agreements,
+                API documentation and security standards.
+
+              </p>
+              </div>
+              </div>
+
+            {/* Overview Section */}
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600 p-3">
+                <div className="rounded-full bg-blue-100 p-2">
+                  <AlertCircle className="h-6 w-6 text-blue-600" />
+                </div>
+                 Data Retention
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-muted-foreground text-gray-500">
+                Information is retained only for contractual, operational, taxation, audit, dispute
+                resolution and legal requirements before secure deletion or anonymization. We
+                implement organizational, administrative and technical safeguards to ensure
+                confidentiality, integrity and availability of information. Policies are reviewed
+                periodically, employees receive security awareness training, vendors are evaluated,
+                and privacy-by-design principles are considered throughout the software development
+                lifecycle. This section should be read together with applicable customer agreements,
+                API documentation and security standards.
+              </p>
+            </div>
+          </div>
+           {/* Information Sharing Section */}
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-purple-50 to-pink-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+                <div className="rounded-full bg-purple-100 p-2">
+                  <Share2 className="h-6 w-6 text-purple-600" />
+                </div>
+                 User Rights
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-muted-foreground  text-gray-500">
+                Users may request access, correction, deletion, portability, restriction, objection and
+                withdrawal of consent where applicable. We implement organizational, administrative
+                and technical safeguards to ensure confidentiality, integrity and availability of
+                information. Policies are reviewed periodically, employees receive security awareness
+                training, vendors are evaluated, and privacy-by-design principles are considered
+                throughout the software development lifecycle. This section should be read together
+                with applicable customer agreements, API documentation and security standards.
+              </p>
+            </div>
+          </div>
+
+           {/* Data Security Section */}
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-green-50 to-blue-50">
+
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+                <div className="rounded-full bg-green-100 p-2">
+                  <Lock className="h-6 w-6 text-green-600" />
+                </div>
+                Incident Response
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-muted-foreground text-gray-500 mb-6">
+               Security incidents are investigated promptly. Notifications are provided where legally
+                required. We implement organizational, administrative and technical safeguards to
+                  ensure confidentiality, integrity and availability of information. Policies are reviewed
+                periodically, employees receive security awareness training, vendors are evaluated,
+                and privacy-by-design principles are considered throughout the software development
+              lifecycle. This section should be read together with applicable customer agreements,
+              API documentation and security standards.
+              </p>
+              </div>
+              </div>
+
+               {/* Cookie Policy Section */}
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-orange-50 to-yellow-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+                <div className="rounded-full bg-orange-100 p-2">
+                  <Cookie className="h-6 w-6 text-orange-600" />
+                </div>
+                 Third-Party Integrations
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed  text-gray-500 ">
+              Integrated providers maintain independent privacy practices. Clients should review
+              those policies before use. We implement organizational, administrative and technical
+              safeguards to ensure confidentiality, integrity and availability of information. Policies
+              are reviewed periodically, employees receive security awareness training, vendors are
+              evaluated, and privacy-by-design principles are considered throughout the software
+              development lifecycle. This section should be read together with applicable customer
+              agreements, API documentation and security standards.
+              </p>
+            </div>
+          </div>
+             {/* Data Security Section */}
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-green-50 to-blue-50">
+
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+                <div className="rounded-full bg-green-100 p-2">
+                  <Lock className="h-6 w-6 text-green-600" />
+                </div>
+                Children's Privacy
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-muted-foreground text-gray-500 mb-6">
+               Services are intended for organizations and legally eligible users. We implement
+              organizational, administrative and technical safeguards to ensure confidentiality,
+              integrity and availability of information. Policies are reviewed periodically, employees
+              receive security awareness training, vendors are evaluated, and privacy-by-design
+              principles are considered throughout the software development lifecycle. This section
+              should be read together with applicable customer agreements, API documentation and
+              security standards.
+              </p>
+              </div>
+              </div>
+               {/* Information Sharing Section */}
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-purple-50 to-pink-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+                <div className="rounded-full bg-purple-100 p-2">
+                  <Share2 className="h-6 w-6 text-purple-600" />
+                </div>
+                 Governing Law
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-muted-foreground  text-gray-500">
+                Governed by applicable laws of India unless otherwise agreed by contract. We
+                implement organizational, administrative and technical safeguards to ensure
+                confidentiality, integrity and availability of information. Policies are reviewed
+                periodically, employees receive security awareness training, vendors are evaluated,
+                and privacy-by-design principles are considered throughout the software development
+                lifecycle. This section should be read together with applicable customer agreements,
+                API documentation and security standards.
+
+              </p>
+            </div>
+          </div>
+          {/* Overview Section */}
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600 p-3">
+                <div className="rounded-full bg-blue-100 p-2">
+                  <AlertCircle className="h-6 w-6 text-blue-600" />
+                </div>
+                 Changes
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-muted-foreground text-gray-500">
+                This policy may be updated periodically. Continued use constitutes acceptance of
+                revisions. We implement organizational, administrative and technical safeguards to
+                ensure confidentiality, integrity and availability of information. Policies are reviewed
+                periodically, employees receive security awareness training, vendors are evaluated,
+                and privacy-by-design principles are considered throughout the software development
+                lifecycle. This section should be read together with applicable customer agreements,
+                API documentation and security standards.
+              </p>
+            </div>
+          </div>
+
+
+
+
+          
+
+
+
+          
           {/* Contact Support */}
           <div className="border-0 bg-gradient-to-r from-[#ab6545] to-red-500 text-white shadow-2xl">
             <div className="p-8 text-center">

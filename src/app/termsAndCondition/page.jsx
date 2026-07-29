@@ -131,321 +131,645 @@ export default function TermsOfUse() {
               </div>
             </div>
           </div>
-
-          {/* Overview Section */}
+          
+  
+ {/* Overview Section */}
           <div className="border-0 shadow-lg">
             <div className="bg-gradient-to-r from-blue-50 to-purple-50">
               <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600 p-3">
                 <div className="rounded-full bg-blue-100 p-2">
                   <AlertCircle className="h-6 w-6 text-blue-600" />
                 </div>
-                General Work Terms and Client Responsibilities & Liabilities
+                Introduction
               </div>
             </div>
             <div className="p-8">
               <p className="text-lg leading-relaxed text-muted-foreground text-gray-500">
-                The client shall be solely responsible for providing all site
-                content, including text and multimedia, to Sevenuniqu Tech
-                Solutions Pvt. Ltd. before work begins. By engaging with
-                Sevenunique Tech Solutions Pvt. Ltd., the user confirms that
-                they have read, understood, and accepted the Privacy Policy of
-                Sevenunique Tech Solutions Pvt. Ltd. The user also agrees to
-                receive SMS and email notifications on their registered mobile
-                number. Additionally, the client is responsible for creating
-                proper backups of all website content before allowing
-                SevenUnique Tech Solutions Pvt. Ltd. to proceed with the agreed
-                tasks. The company will not be held liable for any loss or
-                damage to existing data under any circumstances.
-                <br />
-                The contract does not hold Sevenunique Tech Solutions Pvt. Ltd.
-                responsible for tasks related to data entry, web hosting, or
-                custom artwork/graphics unless explicitly specified, agreed
-                upon, and paid by both parties. Any artwork, images, or text
-                provided or created by Sevenunique Tech Solutions Pvt. Ltd. for
-                the client will remain the property of the company and/or its
-                suppliers unless otherwise agreed upon in writing.
-                <br />
-                Sevenunique Tech Solutions Pvt. Ltd. strives to meet all
-                delivery timelines; however, there may be instances where
-                extensions or adjustments are necessary due to unforeseen and
-                unavoidable circumstances. These may include deployment
-                challenges, dependencies, third-party support delays,
-                development bottlenecks, resource unavailability due to
-                emergencies, communication delays, or similar issues. The
-                company will make every effort to address these challenges
-                promptly and minimize any impact on delivery schedules.
-                <br />
-                Sevenunique Tech Solutions Pvt. Ltd. will provide the Client
-                with an opportunity to review the website's design and content
-                during the development process and after completion. The company
-                will wait a period of 7 days to receive feedback on the shared
-                work or outputs. If the Client does not respond within this
-                timeframe, the material will be considered automatically
-                accepted and approved. The Client retains copyright ownership of
-                any data, files, or graphic logos provided and grants
-                Sevenunique Tech Solutions Pvt. Ltd. the rights to publish and
-                use such materials. It is the Client's responsibility to obtain
-                the necessary permissions and rights for any third-party
-                copyrighted information or files used in the project.
-                Additionally, the Client agrees to provide Sevenunique Tech
-                Solutions Pvt. Ltd. with the rights to use such materials and
-                indemnify the company against any claims arising from the
-                Client's failure to secure proper copyright permissions. A
-                contract for website design and/or placement serves as the
-                Client's assurance to Sevenunique Tech Solutions Pvt. Ltd. that
-                all required permissions and authorizations have been obtained.
-                <br />
-                Evidence of permissions and authorizations may be requested.
-                SevenUnique Tech Solutions Pvt. Ltd. will not be held
-                responsible for any changes made to the Client's pages or
-                website by the Client or any third party after deployment. These
-                changes may include, but are not limited to, additions,
-                modifications, or deletions. The company may charge a one-time
-                Web Development fee to address and resolve any issues arising
-                from such alterations.
+                <p className="text-lg leading-relaxed text-gray-500">
+  These Terms & Conditions ("Terms") govern the use of the services provided by SevenUnique Tech Solutions Private Limited ("SevenUnique", "Company", "we", "our", or "us"). By accessing our website, purchasing any service, signing a quotation, proposal, work order, or making any payment, you agree to be legally bound by these Terms.
+</p>
+
+<p className="mt-4 text-lg leading-relaxed text-gray-500">
+  These Terms apply to all software development, website development, mobile application development, API services, SaaS platforms, cloud solutions, AI services, enterprise software, IT consulting, maintenance, hosting, and related services provided by SevenUnique.
+</p>
+
+<p className="mt-4 text-lg leading-relaxed text-gray-500">
+  By continuing to use our services, you acknowledge that you have read, understood, and agreed to comply with these Terms & Conditions and all applicable laws and regulations governing the use of our services.
+</p>
               </p>
             </div>
           </div>
 
-          {/* Data Security Section */}
-          <div className="border-0 shadow-lg">
+
+              <div className="border-0 shadow-lg">
             <div className="bg-gradient-to-r from-green-50 to-blue-50">
               <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
                 <div className="rounded-full bg-green-100 p-2">
                   <Lock className="h-6 w-6 text-green-600" />
                 </div>
-                Payments
+               Scope of Services
               </div>
             </div>
             <div className="p-8">
               <p className="text-lg leading-relaxed text-muted-foreground text-gray-500 mb-6">
-                Sevenunique Tech Solutions Pvt. Ltd. accepts payments via
-                cheque, cash, or bank transfers, though the company reserves the
-                right to refuse any payment method without prior notice.
-                Additionally, SevenUnique Tech Solutions Pvt. Ltd. retains the
-                right to withdraw accepted payment methods or adjust pricing at
-                any time without notice. If the Customer cancels the service
-                before its completion, a cancellation fee may apply, equivalent
-                to the value of the work completed up to the cancellation point.
-                Failure to pay the cancellation fee or settle overdue amounts
-                may result in legal action if necessary.
+                  SevenUnique provides, but is not limited to:
+                  <ul className="my-5 space-y-3 text-lg leading-relaxed text-gray-500 list-disc pl-5">
+                  <li>Custom Software Development</li>
+                  <li>Website Design & Development</li>
+                  <li>Mobile Application Development</li>
+                  <li>API Development & API Integration</li>
+                  <li>SaaS Platforms</li>
+                  <li>Cloud Solutions</li>
+                  <li>Enterprise Software</li>
+                  <li>AI & Automation Solutions</li>
+                  <li>UI/UX Design</li>
+                  <li>Payment Gateway Integration</li>
+                  <li>Maintenance & Support</li>
+                  <li>Digital Transformation Services</li>
+                    </ul>
+                    <p className="mt-4 text-lg leading-relaxed text-gray-500">
+                    All services are governed by the agreed proposal, quotation, Statement of Work (SOW), purchase order,
+                    or contract.</p>
               </p>
             </div>
           </div>
 
-          {/* Information Sharing Section */}
-          <div className="border-0 shadow-lg">
-            <div className="bg-gradient-to-r from-purple-50 to-pink-50">
-              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
-                <div className="rounded-full bg-purple-100 p-2">
-                  <Share2 className="h-6 w-6 text-purple-600" />
-                </div>
-                Support and Third Party
-              </div>
-            </div>
-            <div className="p-8">
-              <p className="text-lg leading-relaxed text-muted-foreground  text-gray-500">
-                Upon site launch, we provide free support for the first month.
-                After this period, support services are charged based on various
-                pricing packages tailored to the client's needs, with attractive
-                discounts available for higher-tier packages.
-                <br />
-                The scope of support includes bug fixes and email support but
-                excludes issues related to site architecture, rule changes, and
-                add-ons or enhancements. Any third-party products, services, or
-                integrations requiring licensing, payments, or copyright
-                compliance will be the sole responsibility of the client.
-                Alternatively, Sevenunique Tech Solutions Pvt. Ltd. can procure
-                them on the client's behalf, subject to pre-payment for
-                associated costs.
-                <br />
-                Fees charged by Sevenunique Tech Solutions Pvt. Ltd. do not
-                include out-of-pocket expenses or claims from third-party
-                products or services. The company does not guarantee or warrant
-                the accuracy or performance of any third-party product or
-                service. Additionally, any upgrades or modifications to
-                third-party products or services used in the project may require
-                a feasibility review and potential adjustments to pricing and
-                timelines.
-              </p>
-            </div>
-          </div>
 
-          {/* Cookie Policy Section */}
           <div className="border-0 shadow-lg">
             <div className="bg-gradient-to-r from-orange-50 to-yellow-50">
               <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
                 <div className="rounded-full bg-orange-100 p-2">
                   <Cookie className="h-6 w-6 text-orange-600" />
                 </div>
-                Re-work, Enhancements/Add-ons and Billing
+                Client Responsibilities
               </div>
             </div>
             <div className="p-8">
               <p className="text-lg leading-relaxed  text-gray-500 ">
-                Any additional features not included in the agreed scope of work
-                will be addressed through a Change Management process and billed
-                separately. Scope changes occurring after wireframe approval
-                will also incur additional charges, with corresponding
-                adjustments to timelines and costs. While minor tweaks or
-                reworks are typically accommodated, repeated or excessive
-                requests may be deemed abusive. <br />
-                In such cases, a list of the work involved will be compiled, and
-                additional charges will apply based on the time and effort
-                required, ranging from $15 to $20 per hour. Although we strive
-                to include most changes within the project budget, certain
-                requests may be classified as enhancements or add-ons and will
-                be chargeable. <br />
-                Clients will be informed of such costs before work begins. Any
-                rework, changes, or tweaks requested after approval or
-                subsequent project stages will also be treated as additional
-                work and billed accordingly. The client agrees to pay all fees
-                charged by Sevenunique Tech Solutions Pvt. Ltd. in full, without
-                deductions, discounts, or offsets, by the agreed due dates.
+                The Client agrees to:
+                <ul className="my-5 space-y-3 text-lg leading-relaxed text-gray-500 list-disc pl-5">
+                <li>Provide complete and accurate project requirements.</li>
+                <li>Provide all required content, logos, images, documents, credentials, and technical information before development begins.</li>
+               <li>Ensure that all supplied content is legally owned or properly licensed.</li>
+               <li>Maintain backups of all existing website and business data.</li>
+               <li>Review deliverables within the agreed review period.</li>
+               <li>Make payments according to the agreed payment schedule.</li>
+              </ul>
+               <p className="mt-4 text-lg leading-relaxed text-gray-500">
+                SevenUnique shall not be liable for delays caused by incomplete requirements or delayed client
+                responses.
+               </p>
               </p>
             </div>
           </div>
 
-          <div className="border-0 shadow-lg">
-            <div className="bg-gradient-to-r from-green-50 to-blue-50">
+            <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-orange-50 to-yellow-50">
               <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
-                <div className="rounded-full bg-green-100 p-2">
-                  <Lock className="h-6 w-6 text-green-600" />
+                <div className="rounded-full bg-orange-100 p-2">
+                  <Cookie className="h-6 w-6 text-orange-600" />
                 </div>
-                Approvals and Delivery
+                 Intellectual Property
               </div>
             </div>
             <div className="p-8">
-              <p className="text-lg leading-relaxed text-muted-foreground text-gray-500 mb-6">
-                The project will progress through various stages, with work on
-                the next stage commencing only after receiving approval and the
-                agreed payments for the previous stage. Upon completion of the
-                service (website design and/or development), the website will be
-                uploaded to Sevenunique Tech Solutions Pvt. Ltd.'s server for
-                the Client's review and approval.
-                <br /> Once approved, the website will be uploaded to the final
-                destination server. Sevenunique Tech Solutions Pvt. Ltd.
-                reserves the right to delay the final upload until full payment
-                has been received. All code and materials developed during the
-                project will be transferred to the Client upon project
-                completion and after the necessary approvals. Ownership of the
-                code will reside with the Client after final payments are made.{" "}
-                <br />
-                Sevenunique Tech Solutions Pvt. Ltd. retains the right to
-                showcase the completed work and/or deployed website as a
-                reference for potential clients. If the Client wishes to
-                restrict this, they must notify Sevenunique Tech Solutions Pvt.
-                Ltd. in advance and obtain prior approval for such a request.
+              <p className="text-lg leading-relaxed  text-gray-500 ">
+                Unless otherwise agreed in writing:
+                <ul className="my-5 space-y-3 text-lg leading-relaxed text-gray-500 list-disc pl-5">
+                <li>The Client retains ownership of materials supplied by the Client.</li>
+                <li>SevenUnique retains ownership of its proprietary frameworks, reusable libraries, source components, methodologies, templates, and development tools.</li>
+                <li>Ownership of custom-developed deliverables transfers to the Client only after full payment has been received.</li>
+                </ul>
               </p>
             </div>
           </div>
 
-          <div className="border-0 shadow-lg">
-            <div className="bg-gradient-to-r from-green-50 to-blue-50">
+            <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-orange-50 to-yellow-50">
               <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
-                <div className="rounded-full bg-green-100 p-2">
-                  <Lock className="h-6 w-6 text-green-600" />
+                <div className="rounded-full bg-orange-100 p-2">
+                  <Cookie className="h-6 w-6 text-orange-600" />
                 </div>
-                Limitations of Liability
+                Third-Party Materials
               </div>
             </div>
             <div className="p-8">
-              <p className="text-lg leading-relaxed text-muted-foreground text-gray-500 mb-6">
-                Sevenunique Tech Solutions Pvt. Ltd. will exercise reasonable
-                skill and care in providing its services. However, the company
-                makes no guarantees and disclaims all express or implied
-                warranties regarding the availability, quality, accuracy,
-                timeliness, completeness, performance, or fitness of the
-                services provided. <br />
-                Sevenunique Tech Solutions Pvt. Ltd., including its employees
-                and agents, accepts no liability for any loss or damage caused
-                by inaccuracies, omissions, delays, or errors in the website's
-                production, whether due to negligence or other reasons.
-                Furthermore, the company is not responsible for any loss or
-                damage to the Client's artwork, photos, data, or content
-                supplied for the website, regardless of the cause. <br />
-                Except in cases of death or personal injury caused by the
-                company's negligence, Sevenunique Tech Solutions Pvt. Ltd. will
-                not be liable for any damages arising from or in connection with
-                this agreement or the operation of the services, whether in
-                contract, tort, or otherwise.
-                <br /> The company will not be responsible for any direct,
-                indirect, or consequential damages, including loss of profit,
-                property damage, or third-party claims. Additionally,
-                Sevenunique Tech Solutions Pvt. Ltd. does not guarantee services
-                provided by third-party organizations and will not be held
-                liable for any failures or issues related to third-party
-                services.
-              </p>
+              <p className="text-lg leading-relaxed text-gray-500">
+  Projects may include third-party:
+</p>
+
+<ul className="my-5 space-y-3 text-lg leading-relaxed text-gray-500 list-disc pl-5">
+  <li>APIs</li>
+  <li>Libraries</li>
+  <li>Themes</li>
+  <li>Plugins</li>
+  <li>Fonts</li>
+  <li>Payment Gateways</li>
+  <li>Cloud Services</li>
+  <li>Hosting Providers</li>
+</ul>
+
+<p className="text-lg leading-relaxed text-gray-500">
+  Licensing fees and compliance responsibilities remain with the Client unless
+  specifically included in the proposal.
+</p>
+
+<p className="mt-4 text-lg leading-relaxed text-gray-500">
+  SevenUnique is not responsible for failures, outages, policy changes, or
+  discontinued services of third-party providers.
+</p>
             </div>
           </div>
 
-          <div className="border-0 shadow-lg">
-            <div className="bg-gradient-to-r from-green-50 to-blue-50">
+            <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-orange-50 to-yellow-50">
               <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
-                <div className="rounded-full bg-green-100 p-2">
-                  <Lock className="h-6 w-6 text-green-600" />
+                <div className="rounded-full bg-orange-100 p-2">
+                  <Cookie className="h-6 w-6 text-orange-600" />
                 </div>
-                Timescale
+                Payments
               </div>
             </div>
             <div className="p-8">
-              <p className="text-lg leading-relaxed text-muted-foreground text-gray-500 mb-6">
-                Sevenunique Tech Solutions Pvt. Ltd. will make every effort to
-                complete all services within the agreed-upon timescale. The
-                project timeline will begin once the agreed deposit (ranging
-                from 30% to 50% of the project price, as mutually discussed and
-                agreed upon before contract finalization) and all required
-                website content from the Customer are received. However,
-                Sevenunique Tech Solutions Pvt. Ltd. may need to extend the
-                timescale if circumstances beyond its control arise.
-              </p>
+             <p className="text-lg leading-relaxed text-gray-500">
+  Payment milestones shall be defined in the quotation or agreement.
+</p>
+
+<p className="mt-4 text-lg leading-relaxed text-gray-500">
+  Unless otherwise agreed:
+</p>
+
+<ul className="my-5 space-y-3 text-lg leading-relaxed text-gray-500 list-disc pl-5">
+  <li>30%–50% Advance Payment before project initiation.</li>
+  <li>Remaining payments according to agreed milestones.</li>
+  <li>Final delivery after receipt of outstanding payments.</li>
+</ul>
+
+<p className="text-lg leading-relaxed text-gray-500">
+  Late payments may result in:
+</p>
+
+<ul className="my-5 space-y-3 text-lg leading-relaxed text-gray-500 list-disc pl-5">
+  <li>Suspension of services.</li>
+  <li>Delay in delivery.</li>
+  <li>Additional administrative charges.</li>
+  <li>Legal recovery proceedings where applicable.</li>
+</ul>
+
+<p className="text-lg leading-relaxed text-gray-500">
+  All payments are non-refundable except where expressly agreed in writing.
+</p>
             </div>
           </div>
 
-          <div className="border-0 shadow-lg">
-            <div className="bg-gradient-to-r from-green-50 to-blue-50">
+            <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-orange-50 to-yellow-50">
               <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
-                <div className="rounded-full bg-green-100 p-2">
-                  <Lock className="h-6 w-6 text-green-600" />
+                <div className="rounded-full bg-orange-100 p-2">
+                  <Cookie className="h-6 w-6 text-orange-600" />
                 </div>
-                Jurisdiction
+                Cancellation
               </div>
             </div>
             <div className="p-8">
-              <p className="text-lg leading-relaxed text-muted-foreground text-gray-500 mb-6">
-                These terms shall be governed by and construed in accordance
-                with the applicable laws, and any disputes arising from or
-                relating to these Terms and Conditions shall be subject to the
-                exclusive jurisdiction of the relevant authorities. By placing
-                an order, the Customer confirms acceptance of these terms, which
-                are attached to the Order.
-              </p>
+              <p className="text-lg leading-relaxed text-gray-500">
+  If the Client terminates the project:
+</p>
+
+<ul className="my-5 space-y-3 text-lg leading-relaxed text-gray-500 list-disc pl-5">
+  <li>Work completed up to the cancellation date shall be billed.</li>
+
+  <li>Advance payments already utilized are non-refundable.</li>
+
+  <li>
+    SevenUnique may retain completed work until outstanding payments are
+    cleared.
+  </li>
+</ul>
+            </div>
+          </div>
+
+
+            <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-orange-50 to-yellow-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+                <div className="rounded-full bg-orange-100 p-2">
+                  <Cookie className="h-6 w-6 text-orange-600" />
+                </div>
+                Change Requests
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-gray-500">
+  Any feature outside the approved scope shall be treated as a Change Request.
+</p>
+
+<p className="mt-4 text-lg leading-relaxed text-gray-500">
+  Additional work may result in:
+</p>
+
+<ul className="my-5 space-y-3 text-lg leading-relaxed text-gray-500 list-disc pl-5">
+  <li>Additional development charges.</li>
+
+  <li>Revised delivery timelines.</li>
+
+  <li>Updated project estimates.</li>
+
+  <li>Repeated revisions after approval may be billed separately.</li>
+</ul>
+            </div>
+          </div>
+
+
+
+            <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-orange-50 to-yellow-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+                <div className="rounded-full bg-orange-100 p-2">
+                  <Cookie className="h-6 w-6 text-orange-600" />
+                </div>
+                 Project Approval
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-gray-500">
+  The Client shall review submitted work within 7 calendar days.
+</p>
+
+<p className="mt-4 text-lg leading-relaxed text-gray-500">
+  If no written feedback is received during this period, the submitted work
+  shall be deemed approved.
+</p>
+
+<p className="mt-4 text-lg leading-relaxed text-gray-500">
+  Development will proceed based on the approved version.
+</p>
+            </div>
+          </div>
+
+
+            <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-orange-50 to-yellow-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+                <div className="rounded-full bg-orange-100 p-2">
+                  <Cookie className="h-6 w-6 text-orange-600" />
+                </div>
+                Delivery
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-gray-500">
+  Delivery timelines are estimates and depend upon:
+</p>
+
+<ul className="my-5 space-y-3 text-lg leading-relaxed text-gray-500 list-disc pl-5">
+  <li>Timely client approvals.</li>
+  <li>Availability of required information.</li>
+  <li>Third-party dependencies.</li>
+  <li>Force majeure events.</li>
+  <li>Technical constraints.</li>
+</ul>
+
+<p className="text-lg leading-relaxed text-gray-500">
+  SevenUnique will make reasonable efforts to meet agreed schedules but does
+  not guarantee delivery dates.
+</p>
+            </div>
+          </div>
+
+
+
+            <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-orange-50 to-yellow-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+                <div className="rounded-full bg-orange-100 p-2">
+                  <Cookie className="h-6 w-6 text-orange-600" />
+                </div>
+                Support & Maintenance
+              </div>
+            </div>
+            <div className="p-8">
+             <p className="text-lg leading-relaxed text-gray-500">
+  Unless otherwise specified:
+</p>
+
+<ul className="my-5 space-y-3 text-lg leading-relaxed text-gray-500 list-disc pl-5">
+  <li>One month of complimentary bug-fix support is provided after deployment.</li>
+
+  <li>
+    New features, enhancements, redesigns, or integrations are outside free
+    support.
+  </li>
+
+  <li>
+    Ongoing maintenance is available under separate AMC or support plans.
+  </li>
+</ul>
+            </div>
+          </div>
+
+
+
+            <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-orange-50 to-yellow-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+                <div className="rounded-full bg-orange-100 p-2">
+                  <Cookie className="h-6 w-6 text-orange-600" />
+                </div>
+                API Services
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-gray-500">
+  Where API services are provided:
+</p>
+
+<ul className="my-5 space-y-3 text-lg leading-relaxed text-gray-500 list-disc pl-5">
+  <li>API Keys remain confidential.</li>
+
+  <li>Clients must protect credentials.</li>
+
+  <li>
+    Excessive requests, abuse, reverse engineering, scraping, or unauthorized
+    use are prohibited.
+  </li>
+
+  <li>
+    SevenUnique may suspend API access to protect service integrity.
+  </li>
+
+  <li>API rate limits may apply.</li>
+</ul>
+            </div>
+          </div>
+
+
+
+            <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-orange-50 to-yellow-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+                <div className="rounded-full bg-orange-100 p-2">
+                  <Cookie className="h-6 w-6 text-orange-600" />
+                </div>
+                SaaS Services
+              </div>
+            </div>
+            <div className="p-8">
+             <p className="text-lg leading-relaxed text-gray-500">
+  For SaaS products:
+</p>
+
+<ul className="my-5 space-y-3 text-lg leading-relaxed text-gray-500 list-disc pl-5">
+  <li>Subscription fees must be paid in advance.</li>
+
+  <li>
+    Service availability may be subject to scheduled maintenance.
+  </li>
+
+  <li>
+    User accounts remain the responsibility of the account owner.
+  </li>
+
+  <li>
+    Abuse, illegal activity, or misuse may result in immediate suspension.
+  </li>
+</ul>
+            </div>
+          </div>
+
+
+
+            <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-orange-50 to-yellow-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+                <div className="rounded-full bg-orange-100 p-2">
+                  <Cookie className="h-6 w-6 text-orange-600" />
+                </div>
+                Confidentiality
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-gray-500">
+  Both parties agree to maintain confidentiality of business information
+  shared during the project.
+</p>
+
+<p className="mt-4 text-lg leading-relaxed text-gray-500">
+  Confidential information shall not be disclosed except where required
+  by law.
+</p>
+            </div>
+          </div>
+
+
+
+            <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-orange-50 to-yellow-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+                <div className="rounded-full bg-orange-100 p-2">
+                  <Cookie className="h-6 w-6 text-orange-600" />
+                </div>
+                Limitation of Liability
+              </div>
+            </div>
+            <div className="p-8">
+             <p className="text-lg leading-relaxed text-gray-500">
+  To the maximum extent permitted by law, SevenUnique shall not be liable
+  for:
+</p>
+
+<ul className="my-5 space-y-3 text-lg leading-relaxed text-gray-500 list-disc pl-5">
+  <li>Loss of revenue.</li>
+
+  <li>Loss of profits.</li>
+
+  <li>Loss of business.</li>
+
+  <li>Loss of goodwill.</li>
+
+  <li>Indirect damages.</li>
+
+  <li>Consequential damages.</li>
+
+  <li>Data loss caused by third-party systems.</li>
+
+  <li>Cyberattacks beyond reasonable control.</li>
+
+  <li>Hosting failures.</li>
+
+  <li>Cloud outages.</li>
+
+  <li>Payment gateway downtime.</li>
+
+  <li>Third-party API failures.</li>
+</ul>
+
+<p className="text-lg leading-relaxed text-gray-500">
+  Total liability shall not exceed the total amount actually paid by the
+  Client for the affected service.
+</p>
             </div>
           </div>
 
           <div className="border-0 shadow-lg">
-            <div className="bg-gradient-to-r from-green-50 to-blue-50">
+            <div className="bg-gradient-to-r from-orange-50 to-yellow-50">
               <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
-                <div className="rounded-full bg-green-100 p-2">
-                  <Lock className="h-6 w-6 text-green-600" />
+                <div className="rounded-full bg-orange-100 p-2">
+                  <Cookie className="h-6 w-6 text-orange-600" />
+                </div>
+               Force Majeure
+              </div>
+            </div>
+            <div className="p-8">
+             <p className="text-lg leading-relaxed text-gray-500">
+  SevenUnique shall not be liable for delays caused by events beyond
+  reasonable control, including:
+</p>
+
+<ul className="my-5 space-y-3 text-lg leading-relaxed text-gray-500 list-disc pl-5">
+  <li>Natural disasters.</li>
+
+  <li>Internet failures.</li>
+
+  <li>Government restrictions.</li>
+
+  <li>Cyber incidents.</li>
+
+  <li>Labor disputes.</li>
+
+  <li>Pandemics.</li>
+
+  <li>Failures of third-party infrastructure.</li>
+</ul>
+            </div>
+          </div>
+
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-orange-50 to-yellow-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+                <div className="rounded-full bg-orange-100 p-2">
+                  <Cookie className="h-6 w-6 text-orange-600" />
+                </div>
+                Marketing Rights
+              </div>
+            </div>
+            <div className="p-8">
+              <p className="text-lg leading-relaxed text-gray-500">
+  Unless otherwise agreed in writing, SevenUnique may display completed
+  projects, screenshots, logos, or company names in:
+</p>
+
+<ul className="my-5 space-y-3 text-lg leading-relaxed text-gray-500 list-disc pl-5">
+  <li>Company portfolio.</li>
+
+  <li>Official website.</li>
+
+  <li>Presentations.</li>
+
+  <li>Marketing materials.</li>
+</ul>
+            </div>
+          </div>
+
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-orange-50 to-yellow-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+                <div className="rounded-full bg-orange-100 p-2">
+                  <Cookie className="h-6 w-6 text-orange-600" />
+                </div>
+                Termination
+              </div>
+            </div>
+            <div className="p-8">
+            <p className="text-lg leading-relaxed text-gray-500">
+  SevenUnique reserves the right to suspend or terminate services in cases of:
+</p>
+
+<ul className="my-5 space-y-3 text-lg leading-relaxed text-gray-500 list-disc pl-5">
+  <li>Non-payment.</li>
+
+  <li>Fraud.</li>
+
+  <li>Illegal activities.</li>
+
+  <li>Security risks.</li>
+
+  <li>Violation of these Terms.</li>
+</ul>
+            </div>
+          </div>
+
+          <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-orange-50 to-yellow-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+                <div className="rounded-full bg-orange-100 p-2">
+                  <Cookie className="h-6 w-6 text-orange-600" />
+                </div>
+                Governing Law
+              </div>
+            </div>
+            <div className="p-8">
+             <p className="text-lg leading-relaxed text-gray-500">
+  These Terms shall be governed by the laws of India.
+</p>
+
+<p className="mt-4 text-lg leading-relaxed text-gray-500">
+  Any dispute shall be subject to the exclusive jurisdiction of the
+  competent courts at Jaipur, Rajasthan, India, unless otherwise
+  agreed in writing.
+</p>
+            </div>
+          </div>
+
+            <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-orange-50 to-yellow-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+                <div className="rounded-full bg-orange-100 p-2">
+                  <Cookie className="h-6 w-6 text-orange-600" />
                 </div>
                 Severability
               </div>
             </div>
             <div className="p-8">
-              <p className="text-lg leading-relaxed text-muted-foreground text-gray-500 mb-6">
-                If any provision of this Agreement and/or Order is found to be
-                invalid, illegal, or unenforceable, the remaining provisions
-                will remain unaffected, and the Agreement and/or Order will not
-                be void for this reason alone. The invalid, illegal, or
-                unenforceable provision will be replaced with a mutually
-                acceptable, valid, legal, and enforceable provision that closely
-                reflects the original intent of the parties.
-              </p>
+             <p className="text-lg leading-relaxed text-gray-500">
+  If any provision of these Terms is held invalid or unenforceable,
+  the remaining provisions shall continue in full force and effect.
+</p>
             </div>
           </div>
 
+
+
+            <div className="border-0 shadow-lg">
+            <div className="bg-gradient-to-r from-orange-50 to-yellow-50">
+              <div className=" flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+                <div className="rounded-full bg-orange-100 p-2">
+                  <Cookie className="h-6 w-6 text-orange-600" />
+                </div>
+                Amendments
+              </div>
+            </div>
+            <div className="p-8">
+             <p className="text-lg leading-relaxed text-gray-500">
+  SevenUnique reserves the right to modify these Terms at any time.
+</p>
+
+<p className="mt-4 text-lg leading-relaxed text-gray-500">
+  The latest version will always be available on our website.
+</p>
+
+<p className="mt-4 text-lg leading-relaxed text-gray-500">
+  Continued use of our services constitutes acceptance of the revised
+  Terms.
+</p>
+
+<p className="mt-4 text-lg leading-relaxed text-gray-500">
+  
+</p>
+            </div>
+          </div>
+
+          
           {/* Contact Support */}
           <div className="border-0 bg-gradient-to-r from-[#ab6545] to-red-500 text-white shadow-2xl">
             <div className="p-8 text-center">

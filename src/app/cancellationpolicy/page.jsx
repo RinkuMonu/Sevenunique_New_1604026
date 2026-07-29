@@ -126,7 +126,7 @@ export default function CancellationPolicy() {
          {/* Cancellation & Refund Policy Section */}
 <div className="border-0 shadow-lg">
   <div className="bg-gradient-to-r from-red-500 to-pink-400">
-    <div className="flex items-center gap-3 text-xl font-bold p-3 text-gray-600">
+    <div className="flex items-center gap-3 text-xl font-bold p-3 text-gray-200">
       <div className="rounded-full bg-red-100 p-2">
         <RefreshCcw className="h-6 w-6 text-red-600" />
       </div>
@@ -136,110 +136,441 @@ export default function CancellationPolicy() {
 
   <div className="p-8">
     <p className="text-lg leading-relaxed text-gray-500 mb-8">
-      Our cancellation and refund policy outlines the terms and conditions under
-      which a customer can cancel a service or order and potentially receive a
-      refund. We aim to maintain complete transparency while ensuring fair
-      service practices for all customers.
+      At SevenUnique Tech Solutions Private Limited ("SevenUnique", "Company", "we", "our", or "us"), we
+are committed to providing high-quality software development, API services, SaaS solutions, cloud
+services, mobile applications, web development, enterprise software, AI solutions, and IT consulting
+services.
+As most of our services involve custom development, technical consulting, and digital deliverables, this
+Refund & Cancellation Policy explains the conditions under which cancellations and refunds are
+applicable.
+By purchasing or using any of our services, you agree to the terms outlined below.
     </p>
 
-    {/* Policy Cards */}
-    <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+ 
+  </div>
+</div>
 
-      {/* Cancellation Process */}
-      <div className="border-2 border-dashed border-purple-600 bg-gradient-to-br from-white to-gray-50 transition-all hover:border-red-300 hover:shadow-md rounded-2xl">
-        <div className="p-6">
-          <h3 className="mb-3 text-xl font-semibold text-gray-700">
-            Cancellation Process
-          </h3>
-
-          <p className="text-sm text-gray-500 leading-relaxed">
-            Customers may request cancellation by submitting a formal request
-            through email, support portal, or official communication channels
-            within the allowed time frame. Relevant order details or proof of
-            purchase may be required for verification and processing.
-          </p>
-        </div>
+<div className="border-0 shadow-lg">
+  <div className="bg-gradient-to-r from-red-500 to-pink-400">
+    <div className="flex items-center gap-3 text-xl font-bold p-3 text-gray-200">
+      <div className="rounded-full bg-red-100 p-2">
+        <RefreshCcw className="h-6 w-6 text-red-600" />
       </div>
+     Scope
+    </div>
+  </div>
 
-      {/* Refund Conditions */}
-      <div className="border-2 border-dashed border-purple-600 bg-gradient-to-br from-white to-gray-50 transition-all hover:border-red-300 hover:shadow-md rounded-2xl">
-        <div className="p-6">
-          <h3 className="mb-3 text-xl font-semibold text-gray-700">
-            Refund Conditions
-          </h3>
+  <div className="p-8">
+    <p className="text-lg leading-relaxed text-gray-500 mb-8">
+     This policy applies to all services offered by SevenUnique, including but not limited to:
+     <div className="grid grid-cols-2 gap-4 text-sm text-gray-700">
+  <div className="space-y-3">
+    <div className="flex items-start gap-3 rounded-lg bg-gray-50 px-4 py-3">
+      <span className="text-purple-600">•</span>
+      <span>Software Development</span>
+    </div>
 
-          <p className="text-sm text-gray-500 leading-relaxed">
-            Refunds may be issued when services are not delivered as promised,
-            technical issues prevent functionality, or cancellations are made
-            within the eligible period. Refunds may be full or partial depending
-            on service usage and project completion status.
-          </p>
-        </div>
-      </div>
+    <div className="flex items-start gap-3 rounded-lg bg-gray-50 px-4 py-3">
+      <span className="text-purple-600">•</span>
+      <span>Mobile Application Development</span>
+    </div>
 
-      {/* Non Refundable */}
-      <div className="border-2 border-dashed border-gray-200 bg-gradient-to-br from-white to-gray-50 transition-all hover:border-red-300 hover:shadow-md rounded-2xl">
-        <div className="p-6">
-          <h3 className="mb-3 text-xl font-semibold text-gray-700">
-            Non-Refundable Services
-          </h3>
+    <div className="flex items-start gap-3 rounded-lg bg-gray-50 px-4 py-3">
+      <span className="text-purple-600">•</span>
+      <span>SaaS Products</span>
+    </div>
 
-          <p className="text-sm text-gray-500 leading-relaxed">
-            Setup fees, custom software development work, consultation charges,
-            and third-party software or subscription payments are generally
-            non-refundable once initiated or delivered.
-          </p>
-        </div>
-      </div>
+    <div className="flex items-start gap-3 rounded-lg bg-gray-50 px-4 py-3">
+      <span className="text-purple-600">•</span>
+      <span>Enterprise Applications</span>
+    </div>
 
-      {/* Processing Time */}
-      <div className="border-2 border-dashed border-gray-200 bg-gradient-to-br from-white to-gray-50 transition-all hover:border-red-300 hover:shadow-md rounded-2xl">
-        <div className="p-6">
-          <h3 className="mb-3 text-xl font-semibold text-gray-700">
-            Refund Processing Time
-          </h3>
+    <div className="flex items-start gap-3 rounded-lg bg-gray-50 px-4 py-3">
+      <span className="text-purple-600">•</span>
+      <span>UI/UX Design</span>
+    </div>
 
-          <p className="text-sm text-gray-500 leading-relaxed">
-            Approved refunds are generally processed within 5–10 business days.
-            Processing time may vary depending on bank procedures, payment
-            gateway processing, or holidays.
-          </p>
-        </div>
-      </div>
+    <div className="flex items-start gap-3 rounded-lg bg-gray-50 px-4 py-3">
+      <span className="text-purple-600">•</span>
+      <span>Technical Consulting</span>
+    </div>
+  </div>
 
-      {/* Late Cancellation */}
-      <div className="border-2 border-dashed border-gray-200 bg-gradient-to-br from-white to-gray-50 transition-all hover:border-red-300 hover:shadow-md rounded-2xl">
-        <div className="p-6">
-          <h3 className="mb-3 text-xl font-semibold text-gray-700">
-            Late Cancellations or Service Usage
-          </h3>
+  <div className="space-y-3">
+    <div className="flex items-start gap-3 rounded-lg bg-gray-50 px-4 py-3">
+      <span className="text-purple-600">•</span>
+      <span>Website Development</span>
+    </div>
 
-          <p className="text-sm text-gray-500 leading-relaxed">
-            If services have already been partially used or delivered, a reduced
-            refund may apply based on the work completed, resources utilized,
-            support provided, or project progress at the time of cancellation.
-          </p>
-        </div>
-      </div>
+    <div className="flex items-start gap-3 rounded-lg bg-gray-50 px-4 py-3">
+      <span className="text-purple-600">•</span>
+      <span>API Development &amp; Integration</span>
+    </div>
 
-      {/* Refund Method */}
-      <div className="border-2 border-dashed border-gray-200 bg-gradient-to-br from-white to-gray-50 transition-all hover:border-red-300 hover:shadow-md rounded-2xl">
-        <div className="p-6">
-          <h3 className="mb-3 text-xl font-semibold text-gray-700">
-            Refund Method
-          </h3>
+    <div className="flex items-start gap-3 rounded-lg bg-gray-50 px-4 py-3">
+      <span className="text-purple-600">•</span>
+      <span>Cloud Solutions</span>
+    </div>
 
-          <p className="text-sm text-gray-500 leading-relaxed">
-            Refunds are usually credited through the original payment method,
-            including bank transfer, UPI, cards, or payment gateways. In special
-            cases, customers may be contacted for alternate refund arrangements.
-          </p>
-        </div>
-      </div>
+    <div className="flex items-start gap-3 rounded-lg bg-gray-50 px-4 py-3">
+      <span className="text-purple-600">•</span>
+      <span>AI Solutions</span>
+    </div>
+
+    <div className="flex items-start gap-3 rounded-lg bg-gray-50 px-4 py-3">
+      <span className="text-purple-600">•</span>
+      <span>Annual Maintenance Contracts (AMC)</span>
+    </div>
+
+    <div className="flex items-start gap-3 rounded-lg bg-gray-50 px-4 py-3">
+      <span className="text-purple-600">•</span>
+      <span>Custom Software Projects</span>
     </div>
   </div>
 </div>
 
+    </p>
+
+ 
+  </div>
+</div><div className="border-0 shadow-lg">
+  <div className="bg-gradient-to-r from-red-500 to-pink-400">
+    <div className="flex items-center gap-3 text-xl font-bold p-3 text-gray-200">
+      <div className="rounded-full bg-red-100 p-2">
+        <RefreshCcw className="h-6 w-6 text-red-600" />
+      </div>
+     Cancellation by Client
+    </div>
+  </div>
+
+  <div className="p-8">
+    <p className="text-lg leading-relaxed text-gray-500 mb-8">
+    <p className="text-sm text-gray-500 leading-relaxed">
+  Clients may request cancellation of a project by submitting a written request.<br />
+  Email: info@sevenunique.com<br />
+  Cancellation requests become effective only after written confirmation from SevenUnique.
+</p>
+ </p>
+
+ 
+  </div>
+</div><div className="border-0 shadow-lg">
+  <div className="bg-gradient-to-r from-red-500 to-pink-400">
+    <div className="flex items-center gap-3 text-xl font-bold p-3 text-gray-200">
+      <div className="rounded-full bg-red-100 p-2">
+        <RefreshCcw className="h-6 w-6 text-red-600" />
+      </div>
+     Refund Eligibility
+    </div>
+  </div>
+
+  <div className="p-8">
+    <p className="text-lg leading-relaxed text-gray-500 mb-8">
+      Since our services involve professional time, technical expertise, and custom development, refunds are
+generally not available once work has commenced.
+Refund eligibility is determined as follows:
+<h4 className="mb-2 mt-4 text-base font-semibold text-gray-700">
+  Before Project Commencement
+</h4>
+If cancellation is requested before any work has started, the Company may approve a refund after
+deducting:
+<div className="mt-2 space-y-1 text-sm text-gray-200">
+  <div>• Payment gateway charges</div>
+  <div>• Banking charges</div>
+  <div>• Administrative costs</div>
+  <div>• Applicable taxes</div>
+</div>
+<h4 className="mb-2 mt-4 text-base font-semibold text-gray-700">
+  After Project Commencement
+</h4>
+If project work has already begun:
+<ul className="mt-2 space-y-2 text-sm text-gray-500 leading-relaxed list-disc pl-5">
+  <li>Advance payments are generally non-refundable.</li>
+  <li>The Client must pay for work completed up to the cancellation date.</li>
+  <li>Any balance amount, if applicable, may be refunded at the sole discretion of SevenUnique.</li>
+</ul>
+<h4 className="mb-2 mt-4 text-base font-semibold text-gray-700">
+  Completed Projects
+</h4>
+Once a project, milestone, or deliverable has been approved or delivered, no refund shall be provided.
+    </p>
+</div>
+
+</div>
+
+<div className="border-0 shadow-lg">
+  <div className="bg-gradient-to-r from-red-500 to-pink-400">
+    <div className="flex items-center gap-3 text-xl font-bold p-3 text-gray-200">
+      <div className="rounded-full bg-red-100 p-2">
+        <RefreshCcw className="h-6 w-6 text-red-600" />
+      </div>
+     Subscription Services (SaaS)
+    </div>
+  </div>
+
+  <div className="p-8">
+    <p className="text-lg leading-relaxed text-gray-500 mb-8">
+      For SaaS products:
+<ul className="mt-2 space-y-2 text-sm text-gray-500 leading-relaxed list-disc pl-5">
+  <li>Subscription fees are non-refundable.</li>
+  <li>Monthly and annual subscriptions remain valid until the end of the purchased billing period.</li>
+  <li>Cancellation prevents future renewals only.</li>
+  <li>No partial refunds will be provided for unused subscription periods.</li>
+</ul>
+
+    </p>
+
+ 
+  </div>
+</div>
+
+<div className="border-0 shadow-lg">
+  <div className="bg-gradient-to-r from-red-500 to-pink-400">
+    <div className="flex items-center gap-3 text-xl font-bold p-3 text-gray-200">
+      <div className="rounded-full bg-red-100 p-2">
+        <RefreshCcw className="h-6 w-6 text-red-600" />
+      </div>
+      API Services
+    </div>
+  </div>
+
+  <div className="p-8">
+    <p className="text-lg leading-relaxed text-gray-500 mb-8">
+      For API-based services:
+      <ul className="mt-2 space-y-2 text-sm text-gray-500 leading-relaxed list-disc pl-5">
+  <li>Activation fees are non-refundable.</li>
+  <li>API subscription charges are non-refundable after activation.</li>
+  <li>API credits, transaction fees, and prepaid balances cannot be exchanged for cash.</li>
+  <li>Charges incurred for API usage remain payable.</li>
+</ul>
+
+    </p>
+  </div>
+</div>
+<div className="border-0 shadow-lg">
+  <div className="bg-gradient-to-r from-red-500 to-pink-400">
+    <div className="flex items-center gap-3 text-xl font-bold p-3 text-gray-200">
+      <div className="rounded-full bg-red-100 p-2">
+        <RefreshCcw className="h-6 w-6 text-red-600" />
+      </div>
+    Domain Names & Hosting  
+    </div>
+  </div>
+
+  <div className="p-8">
+    <p className="text-lg leading-relaxed text-gray-500 mb-8">
+      Payments made for:
+      <ul className="mt-2 space-y-2 text-sm text-gray-500 leading-relaxed list-disc pl-5">
+  <li>Domain Registration</li>
+  <li>Domain Renewal</li>
+  <li>SSL Certificates</li>
+  <li>Web Hosting</li>
+  <li>Cloud Hosting</li>
+  <li>Third-Party Licenses</li>
+</ul>
+are non-refundable, as these services are procured from third-party providers.
+ </p>
+ </div>
+</div>
+
+<div className="border-0 shadow-lg">
+  <div className="bg-gradient-to-r from-red-500 to-pink-400">
+    <div className="flex items-center gap-3 text-xl font-bold p-3 text-gray-200">
+      <div className="rounded-full bg-red-100 p-2">
+        <RefreshCcw className="h-6 w-6 text-red-600" />
+      </div>
+      Third-Party Products & Services
+    </div>
+  </div>
+
+  <div className="p-8">
+    <p className="text-lg leading-relaxed text-gray-500 mb-8">
+      Refunds are not available for:
+      <ul className="mt-3 space-y-3 text-sm text-gray-500 leading-relaxed list-disc pl-5">
+  <li>Payment Gateway Fees</li>
+  <li>SMS Charges</li>
+  <li>Email Service Charges</li>
+  <li>Cloud Infrastructure Costs</li>
+  <li>Google Play Fees</li>
+  <li>Apple Developer Fees</li>
+  <li>Third-Party API Charges</li>
+  <li>Software Licenses</li>
+  <li>Marketplace Purchases</li>
+</ul>
+
+<p className="mt-5 text-xl text-gray-500 leading-relaxed">
+  Such charges are governed by the respective third-party provider's policies.
+</p>
+
+    </p>
+
+ 
+  </div>
+</div>
+<div className="border-0 shadow-lg">
+  <div className="bg-gradient-to-r from-red-500 to-pink-400">
+    <div className="flex items-center gap-3 text-xl font-bold p-3 text-gray-200">
+      <div className="rounded-full bg-red-100 p-2">
+        <RefreshCcw className="h-6 w-6 text-red-600" />
+      </div>
+      Change of Mind
+    </div>
+  </div>
+
+  <div className="p-8">
+    <p className="text-lg leading-relaxed text-gray-500 mb-8">
+     <ul className="my-5 space-y-4 text-sm text-gray-500 leading-relaxed list-disc pl-5">
+  <li>Change of business requirements</li>
+  <li>Change of preference</li>
+  <li>Internal management decisions</li>
+  <li>Budget constraints</li>
+  <li>Delayed client approvals</li>
+  <li>Lack of project usage after delivery</li>
+</ul>
+    </p>
+
+ 
+  </div>
+</div>
+<div className="border-0 shadow-lg">
+  <div className="bg-gradient-to-r from-red-500 to-pink-400">
+    <div className="flex items-center gap-3 text-xl font-bold p-3 text-gray-200">
+      <div className="rounded-full bg-red-100 p-2">
+        <RefreshCcw className="h-6 w-6 text-red-600" />
+      </div>
+        Project Delays
+    </div>
+  </div>
+
+  <div className="p-8">
+    <p className="text-lg leading-relaxed text-gray-500 mb-8">
+      SevenUnique shall not be responsible for delays resulting from:
+      <ul className="my-5 space-y-4 text-sm text-gray-500 leading-relaxed list-disc pl-5">
+  <li>Incomplete client requirements</li>
+  <li>Delayed approvals</li>
+  <li>Third-party service outages</li>
+  <li>Government restrictions</li>
+  <li>Internet failures</li>
+  <li>Force majeure events</li>
+  <li>Changes requested during development</li>
+</ul>
+
+<p className="mt-6 text-xl text-gray-500 leading-relaxed">
+  Such delays do not qualify for refunds.
+</p>
+
+    </p>
+
+ 
+  </div>
+</div>
+<div className="border-0 shadow-lg">
+  <div className="bg-gradient-to-r from-red-500 to-pink-400">
+    <div className="flex items-center gap-3 text-xl font-bold p-3 text-gray-200">
+      <div className="rounded-full bg-red-100 p-2">
+        <RefreshCcw className="h-6 w-6 text-red-600" />
+      </div>
+      Duplicate Payments
+    </div>
+  </div>
+
+  <div className="p-8">
+    <p className="text-lg leading-relaxed text-gray-500 mb-8">
+      If a duplicate payment is made accidentally, SevenUnique will verify the transaction and process the
+eligible refund to the original payment source within a reasonable time, subject to banking timelines
+    </p>
+  </div>
+</div>
+
+
+
+<div className="border-0 shadow-lg">
+  <div className="bg-gradient-to-r from-red-500 to-pink-400">
+    <div className="flex items-center gap-3 text-xl font-bold p-3 text-gray-200">
+      <div className="rounded-full bg-red-100 p-2">
+        <RefreshCcw className="h-6 w-6 text-red-600" />
+      </div>
+      Chargebacks
+    </div>
+  </div>
+
+  <div className="p-8">
+    <p className="text-lg leading-relaxed text-gray-500 mb-8">
+     Clients agree to contact SevenUnique before initiating any chargeback or payment dispute.
+If a chargeback is initiated without prior communication, SevenUnique reserves the right to: i want this in 2 lines
+<ul className="my-5 space-y-4 text-sm text-gray-500 leading-relaxed list-disc pl-5">
+  <li>Suspend services</li>
+  <li>Disable API access</li>
+  <li>Pause project work</li>
+  <li>Recover associated costs through legal means, if necessary</li>
+</ul>
+    </p>
+  </div>
+</div>
+
+<div className="border-0 shadow-lg">
+  <div className="bg-gradient-to-r from-red-500 to-pink-400">
+    <div className="flex items-center gap-3 text-xl font-bold p-3 text-gray-200">
+      <div className="rounded-full bg-red-100 p-2">
+        <RefreshCcw className="h-6 w-6 text-red-600" />
+      </div>
+      Exceptions
+    </div>
+  </div>
+
+  <div className="p-8">
+    <p className="text-lg leading-relaxed text-gray-500 mb-8">
+      Refunds may be considered only if:
+<ul className="my-5 space-y-4 text-sm text-gray-500 leading-relaxed list-disc pl-5">
+  <li>SevenUnique is unable to deliver the agreed service due solely to its own fault.</li>
+  <li>The service cannot be provided after payment and no substantial work has been performed.</li>
+</ul>
+<p className="mt-6 text-xl text-gray-500 leading-relaxed">
+Any such refund will be reviewed on a case-by-case basis and approved solely at the discretion of
+SevenUnique.
+</p>
+
+</p>
+
+ </div>
+</div>
+<div className="border-0 shadow-lg">
+  <div className="bg-gradient-to-r from-red-500 to-pink-400">
+    <div className="flex items-center gap-3 text-xl font-bold p-3 text-gray-200">
+      <div className="rounded-full bg-red-100 p-2">
+        <RefreshCcw className="h-6 w-6 text-red-600" />
+      </div>
+      Processing Time
+    </div>
+  </div>
+
+  <div className="p-8">
+    <p className="text-lg leading-relaxed text-gray-500 mb-8">
+      Approved refunds, if applicable, will normally be processed within 7–15 business days, depending on
+the payment method, banking procedures, and applicable regulations.
+    </p>
+
+ 
+  </div>
+</div><div className="border-0 shadow-lg">
+  <div className="bg-gradient-to-r from-red-500 to-pink-400">
+    <div className="flex items-center gap-3 text-xl font-bold p-3 text-gray-200">
+      <div className="rounded-full bg-red-100 p-2">
+        <RefreshCcw className="h-6 w-6 text-red-600" />
+      </div>
+     Modification of this Policy
+    </div>
+  </div>
+
+  <div className="p-8">
+    <p className="text-lg leading-relaxed text-gray-500 mb-8">
+      SevenUnique reserves the right to modify or update this Refund & Cancellation Policy at any time.
+The latest version will always be published on our website.
+    </p>
+
+ 
+  </div>
+</div>
           {/* Contact Support */}
           <div className="border-0 bg-gradient-to-r from-[#ab6545] to-red-500 text-white shadow-2xl">
             <div className="p-8 text-center">
