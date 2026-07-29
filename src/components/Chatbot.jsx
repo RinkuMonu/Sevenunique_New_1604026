@@ -593,7 +593,7 @@ export default function Chatbot() {
             onClick={() => { setOpen(true); setMinimized(false); }}
             aria-label={`Open chat with ${BOT_NAME}`}
           >
-            <div className="su-launcher-ring left-6 top-5">
+            <div className="su-launcher-ring -bottom-10">
               <RobotIcon size={26} />
               {badge > 0 && <span className="su-badge">{badge}</span>}
             </div>
