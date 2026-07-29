@@ -16,7 +16,7 @@ import TeamMorphSection from "@/components/TeamMorphSection";
 import ProcessTimelineSection from "@/components/ProcessTimelineSection";
 import SlidingProjectsSection from "@/components/ProjectBanner";
 import NewsCTASection from "@/components/NewsSection";
-import ServicesClientSection from "@/components/ServicesClient";
+
 
 
 
@@ -30,20 +30,20 @@ export const metadata = {
 export default function Home() {
   return (
     <div>
-     <Hero />
-     <ClientLogos />
+      <Hero />
+      <ClientLogos />
       <Services />
       <NewsCTASection />
-     {/* <FeaturedSection /> */}
-     <TestimonialSlider />
-     <AwardsSection />
-     <WhyChooseUs />
-  <SlidingProjectsSection />
-     <TeamMorphSection />
-     <ProcessTimelineSection />  
-     {/* <BlogInsights /> */}
-     <CTABand />
-     {/* <ServicesClientSection /> */}
+      {/* <FeaturedSection /> */}
+      <TestimonialSlider />
+      <AwardsSection />
+      <WhyChooseUs />
+      <SlidingProjectsSection />
+      <TeamMorphSection />
+      <ProcessTimelineSection />
+      {/* <BlogInsights /> */}
+      <CTABand />
+
     </div>
   );
 }
