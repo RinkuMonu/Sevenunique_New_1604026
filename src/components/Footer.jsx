@@ -17,11 +17,11 @@ import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 export default function Footer() {
   return (
     <footer className="relative bg-[#f7f7f7] text-[#111] overflow-hidden border-t border-[#ececec]">
-    
+
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
-      
+
         <div className="grid lg:grid-cols-[340px_1fr] gap-16">
-      
+
           <div>
             <Link href="/">
               <Image
@@ -56,7 +56,7 @@ export default function Footer() {
                   +91 8741886688
                 </a>
               </div>
-                <div>
+              <div>
                 <p className="text-sm font-semibold text-gray-700 ">
                   Contact us on
                 </p>
@@ -127,9 +127,9 @@ export default function Footer() {
             </div>
           </div>
 
-        
+
           <div className="grid sm:grid-cols-3 gap-12">
-       
+
             <div>
               <h3 className="text-[24px] font-semibold text-gray-700 mb-6 text-[#111]">
                 Company
@@ -154,7 +154,7 @@ export default function Footer() {
                   </Link>
                 </li>
 
-           
+
 
                 <li>
                   <Link
@@ -167,7 +167,7 @@ export default function Footer() {
               </ul>
             </div>
 
-      
+
             <div>
               <h3 className="text-[24px] font-semibold text-gray-700 mb-6 text-[#111]">
                 Services
@@ -212,7 +212,7 @@ export default function Footer() {
               </ul>
             </div>
 
-       
+
             <div>
               <h3 className="text-[24px] font-semibold text-gray-700 mb-6 text-[#111]">
                 Quick Links
@@ -228,14 +228,14 @@ export default function Footer() {
                   </Link>
                 </li>
 
-                <li>
+                {/* <li>
                   <Link
                     href="/blog"
                     className="hover:text-[#f4622a] transition"
                   >
                     Blogs
                   </Link>
-                </li>
+                </li> */}
 
                 <li>
                   <Link
@@ -259,7 +259,7 @@ export default function Footer() {
           </div>
         </div>
 
-    
+
         <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-5 mt-16 md:mt-30">
           {[
             {
@@ -308,7 +308,7 @@ export default function Footer() {
         hover:shadow-[0_12px_35px_rgba(0,0,0,0.06)]
       "
             >
-          
+
               <div className="relative z-10 flex items-start gap-3 mb-5">
                 {/* FLAG */}
                 <div
@@ -351,7 +351,7 @@ export default function Footer() {
                 </div>
               </div>
 
-           
+
               <div className="relative z-10 mb-4">
                 <div
                   className="
@@ -367,7 +367,7 @@ export default function Footer() {
                 </div>
               </div>
 
-          
+
               <div className="relative z-10 flex items-start gap-3">
                 <div
                   className="
@@ -394,7 +394,7 @@ export default function Footer() {
                 </p>
               </div>
 
-          
+
               <div
                 className="
           absolute bottom-0 left-0
@@ -409,9 +409,9 @@ export default function Footer() {
         </div>
       </div>
 
-     
-     <div
-  className="
+
+      <div
+        className="
     absolute
     right-30
     top-100
@@ -420,13 +420,13 @@ export default function Footer() {
     pointer-events-none
     z-0
   "
->
-  <img
-    src="/images/mapp.png"
-    alt="footer shape"
-    className="w-[610px] object-cover opacity-70"
-  />
-</div>
+      >
+        <img
+          src="/images/mapp.png"
+          alt="footer shape"
+          className="w-[610px] object-cover opacity-70"
+        />
+      </div>
 
 
       <div className="bg-[#111] py-5 px-6">
