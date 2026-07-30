@@ -1389,7 +1389,7 @@ export const techData = {
     testimonial: {
       quote:
         "Their Java engineers tackled our most complex performance bottlenecks. We couldn't have done it without them.",
-      name: "David Kim",
+      name: "Druv Jain",
       role: "VP of Engineering",
       company: "FinCore",
       image: "/logos/img2.png",
@@ -1582,7 +1582,7 @@ export const techData = {
         {
           industry: "Financial Services",
           quote: "Their Java engineers transformed our legacy trading system into a modern, high-performance platform. The team's deep understanding of concurrency and low-latency patterns was exceptional.",
-          name: "Sarah Chen",
+          name: "Saroj Verma",
           role: "CTO",
           photo: "/images/1.png",
           companyType: "image",
@@ -2060,7 +2060,7 @@ export const techData = {
     testimonial: {
       quote:
         "They optimized our Laravel app to handle 10x traffic with zero downtime.",
-      name: "Rachel Green",
+      name: "Rama Kanwar",
       role: "Product Director",
       company: "ShopHub",
       image: "/logos/img2.png",
@@ -2263,7 +2263,7 @@ export const techData = {
         {
           industry: "E-Commerce",
           quote: "They optimized our Laravel app to handle 10x Black Friday traffic with zero downtime. The team's deep Laravel expertise was evident from day one.",
-          name: "Rachel Green",
+          name: "Rama Kanwar",
           role: "Product Director",
           photo: "/images/1.png",
           companyType: "image",
@@ -2752,7 +2752,7 @@ export const techData = {
     testimonial: {
       quote:
         "Their AI engineers understood our problem deeply and delivered a solution that actually works in production.",
-      name: "Sarah Chen",
+      name: "Saroj Verma",
       role: "CTO",
       company: "DataVault",
       image: "/logos/img2.png",
@@ -3078,7 +3078,7 @@ export const techData = {
     testimonial: {
       quote:
         "Their C# engineers rebuilt our core trading engine. It's faster and more reliable than ever.",
-      name: "Elena Volkov",
+      name: "Ekta Mishra",
       role: "CTO",
       company: "TradeStream",
       image: "/logos/img2.png",
@@ -3286,7 +3286,7 @@ export const techData = {
         {
           industry: "FinTech",
           quote: "Their C# engineers rebuilt our core trading engine. It's 60% faster and has had zero downtime in 18 months.",
-          name: "Elena Volkov",
+          name: "Ekta Mishra",
           role: "CTO",
           photo: "/images/1.png",
           companyType: "image",
@@ -3774,7 +3774,7 @@ export const techData = {
     testimonial: {
       quote:
         "Their JavaScript team fixed our frontend performance issues in weeks.",
-      name: "Lisa Wong",
+      name: "Lata Kumari",
       role: "Frontend Lead",
       company: "RetailDash",
       image: "/logos/img2.png",
@@ -3987,7 +3987,7 @@ export const techData = {
         {
           industry: "E-Commerce",
           quote: "Their JavaScript team fixed our frontend performance issues in weeks. Our Core Web Vitals went from 'Poor' to 'Good' across the board.",
-          name: "Lisa Wong",
+          name: "Lata Kumari",
           role: "Frontend Lead",
           photo: "/images/1.png",
           companyType: "image",
@@ -4470,7 +4470,7 @@ export const techData = {
     testimonial: {
       quote:
         "The dashboards they built gave us real-time visibility into our entire supply chain.",
-      name: "Marcus Chen",
+      name: "Manoj Mishra",
       role: "COO",
       company: "LogiTrack",
       image: "/logos/img2.png",
@@ -4678,7 +4678,7 @@ export const techData = {
         {
           industry: "Logistics",
           quote: "The dashboards they built gave us real-time visibility into our entire supply chain. We reduced logistics costs by 15% in the first quarter.",
-          name: "Marcus Chen",
+          name: "Manoj Mishra",
           role: "COO",
           photo: "/images/1.png",
           companyType: "image",
@@ -4818,7 +4818,7 @@ export const techData = {
     testimonial: {
       quote:
         "They rescued our Rails 5 to 7 migration and improved performance by 60%.",
-      name: "Sofia Rodriguez",
+      name: "Sara Taneja",
       role: "Engineering Lead",
       company: "QuickRent",
       image: "/logos/img2.png",
@@ -5031,7 +5031,7 @@ export const techData = {
         {
           industry: "Technology",
           quote: "They rescued our Rails 5 to 7 migration and improved performance by 60%. The team's deep Rails expertise saved us months of work.",
-          name: "Sofia Rodriguez",
+          name: "Sara Taneja",
           role: "Engineering Lead",
           photo: "/images/1.png",
           companyType: "image",
@@ -5170,7 +5170,7 @@ export const techData = {
     },
     testimonial: {
       quote: "The Vue.js app they built feels native and lightning fast.",
-      name: "Anna Schmidt",
+      name: "Anu Sharma",
       role: "Product Manager",
       company: "EventHub",
       image: "/logos/img2.png",
@@ -5383,7 +5383,7 @@ export const techData = {
         {
           industry: "Events",
           quote: "The Vue.js app they built feels native and lightning fast. Our users love the responsiveness and smooth animations.",
-          name: "Anna Schmidt",
+          name: "Anu Sharma",
           role: "Product Manager",
           photo: "/images/1.png",
           companyType: "image",
@@ -5526,7 +5526,7 @@ export const techData = {
     testimonial: {
       quote:
         "Their Angular expertise transformed our clunky portal into a sleek enterprise platform.",
-      name: "Robert Chen",
+      name: "Raman Verma",
       role: "VP Product",
       company: "CorpSoft",
       image: "/logos/img2.png",
@@ -5739,7 +5739,7 @@ export const techData = {
         {
           industry: "Enterprise",
           quote: "Their Angular expertise transformed our clunky portal into a sleek enterprise platform. The app now handles 50,000+ internal users with ease.",
-          name: "Robert Chen",
+          name: "Raman Verma",
           role: "VP Product",
           photo: "/images/1.png",
           companyType: "image",
@@ -5879,7 +5879,7 @@ export const techData = {
     testimonial: {
       quote:
         "Their C++ engineers optimized our simulation engine to run 3x faster.",
-      name: "Dr. Emily White",
+      name: "Radha Krishanmurthy",
       role: "Lead Scientist",
       company: "SimCore",
       image: "/logos/img2.png",
@@ -6092,7 +6092,7 @@ export const techData = {
         {
           industry: "Scientific Computing",
           quote: "Their C++ engineers optimized our simulation engine to run 3x faster. The performance improvements transformed our research capabilities.",
-          name: "Dr. Emily White",
+          name: "Radha Krishanmurthy",
           role: "Lead Scientist",
           photo: "/images/1.png",
           companyType: "image",
@@ -6232,7 +6232,7 @@ export const techData = {
     testimonial: {
       quote:
         "Their GCP team migrated our data warehouse to BigQuery — query times dropped from minutes to seconds.",
-      name: "Mark Taylor",
+      name: "Manish Tailor",
       role: "Data Director",
       company: "RetailNet",
       image: "/logos/img2.png",
@@ -6445,7 +6445,7 @@ export const techData = {
         {
           industry: "Retail",
           quote: "Their GCP team migrated our data warehouse to BigQuery — query times dropped from minutes to seconds. Our analytics team is 10x more productive.",
-          name: "Mark Taylor",
+          name: "Manish Tailor",
           role: "Data Director",
           photo: "/images/1.png",
           companyType: "image",
@@ -6580,7 +6580,7 @@ export const techData = {
     testimonial: {
       quote:
         "They migrated our Android codebase from Java to Kotlin in 3 months with zero regressions.",
-      name: "David Park",
+      name: "Dharam Kumar",
       role: "Mobile Lead",
       company: "TravelApp",
       image: "/logos/img2.png",
@@ -6793,7 +6793,7 @@ export const techData = {
         {
           industry: "Travel",
           quote: "They migrated our Android codebase from Java to Kotlin in 3 months with zero regressions. Developer productivity is up 40%.",
-          name: "David Park",
+          name: "Dharam Kumar",
           role: "Mobile Lead",
           photo: "/images/1.png",
           companyType: "image",
@@ -7271,7 +7271,7 @@ export const techData = {
     testimonial: {
       quote:
         "Their Python team built an ETL pipeline that processes 5TB of data daily.",
-      name: "Sarah Chen",
+      name: "Saroj Verma",
       role: "Data Engineering Lead",
       company: "DataStream",
       image: "/logos/img2.png",
@@ -7484,7 +7484,7 @@ export const techData = {
         {
           industry: "Data",
           quote: "Their Python team built an ETL pipeline that processes 5TB of data daily. The code is clean, efficient, and well-documented.",
-          name: "Sarah Chen",
+          name: "Saroj Verma",
           role: "Data Engineering Lead",
           photo: "/images/1.png",
           companyType: "image",
@@ -7619,7 +7619,7 @@ export const techData = {
     testimonial: {
       quote:
         "They customized our Salesforce instance to fit our complex sales process perfectly.",
-      name: "Jessica Wu",
+      name: "Jahanvi Pareek",
       role: "Sales Ops Director",
       company: "GlobalSoft",
       image: "/logos/img2.png",
@@ -7832,7 +7832,7 @@ export const techData = {
         {
           industry: "Technology",
           quote: "They customized our Salesforce instance to fit our complex sales process perfectly. Our sales team's productivity increased 30%.",
-          name: "Jessica Wu",
+          name: "Jahanvi Pareek",
           role: "Sales Ops Director",
           photo: "/images/1.png",
           companyType: "image",
@@ -7967,7 +7967,7 @@ export const techData = {
     testimonial: {
       quote:
         "Our Xamarin app runs flawlessly on both iOS and Android with 95% code reuse.",
-      name: "Tom Williams",
+      name: "Tarun Patel",
       role: "Mobile Director",
       company: "FieldForce",
       image: "/logos/img2.png",
@@ -8180,7 +8180,7 @@ export const techData = {
         {
           industry: "Field Service",
           quote: "Our Xamarin app runs flawlessly on both iOS and Android with 95% code reuse. We shipped in half the time and half the budget.",
-          name: "Tom Williams",
+          name: "Tarun Patel",
           role: "Mobile Director",
           photo: "/images/1.png",
           companyType: "image",
