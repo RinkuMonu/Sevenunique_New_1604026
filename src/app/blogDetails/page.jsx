@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaSquareYoutube, FaXTwitter } from "react-icons/fa6";
 import { IoHomeOutline } from "react-icons/io5";
-import { SiOpenai } from "react-icons/si"; // ChatGPT
+import { RiRobot2Line } from "react-icons/ri";
 import { SiGoogle } from "react-icons/si"; // Gemini (approx)
 import { SiAnthropic } from "react-icons/si"; // Claude
 import { SiX } from "react-icons/si"; // Grok (X)
@@ -1013,7 +1013,7 @@ function ArticleBody() {
   );
 }
 
-// ─── Progress bar ─────────────────────────────────────────────────────────────
+// ─── Progress bar ──────────────────────────────────────────────────────────
 function ReadingProgress() {
   return (
     <div className="bg-gray-100 fixed top-20 z-30 h-2 w-full">
@@ -1029,7 +1029,7 @@ function AISidebar() {
   const aiTools = [
     {
       name: "ChatGPT",
-      icon: <SiOpenai className="text-green-500 text-lg" />,
+      icon: <RiRobot2Line className="text-green-500 text-lg" />,
     },
     {
       name: "Grok",

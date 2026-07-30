@@ -179,7 +179,7 @@ export default function CertificationsGrid() {
           <div className="relative z-10 flex flex-col sm:flex-row items-center gap-8">
 
             {/* LOGO */}
-            <div className="relative flex items-center justify-center w-[170px] h-[120px] rounded-2xl bg-[#f8f9fb] border border-gray-100 group-hover:bg-white transition">
+            <div className="relative flex items-center justify-center  rounded-2xl bg-[#f8f9fb] border border-gray-100 group-hover:bg-white transition">
               <Image
                 src={item.img}
                 alt={item.title}

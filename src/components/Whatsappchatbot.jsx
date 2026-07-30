@@ -6,7 +6,7 @@ export default function WhatsAppChat() {
   const whatsappNumber = "918741886688"; // Add country code
 
   return (
-    <div className="fixed bottom-24 right-8 z-50 group">
+    <div className="fixed bottom-14 right-8 z-50 group">
       <span className="absolute right-20 top-1/2 -translate-y-1/2 whitespace-nowrap bg-black text-white text-sm px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition">
         Chat with us
       </span>
