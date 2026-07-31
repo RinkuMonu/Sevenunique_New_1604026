@@ -650,7 +650,7 @@ function PrevNextNav() {
           href="#"
           className="flex items-center gap-2 text-gray-900 text-sm font-medium py-2 hover:border-b border-gray-900 w-fit mt-1"
         >
-          <ArrowBack />
+          <ArrowBack /> 
           Previous article
         </a>
       </div>
@@ -860,7 +860,7 @@ function ArticleBody() {
       <h2 className="text-3xl font-semibold text-black pt-4">
         Why Teams Struggle with Multithreading
       </h2>
-      <p>
+      <p>  
         Seasoned professionals find threading problems challenging to diagnose,
         even after long practice. Younger developers face the same challenges
         with more disadvantages: computer science programs do not emphasize
