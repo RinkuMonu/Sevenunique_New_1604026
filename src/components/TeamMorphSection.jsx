@@ -11,7 +11,7 @@ const outfit = Outfit({
 
 const team = [
   {
-    name: "Mr Dinesh Kumar Prajapat",
+    name: "Mr. Dinesh Kumar Prajapat",
     role: "Founder & CEO",
     image: "/team/person1.png",
   },
@@ -57,7 +57,7 @@ export default function TeamSection() {
             <p className="text-[#666] text-[17px] leading-8 max-w-xl mb-10">
             Behind every successful project is a passionate team driven by innovation, creativity, and a commitment to excellence. As a founder, I believe great digital products are built through collaboration, transparency, and a deep understanding of client goals.<br />
             Our team of experienced developers, designers, strategists, and project managers works closely with businesses to create scalable websites, mobile applications, and software solutions that deliver real impact. From startups to enterprises, we focus on building reliable, future-ready products that help brands grow faster and stay ahead in the digital world.<br />
-Every project we take on is treated like our own business — with attention to detail, modern technology, and a dedication to delivering premium digital experiences that create lasting value .
+            Every project we take on is treated like our own business — with attention to detail, modern technology, and a dedication to delivering premium digital experiences that create lasting value .
             </p>
 
             {/* STATS */}
@@ -187,9 +187,6 @@ Every project we take on is treated like our own business — with attention to 
             </div>
           ))}
         </div>
-
-       
-        
       </div>
     </section>
     

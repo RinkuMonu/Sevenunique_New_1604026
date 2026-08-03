@@ -26,7 +26,7 @@ export default function AndroidServicesSection({ data }) {
       <div className="max-w-7xl mx-auto px-6 flex gap-12 items-start lg:items-stretch">
         {/* LEFT */}
         <div className="w-full lg:w-[70%]">
-          <h2 className="text-[42px] font-semibold mb-10 text-black">
+          <h2 className="text-[40px] font-semibold mb-10 text-black">
             {title}
           </h2>
 
@@ -66,10 +66,10 @@ export default function AndroidServicesSection({ data }) {
                       const id = item.toLowerCase().replace(/\s+/g, "-");
                       const section = document.getElementById(id);
 
-                      if (section) {
+                     if (section) {
                         section.scrollIntoView({ behavior: "smooth", block: "start" });
                       }
-                    }}
+                    }} 
                     className="text-sm text-gray-600 cursor-pointer hover:text-black"
                   >
                     {item}
