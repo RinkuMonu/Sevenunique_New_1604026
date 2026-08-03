@@ -3,23 +3,31 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react"; // install if needed
 
-export default function FAQSection({ data }) {
+export default function FAQSection({ data, twoColumn = false }) {
   const [openIndex, setOpenIndex] = useState(null);
 
   if (!data || !data.items?.length) return null;
 
   return (
     <section className="bg-white py-20">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className={`max-w-6xl mx-auto px-6 ${twoColumn ? "grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:items-start lg:gap-20" : ""}`}>
 
-        {/* Heading */}
-        <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">
-          {data.sectionLabel}
-        </p>
+        {/* Heading can sit beside the accordion on detail pages. */}
+        <div className={twoColumn ? "lg:sticky lg:top-28" : ""}>
+          <p className="text-xs font-semibold uppercase tracking-widest text-[#f46b45] mb-3">
+            {data.sectionLabel}
+          </p>
 
-        <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-12 leading-tight max-w-3xl">
-          {data.heading}
-        </h2>
+          <h2 className={`text-3xl md:text-4xl font-semibold text-gray-900 leading-tight max-w-3xl ${twoColumn ? "mb-0" : "mb-12"}`}>
+            {data.heading}
+          </h2>
+
+          {twoColumn && data.description && (
+            <p className="mt-5 max-w-md text-base leading-7 text-gray-600">
+              {data.description}
+            </p>
+          )}
+        </div>
 
         {/* Accordion */}
         <div className="border-t border-gray-200">

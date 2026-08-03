@@ -28,8 +28,9 @@ export default function Footer() {
                 src="/images/logo-2.png"
                 alt="Sevenunique"
                 width={220}
-                height={70}
+                height={73}
                 className="object-contain"
+                style={{ height: "auto" }}
               />
             </Link>
             <p className="mt-5 text-[16px] leading-7 text-[#555] max-w-[300px]">
@@ -429,13 +430,13 @@ export default function Footer() {
       </div>
 
 
-      <div className="bg-[#111] py-5 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/70 text-[14px] text-center md:text-left">
+      <div className="bg-[#111] px-5 py-6 sm:px-6 md:py-5">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-5 md:gap-4">
+          <p className="max-w-sm text-center text-[13px] leading-6 text-white/70 sm:text-[14px] md:max-w-none md:text-left">
             © 2026 Sevenunique Tech Solution Pvt. Ltd. All rights reserved.
           </p>
 
-          <div className="flex items-center gap-5 text-[14px] text-white/70">
+          <div className="flex max-w-md flex-wrap items-center justify-center gap-x-5 gap-y-3 text-center text-[13px] leading-5 text-white/70 sm:max-w-xl sm:text-[14px] md:max-w-none md:justify-end md:gap-5 md:text-left">
             <Link
               href="/privacy-policy"
               className="hover:text-[#f4622a] transition"
