@@ -202,7 +202,6 @@ export default function Chatbot() {
   useEffect(() => {
     if (open && !minimized) {
       setTimeout(() => inputRef.current?.focus(), 100);
-      setBadge(0);
     }
   }, [open, minimized]);
 
@@ -435,7 +434,7 @@ export default function Chatbot() {
           padding: 0;
         }
         .su-launcher {
-          position: fixed; bottom: 170px; right: 30px; z-index: 9999;
+          position: fixed; bottom: 140px; right: 30px; z-index: 9999;
           cursor: pointer; border: none; background: none; padding: 0;
         }
         .su-launcher-ring {
@@ -581,8 +580,9 @@ export default function Chatbot() {
         }
         .su-footer a { color: ${BRAND_PRIMARY}; text-decoration: none; font-weight: 500; }
         @media (max-width: 440px) {
-          .su-window { left: 10px; right: 10px; width: auto; bottom: 88px; }
-          .su-launcher { bottom: 18px; right: 18px; }
+          /* Keep the chat window and trigger inside narrow screens and mobile safe areas. */
+          .su-window { left: 10px; right: 10px; width: auto; bottom: calc(88px + env(safe-area-inset-bottom)); }
+          .su-launcher { bottom: calc(88px + env(safe-area-inset-bottom)); right: 16px; }
         }
       `}</style>
 
@@ -590,10 +590,10 @@ export default function Chatbot() {
         {!open && (
           <button
             className="su-launcher"
-            onClick={() => { setOpen(true); setMinimized(false); }}
+            onClick={() => { setOpen(true); setMinimized(false); setBadge(0); }}
             aria-label={`Open chat with ${BOT_NAME}`}
           >
-            <div className="su-launcher-ring -bottom-10">
+            <div className="su-launcher-ring">
               <RobotIcon size={26} />
               {badge > 0 && <span className="su-badge">{badge}</span>}
             </div>

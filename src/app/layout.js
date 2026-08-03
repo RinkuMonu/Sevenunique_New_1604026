@@ -53,7 +53,7 @@ export default function RootLayout({ children }) {
   "@type": "Organization",
   name: "SevenUnique Tech Solutions Pvt. Ltd.",
   url: "https://www.sevenunique.com",
-  logo: "https://www.sevenunique.com/logo.png",
+  logo: "https://www.sevenunique.com/images/logo-2.png",
   image: "https://www.sevenunique.com/og-image.jpeg",
 };
 
@@ -61,8 +61,10 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-    <body className="min-h-screen flex flex-col">
+    {/* Browser extensions can inject attributes on body before React hydrates. */}
+    <body className="min-h-screen flex flex-col" suppressHydrationWarning>
   <script
     type="application/ld+json"
     dangerouslySetInnerHTML={{
