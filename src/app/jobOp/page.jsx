@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Search, X } from "lucide-react";
 
 
@@ -119,11 +120,13 @@ export default function JobsPage() {
               <div className="flex flex-col md:flex-row">
 
                 {/* LEFT IMAGE */}
-                <div className="md:w-[280px] w-full h-[220px] overflow-hidden">
-                  <img
+                <div className="relative h-220px w-full shrink-0 overflow-hidden md:w-280px">
+                  <Image
                     src={job.image}
                     alt={job.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                    fill
+                    sizes="(max-width: 767px) 100vw, 280px"
+                    className="object-cover transition duration-500 group-hover:scale-105"
                   />
                 </div>
 
@@ -170,9 +173,10 @@ export default function JobsPage() {
 
       {/* ================= MODAL ================= */}
       {openModal && (
-        <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center px-4">
+        <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-black/60 px-4 py-4 sm:items-center sm:py-8">
 
-          <div className="bg-white w-full max-w-lg rounded-3xl p-8 relative animate-[fadeIn_.3s_ease]">
+          {/* Keep the application form inside short laptop/mobile viewports without changing submission logic. */}
+          <div className="relative max-h-[calc(100dvh-2rem)] w-full max-w-lg overflow-y-auto rounded-3xl bg-white p-5 shadow-2xl scrollbar-width:none [&::-webkit-scrollbar]:hidden animate-[fadeIn_.3s_ease] sm:max-h-[calc(100dvh-4rem)] sm:p-8">
 
             {/* CLOSE BUTTON */}
             <button
@@ -187,12 +191,12 @@ export default function JobsPage() {
               Apply Now
             </h2>
 
-            <p className="text-gray-500 mb-8">
+            <p className="mb-5 text-gray-500 sm:mb-8">
               Fill in your details to apply for this role.
             </p>
 
             {/* FORM */}
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
 
               {/* NAME */}
               <div>
@@ -224,7 +228,7 @@ export default function JobsPage() {
                   value={formData.mobile}
                   onChange={handleChange}
                   placeholder="Enter your mobile number"
-                  className="w-full border text-gray-500 text-gray-500 border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                  className="w-full border text-gray-500  border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
                 />
               </div>
 
@@ -273,7 +277,7 @@ export default function JobsPage() {
                   name="role"
                   value={formData.role}
                   readOnly
-                  className="w-full border text-gray-500 border-gray-300 rounded-xl px-4 py-3 bg-gray-100 text-gray-600"
+                  className="w-full rounded-xl border border-gray-300 bg-gray-100 px-4 py-3 text-gray-500"
                 />
               </div>
 

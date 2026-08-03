@@ -9,7 +9,82 @@ const menuItems = [
   { name: "Services", path: "/services" },
   { name: "Technologies", path: "/technologies" },
   { name: "Industries", path: "/industries" },
+  // Temporarily hidden. Uncomment to restore Payment Solutions (desktop and mobile navigation).
+  // { name: "Payment Solutions", path: "/payment-solutions" },
 ];
+
+const paymentSolutionGroups = [
+  {
+    label: "Fintech Services",
+    items: [
+      { name: "Payin", path: "/payment-solutions/payin" },
+      { name: "Payout", path: "/payment-solutions/payout" },
+      { name: "DMT", path: "/payment-solutions/dmt" },
+      { name: "AEPS", path: "/payment-solutions/aeps" },
+    ],
+  },
+  {
+    label: "Utility Services",
+    items: [
+      { name: "BBPS Bill Payments", path: "/payment-solutions/bbps-bill-payments" },
+      { name: "Mobile & DTH Recharges", path: "/payment-solutions/recharges" },
+      { name: "Electricity Bill Payment", path: "/payment-solutions/electricity-bill-payment" },
+      { name: "Water Bill Payment", path: "/payment-solutions/water-bill-payment" },
+      { name: "Gas Bill Payment", path: "/payment-solutions/gas-bill-payment" },
+      { name: "FASTag Recharge", path: "/payment-solutions/fastag-recharge" },
+      { name: "Broadband & Landline", path: "/payment-solutions/broadband-landline-payment" },
+    ],
+  },
+  {
+    label: "Verification Services",
+    items: [
+      { name: "CIBIL Score Check", path: "/payment-solutions/cibil-score-check" },
+      { name: "PAN Verification with OTP", path: "/payment-solutions/pan-verification-otp" },
+      { name: "Aadhaar Validation with OTP", path: "/payment-solutions/aadhaar-validation-otp" },
+      { name: "GSTIN Verification", path: "/payment-solutions/gstin-verification" },
+      { name: "Bank Verification", path: "/payment-solutions/bank-verification" },
+      { name: "Udyam Verification", path: "/payment-solutions/udyam-verification" },
+      { name: "CIN Verification", path: "/payment-solutions/cin-verification" },
+      { name: "Voter ID Verification", path: "/payment-solutions/voter-id-verification" },
+    ],
+  },
+  {
+    label: "Booking Services",
+    items: [
+      { name: "Bus Booking", path: "/payment-solutions/bus-booking" },
+      { name: "Hotel Booking", path: "/payment-solutions/hotel-booking" },
+      { name: "Train Booking", path: "/payment-solutions/train-booking" },
+      { name: "Flight Booking", path: "/payment-solutions/flight-booking" },
+    ],
+  },
+  {
+    label: "Loan & Insurance Services",
+    items: [
+      { name: "Credit Card", path: "/payment-solutions/credit-card" },
+      { name: "Loans", path: "/payment-solutions/loans" },
+      { name: "Home Loan", path: "/payment-solutions/home-loan" },
+      { name: "Instant Loan", path: "/payment-solutions/instant-loan" },
+      { name: "Personal Loan", path: "/payment-solutions/personal-loan" },
+      { name: "Business Loan", path: "/payment-solutions/business-loan" },
+      { name: "Education Loan", path: "/payment-solutions/education-loan" },
+      { name: "Car Loan", path: "/payment-solutions/car-loan" },
+      { name: "Gold Loan", path: "/payment-solutions/gold-loan" },
+      { name: "Insurance", path: "/payment-solutions/insurance" },
+      { name: "Health Insurance", path: "/payment-solutions/health-insurance" },
+      { name: "Life Insurance", path: "/payment-solutions/life-insurance" },
+      { name: "Motor Insurance", path: "/payment-solutions/motor-insurance" },
+      { name: "Travel Insurance", path: "/payment-solutions/travel-insurance" },
+    ],
+  },
+  {
+    label: "Gifts & Vouchers",
+    items: [
+      { name: "Gift Cards & Vouchers", path: "/payment-solutions/gift-cards-vouchers" },
+    ],
+  },
+];
+
+const paymentSolutions = paymentSolutionGroups.flatMap((group) => group.items);
 
 const servicesCols = [
   {
@@ -218,9 +293,9 @@ function DotHeading({ children }) {
   );
 }
 
-function LeftPanel({ title, subtitle, links, brand, blurb }) {
+function LeftPanel({ title, subtitle, links, brand, blurb, footerLink }) {
   return (
-    <div className="w-[280px] shrink-0 border-r border-gray-200 bg-[#f5f5f7] px-7 py-8">
+    <div className="flex w-[280px] shrink-0 flex-col border-r border-gray-200 bg-[#f5f5f7] px-7 py-8">
       <h2 className="mb-2 text-[25px] leading-none font-semibold text-[#111]">
         {title}
         <span className="text-[#ff6a3d]">.</span>
@@ -230,18 +305,18 @@ function LeftPanel({ title, subtitle, links, brand, blurb }) {
       </p>
       <ul className="space-y-3 text-[12px]">
         {links.map((item) => (
-          <li key={item}>
+          <li key={typeof item === "string" ? item : item.name}>
             <Link
-              href="#"
+              href={typeof item === "string" ? "#" : item.href}
               className="inline-flex font-medium text-[#111] transition-all duration-200 hover:translate-x-1 hover:text-[#ff6a3d]"
             >
-              {item}
+              {typeof item === "string" ? item : item.name}
             </Link>
           </li>
         ))}
       </ul>
       {(brand || blurb) && <div className="my-8 border-t border-gray-300" />}
-      <div>
+      <div className="flex flex-1 flex-col">
         {brand && (
           <p className="mb-3 text-[12px] font-semibold text-[#222]">{brand}</p>
         )}
@@ -249,6 +324,15 @@ function LeftPanel({ title, subtitle, links, brand, blurb }) {
           <p className="max-w-[230px] text-[12px] leading-6 text-gray-700">
             {blurb}
           </p>
+        )}
+        {footerLink && (
+          <Link
+            href={footerLink.href}
+            className="mt-auto inline-flex items-center gap-2 border-t border-gray-300 pt-5 text-[12px] font-medium text-[#111] transition-colors duration-200 hover:text-[#ff6a3d]"
+          >
+            {footerLink.name}
+            <span aria-hidden="true">→</span>
+          </Link>
         )}
       </div>
     </div>
@@ -263,14 +347,15 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur-md">
-      <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-4 sm:px-6">
-        <Link href="/" className="  block">
+      <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-2 sm:px-6">
+        <Link href="/" className="block">
           <Image
             src="/images/logo-2.png"
             alt="logo"
-            width={250}
-            height={140}
-            className="w-60 h-auto object-contain"
+            width={866}
+            height={288}
+            className="h-14 w-auto object-contain"
+            style={{ width: "auto" }}
           />
         </Link>
         <button
@@ -487,6 +572,72 @@ export default function Header() {
                   </div>
                 )}
 
+                {id === "payment solutions" && isOpen && (
+                  <div
+                    style={panelAnimationStyle}
+                    className="fixed inset-x-0 top-[72px] z-50 max-h-[calc(100dvh-72px)] overflow-y-auto overscroll-contain border-y border-gray-200 bg-white shadow-xl"
+                  >
+                    <div className="flex">
+                      <LeftPanel
+                        title="Payment Solutions"
+                        subtitle="Secure, scalable payment services built for businesses, agents, and customers."
+                        links={[]}
+                        brand="SEVENUNIQUE PAYMENTS"
+                        blurb="Power collections, transfers, bill payments, travel, cards, and lending from one reliable platform."
+                        footerLink={{
+                          name: "All Payment Solutions",
+                          href: "/payment-solutions",
+                        }}
+                      />
+                      <div className="mx-auto max-w-[1280px] flex-1 px-7 py-6 xl:px-9">
+                        <div
+                          className="grid items-start gap-4"
+                          style={{ gridTemplateColumns: "repeat(4, minmax(0, 1fr))" }}
+                        >
+                          {paymentSolutionGroups.map((group) => (
+                            <div
+                              key={group.label}
+                              className="rounded-xl border border-gray-200 bg-[#fafafa] px-4 py-3.5 transition-colors hover:border-orange-200 hover:bg-orange-50/30"
+                              style={
+                                group.label === "Loan & Insurance Services"
+                                  ? { gridColumn: "span 3 / span 3" }
+                                  : undefined
+                              }
+                            >
+                              <div className="mb-2.5 flex items-center gap-2 border-b border-gray-200 pb-2.5">
+                                <span className="inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-[#ff6a3d]" />
+                                <h3 className="text-[10px] font-bold uppercase tracking-[0.14em] text-gray-500">
+                                  {group.label}
+                                </h3>
+                              </div>
+                              <ul
+                                className="grid gap-x-3 gap-y-1.5"
+                                style={
+                                  group.label === "Loan & Insurance Services"
+                                    ? { gridTemplateColumns: "repeat(5, minmax(0, 1fr))" }
+                                    : { gridTemplateColumns: "repeat(2, minmax(0, 1fr))" }
+                                }
+                              >
+                                {group.items.map((entry) => (
+                                  <li key={entry.name}>
+                                    <Link
+                                      href={entry.path}
+                                      onClick={() => setOpen(null)}
+                                      className="inline-flex py-0.5 text-[12px] font-semibold leading-4 text-[#333] transition-all duration-200 hover:translate-x-0.5 hover:text-[#f46b45]"
+                                    >
+                                      {entry.name}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 {id === "about" && isOpen && (
                   <div
                     style={panelAnimationStyle}
@@ -561,6 +712,7 @@ export default function Header() {
                   cols = servicesCols.map((col) => col.items).flat();
                 if (id === "technologies") cols = technologiesCols.flat();
                 if (id === "industries") cols = industriesCols.flat();
+                if (id === "payment solutions") cols = paymentSolutions;
                 if (id === "about")
                   cols = aboutCols.map((col) => col.items).flat();
 
@@ -578,31 +730,52 @@ export default function Header() {
                       <ArrowDown open={isActive} />
                     </button>
                     {isActive && (
-                      <ul className="grid grid-cols-1 gap-y-2 pb-3 text-[13px] text-[#222] sm:grid-cols-2">
-                      {cols.map((entry) => {
-  const isObject = typeof entry === "object";
+                      id === "payment solutions" ? (
+                        <div className="grid grid-cols-1 gap-5 pb-4 sm:grid-cols-2">
+                          {paymentSolutionGroups.map((group) => (
+                            <div key={`mobile-${group.label}`}>
+                              <DotHeading>{group.label}</DotHeading>
+                              <ul className="space-y-2 text-[13px] text-[#222]">
+                                {group.items.map((entry) => (
+                                  <li key={entry.name}>
+                                    <Link
+                                      href={entry.path}
+                                      className="block rounded-md py-1 pr-2 transition-colors hover:text-[#f46b45]"
+                                      onClick={() => setMobileOpen(false)}
+                                    >
+                                      {entry.name}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <ul className="grid grid-cols-1 gap-y-2 pb-3 text-[13px] text-[#222] sm:grid-cols-2">
+                          {cols.map((entry) => {
+                            const isObject = typeof entry === "object";
+                            const name = isObject ? entry.name : entry;
+                            const path = isObject
+                              ? entry.link ||
+                                entry.path ||
+                                (entry.slug ? `/industries/${entry.slug}` : "#")
+                              : "#";
 
-  const name = isObject ? entry.name : entry;
-
-  const path = isObject
-    ? entry.link ||
-      entry.path ||
-      (entry.slug ? `/industries/${entry.slug}` : "#")
-    : "#";
-
-  return (
-    <li key={name}>
-      <Link
-        href={path}
-        className="block rounded-md py-1 pr-2 transition-colors hover:text-[#f46b45]"
-        onClick={() => setMobileOpen(false)}
-      >
-        {name}
-      </Link>
-    </li>
-  );
-})}
-                      </ul>
+                            return (
+                              <li key={name}>
+                                <Link
+                                  href={path}
+                                  className="block rounded-md py-1 pr-2 transition-colors hover:text-[#f46b45]"
+                                  onClick={() => setMobileOpen(false)}
+                                >
+                                  {name}
+                                </Link>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      )
                     )}
                   </div>
                 );
