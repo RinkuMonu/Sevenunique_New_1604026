@@ -92,7 +92,8 @@ export default function Hero({ data }) {
         </div>
 
         {/* Heading */}
-        <h1 className="text-[48px] lg:text-[64px] leading-[1.05] font-bold text-gray-900 tracking-[-2px]">
+        {/* Responsive UI update: industry hero uses a fluid type scale. */}
+        <h1 className="text-4xl font-bold leading-[1.05] tracking-[-1px] text-gray-900 sm:text-5xl lg:text-[64px] lg:tracking-[-2px]">
           {data.title}
         </h1>
 

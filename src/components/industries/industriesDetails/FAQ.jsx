@@ -91,7 +91,8 @@ export default function FAQ({ data }) {
       <div className="max-w-[1100px] mx-auto px-6">
 
         {/* HEADING */}
-        <h2 className="text-[48px] leading-[58px] font-semibold mb-6">
+        {/* Responsive UI update: FAQ title scales down for phone widths. */}
+        <h2 className="mb-6 text-3xl font-semibold leading-tight sm:text-4xl lg:text-[48px] lg:leading-[58px]">
           {data.title}
         </h2>
 

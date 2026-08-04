@@ -106,7 +106,8 @@ function TestimonialCard({ item, featured = false }) {
                   ))}
                 </div>
 
-                <div className="mt-10 grid grid-cols-3 gap-4 border-t border-[#d8dde3] pt-6">
+                {/* Responsive UI update: testimonial metrics stack before the small breakpoint. */}
+                <div className="mt-10 grid grid-cols-1 gap-4 border-t border-[#d8dde3] pt-6 sm:grid-cols-3">
                   {item.hoverDetails.metrics.map((metric) => (
                     <div key={metric.label}>
                       <p className="text-[18px] font-semibold text-[#f4622a] md:text-[20px]">

@@ -164,16 +164,16 @@ export default function EngagementSection({ data }) {
   const toggle = (i) => setOpenIndex((prev) => (prev === i ? -1 : i));
 
   return (
-    <section className="py-20 px-6 bg-white">
-      <div className="mx-auto max-w-5xl lg:mx-[6.5rem]">
+    <section className="bg-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <div className="mx-auto max-w-6xl">
 
         {/* ── Header ── */}
-        <div className="mb-20 flex flex-col items-center gap-3 text-center">
+        <div className="mb-10 flex flex-col items-center gap-3 text-center sm:mb-16 lg:mb-20">
           <p className="text-xs font-bold uppercase tracking-widest text-gray-500">
             Flexible engagement models
           </p>
           <h2 className="text-3xl md:text-4xl font-medium text-gray-900 leading-tight">
-            Need additional {displayName} expertise?<br />
+            Need additional {displayName} expertise?<br className="hidden sm:block" />{" "}
             Plug us in where it matters most.
           </h2>
           <p className="text-base text-gray-900 max-w-xl">

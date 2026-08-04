@@ -55,7 +55,8 @@ export default function TrustSection() {
             </div>
 
             {/* BOTTOM ROW */}
-            <div className="grid grid-cols-3 gap-6">
+            {/* Responsive UI update: trust metrics remain readable on phones. */}
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6">
               <Card
                 bg="bg-[#1e2329]"
                 text="The company does what they say they are going to do. Leadership takes great care of employees."

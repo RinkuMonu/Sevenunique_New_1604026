@@ -84,7 +84,8 @@ export default function DedicatedTeamMembers() {
             Our Team
           </span>
 
-          <h2 className="mt-5 text-[42px] font-semibold text-[#111827]">
+          {/* Responsive UI update: section heading scales from phone to desktop. */}
+          <h2 className="mt-5 text-3xl font-semibold text-[#111827] sm:text-4xl lg:text-[42px]">
             Our Dedicated Team
           </h2>
 

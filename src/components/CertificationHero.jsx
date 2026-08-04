@@ -34,13 +34,14 @@ export default function CertificationHero() {
                 </p>
 
                 {/* HEADING */}
-                <h1 className="text-[54px] leading-[72px] text-[#1f2933] mb-6 tracking-[-1px]">
+                {/* Responsive UI update: prevent hero copy from overflowing narrow screens. */}
+                <h1 className="mb-6 text-4xl leading-tight tracking-[-1px] text-[#1f2933] sm:text-5xl lg:text-[54px] lg:leading-[72px]">
                     Our Certified Expertise
                     <span className="text-[#f45d2d]">.</span>
                 </h1>
 
                 {/* DESCRIPTION */}
-                <p className="text-[20px] leading-[34px] text-gray-500 max-w-[700px] mx-auto">
+                <p className="mx-auto max-w-[700px] text-base leading-7 text-gray-500 sm:text-lg lg:text-[20px] lg:leading-[34px]">
                     Work with a certified, award-winning software development partner trusted for delivering expertise and quality. Since 2024, we’ve completed 1,200+ projects and supported 500+ clients worldwide.
                 </p>
 

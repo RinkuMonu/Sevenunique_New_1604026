@@ -6,7 +6,8 @@ export default function CallToAction() {
   return (
     <section className="w-full bg-black text-white py-20 flex flex-col items-center justify-center text-center relative overflow-hidden">
       {/* Top Image */}
-      <div className="relative w-[420px] h-[260px] mb-10">
+      {/* Responsive UI update: illustration follows the available mobile width. */}
+      <div className="relative mb-10 h-[220px] w-full max-w-[420px] sm:h-[260px]">
         <Image
           src="/images/handonhand.png"
           alt="Team working"

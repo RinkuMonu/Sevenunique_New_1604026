@@ -11,35 +11,37 @@ export default function KeyFactsSection({ data }) {
   const { tabs, content, sidebar } = data;
 
   return (
-    <section id="key-facts" className="bg-white py-16">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="key-facts" className="bg-white py-12 sm:py-16 lg:py-24">
+      {/* Responsive UI update: tab content wraps and aligns safely on small screens. */}
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         
         {/* HEADING */}
-        <div className="grid grid-cols-12 gap-12 mb-10">
-          <div className="col-span-12 lg:col-span-9">
-            <h2 className="text-[44px] font-semibold text-[#0f172a] leading-[1.1] max-w-[800px]">
+        <div className="mb-7 grid grid-cols-12 gap-6 sm:mb-10 lg:gap-12">
+          <div className="col-span-12">
+            {/* Responsive UI update: key-facts title remains readable on phones. */}
+            <h2 className="max-w-[800px] [overflow-wrap:anywhere] text-3xl font-semibold leading-tight text-[#0f172a] sm:text-4xl lg:text-[44px]">
               {content?.[activeTab]?.title}
             </h2>
           </div>
         </div>
 
-        <div className="grid grid-cols-12 gap-12">
+        <div className="grid grid-cols-12 gap-8 rounded-3xl border border-slate-200 bg-[#f8fafc] p-5 sm:p-8 lg:gap-12 lg:p-10">
           
           {/* LEFT TABS */}
           <div className="col-span-12 lg:col-span-3">
-            <div className="space-y-6">
+            <div className="grid gap-2 sm:grid-cols-3 lg:block lg:space-y-6">
               {tabs?.map((tab, i) => (
                 <div
                   key={i}
                   onClick={() => setActiveTab(i)}
-                  className={`cursor-pointer pb-4 border-b transition-all duration-200 group ${
+                  className={`group min-w-0 cursor-pointer rounded-lg border px-3 py-3 transition-all duration-200 lg:rounded-none lg:border-x-0 lg:border-t-0 lg:px-0 lg:pb-4 ${
                     activeTab === i
                       ? "text-orange-600 border-orange-500 font-medium"
                       : "text-gray-500 border-gray-100 hover:text-black"
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-[15px] leading-snug pr-4">
+                    <span className="min-w-0 [overflow-wrap:anywhere] pr-2 text-sm leading-snug sm:text-[15px] lg:pr-4">
                       {tab}
                     </span>
                     <span
@@ -58,8 +60,8 @@ export default function KeyFactsSection({ data }) {
           </div>
 
           {/* MIDDLE CONTENT */}
-          <div className="col-span-12 lg:col-span-6">
-            <p className="text-[17px] leading-8 text-gray-600 whitespace-pre-line">
+          <div className="col-span-12 lg:col-span-9">
+            <p className="whitespace-pre-line [overflow-wrap:anywhere] text-base leading-relaxed text-gray-600 sm:text-[17px] sm:leading-8">
               {content?.[activeTab]?.body}
             </p>
           </div>

@@ -56,9 +56,10 @@ export default function BackendHero({ data }) {
     }
   };
 
+  // Responsive UI update: remove conflicting desktop padding from mobile.
   return (
-    <div className="w-full min-h-screen bg-[#0f172a] px-6 py-16 md:px-10 md:py-18 flex items-center justify-center px-10">
-      <div className="max-w-7xl w-full flex gap-16 items-start">
+    <div className="flex w-full items-center justify-center bg-[#0f172a] px-4 py-10 sm:px-6 sm:py-14 md:px-10 md:py-16 lg:min-h-screen">
+      <div className="flex w-full max-w-7xl flex-col items-start gap-10 lg:flex-row lg:gap-16">
 
         {/* LEFT SIDE */}
         <div className="flex-1">
@@ -78,11 +79,12 @@ export default function BackendHero({ data }) {
             {hero.title}
           </h2>
 
-          <h1 className="text-[53px] font-bold leading-tight text-white mb-6">
+          {/* Responsive UI update: mobile-first hero sizing and card width. */}
+          <h1 className="mb-6 text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-[53px]">
             {hero.heading}
           </h1>
 
-          <p className="text-gray-300 text-[20px] max-w-xl leading-relaxed mb-10">
+          <p className="mb-8 max-w-xl text-base leading-relaxed text-gray-300 sm:text-lg md:text-xl lg:mb-10">
             {hero.description}
           </p>
 
@@ -101,7 +103,7 @@ export default function BackendHero({ data }) {
         </div>
 
         {/* RIGHT SIDE FORM */}
-        <div className="w-[360px] bg-white rounded-2xl shadow-lg p-8">
+        <div className="w-full rounded-2xl bg-white p-5 shadow-lg sm:p-8 lg:max-w-[360px]">
           <h2 className="text-black text-xl font-semibold text-center mb-6">
             {hero.formTitle}
           </h2>

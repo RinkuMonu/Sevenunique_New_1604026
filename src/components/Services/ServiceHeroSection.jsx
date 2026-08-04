@@ -95,7 +95,8 @@ export default function ServiceHeroSection({ data }) {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#0f172a] px-6 py-16 md:px-10 md:py-18">
+    <section className="relative overflow-hidden bg-[#0f172a] px-4 py-10 sm:px-6 sm:py-14 md:px-10 md:py-16">
+      {/* Responsive UI update: service form hero stacks and fits narrow screens. */}
 
       {/* BACKGROUND IMAGE FROM PROPS */}
       <div className="absolute inset-0">
@@ -115,7 +116,7 @@ export default function ServiceHeroSection({ data }) {
       <div className="relative z-10 mx-auto max-w-7xl">
 
         {/* BREADCRUMB */}
-        <div className="mb-10 flex flex-wrap items-center gap-3 text-sm text-white/70">
+        <div className="mb-7 flex flex-wrap items-center gap-2 text-xs text-white/70 sm:mb-10 sm:gap-3 sm:text-sm">
           <span>Home</span>
 
           <span>{">"}</span>
@@ -130,7 +131,7 @@ export default function ServiceHeroSection({ data }) {
         </div>
 
         {/* GRID */}
-        <div className="grid gap-14 lg:grid-cols-[minmax(0,1.7fr)_minmax(380px,0.9fr)] items-center">
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.7fr)_minmax(360px,0.9fr)] lg:gap-14">
 
           {/* LEFT */}
           <div className="lg:pr-10">
@@ -145,20 +146,20 @@ export default function ServiceHeroSection({ data }) {
             </div>
 
             {/* HEADING */}
-            <h1 className="mt-7 max-w-4xl text-[42px] font-bold leading-[1.05] text-white md:text-[52px]">
+            <h1 className="mt-6 max-w-4xl text-3xl font-bold leading-tight text-white sm:text-4xl md:text-[52px]">
               {renderHighlightedHeading(heading)}
             </h1>
 
             {/* DESCRIPTION */}
-            <p className="mt-8 max-w-3xl text-[18px] leading-[1.9] text-gray-300">
+            <p className="mt-5 max-w-3xl text-base leading-relaxed text-gray-300 sm:mt-8 sm:text-lg sm:leading-[1.9]">
               {description}
             </p>
 
             {/* STATS */}
-            <div className="mt-12 flex flex-wrap items-center gap-10">
+            <div className="mt-8 grid grid-cols-1 gap-4 min-[420px]:grid-cols-2 sm:mt-12 sm:gap-5">
 
               {/* RATING */}
-              <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md px-6 py-5">
+              <div className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur-md sm:px-6 sm:py-5">
                 <p className="text-[18px] font-semibold text-white">
                   {rating.platform}
                 </p>
@@ -179,7 +180,7 @@ export default function ServiceHeroSection({ data }) {
               </div>
 
               {/* LABEL */}
-              <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md px-6 py-5 max-w-[220px]">
+              <div className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur-md sm:px-6 sm:py-5">
                 <p className="text-lg font-semibold leading-snug text-white">
                   {label}
                 </p>
@@ -189,11 +190,11 @@ export default function ServiceHeroSection({ data }) {
 
           {/* RIGHT FORM */}
           <div className="relative">
-            <div className="rounded-[30px] border border-white/10 bg-white/95 backdrop-blur-xl p-8 md:p-10 shadow-2xl shadow-black/30">
+            <div className="rounded-2xl border border-white/10 bg-white/95 p-5 shadow-2xl shadow-black/30 backdrop-blur-xl sm:p-8 md:rounded-[30px] md:p-10">
 
               {/* TITLE */}
               <div className="mb-8">
-                <h2 className="text-[30px] font-bold leading-tight text-[#111827]">
+                <h2 className="text-2xl font-bold leading-tight text-[#111827] sm:text-[30px]">
                   {formTitle}
                 </h2>
 

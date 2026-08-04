@@ -59,9 +59,10 @@ export default function RecognizedExcellenceSection() {
   ];
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-16 md:py-24">
+    <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 md:py-24">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-gray-900 mb-6">
+        {/* Responsive UI update: recognition heading scales for narrow screens. */}
+        <h2 className="mb-5 text-3xl font-bold text-gray-900 sm:mb-6 sm:text-4xl">
           Recognized Excellence
         </h2>
 
@@ -71,7 +72,8 @@ export default function RecognizedExcellenceSection() {
         </p>
       </div>
 
-      <div className="grid grid-cols-4 md:grid-cols-3 gap-6">
+      {/* Responsive UI update: awards reflow from one to three columns. */}
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
         {awards.map((award, idx) => (
           <div
             key={idx}
@@ -83,6 +85,7 @@ export default function RecognizedExcellenceSection() {
                 width={160}
                 height={80}
                 className="object-contain w-auto h-full"
+                style={{ width: "auto" }}
                 priority
                 alt={award.title}
               />

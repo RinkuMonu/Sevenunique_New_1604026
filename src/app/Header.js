@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const menuItems = [
   { name: "About", path: "/about-us" },
@@ -345,6 +345,24 @@ export default function Header() {
   const [mobileSection, setMobileSection] = useState(null);
   const panelAnimationStyle = { animation: "dropdownFadeSlide 220ms ease-out" };
 
+  // Responsive UI update: keep page position fixed while the mobile menu scrolls independently.
+  useEffect(() => {
+    if (!mobileOpen) return undefined;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") setMobileOpen(false);
+    };
+    window.addEventListener("keydown", closeOnEscape);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [mobileOpen]);
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-2 sm:px-6">
@@ -361,6 +379,8 @@ export default function Header() {
         <button
           type="button"
           aria-label="Toggle menu"
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-navigation"
           className="inline-flex items-center rounded-md border border-gray-300 p-2 text-[#111] transition-colors hover:bg-gray-100 lg:hidden"
           onClick={() => {
             setMobileOpen((prev) => !prev);
@@ -700,8 +720,12 @@ export default function Header() {
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-gray-200 bg-white lg:hidden">
-          <div className="mx-auto max-w-[1280px] px-4 py-3 sm:px-6">
+        // Responsive UI update: absolute positioning avoids backdrop-filter trapping fixed children.
+        <div
+          id="mobile-navigation"
+          className="absolute inset-x-0 top-full z-40 h-[calc(100dvh-72px)] overflow-y-auto overscroll-contain border-t border-gray-200 bg-white shadow-xl [-webkit-overflow-scrolling:touch] lg:hidden"
+        >
+          <div className="mx-auto min-h-full max-w-[1280px] px-4 py-3 sm:px-6">
             <div className="space-y-1">
               {menuItems.map((item) => {
                 const id = item.name.toLowerCase();
@@ -782,7 +806,7 @@ export default function Header() {
               })}
             </div>
 
-            <div className="mt-3 space-y-2 pb-2">
+            <div className="mt-3 space-y-2 pb-[calc(1rem+env(safe-area-inset-bottom))]">
               <Link
                 href="#"
                 className="block py-2 text-[15px] font-semibold text-[#111] transition-colors hover:text-[#f46b45]"
