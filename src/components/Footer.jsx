@@ -446,7 +446,7 @@ export default function Footer() {
               href="/apiterms"
               className="hover:text-[#f4622a] transition"
             >
-              ApiTerms
+              API Terms
             </Link>
 
             <Link
