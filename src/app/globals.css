@@ -35,6 +35,26 @@ html {
 }
 
 @layer base {
+  /* Responsive UI update: keep shared media and long content inside every viewport. */
+  img,
+  video,
+  canvas,
+  svg {
+    @apply max-w-full;
+  }
+
+  p,
+  li,
+  a,
+  button,
+  h1,
+  h2,
+  h3,
+  h4 {
+    /* Responsive UI update: wrap only genuinely overflowing words, not normal headings. */
+    overflow-wrap: break-word;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -74,6 +94,7 @@ html {
   transform-origin: 50% 50%;
   transform-box: fill-box;
 }
+
 /* Triangle */
 .clip-triangle {
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);

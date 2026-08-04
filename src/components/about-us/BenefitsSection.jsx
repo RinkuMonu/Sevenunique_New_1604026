@@ -9,7 +9,8 @@ export default function BenefitsSection() {
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-[30%_70%] gap-20 items-start">
         {/* LEFT (30%) */}
         <div>
-          <h2 className="text-[42px] leading-[1.2] font-semibold text-[#111827]">
+          {/* Responsive UI update: section heading scales from phone to desktop. */}
+          <h2 className="text-3xl font-semibold leading-[1.2] text-[#111827] sm:text-4xl lg:text-[42px]">
             Benefits of working with us
           </h2>
 

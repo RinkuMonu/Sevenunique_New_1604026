@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Search, X } from "lucide-react";
 
@@ -25,6 +25,23 @@ export default function JobsPage() {
     location: "",
     role: "",
   });
+
+  // Responsive UI update: keep the page fixed while the application modal scrolls independently.
+  useEffect(() => {
+    if (!openModal) return undefined;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") setOpenModal(false);
+    };
+    window.addEventListener("keydown", closeOnEscape);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [openModal]);
 
   const jobs = [
     {
@@ -88,13 +105,14 @@ export default function JobsPage() {
     <div className="bg-[#f5f6f8] min-h-screen flex flex-col">
 
       {/* ================= TITLE + SEARCH ================= */}
-      <section className="text-center py-10 px-4">
-        <h1 className="text-[48px] md:text-[34px] font-bold text-[#1e2a4a]">
+      <section className="px-4 py-8 text-center sm:px-6 sm:py-10">
+        {/* Responsive UI update: use mobile-first heading scale. */}
+        <h1 className="text-3xl font-bold text-[#1e2a4a] sm:text-4xl lg:text-5xl">
           Explore Our Fully Remote Open Positions
         </h1>
 
         {/* SEARCH BAR */}
-        <div className="mt-6 max-w-5xl mx-auto relative">
+        <div className="relative mx-auto mt-5 max-w-5xl sm:mt-6">
           <Search
             size={18}
             className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
@@ -103,24 +121,25 @@ export default function JobsPage() {
           <input
             type="text"
             placeholder="Job title, company, and keyword"
-            className="w-full pl-10 pr-4 py-4 rounded-lg border text-gray-600 border-gray-300 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400"
+            className="w-full rounded-lg border border-gray-300 bg-white py-3.5 pl-10 pr-4 text-sm text-gray-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 sm:py-4 sm:text-base"
           />
         </div>
       </section>
 
       {/* ================= JOB GRID ================= */}
-      <section className="px-4 pb-14 max-w-6xl mx-auto w-full">
-        <div className="space-y-6">
+      {/* Responsive UI update: cards use valid dimensions and compact mobile spacing. */}
+      <section className="mx-auto w-full max-w-6xl px-4 pb-12 sm:px-6 sm:pb-14">
+        <div className="space-y-4 sm:space-y-6">
 
           {jobs.map((job, index) => (
             <div
               key={index}
-              className="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
+              className="group overflow-hidden rounded-xl border border-gray-200 bg-white transition-all duration-300 hover:shadow-xl sm:rounded-2xl"
             >
               <div className="flex flex-col md:flex-row">
 
                 {/* LEFT IMAGE */}
-                <div className="relative h-220px w-full shrink-0 overflow-hidden md:w-280px">
+                <div className="relative h-[210px] w-full shrink-0 overflow-hidden sm:h-[250px] md:h-auto md:min-h-[260px] md:w-[280px]">
                   <Image
                     src={job.image}
                     alt={job.title}
@@ -131,7 +150,7 @@ export default function JobsPage() {
                 </div>
 
                 {/* RIGHT CONTENT */}
-                <div className="flex-1 p-6 flex flex-col justify-between">
+                <div className="flex min-w-0 flex-1 flex-col justify-between p-4 sm:p-6">
 
                   <div>
                     <div className="flex flex-wrap items-center gap-3 mb-4">
@@ -144,7 +163,7 @@ export default function JobsPage() {
                       </span>
                     </div>
 
-                    <h3 className="text-2xl font-bold text-gray-800 leading-snug">
+                    <h3 className="text-xl font-bold leading-snug text-gray-800 sm:text-2xl">
                       {job.title}
                     </h3>
 
@@ -154,10 +173,10 @@ export default function JobsPage() {
                   </div>
 
                   {/* BUTTON */}
-                  <div className="mt-8 pt-5 border-t border-gray-100">
+                  <div className="mt-6 border-t border-gray-100 pt-4 sm:mt-8 sm:pt-5">
                     <button
                       onClick={() => handleOpenModal(job.title)}
-                      className="bg-[#ff6a3d] hover:bg-[#e85c32] text-white px-6 py-3 rounded-xl text-sm font-medium transition-all duration-300"
+                      className="w-full rounded-xl bg-[#ff6a3d] px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-[#e85c32] sm:w-auto"
                     >
                       Apply Now
                     </button>
@@ -173,21 +192,22 @@ export default function JobsPage() {
 
       {/* ================= MODAL ================= */}
       {openModal && (
-        <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-black/60 px-4 py-4 sm:items-center sm:py-8">
+        <div className="fixed inset-0 z-[70] flex items-start justify-center overflow-y-auto overscroll-contain bg-black/60 px-3 py-3 sm:items-center sm:px-4 sm:py-8">
 
           {/* Keep the application form inside short laptop/mobile viewports without changing submission logic. */}
-          <div className="relative max-h-[calc(100dvh-2rem)] w-full max-w-lg overflow-y-auto rounded-3xl bg-white p-5 shadow-2xl scrollbar-width:none [&::-webkit-scrollbar]:hidden animate-[fadeIn_.3s_ease] sm:max-h-[calc(100dvh-4rem)] sm:p-8">
+          <div className="relative max-h-[calc(100dvh-1.5rem)] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-4 shadow-2xl [scrollbar-width:none] [&::-webkit-scrollbar]:hidden animate-[fadeIn_.3s_ease] sm:max-h-[calc(100dvh-4rem)] sm:rounded-3xl sm:p-8">
 
             {/* CLOSE BUTTON */}
             <button
               onClick={() => setOpenModal(false)}
-              className="absolute top-5 right-5 text-gray-500 hover:text-black"
+              aria-label="Close application form"
+              className="absolute right-3 top-3 inline-flex h-10 w-10 items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 hover:text-black sm:right-5 sm:top-5"
             >
               <X size={22} />
             </button>
 
             {/* TITLE */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">
+            <h2 className="mb-2 pr-12 text-2xl font-bold text-gray-900 sm:text-3xl">
               Apply Now
             </h2>
 
@@ -284,7 +304,7 @@ export default function JobsPage() {
               {/* SUBMIT BUTTON */}
               <button
                 type="submit"
-                className="w-full bg-[#ff6a3d] hover:bg-[#e85c32] text-white py-4 rounded-xl font-medium transition-all duration-300"
+                className="w-full rounded-xl bg-[#ff6a3d] py-3.5 font-medium text-white transition-all duration-300 hover:bg-[#e85c32] sm:py-4"
               >
                 Submit Application
               </button>
@@ -296,13 +316,14 @@ export default function JobsPage() {
 
       {/* ================= FOOTER ================= */}
       <footer className="bg-[#ff6a3d] text-white mt-auto">
-        <div className="max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row justify-between items-center text-sm">
+        {/* Responsive UI update: center and space the compact job-page footer on phones. */}
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-8 text-center text-sm sm:px-6 md:flex-row md:gap-4 md:py-10 md:text-left">
           <div className="flex items-center gap-2 font-semibold">
             <span>▸▸</span>
             <span>Seven Unique</span>
           </div>
 
-          <p className="mt-2 md:mt-0">
+          <p>
             Seven Unique 2024 - 2026. All rights reserved.
           </p>
         </div>

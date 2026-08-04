@@ -114,10 +114,11 @@ export default function Logos() {
     <section className="bg-white py-10">
       <div className="max-w-[1250px] mx-auto px-6">
 
-        <div className="bg-[#5f6b76] rounded-[24px] shadow-md px-8 py-6 flex items-center gap-10">
+        {/* Responsive UI update: stack copy and make the logo row horizontally scrollable. */}
+        <div className="flex flex-col gap-6 rounded-[24px] bg-[#5f6b76] px-5 py-6 shadow-md sm:px-8 lg:flex-row lg:items-center lg:gap-10">
 
           {/* LEFT TEXT */}
-          <div className="w-[280px]">
+          <div className="w-full lg:w-[280px]">
             <p className="text-white text-[18px] leading-[28px]">
               500+ companies rely on our{" "}
               <span className="font-bold underline">
@@ -127,10 +128,10 @@ export default function Logos() {
           </div>
 
           {/* DIVIDER */}
-          <div className="w-[1px] h-[60px] bg-white/40" />
+          <div className="h-px w-full bg-white/40 lg:h-[60px] lg:w-px" />
 
           {/* LOGOS */}
-          <div className="flex flex-1 items-center justify-between gap-6">
+          <div className="flex w-full flex-1 items-center gap-4 overflow-x-auto pb-2 lg:justify-between lg:gap-6 lg:overflow-visible lg:pb-0">
 
             {logos.map((logo, i) => (
               <div

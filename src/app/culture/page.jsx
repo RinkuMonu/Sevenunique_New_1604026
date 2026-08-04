@@ -1,17 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import {
-  Eye,
-  Award,
-  Target,
-  Users,
-  Zap,
-  Lightbulb,
   HomeIcon,
 } from "lucide-react";
 import Image from "next/image";
-import { BiLeftArrow } from "react-icons/bi";
 import { FaAngleRight } from "react-icons/fa";
 import Link from "next/link";
 
@@ -20,7 +12,7 @@ const galleryMoments = [
     id: 1,
     image: "/images/goa3.JPG",
     hoverImage: "/images/goa4.JPG",
-    title: "2st Anniversary Trip To Goa",
+    title: "2nd Anniversary Trip To Goa",
     description: "A memorable team getaway by the sea.",
   },
   {
@@ -131,10 +123,11 @@ function ValueCard({ value }) {
     <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-[380px]">
       {/* IMAGE BACKGROUND */}
       <div className="absolute inset-0">
-        <img
+        <Image
           src={value.img}
           alt={value.title}
-          className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+          fill
+          className="object-cover transition-all duration-500 group-hover:scale-105"
         />
       </div>
 
@@ -185,7 +178,7 @@ function ValueCard({ value }) {
 
 function GalleryCard({ image, hoverImage, title, description }) {
   return (
-    <div className="group relative h-[320px] overflow-hidden rounded-2xl shadow-lg">
+    <div className="group relative h-[240px] overflow-hidden rounded-2xl shadow-lg sm:h-[280px] md:h-[320px]">
 
       {/* Default Image */}
       <Image
@@ -207,8 +200,8 @@ function GalleryCard({ image, hoverImage, title, description }) {
       <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
 
       {/* Text */}
-      <div className="absolute bottom-0 left-0 z-20 p-6">
-        <h3 className="text-white text-2xl font-bold">
+      <div className="absolute bottom-0 left-0 z-20 p-4 sm:p-6">
+        <h3 className="text-xl font-bold leading-snug text-white sm:text-2xl">
           {title}
         </h3>
 
@@ -224,7 +217,7 @@ function GalleryCard({ image, hoverImage, title, description }) {
 
 function MemoryCard({ image, title, description }) {
   return (
-    <div className="group relative h-[320px] overflow-hidden rounded-2xl shadow-lg">
+    <div className="group relative h-[240px] overflow-hidden rounded-2xl shadow-lg sm:h-[280px] md:h-[320px]">
       {/* Image */}
       <Image
         src={image}
@@ -237,7 +230,7 @@ function MemoryCard({ image, title, description }) {
       <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/60 to-transparent" />
 
       {/* Content */}
-      <div className="absolute bottom-0 left-0 z-20 p-6 w-full">
+      <div className="absolute bottom-0 left-0 z-20 w-full p-4 sm:p-6">
         {/* Title Always Visible */}
         <h3 className="text-white text-xl md:text-2xl font-bold">
           {title}
@@ -247,9 +240,10 @@ function MemoryCard({ image, title, description }) {
         <p
           className="
             text-gray-200 text-sm mt-3
-            opacity-0 max-h-0 overflow-hidden
-            group-hover:opacity-100
-            group-hover:max-h-24
+            opacity-100 max-h-24 overflow-hidden
+            md:opacity-0 md:max-h-0
+            md:group-hover:opacity-100
+            md:group-hover:max-h-24
             transition-all duration-500
           "
         >
@@ -262,9 +256,10 @@ function MemoryCard({ image, title, description }) {
 
 export default function CulturePage() {
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen overflow-x-hidden">
       {/* Hero Section */}
-    <section className="relative h-[105vh] md:py-24 py-10  min-h-[650px] overflow-hidden">
+    <section className="relative overflow-hidden md:min-h-[700px] lg:h-screen">
+  {/* Responsive UI update: Culture hero and gallery sections scale cleanly on phones. */}
   {/* Background Image */}
  <Image
   src="/images/goa-celeb.jpeg"
@@ -278,10 +273,10 @@ export default function CulturePage() {
   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/10"></div>
 
   {/* Content */}
-  <div className="relative z-10 max-w-7xl mx-auto h-full px-6 lg:px-8 flex flex-col justify-end pb-16">
+  <div className="relative z-10 mx-auto flex max-w-7xl flex-col justify-start px-4 pb-10 pt-24 sm:px-6 sm:pb-12 sm:pt-28 md:min-h-[700px] md:justify-end md:pb-16 md:pt-24 lg:h-full lg:min-h-0 lg:px-8">
     
     {/* Breadcrumb */}
-    <div className="flex items-center gap-3 text-white/80 mb-6">
+    <div className="mb-3 flex items-center gap-3 text-white/80 sm:mb-5">
       <HomeIcon size={18} />
       <FaAngleRight size={14} />
       <span className="text-sm font-medium">
@@ -292,11 +287,11 @@ export default function CulturePage() {
     {/* Hero Content */}
    {/* Hero Content */}
 <div className="max-w-4xl">
-  <p className="text-white uppercase tracking-[4px] font-semibold text-sm mb-4">
+  <p className="mb-2 text-xs font-semibold uppercase tracking-[3px] text-white sm:mb-3 sm:text-sm sm:tracking-[4px]">
     Gallery & Memories
   </p>
 
-  <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+  <h1 className="mb-3 text-3xl font-bold leading-tight text-white sm:text-4xl md:mb-6 md:text-6xl lg:text-7xl">
     Every Picture
     <br />
     <span className="text-orange-500">
@@ -304,7 +299,7 @@ export default function CulturePage() {
     </span>
   </h1>
 
-  <p className="text-lg md:text-xl text-gray-200 max-w-3xl leading-relaxed">
+  <p className="max-w-3xl text-sm leading-relaxed text-gray-200 sm:text-base md:text-xl">
     Explore the moments that define our journey—from team outings and
     celebrations to achievements, events, and everyday memories.
     Each photograph reflects the passion, collaboration, and culture
@@ -315,11 +310,11 @@ export default function CulturePage() {
 </section>
 
       {/* What We Believe In Section */}
-  <section className="py-20">
-  <div className="max-w-7xl mx-auto px-6">
-    <div className="grid md:grid-cols-1 gap-8 mb-12">
+  <section className="py-12 sm:py-16 md:py-20">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6">
+    <div className="mb-8 grid gap-8 sm:mb-12 md:grid-cols-1">
       <div>
-        <h2 className="text-4xl md:text-5xl text-gray-700 font-bold">
+        <h2 className="text-3xl font-bold text-gray-700 sm:text-4xl md:text-5xl">
           Team Trips<span className="text-orange-500">.</span>
         </h2>
 
@@ -328,7 +323,7 @@ export default function CulturePage() {
         </p>
       </div>
 
-     <div className="grid md:grid-cols-2 gap-6">
+     <div className="grid gap-5 md:grid-cols-2 md:gap-6">
   {galleryMoments.map((item) => (
 <GalleryCard
   key={item.id}
@@ -344,11 +339,11 @@ export default function CulturePage() {
 </section>
 
       {/* What We Value Section */}
-     <section className="py-20 bg-gray-50">
-  <div className="max-w-7xl mx-auto px-6">
-    <div className="grid md:grid-cols-4 gap-8 mb-12">
+     <section className="bg-gray-50 py-12 sm:py-16 md:py-20">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6">
+    <div className="mb-8 grid gap-8 sm:mb-12 md:grid-cols-4">
       <div>
-        <h2 className="text-4xl md:text-5xl text-gray-700 font-bold">
+        <h2 className="text-3xl font-bold text-gray-700 sm:text-4xl md:text-5xl">
           Celebrations & Events
           <span className="text-orange-500">.</span>
         </h2>
@@ -359,7 +354,7 @@ export default function CulturePage() {
       </div>
 
       <div className="md:col-span-3">
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 md:gap-6">
   {officeMemories.map((item) => (
     <MemoryCard
       key={item.id}
@@ -374,11 +369,11 @@ export default function CulturePage() {
   </div>
 </section>
       {/* Team Section */}
-      <section className="py-20 md:py-28 bg-[#1f2a33] text-white">
+      <section className="bg-[#1f2a33] py-12 text-white sm:py-16 md:py-24 lg:py-28">
         <div className="max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row gap-10 items-start">
+          <div className="flex flex-col items-start gap-10 md:flex-row">
             {/* LEFT SIDE (75%) */}
-            <div className="w-full md:w-[75%] flex flex-col gap-1 justify-start items-end">
+            <div className="flex w-full flex-col items-start justify-start gap-1 md:w-[75%] md:items-end">
               {/* AVATARS */}
               <div className="flex justify-start mb-6">
                 {[...Array(6)].map((_, i) => (
@@ -392,6 +387,7 @@ export default function CulturePage() {
                   >
                     <img
                       src={`https://i.pravatar.cc/100?img=${i + 10}`}
+                      alt={`Sevenunique team member ${i + 1}`}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -399,13 +395,13 @@ export default function CulturePage() {
               </div>
 
               {/* HEADING */}
-              <h2 className="text-3xl md:text-5xl font-semibold leading-tight mb-6 text-end">
-             It all comes together in <br />
+              <h2 className="mb-5 text-left text-3xl font-semibold leading-tight sm:text-4xl md:mb-6 md:text-end md:text-5xl">
+             It all comes together in <br className="hidden sm:block" />{" "}
                what we do
               </h2>
 
               {/* TEXT */}
-              <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto md:mx-0">
+              <p className="max-w-2xl text-base leading-relaxed text-gray-300 sm:text-lg md:ml-auto md:text-right">
                 Our beliefs guide us, and our values shape how we act. Together, they create a workplace where we are challenged, supported, and motivated to do our best work.
               </p>
             </div>
@@ -424,12 +420,12 @@ export default function CulturePage() {
                   </span>
                 </p>
 
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3  rounded-xl transition-all duration-300">
-                  <Link href="/schedule-a-call-page" className="py-3">
-                    {" "}
-                    Apply now{" "}
-                  </Link>
-                </button>
+                <Link
+                  href="/schedule-a-call-page"
+                  className="inline-flex w-full items-center justify-center rounded-xl bg-blue-600 px-5 py-3 font-semibold text-white transition-all duration-300 hover:bg-blue-700"
+                >
+                  Apply now
+                </Link>
               </div>
             </div>
           </div>

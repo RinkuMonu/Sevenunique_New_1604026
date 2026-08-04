@@ -9,8 +9,8 @@ export default function FAQSection({ data, twoColumn = false }) {
   if (!data || !data.items?.length) return null;
 
   return (
-    <section className="bg-white py-20">
-      <div className={`max-w-6xl mx-auto px-6 ${twoColumn ? "grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:items-start lg:gap-20" : ""}`}>
+    <section className="bg-white py-12 sm:py-16 lg:py-20">
+      <div className={`mx-auto max-w-6xl px-4 sm:px-6 ${twoColumn ? "grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-start lg:gap-20" : ""}`}>
 
         {/* Heading can sit beside the accordion on detail pages. */}
         <div className={twoColumn ? "lg:sticky lg:top-28" : ""}>
@@ -62,8 +62,8 @@ export default function FAQSection({ data, twoColumn = false }) {
 
                 {/* Answer */}
                 <div
-                  className={`transition-all duration-300 overflow-hidden ${
-                    isOpen ? "max-h-40 mt-3" : "max-h-0"
+                  className={`overflow-hidden transition-all duration-300 ${
+                    isOpen ? "max-h-[1000px] mt-3" : "max-h-0"
                   }`}
                 >
                   <p className="text-sm text-gray-600 leading-relaxed max-w-4xl">

@@ -1,6 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
+import { FaInstagram } from "react-icons/fa";
+import { FaSquareYoutube, FaXTwitter } from "react-icons/fa6";
+import { IoHomeOutline } from "react-icons/io5";
+import { SiAnthropic, SiGoogle, SiX } from "react-icons/si";
+import { TbBrandOpenai } from "react-icons/tb";
+import { BsStars } from "react-icons/bs";
 
 const CalendarIcon = () => (
   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -1008,7 +1015,7 @@ function AISidebar() {
   const aiTools = [
     {
       name: "ChatGPT",
-      icon: <SiOpenai className="text-green-500 text-lg" />,
+      icon: <TbBrandOpenai className="text-green-500 text-lg" />,
     },
     {
       name: "Grok",

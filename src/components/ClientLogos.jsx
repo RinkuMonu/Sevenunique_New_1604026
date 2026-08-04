@@ -66,14 +66,17 @@ export default function ClientLogos() {
                 className="group w-[260px] flex-shrink-0 bg-white border border-gray-200 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-2 hover:border-[#f4622a] hover:shadow-2xl"
               >
                 {/* Logo */}
-                <div className="flex justify-center items-center h-[120px] mb-5">
-                  <Image
-                    src={item.img}
-                    alt="logo"
-                    width={100}
-                    height={100}
-                    className="object-cover transition duration-300 group-hover:scale-110"
-                  />
+                <div className="mb-5 flex h-[120px] items-center justify-center">
+                  {/* Image warning fix: fill a fixed box so both dimensions stay proportional. */}
+                  <div className="relative h-[100px] w-[100px]">
+                    <Image
+                      src={item.img}
+                      alt={item.title}
+                      fill
+                      sizes="100px"
+                      className="object-contain transition duration-300 group-hover:scale-110"
+                    />
+                  </div>
                 </div>
 
                 {/* Divider */}

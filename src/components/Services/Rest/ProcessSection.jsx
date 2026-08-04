@@ -20,29 +20,25 @@ export default function ProcessSection({ data }) {
     image && image.trim() !== "" ? image : FALLBACK_IMAGE;
 
   return (
-    <section id="process" className="bg-white py-16">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="process" className="bg-[#f8fafc] py-12 sm:py-16 lg:py-24">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-12 gap-10">
+        <div>
           
           {/* MAIN CONTENT */}
-          <div className="col-span-12 lg:col-span-9">
+          <div>
             
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid items-center gap-9 md:grid-cols-[0.95fr_1.05fr] md:gap-12 lg:gap-16">
               
               {/* LEFT SIDE */}
               <div>
-                <h2 className="text-[44px] font-semibold text-[#0f172a] leading-tight mb-10">
-                  {titleLines?.map((line, i) => (
-                    <span key={i}>
-                      {line}
-                      <br />
-                    </span>
-                  ))}
+                {/* Responsive UI update: process title remains readable on phones. */}
+                <h2 className="mb-7 block w-full max-w-full whitespace-normal break-words text-3xl font-semibold leading-tight text-[#0f172a] sm:mb-10 sm:text-4xl lg:text-[44px]">
+                  {titleLines?.join(" ")}
                 </h2>
 
                 {/* Image */}
-                <div className="relative w-full h-[300px] rounded-[40px] overflow-hidden">
+                <div className="relative h-[220px] w-full overflow-hidden rounded-2xl sm:h-[300px] sm:rounded-[40px]">
                   <Image
                     src="/images/qa.png"
                     alt="process"
@@ -53,27 +49,27 @@ export default function ProcessSection({ data }) {
               </div>
 
               {/* RIGHT TIMELINE */}
-              <div className="relative">
+              <div className="relative rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
                 
                 {/* Vertical Line */}
                 <div className="absolute left-[19px] top-6 bottom-20 border-l border-dashed border-gray-400"></div>
 
-                <div className="space-y-12">
+                <div className="space-y-9 sm:space-y-12">
                   {steps?.map((item, i) => (
-                    <div key={i} className="flex gap-6 relative">
+                    <div key={i} className="relative flex min-w-0 gap-4 sm:gap-6">
                       
                       {/* Dot */}
-                      <div className="relative z-10">
+                      <div className="relative z-10 shrink-0">
                         <div className="w-10 h-10 rounded-full bg-[#c2410c] flex items-center justify-center"></div>
                       </div>
 
                       {/* Content */}
-                      <div>
+                      <div className="min-w-0">
                         <p className="text-xs tracking-widest text-gray-400 mb-1">
                           {item.step}
                         </p>
 
-                        <h3 className="text-[22px] font-semibold text-[#0f172a] mb-2">
+                        <h3 className="mb-2 [overflow-wrap:anywhere] text-xl font-semibold text-[#0f172a] sm:text-[22px]">
                           {item.title}
                         </h3>
 
@@ -90,7 +86,7 @@ export default function ProcessSection({ data }) {
                 <div className="mt-5">
                   <a
                     href={buttonLink || "#"}
-                    className="bg-[#c2410c] text-white px-5 py-2.5 rounded-lg text-sm font-medium inline-block"
+                    className="inline-flex w-full items-center justify-center rounded-lg bg-[#c2410c] px-5 py-2.5 text-sm font-medium text-white sm:w-auto"
                   >
                     {buttonLabel}
                   </a>
@@ -100,9 +96,6 @@ export default function ProcessSection({ data }) {
 
             </div>
           </div>
-
-          {/* EMPTY RIGHT */}
-          <div className="hidden lg:block lg:col-span-3"></div>
 
         </div>
       </div>

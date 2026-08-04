@@ -164,7 +164,8 @@ export default function CertificationsGrid() {
     </div>
 
     {/* CARDS GRID */}
-   <div className="container p-8 bg-orange-100 rounded-2xl shadow-sm border border-gray-100">
+   {/* Responsive UI update: explicitly center the certification panel on desktop. */}
+   <div className="mx-auto w-full max-w-6xl rounded-2xl border border-gray-100 bg-orange-100 p-5 shadow-sm sm:p-6 lg:p-8">
      <div className="grid md:grid-cols-2 gap-8">
 
       {certifications.map((item, i) => (
@@ -185,6 +186,8 @@ export default function CertificationsGrid() {
                 alt={item.title}
                 width={130}
                 height={100}
+                // Image warning fix: preserve ratio when global responsive sizing constrains width.
+                style={{ height: "auto" }}
                 className="object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
               />
             </div>

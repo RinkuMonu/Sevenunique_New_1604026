@@ -28,7 +28,8 @@ export default function LeadershipHero() {
         Our Leadership Team
       </p>
 
-      <h1 className="text-[52px] leading-[60px] font-semibold">
+      {/* Responsive UI update: leadership title avoids mobile clipping. */}
+      <h1 className="text-4xl font-semibold leading-tight sm:text-5xl lg:text-[52px] lg:leading-[60px]">
         Recognized across the industry. <br />
         Award-winning excellence
         <span className="text-[#f66135]">.</span>

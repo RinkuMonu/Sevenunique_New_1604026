@@ -3,6 +3,8 @@
 
 "use client";
 
+import Image from "next/image";
+
 // SVG badge components matching the screenshot's award logos
 function StevieAwardBadge() {
   return (
@@ -451,46 +453,52 @@ const awards = [
 
 export default function ExcellenceAwards() {
   return (
-    <section className="w-full bg-[#f0f0f2] py-14 px-6 sm:px-10 lg:px-20 xl:px-24">
-      <div className="max-w-[1280px] mx-auto">
-        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-10 lg:gap-16">
+    <section className="w-full bg-[#f0f0f2] px-4 py-12 sm:px-6 sm:py-14 lg:px-8">
+      {/* Responsive UI update: award logos use contained cards and a two-column phone grid. */}
+      <div className="mx-auto max-w-[1280px]">
+        <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:gap-16">
           {/* ── LEFT: Heading + CTA ── */}
-          <div className="flex-shrink-0 lg:w-[260px]">
-            <h2 className="font-extrabold text-[clamp(1.9rem,2.8vw,2.4rem)] leading-tight tracking-tight mb-1">
+          <div className="w-full shrink-0 lg:w-[280px]">
+            <h2 className="mb-2 text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">
               <span className="text-orange-500">Excellence</span>
             </h2>
-            <p className="font-bold text-[clamp(1.1rem,1.8vw,1.5rem)] leading-snug text-gray-800 mb-8">
+            <p className="mb-6 text-lg font-bold leading-snug text-gray-800 sm:mb-8 sm:text-2xl">
               Our minimum bar for
-              <br />
+              <br className="hidden sm:block" />{" "}
               client delivery.
             </p>
 
             {/* CTA link */}
-            <div className="border-b border-gray-800 pb-1 inline-block">
+            <div className="inline-block max-w-full border-b border-gray-800 pb-1">
               <a
                 href="/awards"
-                className="flex items-center gap-2 font-bold text-[1rem] text-gray-900 hover:text-orange-500 transition-colors"
+                className="flex items-center gap-2 text-base font-bold leading-snug text-gray-900 transition-colors hover:text-orange-500 sm:text-lg"
               >
                 Explore Our 130+ Awards
-                <span className="text-lg leading-none">→</span>
+                <span className="shrink-0 text-lg leading-none">→</span>
               </a>
             </div>
           </div>
 
           {/* ── RIGHT: Awards badges ── */}
-          <div className="flex flex-wrap lg:flex-nowrap items-center justify-start lg:justify-between gap-8 lg:gap-6 flex-1">
+          <div className="grid w-full flex-1 grid-cols-2 gap-3 sm:gap-5 md:grid-cols-4 lg:gap-6">
             {awards.map((award) => (
               <div
                 key={award.id}
-                className="flex flex-col items-center gap-3 flex-shrink-0"
-                style={{ minWidth: "120px", maxWidth: "160px" }}
+                className="flex min-w-0 flex-col items-center gap-3 rounded-2xl bg-white/70 p-3 sm:p-4"
               >
                 {/* Badge */}
-                <div className="flex items-center justify-center h-[120px]">
-                  <img src={award.img} alt={award.label} className="w-full h-full object-contain" />
+                <div className="relative h-[90px] w-full sm:h-[110px]">
+                  <Image
+                    src={award.img}
+                    alt={award.label}
+                    fill
+                    sizes="(max-width: 767px) 45vw, 150px"
+                    className="object-contain"
+                  />
                 </div>
                 {/* Label */}
-                <p className="text-center text-[0.78rem] text-gray-600 leading-snug font-normal max-w-[140px]">
+                <p className="max-w-[150px] text-center text-[0.7rem] font-normal leading-snug text-gray-600 sm:text-xs">
                   {award.label}
                 </p>
               </div>

@@ -123,17 +123,18 @@ import Link from "next/link";
 
 export default function Process({ data }) {
   return (
-    <section className="bg-[#f6f7f9] py-[60px]">
-      <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-2 gap-[80px] items-start">
+    <section className="bg-[#f6f7f9] py-12 lg:py-[60px]">
+      {/* Responsive UI update: stack process columns and fluid-size artwork on mobile. */}
+      <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-start gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-[80px]">
 
         {/* LEFT */}
         <div>
 
-          <h2 className="text-[48px] leading-[60px] font-semibold mb-[60px]">
+          <h2 className="mb-8 text-3xl font-semibold leading-tight sm:text-4xl lg:mb-[60px] lg:text-[48px] lg:leading-[60px]">
             {data.title}
           </h2>
 
-          <div className="relative w-[380px] h-[380px] overflow-hidden">
+          <div className="relative aspect-square w-full max-w-[380px] overflow-hidden">
             <Image
               src="/images/qa.png"
               alt="process"

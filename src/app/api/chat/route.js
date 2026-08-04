@@ -1,10 +1,5 @@
 import Groq from "groq-sdk";
 
-// Initialize Groq client
-const groq = new Groq({
-  apiKey: process.env.GROQ_API_KEY,
-});
-
 const SEVENUNIQUE_KNOWLEDGE = `
 You are Nova, the AI assistant for SevenUnique Tech Solutions Pvt. Ltd.
 SevenUnique is a fintech & IT solutions company that has delivered 3500+ projects across 130+ sectors since 2024, working with companies from startups to Fortune 500 giants.
@@ -93,7 +88,21 @@ Fintech/Software Products:
 
 export async function POST(req) {
   try {
-    const { question, lead } = await req.json();
+    const apiKey = process.env.GROQ_API_KEY;
+    if (!apiKey) {
+      console.error("GROQ_API_KEY not set");
+      return Response.json(
+        { error: "AI service is not configured" },
+        { status: 503 }
+      );
+    }
+
+    const { question } = await req.json();
+    if (typeof question !== "string" || !question.trim()) {
+      return Response.json({ error: "Question is required" }, { status: 400 });
+    }
+
+    const groq = new Groq({ apiKey });
 
     const chatCompletion = await groq.chat.completions.create({
       messages: [
@@ -103,7 +112,7 @@ export async function POST(req) {
         },
         {
           role: "user",
-          content: question,
+          content: question.trim().slice(0, 4000),
         },
       ],
       model: "llama3-8b-8192",

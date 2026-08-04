@@ -3,12 +3,12 @@ import Link from "next/link";
 
 export default function CtaBanner({ ctaBanner }) {
   return (
-    <div className="group overflow-hidden rounded-2xl bg-gradient-to-b md:bg-gradient-to-r from-orange-200 to-orange-50">
+    <div className="group mx-4 my-8 overflow-hidden rounded-2xl bg-gradient-to-b from-orange-200 to-orange-50 sm:mx-6 md:mx-10 md:bg-gradient-to-r">
 
-      <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-20 p-8 lg:p-12 bg-transparent transition-colors duration-700 ease-in-out group-hover:bg-orange-100 font-[Outfit,sans-serif]">
+      <div className="flex flex-col gap-6 bg-transparent p-5 font-[Outfit,sans-serif] transition-colors duration-700 ease-in-out group-hover:bg-orange-100 sm:p-8 md:flex-row md:items-center md:gap-20 lg:p-12">
 
         {/* TEXT */}
-        <div className="flex-1 text-gray-900 text-[32px]">
+        <div className="flex-1 text-2xl leading-snug text-gray-900 sm:text-[32px]">
           <p>
             {ctaBanner?.title ||
               "Looking for a team with this kind of track record?"}
@@ -20,12 +20,12 @@ export default function CtaBanner({ ctaBanner }) {
         </div>
 
         {/* BUTTON + GLOW */}
-        <div className="relative z-0 w-fit">
+        <div className="relative z-0 w-full md:w-fit">
 
           {/* ✅ MOBILE BUTTON */}
           <Link
             href="/schedule-a-call-page"
-            className="flex lg:hidden items-center justify-center px-4 py-2.5 rounded-lg bg-orange-200 text-white font-medium hover:bg-orange-300 active:bg-orange-400 transition"
+            className="flex w-full items-center justify-center rounded-lg bg-orange-600 px-4 py-3 font-medium text-white transition hover:bg-orange-500 active:bg-orange-700 lg:hidden"
           >
             {ctaBanner?.buttonLabel || "Talk to an expert"}
           </Link>
