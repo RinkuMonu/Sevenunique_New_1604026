@@ -186,7 +186,7 @@ export const industryData = {
                 },
             ],
         },
-
+        
         process: {
             title: "Our process. Simple, seamless, streamlined.",
             image: "https://assets.bairesdev.com/image/upload/v1/www/core/silos_solutions_our-process_dudyi1",

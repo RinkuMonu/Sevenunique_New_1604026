@@ -17,19 +17,20 @@ import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 export default function Footer() {
   return (
     <footer className="relative bg-[#f7f7f7] text-[#111] overflow-hidden border-t border-[#ececec]">
-    
+
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
-      
+
         <div className="grid lg:grid-cols-[340px_1fr] gap-16">
-      
+
           <div>
             <Link href="/">
               <Image
                 src="/images/logo-2.png"
                 alt="Sevenunique"
                 width={220}
-                height={70}
+                height={73}
                 className="object-contain"
+                style={{ height: "auto" }}
               />
             </Link>
             <p className="mt-5 text-[16px] leading-7 text-[#555] max-w-[300px]">
@@ -56,7 +57,7 @@ export default function Footer() {
                   +91 8741886688
                 </a>
               </div>
-                <div>
+              <div>
                 <p className="text-sm font-semibold text-gray-700 ">
                   Contact us on
                 </p>
@@ -127,9 +128,9 @@ export default function Footer() {
             </div>
           </div>
 
-        
+
           <div className="grid sm:grid-cols-3 gap-12">
-       
+
             <div>
               <h3 className="text-[24px] font-semibold text-gray-700 mb-6 text-[#111]">
                 Company
@@ -154,7 +155,7 @@ export default function Footer() {
                   </Link>
                 </li>
 
-           
+
 
                 <li>
                   <Link
@@ -167,7 +168,7 @@ export default function Footer() {
               </ul>
             </div>
 
-      
+
             <div>
               <h3 className="text-[24px] font-semibold text-gray-700 mb-6 text-[#111]">
                 Services
@@ -212,7 +213,7 @@ export default function Footer() {
               </ul>
             </div>
 
-       
+
             <div>
               <h3 className="text-[24px] font-semibold text-gray-700 mb-6 text-[#111]">
                 Quick Links
@@ -228,14 +229,14 @@ export default function Footer() {
                   </Link>
                 </li>
 
-                <li>
+                {/* <li>
                   <Link
                     href="/blog"
                     className="hover:text-[#f4622a] transition"
                   >
                     Blogs
                   </Link>
-                </li>
+                </li> */}
 
                 <li>
                   <Link
@@ -259,7 +260,7 @@ export default function Footer() {
           </div>
         </div>
 
-    
+
         <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-5 mt-16 md:mt-30">
           {[
             {
@@ -308,7 +309,7 @@ export default function Footer() {
         hover:shadow-[0_12px_35px_rgba(0,0,0,0.06)]
       "
             >
-          
+
               <div className="relative z-10 flex items-start gap-3 mb-5">
                 {/* FLAG */}
                 <div
@@ -351,7 +352,7 @@ export default function Footer() {
                 </div>
               </div>
 
-           
+
               <div className="relative z-10 mb-4">
                 <div
                   className="
@@ -367,7 +368,7 @@ export default function Footer() {
                 </div>
               </div>
 
-          
+
               <div className="relative z-10 flex items-start gap-3">
                 <div
                   className="
@@ -394,7 +395,7 @@ export default function Footer() {
                 </p>
               </div>
 
-          
+
               <div
                 className="
           absolute bottom-0 left-0
@@ -409,9 +410,9 @@ export default function Footer() {
         </div>
       </div>
 
-     
-     <div
-  className="
+
+      <div
+        className="
     absolute
     right-30
     top-100
@@ -420,22 +421,22 @@ export default function Footer() {
     pointer-events-none
     z-0
   "
->
-  <img
-    src="/images/mapp.png"
-    alt="footer shape"
-    className="w-[610px] object-cover opacity-70"
-  />
-</div>
+      >
+        <img
+          src="/images/mapp.png"
+          alt="footer shape"
+          className="w-[610px] object-cover opacity-70"
+        />
+      </div>
 
 
-      <div className="bg-[#111] py-5 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/70 text-[14px] text-center md:text-left">
+      <div className="bg-[#111] px-5 py-6 sm:px-6 md:py-5">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-5 md:gap-4">
+          <p className="max-w-sm text-center text-[13px] leading-6 text-white/70 sm:text-[14px] md:max-w-none md:text-left">
             © 2026 Sevenunique Tech Solution Pvt. Ltd. All rights reserved.
           </p>
 
-          <div className="flex items-center gap-5 text-[14px] text-white/70">
+          <div className="flex max-w-md flex-wrap items-center justify-center gap-x-5 gap-y-3 text-center text-[13px] leading-5 text-white/70 sm:max-w-xl sm:text-[14px] md:max-w-none md:justify-end md:gap-5 md:text-left">
             <Link
               href="/privacy-policy"
               className="hover:text-[#f4622a] transition"

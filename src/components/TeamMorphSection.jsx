@@ -11,12 +11,12 @@ const outfit = Outfit({
 
 const team = [
   {
-    name: "Mr Dinesh Kumar Parjapat",
+    name: "Mr Dinesh Kumar Prajapat",
     role: "Founder & CEO",
     image: "/team/person1.png",
   },
   {
-    name: "Rahul Parjapat",
+    name: "Rahul Prajapat",
     role: "Company secretary",
     image: "/team/p2.png",
   },
