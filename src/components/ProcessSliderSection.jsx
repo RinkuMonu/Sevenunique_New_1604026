@@ -46,22 +46,24 @@ export default function ProcessSliderSection({ data }) {
           </div>
 
           {/* Right Column: Heading beside the picture */}
-          <div className="md:pl-16 pt-12 md:max-w-3xl z-30 relative pointer-events-none">
-            <p className="text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase mb-4 pointer-events-auto">
-              {data.eyebrow || "BACKEND DEVELOPMENT PROCESS"}
-            </p>
-            <h2 className="text-3xl md:text-[42px] font-bold text-[#101828] mb-6 leading-tight pointer-events-auto">
-              {data.heading}
-            </h2>
-            <p className="text-[#475467] text-base md:text-lg leading-relaxed max-w-xl pointer-events-auto">
-              {data.description}
-            </p>
-          </div>
+        <div className="relative z-30 w-full max-w-5xl px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-8 sm:pt-10 md:pt-12 pointer-events-none">
+  <p className="pointer-events-auto mb-3 sm:mb-4 text-[10px] sm:text-xs md:text-sm font-bold tracking-[0.2em] uppercase text-gray-500">
+    {data.eyebrow || "BACKEND DEVELOPMENT PROCESS"}
+  </p>
+
+  <h2 className="pointer-events-auto mb-4 sm:mb-5 md:mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-[42px] xl:text-5xl font-bold leading-tight text-[#101828]">
+    {data.heading}
+  </h2>
+
+  <p className="pointer-events-auto max-w-full sm:max-w-2xl  lg:max-w-3xl text-sm sm:text-base md:text-lg leading-7 text-[#475467]">
+    {data.description}
+  </p>
+</div>
         </div>
 
         {/* THE SLIDER: Positioned to overlap the image and extend right */}
         {/* mt-[-380px] pulls it higher to account for the extra image height */}
-        <div className="relative z-40 mt-[-380px] md:ml-[220px]">
+        <div className="relative z-40 mt-[-294px] hidden md:block md:ml-[220px]">
         <Swiper
   modules={[Navigation, Autoplay]}
   onSwiper={setSwiper}
