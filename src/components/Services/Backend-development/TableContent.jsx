@@ -40,8 +40,9 @@ export default function TableContent() {
       </div>
 
       {/* DROPDOWN PANEL */}
+      {/* Responsive UI update: dropdown respects narrow viewport gutters. */}
       {open && (
-        <div className="mt-2 w-[300px] bg-white border rounded-xl shadow-lg p-4 z-50">
+        <div className="z-50 mt-2 w-[min(300px,calc(100vw-2rem))] rounded-xl border bg-white p-4 shadow-lg">
 
           <ul className="space-y-3 text-sm text-gray-600">
             {items.map((item, i) => (

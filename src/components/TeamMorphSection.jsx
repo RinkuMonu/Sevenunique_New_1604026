@@ -22,7 +22,8 @@ const team = [
   },
   {
     name: "Vijay Gupta",
-    role: "Technical Head",
+    // Team information update: keep the homepage role aligned with LeadershipGrid.
+    role: "Sr. Full Stack Developer",
     image: "/images/gupta-vijay.PNG",
   },
   {
@@ -112,32 +113,34 @@ export default function TeamSection() {
             {/* BLUR BG */}
             <div className="absolute -top-10 -right-10 w-[320px] h-[320px] bg-[#ff5a2f]/10 rounded-full blur-3xl" />
 
-            <div className="relative h-[620px] rounded-[40px] overflow-hidden shadow-2xl bg-[#111]">
+            {/* Responsive UI update: mobile copy sits below the portrait instead of covering it. */}
+            <div className="relative overflow-hidden rounded-[28px] bg-[#111] shadow-2xl md:h-[620px] md:rounded-[40px]">
 
-           <div className="relative w-full h-full overflow-hidden">
+           <div className="relative h-[380px] w-full overflow-hidden sm:h-[460px] md:h-full">
   <Image
     src="/team/person1.png"
     alt="Founder"
     fill
-    className="object-contain p-4"
+    sizes="(max-width: 767px) 100vw, 50vw"
+    className="object-contain px-2 pt-2 sm:px-4 sm:pt-4 md:p-4"
   />
 
   {/* Black gradient from bottom */}
-  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none" />
+  <div className="pointer-events-none absolute inset-0 hidden bg-gradient-to-t from-black via-black/20 to-transparent md:block" />
 </div>
 
               {/* OVERLAY */}
               <div className="team-handjoin." />
 
               {/* CONTENT */}
-              <div className="absolute -bottom-6 left-0 p-10 text-white">
+              <div className="relative bg-black px-5 py-6 text-white sm:px-7 sm:py-8 md:absolute md:-bottom-6 md:left-0 md:bg-transparent md:p-10">
 
-                <p className="uppercase tracking-[4px] text-sm text-white/60 mb-4">
+                <p className="mb-3 text-xs uppercase tracking-[3px] text-white/60 sm:text-sm sm:tracking-[4px] md:mb-4">
                   Leadership & Innovation
                 </p>
 
-                <h3 className="text-[32px] leading-tight font-semibold mb-5">
-                  Delivering Digital Excellence <br />
+                <h3 className="mb-4 text-2xl font-semibold leading-tight sm:text-[28px] md:mb-5 md:text-[32px]">
+                  Delivering Digital Excellence <br className="hidden sm:block" />
                   Through Innovation
                 </h3>
 
@@ -167,6 +170,7 @@ export default function TeamSection() {
                   src={item.image}
                   alt={item.name}
                   fill
+                  sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
                  className="object-cover  group-hover:scale-105 transition-all duration-700"
                 />
 

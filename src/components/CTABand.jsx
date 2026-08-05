@@ -22,17 +22,18 @@ export default function CTABand() {
               <div className="absolute -inset-4 rounded-[30px] bg-gradient-to-r from-[#f4622a]/30 to-orange-500/10 blur-2xl" />
 
               {/* IMAGE CARD */}
-              <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white/5 shadow-2xl">
+              {/* Responsive UI update: keep the mobile caption below the image instead of over it. */}
+              <div className="relative overflow-hidden rounded-[24px] border border-white/10 bg-[#77685f] shadow-2xl sm:rounded-[28px]">
                 <img
                   src="/images/1779359110276.png"
                   alt="Developers collaborating"
-                  className="h-full w-full object-cover"
+                  className="aspect-[16/10] w-full object-cover sm:aspect-[16/9] md:aspect-auto md:h-full"
                 />
 
                 {/* FLOATING CARD */}
-                <div className="absolute bottom-5 left-5 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-2xl px-5 py-4 shadow-[0_8px_30px_rgba(0,0,0,0.25)]">
-                  <p className="text-sm text-gray-300">Launch Faster With</p>
-                  <h5 className="mt-1 text-lg font-semibold text-white">
+                <div className="relative border-t border-white/15 bg-[#77685f] px-5 py-4 text-left md:absolute md:bottom-5 md:left-5 md:rounded-2xl md:border md:border-white/20 md:bg-black/35 md:backdrop-blur-2xl md:shadow-[0_8px_30px_rgba(0,0,0,0.25)]">
+                  <p className="text-xs text-gray-200 sm:text-sm">Launch Faster With</p>
+                  <h5 className="mt-1 text-base font-semibold text-white sm:text-lg">
                     Modern Tech Solutions
                   </h5>
                 </div>

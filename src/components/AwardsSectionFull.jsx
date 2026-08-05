@@ -11,17 +11,18 @@ const outfit = Outfit({
 
 export default function AwardsSection() {
   const companies = [
-    "/logos/google.png",
-    "/logos/ebay.png",
-    "/logos/globestar.png",
-    "/logos/care.png",
-    "/logos/blackboard.png",
-    "/logos/coptrack.png",
+    // Image warning fix: use logo assets that exist in /public/logos.
+    "/logos/google-new.png",
+    "/logos/adobe.png",
+    "/logos/salesforce.png",
+    "/logos/motorola.png",
+    "/logos/hp.png",
+    "/logos/nextroll-new.png",
   ];
 
   return (
-    <section className={`${outfit.className} bg-[#f3f3f3] py-24 px-6`}>
-      <div className="max-w-6xl mx-auto space-y-20 relative">
+    <section className={`${outfit.className} bg-[#f3f3f3] px-4 py-12 sm:px-6 sm:py-16 lg:py-24`}>
+      <div className="relative mx-auto max-w-6xl space-y-12 sm:space-y-16 lg:space-y-20">
 
         {/* ================= HEADER ================= */}
         <div>
@@ -37,9 +38,10 @@ export default function AwardsSection() {
         </div>
 
         {/* ================= BLACK CONTAINER ================= */}
-        <div className="bg-[#0b0b0b] rounded-2xl px-14 py-16">
+        {/* Responsive UI update: award panel padding scales with the viewport. */}
+        <div className="rounded-2xl bg-[#0b0b0b] px-5 py-10 sm:px-8 md:py-14 lg:px-14 lg:py-16">
 
-          <div className="grid lg:grid-cols-3 gap-16 items-center">
+          <div className="grid items-center gap-10 lg:grid-cols-3 lg:gap-16">
 
             {/* LEFT */}
             <div>
@@ -47,7 +49,7 @@ export default function AwardsSection() {
                 Our Awards
               </p>
 
-              <h2 className="text-[44px] lg:text-[52px] font-semibold leading-[1.1] text-white mb-6">
+              <h2 className="mb-6 text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-[52px]">
                 <span className="text-[#f4622a]">Excellence.</span>
                 <br />
                 Our minimum bar
@@ -65,10 +67,10 @@ export default function AwardsSection() {
             </div>
 
             {/* CENTER STATS */}
-            <div className="flex flex-col items-center justify-center gap-24">
+            <div className="flex flex-row flex-wrap items-center justify-center gap-4 sm:gap-8 lg:flex-col lg:gap-24">
 
               {/* STAT 1 */}
-              <div className="relative w-48 h-48 flex items-center justify-center">
+              <div className="relative flex h-36 w-36 items-center justify-center sm:h-48 sm:w-48">
 
                 <svg className="absolute w-full h-full spin-slow" viewBox="0 0 200 200">
                   <defs>
@@ -91,7 +93,7 @@ export default function AwardsSection() {
               </div>
 
               {/* STAT 2 */}
-              <div className="relative w-48 h-48 flex items-center justify-center">
+              <div className="relative flex h-36 w-36 items-center justify-center sm:h-48 sm:w-48">
 
                 <svg className="absolute w-full h-full spin-slow" viewBox="0 0 200 200">
                   <defs>
@@ -116,20 +118,20 @@ export default function AwardsSection() {
             </div>
 
             {/* RIGHT AWARDS */}
-            <div className="grid grid-cols-2 gap-x-10 gap-y-10 border-l border-white/10 pl-10">
+            <div className="grid grid-cols-2 gap-6 border-t border-white/10 pt-8 sm:gap-10 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
 
               <div className="text-center space-y-3">
                 <div className="w-24 h-10 mx-auto relative">
-                  <Image src="/logos/ft2.png" alt="" fill className="object-contain" />
+                  <Image src="/logos/ft2.png" alt="" fill sizes="96px" className="object-contain" />
                 </div>
                 <p className="text-[11px] text-white/40">
-                  America's Fastest-Growing Companies 2025
+                  America&apos;s Fastest-Growing Companies 2025
                 </p>
               </div>
 
               <div className="text-center space-y-3">
                 <div className="w-24 h-10 mx-auto relative">
-                  <Image src="/logos/c10.png" alt="" fill className="object-contain" />
+                  <Image src="/logos/c10.png" alt="" fill sizes="96px" className="object-contain" />
                 </div>
                 <p className="text-[11px] text-white/40">
                   Top 100 U.S. IT Innovators 2025
@@ -138,7 +140,7 @@ export default function AwardsSection() {
 
               <div className="text-center space-y-3">
                 <div className="w-16 h-16 mx-auto relative">
-                  <Image src="/logos/clutch-new.png" alt="" fill className="object-contain" />
+                  <Image src="/logos/clutch-new.png" alt="" fill sizes="64px" className="object-contain" />
                 </div>
                 <p className="text-[11px] text-white/40">
                   Nearshore North America Top Software Developers 2025
@@ -147,7 +149,7 @@ export default function AwardsSection() {
 
               <div className="text-center space-y-3">
                 <div className="w-16 h-16 mx-auto relative">
-                  <Image src="/logos/out.png" alt="" fill className="object-contain" />
+                  <Image src="/logos/out.png" alt="" fill sizes="64px" className="object-contain" />
                 </div>
                 <p className="text-[11px] text-white/40">
                   Top 100 Global Outsourcing Providers 2024
@@ -156,16 +158,17 @@ export default function AwardsSection() {
 
               <div className="text-center space-y-3">
                 <div className="w-16 h-16 mx-auto relative">
-                  <Image src="/logos/inc.png" alt="" fill className="object-contain" />
+                  {/* Image warning fix: fill images declare their rendered size. */}
+                  <Image src="/logos/inc.png" alt="" fill sizes="64px" className="object-contain" />
                 </div>
                 <p className="text-[11px] text-white/40">
-                  America's fastest-growing companies 2024
+                  America&apos;s fastest-growing companies 2024
                 </p>
               </div>
 
               <div className="text-center space-y-3">
                 <div className="w-16 h-16 mx-auto relative">
-                  <Image src="/logos/globee-new.png" alt="" fill className="object-contain" />
+                  <Image src="/logos/globee-new.png" alt="" fill sizes="64px" className="object-contain" />
                 </div>
                 <p className="text-[11px] text-white/40">
                   Company of the Year Artificial Intelligence 2024
@@ -183,7 +186,10 @@ export default function AwardsSection() {
           {/* BACKGROUND LOGOS */}
           <div className="absolute inset-0 flex flex-wrap justify-center items-center gap-10 opacity-10 pointer-events-none">
             {companies.map((logo, i) => (
-              <Image key={i} src={logo} alt="" width={120} height={60} />
+              // Image warning fix: a sized wrapper lets fill preserve every logo's aspect ratio.
+              <span key={i} className="relative h-[60px] w-[120px] max-w-full">
+                <Image src={logo} alt="" fill sizes="120px" className="object-contain" />
+              </span>
             ))}
           </div>
 

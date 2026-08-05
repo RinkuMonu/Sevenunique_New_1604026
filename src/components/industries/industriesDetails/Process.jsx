@@ -123,24 +123,25 @@ import Link from "next/link";
 
 export default function Process({ data }) {
   return (
-   <section className="bg-[#f6f7f9] py-12 sm:py-16 lg:py-[60px]">
-  <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20">
+    <section className="bg-[#f6f7f9] py-12 lg:py-[60px]">
+      {/* Responsive UI update: stack process columns and fluid-size artwork on mobile. */}
+      <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-start gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-[80px]">
 
     {/* LEFT */}
     <div>
 
-      <h2 className="mb-8 text-3xl font-semibold leading-tight sm:text-4xl lg:mb-14 lg:text-5xl lg:leading-[60px]">
-        {data.title}
-      </h2>
+          <h2 className="mb-8 text-3xl font-semibold leading-tight sm:text-4xl lg:mb-[60px] lg:text-[48px] lg:leading-[60px]">
+            {data.title}
+          </h2>
 
-      <div className="relative mx-auto aspect-square w-full max-w-[320px] sm:max-w-[380px] lg:mx-0">
-        <Image
-          src="/images/qa.png"
-          alt="process"
-          fill
-          className="rounded-[50px] sm:rounded-[80px] lg:rounded-[120px] object-cover"
-        />
-      </div>
+          <div className="relative aspect-square w-full max-w-[380px] overflow-hidden">
+            <Image
+              src="/images/qa.png"
+              alt="process"
+              fill
+              className="object-cover rounded-[120px]"
+            />
+          </div>
 
     </div>
 

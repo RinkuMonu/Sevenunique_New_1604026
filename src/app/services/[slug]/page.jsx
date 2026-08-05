@@ -116,7 +116,8 @@ export default async function ServicePage({ params }) {
 
 
 {normalizedSlug === "backend-development" && <CaseStudyHero />}
-      <div className="bg-[#f5f6f7] px-6 py-10 md:px-10">
+      {/* Responsive UI update: child sections control their own mobile gutters. */}
+      <div className="overflow-x-hidden bg-[#f5f6f7]">
         {normalizedSlug !== "backend-development" && (
           <AIUseCasesSection useCases={data.useCases} />
         )}

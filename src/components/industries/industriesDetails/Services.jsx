@@ -107,7 +107,8 @@ export default function Services({ data }) {
         Why Choose Us
       </span>
 
-      <h2 className="text-[42px] leading-[52px] font-bold text-gray-900 mb-6">
+      {/* Responsive UI update: readable service heading at every breakpoint. */}
+      <h2 className="mb-6 text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-[42px] lg:leading-[52px]">
         {data.title}
       </h2>
 

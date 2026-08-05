@@ -2,23 +2,24 @@
 
 export default function TestimonialSectionInAboutPage() {
   return (
-    <section className="w-full py-16 md:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-start">
+    <section className="w-full bg-white py-12 sm:py-16 md:py-20">
+      {/* Responsive UI update: testimonial cards now fit narrow screens without overflow. */}
+      <div className="mx-auto grid max-w-7xl items-start gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-12 lg:px-8">
         {/* LEFT SIDE */}
         <div>
-          <h2 className="text-3xl md:text-5xl font-semibold text-gray-800 mb-4">
+          <h2 className="mb-4 text-3xl font-semibold leading-tight text-gray-800 sm:text-4xl md:text-5xl">
             Great opportunities await.
           </h2>
 
-          <p className="text-gray-500 text-lg mb-8">
+          <p className="mb-7 text-base text-gray-500 sm:text-lg">
             See why others love it here and why your referrals will too.
           </p>
 
           {/* IMAGE */}
-          <div className="relative w-full h-[240px] md:h-[300px] lg:h-[340px]">
+          <div className="relative h-[220px] w-full sm:h-[260px] md:h-[300px] lg:h-[340px]">
             <img
               src="/images/working-person.png"
-              alt=""
+              alt="Team member working"
               className="w-full h-full object-cover rounded-2xl"
             />
           </div>
@@ -27,7 +28,7 @@ export default function TestimonialSectionInAboutPage() {
         {/* RIGHT SIDE */}
         <div className="relative">
           {/* GLASSDOOR BADGE */}
-          <div className="absolute -top-10 left-6 bg-white px-5 py-3 rounded-xl shadow-lg z-20">
+          <div className="absolute -top-7 left-4 z-20 rounded-xl bg-white px-4 py-2.5 shadow-lg sm:-top-10 sm:left-6 sm:px-5 sm:py-3">
             <img
               src="https://assets.bairesdev.com//image/upload/c_limit,w_100/fl_sanitize/v1/www/core/talent_glassdoor_fhodhq.svg?_a=BAVAfVDW0"
               alt="glassdoor"
@@ -36,7 +37,7 @@ export default function TestimonialSectionInAboutPage() {
           </div>
 
           {/* CARD */}
-          <div className="bg-gray-50 rounded-2xl shadow-2xl p-8 md:p-10 space-y-10">
+          <div className="space-y-8 rounded-2xl bg-gray-50 p-5 shadow-2xl sm:p-8 md:space-y-10 md:p-10">
             {/* ITEM */}
             <div className="relative">
               <span className="absolute -left-5 -top-3 text-orange-500 text-4xl font-bold">

@@ -1,17 +1,6 @@
 "use client";
 
-import {
-  ArrowRight,
-  Palette,
-  Code,
-  CheckCircle,
-  Cog,
-  Zap,
-  Brain,
-  Cpu,
-  Database,
-  Briefcase,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const circles = [
   {
@@ -62,17 +51,18 @@ const circles = [
 ];
 
 export function IntroducingCircles() {
+  // Responsive UI update: circle introduction keeps comfortable mobile gutters.
   return (
-    <section className="w-full bg-slate-50 py-16 md:py-24 px-10">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
+    <section className="w-full bg-slate-50 py-12 sm:py-16 md:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
           {/* Left Column */}
           <div className="flex flex-col justify-start">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
+            <h1 className="mb-5 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl md:text-5xl">
               Introducing Circles
             </h1>
 
-            <h2 className="text-lg font-bold text-gray-900 mb-4 border-b border-gray-900 pb-3 inline-block">
+            <h2 className="mb-4 inline-block border-b border-gray-900 pb-3 text-base font-bold leading-relaxed text-gray-900 sm:text-lg">
               Where top developers become even better across the entire development lifecycle.
             </h2>
 
@@ -90,12 +80,12 @@ export function IntroducingCircles() {
           </div>
 
           {/* Right Column */}
-          <div className="flex items-start  mt-15">
-            <div className="flex flex-wrap gap-3 md:gap-4">
+          <div className="flex items-start lg:mt-12">
+            <div className="grid w-full grid-cols-1 gap-3 min-[420px]:grid-cols-2 md:gap-4">
               {circles.map((circle) => (
                 <div
                   key={circle.id}
-                  className="flex items-center gap-2 px-4 py-2.5 bg-white rounded-full shadow-md hover:shadow-lg transition-shadow whitespace-nowrap"
+                  className="flex min-w-0 items-center gap-2 rounded-full bg-white px-3 py-2.5 shadow-md transition-shadow hover:shadow-lg sm:px-4"
                 >
                   <span className="text-gray-700 flex-shrink-0">
                     <img
@@ -104,7 +94,7 @@ export function IntroducingCircles() {
                       className="w-5 h-5 object-contain"
                     />
                   </span>
-                  <span className="text-sm font-medium text-gray-900">
+                  <span className="min-w-0 text-sm font-medium leading-tight text-gray-900">
                     {circle.label}
                   </span>
                 </div>

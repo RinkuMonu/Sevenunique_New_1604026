@@ -90,10 +90,11 @@ export default function FAQ({ data }) {
    <section className="mt-10 bg-[#f6f7f9] py-12 sm:py-16 lg:py-[90px]">
   <div className="mx-auto max-w-[1100px] px-4 sm:px-6 lg:px-8">
 
-    {/* HEADING */}
-    <h2 className="mb-5 text-3xl font-semibold leading-tight sm:text-4xl lg:mb-6 lg:text-[48px] lg:leading-[58px]">
-      {data.title}
-    </h2>
+        {/* HEADING */}
+        {/* Responsive UI update: FAQ title scales down for phone widths. */}
+        <h2 className="mb-6 text-3xl font-semibold leading-tight sm:text-4xl lg:text-[48px] lg:leading-[58px]">
+          {data.title}
+        </h2>
 
     {/* DESCRIPTION */}
     <p className="mb-10 max-w-[850px] text-base leading-7 text-gray-500 sm:text-lg lg:mb-[50px]">

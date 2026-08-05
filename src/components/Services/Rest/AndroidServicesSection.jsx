@@ -21,23 +21,24 @@ export default function AndroidServicesSection({ data }) {
   const { title, services, navItems } = data;
 
   return (
-    <section id="android-services" className="bg-white py-16">
+    <section id="android-services" className="bg-[#f8fafc] py-12 sm:py-16 lg:py-24">
       {/* ✅ FIXED HERE */}
-      <div className="max-w-7xl mx-auto px-6 flex gap-12 items-start lg:items-stretch">
+      <div className="mx-auto flex max-w-7xl items-start gap-12 px-4 sm:px-6 lg:items-stretch lg:px-8">
         {/* LEFT */}
-        <div className="w-full lg:w-[70%]">
-          <h2 className="text-[40px] font-semibold mb-10 text-black">
+        <div className="w-full min-w-0 lg:flex-1">
+          {/* Responsive UI update: section title scales at small breakpoints. */}
+          <h2 className="mb-7 [overflow-wrap:anywhere] text-3xl font-semibold leading-tight text-black sm:mb-10 sm:text-4xl lg:text-[42px]">
             {title}
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-10">
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {services?.map((item, i) => (
-              <div key={i} className="border-t pt-6">
-                <div className="flex gap-3 mb-2">
-                  <FaCheckCircle className="text-orange-500 mt-1" />
-                  <h3 className="font-semibold text-black">{item.title}</h3>
+              <div key={i} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-orange-200 hover:shadow-lg sm:p-6">
+                <div className="mb-2 flex min-w-0 gap-3">
+                  <FaCheckCircle className="mt-1 shrink-0 text-orange-500" />
+                  <h3 className="min-w-0 [overflow-wrap:anywhere] font-semibold leading-snug text-black">{item.title}</h3>
                 </div>
-                <p className="text-sm text-gray-600">{item.desc}</p>
+                <p className="text-sm leading-6 text-gray-600">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -45,7 +46,7 @@ export default function AndroidServicesSection({ data }) {
 
         {/* RIGHT */}
         {/* ✅ FIXED HERE */}
-        <div className="hidden lg:block w-[280px] self-start">
+        <div className="hidden w-[260px] shrink-0 self-start lg:block">
           <div className="sticky top-24">
             <div
               onClick={() => setOpen(!open)}

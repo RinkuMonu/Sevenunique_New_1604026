@@ -12,18 +12,18 @@ const avatars = [
 
 export default function TestimonialCTA() {
   return (
-    <section className="w-full bg-gray-100 py-10 px-6 sm:px-10 lg:px-20 xl:px-24">
+    <section className="w-full bg-gray-100 px-4 py-10 sm:px-6 lg:px-8">
       <div className="max-w-[1280px] mx-auto">
+        {/* Responsive UI update: CTA padding and gaps scale from phone to desktop. */}
         <div
-          className="rounded-2xl px-10 sm:px-14 lg:px-20 py-16 flex flex-col lg:flex-row gap-12 lg:gap-16 items-start relative bg-[#1f2a33]"
+          className="relative flex flex-col items-start gap-8 rounded-2xl bg-[#1f2a33] px-5 py-10 sm:gap-12 sm:px-10 sm:py-14 md:px-14 lg:flex-row lg:gap-16 lg:px-20 lg:py-16"
         >
           {/* LEFT: Quote */}
           <div className="flex-1 min-w-0">
             <div
-              className="font-black leading-none mb-3 select-none absolute top-14 left-12"
+              className="mb-1 select-none font-black leading-none text-orange-500 sm:mb-3 lg:absolute lg:left-12 lg:top-14"
               style={{
-                color: "#f97316",
-                fontSize: "3.9rem",
+                fontSize: "3rem",
                 lineHeight: 1,
                 fontFamily: "Georgia, serif",
               }}
@@ -31,22 +31,22 @@ export default function TestimonialCTA() {
             >
               &#8220;
             </div>
-            <p className="text-white text-[25px] leading-relaxed max-w-[520px] mb-8">
+            <p className="mb-7 max-w-[520px] text-lg leading-relaxed text-white sm:text-xl md:text-[25px]">
               Many of the Seven Unique engineers we hired emerged as top
               performers. In fact, of our group of 120 developers, all the
               Seven Unique engineers we had were in the top 20 of the
               organization.&#8221;
             </p>
-            <p className="text-white font-bold text-[23px]">
+            <p className="text-lg font-bold text-white sm:text-[23px]">
               Rama Mahajan
             </p>
-            <p className="text-gray-100 text-[20px] mt-0.5">
+            <p className="mt-0.5 text-base text-gray-100 sm:text-[20px]">
               Director of Program Management at Lumio
             </p>
           </div>
 
           {/* RIGHT: CTA */}
-          <div className="flex-shrink-0 flex flex-col items-start lg:items-center gap-6 lg:w-[320px]">
+          <div className="flex w-full shrink-0 flex-col items-start gap-6 sm:w-auto lg:w-[320px] lg:items-center">
             {/* Overlapping avatars */}
             <div className="flex items-center">
               {avatars.map((src, i) => (

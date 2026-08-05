@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function DarkShowcase() {
   return (
-    <section className="relative bg-orange-100 py-28 px-6 overflow-hidden rounded-[40px] mt-16 border border-orange-200">
+    <section className="relative mt-10 overflow-hidden rounded-[28px] border border-orange-200 bg-orange-100 px-4 py-14 sm:mt-16 sm:rounded-[40px] sm:px-6 sm:py-20 lg:py-28">
       
       {/* BACKGROUND GLOW */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
@@ -73,29 +73,31 @@ export default function DarkShowcase() {
 
         {/* RIGHT IMAGE */}
         <div className="relative flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-[540px] h-[420px]">
+          {/* Responsive UI update: mobile badges sit below the image instead of covering it. */}
+          <div className="relative w-full max-w-[540px] lg:h-[420px]">
             
             {/* MAIN IMAGE */}
-            <div className="absolute inset-0 rounded-[32px] overflow-hidden border border-white/40 shadow-2xl">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[24px] border border-white/40 shadow-2xl sm:aspect-[16/10] sm:rounded-[32px] lg:absolute lg:inset-0 lg:aspect-auto">
               <Image
                 src="/images/handonhand.png"
                 alt="Tech Talent Team"
                 fill
+                sizes="(max-width: 1023px) 100vw, 540px"
                 className="object-cover"
               />
             </div>
 
             {/* FLOATING CARD 1 */}
-            <div className="absolute -left-10 top-10 bg-white rounded-2xl px-5 py-4 shadow-xl border border-orange-100">
-              <h4 className="text-2xl font-bold text-[#111827]">3500+</h4>
+            <div className="relative mt-3 rounded-xl border border-orange-100 bg-white px-4 py-3 shadow-lg sm:px-5 sm:py-4 lg:absolute lg:-left-10 lg:top-10 lg:mt-0 lg:rounded-2xl lg:shadow-xl">
+              <h4 className="text-xl font-bold text-[#111827] sm:text-2xl">3500+</h4>
               <p className="text-sm text-gray-500">
                 Projects Delivered
               </p>
             </div>
 
             {/* FLOATING CARD 2 */}
-            <div className="absolute -right-6 bottom-10 bg-[#111827] text-white rounded-2xl px-6 py-4 shadow-2xl">
-              <h4 className="text-xl font-semibold">
+            <div className="relative mt-3 rounded-xl bg-[#111827] px-4 py-3 text-white shadow-lg sm:px-6 sm:py-4 lg:absolute lg:-right-6 lg:bottom-10 lg:mt-0 lg:rounded-2xl lg:shadow-2xl">
+              <h4 className="text-lg font-semibold sm:text-xl">
                 Dedicated Teams
               </h4>
 

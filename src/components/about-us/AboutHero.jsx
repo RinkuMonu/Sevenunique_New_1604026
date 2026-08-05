@@ -281,11 +281,11 @@ export default function AboutPage() {
 
               return (
                 <Link
+  key={project.link || i}
   href={project.link}
   className="block bg-[#fafafa] rounded-[35px] overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500"
 >
                 <div
-                  key={i}
                   className="bg-[#fafafa] rounded-[35px] overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500"
                 >
                   {/* IMAGE */}

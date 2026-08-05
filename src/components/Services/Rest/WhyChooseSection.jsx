@@ -25,23 +25,24 @@ export default function WhyChooseSection({ data }) {
     image && image.trim() !== "" ? image : FALLBACK_IMAGE;
 
   return (
-    <section id="why-choose-us" className="bg-white py-16">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="why-choose-us" className="bg-white py-12 sm:py-16 lg:py-24">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-12 gap-10">
+        <div>
           
           {/* LEFT CONTENT */}
-          <div className="col-span-12 lg:col-span-9">
+          <div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-[1.05fr_0.95fr] md:gap-12 lg:gap-16">
               
               {/* LEFT SIDE */}
               <div>
-                <h2 className="text-[42px] font-semibold text-[#0f172a] leading-tight mb-8">
+                {/* Responsive UI update: section title scales at small breakpoints. */}
+                <h2 className="mb-6 [overflow-wrap:anywhere] text-3xl font-semibold leading-tight text-[#0f172a] sm:mb-8 sm:text-4xl lg:text-[42px]">
                   {title}
                 </h2>
 
-                <div className="relative w-full h-[320px] rounded-2xl overflow-hidden">
+                <div className="relative h-[220px] w-full overflow-hidden rounded-2xl sm:h-[280px] md:h-[320px]">
                   <Image
                     src={safeImage}
                     alt="why choose"
@@ -52,18 +53,18 @@ export default function WhyChooseSection({ data }) {
               </div>
 
               {/* RIGHT TEXT */}
-              <div className="space-y-8">
+              <div className="space-y-4">
                 {points?.map((item, i) => (
-                  <div key={i} className="flex gap-4">
+                  <div key={i} className="flex min-w-0 gap-3 rounded-2xl border border-slate-100 bg-[#f8fafc] p-4 sm:gap-4 sm:p-5">
                     
                     {/* ICON */}
-                    <div className="mt-1">
+                    <div className="mt-1 shrink-0">
                       {iconMap[item.icon] || iconMap.arrow}
                     </div>
 
                     {/* TEXT */}
-                    <div>
-                      <h3 className="text-[18px] font-semibold text-[#1e293b] mb-2">
+                    <div className="min-w-0">
+                      <h3 className="mb-2 [overflow-wrap:anywhere] text-lg font-semibold text-[#1e293b]">
                         {item.title}
                       </h3>
                       <p className="text-[15px] text-gray-600 leading-7">
@@ -77,9 +78,6 @@ export default function WhyChooseSection({ data }) {
 
             </div>
           </div>
-
-          {/* RIGHT EMPTY SPACE */}
-          <div className="hidden lg:block lg:col-span-3"></div>
 
         </div>
       </div>

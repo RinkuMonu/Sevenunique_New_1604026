@@ -45,11 +45,12 @@ function GreenCheck() {
 
 export default function CirclesBenefits() {
   return (
-    <section className="w-full bg-gray-50 py-20 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+    <section className="w-full overflow-hidden bg-gray-50 py-12 sm:py-16 lg:py-20">
+      {/* Responsive UI update: benefits content scales and stacks cleanly on narrow screens. */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* Main Grid */}
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
           
           {/* LEFT SIDE */}
           <div className="max-w-xl">
@@ -59,20 +60,20 @@ export default function CirclesBenefits() {
               Why Circles
             </p>
 
-            <h2 className="text-[38px] md:text-[52px] leading-tight font-semibold text-gray-900">
+            <h2 className="text-3xl font-semibold leading-tight text-gray-900 sm:text-4xl md:text-[52px]">
               How does Circles benefit{" "}
               <span className="text-orange-500">you?</span>
             </h2>
 
             {/* Subheading */}
-            <p className="text-lg text-gray-600 leading-relaxed mt-6">
+            <p className="mt-5 text-base leading-relaxed text-gray-600 sm:mt-6 sm:text-lg">
               Better developers lead to better solutions. We empower engineers
               with continuous learning, modern technologies, and a collaborative
               environment to create exceptional digital experiences.
             </p>
 
             {/* Image */}
-            <div className="relative mt-10 w-full h-[420px] rounded-[28px] overflow-hidden">
+            <div className="relative mt-8 h-[240px] w-full overflow-hidden rounded-2xl sm:h-[320px] md:h-[420px] md:rounded-[28px]">
               <img
                 src="/images/team-handjoin.png"
                 alt="Seven Unique team"
@@ -83,12 +84,12 @@ export default function CirclesBenefits() {
 
           {/* RIGHT SIDE */}
           <div className="w-full">
-            <div className="bg-white rounded-[28px] shadow-sm border border-gray-100 p-8 md:p-10">
+            <div className="rounded-2xl border border-gray-100 bg-white p-4 shadow-sm sm:p-6 md:rounded-[28px] md:p-10">
               
               {features.map((feature, index) => (
                 <div key={feature.id}>
                   
-                  <div className="flex items-start gap-5 py-6">
+                  <div className="flex items-start gap-3 py-5 sm:gap-5 sm:py-6">
                     <GreenCheck />
 
                     <div>

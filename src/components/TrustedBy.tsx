@@ -96,8 +96,9 @@ const companies = [
 ];
 
 export default function TrustedBy() {
+  // Responsive UI update: trusted-brand section uses mobile-safe gutters.
   return (
-    <section className="bg-[#1a1a1a] py-10 px-12">
+    <section className="bg-[#1a1a1a] px-4 py-10 sm:px-6 lg:px-12">
       <p className="text-center text-xs font-bold tracking-[0.2em] uppercase text-gray-400 mb-8">
         Trusted by CTOs at 1500+ companies:
       </p>

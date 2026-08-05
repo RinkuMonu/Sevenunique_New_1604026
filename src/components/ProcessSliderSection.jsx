@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
@@ -9,33 +8,20 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 
 export default function ProcessSliderSection({ data }) {
-  const [swiper, setSwiper] = useState(null);
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
-  
   const steps = data?.steps || [];
-
-  useEffect(() => {
-    if (swiper) {
-      swiper.params.navigation.prevEl = prevRef.current;
-      swiper.params.navigation.nextEl = nextRef.current;
-      swiper.navigation.destroy();
-      swiper.navigation.init();
-      swiper.navigation.update();
-    }
-  }, [swiper]);
 
   if (!data || steps.length === 0) return null;
 
   return (
-    <section className="py-24 bg-white overflow-hidden">
-      <div className="max-w-[1440px] mx-auto px-6 relative">
+    <section className="overflow-hidden bg-white py-12 sm:py-16 lg:py-24">
+      {/* Responsive UI update: remove negative mobile overlap and contain the process slider. */}
+      <div className="relative mx-auto max-w-[1440px] px-4 sm:px-6">
         
         {/* ROW: TALL IMAGE AND HEADING SIDE BY SIDE */}
-        <div className="relative flex flex-col md:flex-row items-start mb-20">
+        <div className="relative mb-10 flex flex-col items-start md:mb-20 md:flex-row">
           
           {/* Left Column: Increased Height Image (680px) */}
-          <div className="relative w-full md:w-[500px] h-[680px] rounded-[2.5rem] overflow-hidden z-10 shrink-0 shadow-2xl">
+          <div className="relative z-10 h-[260px] w-full shrink-0 overflow-hidden rounded-2xl shadow-2xl sm:h-[360px] md:h-[680px] md:w-[500px] md:rounded-[2.5rem]">
             <Image
               src="/images/working-person.png"
               alt="Process"
@@ -46,27 +32,28 @@ export default function ProcessSliderSection({ data }) {
           </div>
 
           {/* Right Column: Heading beside the picture */}
-        <div className="relative z-30 w-full max-w-5xl px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-8 sm:pt-10 md:pt-12 pointer-events-none">
-  <p className="pointer-events-auto mb-3 sm:mb-4 text-[10px] sm:text-xs md:text-sm font-bold tracking-[0.2em] uppercase text-gray-500">
-    {data.eyebrow || "BACKEND DEVELOPMENT PROCESS"}
-  </p>
-
-  <h2 className="pointer-events-auto mb-4 sm:mb-5 md:mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-[42px] xl:text-5xl font-bold leading-tight text-[#101828]">
-    {data.heading}
-  </h2>
-
-  <p className="pointer-events-auto max-w-full sm:max-w-2xl  lg:max-w-3xl text-sm sm:text-base md:text-lg leading-7 text-[#475467]">
-    {data.description}
-  </p>
-</div>
+          <div className="relative z-30 pt-8 md:max-w-3xl md:pl-16 md:pt-12">
+            <p className="text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase mb-4 pointer-events-auto">
+              {data.eyebrow || "BACKEND DEVELOPMENT PROCESS"}
+            </p>
+            <h2 className="text-3xl md:text-[42px] font-bold text-[#101828] mb-6 leading-tight pointer-events-auto">
+              {data.heading}
+            </h2>
+            <p className="text-[#475467] text-base md:text-lg leading-relaxed max-w-xl pointer-events-auto">
+              {data.description}
+            </p>
+          </div>
         </div>
 
         {/* THE SLIDER: Positioned to overlap the image and extend right */}
         {/* mt-[-380px] pulls it higher to account for the extra image height */}
-        <div className="relative z-40 mt-[-294px] hidden md:block md:ml-[220px]">
+        <div className="relative z-40 md:-mt-[380px] md:ml-[220px]">
         <Swiper
   modules={[Navigation, Autoplay]}
-  onSwiper={setSwiper}
+  navigation={{
+    prevEl: ".service-process-prev",
+    nextEl: ".service-process-next",
+  }}
   autoplay={{
     delay: 2500,
     disableOnInteraction: false,
@@ -75,7 +62,7 @@ export default function ProcessSliderSection({ data }) {
   loop={true}
   speed={800}
   spaceBetween={16}
-  slidesPerView={1.2}
+  slidesPerView={1.05}
   breakpoints={{
     640: { slidesPerView: 2.2 },
     1024: { slidesPerView: 3.5 },
@@ -106,16 +93,16 @@ export default function ProcessSliderSection({ data }) {
         </div>
 
         {/* NAVIGATION: Below the image */}
-        <div className="flex gap-3 items-center mt-12 md:ml-[180px] relative z-50">
+        <div className="relative z-50 mt-6 flex items-center gap-3 md:ml-[180px] md:mt-12">
           <button
-            ref={prevRef}
-            className="w-10 h-10 rounded-full bg-[#d1d5db] flex items-center justify-center text-white hover:bg-gray-400 transition-colors cursor-pointer disabled:opacity-30 shadow-sm"
+            aria-label="Previous process step"
+            className="service-process-prev flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-[#d1d5db] text-white shadow-sm transition-colors hover:bg-gray-400 disabled:opacity-30"
           >
             <span className="text-[10px]">❮</span>
           </button>
           <button
-            ref={nextRef}
-            className="w-10 h-10 rounded-full bg-[#374151] flex items-center justify-center text-white hover:bg-gray-900 transition-colors cursor-pointer disabled:opacity-30 shadow-md"
+            aria-label="Next process step"
+            className="service-process-next flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-[#374151] text-white shadow-md transition-colors hover:bg-gray-900 disabled:opacity-30"
           >
             <span className="text-[10px]">❯</span>
           </button>
