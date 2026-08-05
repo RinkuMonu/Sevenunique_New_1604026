@@ -87,50 +87,52 @@ export default function FAQ({ data }) {
   };
 
   return (
-    <section className="bg-[#f6f7f9] py-[90px] mt-10">
-      <div className="max-w-[1100px] mx-auto px-6">
+   <section className="mt-10 bg-[#f6f7f9] py-12 sm:py-16 lg:py-[90px]">
+  <div className="mx-auto max-w-[1100px] px-4 sm:px-6 lg:px-8">
 
-        {/* HEADING */}
-        <h2 className="text-[48px] leading-[58px] font-semibold mb-6">
-          {data.title}
-        </h2>
+    {/* HEADING */}
+    <h2 className="mb-5 text-3xl font-semibold leading-tight sm:text-4xl lg:mb-6 lg:text-[48px] lg:leading-[58px]">
+      {data.title}
+    </h2>
 
-        {/* DESCRIPTION */}
-        <p className="text-[18px] text-gray-500 mb-[50px] max-w-[850px]">
-          {data.desc}
-        </p>
+    {/* DESCRIPTION */}
+    <p className="mb-10 max-w-[850px] text-base leading-7 text-gray-500 sm:text-lg lg:mb-[50px]">
+      {data.desc}
+    </p>
 
-        {/* LIST */}
-        <div className="border-t border-gray-300">
+    {/* ACCORDION */}
+    <div className="border-t border-gray-300">
 
-          {data.items.map((item, i) => (
-            <div key={i} className="border-b border-gray-300 py-6">
+      {data.items.map((item, i) => (
+        <div key={i} className="border-b border-gray-300 py-5 sm:py-6">
 
-              <div
-                onClick={() => toggle(i)}
-                className="flex justify-between cursor-pointer"
-              >
-                <h3 className="text-[20px] font-medium">
-                  {item.title}
-                </h3>
+          {/* HEADER */}
+          <button
+            onClick={() => toggle(i)}
+            className="flex w-full items-center justify-between gap-4 text-left"
+          >
+            <h3 className="flex-1 text-lg font-medium leading-7 sm:text-xl">
+              {item.title}
+            </h3>
 
-                <div className="w-8 h-8 flex items-center justify-center rounded-full bg-[#f45d2d] text-white">
-                  {active === i ? "↑" : "↓"}
-                </div>
-              </div>
-
-              {active === i && (
-                <p className="mt-4 text-[16px] text-gray-500 max-w-[800px]">
-                  {item.desc}
-                </p>
-              )}
-
+            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f45d2d] text-sm font-semibold text-white sm:h-9 sm:w-9">
+              {active === i ? "↑" : "↓"}
             </div>
-          ))}
+          </button>
+
+          {/* CONTENT */}
+          {active === i && (
+            <p className="mt-4 max-w-[800px] text-sm leading-7 text-gray-500 sm:text-base">
+              {item.desc}
+            </p>
+          )}
 
         </div>
+      ))}
 
-      </div>
-    </section>
+    </div>
+
+  </div>
+</section>
   );
 }
