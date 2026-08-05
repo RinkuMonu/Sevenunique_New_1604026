@@ -67,10 +67,10 @@ export default function AndroidServicesSection({ data }) {
                       const id = item.toLowerCase().replace(/\s+/g, "-");
                       const section = document.getElementById(id);
 
-                      if (section) {
+                     if (section) {
                         section.scrollIntoView({ behavior: "smooth", block: "start" });
                       }
-                    }}
+                    }} 
                     className="text-sm text-gray-600 cursor-pointer hover:text-black"
                   >
                     {item}
