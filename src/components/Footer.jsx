@@ -261,7 +261,7 @@ export default function Footer() {
         </div>
 
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-5 mt-16 md:mt-30">
+        <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-5 mt-16 md:mt-10">
           {[
             {
               title: "Jaipur Head Office",
@@ -425,7 +425,7 @@ export default function Footer() {
         <img
           src="/images/mapp.png"
           alt="footer shape"
-          className="w-[610px] object-cover opacity-70"
+          className="w-[610px] object-cover md:mt-20 opacity-70"
         />
       </div>
 
