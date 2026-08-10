@@ -16,58 +16,66 @@ export default function BestPracticesSection({ data }) {
   };
 
   return (
-    <section id="best-practices" className="bg-[#f8fafc] py-12 sm:py-16 lg:py-24">
-      <div className="mx-auto flex max-w-6xl gap-12 px-4 sm:px-6 lg:px-8">
-        
-        {/* LEFT CONTENT */}
-        <div className="w-full">
-          
-          {/* Heading */}
-          {/* Responsive UI update: section title scales at small breakpoints. */}
-          <h2 className="mb-5 [overflow-wrap:anywhere] text-3xl font-semibold leading-tight text-[#0f172a] sm:mb-6 sm:text-4xl lg:text-[42px]">
-            {title}
-          </h2>
+   <section
+  id="best-practices"
+  className="bg-[#f8fafc] py-12 sm:py-16 lg:py-24"
+>
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="flex flex-col gap-8 lg:gap-12">
 
-          {/* Subtext */}
-          <p className="text-[16px] text-gray-600 leading-7 mb-10">
-            {description}
-          </p>
+      {/* LEFT CONTENT */}
+      <div className="w-full">
 
-          {/* Accordion */}
-          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white px-5 shadow-sm sm:px-8">
-            {items?.map((item, i) => (
-              <div
-                key={i}
-                className="cursor-pointer border-b border-gray-200 py-5 last:border-b-0 sm:py-6"
-                onClick={() => toggle(i)}
-              >
-                <div className="flex min-w-0 items-center justify-between gap-3">
-                  
-                  <h3 className="min-w-0 [overflow-wrap:anywhere] text-lg font-medium leading-snug text-[#334155] sm:text-[22px]">
-                    {item.title}
-                  </h3>
+        {/* Heading */}
+        <h2 className="mb-4 break-words text-2xl font-semibold leading-tight text-[#0f172a] sm:mb-5 sm:text-3xl md:text-4xl lg:mb-6 lg:text-[42px] lg:leading-[52px]">
+          {title}
+        </h2>
 
-                  <span className="shrink-0 text-xl text-orange-500">
-                    {active === i ? <FaTimes /> : <FaPlus />}
-                  </span>
-                </div>
+        {/* Description */}
+        <p className="mb-8 text-sm leading-7 text-gray-600 sm:text-base lg:mb-10 lg:max-w-4xl">
+          {description}
+        </p>
 
-                {/* Content */}
-                <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    active === i ? "max-h-[1000px] mt-4" : "max-h-0"
-                  }`}
-                >
-                  <p className="text-[15px] text-gray-600 leading-7">
-                    {item.content}
-                  </p>
-                </div>
+        {/* Accordion */}
+        <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+
+          {items?.map((item, i) => (
+            <div
+              key={i}
+              className="cursor-pointer border-b border-gray-200 px-4 py-5 last:border-b-0 sm:px-6 sm:py-6 lg:px-8"
+              onClick={() => toggle(i)}
+            >
+              {/* Header */}
+              <div className="flex items-start justify-between gap-4">
+
+                <h3 className="flex-1 break-words text-base font-medium leading-snug text-[#334155] sm:text-lg md:text-xl lg:text-[22px]">
+                  {item.title}
+                </h3>
+
+                <span className="mt-1 flex-shrink-0 text-lg text-orange-500 sm:text-xl">
+                  {active === i ? <FaTimes /> : <FaPlus />}
+                </span>
               </div>
-            ))}
-          </div>
+
+              {/* Content */}
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  active === i
+                    ? "mt-4 max-h-[800px]"
+                    : "max-h-0"
+                }`}
+              >
+                <p className="text-sm leading-7 text-gray-600 sm:text-[15px] md:text-base">
+                  {item.content}
+                </p>
+              </div>
+            </div>
+          ))}
 
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
   );
 }
