@@ -40,7 +40,7 @@ export default function ProcessSection({ data }) {
                 {/* Image */}
                 <div className="relative h-[220px] w-full overflow-hidden rounded-2xl sm:h-[300px] sm:rounded-[40px]">
                   <Image
-                    src="/images/qa.png"
+                    src="/images/bde.jpeg"
                     alt="process"
                     fill
                     className="object-cover"
@@ -51,17 +51,13 @@ export default function ProcessSection({ data }) {
               {/* RIGHT TIMELINE */}
               <div className="relative rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
                 
-                {/* Vertical Line */}
-                <div className="absolute left-[19px] top-6 bottom-20 border-l border-dashed border-gray-400"></div>
+          
 
                 <div className="space-y-9 sm:space-y-12">
                   {steps?.map((item, i) => (
                     <div key={i} className="relative flex min-w-0 gap-4 sm:gap-6">
                       
-                      {/* Dot */}
-                      <div className="relative z-10 shrink-0">
-                        <div className="w-10 h-10 rounded-full bg-[#c2410c] flex items-center justify-center"></div>
-                      </div>
+                  
 
                       {/* Content */}
                       <div className="min-w-0">
