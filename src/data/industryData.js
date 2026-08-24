@@ -139,7 +139,7 @@ export const industryData = {
 
             items: [
                 {
-                    title: "Farm Management Software",
+                     title: "Farm Management Software",
                     desc: "We build comprehensive farm management platforms that enable farmers to monitor and manage all aspects of their operations from a single dashboard. These systems allow users to track crop cycles, irrigation schedules, soil conditions, weather patterns, and yield performance in real time. By centralizing data and automating routine tasks, our solutions help farmers improve efficiency, reduce manual effort, and make informed decisions that enhance productivity and profitability.",
                 },
                 {

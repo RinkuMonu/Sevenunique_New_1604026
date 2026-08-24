@@ -87,7 +87,7 @@ export default function FAQ({ data }) {
   };
 
   return (
-   <section className="mt-10 bg-[#f6f7f9] py-12 sm:py-16 lg:py-[90px]">
+  <section className="mt-10 bg-[#f6f7f9] py-12 sm:py-16 lg:py-[90px]">
   <div className="mx-auto max-w-[1100px] px-4 sm:px-6 lg:px-8">
 
         {/* HEADING */}
@@ -115,7 +115,6 @@ export default function FAQ({ data }) {
             <h3 className="flex-1 text-lg font-medium leading-7 sm:text-xl">
               {item.title}
             </h3>
-
             <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f45d2d] text-sm font-semibold text-white sm:h-9 sm:w-9">
               {active === i ? "↑" : "↓"}
             </div>
@@ -127,12 +126,9 @@ export default function FAQ({ data }) {
               {item.desc}
             </p>
           )}
-
         </div>
       ))}
-
     </div>
-
   </div>
 </section>
   );
