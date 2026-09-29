@@ -15,11 +15,14 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
 export const metadata = {
   metadataBase: new URL("https://www.sevenunique.com"),
 
-    openGraph: {
+  verification: {
+    google: "oPj-lQulH5rMXXLnWlJ4WP3rDrOsiS-hsmsmI2-Lbe4",
+  },
+
+  openGraph: {
     title: "SevenUnique Tech Solutions Pvt. Ltd.",
     description:
       "Leading fintech and IT solutions provider specializing in AI, software development, digital payments, and enterprise solutions.",
