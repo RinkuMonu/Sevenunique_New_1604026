@@ -365,7 +365,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur-md">
-      <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-2 sm:px-6">
+      <div className="mx-auto flex max-w-[1360px] items-center justify-between px-6 py-2 sm:px-8 lg:px-10 xl:px-12">
         <Link href="/" className="block">
           <Image
             src="/images/logo-2.png"
@@ -376,39 +376,56 @@ export default function Header() {
             style={{ width: "auto" }}
           />
         </Link>
-        <button
-          type="button"
-          aria-label="Toggle menu"
-          aria-expanded={mobileOpen}
-          aria-controls="mobile-navigation"
-          className="inline-flex items-center rounded-md border border-gray-300 p-2 text-[#111] transition-colors hover:bg-gray-100 lg:hidden"
-          onClick={() => {
-            setMobileOpen((prev) => !prev);
-            setMobileSection(null);
-          }}
-        >
-          <svg
-            className="h-5 w-5"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
+        <div className="flex items-center gap-3 lg:hidden">
+          <a
+            href="https://dhandagrow.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Dhanda Grow AI"
+            className="flex items-center transition-transform hover:scale-105"
           >
-            {mobileOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            )}
-          </svg>
-        </button>
+            <Image
+              src="/images/dhandagrow-logo.png"
+              alt="Dhanda Grow AI"
+              width={969}
+              height={565}
+              className="h-10 sm:h-11 w-auto object-contain"
+            />
+          </a>
+          <button
+            type="button"
+            aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-navigation"
+            className="inline-flex items-center rounded-md border border-gray-300 p-2 text-[#111] transition-colors hover:bg-gray-100"
+            onClick={() => {
+              setMobileOpen((prev) => !prev);
+              setMobileSection(null);
+            }}
+          >
+            <svg
+              className="h-5 w-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              {mobileOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
+        </div>
 
         <nav className="relative hidden items-center gap-6 text-[14px] font-semibold text-[#111] xl:gap-9 xl:text-[15px] lg:flex">
           {menuItems.map((item) => {
@@ -712,10 +729,26 @@ export default function Header() {
           </Link> */}
           <Link
             href="/schedule-a-call-page"
-            className="rounded-md bg-black px-4 py-2 text-[15px] font-medium text-white transition-colors hover:bg-gray-800"
+            className="ml-3 xl:ml-5 shrink-0 inline-flex items-center rounded-md bg-black px-5 py-2.5 text-[15px] font-medium text-white transition-colors hover:bg-gray-800"
           >
             Schedule a Call
           </Link>
+          <a
+            href="https://dhandagrow.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Dhanda Grow AI - dhandagrow.com"
+            className="ml-3 xl:ml-4 shrink-0 flex items-center transition-transform hover:scale-105"
+          >
+            <Image
+              src="/images/dhandagrow-logo.png"
+              alt="Dhanda Grow AI"
+              width={969}
+              height={565}
+              className="h-[40px] xl:h-[45px] w-auto object-contain drop-shadow-sm"
+              priority
+            />
+          </a>
         </nav>
       </div>
 
@@ -808,20 +841,42 @@ export default function Header() {
 
             <div className="mt-3 space-y-2 pb-[calc(1rem+env(safe-area-inset-bottom))]">
               <Link
-                href="#"
+                href="/our-work-page"
                 className="block py-2 text-[15px] font-semibold text-[#111] transition-colors hover:text-[#f46b45]"
+                onClick={() => setMobileOpen(false)}
               >
                 Our Work
               </Link>
               <Link
                 href="/blog/history-of-ai"
                 className="block py-2 text-[15px] font-semibold text-[#111] transition-colors hover:text-[#f46b45]"
+                onClick={() => setMobileOpen(false)}
               >
                 Blog
               </Link>
+              <a
+                href="https://dhandagrow.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 rounded-xl border border-gray-200 bg-gray-50/80 p-2.5 transition-colors hover:bg-orange-50/50"
+                onClick={() => setMobileOpen(false)}
+              >
+                <Image
+                  src="/images/dhandagrow-logo.png"
+                  alt="Dhanda Grow AI"
+                  width={969}
+                  height={565}
+                  className="h-10 w-auto object-contain"
+                />
+                <div>
+                  <span className="block text-[14px] font-semibold text-[#111]">Dhanda Grow AI</span>
+                  <span className="block text-[12px] text-gray-500">Visit dhandagrow.com →</span>
+                </div>
+              </a>
               <Link
-                href="#"
+                href="/schedule-a-call-page"
                 className="mt-2 inline-flex w-full items-center justify-center rounded-xl bg-black px-6 py-3 text-[15px] font-medium text-white transition-colors hover:bg-gray-800 sm:w-auto"
+                onClick={() => setMobileOpen(false)}
               >
                 Schedule a Call
               </Link>
