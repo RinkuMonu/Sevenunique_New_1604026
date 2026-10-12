@@ -6,7 +6,8 @@ export default function WhatsAppChat() {
   const whatsappNumber = "918741886688"; // Add country code
 
   return (
-    <div className="fixed bottom-24 right-8 z-50 group">
+    // Match the mobile edge used by the chatbot and respect device safe areas.
+    <div className="group fixed bottom-[max(1rem,env(safe-area-inset-bottom))] right-4 z-50 sm:bottom-14 sm:right-8">
       <span className="absolute right-20 top-1/2 -translate-y-1/2 whitespace-nowrap bg-black text-white text-sm px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition">
         Chat with us
       </span>

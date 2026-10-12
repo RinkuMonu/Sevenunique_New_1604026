@@ -16,57 +16,66 @@ export default function BestPracticesSection({ data }) {
   };
 
   return (
-    <section id="best-practices" className="bg-white py-16">
-      <div className="max-w-7xl mx-auto px-6 flex gap-12">
-        
-        {/* LEFT CONTENT */}
-        <div className="flex-1 max-w-3xl">
-          
-          {/* Heading */}
-          <h2 className="text-[42px] font-semibold text-[#0f172a] leading-tight mb-6">
-            {title}
-          </h2>
+   <section
+  id="best-practices"
+  className="bg-[#f8fafc] py-12 sm:py-16 lg:py-24"
+>
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="flex flex-col gap-8 lg:gap-12">
 
-          {/* Subtext */}
-          <p className="text-[16px] text-gray-600 leading-7 mb-10">
-            {description}
-          </p>
+      {/* LEFT CONTENT */}
+      <div className="w-full">
 
-          {/* Accordion */}
-          <div>
-            {items?.map((item, i) => (
-              <div
-                key={i}
-                className="border-b border-gray-200 py-6 cursor-pointer"
-                onClick={() => toggle(i)}
-              >
-                <div className="flex items-center justify-between">
-                  
-                  <h3 className="text-[22px] text-[#334155] font-medium">
-                    {item.title}
-                  </h3>
+        {/* Heading */}
+        <h2 className="mb-4 break-words text-2xl font-semibold leading-tight text-[#0f172a] sm:mb-5 sm:text-3xl md:text-4xl lg:mb-6 lg:text-[42px] lg:leading-[52px]">
+          {title}
+        </h2>
 
-                  <span className="text-orange-500 text-xl">
-                    {active === i ? <FaTimes /> : <FaPlus />}
-                  </span>
-                </div>
+        {/* Description */}
+        <p className="mb-8 text-sm leading-7 text-gray-600 sm:text-base lg:mb-10 lg:max-w-4xl">
+          {description}
+        </p>
 
-                {/* Content */}
-                <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    active === i ? "max-h-40 mt-4" : "max-h-0"
-                  }`}
-                >
-                  <p className="text-[15px] text-gray-600 leading-7">
-                    {item.content}
-                  </p>
-                </div>
+        {/* Accordion */}
+        <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+
+          {items?.map((item, i) => (
+            <div
+              key={i}
+              className="cursor-pointer border-b border-gray-200 px-4 py-5 last:border-b-0 sm:px-6 sm:py-6 lg:px-8"
+              onClick={() => toggle(i)}
+            >
+              {/* Header */}
+              <div className="flex items-start justify-between gap-4">
+
+                <h3 className="flex-1 break-words text-base font-medium leading-snug text-[#334155] sm:text-lg md:text-xl lg:text-[22px]">
+                  {item.title}
+                </h3>
+
+                <span className="mt-1 flex-shrink-0 text-lg text-orange-500 sm:text-xl">
+                  {active === i ? <FaTimes /> : <FaPlus />}
+                </span>
               </div>
-            ))}
-          </div>
+
+              {/* Content */}
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  active === i
+                    ? "mt-4 max-h-[800px]"
+                    : "max-h-0"
+                }`}
+              >
+                <p className="text-sm leading-7 text-gray-600 sm:text-[15px] md:text-base">
+                  {item.content}
+                </p>
+              </div>
+            </div>
+          ))}
 
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
   );
 }

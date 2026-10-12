@@ -27,11 +27,12 @@ const cards = [
 export default function Industries() {
     return (
         <section className="bg-[#f6f7f9] py-[80px]">
-            <div className="max-w-[1200px] mx-auto px-6 bg-white rounded-2xl shadow-lg p-10">
+            {/* Responsive UI update: compact padding, header, and cards for mobile. */}
+            <div className="mx-4 max-w-[1200px] rounded-2xl bg-white p-5 shadow-lg sm:mx-6 sm:p-8 lg:mx-auto lg:p-10">
 
                 {/* HEADER */}
-                <div className="flex justify-between items-end mb-12">
-                    <h2 className="text-[42px] leading-[52px] font-semibold text-[#1f2933] max-w-[600px]">
+                <div className="mb-8 flex flex-col items-start justify-between gap-5 sm:mb-12 lg:flex-row lg:items-end">
+                    <h2 className="max-w-[600px] text-3xl font-semibold leading-tight text-[#1f2933] sm:text-4xl lg:text-[42px] lg:leading-[52px]">
                         Beyond agriculture: 100+ industries covered.
                     </h2>
 
@@ -44,10 +45,10 @@ export default function Industries() {
                 </div>
 
                 {/* GRID */}
-                <div className="grid grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
 
                     {/* LARGE CARD */}
-                    <div className="col-span-2 row-span-2 bg-black rounded-xl p-6 flex flex-col justify-between group">
+                    <div className="group flex min-h-56 flex-col justify-between rounded-xl bg-black p-6 sm:col-span-2 sm:row-span-2 lg:min-h-0">
 
                         <Image
                             src={cards[0].img}

@@ -4,7 +4,7 @@ import Link from "next/link";
 /* ───────── CARD ───────── */
 function CaseStudyCard({ card }) {
   const content = (
-    <div className="group relative min-h-[480px] overflow-hidden rounded-[18px] bg-black text-white shadow-[0_10px_30px_rgba(0,0,0,0.12)]">
+    <div className="group relative min-h-[400px] overflow-hidden rounded-[18px] bg-black text-white shadow-[0_10px_30px_rgba(0,0,0,0.12)] sm:min-h-[480px]">
 
       {/* IMAGE */}
       <Image
@@ -18,29 +18,29 @@ function CaseStudyCard({ card }) {
       <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/60 to-black/90" />
 
       {/* CONTENT */}
-      <div className="relative z-10 flex h-full flex-col p-8">
+      <div className="relative z-10 flex h-full flex-col p-5 sm:p-8">
 
         {/* TAG */}
         <span className="inline-flex w-fit rounded-[10px] bg-[#eef0f3] px-4 py-3 text-[12px] font-medium uppercase tracking-[0.2em] text-[#425b7d]">
           {card.tag}
         </span>
 
-        <div className="mt-24 max-w-[300px] relative">
+        <div className="relative mt-16 max-w-[300px] sm:mt-24">
 
           {/* TITLE (disappears) */}
-          <h3 className="text-[26px]  font-semibold leading-[1.22] text-white transition-all duration-300 group-hover:opacity-0 group-hover:-translate-x-4">
+          <h3 className="text-xl font-semibold leading-[1.22] text-white transition-all duration-300 md:text-[26px] md:group-hover:-translate-x-4 md:group-hover:opacity-0">
             {card.title}
           </h3>
 
           {/* DESCRIPTION (slides in) */}
           {card.description && (
-            <p className="absolute -top-6 left-0 text-[16px] text-gray-300 leading-[1.6] opacity-0 translate-x-full group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 ease-in-out">
+            <p className="mt-4 text-sm leading-relaxed text-gray-200 md:absolute md:-top-6 md:left-0 md:mt-0 md:translate-x-full md:text-base md:opacity-0 md:transition-all md:duration-500 md:ease-in-out md:group-hover:translate-x-0 md:group-hover:opacity-100">
               {card.description}
             </p>
           )}
           {/* TECHNOLOGIES */}
           {card.technologies && (
-            <div className="mt-24 flex flex-wrap gap-3 opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 ease-in-out">
+            <div className="mt-5 flex flex-wrap gap-2 md:mt-24 md:translate-x-4 md:gap-3 md:opacity-0 md:transition-all md:duration-500 md:ease-in-out md:group-hover:translate-x-0 md:group-hover:opacity-100">
               {card.technologies.slice(0, 6).map((tech) => (
                 <span
                   key={tech}
@@ -72,7 +72,7 @@ export default function CaseStudySection({ caseStudies }) {
   if (!caseStudies?.cards?.length) return null;
 
   return (
-    <section className="bg-white px-6 py-20 md:px-10 md:py-24 font-sans">
+    <section className="bg-white px-4 py-12 font-sans sm:px-6 sm:py-16 md:px-10 md:py-24">
       <div className="mx-auto max-w-7xl">
 
         {/* LABEL */}
@@ -81,7 +81,7 @@ export default function CaseStudySection({ caseStudies }) {
         </p>
 
         {/* HEADING */}
-        <h2 className="max-w-5xl text-[36px] font-bold leading-[1.4] text-[#101010]">
+        <h2 className="max-w-5xl text-3xl font-bold leading-tight text-[#101010] sm:text-[36px] sm:leading-[1.4]">
           {caseStudies.heading}
         </h2>
 

@@ -56,9 +56,10 @@ export default function WhyBairesdevSection() {
 ];
   return (
     <section className="max-w-6xl mx-auto px-4 py-16 md:py-24 ">
-      <div className="flex md:grid-cols-2 ">
-        <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+      {/* Responsive UI update: replace the forced flex row with a centered single-column layout. */}
+      <div className="grid grid-cols-1">
+        <div className="min-w-0">
+          <h2 className="mb-6 text-3xl font-bold text-gray-900 sm:text-4xl">
         Why Sevenunique?
 
           </h2>
@@ -74,6 +75,7 @@ At the core of Sevenunique is a simple vision: to help businesses move faster, s
             width={500}
             height={600}
             className="object-cover rounded-lg shadow-lg"
+            style={{ height: "auto" }}
             priority
             alt="img"
           />

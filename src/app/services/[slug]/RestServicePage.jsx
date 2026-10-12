@@ -15,7 +15,7 @@ export default function RestServicePage({ data }) {
   if (!data) return null;
 
   return (
-    <>
+    <main className="w-full min-w-0 max-w-full overflow-x-clip">
      <RestServiceHeroSection data={data} />
       <TrustedStrip data={companyStripData} />
 
@@ -50,6 +50,6 @@ export default function RestServicePage({ data }) {
 {data.sections?.darkCta && (
   <DarkCtaStrip data={data.sections.darkCta} />
 )}
-    </>
+    </main>
   );
 }

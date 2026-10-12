@@ -47,6 +47,7 @@ export default function TestimonialHighlightSection({ testimonial }) {
                     src={testimonial.personImage}
                     alt={testimonial?.name || "company logo"}
                     fill
+                    sizes="120px"
                     className="object-contain"
                   />
                 </div>

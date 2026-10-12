@@ -5,7 +5,8 @@ import Image from "next/image";
 
 export default function Criclegrowth() {
   return (
-    <section className="w-full px-6 mt-10">
+    <section className="mt-8 w-full px-4 sm:mt-10 sm:px-6">
+      {/* Responsive UI update: contained CTA artwork and badges on phone widths. */}
       <div className="relative overflow-hidden rounded-[32px] bg-[#a0a0a0] border border-[#f1ddd2] py-12 md:py-14">
         
         {/* SOFT BACKGROUND GLOW */}
@@ -14,7 +15,7 @@ export default function Criclegrowth() {
           <div className="absolute bottom-0 right-0 w-[220px] h-[220px] bg-gray-200/50 blur-3xl rounded-full" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+        <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2">
           <div>
             
             {/* MINI LABEL */}
@@ -24,7 +25,7 @@ export default function Criclegrowth() {
             </div>
 
             {/* HEADING */}
-            <h2 className="mt-5 text-[32px] md:text-[44px] leading-[1.15] font-bold text-[#1a1a1a] max-w-3xl">
+            <h2 className="mt-5 max-w-3xl text-[28px] font-bold leading-[1.15] text-[#1a1a1a] sm:text-[32px] md:text-[44px]">
               Innovate, Build & Grow{" "}
               <span className="text-[#f15c2d]">
                 with Sevenunique.
@@ -42,14 +43,14 @@ export default function Criclegrowth() {
             <div className="mt-8">
               <Link
                 href="/schedule-a-call-page"
-                className="inline-flex items-center justify-center bg-[#f15c2d] hover:bg-[#dc4f23] transition-all duration-300 text-white px-6 py-3 rounded-xl font-semibold shadow-md"
+                className="inline-flex w-full items-center justify-center rounded-xl bg-[#f15c2d] px-6 py-3 font-semibold text-white shadow-md transition-all duration-300 hover:bg-[#dc4f23] sm:w-auto"
               >
                 Start Your Project
               </Link>
             </div>
 
             {/* STATS */}
-            <div className="mt-10 flex flex-wrap gap-8">
+            <div className="mt-10 grid grid-cols-2 gap-6 sm:flex sm:flex-wrap sm:gap-8">
               <div>
                 <h3 className="text-2xl font-bold text-[#1a1a1a]">
                   250+
@@ -81,7 +82,7 @@ export default function Criclegrowth() {
 
           {/* RIGHT IMAGE */}
           <div className="relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[380px] h-[300px]">
+            <div className="relative h-[250px] w-full max-w-[380px] sm:h-[300px]">
               
               {/* IMAGE CARD */}
               <div className="absolute inset-0 overflow-hidden rounded-[28px] border border-white/60 shadow-xl bg-white">
@@ -94,7 +95,7 @@ export default function Criclegrowth() {
               </div>
 
               {/* FLOATING BADGE */}
-              <div className="absolute -left-6 top-6 bg-white px-4 py-3 rounded-2xl shadow-lg border border-orange-100">
+              <div className="absolute left-2 top-4 rounded-2xl border border-orange-100 bg-white px-3 py-2 shadow-lg sm:-left-6 sm:top-6 sm:px-4 sm:py-3">
                 <h4 className="text-lg font-bold text-[#1a1a1a]">
                   50+
                 </h4>
@@ -104,7 +105,7 @@ export default function Criclegrowth() {
               </div>
 
               {/* FLOATING CARD */}
-              <div className="absolute -right-5 bottom-6 bg-[#1a1a1a] text-white px-5 py-3 rounded-2xl shadow-xl">
+              <div className="absolute bottom-4 right-2 rounded-2xl bg-[#1a1a1a] px-4 py-2.5 text-white shadow-xl sm:-right-5 sm:bottom-6 sm:px-5 sm:py-3">
                 <h4 className="text-sm font-semibold">
                   Dedicated Teams
                 </h4>

@@ -81,9 +81,10 @@ export default function Testimonials() {
             className="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar"
           >
             {testimonials.map((item, i) => (
+              /* Responsive UI update: testimonial cards fit 320px-class viewports. */
               <div
                 key={i}
-                className="min-w-[320px] md:min-w-[420px] bg-[#f15c2d] text-white rounded-2xl p-8 flex flex-col justify-between"
+                className="min-w-[calc(100vw-3rem)] rounded-2xl bg-[#f15c2d] p-5 text-white sm:min-w-[320px] sm:p-8 md:min-w-[420px] flex flex-col justify-between"
               >
                 {/* Top */}
                 <div className="flex items-center justify-between mb-6">

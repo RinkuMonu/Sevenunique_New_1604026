@@ -59,6 +59,7 @@ function Card({ logo, text }) {
           src={logo}
           alt="award"
           fill
+          sizes="(max-width: 767px) 60px, (max-width: 1023px) 70px, 80px"
           className="object-contain"
         />
       </div>

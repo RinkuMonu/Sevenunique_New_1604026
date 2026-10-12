@@ -353,7 +353,8 @@ duration-500
                   {selectedProject.product_category}
                 </span>
 
-                <h2 className="text-[42px] leading-[48px] font-semibold text-[#111] mt-6">
+                {/* Responsive UI update: modal/project title scales without clipping. */}
+                <h2 className="mt-6 text-3xl font-semibold leading-tight text-[#111] sm:text-4xl lg:text-[42px] lg:leading-[48px]">
                   {selectedProject.title}
                 </h2>
 

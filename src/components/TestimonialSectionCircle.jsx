@@ -5,14 +5,15 @@ import React from "react";
 
 const TestimonialSectionCircle = () => {
   return (
-    <section className="bg-white py-16 px-6 md:px-12 lg:px-24">
+    <section className="bg-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+      {/* Responsive UI update: quote decoration and portrait remain contained on phones. */}
       <div className="max-w-6xl mx-auto">
         {/* Main flex container - image left, quote right */}
-        <div className="flex flex-col md:flex-row gap-10 items-center">
+        <div className="flex flex-col items-center gap-8 md:flex-row md:gap-10">
           {/* RIGHT SIDE - Quote */}
           <div className="w-full md:w-2/3 relative">
             {/* Opening quote mark */}
-            <div className="mb-4 absolute -top-5 -left-7">
+            <div className="mb-4 text-orange-400 md:absolute md:-left-7 md:-top-5">
               <svg
                 className="w-10 h-10 text-orange-400"
                 fill="currentColor"
@@ -24,7 +25,7 @@ const TestimonialSectionCircle = () => {
             </div>
 
             {/* Quote text */}
-            <blockquote className="text-gray-800 text-xl md:text-2xl lg:text-3xl font-medium leading-relaxed">
+            <blockquote className="text-lg font-medium leading-relaxed text-gray-800 sm:text-xl md:text-2xl lg:text-3xl">
               Circles has given me different and challenging responsibilities.
               It has prompted me to get out of my comfort zone and think
               creatively in order to bring some appealing ideas to the team.
@@ -43,15 +44,15 @@ const TestimonialSectionCircle = () => {
           <div className="w-full md:w-1/3 flex justify-center">
             <div className="relative flex items-end">
               {/* BACKGROUND CIRCLE (soft grey like screenshot) */}
-              <div className="w-[260px] h-[260px] rounded-full absolute bottom-0" />
+              <div className="absolute bottom-0 h-[220px] w-[220px] rounded-full sm:h-[260px] sm:w-[260px]" />
 
               {/* IMAGE */}
-              <div className="relative z-10">
+              <div className="relative z-10 h-[220px] w-[220px] sm:h-[260px] sm:w-[260px]">
                 <Image
                   src="/images/u4.jpg"
                   alt="Diana"
-                  width={260}
-                  height={260}
+                  fill
+                  sizes="(max-width: 639px) 220px, 260px"
                   className="object-contain"
                 />
               </div>

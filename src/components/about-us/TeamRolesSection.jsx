@@ -54,7 +54,8 @@ export default function TeamRolesSection() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
         {/* HEADING */}
-        <h2 className="text-[40px] font-semibold text-[#111827]">
+        {/* Responsive UI update: mobile-first section typography. */}
+        <h2 className="text-3xl font-semibold text-[#111827] sm:text-4xl lg:text-[40px]">
           Need more than developers?
         </h2>
 

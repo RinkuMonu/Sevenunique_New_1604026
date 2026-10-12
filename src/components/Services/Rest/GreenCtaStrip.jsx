@@ -8,14 +8,15 @@ export default function GreenCtaStrip({ data }) {
   const { image, text, buttonLabel, buttonLink } = data;
 
   return (
-    <section className="w-full flex justify-center py-10">
-      <div className="max-w-5xl w-full bg-[#1f8a63] rounded-2xl px-6 py-5 flex items-center justify-between gap-6">
+    <section className="flex w-full justify-center px-4 py-8 sm:px-6 sm:py-10">
+      {/* Responsive UI update: CTA stacks without forcing page-wide overflow. */}
+      <div className="flex w-full max-w-5xl flex-col items-stretch justify-between gap-5 rounded-2xl bg-[#1f8a63] px-5 py-5 sm:px-6 md:flex-row md:items-center md:gap-6">
 
         {/* LEFT: Image + Text */}
-        <div className="flex items-center gap-5">
+        <div className="flex min-w-0 items-center gap-3 sm:gap-5">
 
           {/* Image */}
-          <div className="w-30 h-20 relative rounded-xl overflow-hidden">
+          <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-xl sm:h-20 sm:w-30">
             <Image
               src={image}
               alt="cta"
@@ -25,7 +26,7 @@ export default function GreenCtaStrip({ data }) {
           </div>
 
           {/* Text */}
-          <p className="text-white font-bold text-[20px] leading-7 font-medium max-w-md">
+          <p className="min-w-0 max-w-md text-base font-bold leading-relaxed text-white sm:text-xl sm:leading-7">
             {text}
           </p>
         </div>
@@ -33,7 +34,7 @@ export default function GreenCtaStrip({ data }) {
         {/* RIGHT: Button */}
         <a
           href={buttonLink || "#"}
-          className="bg-black text-white px-5 py-2.5 rounded-lg text-sm font-medium flex items-center gap-2 hover:opacity-90 transition"
+          className="flex w-full shrink-0 items-center justify-center gap-2 rounded-lg bg-black px-5 py-2.5 text-sm font-medium text-white transition hover:opacity-90 md:w-auto"
         >
           {buttonLabel}
           <span className="text-lg">→</span>

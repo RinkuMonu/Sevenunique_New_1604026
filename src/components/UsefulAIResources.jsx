@@ -46,7 +46,7 @@ const articles = [
 
 export default function UsefulAIResources() {
   return (
-    <section className="useful-ai-resources">
+    <section className="useful-ai-resources !px-4 sm:!px-6 lg:!px-10">
       {/* Section Label */}
       <p className="section-label">USEFUL AI RESOURCES</p>
 
@@ -82,14 +82,18 @@ export default function UsefulAIResources() {
         </aside> */}
 
         {/* Right Articles Panel */}
-        <div className="articles-panel">
-          <h2 className="articles-title">
+        {/* Responsive UI update: stack cards on phones and restore rows from sm upward. */}
+        <div className="articles-panel min-w-0 !px-4 sm:!px-8">
+          <h2 className="articles-title !text-2xl sm:!text-3xl">
             Related articles<span className="dot">.</span>
           </h2>
           <div className="articles-list">
             {articles.map((article) => (
-              <article key={article.id} className="article-card">
-                <div className="article-image-wrapper">
+              <article
+                key={article.id}
+                className="article-card min-w-0 !flex-col sm:!flex-row"
+              >
+                <div className="article-image-wrapper aspect-[16/9] !h-auto !w-full sm:!h-32 sm:!w-32 lg:!h-40 lg:!w-40">
                   <img
                     src={article.image}
                     alt={article.title}
@@ -100,13 +104,15 @@ export default function UsefulAIResources() {
                     }}
                   />
                 </div>
-                <div className="article-body">
-                  <h3 className="article-title">
+                <div className="article-body min-w-0 !pt-0 sm:!pt-1">
+                  <h3 className="article-title !text-lg sm:!text-xl">
                     <a href={article.href} className="article-title-link">
                       {article.title}
                     </a>
                   </h3>
-                  <p className="article-description">{article.description}</p>
+                  <p className="article-description !text-sm sm:!text-base">
+                    {article.description}
+                  </p>
                 </div>
               </article>
             ))}

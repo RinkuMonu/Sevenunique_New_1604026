@@ -15,36 +15,37 @@ export default function FaqSection({ data }) {
   };
 
   return (
-    <section id="faq" className="bg-white py-16">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="faq" className="bg-white py-12 sm:py-16 lg:py-24">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-12 gap-10">
+        <div>
           
           {/* MAIN CONTENT */}
-          <div className="col-span-12 lg:col-span-9">
+          <div>
             
             {/* Heading */}
-            <h2 className="text-[42px] font-semibold text-[#0f172a] mb-10">
+            {/* Responsive UI update: section title scales at small breakpoints. */}
+            <h2 className="mb-7 [overflow-wrap:anywhere] text-3xl font-semibold leading-tight text-[#0f172a] sm:mb-10 sm:text-4xl lg:text-[42px]">
               {title}
             </h2>
 
             {/* Accordion */}
-            <div>
+            <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white px-5 shadow-sm sm:px-8">
               {questions?.map((item, i) => (
                 <div
                   key={i}
-                  className="border-b border-gray-200 py-5 cursor-pointer"
+                  className="cursor-pointer border-b border-gray-200 py-5 last:border-b-0"
                   onClick={() => toggle(i)}
                 >
-                  <div className="flex items-center justify-between">
+                  <div className="flex min-w-0 items-center justify-between gap-3">
                     
                     {/* Question */}
-                    <p className="text-[17px] text-[#1e293b] leading-7">
+                    <p className="min-w-0 [overflow-wrap:anywhere] text-base leading-relaxed text-[#1e293b] sm:text-[17px] sm:leading-7">
                       {item.q}
                     </p>
 
                     {/* Icon */}
-                    <div className="ml-4">
+                    <div className="shrink-0">
                       <div className="w-7 h-7 rounded-full bg-[#c2410c] flex items-center justify-center">
                         <FiChevronDown
                           className={`text-white transition-transform duration-300 ${
@@ -59,10 +60,10 @@ export default function FaqSection({ data }) {
                   {/* Answer */}
                   <div
                     className={`overflow-hidden transition-all duration-300 ${
-                      active === i ? "max-h-40 mt-4" : "max-h-0"
+                      active === i ? "max-h-[1000px] mt-4" : "max-h-0"
                     }`}
                   >
-                    <p className="text-[15px] text-gray-600 leading-7 pr-10">
+                    <p className="[overflow-wrap:anywhere] pr-0 text-[15px] leading-7 text-gray-600 sm:pr-10">
                       {item.a}
                     </p>
                   </div>
@@ -71,9 +72,6 @@ export default function FaqSection({ data }) {
             </div>
 
           </div>
-
-          {/* EMPTY RIGHT */}
-          <div className="hidden lg:block lg:col-span-3"></div>
 
         </div>
       </div>

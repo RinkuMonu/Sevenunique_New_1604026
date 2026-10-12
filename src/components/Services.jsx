@@ -36,7 +36,7 @@ const services = [
     image:
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
     height: "h-[250px]",
-    link: "/services/jobOp",
+    link: "/schedule-a-call-page",
   },
   {
     title: "QA Solutions",

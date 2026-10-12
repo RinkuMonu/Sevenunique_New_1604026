@@ -80,13 +80,13 @@ const serviceCards = [
 
 export default function ServicesGrid({ services }) {
   return (
-    <section className="max-w-7xl mx-auto px-6 py-16">
+    <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
       <div className="mb-12">
         <span className="inline-block px-4 py-2 rounded-full bg-orange-50 text-black text-sm font-medium">
           Our Expertise
         </span>
 
-        <h2 className="mt-4 text-4xl font-bold text-[#0f172a]">
+        <h2 className="mt-4 text-3xl font-bold leading-tight text-[#0f172a] sm:text-4xl">
           Software Development & Design
         </h2>
 
@@ -96,7 +96,7 @@ export default function ServicesGrid({ services }) {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid gap-5 md:grid-cols-2 md:gap-8">
         {serviceCards.map((service) => (
     <Link
       key={service.slug}
@@ -104,7 +104,7 @@ export default function ServicesGrid({ services }) {
       className="group overflow-hidden rounded-3xl border border-gray-200 bg-white transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
     >
             {/* Image */}
-            <div className="relative h-60 overflow-hidden">
+            <div className="relative h-48 overflow-hidden sm:h-60">
               <Image
                 src={service.image}
                 alt={service.name}
@@ -122,8 +122,8 @@ export default function ServicesGrid({ services }) {
             </div>
 
             {/* Content */}
-            <div className="p-7">
-              <h3 className="text-2xl font-bold text-[#0f172a] transition-colors duration-300 group-hover:text-[#ff6b3d]">
+            <div className="p-5 sm:p-7">
+              <h3 className="text-xl font-bold leading-snug text-[#0f172a] transition-colors duration-300 group-hover:text-[#ff6b3d] sm:text-2xl">
                 {service.name}
               </h3>
 

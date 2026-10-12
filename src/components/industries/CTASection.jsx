@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function CTASection() {
   return (
- <section className="bg-[#6c6b6b] text-black py-20">
+ <section className="bg-[#e0dede] text-black py-20">
   <div className="max-w-7xl mx-auto px-6">
     <div className="grid lg:grid-cols-2 gap-12 items-center">
 

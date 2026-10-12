@@ -4,11 +4,12 @@ import { useState } from "react";
 
 const TechCard = ({ title, icon, color, isActive, onClick }) => {
   return (
-    <div
+    <button
+      type="button"
       onClick={onClick}
       className={`
         flex flex-col items-center justify-center gap-4
-        min-h-[120px] p-5 rounded-xl cursor-pointer
+        min-h-[100px] p-4 sm:min-h-[120px] sm:p-5 rounded-xl cursor-pointer
         transition-all duration-200
         ${
           isActive
@@ -31,19 +32,25 @@ const TechCard = ({ title, icon, color, isActive, onClick }) => {
       <span className="text-center text-[12px] font-medium text-gray-700 leading-tight">
         {title}
       </span>
-    </div>
+    </button>
   );
 };
 
 // Reusable Profile Card Component
 const ProfileCard = ({ img, name, role, experience }) => {
   return (
-    <div className="w-full max-w-[260px] border rounded-lg overflow-hidden bg-white mt-10">
+    <div className="mt-8 w-full max-w-[260px] overflow-hidden rounded-lg border bg-white sm:mt-10">
       {/* TOP BG */}
       <div className="h-16 bg-[#f3d6cc] relative flex justify-center">
         {/* IMAGE */}
-        <div className="absolute -bottom-10 w-28 h-28 rounded-full overflow-hidden border-4 border-white">
-          <img src={img} alt={name} className="w-full h-full object-cover" />
+        <div className="absolute -bottom-10 flex h-28 w-28 items-center justify-center overflow-hidden rounded-full border-4 border-white bg-gray-200">
+          {img ? (
+            <img src={img} alt={name} className="h-full w-full object-cover" />
+          ) : (
+            <span className="text-2xl font-bold text-gray-500" aria-hidden="true">
+              {name.charAt(0)}
+            </span>
+          )}
         </div>
       </div>
 
@@ -84,11 +91,12 @@ export default function CircleLeadersSection() {
       color: "bg-orange-400",
     },
     
-    {
-      title: "Product Circle Leader",
-      icon: "https://assets.bairesdev.com/image/upload/v1/www/icons/EventAvailable.svg",
-      color: "bg-blue-500",
-    },
+    // Temporarily hidden from the Circle page UI; keep this option for future use.
+    // {
+    //   title: "Product Circle Leaders",
+    //   icon: "https://assets.bairesdev.com/image/upload/v1/www/icons/EventAvailable.svg",
+    //   color: "bg-blue-500",
+    // },
   ];
 
   // Data mapping for right panel based on selected technology
@@ -100,7 +108,7 @@ export default function CircleLeadersSection() {
         name: "Devika Chhipa",
         role: "Tech Lead",
         experience: "16 years experience",
-        img: "/images/devika.png",
+        img: "/images/devika-chhipa.png",
       },
     
     ],
@@ -113,7 +121,7 @@ export default function CircleLeadersSection() {
         name: "Khyati Jain",
         role: "UI-UX Designer",
         experience: "12 years experience",
-        img: "/images/khyati.png",
+        img: "/images/khyati.PNG",
       },
     
     ],
@@ -235,11 +243,12 @@ export default function CircleLeadersSection() {
   const currentData = leadersData[activeTech];
 
   return (
-    <section className="bg-gray-100 min-h-screen py-16 px-6 md:px-12 lg:px-24">
+    <section className="min-h-screen bg-gray-100 px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+      {/* Responsive UI update: leader tabs and profiles fit phone widths without overflow. */}
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="mb-12 text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
+          <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl md:text-5xl">
             Meet our Circle Leaders
           </h1>
           <p className="text-gray-500 text-base mt-3 max-w-2xl">
@@ -251,7 +260,7 @@ export default function CircleLeadersSection() {
         <div className="flex flex-col lg:flex-row gap-8">
           {/* LEFT SIDE: Grid of Cards */}
           <div className="w-full lg:w-1/2">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 md:grid-cols-3">
               {techList.map((tech) => (
                 <TechCard
                   key={tech.title}
@@ -269,9 +278,9 @@ export default function CircleLeadersSection() {
           <div className="w-full lg:w-1/2">
             <div className="border-2 border-[#FF6A3D] rounded-2xl bg-white">
               {/* Inner Padding */}
-              <div className="p-6 md:p-8">
+              <div className="p-4 sm:p-6 md:p-8">
                 {/* Header with Icon and Title */}
-                <div className="flex items-center justify-center gap-3 mb-8 mt-2">
+                <div className="mb-6 mt-2 flex items-center justify-center gap-2 sm:mb-8 sm:gap-3">
                   <div className="w-8 h-8 flex items-center justify-center">
                     <svg
                       className="w-6 h-6 text-[#FF6A3D]"
@@ -288,7 +297,7 @@ export default function CircleLeadersSection() {
                       />
                     </svg>
                   </div>
-                  <h2 className="text-3xl font-bold text-gray-800">
+                  <h2 className="min-w-0 text-center text-xl font-bold leading-tight text-gray-800 sm:text-2xl md:text-3xl">
                     {currentData.title}
                   </h2>
                 </div>
@@ -298,7 +307,7 @@ export default function CircleLeadersSection() {
   className={`flex gap-6 ${
     currentData.leaders.length === 1
       ? "justify-center"
-      : "flex-col sm:flex-row"
+      : "flex-col items-center sm:flex-row sm:items-stretch"
   }`}
 >
   {currentData.leaders.map((leader, idx) => (
@@ -307,6 +316,7 @@ export default function CircleLeadersSection() {
       name={leader.name}
       role={leader.role}
       img={leader.img}
+      experience={leader.experience}
     />
   ))}
 </div>

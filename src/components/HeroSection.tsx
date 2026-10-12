@@ -1,8 +1,9 @@
 import ContactForm from "./ContactForm";
 
 export default function HeroSection() {
+  // Responsive UI update: preserve phone gutters before expanding on larger screens.
   return (
-    <section className="flex flex-col lg:flex-row items-start justify-between px-12 pt-8 pb-12 gap-12">
+    <section className="flex flex-col items-start justify-between gap-8 px-4 pb-10 pt-8 sm:px-6 md:gap-12 md:px-8 md:pb-12 lg:flex-row lg:px-12">
       {/* Left content */}
       <div className="flex-1 max-w-2xl">
         {/* Label */}

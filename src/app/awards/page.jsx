@@ -1,9 +1,7 @@
 "use client";
 
 import { HomeIcon, Trophy, Sparkles, ArrowRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { FaAngleRight } from "react-icons/fa";
 
 const featuredAwards = [
@@ -68,23 +66,23 @@ const awards = [
 function AwardCard({ item, index }) {
   return (
     <div
-      className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-8 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl"
+      className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-5 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl sm:p-6 lg:rounded-3xl lg:p-8"
     >
       {/* Glow */}
       <div className="absolute -top-20 -right-20 w-40 h-40 bg-orange-200 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-all duration-500" />
 
       {/* Number */}
-      <div className="absolute top-6 right-6 text-6xl font-black text-gray-100">
+      <div className="absolute right-4 top-4 text-4xl font-black text-gray-100 sm:right-6 sm:top-6 sm:text-6xl">
         0{index + 1}
       </div>
 
       {/* Icon */}
-      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-400 flex items-center justify-center shadow-lg mb-6">
+      <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-orange-400 shadow-lg sm:mb-6 sm:h-16 sm:w-16 sm:rounded-2xl">
         <Trophy className="text-white" size={30} />
       </div>
 
       {/* Content */}
-      <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-tight">
+      <h3 className="mb-3 pr-8 text-xl font-bold leading-tight text-gray-900 sm:mb-4 sm:text-2xl">
         {item.title}
       </h3>
 
@@ -102,7 +100,8 @@ export default function AwardsPage() {
   return (
     <div className="min-h-screen bg-white overflow-hidden">
       {/* BREADCRUMB */}
-      <div className="flex items-center gap-3 px-6 md:px-16 py-6 border-b border-gray-100">
+      {/* Responsive UI update: compact breadcrumb and page gutters on phones. */}
+      <div className="flex items-center gap-2 border-b border-gray-100 px-4 py-4 sm:gap-3 sm:px-6 sm:py-5 md:px-16 md:py-6">
         <HomeIcon size={16} className="text-gray-400" />
         <FaAngleRight className="text-gray-400 text-sm" />
         <span className="text-sm font-semibold text-gray-700">
@@ -116,30 +115,31 @@ export default function AwardsPage() {
         <div className="absolute top-[-150px] left-[-100px] w-[400px] h-[400px] bg-orange-500/20 blur-[120px]" />
         <div className="absolute bottom-[-200px] right-[-100px] w-[500px] h-[500px] bg-orange-400/10 blur-[140px]" />
 
-        <div className="max-w-7xl mx-auto px-6 md:px-16 py-24 md:py-32 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+        {/* Responsive UI update: stack hero and move recognition badges below the trophy on mobile. */}
+        <div className="relative z-10 mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 md:px-16 md:py-24 lg:py-32">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
             {/* LEFT */}
             <div>
-              <div className="inline-flex items-center gap-2 bg-white/10 border border-white/10 px-4 py-2 rounded-full text-orange-400 text-sm mb-8 backdrop-blur-md">
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-2 text-xs text-orange-400 backdrop-blur-md sm:mb-8 sm:px-4 sm:text-sm">
                 <Sparkles size={16} />
                 Awards & Achievements
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-black text-white leading-[1.1] tracking-tight mb-8">
+              <h1 className="mb-6 text-4xl font-black leading-[1.1] tracking-tight text-white sm:text-5xl md:mb-8 md:text-6xl lg:text-7xl">
                 Excellence <br />
                 That Speaks <span className="text-orange-500">Louder.</span>
               </h1>
 
-              <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mb-10">
+              <p className="mb-8 max-w-2xl text-base leading-relaxed text-gray-300 sm:text-lg md:mb-10">
                 We are proud to be recognized globally for delivering innovative
                 software solutions, outstanding client experiences, and scalable
                 digital products.
               </p>
 
-              <div className="flex flex-wrap gap-5">
+              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-5">
                 <Link
                   href="/schedule-a-call-page"
-                  className="bg-orange-500 hover:bg-orange-600 transition-all duration-300 text-white px-8 py-4 rounded-2xl font-semibold inline-flex items-center gap-3 shadow-xl shadow-orange-500/20"
+                  className="inline-flex w-full items-center justify-center gap-3 rounded-xl bg-orange-500 px-5 py-3.5 font-semibold text-white shadow-xl shadow-orange-500/20 transition-all duration-300 hover:bg-orange-600 sm:w-auto sm:rounded-2xl sm:px-8 sm:py-4"
                 >
                   Start Your Project
                   <ArrowRight size={18} />
@@ -147,7 +147,7 @@ export default function AwardsPage() {
 
                 <Link
                   href="/our-work-page"
-                  className="border border-white/20 hover:border-orange-400 hover:bg-orange-500/10 transition-all duration-300 text-white px-8 py-4 rounded-2xl font-semibold"
+                  className="w-full rounded-xl border border-white/20 px-5 py-3.5 text-center font-semibold text-white transition-all duration-300 hover:border-orange-400 hover:bg-orange-500/10 sm:w-auto sm:rounded-2xl sm:px-8 sm:py-4"
                 >
                   View Portfolio
                 </Link>
@@ -155,10 +155,10 @@ export default function AwardsPage() {
             </div>
 
             {/* RIGHT */}
-            <div className="relative flex justify-center">
+            <div className="relative flex min-w-0 flex-col justify-center gap-3 sm:mx-auto sm:max-w-xl sm:flex-row sm:flex-wrap lg:mx-0 lg:block lg:max-w-none">
 
   {/* Floating Card */}
-  <div className="absolute top-10 left-0 z-30 bg-white/25 backdrop-blur-2xl border border-white/30 p-5 rounded-2xl shadow-[0_8px_40px_rgba(0,0,0,0.35)] animate-bounce">
+  <div className="order-2 relative z-30 flex-1 rounded-xl border border-white/30 bg-white/20 p-4 text-center shadow-lg backdrop-blur-2xl lg:absolute lg:left-0 lg:top-10 lg:order-none lg:rounded-2xl lg:p-5 lg:text-left lg:shadow-[0_8px_40px_rgba(0,0,0,0.35)] lg:animate-bounce">
     <p className="text-3xl font-black text-white">50+</p>
 
     <span className="text-white/90 text-sm font-medium">
@@ -167,7 +167,7 @@ export default function AwardsPage() {
   </div>
 
   {/* Main Image */}
-  <div className="relative z-10">
+  <div className="relative z-10 order-1 w-full lg:order-none">
     <div className="absolute inset-0 bg-orange-500/20 blur-3xl rounded-full scale-125" />
 
     <img
@@ -175,12 +175,12 @@ export default function AwardsPage() {
       width={500}
       height={650}
       alt="Awards"
-      className="relative z-10 object-contain drop-shadow-[0_30px_60px_rgba(249,115,22,0.4)]"
+      className="relative z-10 mx-auto h-auto w-full max-w-[360px] object-contain drop-shadow-[0_30px_60px_rgba(249,115,22,0.4)] sm:max-w-[440px] lg:max-w-[500px]"
     />
   </div>
 
   {/* Floating Badge */}
-  <div className="absolute bottom-10 right-0 z-30 bg-white/90 backdrop-blur-xl rounded-2xl p-5 shadow-[0_8px_40px_rgba(0,0,0,0.2)]">
+  <div className="order-3 relative z-30 flex-1 rounded-xl bg-white/90 p-4 text-center shadow-lg backdrop-blur-xl lg:absolute lg:bottom-10 lg:right-0 lg:order-none lg:rounded-2xl lg:p-5 lg:text-left lg:shadow-[0_8px_40px_rgba(0,0,0,0.2)]">
     <p className="text-3xl font-black text-gray-900">100%</p>
 
     <span className="text-gray-600 text-sm font-medium">
@@ -193,16 +193,17 @@ export default function AwardsPage() {
       </section>
 
       {/* FEATURED AWARDS */}
-      <section className="relative -mt-20 z-20 px-6 md:px-16">
-        <div className="max-w-7xl mx-auto bg-white rounded-[35px] shadow-[0_20px_80px_rgba(0,0,0,0.08)] border border-gray-100 p-8 md:p-14">
-          <div className="flex items-center justify-between flex-wrap gap-6 mb-14">
+      {/* Responsive UI update: remove the mobile overlap and stack featured award cards. */}
+      <section className="relative z-20 px-3 py-8 sm:px-6 lg:-mt-20 lg:px-16 lg:py-0">
+        <div className="mx-auto max-w-7xl rounded-2xl border border-gray-100 bg-white p-4 shadow-[0_20px_80px_rgba(0,0,0,0.08)] sm:rounded-[28px] sm:p-8 md:p-10 lg:rounded-[35px] lg:p-14">
+          <div className="mb-8 flex flex-col items-start justify-between gap-5 sm:mb-10 lg:mb-14 lg:flex-row lg:items-center lg:gap-6">
             <div>
               <p className="text-orange-500 font-semibold uppercase tracking-[0.25em] text-sm mb-3">
                 Featured Recognition
               </p>
 
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
-                Trusted By <br />
+              <h2 className="text-3xl font-black leading-tight text-gray-900 sm:text-4xl md:text-5xl">
+                Trusted By{" "}<br className="hidden sm:block" />
                 Industry Leaders
               </h2>
             </div>
@@ -216,22 +217,22 @@ export default function AwardsPage() {
           </div>
 
           {/* AWARDS GRID */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 bg-gray-100 p-4 rounded-xl">
+          <div className="grid grid-cols-1 gap-4 rounded-xl bg-gray-100 p-3 sm:grid-cols-2 sm:p-4 lg:grid-cols-4 lg:gap-6">
             {featuredAwards.map((award, index) => (
               <div
                 key={index}
-                className="group relative bg-[#dedada] rounded-3xl p-8 hover:-translate-y-3 transition-all duration-500 overflow-hidden"
+                className="group relative overflow-hidden rounded-xl bg-[#dedada] p-5 transition-all duration-500 hover:-translate-y-2 sm:rounded-2xl sm:p-6 lg:rounded-3xl lg:p-8 lg:hover:-translate-y-3"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-orange-500/20 opacity-0 group-hover:opacity-100 transition-all duration-500" />
 
                 <div className="relative z-10">
-                  <div className="h-20 flex items-center justify-center mb-8">
+                  <div className="mb-5 flex h-16 items-center justify-center sm:mb-6 sm:h-20 lg:mb-8">
                     <img
                       src={award.logo}
                       alt={award.title}
                       width={140}
                       height={80}
-                      className="object-contain"
+                      className="h-auto max-h-20 w-auto max-w-full object-contain"
                     />
                   </div>
 
@@ -252,39 +253,40 @@ export default function AwardsPage() {
       </section>
 
       {/* AWARDS TIMELINE */}
-      <section className="py-28 px-6 md:px-16 bg-[#fafafa]">
+      {/* Responsive UI update: compact timeline rhythm and controls for smaller screens. */}
+      <section className="bg-[#fafafa] px-4 py-14 sm:px-6 sm:py-20 md:px-16 lg:py-28">
         <div className="max-w-7xl mx-auto">
           {/* HEADING */}
-          <div className="text-center mb-20">
+          <div className="mb-12 text-center sm:mb-16 lg:mb-20">
             <p className="text-orange-500 uppercase tracking-[0.25em] text-sm font-semibold mb-4">
               Recognition Timeline
             </p>
 
-            <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">
-              Awards That <br />
+            <h2 className="mb-5 text-3xl font-black leading-tight text-gray-900 sm:text-4xl md:mb-6 md:text-5xl lg:text-6xl">
+              Awards That{" "}<br className="hidden sm:block" />
               Define Our Journey
             </h2>
 
-            <p className="text-gray-500 max-w-2xl mx-auto text-lg leading-relaxed">
+            <p className="mx-auto max-w-2xl text-base leading-relaxed text-gray-500 sm:text-lg">
               Every recognition reflects our passion for building impactful
               digital experiences and long-term client success.
             </p>
           </div>
 
           {/* TIMELINE */}
-          <div className="space-y-20">
+          <div className="space-y-12 sm:space-y-16 lg:space-y-20">
             {awards.map((group, idx) => (
               <div key={idx} className="relative">
                 {/* YEAR */}
-                <div className="sticky top-10 z-10 inline-flex items-center gap-3 bg-white border border-orange-100 shadow-lg px-8 py-4 rounded-full mb-10">
+                <div className="sticky top-20 z-10 mb-6 inline-flex items-center gap-2 rounded-full border border-orange-100 bg-white px-4 py-2.5 shadow-lg sm:mb-8 sm:gap-3 sm:px-6 sm:py-3 lg:mb-10 lg:px-8 lg:py-4">
                   <div className="w-3 h-3 bg-orange-500 rounded-full" />
-                  <h3 className="text-3xl font-black text-gray-900">
+                  <h3 className="text-xl font-black text-gray-900 sm:text-2xl lg:text-3xl">
                     {group.year}
                   </h3>
                 </div>
 
                 {/* CARDS */}
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-8">
                   {group.items.map((item, i) => (
                     <AwardCard key={i} item={item} index={i} />
                   ))}
@@ -301,25 +303,26 @@ export default function AwardsPage() {
         <div className="absolute left-0 top-0 w-[400px] h-[400px] bg-orange-500/10 blur-[120px]" />
         <div className="absolute right-0 bottom-0 w-[400px] h-[400px] bg-orange-500/10 blur-[120px]" />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-16 py-24 text-center">
-          <div className="inline-flex items-center gap-2 bg-white/10 px-5 py-2 rounded-full text-orange-400 mb-8">
+        {/* Responsive UI update: CTA copy and action fit narrow phones without overflow. */}
+        <div className="relative z-10 mx-auto max-w-6xl px-4 py-14 text-center sm:px-6 sm:py-20 md:px-16 lg:py-24">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs text-orange-400 sm:mb-8 sm:px-5 sm:text-sm">
             <Sparkles size={16} />
             Let’s Build Something Amazing
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-black text-white leading-tight mb-8">
-            Partner With An <br />
+          <h2 className="mb-6 text-3xl font-black leading-tight text-white sm:text-4xl md:mb-8 md:text-5xl lg:text-6xl">
+            Partner With An{" "}<br className="hidden sm:block" />
             Award-Winning Team
           </h2>
 
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed mb-12">
+          <p className="mx-auto mb-8 max-w-2xl text-base leading-relaxed text-gray-300 sm:mb-10 sm:text-lg md:mb-12">
             Transform your ideas into scalable digital products with a trusted
             software development company focused on quality, speed, and growth.
           </p>
 
           <Link
             href="/schedule-a-call-page"
-            className="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 transition-all duration-300 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-2xl shadow-orange-500/20"
+            className="inline-flex w-full items-center justify-center gap-3 rounded-xl bg-orange-500 px-5 py-3.5 font-bold text-white shadow-2xl shadow-orange-500/20 transition-all duration-300 hover:bg-orange-600 sm:w-auto sm:rounded-2xl sm:px-8 sm:py-4 sm:text-lg lg:px-10 lg:py-5"
           >
             Schedule A Call
             <ArrowRight size={20} />

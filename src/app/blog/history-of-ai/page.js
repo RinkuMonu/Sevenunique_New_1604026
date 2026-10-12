@@ -116,10 +116,11 @@ export default function BlogDetailPage() {
               </span>
             </div>
 
-            <h1 className="mt-10 max-w-[940px] text-[61px] font-semibold leading-[1.08] tracking-tight text-[#111319]">
+            {/* Responsive UI update: scale editorial typography from phones upward. */}
+            <h1 className="mt-8 max-w-[940px] text-4xl font-semibold leading-[1.08] tracking-tight text-[#111319] sm:text-5xl lg:mt-10 lg:text-[61px]">
               From Simple to Complex: Tracing the History and Evolution of Artificial Intelligence
             </h1>
-            <p className="mt-5 max-w-[980px] text-[35px] leading-[1.45] text-[#30343d]">
+            <p className="mt-5 max-w-[980px] text-xl leading-[1.45] text-[#30343d] sm:text-2xl lg:text-[35px]">
               Explore the fascinating history of AI and its algorithms from basic models to complex systems,
               transforming the landscape of artificial intelligence.
             </p>
@@ -138,7 +139,7 @@ export default function BlogDetailPage() {
               <div className="flex flex-wrap gap-5 sm:items-start">
                 <div className="text-[74px] leading-none text-[#f26431]">◗◖</div>
                 <div>
-                  <h2 className="text-[46px] font-semibold leading-tight">
+                  <h2 className="text-3xl font-semibold leading-tight sm:text-4xl lg:text-[46px]">
                     By <span className="underline">BairesDev Editorial Team</span>
                   </h2>
                   <div className="mt-2 flex items-center gap-3 text-[#4f5968]">
@@ -223,7 +224,7 @@ export default function BlogDetailPage() {
 
                 {articleSections.map((section) => (
                   <section key={section.title} className="mt-10">
-                    <h2 className="text-[46px] font-semibold leading-[1.2] text-[#111319]">{section.title}</h2>
+                    <h2 className="text-3xl font-semibold leading-[1.2] text-[#111319] sm:text-4xl lg:text-[46px]">{section.title}</h2>
                     {section.paragraphs.map((paragraph) => (
                       <p key={paragraph.slice(0, 30)} className="mt-5 text-[17px] leading-[1.9] text-[#1c212b]">
                         {paragraph}

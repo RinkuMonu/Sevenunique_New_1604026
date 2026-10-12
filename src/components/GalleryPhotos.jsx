@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 function GalleryCard({ image }) {
   return (
     <div className="group relative overflow-hidden rounded-2xl">

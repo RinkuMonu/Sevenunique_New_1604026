@@ -111,46 +111,47 @@ const logos = [
 
 export default function Logos() {
   return (
-    <section className="bg-white py-10">
-      <div className="max-w-[1250px] mx-auto px-6">
+  <section className="bg-white py-10 sm:py-12 lg:py-16">
+  <div className="mx-auto max-w-[1250px] px-4 sm:px-6 lg:px-8">
 
-        <div className="bg-[#5f6b76] rounded-[24px] shadow-md px-8 py-6 flex items-center gap-10">
+    <div className="flex flex-col lg:flex-row items-center gap-8 rounded-[24px] bg-[#5f6b76] px-6 py-8 sm:px-8 lg:px-10 shadow-md">
 
-          {/* LEFT TEXT */}
-          <div className="w-[280px]">
-            <p className="text-white text-[18px] leading-[28px]">
-              500+ companies rely on our{" "}
-              <span className="font-bold underline">
-                top 1% tech talent
-              </span>.
-            </p>
-          </div>
-
-          {/* DIVIDER */}
-          <div className="w-[1px] h-[60px] bg-white/40" />
-
-          {/* LOGOS */}
-          <div className="flex flex-1 items-center justify-between gap-6">
-
-            {logos.map((logo, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-lg px-6 py-3 flex items-center justify-center h-[70px] min-w-[120px] hover:scale-105 transition"
-              >
-                <Image
-                  src={logo}
-                  alt="logo"
-                  width={100}
-                  height={40}
-                  className="object-contain max-h-[40px] w-auto"
-                />
-              </div>
-            ))}
-
-          </div>
-
-        </div>
+      {/* LEFT TEXT */}
+      <div className="w-full lg:max-w-[280px] text-center lg:text-left">
+        <p className="text-base sm:text-lg leading-7 text-white">
+          500+ companies rely on our{" "}
+          <span className="font-bold underline">
+            top 1% tech talent
+          </span>
+          .
+        </p>
       </div>
-    </section>
+
+      {/* DIVIDER */}
+      <div className="h-px w-full bg-white/40 lg:h-[60px] lg:w-px" />
+
+      {/* LOGOS */}
+      <div className="grid w-full flex-1 grid-cols-2 gap-4 sm:grid-cols-3 lg:flex lg:items-center lg:justify-between lg:gap-6">
+
+        {logos.map((logo, i) => (
+          <div
+            key={i}
+            className="flex h-[70px] items-center justify-center rounded-lg bg-white px-4 py-3 transition duration-300 hover:scale-105 sm:h-[75px] lg:min-w-[120px]"
+          >
+            <Image
+              src={logo}
+              alt="logo"
+              width={100}
+              height={40}
+              className="h-auto max-h-[40px] w-auto object-contain"
+            />
+          </div>
+        ))}
+
+      </div>
+
+    </div>
+  </div>
+</section>
   );
 }

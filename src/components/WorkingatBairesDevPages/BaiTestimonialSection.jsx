@@ -30,9 +30,9 @@ export default function BaiTestimonialSection() {
   const item = data[index];
 
   return (
-    <section className="py-20 bg-[#f5f5f5]">
-      <div className="max-w-6xl mx-auto px-6 text-center mb-12">
-        <h2 className="text-4xl font-semibold text-[#0f172a]">
+    <section className="bg-[#f5f5f5] py-14 sm:py-20">
+      <div className="mx-auto mb-8 max-w-6xl px-4 text-center sm:mb-12 sm:px-6">
+        <h2 className="text-3xl font-semibold text-[#0f172a] sm:text-4xl">
           Hear from our team<span className="text-orange-500">.</span>
         </h2>
 
@@ -42,15 +42,17 @@ export default function BaiTestimonialSection() {
       </div>
 
       {/* CARD */}
-      <div className="max-w-6xl mx-auto px-6 relative">
-        <div className="bg-[#1f2a33] rounded-[32px] overflow-hiddn flex flex-col md:flex-row">
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
+        {/* Responsive UI update: contain testimonial artwork and stack content on phones. */}
+        <div className="flex flex-col overflow-hidden rounded-[24px] bg-[#1f2a33] sm:rounded-[32px] md:flex-row">
           {/* LEFT IMAGE */}
           {/* LEFT IMAGE */}
-          <div className="md:w-[40%] relative min-h-[320px]">
-           <div className="absolute bottom-0 right-[-6px] md:right-[-60px] h-[120%] w-[120%]">
+          <div className="relative min-h-[260px] overflow-hidden sm:min-h-[320px] md:w-[40%] md:overflow-visible">
+           <div className="absolute inset-0 md:bottom-0 md:left-auto md:right-[-40px] md:top-auto md:h-[115%] md:w-[115%]">
   <Image
     src="/images/u3.png"
     fill
+    sizes="(max-width: 767px) 100vw, 40vw"
     alt="img"
     className="object-contain object-bottom"
   />
@@ -58,13 +60,13 @@ export default function BaiTestimonialSection() {
           </div>
 
           {/* RIGHT CONTENT */}
-          <div className="md:w-[60%] text-white p-8 md:p-12 flex flex-col justify-center">
+          <div className="flex flex-col justify-center p-6 text-white sm:p-8 md:w-[60%] md:p-12">
             <h4 className="uppercase text-xs tracking-widest mb-6 text-gray-300">
               Employee Testimonial
             </h4>
 
             <p className="text-lg md:text-xl leading-relaxed mb-8 relative">
-              <span className="text-orange-500 text-4xl absolute -left-6 -top-4">
+              <span className="absolute -left-2 -top-5 text-4xl text-orange-500 sm:-left-6 sm:-top-4">
                 “
               </span>
               {item.text}

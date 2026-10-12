@@ -13,19 +13,19 @@ export default function WorkSection({ data }) {
   const active = tabs[activeTab];
 
   return (
-    <section className="py-24 bg-white relative">
-      <div className="max-w-7xl mx-auto px-6 text-center">
+    <section className="relative bg-white py-12 sm:py-16 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
 
         {/* Top Section */}
         <p className="text-[11px] font-bold tracking-[0.2em] text-gray-500 uppercase mb-6">
           {data.eyebrow || "HOW WE WORK"}
         </p>
 
-        <h2 className="text-4xl md:text-5xl font-bold text-[#101828] mb-8 leading-[1.1] max-w-3xl mx-auto">
+        <h2 className="mx-auto mb-6 max-w-3xl text-3xl font-bold leading-tight text-[#101828] sm:text-4xl md:mb-8 md:text-5xl">
           {data.heading}
         </h2>
 
-        <p className="text-[#475467] max-w-3xl mx-auto mb-16 text-lg leading-relaxed">
+        <p className="mx-auto mb-10 max-w-3xl text-base leading-relaxed text-[#475467] sm:text-lg md:mb-16">
           {data.description}
         </p>
 
@@ -54,7 +54,7 @@ export default function WorkSection({ data }) {
           <div className="bg-white border border-[#eaecf0] rounded-[24px] text-left shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden">
 
             {/* Content */}
-            <div className="p-10 md:p-16 grid md:grid-cols-[1fr_1.5fr] gap-12 items-start">
+            <div className="grid items-start gap-6 p-5 sm:p-8 md:grid-cols-[1fr_1.5fr] md:gap-12 md:p-16">
 
               <div>
                 <p className="text-[10px] font-bold tracking-[0.15em] text-gray-400 uppercase mb-4">

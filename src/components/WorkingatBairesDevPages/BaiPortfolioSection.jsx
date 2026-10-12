@@ -24,14 +24,14 @@ export default function BaiPortfolioSection() {
   ];
 
   return (
-    <section className="bg-[#f5f5f5] py-20">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="bg-[#f5f5f5] py-14 sm:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* TOP */}
-        <div className="flex flex-col lg:flex-row gap-10 mb-16">
+        <div className="mb-10 flex flex-col gap-8 sm:mb-16 lg:flex-row lg:gap-10">
           {/* LEFT TEXT */}
           <div className="flex-1">
-            <h2 className="text-3xl md:text-5xl font-semibold text-gray-900 leading-tight">
-             A quick look at some of our <br /> past projects and experience.
+            <h2 className="text-3xl font-semibold leading-tight text-gray-900 md:text-5xl">
+             A quick look at some of our <br className="hidden sm:block" /> past projects and experience.
             </h2>
           </div>
 
@@ -41,18 +41,20 @@ export default function BaiPortfolioSection() {
               src="https://assets.bairesdev.com//image/upload/c_limit,w_1920/dpr_auto/f_auto/q_auto/v1/www/core/join-us-previous-work_zseruc?_a=BAVAfVDW0"
               alt="preview"
               fill
+              sizes="(max-width: 1023px) 100vw, 55vw"
               className="object-cover"
             />
           </div>
         </div>
 
         {/* CARDS (OVERLAP SECTION) */}
-        <div className="relative -mt-24 md:-mt-32">
-          <div className="flex flex-wrap gap-6">
+        {/* Responsive UI update: remove mobile overlap and use exact grid columns. */}
+        <div className="relative lg:-mt-32">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
             {items.map((item, i) => (
               <div
                 key={i}
-                className="bg-white rounded-xl shadow-lg p-6 w-full sm:w-[48%] lg:w-[23%] flex flex-col justify-between min-h-[150px]"
+                className="flex min-h-[150px] min-w-0 flex-col justify-between rounded-xl bg-white p-5 shadow-lg sm:p-6"
               >
                 <h4 className="text-gray-900 text-lg font-medium leading-snug">
                   {item.title}
@@ -63,6 +65,7 @@ export default function BaiPortfolioSection() {
                     src={item.logo}
                     alt="logo"
                     fill
+                    sizes="128px"
                     className="object-contain"
                   />
                 </div>

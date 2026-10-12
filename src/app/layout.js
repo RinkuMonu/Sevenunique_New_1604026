@@ -15,11 +15,14 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
 export const metadata = {
   metadataBase: new URL("https://www.sevenunique.com"),
 
-    openGraph: {
+  verification: {
+    google: "oPj-lQulH5rMXXLnWlJ4WP3rDrOsiS-hsmsmI2-Lbe4",
+  },
+
+  openGraph: {
     title: "SevenUnique Tech Solutions Pvt. Ltd.",
     description:
       "Leading fintech and IT solutions provider specializing in AI, software development, digital payments, and enterprise solutions.",
@@ -53,16 +56,19 @@ export default function RootLayout({ children }) {
   "@type": "Organization",
   name: "SevenUnique Tech Solutions Pvt. Ltd.",
   url: "https://www.sevenunique.com",
-  logo: "https://www.sevenunique.com/logo.png",
+  logo: "https://www.sevenunique.com/images/logo-2.png",
   image: "https://www.sevenunique.com/og-image.jpeg",
 };
 
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-    <body className="min-h-screen flex flex-col">
+    {/* Browser extensions can inject attributes on body before React hydrates. */}
+    <body className="min-h-screen flex flex-col" suppressHydrationWarning>
   <script
     type="application/ld+json"
     dangerouslySetInnerHTML={{

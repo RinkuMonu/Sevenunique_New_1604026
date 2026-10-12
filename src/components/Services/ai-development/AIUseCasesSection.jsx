@@ -11,12 +11,13 @@ export default function AIUseCasesSection({ useCases }) {
   const { sectionLabel, heading, description, image, services } = useCases;
 
   return (
-   <section className="relative overflow-hidden bg-gradient-to-b from-white to-[#f8fafc] py-24 px-6">
+   <section className="relative overflow-hidden bg-gradient-to-b from-white to-[#f8fafc] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
+  {/* Responsive UI update: use-case cards and artwork scale for phone widths. */}
 
   {/* BACKGROUND BLUR */}
   <div className="absolute top-0 right-0 w-[350px] h-[350px] bg-orange-100 blur-[140px] rounded-full opacity-70"></div>
 
-  <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center relative z-10">
+  <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-20">
 
     {/* LEFT SIDE */}
     <div>
@@ -30,7 +31,7 @@ export default function AIUseCasesSection({ useCases }) {
       </div>
 
       {/* HEADING */}
-      <h2 className="text-[40px] md:text-[52px] leading-[1.12] font-bold text-[#111827] mb-6">
+      <h2 className="mb-5 text-3xl font-bold leading-tight text-[#111827] sm:text-4xl md:text-[52px]">
         {heading}
       </h2>
 
@@ -46,14 +47,14 @@ export default function AIUseCasesSection({ useCases }) {
           alt={sectionLabel}
           width={700}
           height={500}
-          className="w-full h-[340px] object-cover transition duration-700 group-hover:scale-105"
+          className="h-[220px] w-full object-cover transition duration-700 group-hover:scale-105 sm:h-[280px] md:h-[340px]"
         />
 
         {/* OVERLAY */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
 
         {/* FLOATING BADGE */}
-        <div className="absolute bottom-5 left-5 bg-white/90 backdrop-blur-md rounded-2xl px-5 py-4 shadow-lg">
+        <div className="absolute bottom-3 left-3 right-3 rounded-xl bg-white/90 px-4 py-3 shadow-lg backdrop-blur-md sm:bottom-5 sm:left-5 sm:right-auto sm:rounded-2xl sm:px-5 sm:py-4">
           <p className="text-sm text-gray-500">
             Trusted by Global Businesses
           </p>
@@ -71,18 +72,18 @@ export default function AIUseCasesSection({ useCases }) {
       {services.map((item, i) => (
         <div
           key={i}
-          className="group flex gap-5 rounded-3xl bg-white border border-gray-200 p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-orange-100 hover:border-orange-200"
+          className="group flex gap-3 rounded-2xl border border-gray-200 bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:border-orange-200 hover:shadow-2xl hover:shadow-orange-100 sm:gap-5 sm:rounded-3xl sm:p-7"
         >
           {/* ICON / NUMBER */}
           <div className="flex-shrink-0">
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#ff6433] to-[#ff8b66] text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-orange-200">
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-[#ff6433] to-[#ff8b66] font-bold text-white shadow-lg shadow-orange-200 sm:h-14 sm:w-14 sm:rounded-2xl sm:text-lg">
               {String(i + 1).padStart(2, "0")}
             </div>
           </div>
 
           {/* CONTENT */}
           <div>
-            <h3 className="text-[22px] font-semibold text-[#111827] mb-3 group-hover:text-[#ff6433] transition">
+            <h3 className="mb-2 text-lg font-semibold text-[#111827] transition group-hover:text-[#ff6433] sm:mb-3 sm:text-[22px]">
               {item.title}
             </h3>
 

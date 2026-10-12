@@ -44,7 +44,8 @@ export default function LeadershipGrid() {
       <div className="max-w-7xl mx-auto px-6">
         {/* HEADING */}
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-[40px] leading-[1.2] font-semibold text-[#f66135]">
+          {/* Responsive UI update: mobile-first section typography. */}
+          <h2 className="text-3xl font-semibold leading-[1.2] text-[#f66135] sm:text-4xl lg:text-[40px]">
             Meet our leadership team
           </h2>
 
@@ -64,6 +65,7 @@ export default function LeadershipGrid() {
                   src={item.img}
                   alt={item.name}
                   fill
+                  sizes="(max-width: 767px) calc(100vw - 48px), 33vw"
                   className="object-contain grayscale-[8%] transition-all duration-500 group-hover:scale-[1.02]"
                 />
 

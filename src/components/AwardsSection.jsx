@@ -93,10 +93,11 @@ export default function AwardsSection() {
       `}</style>
 
       <section
-        className={`${outfit.className} bg-[#f3f3f3] py-10 px-4 lg:px-6`}
+        className={`${outfit.className} bg-[#f3f3f3] px-3 py-6 sm:px-4 sm:py-10 lg:px-6`}
       >
-        <div className="mx-auto bg-[#0b0b0b] rounded-3xl px-6 lg:px-10 py-14 overflow-hidden">
-          <div className="grid lg:grid-cols-3 gap-14 items-center">
+        {/* Responsive UI update: stack awards content and remove mobile-width overflow. */}
+        <div className="mx-auto overflow-hidden rounded-2xl bg-[#0b0b0b] px-4 py-8 sm:rounded-3xl sm:px-6 sm:py-12 lg:px-10 lg:py-14">
+          <div className="grid min-w-0 grid-cols-1 items-center gap-10 lg:grid-cols-3 lg:gap-14">
 
             {/* LEFT CONTENT */}
             <div>
@@ -104,7 +105,7 @@ export default function AwardsSection() {
                 Our Awards
               </p>
 
-              <h2 className="text-4xl lg:text-5xl font-semibold leading-tight mb-6 text-white">
+              <h2 className="mb-6 text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
                 <span className="text-[#f4622a]">
                   Quality Driven
                 </span>
@@ -122,11 +123,11 @@ export default function AwardsSection() {
             </div>
 
             {/* CENTER STATS */}
-            <div className="grid grid-cols-2 gap-10">
+            <div className="grid min-w-0 grid-cols-1 gap-4 min-[380px]:grid-cols-2 sm:gap-8 lg:gap-10">
               {stats.map((item, index) => (
                 <div
                   key={index}
-                  className="relative w-44 h-44 mx-auto flex items-center justify-center"
+                  className="relative mx-auto flex h-36 w-36 items-center justify-center sm:h-44 sm:w-44"
                 >
                   {/* ROTATING TEXT */}
                   <svg
@@ -153,11 +154,11 @@ export default function AwardsSection() {
 
                   {/* INNER CONTENT */}
                   <div className="text-center z-10">
-                    <p className="text-3xl font-bold text-white">
+                    <p className="text-2xl font-bold text-white sm:text-3xl">
                       {item.number}
                     </p>
 
-                    <p className="text-sm text-white/60 mt-1">
+                    <p className="mt-1 text-xs text-white/60 sm:text-sm">
                       {item.label}
                     </p>
                   </div>
@@ -166,7 +167,7 @@ export default function AwardsSection() {
             </div>
 
             {/* RIGHT CERTIFICATES SCROLL */}
-            <div className="h-[450px] overflow-hidden border-l border-white/10 pl-6 relative">
+            <div className="relative h-[420px] min-w-0 overflow-hidden border-t border-white/10 pt-6 lg:h-[450px] lg:border-l lg:border-t-0 lg:pl-6 lg:pt-0">
 
               <div className="scroll-certificates flex flex-col gap-8">
 
@@ -181,6 +182,7 @@ export default function AwardsSection() {
                           src={item.image}
                           alt={item.title}
                           fill
+                          sizes="96px"
                           className="object-contain"
                         />
                       </div>

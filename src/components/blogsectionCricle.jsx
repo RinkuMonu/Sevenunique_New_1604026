@@ -215,9 +215,10 @@ const BlogCarouselSectionCricle = () => {
           )} */}
 
           {/* Scrollable Cards Container */}
+          {/* Responsive UI update: retain the intended horizontal card scroller at every width. */}
           <div
             ref={scrollContainerRef}
-            className="flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth grid grid-cols-3"
+            className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth sm:gap-6 scrollbar-hide"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             onMouseDown={handleMouseDown}
             onMouseLeave={handleMouseLeave}

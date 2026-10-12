@@ -26,6 +26,7 @@ export default function TeamShowcase() {
                 src="/team/p1.png"
                 alt=""
                 fill
+                sizes="140px"
                 className="object-cover relative z-10"
               />
             </div>
@@ -36,6 +37,7 @@ export default function TeamShowcase() {
                 src="/team/p2.png"
                 alt=""
                 fill
+                sizes="140px"
                 className="object-contain relative z-10"
               />
             </div>
@@ -50,6 +52,7 @@ export default function TeamShowcase() {
                 src="/team/p3.png"
                 alt=""
                 fill
+                sizes="140px"
                 className="object-contain relative z-10"
               />
             </div>
@@ -60,6 +63,7 @@ export default function TeamShowcase() {
                 src="/team/krishan.PNG"
                 alt=""
                 fill
+                sizes="140px"
                 className="object-cover relative z-10"
               />
             </div>
@@ -70,6 +74,7 @@ export default function TeamShowcase() {
                 src="/team/p5.png"
                 alt=""
                 fill
+                sizes="140px"
                 className="object-contain relative z-10"
               />
             </div>

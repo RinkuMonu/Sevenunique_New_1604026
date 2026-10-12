@@ -44,8 +44,9 @@ export default function ProfileSlider() {
     },
   ];
 
+  // Responsive UI update: slider shrinks with its parent on mobile.
   return (
-    <div className="w-[360px]">
+    <div className="w-full max-w-[360px]">
 
       <Swiper
         modules={[Autoplay]}

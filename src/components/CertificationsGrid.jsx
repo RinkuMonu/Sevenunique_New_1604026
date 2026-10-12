@@ -164,7 +164,8 @@ export default function CertificationsGrid() {
     </div>
 
     {/* CARDS GRID */}
-   <div className="container p-8 bg-orange-100 rounded-2xl shadow-sm border border-gray-100">
+   {/* Responsive UI update: explicitly center the certification panel on desktop. */}
+   <div className="mx-auto w-full max-w-6xl rounded-2xl border border-gray-100 bg-orange-100 p-5 shadow-sm sm:p-6 lg:p-8">
      <div className="grid md:grid-cols-2 gap-8">
 
       {certifications.map((item, i) => (
@@ -179,12 +180,14 @@ export default function CertificationsGrid() {
           <div className="relative z-10 flex flex-col sm:flex-row items-center gap-8">
 
             {/* LOGO */}
-            <div className="relative flex items-center justify-center w-[170px] h-[120px] rounded-2xl bg-[#f8f9fb] border border-gray-100 group-hover:bg-white transition">
+            <div className="relative flex items-center justify-center  rounded-2xl bg-[#f8f9fb] border border-gray-100 group-hover:bg-white transition">
               <Image
                 src={item.img}
                 alt={item.title}
                 width={130}
                 height={100}
+                // Image warning fix: preserve ratio when global responsive sizing constrains width.
+                style={{ height: "auto" }}
                 className="object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
               />
             </div>

@@ -74,7 +74,8 @@ export default function ServicesPage() {
     <div className="min-h-screen bg-[#325980]">
 
       {/* HERO */}
-    <section className="relative min-h-[600px] flex items-center overflow-hidden">
+    <section className="relative flex min-h-[520px] items-center overflow-hidden sm:min-h-[600px]">
+  {/* Responsive UI update: service landing hero scales from phone to desktop. */}
   {/* Background Image */}
   <Image
     src="/images/services-banner.png"
@@ -91,7 +92,7 @@ export default function ServicesPage() {
   <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/30" />
 
   {/* Content */}
-  <div className="relative z-10 max-w-7xl mx-auto w-full px-6 py-24">
+  <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
     {/* Breadcrumb */}
     <div className="flex items-center gap-2 text-sm text-gray-300 mb-6">
       <GoHome />
@@ -105,16 +106,16 @@ export default function ServicesPage() {
     </p>
 
     {/* Heading */}
-    <h1 className="max-w-4xl text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight text-white">
+    <h1 className="max-w-4xl text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-6xl lg:text-7xl">
       Build, scale, and grow
-      <br />
+      <br className="hidden sm:block" />{" "}
       with expert
-      <br />
+      <br className="hidden sm:block" />{" "}
       <span className="text-[#ff6b3d]">tech solutions.</span>
     </h1>
 
     {/* Description */}
-    <p className="mt-6 max-w-2xl text-lg text-gray-200 leading-8">
+    <p className="mt-5 max-w-2xl text-base leading-relaxed text-gray-200 sm:mt-6 sm:text-lg sm:leading-8">
       From AI and cloud engineering to web, mobile, and enterprise software,
       we help businesses launch, scale, and transform through technology.
     </p>
@@ -123,7 +124,7 @@ export default function ServicesPage() {
     <div className="mt-10 flex flex-wrap gap-4">
       <Link
         href="/schedule-a-call-page"
-        className="rounded-xl bg-[#ff6b3d] px-7 py-4 text-white font-medium hover:bg-[#f45d2e] transition"
+        className="inline-flex w-full items-center justify-center rounded-xl bg-[#ff6b3d] px-7 py-4 font-medium text-white transition hover:bg-[#f45d2e] sm:w-auto"
       >
         Schedule a Call
       </Link>

@@ -14,20 +14,15 @@ export default function DarkCtaStrip({ data }) {
     image && image.trim() !== "" ? image : FALLBACK_IMAGE;
 
   return (
-    <section className="bg-black py-16">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="bg-black py-12 sm:py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         
-        <div className="flex items-center justify-between gap-10">
+        <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center md:gap-10">
           
           {/* LEFT CONTENT */}
           <div className="max-w-xl">
-            <h2 className="text-[37px] leading-tight font-semibold text-white mb-6">
-              {titleLines?.map((line, i) => (
-                <span key={i}>
-                  {line}
-                  <br />
-                </span>
-              ))}
+            <h2 className="mb-6 block w-full max-w-full whitespace-normal break-words text-3xl font-semibold leading-tight text-white sm:text-[37px]">
+              {titleLines?.join(" ")}{" "}
 
               {highlight && (
                 <span className="text-[#f97316]">
@@ -38,7 +33,7 @@ export default function DarkCtaStrip({ data }) {
 
             <a
               href={buttonLink || "#"}
-              className="bg-[#1f8a63] text-white px-6 py-3 rounded-lg text-sm font-medium hover:opacity-90 transition inline-block"
+              className="inline-flex w-full items-center justify-center rounded-lg bg-[#1f8a63] px-6 py-3 text-sm font-medium text-white transition hover:opacity-90 sm:w-auto"
             >
               {buttonLabel}
             </a>

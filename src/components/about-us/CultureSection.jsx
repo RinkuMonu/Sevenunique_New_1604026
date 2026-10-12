@@ -64,10 +64,11 @@ function Card({ icon, text, color }) {
 
   return (
     <div
-      className={`bg-white border ${styles[color]} rounded-xl px-6 py-4 flex items-center gap-3 shadow-sm min-w-[230px]`}
+      className={`bg-white border ${styles[color]} rounded-xl px-4 sm:px-6 py-4 flex items-center gap-3 shadow-sm w-full sm:min-w-[230px]`}
     >
       <div className="text-xl">{icon}</div>
-      <span className="font-medium text-[#333] whitespace-nowrap">
+      {/* Responsive UI update: allow long labels to wrap on phones. */}
+      <span className="font-medium text-[#333] sm:whitespace-nowrap">
         {text}
       </span>
     </div>
