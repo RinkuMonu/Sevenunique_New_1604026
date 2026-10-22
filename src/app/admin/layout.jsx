@@ -10,11 +10,11 @@ export const metadata = {
 
 export default function AdminLayout({ children }) {
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100 selection:bg-purple-600 selection:text-white">
+    <div className="min-h-screen bg-slate-50 text-slate-900 selection:bg-[#f4622a] selection:text-white">
       <Toaster
         richColors
         position="top-right"
-        theme="dark"
+        theme="light"
         closeButton
       />
       {children}
