@@ -122,7 +122,7 @@ export function AIGeneratorPanel({ onGenerated, disabled }) {
       const data = await response.json();
 
       if (!response.ok || data.error) {
-        throw new Error(data.error || "Failed to generate blog post from Groq API");
+        throw new Error(data.error || "Failed to generate blog post from AI service");
       }
 
       setProgressPercent(100);
@@ -158,7 +158,7 @@ export function AIGeneratorPanel({ onGenerated, disabled }) {
       toast.error("AI Generation failed", {
         id: toastId,
         description: isLimit
-          ? "Groq API rate limit hit. Switch to a fallback model or wait a moment."
+          ? "AI generation limit reached. Switch to a fallback model or wait a moment."
           : message,
       });
     } finally {
@@ -189,9 +189,6 @@ export function AIGeneratorPanel({ onGenerated, disabled }) {
           <div>
             <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
               AI Editorial Assistant
-              <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-[#f4622a]/10 text-[#f4622a] border border-[#f4622a]/20 font-semibold">
-                Groq Powered
-              </span>
             </h3>
             <p className="text-xs text-slate-500 mt-0.5">
               Generate fully formatted, SEO-optimized blog drafts in seconds.
@@ -250,7 +247,7 @@ export function AIGeneratorPanel({ onGenerated, disabled }) {
         <div className="md:col-span-2 space-y-2">
           <label className="block text-xs font-bold text-slate-700 flex items-center gap-1.5">
             <Sliders className="w-3.5 h-3.5 text-[#f4622a]" />
-            Select Groq AI Model
+            Select AI Model
           </label>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
             {AVAILABLE_MODELS.map((model) => {

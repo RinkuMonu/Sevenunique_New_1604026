@@ -112,7 +112,7 @@ test.describe("SevenUnique Portal & Admin UI Test Suite", () => {
     // Switch to AI Mode
     await generateAiBtn.click();
     await expect(page.getByText("AI Editorial Assistant")).toBeVisible();
-    await expect(page.getByText("Select Groq AI Model")).toBeVisible();
+    await expect(page.getByText("Select AI Model")).toBeVisible();
 
     // Capture screenshot of AI Generator interface
     await page.screenshot({

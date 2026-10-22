@@ -171,9 +171,6 @@ export function AdminSidebar({ children }) {
                 <Sparkles className="w-4 h-4 text-purple-600 transition-transform group-hover:scale-110" />
                 <span className="font-semibold">AI Editorial Studio</span>
               </div>
-              <span className="text-[9px] uppercase font-mono font-bold px-1.5 py-0.5 rounded bg-purple-100 text-purple-700 border border-purple-200">
-                Groq
-              </span>
             </Link>
           </div>
 
@@ -349,6 +346,22 @@ export function AdminSidebar({ children }) {
                     );
                   })}
                 </div>
+              </div>
+
+              <div>
+                <p className="px-3 text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">
+                  AI Tools
+                </p>
+                <Link
+                  href="/admin/blog/new"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-slate-700 hover:bg-slate-100"
+                >
+                  <div className="flex items-center gap-2.5">
+                    <Sparkles className="w-4 h-4 text-purple-600" />
+                    <span>AI Editorial Studio</span>
+                  </div>
+                </Link>
               </div>
 
               <div>

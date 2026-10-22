@@ -146,7 +146,7 @@ export default function AdminBlogPage() {
               </span>
             </div>
             <p className="text-xs text-slate-500 mt-0.5">
-              Manage published articles, editorial drafts, and Groq AI generated content.
+              Manage published articles, editorial drafts, and AI-generated content.
             </p>
           </div>
 
@@ -260,7 +260,7 @@ export default function AdminBlogPage() {
             <p className="text-xs text-slate-500 mt-1 max-w-sm mx-auto">
               {search
                 ? `No posts match your search query "${search}".`
-                : "Get started by generating your first article using our Groq AI Engine."}
+                : "Get started by generating your first article using our AI Studio."}
             </p>
             <Link
               href="/admin/blog/new"

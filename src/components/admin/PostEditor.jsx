@@ -294,7 +294,7 @@ export function PostEditor({ initialData = null }) {
     } catch (err) {
       toast.error("Failed to save post", {
         id: toastId,
-        description: err?.message || "Please check your network and Supabase configuration.",
+        description: err?.message || "Please check your network connection and try again.",
       });
     } finally {
       setIsSubmitting(false);
@@ -441,7 +441,7 @@ export function PostEditor({ initialData = null }) {
           <span className="text-[11px] text-slate-500 hidden sm:inline px-3">
             {editorMode === "ai"
               ? "AI drafts complete structured post into editor for you to review."
-              : "Standard WYSIWYG editor powered by Tiptap."}
+              : "Rich text editor for manual drafting and formatting."}
           </span>
         </div>
       )}

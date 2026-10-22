@@ -71,7 +71,7 @@ export async function generateBlogPost({
   const raw = choice?.message?.content;
 
   if (!raw) {
-    throw new Error("No response received from Groq AI service.");
+    throw new Error("No response received from AI service.");
   }
 
   const parsed = safeParseJson(raw);

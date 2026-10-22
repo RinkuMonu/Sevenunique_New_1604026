@@ -20,7 +20,7 @@ export const AVAILABLE_MODELS = [
   },
   {
     id: "groq/compound-mini",
-    name: "Groq Compound Mini",
+    name: "Compound Mini Engine",
     provider: "Groq",
     badge: "Agentic Reasoning",
     description: "Strict structural and link compliance, balanced long-form framework",
