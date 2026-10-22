@@ -193,17 +193,15 @@ export default async function BlogPostPage({ params }) {
       </section>
 
       {/* Featured Cover Image */}
-      {post.cover_image_url && (
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 mb-12">
-          <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
-            <img
-              src={post.cover_image_url}
-              alt={post.title}
-              className="w-full h-full object-cover"
-            />
-          </div>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 mb-12">
+        <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-gray-100 bg-slate-900">
+          <img
+            src={post.cover_image_url || "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"}
+            alt={post.title}
+            className="w-full h-full object-cover"
+          />
         </div>
-      )}
+      </div>
 
       {/* Main Content Body */}
       <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

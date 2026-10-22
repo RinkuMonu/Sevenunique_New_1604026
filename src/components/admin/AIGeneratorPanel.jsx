@@ -176,47 +176,47 @@ export function AIGeneratorPanel({ onGenerated, disabled }) {
   };
 
   return (
-    <div className="rounded-xl border border-purple-900/60 bg-gray-900/90 p-5 sm:p-6 space-y-6 shadow-xl relative overflow-hidden">
+    <div className="rounded-2xl border border-orange-200/80 bg-gradient-to-br from-white via-orange-50/20 to-slate-50 p-5 sm:p-6 space-y-6 shadow-xs relative overflow-hidden">
       {/* Background Accent */}
-      <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-purple-600/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-[#f4622a]/5 rounded-full blur-3xl pointer-events-none" />
 
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-gray-800 pb-4">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 pb-4">
         <div className="flex items-center gap-2.5">
-          <div className="p-2 rounded-xl bg-purple-600/20 text-purple-400 border border-purple-500/30">
-            <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
+          <div className="p-2 rounded-xl bg-[#f4622a]/10 text-[#f4622a] border border-[#f4622a]/20">
+            <Sparkles className="w-5 h-5 text-[#f4622a] animate-pulse" />
           </div>
           <div>
-            <h3 className="text-base font-bold text-white flex items-center gap-2">
+            <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
               AI Editorial Assistant
-              <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-purple-950 text-purple-300 border border-purple-800">
+              <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-[#f4622a]/10 text-[#f4622a] border border-[#f4622a]/20 font-semibold">
                 Groq Powered
               </span>
             </h3>
-            <p className="text-xs text-gray-400 mt-0.5">
+            <p className="text-xs text-slate-500 mt-0.5">
               Generate fully formatted, SEO-optimized blog drafts in seconds.
             </p>
           </div>
         </div>
 
         {/* Model Info Pill */}
-        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-gray-800/80 border border-gray-700 text-xs font-mono text-gray-300 self-start sm:self-auto">
-          <Cpu className="w-3.5 h-3.5 text-purple-400" />
+        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 border border-slate-200 text-xs font-mono text-slate-700 self-start sm:self-auto font-medium">
+          <Cpu className="w-3.5 h-3.5 text-[#f4622a]" />
           <span>{selectedModelInfo.name}</span>
         </div>
       </div>
 
       {/* Error / Rate Limit Alert */}
       {errorBanner && (
-        <div className="p-3.5 rounded-xl bg-rose-950/60 border border-rose-800/80 text-rose-300 text-xs flex items-start gap-3">
-          <AlertCircle className="w-4 h-4 shrink-0 mt-0.5 text-rose-400" />
+        <div className="p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs flex items-start gap-3">
+          <AlertCircle className="w-4 h-4 shrink-0 mt-0.5 text-rose-500" />
           <div className="flex-1 space-y-2">
             <p className="leading-relaxed">{errorBanner}</p>
             {isRateLimited && selectedModel !== FALLBACK_MODEL_ID && (
               <button
                 type="button"
                 onClick={handleSwitchToFallback}
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold bg-rose-900/80 hover:bg-rose-800 text-rose-100 transition-colors cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold bg-rose-600 hover:bg-rose-700 text-white transition-colors cursor-pointer"
               >
                 Switch to {AVAILABLE_MODELS.find((m) => m.id === FALLBACK_MODEL_ID)?.name} (Faster)
               </button>
@@ -227,17 +227,17 @@ export function AIGeneratorPanel({ onGenerated, disabled }) {
 
       {/* Progress Bar (Visible while generating) */}
       {isGenerating && (
-        <div className="space-y-2 p-3.5 rounded-xl bg-purple-950/40 border border-purple-800/50">
-          <div className="flex items-center justify-between text-xs text-purple-300">
-            <span className="flex items-center gap-1.5 font-medium">
-              <Loader2 className="w-3.5 h-3.5 animate-spin text-purple-400" />
+        <div className="space-y-2 p-3.5 rounded-xl bg-orange-50 border border-orange-200">
+          <div className="flex items-center justify-between text-xs text-[#f4622a]">
+            <span className="flex items-center gap-1.5 font-semibold">
+              <Loader2 className="w-3.5 h-3.5 animate-spin text-[#f4622a]" />
               {generationSteps[currentStepIndex]?.label || "Generating draft..."}
             </span>
-            <span className="font-mono text-xs font-semibold">{progressPercent}%</span>
+            <span className="font-mono text-xs font-bold">{progressPercent}%</span>
           </div>
-          <div className="w-full h-1.5 bg-gray-800 rounded-full overflow-hidden">
+          <div className="w-full h-1.5 bg-orange-200 rounded-full overflow-hidden">
             <div
-              className="h-full bg-linear-to-r from-purple-500 to-indigo-500 transition-all duration-500 rounded-full"
+              className="h-full bg-[#f4622a] transition-all duration-500 rounded-full"
               style={{ width: `${progressPercent}%` }}
             />
           </div>
@@ -248,8 +248,8 @@ export function AIGeneratorPanel({ onGenerated, disabled }) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Model Selector Cards */}
         <div className="md:col-span-2 space-y-2">
-          <label className="block text-xs font-semibold text-gray-300 flex items-center gap-1.5">
-            <Sliders className="w-3.5 h-3.5 text-purple-400" />
+          <label className="block text-xs font-bold text-slate-700 flex items-center gap-1.5">
+            <Sliders className="w-3.5 h-3.5 text-[#f4622a]" />
             Select Groq AI Model
           </label>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
@@ -263,32 +263,32 @@ export function AIGeneratorPanel({ onGenerated, disabled }) {
                   disabled={disabled || isGenerating}
                   className={`text-left p-3 rounded-xl border transition-all cursor-pointer ${
                     isSelected
-                      ? "border-purple-500 bg-purple-950/40 ring-1 ring-purple-500 shadow-md"
-                      : "border-gray-800 bg-gray-800/40 hover:bg-gray-800/80 hover:border-gray-700"
+                      ? "border-[#f4622a] bg-orange-50/50 ring-1 ring-[#f4622a] shadow-xs"
+                      : "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50"
                   } ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
                 >
                   <div className="flex items-center justify-between gap-1 mb-1">
-                    <span className="text-xs font-bold text-white truncate">
+                    <span className="text-xs font-bold text-slate-900 truncate">
                       {model.name}
                     </span>
                     <span
                       className={`text-[9px] uppercase font-mono px-1.5 py-0.5 rounded font-semibold shrink-0 ${
                         model.id === "openai/gpt-oss-120b"
-                          ? "bg-purple-950/90 text-purple-300 border border-purple-800/60"
+                          ? "bg-purple-100 text-purple-700 border border-purple-200"
                           : model.id === "openai/gpt-oss-20b"
-                          ? "bg-emerald-950/90 text-emerald-300 border border-emerald-800/60"
-                          : "bg-gray-800 text-purple-300 border border-gray-700"
+                          ? "bg-emerald-100 text-emerald-700 border border-emerald-200"
+                          : "bg-slate-100 text-slate-700 border border-slate-200"
                       }`}
                     >
                       {model.badge}
                     </span>
                   </div>
-                  <p className="text-[11px] text-gray-400 leading-snug line-clamp-2 mb-2">
+                  <p className="text-[11px] text-slate-500 leading-snug line-clamp-2 mb-2">
                     {model.description}
                   </p>
-                  <div className="flex items-center justify-between text-[10px] font-mono text-gray-400 pt-1.5 border-t border-gray-800/80">
+                  <div className="flex items-center justify-between text-[10px] font-mono text-slate-500 pt-1.5 border-t border-slate-100">
                     <span>Context: {model.contextWindow}</span>
-                    <span className={isSelected ? "text-yellow-400 font-semibold" : "text-gray-400"}>
+                    <span className={isSelected ? "text-[#f4622a] font-bold" : "text-slate-500"}>
                       ⚡ {model.speed}
                     </span>
                   </div>
@@ -300,8 +300,8 @@ export function AIGeneratorPanel({ onGenerated, disabled }) {
 
         {/* Topic Input & Quick Suggestions */}
         <div className="md:col-span-2 space-y-1.5">
-          <label className="block text-xs font-semibold text-gray-300">
-            Target Topic or Title <span className="text-rose-400">*</span>
+          <label className="block text-xs font-bold text-slate-700">
+            Target Topic or Title <span className="text-rose-500">*</span>
           </label>
           <input
             type="text"
@@ -309,12 +309,12 @@ export function AIGeneratorPanel({ onGenerated, disabled }) {
             value={topic}
             onChange={(e) => setTopic(e.target.value)}
             disabled={disabled || isGenerating}
-            className="w-full px-3.5 py-2.5 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 text-xs sm:text-sm focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all disabled:opacity-50"
+            className="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-900 placeholder-slate-400 text-xs sm:text-sm focus:outline-none focus:border-[#f4622a] focus:ring-1 focus:ring-[#f4622a] transition-all disabled:opacity-50 shadow-xs"
           />
 
           {/* Quick Prompts */}
           <div className="pt-1">
-            <span className="text-[11px] text-gray-400 mr-2">Try inspiration:</span>
+            <span className="text-[11px] text-slate-500 mr-2 font-medium">Try inspiration:</span>
             <div className="inline-flex flex-wrap gap-1.5 mt-1">
               {SUGGESTED_TOPICS.map((suggested) => (
                 <button
@@ -322,7 +322,7 @@ export function AIGeneratorPanel({ onGenerated, disabled }) {
                   type="button"
                   onClick={() => setTopic(suggested)}
                   disabled={disabled || isGenerating}
-                  className="text-[11px] px-2 py-1 rounded bg-gray-800/80 hover:bg-gray-700 text-purple-300 hover:text-white border border-gray-700 transition-colors truncate max-w-[280px] sm:max-w-none cursor-pointer disabled:opacity-50"
+                  className="text-[11px] px-2.5 py-1 rounded-lg bg-white hover:bg-orange-50 text-slate-700 hover:text-[#f4622a] border border-slate-200 hover:border-[#f4622a]/40 transition-colors truncate max-w-[280px] sm:max-w-none cursor-pointer disabled:opacity-50 shadow-xs font-medium"
                 >
                   {suggested}
                 </button>
@@ -333,14 +333,14 @@ export function AIGeneratorPanel({ onGenerated, disabled }) {
 
         {/* Tone Selector */}
         <div>
-          <label className="block text-xs font-semibold text-gray-300 mb-1.5">
+          <label className="block text-xs font-bold text-slate-700 mb-1.5">
             Editorial Tone
           </label>
           <select
             value={tone}
             onChange={(e) => setTone(e.target.value)}
             disabled={disabled || isGenerating}
-            className="w-full px-3 py-2 rounded-lg bg-gray-800 border border-gray-700 text-white text-xs sm:text-sm focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all disabled:opacity-50 cursor-pointer"
+            className="w-full px-3 py-2 rounded-xl bg-white border border-slate-200 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-[#f4622a] focus:ring-1 focus:ring-[#f4622a] transition-all disabled:opacity-50 cursor-pointer shadow-xs"
           >
             <option value="Professional & Authoritative">
               Professional &amp; Authoritative (Default)
@@ -359,7 +359,7 @@ export function AIGeneratorPanel({ onGenerated, disabled }) {
 
         {/* Word Count */}
         <div>
-          <label className="block text-xs font-semibold text-gray-300 mb-1.5">
+          <label className="block text-xs font-bold text-slate-700 mb-1.5">
             Target Article Length
           </label>
           <div className="flex items-center gap-2">
@@ -369,10 +369,10 @@ export function AIGeneratorPanel({ onGenerated, disabled }) {
                 type="button"
                 onClick={() => setWordCount(count)}
                 disabled={disabled || isGenerating}
-                className={`flex-1 py-2 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                className={`flex-1 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
                   wordCount === count
-                    ? "bg-purple-600 text-white"
-                    : "bg-gray-800 text-gray-400 hover:text-white border border-gray-700 hover:bg-gray-700"
+                    ? "bg-[#f4622a] text-white shadow-xs"
+                    : "bg-slate-100 text-slate-600 hover:text-slate-900 border border-slate-200 hover:bg-slate-200"
                 }`}
               >
                 ~{count} words
@@ -383,7 +383,7 @@ export function AIGeneratorPanel({ onGenerated, disabled }) {
 
         {/* Keywords */}
         <div>
-          <label className="block text-xs font-semibold text-gray-300 mb-1.5">
+          <label className="block text-xs font-bold text-slate-700 mb-1.5">
             Target SEO Keywords (Comma Separated)
           </label>
           <input
@@ -392,13 +392,13 @@ export function AIGeneratorPanel({ onGenerated, disabled }) {
             value={keywords}
             onChange={(e) => setKeywords(e.target.value)}
             disabled={disabled || isGenerating}
-            className="w-full px-3 py-2 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 text-xs sm:text-sm focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all disabled:opacity-50"
+            className="w-full px-3 py-2 rounded-xl bg-white border border-slate-200 text-slate-900 placeholder-slate-400 text-xs sm:text-sm focus:outline-none focus:border-[#f4622a] focus:ring-1 focus:ring-[#f4622a] transition-all disabled:opacity-50 shadow-xs"
           />
         </div>
 
         {/* Audience */}
         <div>
-          <label className="block text-xs font-semibold text-gray-300 mb-1.5">
+          <label className="block text-xs font-bold text-slate-700 mb-1.5">
             Target Audience Persona
           </label>
           <input
@@ -407,15 +407,15 @@ export function AIGeneratorPanel({ onGenerated, disabled }) {
             value={audience}
             onChange={(e) => setAudience(e.target.value)}
             disabled={disabled || isGenerating}
-            className="w-full px-3 py-2 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 text-xs sm:text-sm focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all disabled:opacity-50"
+            className="w-full px-3 py-2 rounded-xl bg-white border border-slate-200 text-slate-900 placeholder-slate-400 text-xs sm:text-sm focus:outline-none focus:border-[#f4622a] focus:ring-1 focus:ring-[#f4622a] transition-all disabled:opacity-50 shadow-xs"
           />
         </div>
       </div>
 
       {/* Action Trigger */}
-      <div className="pt-3 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-gray-800">
-        <p className="text-[11px] text-gray-400 text-center sm:text-left">
-          Using <span className="text-yellow-400 font-semibold">{selectedModelInfo.name}</span>. Generates title, slug, meta description, outline, content &amp; tags.
+      <div className="pt-3 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-slate-200">
+        <p className="text-[11px] text-slate-500 text-center sm:text-left">
+          Using <span className="text-[#f4622a] font-bold">{selectedModelInfo.name}</span>. Generates title, slug, meta description, outline, content &amp; tags.
         </p>
 
         <div className="flex items-center gap-3 w-full sm:w-auto">
@@ -424,12 +424,12 @@ export function AIGeneratorPanel({ onGenerated, disabled }) {
               type="button"
               onClick={handleGenerate}
               disabled={disabled || isGenerating}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-semibold bg-gray-800 hover:bg-gray-700 text-gray-200 hover:text-white border border-gray-700 transition-all text-xs cursor-pointer disabled:opacity-50"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-900 border border-slate-200 transition-all text-xs cursor-pointer disabled:opacity-50"
             >
               {isGenerating ? (
                 <Loader2 className="w-3.5 h-3.5 animate-spin" />
               ) : (
-                <RefreshCw className="w-3.5 h-3.5 text-yellow-400" />
+                <RefreshCw className="w-3.5 h-3.5 text-[#f4622a]" />
               )}
               Regenerate Article
             </button>
@@ -438,7 +438,7 @@ export function AIGeneratorPanel({ onGenerated, disabled }) {
               type="button"
               onClick={handleGenerate}
               disabled={disabled || isGenerating}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2 rounded-lg font-semibold bg-purple-600 hover:bg-purple-500 text-white transition-colors text-xs cursor-pointer disabled:opacity-50"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-semibold bg-[#f4622a] hover:bg-[#e0531e] text-white transition-colors text-xs cursor-pointer disabled:opacity-50 shadow-md shadow-[#f4622a]/20"
             >
               {isGenerating ? (
                 <>

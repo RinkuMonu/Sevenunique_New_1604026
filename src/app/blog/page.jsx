@@ -67,6 +67,8 @@ const fallbackArticles = [
   },
 ];
 
+const DEFAULT_COVER = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80";
+
 export default async function BlogIndexPage() {
   let posts = [];
 
@@ -78,15 +80,30 @@ export default async function BlogIndexPage() {
       .eq("status", "published")
       .order("published_at", { ascending: false });
 
+    let supabasePosts = [];
     if (!error && data && data.length > 0) {
-      posts = data;
-    } else {
-      posts = fallbackArticles;
+      supabasePosts = data;
     }
+
+    const existingSlugs = new Set(supabasePosts.map((p) => p.slug));
+    const combined = [
+      ...supabasePosts,
+      ...fallbackArticles.filter((f) => !existingSlugs.has(f.slug)),
+    ];
+    posts = combined;
   } catch (err) {
-    console.warn("Could not fetch posts from Supabase (using fallback):", err.message);
+    console.warn("Could not fetch posts from Supabase (using fallback):", err?.message);
     posts = fallbackArticles;
   }
+
+  // Ensure every post has a guaranteed cover image
+  posts = posts.map((p, idx) => ({
+    ...p,
+    cover_image_url:
+      p.cover_image_url ||
+      fallbackArticles[idx % fallbackArticles.length]?.cover_image_url ||
+      DEFAULT_COVER,
+  }));
 
   const featuredPost = posts[0];
   const remainingPosts = posts.slice(1);
@@ -152,16 +169,14 @@ export default async function BlogIndexPage() {
                 </div>
               </div>
 
-              {featuredPost.cover_image_url && (
-                <div className="h-full min-h-[300px] lg:min-h-[420px] relative overflow-hidden">
-                  <img
-                    src={featuredPost.cover_image_url}
-                    alt={featuredPost.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent lg:hidden" />
-                </div>
-              )}
+              <div className="h-full min-h-[300px] lg:min-h-[420px] relative overflow-hidden bg-slate-900">
+                <img
+                  src={featuredPost.cover_image_url}
+                  alt={featuredPost.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent lg:hidden" />
+              </div>
             </div>
           </div>
         )}
@@ -173,22 +188,16 @@ export default async function BlogIndexPage() {
               key={post.id}
               className="flex flex-col bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl hover:border-gray-300 transition duration-300 group"
             >
-              {post.cover_image_url ? (
-                <Link
-                  href={`/blog/${post.slug}`}
-                  className="aspect-video relative overflow-hidden bg-gray-100"
-                >
-                  <img
-                    src={post.cover_image_url}
-                    alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                  />
-                </Link>
-              ) : (
-                <div className="aspect-video bg-gradient-to-br from-orange-50 to-orange-100/60 flex items-center justify-center p-6 text-[#f4622a]/40">
-                  <BookOpen className="w-12 h-12" />
-                </div>
-              )}
+              <Link
+                href={`/blog/${post.slug}`}
+                className="aspect-video relative overflow-hidden bg-gray-100"
+              >
+                <img
+                  src={post.cover_image_url}
+                  alt={post.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+              </Link>
 
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>

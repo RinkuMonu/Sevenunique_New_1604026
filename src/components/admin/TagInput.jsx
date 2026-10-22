@@ -34,17 +34,17 @@ export function TagInput({
 
   return (
     <div className="space-y-1.5">
-      <div className="flex flex-wrap items-center gap-1.5 p-2 rounded-lg bg-gray-800 border border-gray-700 min-h-[42px] focus-within:border-purple-500 focus-within:ring-1 focus-within:ring-purple-500 transition-all">
+      <div className="flex flex-wrap items-center gap-1.5 p-2 rounded-xl bg-slate-50 border border-slate-200 min-h-[42px] focus-within:border-[#f4622a] focus-within:ring-1 focus-within:ring-[#f4622a] transition-all">
         {tags.map((tag) => (
           <span
             key={tag}
-            className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-xs font-medium bg-purple-950/80 border border-purple-800/60 text-purple-300"
+            className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg text-xs font-semibold bg-[#f4622a]/10 border border-[#f4622a]/20 text-[#f4622a]"
           >
             #{tag}
             <button
               type="button"
               onClick={() => removeTag(tag)}
-              className="hover:text-rose-400 p-0.5 rounded transition-colors cursor-pointer"
+              className="hover:text-rose-600 p-0.5 rounded transition-colors cursor-pointer"
             >
               <X className="w-3 h-3" />
             </button>
@@ -57,10 +57,10 @@ export function TagInput({
           onKeyDown={handleKeyDown}
           onBlur={() => addTag(inputValue)}
           placeholder={tags.length === 0 ? placeholder : ""}
-          className="flex-1 bg-transparent text-xs sm:text-sm text-white placeholder-gray-500 focus:outline-none min-w-[120px]"
+          className="flex-1 bg-transparent text-xs sm:text-sm text-slate-900 placeholder-slate-400 focus:outline-none min-w-[120px]"
         />
       </div>
-      <p className="text-[11px] text-gray-400">
+      <p className="text-[11px] text-slate-500">
         Separate tags with commas or press Enter.
       </p>
     </div>

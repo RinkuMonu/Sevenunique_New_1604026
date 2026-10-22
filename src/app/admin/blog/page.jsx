@@ -131,9 +131,9 @@ export default function AdminBlogPage() {
   const aiCount = posts.filter((p) => p.source === "ai" || p.source === "ai-edited").length;
 
   return (
-    <div className="min-h-screen bg-[#0d111a] text-gray-200">
+    <div className="min-h-screen bg-slate-50 text-slate-800">
       {/* Top Navbar */}
-      <header className="border-b border-gray-800/80 bg-[#141a26]/90 backdrop-blur sticky top-0 z-30 px-6 py-4">
+      <header className="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-30 px-6 py-3.5 shadow-xs">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-4">
             <Link href="/">
@@ -146,8 +146,8 @@ export default function AdminBlogPage() {
                 style={{ height: "auto" }}
               />
             </Link>
-            <div className="hidden sm:block h-5 w-[1px] bg-gray-700" />
-            <span className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#f4622a]/15 text-[#f4622a] text-xs font-semibold">
+            <div className="hidden sm:block h-5 w-[1px] bg-slate-200" />
+            <span className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#f4622a]/10 text-[#f4622a] text-xs font-semibold">
               <Sparkles className="w-3 h-3" />
               Blog Studio
             </span>
@@ -157,7 +157,7 @@ export default function AdminBlogPage() {
             <Link
               href="/blog"
               target="_blank"
-              className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-gray-700 text-xs text-gray-300 hover:text-white hover:bg-gray-800 transition"
+              className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 text-xs font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition"
             >
               <ExternalLink className="w-3.5 h-3.5" />
               Live Blog
@@ -165,7 +165,7 @@ export default function AdminBlogPage() {
 
             <Link
               href="/admin/blog/new"
-              className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#f4622a] hover:bg-[#e0531e] text-white text-xs font-semibold shadow-md shadow-[#f4622a]/20 transition"
+              className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#f4622a] hover:bg-[#e0531e] text-white text-xs font-semibold shadow-sm transition"
             >
               <Plus className="w-4 h-4" />
               Write New Post
@@ -174,7 +174,7 @@ export default function AdminBlogPage() {
             <button
               onClick={handleLogout}
               title="Logout"
-              className="p-2 text-gray-400 hover:text-red-400 hover:bg-gray-800/60 rounded-lg transition"
+              className="p-2 text-slate-400 hover:text-red-500 hover:bg-slate-100 rounded-lg transition cursor-pointer"
             >
               <LogOut className="w-4 h-4" />
             </button>
@@ -186,34 +186,34 @@ export default function AdminBlogPage() {
       <main className="max-w-7xl mx-auto px-6 py-8">
         {/* KPI Metric Cards */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-          <div className="bg-[#141a26] border border-gray-800/80 rounded-xl p-4">
-            <p className="text-xs text-gray-400 font-medium uppercase tracking-wider">Total Articles</p>
-            <p className="text-2xl font-bold text-white mt-1">{totalCount}</p>
+          <div className="bg-white border border-slate-200/80 rounded-2xl p-5 shadow-xs">
+            <p className="text-xs text-slate-500 font-semibold uppercase tracking-wider">Total Articles</p>
+            <p className="text-3xl font-extrabold text-slate-900 mt-1">{totalCount}</p>
           </div>
-          <div className="bg-[#141a26] border border-gray-800/80 rounded-xl p-4">
-            <p className="text-xs text-emerald-400 font-medium uppercase tracking-wider">Published</p>
-            <p className="text-2xl font-bold text-white mt-1">{publishedCount}</p>
+          <div className="bg-white border border-slate-200/80 rounded-2xl p-5 shadow-xs">
+            <p className="text-xs text-emerald-600 font-semibold uppercase tracking-wider">Published</p>
+            <p className="text-3xl font-extrabold text-emerald-600 mt-1">{publishedCount}</p>
           </div>
-          <div className="bg-[#141a26] border border-gray-800/80 rounded-xl p-4">
-            <p className="text-xs text-amber-400 font-medium uppercase tracking-wider">Drafts</p>
-            <p className="text-2xl font-bold text-white mt-1">{draftCount}</p>
+          <div className="bg-white border border-slate-200/80 rounded-2xl p-5 shadow-xs">
+            <p className="text-xs text-amber-600 font-semibold uppercase tracking-wider">Drafts</p>
+            <p className="text-3xl font-extrabold text-amber-600 mt-1">{draftCount}</p>
           </div>
-          <div className="bg-[#141a26] border border-gray-800/80 rounded-xl p-4">
-            <p className="text-xs text-purple-400 font-medium uppercase tracking-wider">AI Generated</p>
-            <p className="text-2xl font-bold text-white mt-1">{aiCount}</p>
+          <div className="bg-white border border-slate-200/80 rounded-2xl p-5 shadow-xs">
+            <p className="text-xs text-purple-600 font-semibold uppercase tracking-wider">AI Generated</p>
+            <p className="text-3xl font-extrabold text-purple-600 mt-1">{aiCount}</p>
           </div>
         </div>
 
         {/* Error Banner */}
         {error && (
-          <div className="mb-6 p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs flex items-center justify-between">
+          <div className="mb-6 p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <AlertCircle className="w-4 h-4 shrink-0" />
+              <AlertCircle className="w-4 h-4 shrink-0 text-amber-600" />
               <span>{error} (Ensure Supabase credentials are configured in .env.local)</span>
             </div>
             <button
               onClick={fetchPosts}
-              className="underline text-white font-medium hover:text-amber-200"
+              className="underline text-amber-900 font-semibold hover:text-amber-700 cursor-pointer"
             >
               Retry
             </button>
@@ -222,15 +222,15 @@ export default function AdminBlogPage() {
 
         {/* Filters and Search Bar */}
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 mb-6">
-          <div className="flex items-center gap-1.5 p-1 bg-[#141a26] border border-gray-800 rounded-xl overflow-x-auto">
+          <div className="flex items-center gap-1.5 p-1 bg-white border border-slate-200 rounded-xl shadow-xs overflow-x-auto">
             {["all", "published", "draft", "ai"].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setStatusFilter(tab)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-medium capitalize transition cursor-pointer ${
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold capitalize transition cursor-pointer ${
                   statusFilter === tab
-                    ? "bg-[#f4622a] text-white shadow-sm"
-                    : "text-gray-400 hover:text-white"
+                    ? "bg-[#f4622a] text-white shadow-xs"
+                    : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
                 }`}
               >
                 {tab === "ai" ? "AI Sourced" : tab}
@@ -240,19 +240,19 @@ export default function AdminBlogPage() {
 
           <div className="flex items-center gap-2">
             <div className="relative flex-1 sm:w-64">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
               <input
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search articles..."
-                className="w-full bg-[#141a26] border border-gray-800 rounded-xl pl-9 pr-4 py-2 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-[#f4622a] transition"
+                className="w-full bg-white border border-slate-200 rounded-xl pl-9 pr-4 py-2 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#f4622a] focus:ring-1 focus:ring-[#f4622a] transition shadow-xs"
               />
             </div>
             <button
               onClick={fetchPosts}
               title="Refresh"
-              className="p-2 rounded-xl bg-[#141a26] border border-gray-800 text-gray-400 hover:text-white hover:bg-gray-800 transition"
+              className="p-2 rounded-xl bg-white border border-slate-200 text-slate-500 hover:text-slate-900 hover:bg-slate-50 transition cursor-pointer shadow-xs"
             >
               <RefreshCw className={`w-4 h-4 ${loading ? "animate-spin" : ""}`} />
             </button>
@@ -263,30 +263,30 @@ export default function AdminBlogPage() {
         {loading && posts.length === 0 ? (
           <div className="py-20 text-center">
             <div className="w-8 h-8 border-2 border-[#f4622a]/30 border-t-[#f4622a] rounded-full animate-spin mx-auto mb-3" />
-            <p className="text-sm text-gray-400">Loading blog articles...</p>
+            <p className="text-sm text-slate-500">Loading blog articles...</p>
           </div>
         ) : filteredPosts.length === 0 ? (
-          <div className="py-16 text-center border border-dashed border-gray-800 rounded-2xl bg-[#141a26]/40 p-8">
-            <FileText className="w-10 h-10 text-gray-600 mx-auto mb-3" />
-            <h3 className="text-base font-semibold text-white">No articles found</h3>
-            <p className="text-xs text-gray-400 mt-1 max-w-sm mx-auto">
+          <div className="py-16 text-center border border-dashed border-slate-300 rounded-2xl bg-white p-8 shadow-xs">
+            <FileText className="w-10 h-10 text-slate-400 mx-auto mb-3" />
+            <h3 className="text-base font-semibold text-slate-900">No articles found</h3>
+            <p className="text-xs text-slate-500 mt-1 max-w-sm mx-auto">
               {search
                 ? `No posts match your search query "${search}".`
                 : "Get started by generating your first article using our Groq AI Engine."}
             </p>
             <Link
               href="/admin/blog/new"
-              className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-xl bg-[#f4622a] text-white text-xs font-semibold shadow-md shadow-[#f4622a]/20"
+              className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-xl bg-[#f4622a] text-white text-xs font-semibold shadow-sm hover:bg-[#e0531e] transition"
             >
               <Sparkles className="w-3.5 h-3.5" />
               Create Article with AI
             </Link>
           </div>
         ) : (
-          <div className="bg-[#141a26] border border-gray-800/80 rounded-2xl overflow-hidden shadow-xl">
+          <div className="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-xs">
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs">
-                <thead className="bg-[#0f141f] text-gray-400 uppercase tracking-wider text-[11px] border-b border-gray-800">
+                <thead className="bg-slate-50/80 text-slate-500 uppercase tracking-wider text-[11px] font-semibold border-b border-slate-200">
                   <tr>
                     <th className="py-3 px-4">Title & Details</th>
                     <th className="py-3 px-4">Status</th>
@@ -295,21 +295,21 @@ export default function AdminBlogPage() {
                     <th className="py-3 px-4 text-right">Actions</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-800/60">
+                <tbody className="divide-y divide-slate-100">
                   {filteredPosts.map((post) => (
                     <tr
                       key={post.id}
-                      className="hover:bg-gray-800/25 transition group"
+                      className="hover:bg-slate-50/80 transition group"
                     >
                       <td className="py-3.5 px-4">
                         <div className="max-w-md">
                           <Link
                             href={`/admin/blog/${post.id}/edit`}
-                            className="font-medium text-white hover:text-[#f4622a] transition line-clamp-1 text-sm"
+                            className="font-semibold text-slate-900 hover:text-[#f4622a] transition line-clamp-1 text-sm"
                           >
                             {post.title}
                           </Link>
-                          <p className="text-gray-500 font-mono text-[11px] mt-0.5">
+                          <p className="text-slate-400 font-mono text-[11px] mt-0.5">
                             /{post.slug}
                           </p>
                           {post.tags && post.tags.length > 0 && (
@@ -317,7 +317,7 @@ export default function AdminBlogPage() {
                               {post.tags.slice(0, 3).map((tag, i) => (
                                 <span
                                   key={i}
-                                  className="px-1.5 py-0.5 rounded bg-gray-800 text-gray-400 text-[10px]"
+                                  className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[10px] font-medium"
                                 >
                                   {tag}
                                 </span>
@@ -332,18 +332,18 @@ export default function AdminBlogPage() {
                           onClick={() => handleToggleStatus(post)}
                           className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold transition cursor-pointer ${
                             post.status === "published"
-                              ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/20"
-                              : "bg-amber-500/10 text-amber-400 border border-amber-500/30 hover:bg-amber-500/20"
+                              ? "bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100"
+                              : "bg-amber-50 text-amber-700 border border-amber-200 hover:bg-amber-100"
                           }`}
                         >
                           {post.status === "published" ? (
                             <>
-                              <CheckCircle className="w-3 h-3" />
+                              <CheckCircle className="w-3 h-3 text-emerald-600" />
                               Live
                             </>
                           ) : (
                             <>
-                              <Clock className="w-3 h-3" />
+                              <Clock className="w-3 h-3 text-amber-600" />
                               Draft
                             </>
                           )}
@@ -352,18 +352,18 @@ export default function AdminBlogPage() {
 
                       <td className="py-3.5 px-4 whitespace-nowrap">
                         {post.source === "ai" || post.source === "ai-edited" ? (
-                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-purple-500/15 text-purple-300 border border-purple-500/30 text-[10px] font-semibold">
-                            <Sparkles className="w-3 h-3 text-yellow-400" />
+                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-200 text-[10px] font-semibold">
+                            <Sparkles className="w-3 h-3 text-yellow-500" />
                             {post.source === "ai-edited" ? "AI + Edited" : "AI"}
                           </span>
                         ) : (
-                          <span className="px-2 py-0.5 rounded bg-gray-800 text-gray-400 text-[10px]">
+                          <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 text-[10px] font-medium">
                             Manual
                           </span>
                         )}
                       </td>
 
-                      <td className="py-3.5 px-4 whitespace-nowrap text-gray-400 font-mono text-[11px]">
+                      <td className="py-3.5 px-4 whitespace-nowrap text-slate-500 font-mono text-[11px]">
                         {post.created_at ? new Date(post.created_at).toLocaleDateString() : "—"}
                       </td>
 
@@ -374,7 +374,7 @@ export default function AdminBlogPage() {
                               href={`/blog/${post.slug}`}
                               target="_blank"
                               title="View Live Article"
-                              className="p-1.5 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800 transition"
+                              className="p-1.5 rounded-lg text-slate-400 hover:text-slate-800 hover:bg-slate-100 transition"
                             >
                               <ExternalLink className="w-4 h-4" />
                             </Link>
@@ -382,7 +382,7 @@ export default function AdminBlogPage() {
                           <Link
                             href={`/admin/blog/${post.id}/edit`}
                             title="Edit Article"
-                            className="p-1.5 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800 transition"
+                            className="p-1.5 rounded-lg text-slate-400 hover:text-[#f4622a] hover:bg-orange-50 transition"
                           >
                             <Edit3 className="w-4 h-4" />
                           </Link>
@@ -390,7 +390,7 @@ export default function AdminBlogPage() {
                             onClick={() => handleDelete(post.id, post.title)}
                             disabled={deletingId === post.id}
                             title="Delete Article"
-                            className="p-1.5 rounded-lg text-gray-400 hover:text-red-400 hover:bg-red-500/10 transition cursor-pointer"
+                            className="p-1.5 rounded-lg text-slate-400 hover:text-red-600 hover:bg-red-50 transition cursor-pointer"
                           >
                             <Trash2 className="w-4 h-4" />
                           </button>

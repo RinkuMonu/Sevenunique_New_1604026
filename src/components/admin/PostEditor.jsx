@@ -173,6 +173,23 @@ export function PostEditor({ initialData = null }) {
     if (output.suggestedTags && Array.isArray(output.suggestedTags)) {
       setTags(output.suggestedTags);
     }
+
+    // Auto-assign a high-quality cover image if none is currently selected
+    if (!coverImageUrl) {
+      const titleLower = (output.title || "").toLowerCase();
+      let autoCover = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"; // Analytics & tech
+      if (titleLower.includes("pay") || titleLower.includes("bank") || titleLower.includes("fintech") || titleLower.includes("upi")) {
+        autoCover = "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80";
+      } else if (titleLower.includes("ai") || titleLower.includes("agent") || titleLower.includes("model") || titleLower.includes("intelligence")) {
+        autoCover = "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80";
+      } else if (titleLower.includes("security") || titleLower.includes("trust") || titleLower.includes("kyc")) {
+        autoCover = "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80";
+      } else if (titleLower.includes("cloud") || titleLower.includes("devops") || titleLower.includes("kubernetes")) {
+        autoCover = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80";
+      }
+      setCoverImageUrl(autoCover);
+    }
+
     setSource("ai");
     setStatus("draft");
     setIsAiGenerated(true);
@@ -228,7 +245,7 @@ export function PostEditor({ initialData = null }) {
         slug: slug.trim(),
         content,
         meta_description: metaDescription.trim(),
-        cover_image_url: coverImageUrl,
+        cover_image_url: coverImageUrl || "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
         author: author.trim() || "SevenUnique Team",
         tags,
         status: targetStatus,
@@ -319,7 +336,7 @@ export function PostEditor({ initialData = null }) {
   };
 
   return (
-    <div className="space-y-6 sm:space-y-8 max-w-5xl mx-auto px-4 py-8 pb-24 sm:pb-12 text-gray-100">
+    <div className="space-y-6 sm:space-y-8 max-w-5xl mx-auto px-4 py-8 pb-24 sm:pb-12 text-slate-900">
       {/* Delete Confirmation Modal */}
       <ConfirmDialog
         isOpen={isConfirmDeleteOpen}
@@ -337,11 +354,11 @@ export function PostEditor({ initialData = null }) {
 
       {/* Draft Recovery Banner */}
       {showDraftBanner && (
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-lg border border-blue-700/50 bg-blue-950/40 px-4 py-3">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-xl border border-blue-200 bg-blue-50 px-4 py-3 shadow-xs">
           <div className="flex items-center gap-2.5">
-            <Info className="w-4 h-4 text-blue-400 shrink-0" />
-            <p className="text-xs text-blue-200">
-              <span className="font-bold text-white">Unsaved draft recovered.</span>{" "}
+            <Info className="w-4 h-4 text-blue-600 shrink-0" />
+            <p className="text-xs text-blue-900">
+              <span className="font-bold text-blue-950">Unsaved draft recovered.</span>{" "}
               You have a locally autosaved version newer than the last database save.
             </p>
           </div>
@@ -364,7 +381,7 @@ export function PostEditor({ initialData = null }) {
                 }
                 setShowDraftBanner(false);
               }}
-              className="px-3 py-1.5 rounded-md text-xs font-semibold bg-blue-600 hover:bg-blue-500 text-white transition-colors cursor-pointer"
+              className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-blue-600 hover:bg-blue-700 text-white transition-colors cursor-pointer"
             >
               Restore
             </button>
@@ -374,7 +391,7 @@ export function PostEditor({ initialData = null }) {
                 localStorage.removeItem(draftKey);
                 setShowDraftBanner(false);
               }}
-              className="px-3 py-1.5 rounded-md text-xs font-medium border border-gray-700 text-gray-400 hover:bg-gray-800 transition-colors cursor-pointer"
+              className="px-3 py-1.5 rounded-lg text-xs font-medium border border-slate-200 text-slate-600 hover:bg-slate-100 transition-colors cursor-pointer"
             >
               Dismiss
             </button>
@@ -385,7 +402,7 @@ export function PostEditor({ initialData = null }) {
       {/* Unsaved changes indicator */}
       {isDirty && (
         <div className="flex justify-end">
-          <span className="text-[11px] font-semibold text-yellow-400 bg-yellow-950/60 px-3 py-1 rounded-full border border-yellow-800/40 animate-pulse">
+          <span className="text-[11px] font-semibold text-amber-700 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
             ● Unsaved changes in form
           </span>
         </div>
@@ -393,15 +410,15 @@ export function PostEditor({ initialData = null }) {
 
       {/* Mode Toggle (Manual vs AI) */}
       {!isEditing && (
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 rounded-xl bg-gray-900 border border-gray-800 shadow-sm">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-2.5 rounded-2xl bg-white border border-slate-200 shadow-xs">
           <div className="flex items-center gap-1.5">
             <button
               type="button"
               onClick={() => setEditorMode("manual")}
-              className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+              className={`flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
                 editorMode === "manual"
-                  ? "bg-purple-600 text-white shadow-sm"
-                  : "text-gray-400 hover:text-white hover:bg-gray-800"
+                  ? "bg-[#f4622a] text-white shadow-xs"
+                  : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
               }`}
             >
               <PenTool className="w-3.5 h-3.5" />
@@ -410,10 +427,10 @@ export function PostEditor({ initialData = null }) {
             <button
               type="button"
               onClick={() => setEditorMode("ai")}
-              className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+              className={`flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
                 editorMode === "ai"
-                  ? "bg-purple-600 text-white shadow-sm"
-                  : "text-gray-400 hover:text-white hover:bg-gray-800"
+                  ? "bg-[#f4622a] text-white shadow-xs"
+                  : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
               }`}
             >
               <Sparkles className="w-3.5 h-3.5 text-yellow-300" />
@@ -421,7 +438,7 @@ export function PostEditor({ initialData = null }) {
             </button>
           </div>
 
-          <span className="text-[11px] text-gray-400 hidden sm:inline px-3">
+          <span className="text-[11px] text-slate-500 hidden sm:inline px-3">
             {editorMode === "ai"
               ? "AI drafts complete structured post into editor for you to review."
               : "Standard WYSIWYG editor powered by Tiptap."}
@@ -435,32 +452,32 @@ export function PostEditor({ initialData = null }) {
       )}
 
       {/* Desktop Sticky Action Bar */}
-      <div className="flex flex-wrap items-center justify-between gap-4 p-3.5 sm:p-4 rounded-xl border border-gray-800 bg-gray-900/95 sticky top-4 z-20 backdrop-blur-md shadow-md">
+      <div className="flex flex-wrap items-center justify-between gap-4 p-3.5 sm:p-4 rounded-2xl border border-slate-200 bg-white/95 sticky top-4 z-20 backdrop-blur-md shadow-xs">
         <div className="flex items-center gap-3">
           <Link
             href="/admin/blog"
-            className="p-1.5 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800 transition"
+            className="p-2 rounded-xl text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition"
             title="Back to Blog List"
           >
             <ArrowLeft className="w-4 h-4" />
           </Link>
-          <span className="text-xs font-semibold uppercase tracking-wider text-gray-300">
+          <span className="text-xs font-bold uppercase tracking-wider text-slate-700">
             {isEditing ? "Editing Post" : "Draft Editor"}
           </span>
           {initialData?.status && (
             <span
-              className={`text-[10px] uppercase font-mono px-2 py-0.5 rounded font-semibold ${
+              className={`text-[10px] uppercase font-mono px-2 py-0.5 rounded-full font-semibold ${
                 initialData.status === "published"
-                  ? "bg-emerald-950/80 text-emerald-300 border border-emerald-800/60"
-                  : "bg-yellow-950/80 text-yellow-300 border border-yellow-800/60"
+                  ? "bg-emerald-50 text-emerald-700 border border-emerald-200"
+                  : "bg-amber-50 text-amber-700 border border-amber-200"
               }`}
             >
               {initialData.status}
             </span>
           )}
           {source && source !== "manual" && (
-            <span className="hidden sm:inline-flex items-center gap-1 text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 border border-purple-800/60 font-semibold">
-              <Sparkles className="w-2.5 h-2.5 text-yellow-400" />
+            <span className="hidden sm:inline-flex items-center gap-1 text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-purple-50 text-purple-700 border border-purple-200 font-semibold">
+              <Sparkles className="w-2.5 h-2.5 text-yellow-500" />
               {source}
             </span>
           )}
@@ -472,7 +489,7 @@ export function PostEditor({ initialData = null }) {
               type="button"
               onClick={() => setIsConfirmDeleteOpen(true)}
               disabled={isSubmitting || isDeleting}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-rose-400 hover:text-rose-300 hover:bg-rose-950/40 border border-rose-900/40 transition-colors disabled:opacity-50 cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold text-rose-600 hover:text-rose-700 hover:bg-rose-50 border border-rose-200 transition-colors disabled:opacity-50 cursor-pointer"
             >
               {isDeleting ? (
                 <Loader2 className="w-3.5 h-3.5 animate-spin" />
@@ -487,12 +504,12 @@ export function PostEditor({ initialData = null }) {
             type="button"
             onClick={() => handleSave("draft")}
             disabled={isSubmitting || isDeleting}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-gray-800 hover:bg-gray-700 text-gray-200 hover:text-white border border-gray-700 transition-colors disabled:opacity-50 cursor-pointer"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-colors disabled:opacity-50 cursor-pointer"
           >
             {isSubmitting ? (
               <Loader2 className="w-3.5 h-3.5 animate-spin" />
             ) : (
-              <Save className="w-3.5 h-3.5 text-yellow-400" />
+              <Save className="w-3.5 h-3.5 text-amber-600" />
             )}
             Save as Draft
           </button>
@@ -501,7 +518,7 @@ export function PostEditor({ initialData = null }) {
             type="button"
             onClick={() => handleSave("published")}
             disabled={isSubmitting || isDeleting}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg text-xs font-semibold bg-linear-to-r from-blue-500 via-purple-600 to-indigo-700 hover:from-blue-600 hover:to-indigo-800 text-white shadow-xs transition-all disabled:opacity-50 cursor-pointer"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-xl text-xs font-semibold bg-[#f4622a] hover:bg-[#e0531e] text-white shadow-sm transition-all disabled:opacity-50 cursor-pointer"
           >
             {isSubmitting ? (
               <Loader2 className="w-3.5 h-3.5 animate-spin" />
@@ -520,32 +537,32 @@ export function PostEditor({ initialData = null }) {
           {/* Title */}
           <div>
             <div className="flex items-center justify-between mb-1.5">
-              <label className="block text-xs font-semibold text-gray-300">
-                Post Title <span className="text-rose-400">*</span>
+              <label className="block text-xs font-bold text-slate-700">
+                Post Title <span className="text-rose-500">*</span>
               </label>
-              <span className="text-[11px] font-mono text-gray-400">
+              <span className="text-[11px] font-mono text-slate-400">
                 {title.length} characters
               </span>
             </div>
             <input
               type="text"
-              placeholder="e.g. 10 Proven SEO Strategies for Rapid Local Growth"
+              placeholder="e.g. How Smart PayIn and Instant Payouts Accelerate Fintech Scale"
               value={title}
               onChange={handleTitleChange}
-              className="w-full px-4 py-2.5 rounded-xl bg-gray-900 border border-gray-700 text-white text-base sm:text-lg font-bold placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all"
+              className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-900 text-base sm:text-lg font-bold placeholder-slate-400 focus:outline-none focus:border-[#f4622a] focus:ring-1 focus:ring-[#f4622a] transition-all shadow-xs"
             />
           </div>
 
           {/* Slug */}
           <div>
             <div className="flex items-center justify-between mb-1.5">
-              <label className="block text-xs font-semibold text-gray-300">
-                URL Slug <span className="text-rose-400">*</span>
+              <label className="block text-xs font-bold text-slate-700">
+                URL Slug <span className="text-rose-500">*</span>
               </label>
               <button
                 type="button"
                 onClick={() => setIsSlugCustomized(!isSlugCustomized)}
-                className="text-xs text-purple-400 hover:text-yellow-400 flex items-center gap-1 transition-colors cursor-pointer"
+                className="text-xs text-[#f4622a] hover:underline flex items-center gap-1 transition-colors cursor-pointer font-medium"
               >
                 {isSlugCustomized ? (
                   <>
@@ -554,34 +571,34 @@ export function PostEditor({ initialData = null }) {
                   </>
                 ) : (
                   <>
-                    <Unlock className="w-3 h-3 text-yellow-400" />
+                    <Unlock className="w-3 h-3 text-amber-500" />
                     Auto-Generating Slug
                   </>
                 )}
               </button>
             </div>
             <div className="relative">
-              <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center text-xs text-gray-400 font-mono select-none">
+              <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center text-xs text-slate-400 font-mono select-none">
                 /blog/
               </span>
               <input
                 type="text"
-                placeholder="10-proven-seo-strategies"
+                placeholder="how-smart-payin-and-instant-payouts-scale"
                 value={slug}
                 onChange={(e) => {
                   setIsSlugCustomized(true);
                   setSlug(e.target.value);
                   setIsDirty(true);
                 }}
-                className="w-full pl-16 pr-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-xs sm:text-sm text-yellow-400 font-mono placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all"
+                className="w-full pl-16 pr-4 py-2 rounded-xl bg-white border border-slate-200 text-xs sm:text-sm text-slate-900 font-mono placeholder-slate-400 focus:outline-none focus:border-[#f4622a] focus:ring-1 focus:ring-[#f4622a] transition-all shadow-xs"
               />
             </div>
           </div>
 
           {/* Rich Content Editor (Tiptap) */}
           <div>
-            <label className="block text-xs font-semibold text-gray-300 mb-1.5">
-              Post Content <span className="text-rose-400">*</span>
+            <label className="block text-xs font-bold text-slate-700 mb-1.5">
+              Post Content <span className="text-rose-500">*</span>
             </label>
             <TiptapEditor
               content={content}
@@ -596,8 +613,8 @@ export function PostEditor({ initialData = null }) {
         {/* Sidebar Metadata (Right col) */}
         <div className="space-y-5">
           {/* Cover Image */}
-          <div className="p-4 sm:p-5 rounded-xl border border-gray-800 bg-gray-900 space-y-2.5 shadow-sm">
-            <label className="block text-xs font-semibold text-gray-300">
+          <div className="p-4 sm:p-5 rounded-2xl border border-slate-200 bg-white space-y-2.5 shadow-xs">
+            <label className="block text-xs font-bold text-slate-700">
               Cover Image
             </label>
             <ImageUpload
@@ -610,18 +627,18 @@ export function PostEditor({ initialData = null }) {
           </div>
 
           {/* SEO Meta Description */}
-          <div className="p-4 sm:p-5 rounded-xl border border-gray-800 bg-gray-900 space-y-2 shadow-sm">
+          <div className="p-4 sm:p-5 rounded-2xl border border-slate-200 bg-white space-y-2 shadow-xs">
             <div className="flex items-center justify-between">
-              <label className="block text-xs font-semibold text-gray-300">
+              <label className="block text-xs font-bold text-slate-700">
                 Meta Description (SEO)
               </label>
               <span
                 className={`text-[11px] font-mono font-semibold ${
                   metaDescription.length >= 120 && metaDescription.length <= 160
-                    ? "text-emerald-400"
+                    ? "text-emerald-600"
                     : metaDescription.length > 160
-                    ? "text-rose-400"
-                    : "text-gray-400"
+                    ? "text-rose-600"
+                    : "text-slate-400"
                 }`}
               >
                 {metaDescription.length}/160
@@ -635,13 +652,13 @@ export function PostEditor({ initialData = null }) {
                 setMetaDescription(e.target.value);
                 setIsDirty(true);
               }}
-              className="w-full px-3.5 py-2 rounded-lg bg-gray-800 border border-gray-700 text-xs sm:text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all resize-none"
+              className="w-full px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#f4622a] focus:ring-1 focus:ring-[#f4622a] focus:bg-white transition-all resize-none"
             />
           </div>
 
           {/* Tags */}
-          <div className="p-4 sm:p-5 rounded-xl border border-gray-800 bg-gray-900 space-y-2 shadow-sm">
-            <label className="block text-xs font-semibold text-gray-300">
+          <div className="p-4 sm:p-5 rounded-2xl border border-slate-200 bg-white space-y-2 shadow-xs">
+            <label className="block text-xs font-bold text-slate-700">
               Tags &amp; Taxonomy
             </label>
             <TagInput
@@ -654,8 +671,8 @@ export function PostEditor({ initialData = null }) {
           </div>
 
           {/* Author */}
-          <div className="p-4 sm:p-5 rounded-xl border border-gray-800 bg-gray-900 space-y-2 shadow-sm">
-            <label className="block text-xs font-semibold text-gray-300">
+          <div className="p-4 sm:p-5 rounded-2xl border border-slate-200 bg-white space-y-2 shadow-xs">
+            <label className="block text-xs font-bold text-slate-700">
               Author (Public Byline)
             </label>
             <input
@@ -666,10 +683,10 @@ export function PostEditor({ initialData = null }) {
                 setAuthor(e.target.value);
                 setIsDirty(true);
               }}
-              className="w-full px-3.5 py-2 rounded-lg bg-gray-800 border border-gray-700 text-xs sm:text-sm text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all"
+              className="w-full px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#f4622a] focus:ring-1 focus:ring-[#f4622a] focus:bg-white transition-all"
             />
-            <p className="text-[11px] text-gray-400 flex items-center gap-1.5 mt-1">
-              <Info className="w-3 h-3 text-yellow-400 shrink-0" />
+            <p className="text-[11px] text-slate-500 flex items-center gap-1.5 mt-1">
+              <Info className="w-3 h-3 text-[#f4622a] shrink-0" />
               Public byline displayed to readers on the article page.
             </p>
           </div>
@@ -677,17 +694,17 @@ export function PostEditor({ initialData = null }) {
       </div>
 
       {/* Mobile Sticky Bottom Action Bar */}
-      <div className="sm:hidden fixed bottom-0 left-0 right-0 p-3 bg-gray-900/95 border-t border-gray-800 backdrop-blur-md z-40 flex items-center justify-between gap-2 shadow-xl">
+      <div className="sm:hidden fixed bottom-0 left-0 right-0 p-3 bg-white/95 border-t border-slate-200 backdrop-blur-md z-40 flex items-center justify-between gap-2 shadow-xl">
         <button
           type="button"
           onClick={() => handleSave("draft")}
           disabled={isSubmitting || isDeleting}
-          className="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-semibold bg-gray-800 hover:bg-gray-700 text-gray-200 border border-gray-700 transition-colors disabled:opacity-50"
+          className="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-colors disabled:opacity-50"
         >
           {isSubmitting ? (
             <Loader2 className="w-3.5 h-3.5 animate-spin" />
           ) : (
-            <Save className="w-3.5 h-3.5 text-yellow-400" />
+            <Save className="w-3.5 h-3.5 text-amber-600" />
           )}
           Save Draft
         </button>
@@ -696,7 +713,7 @@ export function PostEditor({ initialData = null }) {
           type="button"
           onClick={() => handleSave("published")}
           disabled={isSubmitting || isDeleting}
-          className="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-semibold bg-linear-to-r from-blue-500 via-purple-600 to-indigo-700 hover:from-blue-600 hover:to-indigo-800 text-white shadow-xs transition-all disabled:opacity-50"
+          className="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl text-xs font-semibold bg-[#f4622a] hover:bg-[#e0531e] text-white shadow-xs transition-all disabled:opacity-50"
         >
           {isSubmitting ? (
             <Loader2 className="w-3.5 h-3.5 animate-spin" />

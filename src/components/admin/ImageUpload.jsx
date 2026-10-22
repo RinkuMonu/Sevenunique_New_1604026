@@ -132,6 +132,13 @@ export function ImageUpload({ value, onChange, disabled }) {
     });
   };
 
+  const PRESET_COVERS = [
+    { label: "Fintech", url: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80" },
+    { label: "Code & Backend", url: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80" },
+    { label: "Cloud & DevOps", url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80" },
+    { label: "Cybersecurity", url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80" },
+  ];
+
   return (
     <div className="space-y-3">
       <input
@@ -144,7 +151,7 @@ export function ImageUpload({ value, onChange, disabled }) {
       />
 
       {value ? (
-        <div className="relative rounded-xl overflow-hidden border border-gray-700 bg-gray-900 group aspect-video max-h-72 w-full flex items-center justify-center shadow-md">
+        <div className="relative rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 group aspect-video max-h-72 w-full flex items-center justify-center shadow-xs">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={value}
@@ -152,12 +159,12 @@ export function ImageUpload({ value, onChange, disabled }) {
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
           {/* Action Overlay */}
-          <div className="absolute inset-0 bg-gray-950/75 opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity backdrop-blur-sm flex flex-wrap items-center justify-center gap-2 p-3">
+          <div className="absolute inset-0 bg-slate-900/60 opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity backdrop-blur-xs flex flex-wrap items-center justify-center gap-2 p-3">
             <button
               type="button"
               onClick={() => fileInputRef.current?.click()}
               disabled={disabled || isUploading}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-purple-600 hover:bg-purple-500 text-white shadow-sm transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-[#f4622a] hover:bg-[#e0531e] text-white shadow-xs transition-colors cursor-pointer"
             >
               <RefreshCw className="w-3.5 h-3.5" />
               Upload New
@@ -166,7 +173,7 @@ export function ImageUpload({ value, onChange, disabled }) {
               type="button"
               onClick={handleManualUrl}
               disabled={disabled || isUploading}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-gray-800 hover:bg-gray-700 text-gray-200 shadow-sm transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-white hover:bg-slate-100 text-slate-800 shadow-xs transition-colors cursor-pointer border border-slate-200"
             >
               <LinkIcon className="w-3.5 h-3.5" />
               Edit URL
@@ -175,7 +182,7 @@ export function ImageUpload({ value, onChange, disabled }) {
               type="button"
               onClick={handleRemove}
               disabled={disabled || isUploading}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-rose-600 hover:bg-rose-500 text-white shadow-sm transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-rose-600 hover:bg-rose-700 text-white shadow-xs transition-colors cursor-pointer"
             >
               <Trash2 className="w-3.5 h-3.5" />
               Remove
@@ -183,57 +190,75 @@ export function ImageUpload({ value, onChange, disabled }) {
           </div>
         </div>
       ) : (
-        <div className="space-y-2">
+        <div className="space-y-3">
           <div
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
             onDrop={handleDrop}
             onClick={() => !disabled && !isUploading && fileInputRef.current?.click()}
-            className={`border-2 border-dashed rounded-xl p-6 sm:p-7 text-center transition-all cursor-pointer relative overflow-hidden ${
+            className={`border-2 border-dashed rounded-2xl p-6 sm:p-7 text-center transition-all cursor-pointer relative overflow-hidden ${
               isDragOver
-                ? "border-purple-500 bg-purple-950/20 scale-[1.01]"
-                : "border-gray-700 hover:border-purple-500/70 bg-gray-800/40 hover:bg-gray-800/70"
+                ? "border-[#f4622a] bg-orange-50/50 scale-[1.01]"
+                : "border-slate-300 hover:border-[#f4622a] bg-slate-50/60 hover:bg-slate-50"
             } ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
           >
             {isUploading ? (
-              <div className="flex flex-col items-center justify-center space-y-2 text-gray-300 py-3">
-                <Loader2 className="w-6 h-6 animate-spin text-purple-400" />
+              <div className="flex flex-col items-center justify-center space-y-2 text-slate-600 py-3">
+                <Loader2 className="w-6 h-6 animate-spin text-[#f4622a]" />
                 <div>
-                  <p className="text-xs font-semibold text-white">Uploading cover image...</p>
-                  <p className="text-[11px] text-gray-400 mt-0.5">
+                  <p className="text-xs font-semibold text-slate-900">Uploading cover image...</p>
+                  <p className="text-[11px] text-slate-500 mt-0.5">
                     Optimizing and linking asset.
                   </p>
                 </div>
               </div>
             ) : (
-              <div className="flex flex-col items-center justify-center space-y-2 text-gray-400">
-                <div className="p-2.5 rounded-xl bg-gray-800 text-gray-300 border border-gray-700">
+              <div className="flex flex-col items-center justify-center space-y-2 text-slate-500">
+                <div className="p-2.5 rounded-2xl bg-white text-slate-600 border border-slate-200 shadow-xs">
                   {isDragOver ? (
-                    <ImageIcon className="w-5 h-5 text-yellow-400 animate-bounce" />
+                    <ImageIcon className="w-5 h-5 text-[#f4622a] animate-bounce" />
                   ) : (
-                    <Upload className="w-5 h-5 text-gray-400" />
+                    <Upload className="w-5 h-5 text-slate-500" />
                   )}
                 </div>
-                <div className="text-xs sm:text-sm text-gray-300">
-                  <span className="font-semibold text-yellow-400 hover:underline">
+                <div className="text-xs sm:text-sm text-slate-700">
+                  <span className="font-semibold text-[#f4622a] hover:underline">
                     Click to browse
                   </span>{" "}
                   or drag and drop here
                 </div>
-                <p className="text-[11px] text-gray-400">
+                <p className="text-[11px] text-slate-400">
                   Supports PNG, JPG, WebP, GIF (Max 5MB)
                 </p>
               </div>
             )}
           </div>
 
-          <button
-            type="button"
-            onClick={handleManualUrl}
-            className="w-full text-center text-xs text-gray-400 hover:text-purple-300 transition-colors py-1 cursor-pointer"
-          >
-            Or paste image URL directly
-          </button>
+          {/* Quick presets & URL options */}
+          <div className="space-y-2">
+            <div className="flex items-center justify-between text-[11px] text-slate-500">
+              <span className="font-medium">Quick Presets:</span>
+              <button
+                type="button"
+                onClick={handleManualUrl}
+                className="text-[#f4622a] hover:underline font-semibold cursor-pointer"
+              >
+                Paste URL
+              </button>
+            </div>
+            <div className="grid grid-cols-2 gap-1.5">
+              {PRESET_COVERS.map((preset) => (
+                <button
+                  key={preset.label}
+                  type="button"
+                  onClick={() => onChange(preset.url)}
+                  className="px-2.5 py-1.5 rounded-lg text-[11px] font-medium bg-slate-100 hover:bg-orange-50 hover:text-[#f4622a] text-slate-700 border border-slate-200 transition-colors text-left truncate cursor-pointer"
+                >
+                  ⚡ {preset.label}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
       )}
     </div>

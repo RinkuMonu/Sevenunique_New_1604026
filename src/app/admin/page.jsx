@@ -32,10 +32,10 @@ export default function AdminRootPage() {
   }, [router]);
 
   return (
-    <div className="min-h-screen bg-[#0e121a] flex flex-col items-center justify-center text-white">
+    <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center text-slate-800">
       <div className="flex flex-col items-center gap-4">
         <Loader2 className="w-8 h-8 text-[#f4622a] animate-spin" />
-        <p className="text-sm text-gray-400 font-medium">Redirecting to Admin Portal...</p>
+        <p className="text-sm text-slate-500 font-medium">Redirecting to Admin Portal...</p>
       </div>
     </div>
   );
