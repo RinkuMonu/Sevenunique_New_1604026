@@ -1,0 +1,97 @@
+"use client";
+
+import Image from "next/image";
+
+const sidebarData = [
+  {
+    title:
+      "Seven Unique Named Top Global B2B Service Provider by Clutch",
+    img: "/images/news1.png",
+  },
+  {
+    title:
+      "Seven Unique Joins World Economic Forum as Associate Partner, Capping a Year of Enterpr...",
+    img: "/images/news2.png",
+  },
+  {
+    title:
+      "Seven Unique Acquires AI Upskilling Startup Modal, Taps Darren Shimkus as President of ...",
+    img: "/images/news3.png",
+  },
+  {
+    title:
+      "Seven Unique Announces Winners of its Inaugural 2025 Developer’s Choice Awards, Identif...",
+    img: "/images/news4.png",
+  },
+    {
+    title:
+      "Seven Unique Announces Winners of its Inaugural 2025 Developer’s Choice Awards, Identif...",
+    img: "/images/news5.png",
+  },
+];
+
+export default function FeaturedNews() {
+  return (
+    <section className="w-full bg-[#f3f4f6] px-6 md:px-12 py-12">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+        
+        {/* LEFT BIG SECTION */}
+        <div className="md:col-span-2">
+          
+          {/* Title */}
+          <h2 className="text-2xl md:text-3xl font-semibold text-[#1f2937] leading-snug">
+            64% of Women Developers Say AI Has Increased Their Career Agency, Sevenunique’s Survey Finds
+          </h2>
+
+          {/* Subtitle */}
+          <p className="mt-3 text-gray-600 text-base">
+            According to a survey, 64% of women developers feel AI improves their career control, while 56% trust it to be fair and half feel responsible for its outcomes.
+          </p>
+
+          {/* Orange Line */}
+          <div className="mt-5 h-1 bg-[#ff5a2f] w-full" />
+
+          {/* Image */}
+          <div className="mt-6">
+            <Image
+              src="/images/team-women.jpg"
+              alt="Main News"
+              width={800}
+              height={450}
+              className="w-full rounded-md object-cover"
+            />
+          </div>
+        </div>
+
+        {/* RIGHT SIDEBAR */}
+        <div>
+          <h3 className="text-base tracking-widest text-gray-500 font-bold uppercase mb-4">
+            Featured Press Releases
+          </h3>
+
+          <div className="flex flex-col gap-4">
+            {sidebarData.map((item, index) => (
+              <div
+                key={index}
+                className="flex gap-3 bg-white p-2 rounded-md"
+              >
+                <Image
+                  src={item.img}
+                  alt="news"
+                  width={140}
+                  height={90}
+                  className="object-cover rounded"
+                />
+
+                <p className="text-sm text-gray-700 leading-snug">
+                  {item.title}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+}

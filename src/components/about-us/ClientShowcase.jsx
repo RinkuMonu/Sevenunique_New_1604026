@@ -1,0 +1,75 @@
+"use client";
+
+import Image from "next/image";
+
+const logos = [
+  "/images/tbo.png",
+  "/images/icici.png",
+  "/images/qro.jpg",
+  "/images/policyongo.jpg",
+  "/images/paysprint.png",
+  "/images/emitra.svg",
+  "/images/axis.png",
+  "/logos/nsdl.png",
+  "/logos/irctc.png",
+  "/images/travelboutique.jpg",
+  "/images/surepass.png",
+  "/images/exotel.png",
+  "/logos/logo4.png",
+  "/images/sirji.jpg",
+  "/images/signzy.jpg",
+];
+
+export default function ClientShowcase() {
+  return (
+    <section className="bg-[#f5f5f6] py-24 px-6 md:px-12">
+      
+      {/* ✅ RESPONSIVE WIDTH CONTROL */}
+      <div className="
+        mx-auto 
+        max-w-[1000px]     /* laptop tighter */
+        lg:max-w-[1100px] /* bigger screens */
+        xl:max-w-[1180px] /* full desktop */
+        grid md:grid-cols-2 gap-14 items-center
+      ">
+
+        {/* LEFT CONTENT */}
+        <div>
+          <h2 className="text-[32px] md:text-[40px] font-semibold text-[#111] leading-tight mb-8 max-w-lg">
+           ...in collaboration with many leading brands....
+          </h2>
+
+          <div className="mt-6">
+            <button className="group text-[14px] font-medium text-[#111] border-b border-black pb-1 flex items-center gap-2 hover:text-[#f46b45] transition">
+              Who we work with
+              <span className="transition-transform group-hover:translate-x-1">
+                →
+              </span>
+            </button>
+          </div>
+        </div>
+
+        {/* RIGHT GRID */}
+        {/* Responsive UI update: client cards collapse cleanly on small screens. */}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
+          {logos.map((logo, i) => (
+            <div
+              key={i}
+              className="bg-white rounded-xl shadow-sm flex items-center justify-center h-[110px] hover:shadow-md transition"
+            >
+              <div className="relative w-[90px] h-[40px]">
+                <Image
+                  src={logo}
+                  alt="client"
+                  fill
+                  className="object-contain opacity-80"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
+}

@@ -1,0 +1,104 @@
+"use client";
+import Link from "next/link";
+import Image from "next/image";
+import { FiMonitor, FiClock, FiUsers, FiCode, FiAward } from "react-icons/fi";
+
+export default function BenefitsSection() {
+  return (
+    <section className="bg-[#f5f6f7] py-24">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-[30%_70%] gap-20 items-start">
+        {/* LEFT (30%) */}
+        <div>
+          {/* Responsive UI update: section heading scales from phone to desktop. */}
+          <h2 className="text-3xl font-semibold leading-[1.2] text-[#111827] sm:text-4xl lg:text-[42px]">
+            Benefits of working with us
+          </h2>
+
+          <p className="mt-6 text-[18px] text-gray-600 leading-[1.6]">
+            What hiring the 1% actually means to your business.
+          </p>
+
+          <div className="mt-10 relative w-full h-[540px]">
+            <Image
+              src="/images/working-person.png"
+              alt="Team working"
+              fill
+              className="object-cover rounded-[20px]"
+            />
+          </div>
+        </div>
+
+        {/* RIGHT (70%) */}
+        <div className="space-y-12">
+          {/* ITEM */}
+          <div className="flex gap-5">
+            <FiMonitor className="text-[#f66135] text-[32px] mt-1" />
+           <div>
+  <h3 className="text-[20px] font-semibold text-[#111827]">
+    Proficient in English
+  </h3>
+  <p className="text-gray-600 mt-2 leading-[1.7] max-w-xl">
+    Communicate effortlessly and get quick responses to your queries. All our LATAM specialists are fluent in English eliminating any language barriers.
+  </p>
+</div>
+</div>
+
+<div className="flex gap-5">
+  <FiClock className="text-[#f66135] text-[32px] mt-1" />
+  <div>
+    <h3 className="text-[20px] font-semibold text-[#111827]">
+      Aligned to Your Time Zone
+    </h3>
+    <p className="text-gray-600 mt-2 leading-[1.7] max-w-xl">
+      We operate during your working hours. Our nearshore model helps improve productivity and streamline the entire development process.
+    </p>
+  </div>
+</div>
+
+<div className="flex gap-5">
+  <FiUsers className="text-[#f66135] text-[32px] mt-1" />
+  <div>
+    <h3 className="text-[20px] font-semibold text-[#111827]">
+      10+ Years of Experience
+    </h3>
+    <p className="text-gray-600 mt-2 leading-[1.7] max-w-xl">
+      We hire only highly experienced and qualified professionals. On average, our developers bring over 10 years of experience and have delivered dozens of projects.
+    </p>
+  </div>
+</div>
+
+<div className="flex gap-5">
+  <FiCode className="text-[#f66135] text-[32px] mt-1" />
+  <div>
+    <h3 className="text-[20px] font-semibold text-[#111827]">
+      Every Technology Covered
+    </h3>
+    <p className="text-gray-600 mt-2 leading-[1.7] max-w-xl">
+      Whatever expertise you require, we can adapt to your tech stack. Our engineers are skilled in all modern and even some legacy programming languages and technologies.
+    </p>
+  </div>
+</div>
+
+<div className="flex gap-5">
+  <FiAward className="text-[#f66135] text-[32px] mt-1" />
+  <div>
+    <h3 className="text-[20px] font-semibold text-[#111827]">
+      Award-Winning Partner
+    </h3>
+    <p className="text-gray-600 mt-2 leading-[1.7] max-w-xl">
+      We currently support 500+ active clients across more than 130 industry sectors, maintaining a client retention rate of 96%.
+    </p>
+  </div>
+</div>
+
+          {/* BUTTON */}
+          <Link href="/schedule-a-call-page">
+            <button className="mt-6 bg-black text-white px-6 py-3 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-gray-800 transition">
+              Schedule a Call →
+            </button>
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -1,0 +1,14 @@
+# robots.txt for sevenunique.com
+# Generated: 2026-07-06
+
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Allow: /
+
+User-agent: Googlebot
+Disallow: /admin/
+Disallow: /private/
+Allow: /
+
+Sitemap: https://www.sevenunique.com/sitemap.xml

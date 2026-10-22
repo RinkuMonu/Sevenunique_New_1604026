@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Company Chatbot — Lead Capture + Ask Anything + Human Handoff</title>
+<style>
+  :root{
+    --navy:#13182b; --navy-light:#1c2340;
+    --orange:#ff5a1f; --orange-dark:#e8470f;
+    --bg:#f4f5f9; --card:#ffffff; --text:#1a1c26; --muted:#7a7f93; --radius:16px;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,sans-serif;
+    background:linear-gradient(135deg,#eef0f7,#e4e7f2);min-height:100vh;}
+  .demo-page{max-width:760px;margin:60px auto;padding:0 24px;color:var(--text);}
+  .demo-page h1{font-size:28px;margin-bottom:6px;}
+  .demo-page p{color:var(--muted);line-height:1.6;}
+
+  #chat-launcher{
+    position:fixed;bottom:24px;right:24px;width:62px;height:62px;border-radius:50%;
+    background:linear-gradient(135deg,var(--orange),var(--orange-dark));
+    box-shadow:0 8px 24px rgba(255,90,31,0.45);
+    display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;z-index:999;
+    transition:transform .2s ease;
+  }
+  #chat-launcher:hover{transform:scale(1.06);}
+  #chat-launcher svg{width:28px;height:28px;fill:#fff;}
+  #chat-launcher .ping{position:absolute;top:-3px;right:-3px;width:14px;height:14px;border-radius:50%;
+    background:#23d36b;border:2px solid #fff;}
+  #chat-launcher .badge{
+    position:absolute;top:-4px;right:-4px;min-width:20px;height:20px;background:#ef4444;border-radius:10px;
+    border:2px solid #fff;font-size:10px;font-weight:700;color:#fff;display:none;
+    align-items:center;justify-content:center;padding:0 4px;
+  }
+
+  #chat-window{
+    position:fixed;bottom:24px;right:24px;width:380px;max-width:92vw;height:580px;max-height:82vh;
+    background:var(--card);border-radius:var(--radius);
+    box-shadow:0 20px 60px rgba(20,20,40,0.25);
+    display:none;flex-direction:column;overflow:hidden;z-index:1000;
+  }
+  #chat-window.open{display:flex;}
+
+  .chat-header{
+    background:linear-gradient(135deg,var(--navy),var(--navy-light));
+    color:#fff;padding:16px 18px;display:flex;align-items:center;gap:12px;flex-shrink:0;position:relative;
+  }
+  .chat-header::after{
+    content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,var(--orange),#ff8c5a,var(--orange));
+    background-size:200% 100%;animation:shimmer 2.5s linear infinite;
+  }
+  @keyframes shimmer{from{background-position:200% center;}to{background-position:-200% center;}}
+  .chat-header .avatar{
+    width:38px;height:38px;border-radius:50%;background:var(--orange);position:relative;
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;flex-shrink:0;
+  }
+  .chat-header .info{flex:1;min-width:0;}
+  .chat-header .info .name{font-weight:600;font-size:15px;}
+  .chat-header .info .status{font-size:12px;color:#9aa3c4;display:flex;align-items:center;gap:5px;}
+  .chat-header .info .status .dot{width:7px;height:7px;border-radius:50%;background:#23d36b;animation:blink2 2s infinite;}
+  @keyframes blink2{0%,100%{opacity:1;}50%{opacity:.3;}}
+  .chat-header .info .tag{
+    font-size:10px;font-weight:600;letter-spacing:.3px;text-transform:uppercase;color:var(--orange);
+    background:rgba(255,90,31,0.15);border:1px solid rgba(255,90,31,0.3);border-radius:20px;
+    padding:2px 8px;display:inline-block;margin-top:4px;
+  }
+  .chat-header .header-btns{display:flex;gap:4px;}
+  .chat-header button.hbtn{
+    background:rgba(255,255,255,0.08);border:none;color:#fff;width:30px;height:30px;
+    border-radius:8px;cursor:pointer;font-size:14px;line-height:1;flex-shrink:0;
+  }
+  .chat-header button.hbtn:hover{background:rgba(255,255,255,0.18);}
+
+  .chat-body{flex:1;overflow-y:auto;padding:18px 14px;background:var(--bg);display:flex;flex-direction:column;gap:10px;}
+  .chat-body::-webkit-scrollbar{width:5px;}
+  .chat-body::-webkit-scrollbar-thumb{background:#d3d6e3;border-radius:4px;}
+
+  .row{display:flex;gap:8px;align-items:flex-end;}
+  .row.bot{justify-content:flex-start;}
+  .row.user{justify-content:flex-end;}
+
+  .bubble{max-width:78%;padding:10px 14px;border-radius:14px;font-size:13.5px;line-height:1.5;
+    white-space:pre-line;animation:rise .25s ease;}
+  .bot .bubble{background:#fff;color:var(--text);border:1px solid #eceef5;border-bottom-left-radius:4px;}
+  .bot .bubble strong{color:var(--orange-dark);}
+  .user .bubble{background:linear-gradient(135deg,var(--orange),var(--orange-dark));color:#fff;border-bottom-right-radius:4px;}
+  @keyframes rise{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+
+  .bot-icon{width:26px;height:26px;border-radius:50%;background:var(--orange);
+    display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700;flex-shrink:0;}
+
+  .options{display:flex;flex-wrap:wrap;gap:7px;margin-left:34px;max-width:84%;}
+  .opt-btn{background:#fff;border:1.5px solid var(--orange);color:var(--orange-dark);
+    padding:8px 13px;border-radius:20px;font-size:12.5px;font-weight:600;cursor:pointer;transition:.15s;}
+  .opt-btn:hover{background:var(--orange);color:#fff;}
+
+  .quick{padding:10px 14px 4px;display:flex;flex-wrap:wrap;gap:6px;}
+  .quick-btn{background:#fff;border:1.5px solid #e0dff8;color:var(--navy);
+    padding:6px 12px;border-radius:20px;font-size:12px;font-weight:500;cursor:pointer;transition:.15s;white-space:nowrap;}
+  .quick-btn:hover{border-color:var(--orange);background:var(--orange);color:#fff;}
+
+  .typing{margin-left:34px;display:flex;gap:4px;padding:10px 14px;background:#fff;
+    border-radius:14px;border:1px solid #eceef5;width:fit-content;}
+  .typing span{width:6px;height:6px;background:#c4c8d6;border-radius:50%;animation:blink 1.2s infinite;}
+  .typing span:nth-child(2){animation-delay:.2s;}
+  .typing span:nth-child(3){animation-delay:.4s;}
+  @keyframes blink{0%,80%,100%{opacity:.3;}40%{opacity:1;}}
+
+  .handoff{margin-left:34px;max-width:84%;display:flex;gap:7px;flex-wrap:wrap;}
+  .handoff-btn{
+    margin-top:6px;display:inline-flex;align-items:center;gap:6px;
+    background:var(--navy);color:#fff;border:none;padding:8px 14px;border-radius:20px;
+    font-size:12.5px;font-weight:600;cursor:pointer;
+  }
+  .handoff-btn:hover{background:var(--navy-light);}
+  .handoff-btn.ghost{background:#fff;color:var(--navy);border:1.5px solid #e0dff8;}
+  .handoff-btn.ghost:hover{border-color:var(--orange);color:var(--orange-dark);}
+
+  .chat-input{display:flex;align-items:center;gap:8px;padding:12px;background:#fff;border-top:1px solid #eceef5;flex-shrink:0;}
+  .chat-input input{flex:1;border:1px solid #e2e4ee;background:var(--bg);border-radius:10px;
+    padding:10px 12px;font-size:13.5px;outline:none;}
+  .chat-input input:focus{border-color:var(--orange);}
+  .chat-input input:disabled{background:#ececf2;}
+  .chat-input button{width:38px;height:38px;border-radius:10px;border:none;
+    background:linear-gradient(135deg,var(--orange),var(--orange-dark));
+    color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .chat-input button:disabled{opacity:.45;cursor:not-allowed;}
+  .chat-input button svg{width:16px;height:16px;fill:#fff;}
+
+  .footer-note{font-size:10.5px;text-align:center;color:var(--muted);padding:6px 0 9px;flex-shrink:0;}
+  .error-text{color:#d8462a;font-size:11.5px;margin-left:34px;margin-top:-4px;}
+</style>
+</head>
+<body>
+
+<div class="demo-page">
+  <h1>Your Website</h1>
+  <p>Click the orange chat bubble (bottom-right) to test the flow: Name → Email → Phone → Company → Ask Anything → optional human handoff.</p>
+</div>
+
+<button id="chat-launcher" aria-label="Open chat">
+  <span class="ping"></span>
+  <span class="badge" id="chat-badge">1</span>
+  <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.04 2 11c0 2.61 1.28 4.95 3.34 6.6L4 22l4.86-1.74C9.83 20.42 10.9 20.6 12 20.6c5.52 0 10-4.04 10-9.6S17.52 2 12 2z"/></svg>
+</button>
+
+<div id="chat-window">
+  <div class="chat-header">
+    <div class="avatar">AI</div>
+    <div class="info">
+      <div class="name">Nova · Company Assistant</div>
+      <div class="status"><span class="dot"></span> Online now</div>
+      <div class="tag">✦ AI-powered</div>
+    </div>
+    <div class="header-btns">
+      <button class="hbtn" id="chat-minimize" aria-label="Minimize" title="Minimize">–</button>
+      <button class="hbtn" id="chat-close" aria-label="Close">✕</button>
+    </div>
+  </div>
+
+  <div class="chat-body" id="chat-body"></div>
+
+  <div class="chat-input">
+    <input type="text" id="chat-input" placeholder="Type your reply..." autocomplete="off">
+    <button id="chat-send" aria-label="Send">
+      <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+    </button>
+  </div>
+  <div class="footer-note">AI may make mistakes · Edit CONFIG / KNOWLEDGE in the code to customize</div>
+</div>
+
+<script>
+(function(){
+
+/* ============================================================
+   CONFIGURATION — edit these to match your business
+   ============================================================ */
+var CONFIG = {
+  companyName: "Your Company",
+  botName: "Nova",
+  companyEmail: "hello@yourcompany.com",
+  companyPhone: "+91-XXXXXXXXXX",
+
+  timeSlots: [
+    "Today, 4:00 PM",
+    "Today, 6:00 PM",
+    "Tomorrow, 11:00 AM",
+    "Tomorrow, 3:00 PM",
+    "I'll pick another time"
+  ],
+  quickReplies: [
+    "🚀 Our Services",
+    "💰 Pricing",
+    "💼 Careers",
+    "📞 Talk to a human"
+  ],
+
+  // POST captured leads here (Sheet/CRM/Zapier webhook/serverless function).
+  leadWebhookUrl: null, // e.g. "https://your-worker.example.workers.dev/leads"
+
+  // Real AI Q&A endpoint (recommended). A tiny serverless function that
+  // calls the Anthropic API server-side with KNOWLEDGE injected as context,
+  // so it can answer almost anything, not just exact keyword matches.
+  // See the companion worker.js file for a ready-to-deploy Cloudflare Worker.
+  chatApiUrl: null, // e.g. "https://your-worker.example.workers.dev/chat"
+
+  maxAiTurns: 20 // soft cap to control cost / abuse
+};
+
+/* ============================================================
+   COMPANY KNOWLEDGE — used as the local fallback Q&A engine when
+   chatApiUrl isn't set, AND sent to the AI backend as context when it is.
+   Cover every topic from your flow diagram here.
+   ============================================================ */
+var KNOWLEDGE = {
+  about: {
+    keywords: ["who are you", "about", "what is your company", "tell me about", "company info"],
+    answer: "{company} is a technology company helping businesses grow with modern digital solutions. We focus on quality, speed, and long-term partnerships with our clients."
+  },
+  services: {
+    keywords: ["service", "services", "what do you do", "offer", "what can you build"],
+    answer: "We offer Web Development, Mobile App Development, Digital Marketing/SEO, UI/UX Design, and AI & Chatbot Solutions. Want details on any one of these, or should I connect you with our team?"
+  },
+  pricing: {
+    keywords: ["price", "pricing", "cost", "quote", "charges", "how much"],
+    answer: "Pricing depends on project scope (features, timeline, complexity), so our team puts together a custom quote after a short call. Want me to schedule one for you?"
+  },
+  portfolio: {
+    keywords: ["portfolio", "work", "projects", "case stud", "clients", "examples"],
+    answer: "We've delivered projects across web, mobile, and AI for clients in fintech, retail, and services. For specific case studies and live links, our team can walk you through our portfolio on a quick call."
+  },
+  careers: {
+    keywords: ["career", "job", "hiring", "vacancy", "openings", "work with you", "join your team"],
+    answer: "We're always interested in great talent! For current openings, check our Careers page, or share your name/email and our HR team will follow up."
+  },
+  contact: {
+    keywords: ["contact", "email", "phone", "number", "reach", "address", "office", "located"],
+    answer: "You can reach us at {email} or {phone}. I can also have our team call you directly — just let me know."
+  },
+  technologies: {
+    keywords: ["technology", "technologies", "tech stack", "framework", "language", "tools you use"],
+    answer: "Our team works with modern stacks: React/Next.js, Node.js, Python, React Native/Flutter for mobile, and cloud platforms like AWS/GCP. The exact stack is chosen per project needs."
+  },
+  hours: {
+    keywords: ["hour", "timing", "open", "available", "support hours"],
+    answer: "Our team is generally available Monday–Saturday during business hours. Outside that, leave your details and we'll follow up the next business day."
+  },
+  faq: {
+    keywords: ["how long", "timeline", "process", "how does it work", "guarantee", "refund", "payment terms"],
+    answer: "Most projects follow: discovery call → proposal & timeline → design → development → testing → launch & support. Exact timelines and terms are confirmed during your call with our team."
+  }
+};
+
+function fillTemplate(str){
+  return str
+    .replace(/{company}/g, CONFIG.companyName)
+    .replace(/{email}/g, CONFIG.companyEmail)
+    .replace(/{phone}/g, CONFIG.companyPhone);
+}
+
+function localKnowledgeAnswer(text){
+  var lower = text.toLowerCase();
+  for(var key in KNOWLEDGE){
+    var entry = KNOWLEDGE[key];
+    for(var i=0;i<entry.keywords.length;i++){
+      if(lower.indexOf(entry.keywords[i]) !== -1){
+        return fillTemplate(entry.answer);
+      }
+    }
+  }
+  return null;
+}
+
+function buildKnowledgeSystemText(){
+  // Flattened plain-text version of KNOWLEDGE, sent to the AI backend as
+  // context so it can answer broadly, not just on exact keyword hits.
+  var lines = [];
+  for(var key in KNOWLEDGE){
+    lines.push(key.toUpperCase() + ": " + fillTemplate(KNOWLEDGE[key].answer));
+  }
+  return lines.join("\n");
+}
+
+/* ============================================================
+   STATE
+   ============================================================ */
+var state = {
+  step: "GREET", // GREET -> ASK_NAME -> ASK_EMAIL -> ASK_PHONE -> ASK_COMPANY -> CHAT
+  lead: { name: "", email: "", phone: "", company: "" },
+  history: [],
+  aiTurns: 0,
+  isOpen: false,
+  unread: 0
+};
+
+var body      = document.getElementById("chat-body");
+var input     = document.getElementById("chat-input");
+var sendBtn   = document.getElementById("chat-send");
+var launcher  = document.getElementById("chat-launcher");
+var win       = document.getElementById("chat-window");
+var closeBtn  = document.getElementById("chat-close");
+var minBtn    = document.getElementById("chat-minimize");
+var badgeEl   = document.getElementById("chat-badge");
+
+function scrollDown(){ body.scrollTop = body.scrollHeight; }
+
+function bumpUnread(){
+  if(!state.isOpen){
+    state.unread++;
+    badgeEl.textContent = state.unread;
+    badgeEl.style.display = "flex";
+  }
+}
+
+function addBotBubble(text){
+  var row = document.createElement("div");
+  row.className = "row bot";
+  var icon = document.createElement("div");
+  icon.className = "bot-icon";
+  icon.textContent = "AI";
+  var bubble = document.createElement("div");
+  bubble.className = "bubble";
+  bubble.innerHTML = formatText(text);
+  row.appendChild(icon);
+  row.appendChild(bubble);
+  body.appendChild(row);
+  scrollDown();
+  bumpUnread();
+}
+
+function addUserBubble(text){
+  var row = document.createElement("div");
+  row.className = "row user";
+  var bubble = document.createElement("div");
+  bubble.className = "bubble";
+  bubble.textContent = text;
+  row.appendChild(bubble);
+  body.appendChild(row);
+  scrollDown();
+}
+
+function formatText(text){
+  var escaped = text.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  return escaped.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>").replace(/\n/g, "<br/>");
+}
+
+function addOptions(options, onPick){
+  var wrap = document.createElement("div");
+  wrap.className = "options";
+  options.forEach(function(opt){
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "opt-btn";
+    btn.textContent = opt;
+    btn.addEventListener("click", function(){
+      wrap.remove();
+      addUserBubble(opt);
+      onPick(opt);
+    });
+    wrap.appendChild(btn);
+  });
+  body.appendChild(wrap);
+  scrollDown();
+  return wrap;
+}
+
+function addQuickReplies(){
+  var wrap = document.createElement("div");
+  wrap.className = "quick";
+  CONFIG.quickReplies.forEach(function(q){
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "quick-btn";
+    btn.textContent = q;
+    btn.addEventListener("click", function(){
+      wrap.remove();
+      if(q.toLowerCase().indexOf("human") !== -1){
+        addUserBubble(q);
+        askNeedHumanHelp();
+        return;
+      }
+      addUserBubble(q);
+      askAi(q.replace(/^[^a-zA-Z]+/, ""));
+    });
+    wrap.appendChild(btn);
+  });
+  body.appendChild(wrap);
+  scrollDown();
+}
+
+// "Need Human Help?" branch from the flow diagram
+function askNeedHumanHelp(){
+  showTyping(function(){
+    addBotBubble("Of course! Would you like to schedule a call, or chat with a live agent right now?");
+    var wrap = document.createElement("div");
+    wrap.className = "handoff";
+
+    var scheduleBtn = document.createElement("button");
+    scheduleBtn.className = "handoff-btn";
+    scheduleBtn.textContent = "📅 Schedule a call";
+    scheduleBtn.addEventListener("click", function(){
+      wrap.remove();
+      addUserBubble("Schedule a call");
+      offerTimeSlots();
+    });
+
+    var agentBtn = document.createElement("button");
+    agentBtn.className = "handoff-btn ghost";
+    agentBtn.textContent = "💬 Connect to live agent";
+    agentBtn.addEventListener("click", function(){
+      wrap.remove();
+      addUserBubble("Connect to live agent");
+      connectLiveAgent();
+    });
+
+    wrap.appendChild(scheduleBtn);
+    wrap.appendChild(agentBtn);
+    body.appendChild(wrap);
+    scrollDown();
+  });
+}
+
+function offerTimeSlots(){
+  showTyping(function(){
+    addBotBubble("When works best for a quick call?");
+    addOptions(CONFIG.timeSlots, function(timeChoice){
+      showTyping(function(){
+        addBotBubble(
+          "✅ Done! We've scheduled your call for **" + timeChoice + "** and will reach you at " +
+          (state.lead.phone || "the number you provide") + " or " + (state.lead.email || "your email") +
+          ". Feel free to keep asking me anything in the meantime! 💬"
+        );
+        submitLead({ callScheduled: timeChoice });
+      });
+    });
+  });
+}
+
+function connectLiveAgent(){
+  showTyping(function(){
+    addBotBubble(
+      "Connecting you to a live agent now. Our team typically responds within a few minutes during business hours " +
+      "— you can also reach us directly at **" + CONFIG.companyEmail + "** or **" + CONFIG.companyPhone + "**.\n\n" +
+      "Chat stays open, so keep talking to me too while you wait! 💬"
+    );
+    submitLead({ liveAgentRequested: true });
+  });
+}
+
+function showTyping(cb, delay){
+  delay = delay || 550;
+  var t = document.createElement("div");
+  t.className = "typing";
+  t.innerHTML = "<span></span><span></span><span></span>";
+  body.appendChild(t);
+  scrollDown();
+  setTimeout(function(){ t.remove(); cb(); }, delay);
+}
+
+function showError(msg){
+  var e = document.createElement("div");
+  e.className = "error-text";
+  e.textContent = msg;
+  body.appendChild(e);
+  scrollDown();
+  setTimeout(function(){ e.remove(); }, 2800);
+}
+
+function setInputMode(mode){
+  if(mode === "locked"){
+    input.disabled = true; sendBtn.disabled = true;
+    input.placeholder = "Choose an option above...";
+  } else {
+    input.disabled = false; sendBtn.disabled = false;
+    input.placeholder = state.step === "CHAT" ? "Ask anything..." : "Type your reply...";
+    input.focus();
+  }
+}
+
+function isValidEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); }
+function isValidPhone(v){ var d = v.replace(/\D/g,""); return d.length >= 10 && d.length <= 13; }
+function isValidName(v){ return v.trim().length >= 2; }
+function firstName(){ return (state.lead.name.split(" ")[0]) || "there"; }
+
+/* ============================================================
+   LEAD CAPTURE FLOW: Name → Email → Phone → Company
+   ============================================================ */
+function startFlow(){
+  body.innerHTML = "";
+  state.step = "GREET";
+  state.lead = { name: "", email: "", phone: "", company: "" };
+  state.history = [];
+  state.aiTurns = 0;
+  setInputMode("locked");
+
+  showTyping(function(){
+    addBotBubble("Hi 👋 Welcome to **" + CONFIG.companyName + "**! I'm " + CONFIG.botName + ", your assistant.");
+    showTyping(function(){
+      addBotBubble("First, what's your name?");
+      state.step = "ASK_NAME";
+      setInputMode("text");
+    }, 600);
+  }, 400);
+}
+
+function askEmail(){
+  showTyping(function(){
+    addBotBubble("Nice to meet you, " + firstName() + "! 🙂 What's your email address?");
+    state.step = "ASK_EMAIL";
+    setInputMode("text");
+  });
+}
+
+function askPhone(){
+  showTyping(function(){
+    addBotBubble("Great, thanks! Could you also share your phone number so our team can reach you if needed?");
+    state.step = "ASK_PHONE";
+    setInputMode("text");
+  });
+}
+
+function askCompany(){
+  showTyping(function(){
+    addBotBubble("Last one — what's the name of your company?");
+    state.step = "ASK_COMPANY";
+    setInputMode("text");
+  });
+}
+
+function finishLeadCapture(){
+  setInputMode("locked");
+  showTyping(function(){
+    addBotBubble(
+      "✅ Thanks, " + firstName() + "! Here's what I've got:\n" +
+      "• Email: " + state.lead.email + "\n" +
+      "• Phone: " + state.lead.phone + "\n" +
+      "• Company: " + state.lead.company + "\n\n" +
+      "You're all set! Ask me anything about " + CONFIG.companyName + " — services, pricing, careers, portfolio, you name it. 💬"
+    );
+    submitLead({});
+    enterChatMode();
+  });
+}
+
+function enterChatMode(){
+  state.step = "CHAT";
+  setInputMode("text");
+  addQuickReplies();
+}
+
+function submitLead(extra){
+  var payload = Object.assign({}, state.lead, extra || {});
+  console.log("LEAD CAPTURED:", payload);
+  if(CONFIG.leadWebhookUrl){
+    fetch(CONFIG.leadWebhookUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    }).catch(function(err){ console.error("Lead submission failed:", err); });
+  }
+}
+
+/* ============================================================
+   "ASK ME ANYTHING" — AI answers about the company
+   ============================================================ */
+function looksLikeHumanRequest(text){
+  return /talk to (a )?(human|person|agent|someone)|schedule a call|book a call|speak to (someone|sales|support)/i.test(text);
+}
+
+function askAi(question){
+  if(looksLikeHumanRequest(question)){
+    askNeedHumanHelp();
+    return;
+  }
+
+  if(state.aiTurns >= CONFIG.maxAiTurns){
+    addBotBubble("We've covered a lot here! For anything further, let's get you to our team directly.");
+    askNeedHumanHelp();
+    return;
+  }
+  state.aiTurns++;
+  state.history.push({ role: "user", content: question });
+  if(state.history.length > 16) state.history = state.history.slice(-16);
+
+  setInputMode("locked");
+  showTyping(function(){
+    if(!CONFIG.chatApiUrl){
+      // No AI backend configured yet — answer from the local knowledge base
+      var reply = localKnowledgeAnswer(question);
+      if(!reply){
+        reply = "I don't have an exact answer for that yet, but our team can help — want me to connect you, or you can email **" + CONFIG.companyEmail + "**.";
+      }
+      addBotBubble(reply);
+      state.history.push({ role: "assistant", content: reply });
+      setInputMode("text");
+      return;
+    }
+
+    fetch(CONFIG.chatApiUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        messages: state.history,
+        lead: state.lead,
+        knowledge: buildKnowledgeSystemText() // sent so the AI grounds answers in your real company info
+      })
+    })
+      .then(function(res){
+        if(!res.ok) throw new Error("API error");
+        return res.json();
+      })
+      .then(function(data){
+        var reply = data.reply || localKnowledgeAnswer(question) || "Thanks for asking! Our team will follow up with more details.";
+        addBotBubble(reply);
+        state.history.push({ role: "assistant", content: reply });
+      })
+      .catch(function(){
+        var fallback = localKnowledgeAnswer(question);
+        addBotBubble(fallback || ("Sorry, I'm having trouble answering that right now. Please email **" + CONFIG.companyEmail + "** and we'll get back to you shortly."));
+      })
+      .finally(function(){
+        setInputMode("text");
+      });
+  }, 500);
+}
+
+/* ============================================================
+   INPUT HANDLING
+   ============================================================ */
+function handleUserText(rawText){
+  var text = (rawText || "").trim();
+  if(!text) return;
+
+  if(state.step === "ASK_NAME"){
+    if(!isValidName(text)){
+      addUserBubble(text);
+      showError("Please enter your full name (at least 2 characters).");
+      return;
+    }
+    addUserBubble(text);
+    state.lead.name = text;
+    askEmail();
+    return;
+  }
+
+  if(state.step === "ASK_EMAIL"){
+    if(!isValidEmail(text)){
+      addUserBubble(text);
+      showError("That doesn't look like a valid email. Try again, e.g. name@company.com");
+      return;
+    }
+    addUserBubble(text);
+    state.lead.email = text;
+    askPhone();
+    return;
+  }
+
+  if(state.step === "ASK_PHONE"){
+    if(!isValidPhone(text)){
+      addUserBubble(text);
+      showError("That doesn't look like a valid number. Please enter a 10-digit phone number.");
+      return;
+    }
+    addUserBubble(text);
+    state.lead.phone = text;
+    askCompany();
+    return;
+  }
+
+  if(state.step === "ASK_COMPANY"){
+    if(!isValidName(text)){
+      addUserBubble(text);
+      showError("Please enter your company name.");
+      return;
+    }
+    addUserBubble(text);
+    state.lead.company = text;
+    finishLeadCapture();
+    return;
+  }
+
+  // CHAT mode — Ask Me Anything
+  addUserBubble(text);
+  askAi(text);
+}
+
+/* ============================================================
+   UI WIRING
+   ============================================================ */
+launcher.addEventListener("click", function(){
+  win.classList.add("open");
+  launcher.style.display = "none";
+  state.isOpen = true;
+  state.unread = 0;
+  badgeEl.style.display = "none";
+  if(state.step === "GREET") startFlow();
+});
+
+closeBtn.addEventListener("click", function(){
+  win.classList.remove("open");
+  launcher.style.display = "flex";
+  state.isOpen = false;
+});
+
+minBtn.addEventListener("click", function(){
+  win.classList.toggle("open");
+  launcher.style.display = win.classList.contains("open") ? "none" : "flex";
+  state.isOpen = win.classList.contains("open");
+});
+
+sendBtn.addEventListener("click", function(){
+  handleUserText(input.value);
+  input.value = "";
+});
+
+input.addEventListener("keydown", function(e){
+  if(e.key === "Enter" && !input.disabled){
+    handleUserText(input.value);
+    input.value = "";
+  }
+});
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+"use client";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
+import "swiper/css";
+
+export default function ProfileSlider() {
+  const profiles = [
+    {
+      name: "Richa Agarwal.",
+      role: "Sr. Backend Architect",
+      exp: "14 years of experience",
+      person: "/images/1.png",
+      company: "/images/bbva.svg",
+    },
+    {
+      name: "Aman Sharma.",
+      role: "DevOps Engineer",
+      exp: "10 years of experience",
+      person: "/images/t1.png",
+      company: "/images/J-2.svg",
+    },
+    {
+      name: "Aashish Rana.",
+      role: "Backend Engineer",
+      exp: "8 years of experience",
+      person: "/images/t1.png",
+      company: "/images/a-3.svg",
+    },
+    {
+      name: "Neha Kapoor.",
+      role: "Backend Engineer",
+      exp: "8 years of experience",
+      person: "/images/t3.png",
+      company: "/images/siriusxm-4.svg",
+    },
+    {
+      name: "Naman Verma.",
+      role: "Backend Engineer",
+      exp: "8 years of experience",
+      person: "/images/3.png",
+      company: "/images/motorolla-5.svg",
+    },
+  ];
+
+  // Responsive UI update: slider shrinks with its parent on mobile.
+  return (
+    <div className="w-full max-w-[360px]">
+
+      <Swiper
+        modules={[Autoplay]}
+        slidesPerView={1}
+        loop={true}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+      >
+        {profiles.map((item, i) => (
+          <SwiperSlide key={i}>
+            <div className="bg-white rounded-xl shadow-md p-4 flex items-center justify-between">
+
+              {/* LEFT */}
+              <div className="flex items-center gap-4">
+                <img
+                  src={item.person}
+                  className="w-15 h-15 object-cover rounded-2xl"
+                />
+                <div>
+                  <p className="text-black font-bold text-sm">{item.role}</p>
+                  <p className="text-xs text-gray-500">{item.name}</p>
+                  <p className="text-xs text-gray-400">{item.exp}</p>
+                </div>
+              </div>
+
+              {/* RIGHT */}
+              <div className="text-right">
+                <p className="text-[10px] text-gray-400">Previous Client</p>
+                <img
+                  src={item.company}
+                  className="h-12 ml-auto object-contain"
+                />
+              </div>
+
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+    </div>
+  );
+}

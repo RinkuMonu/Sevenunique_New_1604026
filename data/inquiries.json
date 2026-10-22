@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1782196178923,
+    "name": "RINKU YADAV",
+    "email": "rinkuyadav9460@gmail.com",
+    "phone": "9460129249",
+    "service": "Web Development",
+    "comments": "VILL.- OSPUR, POST-GUNTA, TEH-BANSUR",
+    "createdAt": "2026-06-23T06:29:38.923Z"
+  },
+  {
+    "id": 1782196204751,
+    "name": "RINKU YADAV",
+    "email": "rinkuyadav9460@gmail.com",
+    "phone": "9460129249",
+    "service": "AI Solutions",
+    "comments": "VILL.- OSPUR, POST-GUNTA, TEH-BANSUR",
+    "createdAt": "2026-06-23T06:30:04.751Z"
+  }
+]
