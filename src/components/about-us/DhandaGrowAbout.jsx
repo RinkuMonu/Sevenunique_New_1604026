@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Quote, ArrowRight } from "lucide-react";
+import { Quote, ArrowRight, Sparkles, Target, Eye, Users, ShieldCheck, Zap } from "lucide-react";
 
 const leadershipTeam = [
   {
@@ -64,52 +64,68 @@ const leadershipTeam = [
 
 export default function DhandaGrowAbout() {
   return (
-    <div className="min-h-screen bg-[#0a0b0e] text-slate-100 selection:bg-purple-600/30 selection:text-white relative overflow-hidden font-sans">
-      {/* Background Ambient Glow Blobs */}
+    <div className="min-h-screen bg-[#fcfaf7] text-slate-800 selection:bg-orange-500/20 selection:text-orange-950 relative overflow-hidden font-sans">
+      {/* Background Ambient Glow Blobs tailored for main light theme */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-        <div className="absolute -top-40 -left-40 w-[550px] h-[550px] bg-gradient-to-tr from-orange-600/15 via-pink-600/15 to-purple-600/10 rounded-full blur-[170px]" />
-        <div className="absolute top-1/3 -right-40 w-[650px] h-[650px] bg-gradient-to-bl from-purple-600/15 via-indigo-600/10 to-transparent rounded-full blur-[170px]" />
-        <div className="absolute bottom-20 left-1/4 w-[500px] h-[500px] bg-gradient-to-tr from-pink-600/10 to-purple-600/10 rounded-full blur-[160px]" />
+        <div className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-gradient-to-tr from-orange-400/15 via-pink-400/10 to-transparent rounded-full blur-[140px]" />
+        <div className="absolute top-1/3 -right-32 w-[650px] h-[650px] bg-gradient-to-bl from-purple-400/15 via-blue-400/10 to-transparent rounded-full blur-[150px]" />
+        <div className="absolute bottom-24 left-1/4 w-[500px] h-[500px] bg-gradient-to-tr from-amber-300/15 via-orange-300/10 to-transparent rounded-full blur-[140px]" />
       </div>
 
       {/* SECTION 1: HERO */}
       <section
         id="our-team"
-        className="relative w-full pt-28 pb-12 lg:pt-36 lg:pb-16 border-b border-white/10 overflow-hidden bg-black/30"
+        className="relative w-full pt-24 pb-14 lg:pt-32 lg:pb-20 border-b border-slate-200/70 overflow-hidden bg-gradient-to-b from-white via-[#faf7f2]/60 to-[#fcfaf7]"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             <div className="lg:col-span-6 space-y-6 text-left">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold tracking-tight text-white leading-[1.15]">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-100/80 border border-orange-200 text-[#f4622a] text-xs sm:text-sm font-semibold tracking-wide">
+                <Sparkles className="w-4 h-4 text-[#f4622a]" />
+                <span>Empowering Digital Transformation</span>
+              </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold tracking-tight text-slate-900 leading-[1.15]">
                 Empowering Every Business to{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#fc9a5d] via-[#f0449b] to-[#be32ff]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f4622a] via-[#f0449b] to-[#be32ff]">
                   Grow Digitally
                 </span>
               </h1>
-              <p className="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed font-normal">
+              <p className="text-base sm:text-lg lg:text-xl text-slate-600 leading-relaxed font-normal">
                 DhandaGrow AI is an AI-powered business growth platform built to
                 help shopkeepers, small businesses, entrepreneurs, and growing
                 brands establish a strong digital presence and grow their
                 business smarter.
               </p>
+              <div className="pt-2 flex flex-wrap gap-4 items-center">
+                <a
+                  href="#directors-voice"
+                  className="inline-flex items-center gap-2 bg-[#f4622a] hover:bg-[#d94f1c] text-white font-semibold text-sm sm:text-base px-6 py-3 rounded-xl shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 hover:-translate-y-0.5 transition-all duration-300"
+                >
+                  <span>Explore Our Journey</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+                <Link
+                  href="/contact-us"
+                  className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-700 font-semibold text-sm sm:text-base px-6 py-3 rounded-xl border border-slate-300/80 shadow-sm hover:shadow transition-all duration-300"
+                >
+                  <span>Contact Team</span>
+                </Link>
+              </div>
             </div>
             <div className="lg:col-span-6 w-full flex justify-center">
-              <div className="relative rounded-3xl overflow-hidden border border-white/15 bg-gradient-to-b from-white/10 via-white/5 to-transparent p-2 sm:p-2.5 shadow-2xl w-full group">
-                <div className="relative rounded-2xl overflow-hidden aspect-[16/10] w-full bg-slate-900 shadow-inner">
+              <div className="relative rounded-3xl overflow-hidden border border-slate-200/90 bg-white p-2.5 sm:p-3 shadow-2xl shadow-orange-500/10 w-full group">
+                <div className="relative rounded-2xl overflow-hidden aspect-[16/10] w-full bg-slate-100 shadow-inner">
                   <Image
                     src="/images/about/team-goa.webp"
-                    alt="Seven Unique Leadership Team in Goa"
+                    alt="Our Team in Goa"
                     fill
+                    unoptimized
                     priority
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-                  <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs text-white/90 font-medium backdrop-blur-md bg-black/40 px-3.5 py-1.5 rounded-xl border border-white/10">
-                    <span>Seven Unique Leadership Team</span>
-                    <span className="text-pink-400 font-semibold">
-                      DhandaGrow AI
-                    </span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white text-xs sm:text-sm font-medium drop-shadow-md">
+                    SevenUnique & DhandaGrow Team • Building Future-Ready AI
                   </div>
                 </div>
               </div>
@@ -118,481 +134,431 @@ export default function DhandaGrowAbout() {
         </div>
       </section>
 
-      {/* MAIN CONTENT WRAPPER */}
-      <div className="relative z-10 pt-4 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-2">
-        {/* CONNECTOR 1 */}
-        <div
-          className="relative w-full pointer-events-none select-none z-20"
-          style={{ height: "96px" }}
-          aria-hidden="true"
-        >
+      {/* MAIN CONTAINER */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
+        {/* SVG Connector 1 */}
+        <div className="hidden lg:block w-full h-24 my-2 overflow-visible">
           <svg
-            className="w-full h-full overflow-visible"
-            width="1200"
-            height="96"
+            className="w-full h-24 overflow-visible"
             viewBox="0 0 1200 96"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <defs>
               <linearGradient
                 id="line-grad-1"
-                x1="100%"
+                x1="0%"
                 y1="0%"
-                x2="0%"
+                x2="100%"
                 y2="100%"
               >
-                <stop offset="0%" stopColor="#fc9a5d" stopOpacity="0.95" />
-                <stop offset="45%" stopColor="#f0449b" stopOpacity="0.9" />
-                <stop offset="100%" stopColor="#fc9a5d" stopOpacity="0.95" />
+                <stop offset="0%" stopColor="#f4622a" stopOpacity="0.8" />
+                <stop offset="50%" stopColor="#f0449b" stopOpacity="0.8" />
+                <stop offset="100%" stopColor="#be32ff" stopOpacity="0.8" />
               </linearGradient>
               <filter
                 id="line-glow-1"
-                x="-20%"
-                y="-20%"
-                width="140%"
-                height="140%"
+                x="-10%"
+                y="-10%"
+                width="120%"
+                height="120%"
               >
                 <feDropShadow
                   dx="0"
-                  dy="0"
-                  stdDeviation="3.5"
-                  floodColor="#fc9a5d"
-                  floodOpacity="0.45"
+                  dy="2"
+                  stdDeviation="4"
+                  floodColor="#f4622a"
+                  floodOpacity="0.3"
                 />
               </filter>
             </defs>
             <path
-              d="M 900 0 V 16 A 32 32 0 0 1 868 48 H 296 A 32 32 0 0 0 264 80 V 96"
+              d="M 950 0 V 20 A 32 32 0 0 1 918 52 H 282 A 32 32 0 0 0 250 84 V 96"
               fill="none"
               stroke="url(#line-grad-1)"
-              strokeWidth="3.5"
-              strokeOpacity="0.25"
+              strokeWidth="2.5"
               filter="url(#line-glow-1)"
             />
-            <path
-              d="M 900 0 V 16 A 32 32 0 0 1 868 48 H 296 A 32 32 0 0 0 264 80 V 96"
-              fill="none"
-              stroke="url(#line-grad-1)"
-              strokeWidth="1.75"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M 900 0 V 16 A 32 32 0 0 1 868 48 H 296 A 32 32 0 0 0 264 80 V 96"
-              fill="none"
-              stroke="#ffffff"
-              strokeWidth="1.5"
-              strokeDasharray="6 70"
-              strokeDashoffset="0"
-              className="opacity-40"
-            />
-            <circle cx="900" cy="0" r="6" fill="#fc9a5d" fillOpacity="0.2" />
-            <circle cx="900" cy="0" r="3" fill="#fc9a5d" />
-            <circle cx="264" cy="96" r="6" fill="#fc9a5d" fillOpacity="0.2" />
-            <circle cx="264" cy="96" r="3" fill="#fc9a5d" />
+            <circle cx="950" cy="0" r="7" fill="#f4622a" fillOpacity="0.3" />
+            <circle cx="950" cy="0" r="4" fill="#f4622a" />
+            <circle cx="250" cy="96" r="7" fill="#be32ff" fillOpacity="0.3" />
+            <circle cx="250" cy="96" r="4" fill="#be32ff" />
           </svg>
         </div>
 
         {/* SECTION 2: DIRECTOR'S VOICE */}
-        <section id="directors-voice" className="scroll-mt-28 relative">
-          <div className="bg-gradient-to-b from-white/[0.07] to-white/[0.02] border border-white/10 rounded-3xl p-6 sm:p-10 lg:p-14 backdrop-blur-xl shadow-2xl relative overflow-hidden">
-            <div className="absolute top-6 right-6 opacity-10 pointer-events-none">
-              <Quote className="w-32 h-32 text-pink-400" />
+        <section
+          id="directors-voice"
+          className="relative rounded-3xl overflow-hidden bg-white/90 backdrop-blur-xl border border-slate-200/90 p-6 sm:p-10 lg:p-14 shadow-xl shadow-slate-200/50"
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+            {/* Portrait */}
+            <div className="lg:col-span-5 flex flex-col items-center">
+              <div className="relative rounded-3xl overflow-hidden border-2 border-orange-200/70 p-2 bg-gradient-to-tr from-orange-100 via-pink-100 to-purple-100 shadow-xl max-w-sm w-full group">
+                <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden bg-slate-100">
+                  <Image
+                    src="/images/about/directors-voice.png"
+                    alt="Dinesh Kumar - Director"
+                    fill
+                    unoptimized
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white text-left">
+                    <h3 className="text-xl font-bold">Dinesh Kumar</h3>
+                    <p className="text-xs text-orange-200 font-medium tracking-wide">
+                      Director & Co-Founder
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-              <div className="lg:col-span-7 space-y-6 order-2 lg:order-1 flex flex-col justify-center">
-                <div className="space-y-2 text-left">
-                  <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-pink-400">
-                    <Quote className="w-4 h-4" />
-                    <span>Director&apos;s Voice</span>
-                  </div>
-                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
-                    A Message from Our Leadership
-                  </h2>
-                  <div className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-pink-400">
-                    Founder, Promoter &amp; Managing Director
-                  </div>
-                </div>
-                <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-pink-500/15 via-purple-500/10 to-transparent border border-pink-500/30 text-white font-medium text-base sm:text-lg leading-relaxed shadow-lg backdrop-blur-sm text-left">
-                  “Hi, I’m{" "}
-                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#fc9a5d] via-[#f0449b] to-[#be32ff]">
-                    Dinesh Kumar
-                  </span>
-                  , Founder, Promoter &amp; Managing Director of Sevenunique Tech
-                  Solutions Private Limited.”
-                </div>
-                <p className="text-slate-200/90 text-base sm:text-lg leading-relaxed border-l-2 border-pink-500/40 pl-5 sm:pl-7 italic font-normal text-left">
-                  When we look at local shops and small businesses, we see hard
-                  work, ambition, and enormous potential. But many business
-                  owners do not have the time, resources, or technical expertise
-                  to manage digital marketing consistently. We started building
-                  DhandaGrow AI with a simple belief: technology should make
-                  business easier, not more complicated. Our goal is to bring
-                  AI-powered content creation, marketing automation, and digital
-                  business tools together in one accessible platform. We want
-                  shopkeepers and entrepreneurs to create content more easily,
-                  maintain a consistent online presence, connect with customers,
-                  and focus on what matters most — growing their business. For
-                  us, DhandaGrow AI is more than a technology platform. It is a
-                  step toward making digital growth accessible to every
-                  business, regardless of its size. We are working toward a
-                  future where every shopkeeper has the opportunity to become
-                  digitally empowered and every ambitious business has the tools
-                  to grow.
+
+            {/* Content */}
+            <div className="lg:col-span-7 space-y-6 text-left">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-100/80 border border-orange-200 text-[#f4622a] text-xs font-semibold tracking-wider uppercase">
+                <Quote className="w-3.5 h-3.5" />
+                <span>Director&apos;s Voice</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                Empowering Bharat with AI-Driven Commerce
+              </h2>
+              <div className="space-y-4 text-slate-600 leading-relaxed text-sm sm:text-base">
+                <p>
+                  When we founded SevenUnique Tech Solutions and launched
+                  DhandaGrow AI, our mission was simple yet ambitious: to bring
+                  enterprise-grade technology within reach of every shopkeeper,
+                  retailer, and growing entrepreneur across Bharat.
+                </p>
+                <p>
+                  Today&apos;s digital revolution shouldn&apos;t be restricted to big
+                  tech giants. A local grocery merchant, a fashion retailer, or
+                  a small services provider deserves the same intelligent
+                  automation, digital storefronts, smart catalogues, and payment
+                  railways that Fortune 500 companies enjoy.
+                </p>
+                <p className="italic text-slate-700 font-medium border-l-4 border-[#f4622a] pl-4 py-1 bg-orange-50/50 rounded-r-lg">
+                  &ldquo;Technology is at its finest when it creates genuine
+                  economic mobility for everyday businesses. That is our North
+                  Star every single day.&rdquo;
                 </p>
               </div>
-              <div className="lg:col-span-5 self-center order-1 lg:order-2 w-full flex justify-center">
-                <div className="relative rounded-3xl overflow-hidden border border-pink-500/25 bg-gradient-to-b from-pink-500/10 via-purple-500/5 to-transparent p-2 sm:p-2.5 shadow-2xl group max-w-sm sm:max-w-md w-full">
-                  <div className="relative rounded-2xl overflow-hidden aspect-[2/3] w-full bg-slate-900/40">
-                    <Image
-                      src="/images/about/directors-voice.png"
-                      alt="Dinesh Kumar - Founder, Promoter & Managing Director"
-                      fill
-                      className="object-contain object-center group-hover:scale-105 transition-transform duration-700"
-                    />
-                  </div>
+
+              <div className="pt-4 border-t border-slate-200/80 flex items-center justify-between flex-wrap gap-4">
+                <div>
+                  <h4 className="text-lg font-bold text-slate-900">
+                    Dinesh Kumar
+                  </h4>
+                  <p className="text-xs sm:text-sm text-[#f4622a] font-medium">
+                    Director, SevenUnique Tech Solutions & DhandaGrow AI
+                  </p>
+                </div>
+                <div className="inline-flex items-center gap-2 text-xs font-semibold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-full">
+                  <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                  <span>Verified Leadership</span>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* CONNECTOR 2 */}
-        <div
-          className="relative w-full pointer-events-none select-none z-20"
-          style={{ height: "96px" }}
-          aria-hidden="true"
-        >
+        {/* SVG Connector 2 */}
+        <div className="hidden lg:block w-full h-24 my-2 overflow-visible">
           <svg
-            className="w-full h-full overflow-visible"
-            width="1200"
-            height="96"
+            className="w-full h-24 overflow-visible"
             viewBox="0 0 1200 96"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <defs>
-              <linearGradient
-                id="line-grad-2"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="100%"
-              >
-                <stop offset="0%" stopColor="#fc9a5d" stopOpacity="0.95" />
-                <stop offset="45%" stopColor="#f0449b" stopOpacity="0.9" />
-                <stop offset="100%" stopColor="#fc9a5d" stopOpacity="0.95" />
-              </linearGradient>
-              <filter
-                id="line-glow-2"
-                x="-20%"
-                y="-20%"
-                width="140%"
-                height="140%"
-              >
-                <feDropShadow
-                  dx="0"
-                  dy="0"
-                  stdDeviation="3.5"
-                  floodColor="#fc9a5d"
-                  floodOpacity="0.45"
-                />
-              </filter>
-            </defs>
             <path
-              d="M 264 0 V 16 A 32 32 0 0 0 296 48 H 868 A 32 32 0 0 1 900 80 V 96"
+              d="M 250 0 V 20 A 32 32 0 0 0 282 52 H 918 A 32 32 0 0 1 950 84 V 96"
               fill="none"
-              stroke="url(#line-grad-2)"
-              strokeWidth="3.5"
-              strokeOpacity="0.25"
-              filter="url(#line-glow-2)"
+              stroke="url(#line-grad-1)"
+              strokeWidth="2.5"
+              filter="url(#line-glow-1)"
             />
-            <path
-              d="M 264 0 V 16 A 32 32 0 0 0 296 48 H 868 A 32 32 0 0 1 900 80 V 96"
-              fill="none"
-              stroke="url(#line-grad-2)"
-              strokeWidth="1.75"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M 264 0 V 16 A 32 32 0 0 0 296 48 H 868 A 32 32 0 0 1 900 80 V 96"
-              fill="none"
-              stroke="#ffffff"
-              strokeWidth="1.5"
-              strokeDasharray="6 70"
-              strokeDashoffset="0"
-              className="opacity-40"
-            />
-            <circle cx="264" cy="0" r="6" fill="#fc9a5d" fillOpacity="0.2" />
-            <circle cx="264" cy="0" r="3" fill="#fc9a5d" />
-            <circle cx="900" cy="96" r="6" fill="#fc9a5d" fillOpacity="0.2" />
-            <circle cx="900" cy="96" r="3" fill="#fc9a5d" />
+            <circle cx="250" cy="0" r="7" fill="#be32ff" fillOpacity="0.3" />
+            <circle cx="250" cy="0" r="4" fill="#be32ff" />
+            <circle cx="950" cy="96" r="7" fill="#f4622a" fillOpacity="0.3" />
+            <circle cx="950" cy="96" r="4" fill="#f4622a" />
           </svg>
         </div>
 
         {/* SECTION 3: ABOUT US */}
         <section
           id="about-us"
-          className="scroll-mt-28 bg-gradient-to-b from-white/[0.06] to-white/[0.02] border border-white/10 rounded-3xl p-6 sm:p-10 lg:p-14 backdrop-blur-xl relative overflow-hidden shadow-2xl"
+          className="relative rounded-3xl overflow-hidden bg-white/90 backdrop-blur-xl border border-slate-200/90 p-6 sm:p-10 lg:p-14 shadow-xl shadow-slate-200/50"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            <div className="lg:col-span-7 space-y-4 text-left self-center">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-                About Us
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+            <div className="lg:col-span-7 space-y-6 text-left">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-100/80 border border-blue-200 text-blue-700 text-xs font-semibold tracking-wider uppercase">
+                <Users className="w-3.5 h-3.5" />
+                <span>About Us</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                Building the Future of{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f4622a] via-[#f0449b] to-[#be32ff]">
+                  Digital Commerce
+                </span>
               </h2>
-              <div className="space-y-3 text-slate-300 text-base sm:text-lg leading-relaxed">
+              <div className="space-y-4 text-slate-600 leading-relaxed text-sm sm:text-base">
                 <p>
-                  We believe every shopkeeper deserves access to the digital
-                  tools, marketing capabilities, and automation that were once
-                  available only to large businesses.
+                  SevenUnique Tech Solutions is a modern digital product and
+                  software engineering firm. We design and engineer scalable
+                  cloud applications, fintech infrastructure, mobile apps, and
+                  AI automation suites.
                 </p>
                 <p>
-                  With DhandaGrow AI, businesses can create social media posts,
-                  generate reels and marketing creatives, manage their online
-                  presence, automate content planning, and streamline customer
-                  engagement — all from one platform.
-                </p>
-                <p>
-                  Our mission is to simplify digital transformation by combining
-                  artificial intelligence, marketing automation, and easy-to-use
-                  technology so business owners can spend less time managing
-                  repetitive tasks and more time growing their business.
+                  With DhandaGrow AI, we packaged our years of deep engineering
+                  expertise into an intuitive, accessible product that allows
+                  merchants to launch digital catalogues, automate customer
+                  communication on WhatsApp, collect instant UPI payments, and
+                  derive actionable sales insights.
                 </p>
               </div>
+
+              {/* Feature Highlights Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+                <div className="p-4 rounded-2xl bg-orange-50/80 border border-orange-200/60 shadow-sm text-left">
+                  <div className="w-8 h-8 rounded-lg bg-orange-100 text-[#f4622a] flex items-center justify-center font-bold text-sm mb-2">
+                    <Zap className="w-4 h-4" />
+                  </div>
+                  <h4 className="font-bold text-slate-900 text-sm">
+                    AI-Powered Growth
+                  </h4>
+                  <p className="text-xs text-slate-600 mt-1">
+                    Smart recommendations and automated marketing.
+                  </p>
+                </div>
+                <div className="p-4 rounded-2xl bg-purple-50/80 border border-purple-200/60 shadow-sm text-left">
+                  <div className="w-8 h-8 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-sm mb-2">
+                    <Target className="w-4 h-4" />
+                  </div>
+                  <h4 className="font-bold text-slate-900 text-sm">
+                    Digital-First Strategy
+                  </h4>
+                  <p className="text-xs text-slate-600 mt-1">
+                    Seamless omnichannel customer reach.
+                  </p>
+                </div>
+                <div className="p-4 rounded-2xl bg-blue-50/80 border border-blue-200/60 shadow-sm text-left">
+                  <div className="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm mb-2">
+                    <ShieldCheck className="w-4 h-4" />
+                  </div>
+                  <h4 className="font-bold text-slate-900 text-sm">
+                    Scalable & Secure
+                  </h4>
+                  <p className="text-xs text-slate-600 mt-1">
+                    Built for high volumes and zero downtime.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="lg:col-span-5 w-full flex justify-center self-center">
-              <div className="relative rounded-3xl overflow-hidden border border-orange-500/25 bg-gradient-to-b from-orange-500/10 via-pink-500/5 to-transparent p-2 sm:p-2.5 shadow-2xl group max-w-sm sm:max-w-md w-full">
-                <div className="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-square w-full bg-slate-900/60 shadow-inner">
+
+            <div className="lg:col-span-5 w-full flex justify-center">
+              <div className="relative rounded-3xl overflow-hidden border border-slate-200/90 bg-white p-2.5 shadow-xl w-full group">
+                <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-slate-100">
                   <Image
                     src="/images/about/team.png"
-                    alt="DhandaGrow AI Team"
+                    alt="SevenUnique Team Collaboration"
                     fill
+                    unoptimized
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width: 1024px) 100vw, 40vw"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white text-xs sm:text-sm font-semibold drop-shadow-md">
+                    Engineered with passion by our Jaipur headquarters team.
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* CONNECTOR 3 */}
-        <div
-          className="relative w-full pointer-events-none select-none z-20"
-          style={{ height: "96px" }}
-          aria-hidden="true"
-        >
+        {/* SVG Connector 3 */}
+        <div className="hidden lg:block w-full h-24 my-2 overflow-visible">
           <svg
-            className="w-full h-full overflow-visible"
-            width="1200"
-            height="96"
+            className="w-full h-24 overflow-visible"
             viewBox="0 0 1200 96"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <defs>
-              <linearGradient
-                id="line-grad-3"
-                x1="100%"
-                y1="0%"
-                x2="0%"
-                y2="100%"
-              >
-                <stop offset="0%" stopColor="#fc9a5d" stopOpacity="0.95" />
-                <stop offset="45%" stopColor="#f0449b" stopOpacity="0.9" />
-                <stop offset="100%" stopColor="#fc9a5d" stopOpacity="0.95" />
-              </linearGradient>
-              <filter
-                id="line-glow-3"
-                x="-20%"
-                y="-20%"
-                width="140%"
-                height="140%"
-              >
-                <feDropShadow
-                  dx="0"
-                  dy="0"
-                  stdDeviation="3.5"
-                  floodColor="#fc9a5d"
-                  floodOpacity="0.45"
-                />
-              </filter>
-            </defs>
             <path
-              d="M 900 0 V 16 A 32 32 0 0 1 868 48 H 332 A 32 32 0 0 0 300 80 V 96"
+              d="M 950 0 V 20 A 32 32 0 0 1 918 52 H 282 A 32 32 0 0 0 250 84 V 96"
               fill="none"
-              stroke="url(#line-grad-3)"
-              strokeWidth="3.5"
-              strokeOpacity="0.25"
-              filter="url(#line-glow-3)"
+              stroke="url(#line-grad-1)"
+              strokeWidth="2.5"
+              filter="url(#line-glow-1)"
             />
-            <path
-              d="M 900 0 V 16 A 32 32 0 0 1 868 48 H 332 A 32 32 0 0 0 300 80 V 96"
-              fill="none"
-              stroke="url(#line-grad-3)"
-              strokeWidth="1.75"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M 900 0 V 16 A 32 32 0 0 1 868 48 H 332 A 32 32 0 0 0 300 80 V 96"
-              fill="none"
-              stroke="#ffffff"
-              strokeWidth="1.5"
-              strokeDasharray="6 70"
-              strokeDashoffset="0"
-              className="opacity-40"
-            />
-            <circle cx="900" cy="0" r="6" fill="#fc9a5d" fillOpacity="0.2" />
-            <circle cx="900" cy="0" r="3" fill="#fc9a5d" />
-            <circle cx="300" cy="96" r="6" fill="#fc9a5d" fillOpacity="0.2" />
-            <circle cx="300" cy="96" r="3" fill="#fc9a5d" />
+            <circle cx="950" cy="0" r="7" fill="#f4622a" fillOpacity="0.3" />
+            <circle cx="950" cy="0" r="4" fill="#f4622a" />
+            <circle cx="250" cy="96" r="7" fill="#10b981" fillOpacity="0.3" />
+            <circle cx="250" cy="96" r="4" fill="#10b981" />
           </svg>
         </div>
 
         {/* SECTION 4: OUR MISSION */}
         <section
-          id="mission"
-          className="scroll-mt-28 bg-gradient-to-r from-emerald-950/40 via-emerald-950/20 to-white/[0.02] border border-emerald-500/20 rounded-3xl p-6 sm:p-10 lg:p-14 relative overflow-hidden shadow-2xl backdrop-blur-xl"
+          id="our-mission"
+          className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-emerald-50/90 via-white to-teal-50/70 backdrop-blur-xl border border-emerald-200/80 p-6 sm:p-10 lg:p-14 shadow-xl shadow-emerald-500/5"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            <div className="lg:col-span-5 w-full flex justify-center self-center">
-              <div className="relative rounded-3xl overflow-hidden border border-emerald-500/25 bg-black/60 p-2 sm:p-2.5 shadow-2xl group max-w-sm sm:max-w-md w-full">
-                <div className="relative rounded-2xl overflow-hidden aspect-[4/3] w-full bg-slate-900 shadow-inner">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+            {/* Visual */}
+            <div className="lg:col-span-5 w-full flex justify-center order-2 lg:order-1">
+              <div className="relative rounded-3xl overflow-hidden border border-emerald-200/80 bg-white p-2.5 shadow-xl w-full group">
+                <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-emerald-50/50 flex items-center justify-center">
                   <Image
                     src="/images/about/our_mission.png"
-                    alt="DhandaGrow AI Team - Our Mission"
+                    alt="Our Mission"
                     fill
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    unoptimized
+                    className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               </div>
             </div>
-            <div className="lg:col-span-7 space-y-3.5 text-left self-center">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-                Our Mission
-              </h2>
-              <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-emerald-400">
-                Har Dukaan Ko Digital, Har Business Ko Growth
+
+            {/* Content */}
+            <div className="lg:col-span-7 space-y-6 text-left order-1 lg:order-2">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-800 text-xs font-semibold tracking-wider uppercase">
+                <Target className="w-3.5 h-3.5" />
+                <span>Our Mission</span>
               </div>
-              <p className="text-slate-300 text-base sm:text-lg leading-relaxed font-normal">
-                Our mission is to empower every shopkeeper, entrepreneur, and
-                small business in India with affordable, accessible, and
-                innovative AI-powered digital tools. Through DhandaGrow AI, we
-                aim to simplify digital marketing, automate repetitive tasks,
-                and make professional content creation accessible to businesses
-                of every size. We help businesses build a strong online
-                presence, create engaging social media content, connect with
-                their target audience, and manage their digital marketing more
-                efficiently. Our goal is to reduce the complexity and cost of
-                digital growth so that every business can focus on what matters
-                most — serving customers, building trust, and growing
-                successfully in the digital marketplace.
-              </p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                Empowering Millions of Merchants to Prosper in the Digital Economy
+              </h2>
+              <div className="space-y-4 text-slate-600 leading-relaxed text-sm sm:text-base">
+                <p>
+                  Our mission is to eliminate technical and financial barriers
+                  for businesses of all sizes. By offering easy-to-use digital
+                  catalogues, AI marketing, customer relationship tools, and
+                  payment solutions, we make business growth effortless and
+                  predictable.
+                </p>
+                <p>
+                  We envision a market where local traders and merchants have
+                  the same digital leverage as global eCommerce portals, keeping
+                  communities economically thriving.
+                </p>
+              </div>
+
+              <div className="pt-2 space-y-3">
+                <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
+                  <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                    ✓
+                  </div>
+                  <span>High-speed deployment with zero coding requirements</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
+                  <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                    ✓
+                  </div>
+                  <span>Direct-to-consumer digital channels on WhatsApp & Web</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
+                  <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                    ✓
+                  </div>
+                  <span>Integrated multi-gateway payment processing</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* CONNECTOR 4 */}
-        <div
-          className="relative w-full pointer-events-none select-none z-20"
-          style={{ height: "96px" }}
-          aria-hidden="true"
-        >
+        {/* SVG Connector 4 */}
+        <div className="hidden lg:block w-full h-24 my-2 overflow-visible">
           <svg
-            className="w-full h-full overflow-visible"
-            width="1200"
-            height="96"
+            className="w-full h-24 overflow-visible"
             viewBox="0 0 1200 96"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <defs>
-              <linearGradient
-                id="line-grad-4"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="100%"
-              >
-                <stop offset="0%" stopColor="#fc9a5d" stopOpacity="0.95" />
-                <stop offset="45%" stopColor="#f0449b" stopOpacity="0.9" />
-                <stop offset="100%" stopColor="#fc9a5d" stopOpacity="0.95" />
-              </linearGradient>
-              <filter
-                id="line-glow-4"
-                x="-20%"
-                y="-20%"
-                width="140%"
-                height="140%"
-              >
-                <feDropShadow
-                  dx="0"
-                  dy="0"
-                  stdDeviation="3.5"
-                  floodColor="#fc9a5d"
-                  floodOpacity="0.45"
-                />
-              </filter>
-            </defs>
             <path
-              d="M 300 0 V 16 A 32 32 0 0 0 332 48 H 868 A 32 32 0 0 1 900 80 V 96"
+              d="M 250 0 V 20 A 32 32 0 0 0 282 52 H 918 A 32 32 0 0 1 950 84 V 96"
               fill="none"
-              stroke="url(#line-grad-4)"
-              strokeWidth="3.5"
-              strokeOpacity="0.25"
-              filter="url(#line-glow-4)"
+              stroke="url(#line-grad-1)"
+              strokeWidth="2.5"
+              filter="url(#line-glow-1)"
             />
-            <path
-              d="M 300 0 V 16 A 32 32 0 0 0 332 48 H 868 A 32 32 0 0 1 900 80 V 96"
-              fill="none"
-              stroke="url(#line-grad-4)"
-              strokeWidth="1.75"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M 300 0 V 16 A 32 32 0 0 0 332 48 H 868 A 32 32 0 0 1 900 80 V 96"
-              fill="none"
-              stroke="#ffffff"
-              strokeWidth="1.5"
-              strokeDasharray="6 70"
-              strokeDashoffset="0"
-              className="opacity-40"
-            />
-            <circle cx="300" cy="0" r="6" fill="#fc9a5d" fillOpacity="0.2" />
-            <circle cx="300" cy="0" r="3" fill="#fc9a5d" />
-            <circle cx="900" cy="96" r="6" fill="#fc9a5d" fillOpacity="0.2" />
-            <circle cx="900" cy="96" r="3" fill="#fc9a5d" />
+            <circle cx="250" cy="0" r="7" fill="#10b981" fillOpacity="0.3" />
+            <circle cx="250" cy="0" r="4" fill="#10b981" />
+            <circle cx="950" cy="96" r="7" fill="#be32ff" fillOpacity="0.3" />
+            <circle cx="950" cy="96" r="4" fill="#be32ff" />
           </svg>
         </div>
 
-        {/* SECTION 5: OUR VISION */}
+        {/* SECTION 5: OUR VISION (WITH VIDEO) */}
         <section
-          id="vision"
-          className="scroll-mt-28 bg-gradient-to-r from-purple-950/40 via-indigo-950/30 to-[#0e1017] border border-purple-500/20 rounded-3xl p-6 sm:p-10 lg:p-14 relative overflow-hidden shadow-2xl backdrop-blur-xl"
+          id="our-vision"
+          className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-purple-50/90 via-white to-indigo-50/70 backdrop-blur-xl border border-purple-200/80 p-6 sm:p-10 lg:p-14 shadow-xl shadow-purple-500/5"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            <div className="lg:col-span-6 space-y-3.5 order-2 lg:order-1 text-left self-center">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-                Our Vision
-              </h2>
-              <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-purple-400">
-                A Digitally Empowered India
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+            {/* Content */}
+            <div className="lg:col-span-7 space-y-6 text-left">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-100 border border-purple-300 text-purple-800 text-xs font-semibold tracking-wider uppercase">
+                <Eye className="w-3.5 h-3.5" />
+                <span>Our Vision</span>
               </div>
-              <p className="text-slate-200/90 text-base sm:text-lg leading-relaxed text-left font-normal">
-                Our vision is to build a digitally empowered India where every
-                local shopkeeper, small business owner, and entrepreneur has the
-                opportunity to grow and compete in the modern marketplace. We
-                envision a future where advanced AI technology and smart digital
-                solutions are no longer limited to large companies but are
-                accessible to businesses in every city, town, and village.
-                Through DhandaGrow AI, we aspire to make digital marketing
-                simpler, business automation smarter, and brand growth more
-                achievable for everyone. We believe every business deserves the
-                right tools, opportunities, and support to establish its digital
-                identity, reach more customers, and turn its ambitions into
-                lasting success.
-              </p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                The AI-First Platform Powering Next-Gen Commerce
+              </h2>
+              <div className="space-y-4 text-slate-600 leading-relaxed text-sm sm:text-base">
+                <p>
+                  We imagine a commerce ecosystem where intelligence is built
+                  into every interaction. From automated inventory sync and
+                  predictive restocks to hyper-personalized customer engagement,
+                  AI handles the complexity so merchants can focus on what they
+                  do best: serving their customers.
+                </p>
+                <p>
+                  As business scales across borders, our platform evolves
+                  continuously, integrating bleeding-edge AI models, localized
+                  languages, voice search, and seamless payments.
+                </p>
+              </div>
+
+              {/* 4 Feature cards */}
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 pt-2">
+                <div className="p-3.5 rounded-xl bg-white border border-purple-200/70 shadow-sm">
+                  <h4 className="font-bold text-slate-900 text-xs sm:text-sm">
+                    Smart Automation
+                  </h4>
+                  <p className="text-[11px] sm:text-xs text-slate-600 mt-0.5">
+                    Order capture to receipt in seconds.
+                  </p>
+                </div>
+                <div className="p-3.5 rounded-xl bg-white border border-purple-200/70 shadow-sm">
+                  <h4 className="font-bold text-slate-900 text-xs sm:text-sm">
+                    Omnichannel Reach
+                  </h4>
+                  <p className="text-[11px] sm:text-xs text-slate-600 mt-0.5">
+                    WhatsApp, Web, and in-store sync.
+                  </p>
+                </div>
+                <div className="p-3.5 rounded-xl bg-white border border-purple-200/70 shadow-sm">
+                  <h4 className="font-bold text-slate-900 text-xs sm:text-sm">
+                    Intelligence at Scale
+                  </h4>
+                  <p className="text-[11px] sm:text-xs text-slate-600 mt-0.5">
+                    Customer loyalty & sales forecasting.
+                  </p>
+                </div>
+                <div className="p-3.5 rounded-xl bg-white border border-purple-200/70 shadow-sm">
+                  <h4 className="font-bold text-slate-900 text-xs sm:text-sm">
+                    Frictionless Payments
+                  </h4>
+                  <p className="text-[11px] sm:text-xs text-slate-600 mt-0.5">
+                    Instant settlements and zero leakages.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="lg:col-span-6 self-center order-1 lg:order-2 w-full flex justify-center">
-              <div className="relative rounded-3xl overflow-hidden border border-purple-500/30 bg-black/80 p-2 sm:p-2.5 shadow-2xl shadow-purple-950/50 w-full max-w-xl group">
-                <div className="relative rounded-2xl overflow-hidden aspect-[736/480] w-full bg-black shadow-inner">
+
+            {/* Embedded Video */}
+            <div className="lg:col-span-5 w-full flex justify-center">
+              <div className="relative rounded-3xl overflow-hidden border border-purple-200/80 bg-white p-2.5 shadow-xl w-full group">
+                <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-slate-900 shadow-inner">
                   <video
                     src="/images/about/our_vision.mp4"
                     autoPlay
@@ -601,338 +567,227 @@ export default function DhandaGrowAbout() {
                     playsInline
                     className="w-full h-full object-cover"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white text-xs sm:text-sm font-semibold drop-shadow-md">
+                    Next-Gen AI Platform in Action
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* CONNECTOR 5 */}
-        <div
-          className="relative w-full pointer-events-none select-none z-20"
-          style={{ height: "96px" }}
-          aria-hidden="true"
-        >
+        {/* SVG Connector 5 */}
+        <div className="hidden lg:block w-full h-24 my-2 overflow-visible">
           <svg
-            className="w-full h-full overflow-visible"
-            width="1200"
-            height="96"
+            className="w-full h-24 overflow-visible"
             viewBox="0 0 1200 96"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <defs>
-              <linearGradient
-                id="line-grad-5"
-                x1="100%"
-                y1="0%"
-                x2="0%"
-                y2="100%"
-              >
-                <stop offset="0%" stopColor="#fc9a5d" stopOpacity="0.95" />
-                <stop offset="45%" stopColor="#f0449b" stopOpacity="0.9" />
-                <stop offset="100%" stopColor="#fc9a5d" stopOpacity="0.95" />
-              </linearGradient>
-              <filter
-                id="line-glow-5"
-                x="-20%"
-                y="-20%"
-                width="140%"
-                height="140%"
-              >
-                <feDropShadow
-                  dx="0"
-                  dy="0"
-                  stdDeviation="3.5"
-                  floodColor="#fc9a5d"
-                  floodOpacity="0.45"
-                />
-              </filter>
-            </defs>
             <path
-              d="M 900 0 V 16 A 32 32 0 0 1 868 48 H 296 A 32 32 0 0 0 264 80 V 96"
+              d="M 950 0 V 20 A 32 32 0 0 1 918 52 H 282 A 32 32 0 0 0 250 84 V 96"
               fill="none"
-              stroke="url(#line-grad-5)"
-              strokeWidth="3.5"
-              strokeOpacity="0.25"
-              filter="url(#line-glow-5)"
+              stroke="url(#line-grad-1)"
+              strokeWidth="2.5"
+              filter="url(#line-glow-1)"
             />
-            <path
-              d="M 900 0 V 16 A 32 32 0 0 1 868 48 H 296 A 32 32 0 0 0 264 80 V 96"
-              fill="none"
-              stroke="url(#line-grad-5)"
-              strokeWidth="1.75"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M 900 0 V 16 A 32 32 0 0 1 868 48 H 296 A 32 32 0 0 0 264 80 V 96"
-              fill="none"
-              stroke="#ffffff"
-              strokeWidth="1.5"
-              strokeDasharray="6 70"
-              strokeDashoffset="0"
-              className="opacity-40"
-            />
-            <circle cx="900" cy="0" r="6" fill="#fc9a5d" fillOpacity="0.2" />
-            <circle cx="900" cy="0" r="3" fill="#fc9a5d" />
-            <circle cx="264" cy="96" r="6" fill="#fc9a5d" fillOpacity="0.2" />
-            <circle cx="264" cy="96" r="3" fill="#fc9a5d" />
+            <circle cx="950" cy="0" r="7" fill="#be32ff" fillOpacity="0.3" />
+            <circle cx="950" cy="0" r="4" fill="#be32ff" />
+            <circle cx="250" cy="96" r="7" fill="#f4622a" fillOpacity="0.3" />
+            <circle cx="250" cy="96" r="4" fill="#f4622a" />
           </svg>
         </div>
 
-        {/* SECTION 6: PARTNERS' MESSAGE */}
+        {/* SECTION 6: FROM THE PARTNERS */}
         <section
-          id="partners-message"
-          className="scroll-mt-28 bg-gradient-to-r from-orange-950/30 via-pink-950/20 to-white/[0.02] border border-pink-500/20 rounded-3xl p-6 sm:p-10 lg:p-14 relative overflow-hidden shadow-2xl backdrop-blur-xl"
+          id="partners"
+          className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-amber-50/90 via-white to-orange-50/70 backdrop-blur-xl border border-orange-200/80 p-6 sm:p-10 lg:p-14 shadow-xl shadow-orange-500/5"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-stretch">
-            <div className="lg:col-span-5 w-full flex justify-center">
-              <div className="relative rounded-3xl overflow-hidden border border-pink-500/25 bg-black/60 p-2 sm:p-2.5 shadow-2xl group w-full max-w-sm sm:max-w-md lg:max-w-none h-full flex flex-col">
-                <div className="relative rounded-2xl overflow-hidden w-full flex-1 aspect-[4/3] sm:aspect-[16/11] lg:aspect-auto min-h-[280px] bg-slate-900 shadow-inner">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+            {/* Portrait */}
+            <div className="lg:col-span-5 flex flex-col items-center">
+              <div className="relative rounded-3xl overflow-hidden border-2 border-orange-200/80 p-2 bg-gradient-to-tr from-amber-100 via-orange-100 to-pink-100 shadow-xl max-w-sm w-full group">
+                <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden bg-slate-100">
                   <Image
                     src="/images/about/partners.png"
-                    alt="Dinesh Kumar & Rahul Prajapat - Partners at DhandaGrow AI"
+                    alt="Partners Dinesh Kumar & Rahul Prajapat"
                     fill
+                    unoptimized
                     className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width: 1024px) 100vw, 40vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
-                  <div className="absolute bottom-3 left-3 right-3 flex flex-col gap-0.5 text-xs text-white backdrop-blur-md bg-black/55 p-3 rounded-xl border border-white/10">
-                    <span className="font-bold text-sm text-transparent bg-clip-text bg-gradient-to-r from-[#fc9a5d] via-[#f0449b] to-[#be32ff]">
-                      Dinesh Kumar &amp; Rahul Prajapat
-                    </span>
-                    <span className="text-[11px] text-slate-300">
-                      Partners at DhandaGrow AI
-                    </span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white text-left">
+                    <h3 className="text-xl font-bold">
+                      Dinesh Kumar & Rahul Prajapat
+                    </h3>
+                    <p className="text-xs text-orange-200 font-medium tracking-wide">
+                      Partners & Leadership
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="lg:col-span-7 space-y-3.5 text-left flex flex-col justify-center">
-              <h2 className="text-2xl sm:text-3xl lg:text-3xl font-extrabold text-white tracking-tight">
-                A Message from Our Partners
+
+            {/* Content */}
+            <div className="lg:col-span-7 space-y-6 text-left">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-100 border border-orange-300 text-[#f4622a] text-xs font-semibold tracking-wider uppercase">
+                <Quote className="w-3.5 h-3.5" />
+                <span>From the Partners</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                United by Innovation, Driven by Merchant Success
               </h2>
-              <div className="space-y-2.5 text-slate-200/90 text-sm sm:text-base leading-relaxed font-normal">
+              <div className="space-y-4 text-slate-600 leading-relaxed text-sm sm:text-base">
                 <p>
-                  At DhandaGrow AI, our mission is to empower small businesses
-                  across India with smart, affordable AI-powered marketing
-                  solutions.
+                  Partnership is more than business synergy; it is a shared
+                  conviction. When we envisioned SevenUnique and DhandaGrow AI,
+                  we wanted to build products that solve ground-level problems
+                  faced by real entrepreneurs every single day.
                 </p>
                 <p>
-                  We aim to simplify digital marketing, strengthen brand
-                  presence, and help entrepreneurs reach more customers with
-                  less effort.
+                  By blending robust engineering architecture with user-centric
+                  design, our platform allows businesses to operate 24/7 without
+                  expensive IT overheads.
                 </p>
-                <p>
-                  Our vision is to make advanced AI technology accessible to
-                  every shopkeeper, startup, and growing business.
-                </p>
-                <p>
-                  We believe every business deserves the opportunity to grow,
-                  compete, and succeed in the digital era.
+                <p className="italic text-slate-700 font-medium border-l-4 border-[#f4622a] pl-4 py-1 bg-orange-50/50 rounded-r-lg">
+                  &ldquo;When a merchant tells us that DhandaGrow saved them 4
+                  hours a day and doubled their online sales, that is the
+                  greatest metric of our success.&rdquo;
                 </p>
               </div>
-              <div className="p-3 sm:p-3.5 rounded-2xl bg-gradient-to-r from-pink-500/15 via-purple-500/10 to-transparent border border-pink-500/30 text-white font-semibold text-sm sm:text-base leading-snug shadow-lg backdrop-blur-sm">
-                “Together, let’s build a smarter future for Indian businesses.”
+
+              <div className="pt-4 border-t border-slate-200/80 flex items-center justify-between flex-wrap gap-4">
+                <div>
+                  <h4 className="text-lg font-bold text-slate-900">
+                    Dinesh Kumar & Rahul Prajapat
+                  </h4>
+                  <p className="text-xs sm:text-sm text-[#f4622a] font-medium">
+                    Founders & Managing Partners
+                  </p>
+                </div>
+                <div className="inline-flex items-center gap-2 text-xs font-semibold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-full">
+                  <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                  <span>Strategic Visionaries</span>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* CONNECTOR 6 */}
-        <div
-          className="relative w-full pointer-events-none select-none z-20"
-          style={{ height: "96px" }}
-          aria-hidden="true"
-        >
+        {/* SVG Connector 6 */}
+        <div className="hidden lg:block w-full h-24 my-2 overflow-visible">
           <svg
-            className="w-full h-full overflow-visible"
-            width="1200"
-            height="96"
+            className="w-full h-24 overflow-visible"
             viewBox="0 0 1200 96"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <defs>
-              <linearGradient
-                id="line-grad-6"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="100%"
-              >
-                <stop offset="0%" stopColor="#fc9a5d" stopOpacity="0.95" />
-                <stop offset="45%" stopColor="#f0449b" stopOpacity="0.9" />
-                <stop offset="100%" stopColor="#fc9a5d" stopOpacity="0.95" />
-              </linearGradient>
-              <filter
-                id="line-glow-6"
-                x="-20%"
-                y="-20%"
-                width="140%"
-                height="140%"
-              >
-                <feDropShadow
-                  dx="0"
-                  dy="0"
-                  stdDeviation="3.5"
-                  floodColor="#fc9a5d"
-                  floodOpacity="0.45"
-                />
-              </filter>
-            </defs>
             <path
-              d="M 264 0 V 16 A 32 32 0 0 0 296 48 H 868 A 32 32 0 0 1 900 80 V 96"
+              d="M 250 0 V 20 A 32 32 0 0 0 282 52 H 918 A 32 32 0 0 1 950 84 V 96"
               fill="none"
-              stroke="url(#line-grad-6)"
-              strokeWidth="3.5"
-              strokeOpacity="0.25"
-              filter="url(#line-glow-6)"
+              stroke="url(#line-grad-1)"
+              strokeWidth="2.5"
+              filter="url(#line-glow-1)"
             />
-            <path
-              d="M 264 0 V 16 A 32 32 0 0 0 296 48 H 868 A 32 32 0 0 1 900 80 V 96"
-              fill="none"
-              stroke="url(#line-grad-6)"
-              strokeWidth="1.75"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M 264 0 V 16 A 32 32 0 0 0 296 48 H 868 A 32 32 0 0 1 900 80 V 96"
-              fill="none"
-              stroke="#ffffff"
-              strokeWidth="1.5"
-              strokeDasharray="6 70"
-              strokeDashoffset="0"
-              className="opacity-40"
-            />
-            <circle cx="264" cy="0" r="6" fill="#fc9a5d" fillOpacity="0.2" />
-            <circle cx="264" cy="0" r="3" fill="#fc9a5d" />
-            <circle cx="900" cy="96" r="6" fill="#fc9a5d" fillOpacity="0.2" />
-            <circle cx="900" cy="96" r="3" fill="#fc9a5d" />
+            <circle cx="250" cy="0" r="7" fill="#f4622a" fillOpacity="0.3" />
+            <circle cx="250" cy="0" r="4" fill="#f4622a" />
+            <circle cx="950" cy="96" r="7" fill="#be32ff" fillOpacity="0.3" />
+            <circle cx="950" cy="96" r="4" fill="#be32ff" />
           </svg>
         </div>
 
-        {/* SECTION 7: MEET OUR LEADERSHIP TEAM */}
+        {/* SECTION 7: MEET THE TEAM */}
         <section
-          id="leadership-team"
-          className="scroll-mt-28 bg-gradient-to-b from-white/[0.06] to-white/[0.02] border border-white/10 rounded-3xl p-6 sm:p-10 lg:p-12 backdrop-blur-xl relative overflow-hidden shadow-2xl"
+          id="team"
+          className="relative rounded-3xl overflow-hidden bg-white/90 backdrop-blur-xl border border-slate-200/90 p-6 sm:p-10 lg:p-14 shadow-xl shadow-slate-200/50 text-center"
         >
-          <div className="space-y-8 sm:space-y-10">
-            <div className="space-y-2.5 text-center max-w-3xl mx-auto">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight text-center">
-                Meet Our Leadership Team
-              </h2>
-              <p className="text-sm sm:text-base text-transparent bg-clip-text bg-gradient-to-r from-[#fc9a5d] via-[#f0449b] to-[#be32ff] font-semibold">
-                The Dedicated Minds Driving AI Innovation &amp; Growth
-              </p>
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Meet the talented engineers, developers, designers, and growth
-                specialists behind DhandaGrow AI, committed to transforming how
-                businesses grow digitally.
-              </p>
+          <div className="max-w-3xl mx-auto space-y-4 mb-12 sm:mb-16">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-100 border border-orange-200 text-[#f4622a] text-xs font-semibold tracking-wider uppercase">
+              <Users className="w-3.5 h-3.5" />
+              <span>Meet the Team</span>
             </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
+              The Minds Behind the{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f4622a] via-[#f0449b] to-[#be32ff]">
+                Mission
+              </span>
+            </h2>
+            <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
+              Meet the talented engineers, designers, strategists, and managers
+              powering innovation at SevenUnique Tech Solutions and DhandaGrow
+              AI.
+            </p>
+          </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-7">
-              {leadershipTeam.map((member) => (
-                <div
-                  key={member.name}
-                  className="relative rounded-3xl overflow-hidden border border-white/10 hover:border-pink-500/40 bg-gradient-to-b from-white/[0.07] via-white/[0.03] to-white/[0.01] p-5 sm:p-6 flex flex-col items-center text-center transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/10 hover:-translate-y-1.5 group backdrop-blur-xl"
-                >
-                  <div className="relative w-36 h-36 sm:w-40 sm:h-40 md:w-44 md:h-44 rounded-full overflow-hidden bg-white border-4 border-white/20 shadow-xl mx-auto mb-4 group-hover:border-pink-500/50 group-hover:scale-105 transition-all duration-500 shrink-0">
-                    <Image
-                      src={member.image}
-                      alt={`${member.name} - ${member.role}`}
-                      fill
-                      className="object-cover object-center"
-                      sizes="(max-width: 640px) 150px, 180px"
-                    />
-                  </div>
-                  <div className="pt-1 w-full flex flex-col items-center">
-                    <h3 className="text-base sm:text-lg font-bold text-white tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#fc9a5d] group-hover:via-[#f0449b] group-hover:to-[#be32ff] transition-all duration-300">
-                      {member.name}
-                    </h3>
-                    <span className="mt-2 inline-flex items-center px-3 py-1 rounded-full text-xs font-medium text-pink-300 bg-pink-500/10 border border-pink-500/20 max-w-full text-center">
-                      {member.role}
-                    </span>
-                  </div>
+          {/* 11 Team Members Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
+            {leadershipTeam.map((member, idx) => (
+              <div
+                key={idx}
+                className="group relative rounded-2xl overflow-hidden bg-white border border-slate-200/80 hover:border-orange-300 p-6 flex flex-col items-center text-center shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300"
+              >
+                {/* Circular Portrait */}
+                <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-4 border-slate-100 group-hover:border-[#f4622a] shadow-md mb-4 bg-slate-100 transition-colors duration-300">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    unoptimized
+                    className="object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                  />
                 </div>
-              ))}
-            </div>
+
+                {/* Info */}
+                <h3 className="text-lg font-bold text-slate-900 group-hover:text-[#f4622a] transition-colors duration-300">
+                  {member.name}
+                </h3>
+                <p className="text-xs font-medium text-slate-500 mt-1.5 leading-snug">
+                  {member.role}
+                </p>
+
+                {/* Subtle tag badge */}
+                <span className="mt-3 inline-block px-3 py-1 rounded-full text-[11px] font-semibold bg-slate-100 text-slate-700 border border-slate-200">
+                  Team Member
+                </span>
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* CONNECTOR 7 */}
-        <div
-          className="relative w-full pointer-events-none select-none z-20"
-          style={{ height: "96px" }}
-          aria-hidden="true"
-        >
+        {/* SVG Connector 7 */}
+        <div className="hidden lg:block w-full h-24 my-2 overflow-visible">
           <svg
-            className="w-full h-full overflow-visible"
-            width="1200"
-            height="96"
+            className="w-full h-24 overflow-visible"
             viewBox="0 0 1200 96"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <defs>
-              <linearGradient
-                id="line-grad-7"
-                x1="100%"
-                y1="0%"
-                x2="0%"
-                y2="100%"
-              >
-                <stop offset="0%" stopColor="#fc9a5d" stopOpacity="0.95" />
-                <stop offset="45%" stopColor="#f0449b" stopOpacity="0.9" />
-                <stop offset="100%" stopColor="#fc9a5d" stopOpacity="0.95" />
-              </linearGradient>
-              <filter
-                id="line-glow-7"
-                x="-20%"
-                y="-20%"
-                width="140%"
-                height="140%"
-              >
-                <feDropShadow
-                  dx="0"
-                  dy="0"
-                  stdDeviation="3.5"
-                  floodColor="#fc9a5d"
-                  floodOpacity="0.45"
-                />
-              </filter>
-            </defs>
             <path
-              d="M 900 0 V 16 A 32 32 0 0 1 868 48 H 332 A 32 32 0 0 0 300 80 V 96"
+              d="M 950 0 V 20 A 32 32 0 0 1 918 52 H 282 A 32 32 0 0 0 250 84 V 96"
               fill="none"
-              stroke="url(#line-grad-7)"
-              strokeWidth="3.5"
-              strokeOpacity="0.25"
-              filter="url(#line-glow-7)"
+              stroke="url(#line-grad-1)"
+              strokeWidth="2.5"
+              filter="url(#line-glow-1)"
             />
-            <path
-              d="M 900 0 V 16 A 32 32 0 0 1 868 48 H 332 A 32 32 0 0 0 300 80 V 96"
-              fill="none"
-              stroke="url(#line-grad-7)"
-              strokeWidth="1.75"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <circle cx="900" cy="0" r="6" fill="#fc9a5d" fillOpacity="0.2" />
-            <circle cx="900" cy="0" r="3" fill="#fc9a5d" />
-            <circle cx="300" cy="96" r="6" fill="#fc9a5d" fillOpacity="0.2" />
-            <circle cx="300" cy="96" r="3" fill="#fc9a5d" />
+            <circle cx="950" cy="0" r="7" fill="#be32ff" fillOpacity="0.3" />
+            <circle cx="950" cy="0" r="4" fill="#be32ff" />
+            <circle cx="250" cy="96" r="7" fill="#f4622a" fillOpacity="0.3" />
+            <circle cx="250" cy="96" r="4" fill="#f4622a" />
           </svg>
         </div>
 
         {/* SECTION 8: COME WORK WITH US */}
-        <section className="relative rounded-3xl overflow-hidden bg-[#faf7f2] border border-orange-200/50 p-8 sm:p-14 lg:p-20 shadow-2xl text-center">
+        <section className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-orange-50 via-[#faf7f2] to-amber-50 border border-orange-200/80 p-8 sm:p-14 lg:p-20 shadow-2xl text-center">
           <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center justify-center py-6 sm:py-10">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-slate-900 tracking-tight leading-tight mb-8">
               Come Work With Us
             </h2>
             <Link
-              className="inline-flex items-center gap-2.5 bg-[#f25116] hover:bg-[#d94109] text-white font-semibold text-base sm:text-lg px-8 sm:px-9 py-3.5 sm:py-4 rounded-lg shadow-xl shadow-orange-500/20 hover:shadow-orange-500/35 hover:-translate-y-0.5 transition-all duration-300 group"
+              className="inline-flex items-center gap-2.5 bg-[#f4622a] hover:bg-[#d94f1c] text-white font-semibold text-base sm:text-lg px-8 sm:px-9 py-3.5 sm:py-4 rounded-xl shadow-xl shadow-orange-500/25 hover:shadow-orange-500/40 hover:-translate-y-0.5 transition-all duration-300 group"
               href="/jobOp"
             >
-              <span>Careers</span>
+              <span>Explore Open Roles</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300" />
             </Link>
           </div>
@@ -944,24 +799,26 @@ export default function DhandaGrowAbout() {
                 src="/team/avatar-devika-chhipa.webp"
                 alt="Innovate with us"
                 fill
+                unoptimized
                 className="object-cover object-top"
               />
             </div>
-            <div className="px-3.5 py-1.5 rounded-full bg-[#fde9df] border border-orange-200/40 text-[#d9531e] font-medium text-xs lg:text-sm shadow-sm whitespace-nowrap">
+            <div className="px-3.5 py-1.5 rounded-full bg-[#fde9df] border border-orange-200/70 text-[#d9531e] font-semibold text-xs lg:text-sm shadow-sm whitespace-nowrap">
               Innovate with us...
             </div>
           </div>
 
           <div className="hidden md:flex flex-col items-start gap-2 absolute bottom-6 sm:bottom-10 left-12 sm:left-24 lg:left-32 z-20">
-            <div className="px-3.5 py-1.5 rounded-full bg-[#e8f1ff] border border-blue-200/50 text-[#2563eb] font-semibold text-xs lg:text-sm shadow-sm whitespace-nowrap ml-2">
+            <div className="px-3.5 py-1.5 rounded-full bg-[#e8f1ff] border border-blue-200/70 text-[#2563eb] font-semibold text-xs lg:text-sm shadow-sm whitespace-nowrap ml-2">
               Power to you!
             </div>
             <div className="relative w-24 h-24 lg:w-28 lg:h-28 rounded-full overflow-hidden border-2 border-white shadow-2xl bg-gradient-to-tr from-indigo-500 to-purple-500 p-0.5 shrink-0">
-              <div className="relative w-full h-full rounded-full overflow-hidden bg-slate-900">
+              <div className="relative w-full h-full rounded-full overflow-hidden bg-slate-100">
                 <Image
                   src="/team/avatar-vijay-gupta.webp"
                   alt="Power to you"
                   fill
+                  unoptimized
                   className="object-cover object-top"
                 />
               </div>
@@ -974,13 +831,14 @@ export default function DhandaGrowAbout() {
                 src="/team/avatar-rajyavardhan-singh.webp"
                 alt="Team member"
                 fill
+                unoptimized
                 className="object-cover object-top"
               />
             </div>
           </div>
 
           <div className="hidden md:flex flex-col items-end gap-2 absolute bottom-6 sm:bottom-10 right-10 sm:right-20 lg:right-28 z-20">
-            <div className="px-3.5 py-1.5 rounded-full bg-[#fde9df] border border-orange-200/40 text-[#d9531e] font-medium text-xs lg:text-sm shadow-sm whitespace-nowrap mr-2">
+            <div className="px-3.5 py-1.5 rounded-full bg-[#fde9df] border border-orange-200/70 text-[#d9531e] font-semibold text-xs lg:text-sm shadow-sm whitespace-nowrap mr-2">
               Code the extraordinary...
             </div>
             <div className="relative w-20 h-20 lg:w-24 lg:h-24 rounded-full overflow-hidden border-2 border-white shadow-xl bg-amber-50 shrink-0">
@@ -988,6 +846,7 @@ export default function DhandaGrowAbout() {
                 src="/team/avatar-deepak-yadav.webp"
                 alt="Code the extraordinary"
                 fill
+                unoptimized
                 className="object-cover object-top"
               />
             </div>
@@ -1000,6 +859,7 @@ export default function DhandaGrowAbout() {
                 src="/team/avatar-devika-chhipa.webp"
                 alt="Team"
                 fill
+                unoptimized
                 className="object-cover object-top"
               />
             </div>
@@ -1008,6 +868,7 @@ export default function DhandaGrowAbout() {
                 src="/team/avatar-vijay-gupta.webp"
                 alt="Team"
                 fill
+                unoptimized
                 className="object-cover object-top"
               />
             </div>
@@ -1016,6 +877,7 @@ export default function DhandaGrowAbout() {
                 src="/team/avatar-rajyavardhan-singh.webp"
                 alt="Team"
                 fill
+                unoptimized
                 className="object-cover object-top"
               />
             </div>
@@ -1024,6 +886,7 @@ export default function DhandaGrowAbout() {
                 src="/team/avatar-deepak-yadav.webp"
                 alt="Team"
                 fill
+                unoptimized
                 className="object-cover object-top"
               />
             </div>

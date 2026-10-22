@@ -44,3 +44,5 @@ next-env.d.ts
 # test screenshots
 erp-*.png
 
+
+.vercel
