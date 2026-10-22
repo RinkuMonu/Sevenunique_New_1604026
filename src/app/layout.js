@@ -1,10 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/app/Header";
-import Footer from "@/components/Footer";
-import ChatBot from "@/components/Chatbot";
-import CookieConsent from "@/components/CookieConsent";
-import WhatsAppChat from "@/components/Whatsappchatbot";
+import AppShell from "@/components/layout/AppShell";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -76,17 +72,9 @@ export default function RootLayout({ children }) {
     }}
   />
 
-  <Header />
-
-  <CookieConsent />
-
-  <main className="flex-1">
+  <AppShell>
     {children}
-  </main>
-
-  <Footer />
-  <ChatBot />
-  <WhatsAppChat />
+  </AppShell>
 </body>
     </html>
   );
