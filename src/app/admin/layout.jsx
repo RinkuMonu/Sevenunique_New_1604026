@@ -1,4 +1,5 @@
 import { Toaster } from "sonner";
+import { AdminSidebar } from "@/components/admin/AdminSidebar";
 
 export const metadata = {
   title: "Admin Dashboard | SevenUnique Blog Studio",
@@ -17,7 +18,7 @@ export default function AdminLayout({ children }) {
         theme="light"
         closeButton
       />
-      {children}
+      <AdminSidebar>{children}</AdminSidebar>
     </div>
   );
 }

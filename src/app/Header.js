@@ -280,11 +280,13 @@ const aboutCols = [
 function ArrowDown({ open }) {
   return (
     <svg
-      className={`h-4 w-4 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+      className={`h-3.5 w-3.5 shrink-0 transition-transform duration-200 ${
+        open ? "rotate-180 text-[#f4622a]" : "text-gray-500"
+      }`}
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
-      strokeWidth={2}
+      strokeWidth={2.2}
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
     </svg>
@@ -373,19 +375,20 @@ export default function Header() {
   }, [mobileOpen]);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur-md">
-      <div className="mx-auto flex max-w-[1360px] items-center justify-between px-6 py-2 sm:px-8 lg:px-10 xl:px-12">
-        <Link href="/" className="block">
+    <header className="sticky top-0 z-50 w-full border-b border-gray-200/90 bg-white/95 backdrop-blur-md shadow-xs">
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between px-4 sm:px-6 lg:px-8 h-[68px] sm:h-[72px]">
+        <Link href="/" className="shrink-0 flex items-center">
           <Image
             src="/images/logo-2.png"
-            alt="logo"
+            alt="SevenUnique"
             width={866}
             height={288}
-            className="h-14 w-auto object-contain"
+            className="h-10 sm:h-11 xl:h-12 w-auto object-contain"
             style={{ width: "auto" }}
+            priority
           />
         </Link>
-        <div className="flex items-center gap-3 lg:hidden">
+        <div className="flex items-center gap-2.5 sm:gap-3 lg:hidden">
           <a
             href="https://dhandagrow.com/"
             target="_blank"
@@ -398,7 +401,7 @@ export default function Header() {
               alt="Dhanda Grow AI"
               width={969}
               height={565}
-              className="h-10 sm:h-11 w-auto object-contain"
+              className="h-8 sm:h-9 w-auto object-contain"
             />
           </a>
           <button
@@ -406,7 +409,7 @@ export default function Header() {
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}
             aria-controls="mobile-navigation"
-            className="inline-flex items-center rounded-md border border-gray-300 p-2 text-[#111] transition-colors hover:bg-gray-100"
+            className="inline-flex items-center rounded-lg border border-gray-200 p-2 text-gray-800 transition-colors hover:bg-gray-100 cursor-pointer"
             onClick={() => {
               setMobileOpen((prev) => !prev);
               setMobileSection(null);
@@ -436,7 +439,7 @@ export default function Header() {
           </button>
         </div>
 
-        <nav className="relative hidden items-center gap-6 text-[14px] font-semibold text-[#111] xl:gap-9 xl:text-[15px] lg:flex">
+        <nav className="relative hidden items-center gap-2.5 lg:gap-3.5 xl:gap-5 2xl:gap-6 text-[13px] xl:text-[14px] 2xl:text-[15px] font-semibold text-gray-900 lg:flex">
           {menuItems.map((item) => {
             const id = item.name.toLowerCase();
             const isOpen = open === id;
@@ -444,22 +447,21 @@ export default function Header() {
             return (
               <div
                 key={item.name}
-                className="relative py-5 cursor-pointer"
+                className="relative h-[68px] sm:h-[72px] flex items-center cursor-pointer"
                 onMouseEnter={() => setOpen(id)}
                 onMouseLeave={() => setOpen(null)}
               >
-                <Link href={item.path}>
-                  <button
-                    className={`relative flex items-center cursor-pointer gap-1 transition-colors ${
-                      isOpen ? "text-[#f46b45]" : "hover:text-[#f46b45]"
-                    }`}
-                  >
-                    {item.name}
-                    <ArrowDown open={isOpen} />
-                    {isOpen && (
-                      <span className="absolute -bottom-[23px] left-0 h-[4px] w-full bg-[#f4b09e]" />
-                    )}
-                  </button>
+                <Link
+                  href={item.path}
+                  className={`relative flex items-center gap-1 whitespace-nowrap py-2 transition-colors ${
+                    isOpen ? "text-[#f4622a]" : "text-gray-900 hover:text-[#f4622a]"
+                  }`}
+                >
+                  <span className="whitespace-nowrap">{item.name}</span>
+                  <ArrowDown open={isOpen} />
+                  {isOpen && (
+                    <span className="absolute -bottom-[21px] sm:-bottom-[23px] left-0 h-[3px] w-full bg-[#f4622a] rounded-full transition-all" />
+                  )}
                 </Link>
                 {id === "services" && isOpen && (
                   <div
@@ -726,19 +728,19 @@ export default function Header() {
           })}
           <Link
             href="/our-work-page"
-            className="transition-colors hover:text-[#f46b45]"
+            className="whitespace-nowrap transition-colors hover:text-[#f4622a]"
           >
             Our Work
           </Link>
           <Link
             href="/blog"
-            className="transition-colors hover:text-[#f46b45]"
+            className="whitespace-nowrap transition-colors hover:text-[#f4622a]"
           >
             Blog
           </Link>
           <Link
             href="/schedule-a-call-page"
-            className="ml-3 xl:ml-5 shrink-0 inline-flex items-center rounded-md bg-black px-5 py-2.5 text-[15px] font-medium text-white transition-colors hover:bg-gray-800"
+            className="ml-1.5 xl:ml-3 shrink-0 inline-flex items-center rounded-lg bg-[#111827] px-3.5 py-2 xl:px-4.5 xl:py-2.5 text-[12px] xl:text-[13px] 2xl:text-[14px] font-semibold text-white transition-all hover:bg-[#f4622a] shadow-xs whitespace-nowrap"
           >
             Schedule a Call
           </Link>
@@ -747,14 +749,14 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             title="Dhanda Grow AI - dhandagrow.com"
-            className="ml-3 xl:ml-4 shrink-0 flex items-center transition-transform hover:scale-105"
+            className="ml-1 xl:ml-2.5 shrink-0 flex items-center transition-transform hover:scale-105"
           >
             <Image
               src="/images/dhandagrow-logo.png"
               alt="Dhanda Grow AI"
               width={969}
               height={565}
-              className="h-[40px] xl:h-[45px] w-auto object-contain drop-shadow-sm"
+              className="h-[30px] sm:h-[34px] xl:h-[38px] w-auto object-contain drop-shadow-xs"
               priority
             />
           </a>
