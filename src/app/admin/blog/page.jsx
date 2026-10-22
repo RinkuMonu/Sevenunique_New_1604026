@@ -45,8 +45,28 @@ export default function AdminBlogPage() {
   };
 
   useEffect(() => {
-    fetchPosts();
-  }, []);
+    const checkAuthAndFetch = async () => {
+      const { getSupabaseClient } = await import("@/lib/supabase/client");
+      const supabase = getSupabaseClient();
+      if (!supabase) {
+        router.replace("/admin/login");
+        return;
+      }
+
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) {
+        const local = typeof window !== "undefined" ? localStorage.getItem("sevenunique_admin_session") : null;
+        if (!local) {
+          router.replace("/admin/login");
+          return;
+        }
+      }
+
+      fetchPosts();
+    };
+
+    checkAuthAndFetch();
+  }, [router]);
 
   const handleLogout = () => {
     document.cookie = "sb-token=; path=/; max-age=0";

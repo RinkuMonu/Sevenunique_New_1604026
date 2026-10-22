@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,6 +13,22 @@ export default function AdminLoginPage() {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    const checkExistingSession = async () => {
+      try {
+        const supabase = getSupabaseClient();
+        if (!supabase) return;
+        const { data: { session } } = await supabase.auth.getSession();
+        if (session) {
+          router.replace("/admin/blog");
+        }
+      } catch {
+        // ignore
+      }
+    };
+    checkExistingSession();
+  }, [router]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
