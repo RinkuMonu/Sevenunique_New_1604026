@@ -18,7 +18,6 @@ import CaseStudySection from "@/components/Services/CaseStudySection";
 import ToolsTechSection from "@/components/Services/ToolsTechSection";
 import EngagementSection from "@/components/EngagementSection";
 import AwardsSectionFull from "@/components/AwardsSectionFull";
-import UsefulAIResources from "@/components/UsefulAIResources";
 import IndustrySection from "@/components/IndustrySection";
 import ProcessSliderSection from "@/components/ProcessSliderSection";
 import FAQSection from "@/components/FAQSection";
@@ -197,7 +196,6 @@ export default async function ServicePage({ params }) {
 
 
 <FAQSection data={data.faq} />
-        <UsefulAIResources />
       </div>
     </>
   );

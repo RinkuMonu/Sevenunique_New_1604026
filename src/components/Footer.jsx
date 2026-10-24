@@ -12,7 +12,6 @@ import {
 
 import { FaXTwitter } from "react-icons/fa6";
 
-import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 
 export default function Footer() {
   return (
@@ -259,174 +258,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
-
-        <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-5 mt-16 md:mt-10">
-          {[
-            {
-              title: "Jaipur Head Office",
-              image: "https://www.avendus.com/uploads/City-Icons-Jaipur.svg",
-              address:
-                "Plot No 97, Dakshinpuri - I Shrikishan, Sanganer, Jagatpura, Jaipur, Rajasthan 302017",
-              phone: "+91 141-4511098",
-              email: "info@sevenunique.com",
-            },
-            {
-              title: "Mumbai Office",
-              image: "https://www.avendus.com/uploads/Kolkata_83b7a1c794.svg",
-              address:
-                "No. 101/2, Vakratunda Corporate Park, Off Aarey Road, Goregaon East, Mumbai – 400063",
-              phone: "+91 141-4511098",
-              email: "info@sevenunique.com",
-            },
-            {
-              title: "UAE Office",
-              image: "https://ezulix.com/assets/image/icons/uk.webp",
-              address:
-                "Office Number 01-02, C-1 Building, Ajman Free Zone, Dubai, United Arab Emirates",
-              phone: "+971 55 000 0000",
-              email: "salesuae@sevenunique.com",
-            },
-            {
-              title: "USA Office",
-              image: "https://ezulix.com/assets/image/icons/uae.webp",
-              address:
-                "514 State Shelton Street Garden, Wisconsin, USA – 55309",
-              phone: "+1 414 000 0000",
-              email: "salesusa@sevenunique.com",
-            },
-          ].map((office, index) => (
-            <div
-              key={index}
-              className="
-        group relative overflow-hidden
-        rounded-[16px]
-        bg-white
-        border border-[#ececec]
-        p-5 lg:p-6
-        transition-all duration-500
-        hover:-translate-y-1
-        hover:shadow-[0_12px_35px_rgba(0,0,0,0.06)]
-      "
-            >
-
-              <div className="relative z-10 flex items-start gap-3 mb-5">
-                {/* FLAG */}
-                <div
-                  className="
-            w-[56px] h-[56px]
-            rounded-full
-            bg-[#f8f8f8]
-            border border-[#ececec]
-            flex items-center justify-center
-            shrink-0
-            shadow-sm
-          "
-                >
-                  <img
-                    src={office.image}
-                    alt={office.title}
-                    className="w-[36px] h-[36px] object-cover"
-                  />
-                </div>
-
-                {/* TITLE + PHONE */}
-                <div>
-                  <h3
-                    className="
-              text-[16px] md:text-[18px]
-              font-bold
-              text-[#111]
-              leading-tight
-              mb-1
-              transition-colors duration-300
-              group-hover:text-orange-500
-            "
-                  >
-                    {office.title}
-                  </h3>
-
-                  <p className="text-[11px] text-gray-700 font-medium">
-                    {office.phone}
-                  </p>
-                </div>
-              </div>
-
-
-              <div className="relative z-10 mb-4">
-                <div
-                  className="
-            inline-flex items-center gap-2
-            text-orange-500
-            font-semibold text-gray-700
-            text-[12px]
-            break-all
-          "
-                >
-                  <FiMail className="text-[14px]" />
-                  {office.email}
-                </div>
-              </div>
-
-
-              <div className="relative z-10 flex items-start gap-3">
-                <div
-                  className="
-            w-9 h-9
-            rounded-lg
-            bg-orange-50
-            text-orange-500
-            flex items-center justify-center
-            shrink-0
-          "
-                >
-                  <FiMapPin className="text-[14px]" />
-                </div>
-
-                <p
-                  className="
-            text-[12px]
-            leading-6
-            text-gray-600
-            font-medium
-          "
-                >
-                  {office.address}
-                </p>
-              </div>
-
-
-              <div
-                className="
-          absolute bottom-0 left-0
-          h-[3px] w-0
-          bg-orange-500
-          transition-all duration-500
-          group-hover:w-full
-        "
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-
-
-      <div
-        className="
-    absolute
-    right-30
-    top-100
-    -translate-y-1/2
-    hidden xl:block
-    pointer-events-none
-    z-0
-  "
-      >
-        <img
-          src="/images/mapp.png"
-          alt="footer shape"
-          className="w-[610px] object-cover md:mt-20 opacity-70"
-        />
       </div>
 
 
@@ -468,6 +299,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
     </footer>
   );
 }

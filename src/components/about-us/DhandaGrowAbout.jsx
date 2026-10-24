@@ -565,7 +565,11 @@ export default function DhandaGrowAbout() {
                     loop
                     muted
                     playsInline
-                    className="w-full h-full object-cover"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-90 object-cover"
+                    style={{
+                      width: "75%",
+                      height: "133.333%",
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none" />
                   <div className="absolute bottom-4 left-4 right-4 text-white text-xs sm:text-sm font-semibold drop-shadow-md">
