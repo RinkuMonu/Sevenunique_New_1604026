@@ -8,11 +8,11 @@ const trustedClients = [
 ];
 
 const defaultExpertImages = [
-  "/images/1.png",
-  "/images/t1.png",
-  "/images/t1.png",
-  "/images/t3.png",
-  "/images/man5.png",
+  "/team/avatar-vijay-gupta.webp",
+  "/team/avatar-rinku-yadav.webp",
+  "/team/avatar-rajyavardhan-singh.webp",
+  "/team/avatar-devika-chhipa.webp",
+  "/team/avatar-deepak-yadav.webp",
 ];
 
 
@@ -580,54 +580,59 @@ toolsTech: toolsTech ?? (typeof defaultToolsTech !== "undefined" ? defaultToolsT
       serviceLine: label,
       experts: [
   {
-    name: "Aarav Sharma",
-    role: "Sr. Backend Engineer",
-    experience: "11 years of experience",
+    name: "Vijay Gupta",
+    role: "Sr. Full Stack Developer",
+    experience: "10+ years of experience",
+    skills: ["React", "Node.js", "Full Stack Architecture"],
+    certifications: [
+      "AWS Certified Solutions Architect – Professional",
+      "Microsoft Certified: Full Stack Developer",
+    ],
+    image: "/team/avatar-vijay-gupta.webp",
+  },
+  {
+    name: "Rinku Yadav",
+    role: "Server Admin & Cloud Specialist",
+    experience: "8+ years of experience",
+    skills: ["Linux", "Cloud Infrastructure", "DevOps"],
+    certifications: [
+      "AWS Certified SysOps Administrator",
+      "Red Hat Certified Engineer",
+    ],
+    image: "/team/avatar-rinku-yadav.webp",
+  },
+  {
+    name: "Rajyavardhan Singh",
+    role: "Sr. Backend Developer",
+    experience: "7+ years of experience",
     skills: ["Python", "Node.js", "PostgreSQL"],
     certifications: [
-      "AWS Certified Solutions Architect – Professional",
-      "Microsoft Certified: Azure Developer Associate",
-    ],
-  },
-  {
-    name: "Rohan Mehta",
-    role: "Sr. Backend Architect",
-    experience: "14 years of experience",
-    skills: ["Kubernetes", "Terraform", "AWS"],
-    certifications: [
-      "AWS Certified Solutions Architect – Professional",
-      "Google Professional Cloud Architect",
-    ],
-  },
-  {
-    name: "Priyansh Verma",
-    role: "Sr. Database Engineer",
-    experience: "9 years of experience",
-    skills: ["PostgreSQL", "MongoDB", "Redis"],
-    certifications: [
-      "MongoDB Associate DBA",
-      "Oracle Database Administration",
-    ],
-  },
-  {
-    name: "Ananya Kapoor",
-    role: "Sr. API Engineer",
-    experience: "10 years of experience",
-    skills: ["Kong", "Postman", "Node.js"],
-    certifications: [
       "AWS Certified Developer – Associate",
-      "Kong Gateway Certified Associate",
+      "MongoDB Certified Developer",
     ],
+    image: "/team/avatar-rajyavardhan-singh.webp",
   },
   {
-    name: "Vikram Singh",
-    role: "Sr. DevOps Engineer",
-    experience: "12 years of experience",
-    skills: ["Docker", "Jenkins", "GitHub Actions"],
+    name: "Devika Chhipa",
+    role: "Sr. Frontend Developer",
+    experience: "6+ years of experience",
+    skills: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     certifications: [
-      "Certified Kubernetes Administrator",
-      "HashiCorp Certified: Terraform Associate",
+      "Meta Certified Front-End Developer",
+      "JavaScript Specialist Certification",
     ],
+    image: "/team/avatar-devika-chhipa.webp",
+  },
+  {
+    name: "Deepak Yadav",
+    role: "Mobile App Developer",
+    experience: "6+ years of experience",
+    skills: ["React Native", "Flutter", "iOS & Android"],
+    certifications: [
+      "Google Associate Android Developer",
+      "Cross-Platform Mobile Specialist",
+    ],
+    image: "/team/avatar-deepak-yadav.webp",
   },
 ]
     })

@@ -131,14 +131,10 @@ export default function CircleLeadersSection() {
     title: "Data Engineering Circle Leaders",
     leaders: [
       {
-        name: "Vikram Singh",
-        role: "Data Architect",
-        experience: "15 years experience",
-      },
-      {
-        name: "Kunal Joshi",
-        role: "Senior Data Engineer",
-        experience: "9 years experience",
+        name: "Vishal Prajapat",
+        role: "Data Analyst & Lead",
+        experience: "8 years experience",
+        img: "/images/vishall.png",
       },
     ],
   },
@@ -147,14 +143,10 @@ export default function CircleLeadersSection() {
     title: "Quality Assurance Circle Leaders",
     leaders: [
       {
-        name: "Neha Agarwal",
-        role: "QA Director",
-        experience: "14 years experience",
-      },
-      {
-        name: "Aditya Nair",
-        role: "Senior QA Engineer",
+        name: "Deepak Yadav",
+        role: "Mobile & QA Specialist",
         experience: "7 years experience",
+        img: "/images/yadavdeepak.PNG",
       },
     ],
   },
@@ -163,14 +155,16 @@ export default function CircleLeadersSection() {
     title: "AI & ML Circle Leaders",
     leaders: [
       {
-        name: "Arjun Malhotra",
-        role: "AI Research Lead",
-        experience: "18 years experience",
+        name: "Kratika Sharma",
+        role: "AI/ML Engineer",
+        experience: "5 years experience",
+        img: "/images/kratika-sharma.PNG",
       },
       {
-        name: "Sneha Iyer",
-        role: "ML Engineer",
-        experience: "6 years experience",
+        name: "Sejal Gupta",
+        role: "AI/ML Engineer",
+        experience: "5 years experience",
+        img: "/images/gupta-sejal.PNG",
       },
     ],
   },
@@ -180,11 +174,10 @@ export default function CircleLeadersSection() {
     leaders: [
       {
         name: "Rinku Yadav",
-        role: "DevOps Lead",
+        role: "DevOps & Server Admin",
         experience: "13 years experience",
         img: "/images/yadav-rinku.png",
       },
-    
     ],
   },
 
@@ -198,10 +191,10 @@ export default function CircleLeadersSection() {
         img: "/images/rajya-sir.png",
       },
       {
-        name: "Rahul Singh",
-        role: "Senior Backend Dev",
-        experience: "9 years experience",
-        img: "/images/rahul-singh.png",
+        name: "Vijay Gupta",
+        role: "Sr. Full Stack Developer",
+        experience: "12 years experience",
+        img: "/images/gupta-vijay.PNG",
       },
     ],
   },
@@ -210,14 +203,10 @@ export default function CircleLeadersSection() {
     title: "Agile Circle Leaders",
     leaders: [
       {
-        name: "Meera Khanna",
-        role: "Agile Coach",
-        experience: "12 years experience",
-      },
-      {
-        name: "Siddharth Jain",
-        role: "Scrum Master",
-        experience: "8 years experience",
+        name: "Bhumika Soni",
+        role: "Operations & HR Lead",
+        experience: "10 years experience",
+        img: "/images/hrmam-2.png",
       },
     ],
   },
@@ -226,14 +215,10 @@ export default function CircleLeadersSection() {
     title: "Product Circle Leaders",
     leaders: [
       {
-        name: "Ritika Sinha",
-        role: "Product Director",
-        experience: "16 years experience",
-      },
-      {
-        name: "Yash Patel",
-        role: "Senior PM",
-        experience: "10 years experience",
+        name: "Devika Jain",
+        role: "Content & Communications Lead",
+        experience: "8 years experience",
+        img: "/images/devikajain.png",
       },
     ],
   },
@@ -328,10 +313,10 @@ export default function CircleLeadersSection() {
         {/* Bottom Left Link */}
         <div className="mt-12">
           <a
-            href="/about-us/Leadership"
+            href="/about-us"
             className="inline-flex items-center text-[#1a1a1a] font-semibold border-b border-[#242323] pb-1 hover:opacity-80 transition-all"
           >
-            Get to Know Our Community →
+            Get to Know Our Team →
           </a>
         </div>
       </div>

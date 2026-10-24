@@ -251,7 +251,7 @@ const aboutCols = [
   {
     label: "Inside Seven Unique",
     items: [
-      { name: "Leadership Team", path: "/about-us/Leadership" },
+      { name: "About Us", path: "/about-us" },
       { name: "Our Tech Talent", path: "/about-us/tech-talent" },
       // { name: "Press Releases", path: "/about-us/press" },
       // { name: "Contact Us", path: "/contact-us" },

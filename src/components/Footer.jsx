@@ -158,10 +158,10 @@ export default function Footer() {
 
                 <li>
                   <Link
-                    href="/about-us/Leadership"
+                    href="/about-us"
                     className="hover:text-[#f4622a] transition"
                   >
-                    Leadership Team
+                    About Us
                   </Link>
                 </li>
               </ul>
