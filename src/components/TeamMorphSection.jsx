@@ -9,30 +9,6 @@ const outfit = Outfit({
   weight: ["400", "500", "600", "700"],
 });
 
-const team = [
-  {
-    name: "Mr. Dinesh Kumar Prajapat",
-    role: "Founder & CEO",
-    image: "/team/person1.png",
-  },
-  {
-    name: "Rahul Prajapat",
-    role: "Company secretary",
-    image: "/team/p2.png",
-  },
-  {
-    name: "Vijay Gupta",
-    // Team information update: keep the homepage role aligned with LeadershipGrid.
-    role: "Sr. Full Stack Developer",
-    image: "/images/gupta-vijay.PNG",
-  },
-  {
-    name: "Rinku Yadav",
-    role: "Server Admin",
-    image: "/images/yadav-rinku.png",
-  },
-];
-
 export default function TeamSection() {
   return (
     <section
@@ -116,18 +92,19 @@ export default function TeamSection() {
             {/* Responsive UI update: mobile copy sits below the portrait instead of covering it. */}
             <div className="relative overflow-hidden rounded-[28px] bg-[#111] shadow-2xl md:h-[620px] md:rounded-[40px]">
 
-           <div className="relative h-[380px] w-full overflow-hidden sm:h-[460px] md:h-full">
-  <Image
-    src="/team/person1.png"
-    alt="Founder"
-    fill
-    sizes="(max-width: 767px) 100vw, 50vw"
-    className="object-contain px-2 pt-2 sm:px-4 sm:pt-4 md:p-4"
-  />
+              <div className="relative h-[380px] w-full overflow-hidden sm:h-[460px] md:h-full">
+                <Image
+                  src="/images/about/directors-voice.png"
+                  alt="Mr. Dinesh Kumar Prajapat - Founder & CEO"
+                  fill
+                  sizes="(max-width: 767px) 100vw, 50vw"
+                  className="object-cover object-top"
+                  priority
+                />
 
-  {/* Black gradient from bottom */}
-  <div className="pointer-events-none absolute inset-0 hidden bg-gradient-to-t from-black via-black/20 to-transparent md:block" />
-</div>
+                {/* Subtle dark gradient overlay */}
+                <div className="pointer-events-none absolute inset-0 hidden bg-gradient-to-t from-black via-black/30 to-transparent md:block" />
+              </div>
 
               {/* OVERLAY */}
               <div className="team-handjoin." />
@@ -154,42 +131,43 @@ export default function TeamSection() {
           </div>
         </div>
 
-        {/* TEAM MEMBERS */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-7 items-stretch">
+        {/* TEAM SHOWCASE BANNER: Replaces the 4 blank gradient cards with the team group photo from About Us */}
+        <div className="relative group overflow-hidden rounded-[28px] md:rounded-[36px] border border-[#ececec] bg-white shadow-lg hover:shadow-2xl transition-all duration-500">
+          <div className="relative w-full h-[360px] sm:h-[460px] md:h-[520px] overflow-hidden bg-slate-900">
+            <Image
+              src="/images/about/team-goa.webp"
+              alt="SevenUnique & DhandaGrow Team"
+              fill
+              unoptimized
+              priority
+              className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
 
-          {team.map((item, index) => (
-            <div
-              key={index}
-            className="group h-full flex flex-col bg-white rounded-[28px] overflow-hidden border border-[#ececec] shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-            >
-
-              {/* IMAGE */}
-            <div className="relative h-[260px] sm:h-[300px] overflow-hidden bg-[#f4f4f4]">
-
-                <Image
-                  src={item.image}
-                  alt={item.name}
-                  fill
-                  sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
-                 className="object-cover  group-hover:scale-105 transition-all duration-700"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              </div>
-
-              {/* TEXT */}
-          <div className="p-6 flex flex-col flex-grow justify-between">
-
-                <h3 className="text-[22px] font-semibold text-[#111] mb-2">
-                  {item.name}
+            {/* Bottom Content Bar */}
+            <div className="absolute bottom-0 inset-x-0 p-6 sm:p-9 md:p-11 text-white flex flex-col md:flex-row md:items-end md:justify-between gap-5">
+              <div className="max-w-2xl">
+                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-white text-xs font-semibold tracking-wider uppercase mb-3 border border-white/20">
+                  <span className="w-2 h-2 rounded-full bg-[#f4622a] animate-pulse" />
+                  Our Team in Action
+                </span>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
+                  The Team Behind Every Breakthrough
                 </h3>
-
-                <p className="text-[#666] text-[15px]">
-                  {item.role}
+                <p className="mt-2 text-white/85 text-sm sm:text-base leading-relaxed max-w-xl">
+                  A united collective of senior engineers, AI developers, product strategists, and designers building enterprise-grade software and scaling digital commerce.
                 </p>
               </div>
+
+              <Link
+                href="/about-us#our-team"
+                className="inline-flex items-center gap-2 bg-[#f4622a] hover:bg-[#d94f1c] text-white px-6 py-3.5 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:-translate-y-0.5 shrink-0 self-start md:self-auto"
+              >
+                <span>Meet the Entire Team</span>
+                <span aria-hidden="true">→</span>
+              </Link>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
