@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 export const metadata = {
-  metadataBase: new URL("https://www.sevenunique.com"),
+  metadataBase: new URL("https://sevenunique.com"),
 
   title: {
     default: "SevenUnique Tech Solutions | Custom Software, AI & Fintech Engineering",
@@ -23,7 +23,7 @@ export const metadata = {
     "Leading fintech and software engineering firm specializing in custom AI, enterprise applications, digital payment rails, and cloud infrastructure.",
 
   alternates: {
-    canonical: "https://www.sevenunique.com",
+    canonical: "https://sevenunique.com",
   },
 
   robots: {
@@ -46,7 +46,7 @@ export const metadata = {
     title: "SevenUnique Tech Solutions Pvt. Ltd.",
     description:
       "Leading fintech and IT solutions provider specializing in AI, software development, digital payments, and enterprise solutions.",
-    url: "https://www.sevenunique.com",
+    url: "https://sevenunique.com",
     siteName: "SevenUnique",
     images: [
       {
@@ -75,9 +75,9 @@ export default function RootLayout({ children }) {
     "@type": "Organization",
     name: "SevenUnique Tech Solutions Pvt. Ltd.",
     alternateName: "SevenUnique",
-    url: "https://www.sevenunique.com",
-    logo: "https://www.sevenunique.com/images/logo-2.png",
-    image: "https://www.sevenunique.com/og-image.jpeg",
+    url: "https://sevenunique.com",
+    logo: "https://sevenunique.com/images/logo-2.png",
+    image: "https://sevenunique.com/og-image.jpeg",
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+91-8741886688",

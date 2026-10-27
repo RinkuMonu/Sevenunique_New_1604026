@@ -11,4 +11,4 @@ Disallow: /admin/
 Disallow: /private/
 Allow: /
 
-Sitemap: https://www.sevenunique.com/sitemap.xml
+Sitemap: https://sevenunique.com/sitemap.xml

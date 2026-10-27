@@ -1,5 +1,5 @@
 export default function robots() {
-  const baseUrl = "https://www.sevenunique.com";
+  const baseUrl = "https://sevenunique.com";
 
   return {
     rules: [

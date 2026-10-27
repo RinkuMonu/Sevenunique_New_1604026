@@ -25,7 +25,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `${solution.name} | SevenUnique`,
       description: solution.description,
-      url: `https://www.sevenunique.com/services/${slug}`,
+      url: `https://sevenunique.com/services/${slug}`,
       type: "website",
     },
     twitter: {

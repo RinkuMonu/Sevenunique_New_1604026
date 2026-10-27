@@ -87,7 +87,7 @@ export default async function BlogPostPage({ params }) {
     "@type": "BlogPosting",
     headline: post.title,
     description: post.meta_description,
-    image: post.cover_image_url || "https://www.sevenunique.com/og-image.jpeg",
+    image: post.cover_image_url || "https://sevenunique.com/og-image.jpeg",
     author: {
       "@type": "Organization",
       name: post.author || "SevenUnique Tech Solutions",
@@ -97,14 +97,14 @@ export default async function BlogPostPage({ params }) {
       name: "SevenUnique Tech Solutions Pvt. Ltd.",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.sevenunique.com/images/logo-2.png",
+        url: "https://sevenunique.com/images/logo-2.png",
       },
     },
     datePublished: post.published_at || post.created_at,
     dateModified: post.updated_at || post.created_at,
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://www.sevenunique.com/blog/${post.slug}`,
+      "@id": `https://sevenunique.com/blog/${post.slug}`,
     },
   };
 

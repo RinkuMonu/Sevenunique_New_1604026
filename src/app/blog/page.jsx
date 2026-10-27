@@ -18,7 +18,7 @@ export const metadata = {
   openGraph: {
     title: "Software Engineering, AI & Technology Insights | SevenUnique Blog",
     description: "Explore engineering playbooks and AI insights from SevenUnique.",
-    url: "https://www.sevenunique.com/blog",
+    url: "https://sevenunique.com/blog",
     siteName: "SevenUnique",
     type: "website",
   },

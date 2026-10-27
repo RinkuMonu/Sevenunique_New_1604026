@@ -19,4 +19,4 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 
-Sitemap: https://www.sevenunique.com/sitemap.xml
+Sitemap: https://sevenunique.com/sitemap.xml

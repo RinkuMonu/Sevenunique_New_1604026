@@ -24,7 +24,7 @@ export const metadata = {
     title: "Custom Software Development & AI Engineering Services | SevenUnique",
     description:
       "Explore full-spectrum custom software, generative AI, cloud backend, mobile app, and enterprise engineering services designed for scalable growth.",
-    url: "https://www.sevenunique.com/services",
+    url: "https://sevenunique.com/services",
     siteName: "SevenUnique",
     type: "website",
   },

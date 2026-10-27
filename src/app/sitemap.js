@@ -2,7 +2,7 @@ import { allKnownServiceSlugs } from "./services/[slug]/serviceUnifiedData.js";
 import { paymentSolutionSlugs } from "./payment-solutions/paymentData.js";
 
 export default async function sitemap() {
-  const baseUrl = "https://www.sevenunique.com";
+  const baseUrl = "https://sevenunique.com";
   const now = new Date().toISOString();
 
   // 1. Core High-Priority Pages
