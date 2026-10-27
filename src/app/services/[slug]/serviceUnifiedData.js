@@ -1,5 +1,5 @@
-import { serviceData } from "./data";
-import { restServiceData } from "./rest-data";
+import { serviceData } from "./data.js";
+import { restServiceData } from "./rest-data.js";
 
 export const serviceCategoryMap = {
   "AI & Machine Learning": [

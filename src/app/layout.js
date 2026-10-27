@@ -14,6 +14,30 @@ const geistMono = Geist_Mono({
 export const metadata = {
   metadataBase: new URL("https://www.sevenunique.com"),
 
+  title: {
+    default: "SevenUnique Tech Solutions | Custom Software, AI & Fintech Engineering",
+    template: "%s | SevenUnique",
+  },
+
+  description:
+    "Leading fintech and software engineering firm specializing in custom AI, enterprise applications, digital payment rails, and cloud infrastructure.",
+
+  alternates: {
+    canonical: "https://www.sevenunique.com",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
   verification: {
     google: "oPj-lQulH5rMXXLnWlJ4WP3rDrOsiS-hsmsmI2-Lbe4",
   },
@@ -40,21 +64,34 @@ export const metadata = {
     card: "summary_large_image",
     title: "SevenUnique Tech Solutions Pvt. Ltd.",
     description:
-      "Leading fintech and IT solutions provider.",
+      "Leading fintech and IT solutions provider specializing in AI and custom software.",
     images: ["/og-image.jpeg"],
   },
 };
 
 export default function RootLayout({ children }) {
-
   const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "SevenUnique Tech Solutions Pvt. Ltd.",
-  url: "https://www.sevenunique.com",
-  logo: "https://www.sevenunique.com/images/logo-2.png",
-  image: "https://www.sevenunique.com/og-image.jpeg",
-};
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "SevenUnique Tech Solutions Pvt. Ltd.",
+    alternateName: "SevenUnique",
+    url: "https://www.sevenunique.com",
+    logo: "https://www.sevenunique.com/images/logo-2.png",
+    image: "https://www.sevenunique.com/og-image.jpeg",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+91-8741886688",
+      contactType: "customer service",
+      areaServed: "Worldwide",
+      availableLanguage: ["English", "Hindi"],
+    },
+    sameAs: [
+      "https://www.linkedin.com/company/sevenuniquetech",
+      "https://x.com/sevenuniqu42041",
+      "https://www.facebook.com/people/SevenUnique-Tech-Solutions-Pvtltd/61556669918427/",
+      "https://www.instagram.com/sevenuniquetech/",
+    ],
+  };
 
   return (
     <html
