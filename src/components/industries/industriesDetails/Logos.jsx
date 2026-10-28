@@ -32,7 +32,7 @@
 //             <div className="group text-center cursor-pointer">
 //               <Image
 //                 // src="https://assets.bairesdev.com/image/upload/v1/www/silos/google-white_uooeom.svg"
-//                 src="https://www.sevenunique.com/bank/instantpay.png"
+//                 src="https://sevenunique.com/bank/instantpay.png"
 //                 alt="Google"
 //                 width={120}
 //                 height={60}
@@ -47,7 +47,7 @@
 //             <div className="group text-center cursor-pointer">
 //               <Image
 //                 // src="https://assets.bairesdev.com/image/upload/v1/www/silos/nextroll-white_quqpfz.svg"
-//                 src="https://www.sevenunique.com/bank/exotel.png"
+//                 src="https://sevenunique.com/bank/exotel.png"
 //                 alt="NextRoll"
 //                 width={120}
 //                 height={60}
@@ -61,7 +61,7 @@
 //             {/* Pinterest */}
 //             <Image
 //               // src="https://assets.bairesdev.com/image/upload/v1/www/silos/pinterest-white_c7eb21.svg"
-//               src="https://www.sevenunique.com/bank/tripjack.png"
+//               src="https://sevenunique.com/bank/tripjack.png"
 //               alt="Pinterest"
 //               width={120}
 //               height={60}
@@ -71,7 +71,7 @@
 //             {/* Adobe */}
 //             <Image
 //               // src="https://assets.bairesdev.com/image/upload/v1/www/silos/adobe-white_jtbwfc.svg"
-//               src="https://www.sevenunique.com/bank/nsdl.png"
+//               src="https://sevenunique.com/bank/nsdl.png"
 //               alt="Adobe"
 //               width={120}
 //               height={60}
@@ -81,7 +81,7 @@
 //             {/* Square */}
 //             <Image
 //               // src="https://assets.bairesdev.com/image/upload/v1/www/silos/square-white_bzbuaj.svg"
-//               src="https://www.sevenunique.com/bank/tbo.png"
+//               src="https://sevenunique.com/bank/tbo.png"
 //               alt="Square"
 //               width={120}
 //               height={60}

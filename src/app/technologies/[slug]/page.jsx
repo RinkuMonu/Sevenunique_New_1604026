@@ -41,7 +41,7 @@ export async function generateMetadata({ params }) {
         data.seo?.description ||
         data.description,
 
-      url: `https://www.sevenunique.com/technologies/${slug}`,
+      url: `https://sevenunique.com/technologies/${slug}`,
       type: "website",
     },
 

@@ -63,7 +63,7 @@ export default function DarkShowcase() {
               </button>
             </Link>
 
-            <Link href="/hire-developers">
+            <Link href="/about-us/tech-talent">
               <button className="border border-orange-300 hover:bg-white transition-all duration-300 text-[#111827] px-7 py-4 rounded-xl font-semibold cursor-pointer">
                 Explore Talent
               </button>

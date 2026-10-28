@@ -3422,8 +3422,799 @@ Enable real-time insights.`,
   },
 }),
 
+  // ✅ DIGITAL MARKETING (PDF Section 8)
+  "digital-marketing": createRestServiceEntry({
+    slug: "digital-marketing",
+    breadcrumb: "Digital Marketing",
+    title: "DIGITAL MARKETING & SEO SERVICES",
+    heading: "Drive visibility, organic search growth, and customer acquisition.",
+    description:
+      "Data-driven SEO, content marketing, paid acquisition, and multi-channel digital growth programs engineered for modern enterprises.",
+    buttonLabel: "Scale Your Growth",
+    image: "/images/seo.png",
 
-  // 👉 add more later same way
+    sections: {
+      androidServices: {
+        title: "Comprehensive Digital Marketing Services We Provide",
+        services: [
+          {
+            title: "Search Engine Optimization (SEO)",
+            desc: "Technical SEO audits, on-page optimization, content relevance, and ethical authority link acquisition to dominate organic search.",
+          },
+          {
+            title: "Online Brand Presence Optimization",
+            desc: "Comprehensive brand positioning across digital channels, ensuring consistency, authority, and premium market perception.",
+          },
+          {
+            title: "Digital Marketing Strategy",
+            desc: "Custom multi-channel growth roadmaps backed by user intent analysis, audience profiling, and competitive intelligence.",
+          },
+          {
+            title: "Social Media Marketing",
+            desc: "Platform-specific content strategies across LinkedIn, X (Twitter), and Instagram to foster engaged communities and brand trust.",
+          },
+          {
+            title: "Content Strategy & Planning",
+            desc: "Search-intent informed editorial calendars, high-impact thought leadership, case studies, and conversion-focused articles.",
+          },
+          {
+            title: "Competitor & Market Analysis",
+            desc: "Continuous competitor intelligence tracking keyword gaps, messaging shifts, and untapped market opportunities.",
+          },
+        ],
+        navItems: [
+          "Marketing Services",
+          "Key Facts",
+          "Best Practices",
+          "Why Choose Us",
+          "Process",
+          "FAQ",
+        ],
+      },
+
+      keyFacts: {
+        tabs: [
+          "Strategic Growth Advantage",
+          "Why Invest in Digital Marketing?",
+          "Our Core Specializations",
+        ],
+        content: [
+          {
+            title: "Key Facts About Enterprise Digital Marketing",
+            body: `In today's digital-first economy, a strong online presence is essential for sustainable growth.
+
+Technical Excellence: We build on clean technical SEO foundations, page speed, and schema markup.
+
+Data-Driven Decisions: Every marketing decision is backed by search analytics and real business KPIs.
+
+Multi-Channel Synergy: Connecting SEO, content, social media, and paid acquisition into a unified funnel.
+
+Full Transparency: Clear attribution models and performance dashboards showing real ROI.`,
+          },
+          {
+            title: "Why Invest in Digital Marketing with SevenUnique?",
+            body: `Organic search delivers high-intent prospects with lasting compound value.
+
+Targeted Audience Reach: Connect with decision-makers at the exact moment they search for your solutions.
+
+Brand Credibility & Trust: Establish thought leadership and industry authority.
+
+Scalable Customer Acquisition: Lower cost per acquisition compared to traditional advertising.`,
+          },
+          {
+            title: "Our Core Marketing Specializations",
+            body: `We specialize in B2B tech marketing, fintech visibility, SaaS customer acquisition, and enterprise brand positioning with strict compliance adherence.`,
+          },
+        ],
+        sidebar: [
+          {
+            title: "Search Intent Mapping in High-Growth Tech",
+          },
+          {
+            title: "Ethical Authority & Link Acquisition Best Practices",
+          },
+        ],
+      },
+
+      bestPractices: {
+        title: "Best Practices for Modern Digital Marketing",
+        description:
+          "Digital marketing requires strategic precision. Here are the core methodologies SevenUnique follows to ensure sustainable, compliant growth.",
+        items: [
+          {
+            title: "Part 1: Audit & Foundation",
+            content:
+              "Perform deep technical site audits, analyze search intent, resolve crawl bottlenecks, and establish rigorous analytics tracking.",
+          },
+          {
+            title: "Part 2: Content & Optimization",
+            content:
+              "Develop people-first, insightful content mapped to buyer stages. Optimize metadata, semantic structure, and conversion touchpoints.",
+          },
+          {
+            title: "Part 3: Amplification & Measurement",
+            content:
+              "Distribute across high-authority channels, monitor keyword movements, optimize conversion rates (CRO), and refine campaigns with real data.",
+          },
+        ],
+      },
+
+      greenCta: {
+        image: "/images/generative.png",
+        text: "Boost your search rankings and acquire qualified business leads with data-driven marketing.",
+        buttonLabel: "Schedule a Strategy Call",
+        buttonLink: "/schedule-a-call-page",
+      },
+
+      whyChoose: {
+        title: "Why Choose SevenUnique for Digital Marketing?",
+        image: "/images/qa.png",
+        points: [
+          {
+            icon: "arrow",
+            title: "Tech-Forward Marketing Approach",
+            desc: "As a technology solutions firm, our marketing team understands complex software, fintech APIs, and tech buyer journeys inside out.",
+          },
+          {
+            icon: "location",
+            title: "People-First & Search Best Practices",
+            desc: "Zero keyword stuffing or black-hat shortcuts. We optimize for genuine usefulness, high engagement, and long-term search dominance.",
+          },
+          {
+            icon: "work",
+            title: "Transparent Attribution & Reporting",
+            desc: "Real-time dashboards connecting rankings and traffic directly to pipeline generation and qualified leads.",
+          },
+        ],
+      },
+
+      process: {
+        titleLines: [
+          "Our marketing process.",
+          "Data-driven, precise,",
+          "results-focused.",
+        ],
+        image: "/images/process.png",
+        steps: [
+          {
+            step: "STEP 1",
+            title: "Deep Audit & Market Research",
+            desc: "We analyze your site architecture, competitor rankings, and audience search behavior to identify high-ROI opportunities.",
+          },
+          {
+            step: "STEP 2",
+            title: "Strategy Formulation & Content Mapping",
+            desc: "We create a tailored roadmap covering technical fixes, high-intent keywords, and an editorial calendar.",
+          },
+          {
+            step: "STEP 3",
+            title: "Execution, Amplification & Continuous Optimization",
+            desc: "Content is produced, pages are optimized, distribution is executed, and analytics are tracked for iterative gains.",
+          },
+        ],
+        buttonLabel: "Schedule a Call",
+        buttonLink: "/schedule-a-call-page",
+      },
+
+      faq: {
+        questions: [
+          {
+            q: "How soon can we see results from SEO and digital marketing?",
+            a: "Initial technical optimizations and indexing gains typically show within 4–8 weeks, with substantial compound organic traffic growth scaling within 3–6 months.",
+          },
+          {
+            q: "Do you specialize in B2B and fintech marketing?",
+            a: "Yes, our primary expertise is in enterprise software, fintech, developer platforms, and high-growth technology brands.",
+          },
+          {
+            q: "How do you measure and report marketing success?",
+            a: "We provide comprehensive reporting tracking organic traffic, keyword positions, conversion rates, and pipeline attribution with zero vanity metrics.",
+          },
+        ],
+      },
+
+      darkCta: {
+        titleLines: [
+          "Ready to accelerate your",
+          "digital market presence?",
+        ],
+        highlight: "Let's build your growth engine.",
+        buttonLabel: "Schedule a Call",
+        buttonLink: "/schedule-a-call-page",
+        image: "/images/team-handjoin.png",
+      },
+    },
+  }),
+
+  // ✅ CUSTOM SOFTWARE DEVELOPMENT (PDF Section 3)
+  "software-development": createRestServiceEntry({
+    slug: "software-development",
+    breadcrumb: "Software Development",
+    title: "CUSTOM SOFTWARE DEVELOPMENT SERVICES",
+    heading: "Tailored enterprise software, fintech platforms, and workflow automation.",
+    description:
+      "Purpose-built software engineered to adapt to your operational workflows, regulatory obligations, and long-term scalability requirements.",
+    buttonLabel: "Build Custom Software",
+    image: "/images/build-img.jpg",
+
+    sections: {
+      androidServices: {
+        title: "Enterprise Custom Software Solutions We Engineer",
+        services: [
+          {
+            title: "Custom Business Software",
+            desc: "Tailored software applications built around your exact organizational workflows, eliminating the constraints of off-the-shelf tools.",
+          },
+          {
+            title: "Enterprise Application Development",
+            desc: "High-throughput, secure enterprise platforms engineered with microservices, scalable databases, and cloud-native resilience.",
+          },
+          {
+            title: "Fintech Software Development",
+            desc: "Regulatory-compliant financial platforms, wallet infrastructures, ledger accounting, and core transactional engines.",
+          },
+          {
+            title: "Payment Platform Architecture",
+            desc: "High-concurrency payment processing, settlement workflows, automated reconciliation, and multi-gateway orchestration.",
+          },
+          {
+            title: "Business Process Automation",
+            desc: "Automating repetitive data handling, cross-system reconciliations, and complex approval chains to eliminate operational bottlenecks.",
+          },
+          {
+            title: "Legacy System Modernization",
+            desc: "Modernizing monolithic architectures and legacy databases into modular, API-enabled cloud services without downtime.",
+          },
+        ],
+        navItems: [
+          "Software Services",
+          "Key Facts",
+          "Best Practices",
+          "Why Choose Us",
+          "Process",
+          "FAQ",
+        ],
+      },
+
+      keyFacts: {
+        tabs: [
+          "Custom vs Off-The-Shelf",
+          "Enterprise Scalability",
+          "Fintech Architecture",
+        ],
+        content: [
+          {
+            title: "Why Enterprises Choose Custom Software Engineering",
+            body: `Generic platforms force businesses to adapt to arbitrary constraints. Custom software adapts to you.
+
+Architectural Freedom: Full ownership of your intellectual property and data pipelines.
+
+Seamless Integration: Connects directly with legacy ERPs, CRM systems, and specialized third-party APIs.
+
+Security & Compliance: Built with banking-grade encryption, audit trails, and strict role-based access.
+
+Operational Efficiency: Custom automated workflows that save hundreds of manual hours every month.`,
+          },
+          {
+            title: "Built for Mission-Critical Scale",
+            body: `Our software architectures are engineered for high throughput, sub-second latency, and fault tolerance across distributed cloud environments.`,
+          },
+          {
+            title: "Fintech & Banking Grade Standards",
+            body: `We design systems adhering to PCI-DSS, RBI guidelines, and strict data localization standards with complete audit logging.`,
+          },
+        ],
+        sidebar: [
+          {
+            title: "Event-Driven Microservices in Fintech Platforms",
+          },
+          {
+            title: "Database Partitioning for High-Concurrency Transactions",
+          },
+        ],
+      },
+
+      bestPractices: {
+        title: "Engineering Best Practices for Custom Software",
+        description:
+          "We apply modern software engineering standards to guarantee performance, maintainability, and clean codebases.",
+        items: [
+          {
+            title: "Part 1: Architecture & Domain Modeling",
+            content:
+              "Apply domain-driven design (DDD), select optimal database paradigms, and decouple services for modular resilience.",
+          },
+          {
+            title: "Part 2: Clean Code & CI/CD",
+            content:
+              "Enforce automated linting, unit test coverage, static security analysis, and automated continuous deployment pipelines.",
+          },
+          {
+            title: "Part 3: Observability & Security",
+            content:
+              "Integrate distributed tracing, APM metrics, structured logging, and automated vulnerability scanning at every build step.",
+          },
+        ],
+      },
+
+      greenCta: {
+        image: "/images/saas.png",
+        text: "Build bespoke enterprise software that gives your organization a decisive technological edge.",
+        buttonLabel: "Discuss Your Project",
+        buttonLink: "/schedule-a-call-page",
+      },
+
+      whyChoose: {
+        title: "Why Choose SevenUnique for Software Development?",
+        image: "/images/dark.png",
+        points: [
+          {
+            icon: "arrow",
+            title: "Top 1% Engineering Talent",
+            desc: "Experienced full-stack, backend, and DevOps architects with proven experience delivering complex systems.",
+          },
+          {
+            icon: "location",
+            title: "Enterprise & Fintech Specialization",
+            desc: "Deep domain expertise in financial transactions, regulatory compliance, and distributed software architecture.",
+          },
+          {
+            icon: "work",
+            title: "Agile & Transparent Delivery",
+            desc: "Two-week sprint cycles with live demos, transparent backlog management, and collaborative milestone reviews.",
+          },
+        ],
+      },
+
+      process: {
+        titleLines: [
+          "Our engineering process.",
+          "Disciplined, agile,",
+          "production-ready.",
+        ],
+        image: "/images/process.png",
+        steps: [
+          {
+            step: "STEP 1",
+            title: "Discovery & Architecture Blueprint",
+            desc: "We analyze business workflows, data schemas, and integration points to create a comprehensive technical specification.",
+          },
+          {
+            step: "STEP 2",
+            title: "Iterative Sprint Development",
+            desc: "Features are developed in agile sprints with continuous code reviews, automated testing, and bi-weekly demo check-ins.",
+          },
+          {
+            step: "STEP 3",
+            title: "Deployment, Hardening & Scaling",
+            desc: "Production deployment with automated CI/CD, load testing, comprehensive documentation, and ongoing maintenance support.",
+          },
+        ],
+        buttonLabel: "Schedule a Call",
+        buttonLink: "/schedule-a-call-page",
+      },
+
+      faq: {
+        questions: [
+          {
+            q: "Who owns the code and intellectual property of the software?",
+            a: "You own 100% of the source code, intellectual property, and all related documentation upon milestone completion.",
+          },
+          {
+            q: "Can you modernize our existing legacy software?",
+            a: "Yes, we specialize in legacy modernization—refactoring legacy databases, extracting microservices, and wrapping legacy systems with modern REST APIs.",
+          },
+          {
+            q: "What tech stack do you recommend for custom software?",
+            a: "We evaluate your use case to recommend modern stacks including Node.js, Go, Python, React, Next.js, PostgreSQL, Redis, and cloud architectures on AWS/GCP.",
+          },
+        ],
+      },
+
+      darkCta: {
+        titleLines: [
+          "Ready to build custom software",
+          "engineered for your business?",
+        ],
+        highlight: "Let's engineer your solution.",
+        buttonLabel: "Schedule a Call",
+        buttonLink: "/schedule-a-call-page",
+        image: "/images/team-handjoin.png",
+      },
+    },
+  }),
+
+  // ✅ API INTEGRATION & CUSTOM SOLUTIONS (PDF Section 15)
+  "api-integration": createRestServiceEntry({
+    slug: "api-integration",
+    breadcrumb: "API Integration",
+    title: "API INTEGRATION & CUSTOM SOLUTIONS",
+    heading: "Seamless third-party APIs, financial gateways, and custom interface engineering.",
+    description:
+      "Connect fragmented systems with robust RESTful & GraphQL APIs, payment orchestration, verification gateways, and microservices connectivity.",
+    buttonLabel: "Integrate APIs",
+    image: "/images/connection.png",
+
+    sections: {
+      androidServices: {
+        title: "API Integration & Custom Solutions We Deliver",
+        services: [
+          {
+            title: "Third-Party API Integration",
+            desc: "Connecting enterprise CRM, ERP, logistics, communication, and analytics providers with resilient error handling and retry logic.",
+          },
+          {
+            title: "Financial API Integration",
+            desc: "Core banking connectivity, account aggregation, transaction feeds, and automated ledger synchronization.",
+          },
+          {
+            title: "Payment Gateway Integration",
+            desc: "Orchestrating multi-gateway routing across UPI, cards, net banking, and international processors for maximum payment success rates.",
+          },
+          {
+            title: "Verification & KYC APIs",
+            desc: "Integrating Aadhaar OTP, PAN, GSTIN, Bank account validation, and biometric verification workflows into your onboarding journeys.",
+          },
+          {
+            title: "Custom API Development",
+            desc: "Designing high-concurrency RESTful and GraphQL endpoints with comprehensive OpenAPI/Swagger documentation and versioning.",
+          },
+          {
+            title: "API Security & Maintenance",
+            desc: "Implementing OAuth 2.0, JWT, rate limiting, mutual TLS encryption, and real-time observability to ensure 99.99% uptime.",
+          },
+        ],
+        navItems: [
+          "API Solutions",
+          "Key Facts",
+          "Best Practices",
+          "Why Choose Us",
+          "Process",
+          "FAQ",
+        ],
+      },
+
+      keyFacts: {
+        tabs: [
+          "Integration Architecture",
+          "Why Custom APIs?",
+          "Payment & KYC Gateways",
+        ],
+        content: [
+          {
+            title: "Connecting Your Ecosystem Securely",
+            body: `When systems cannot communicate seamlessly, every operational workflow slows down.
+
+Resilient Adapters: We build integration layers that isolate your core platform from provider changes or downtime.
+
+High Throughput: Designed to handle high-frequency webhook events and parallel transactional requests.
+
+Bank-Grade Security: End-to-end payload encryption, IP whitelisting, and signed webhook validation.`,
+          },
+          {
+            title: "Why Choose Custom API Architecture?",
+            body: `Generic connector tools fail under heavy transaction volumes or custom business logic. Custom APIs give you complete control and reliability.`,
+          },
+          {
+            title: "Specialized in Indian Financial Stack",
+            body: `Deep expertise integrating NPCI, BBPS, UPI 2.0, Aadhaar e-KYC, and leading Indian payment aggregators.`,
+          },
+        ],
+        sidebar: [
+          {
+            title: "Webhook Idempotency & Replay Attack Prevention",
+          },
+          {
+            title: "Rate Limiting Strategies for High-Volume Gateways",
+          },
+        ],
+      },
+
+      bestPractices: {
+        title: "Best Practices for Resilient API Integration",
+        description:
+          "Mission-critical integrations require fault-tolerant design and proactive monitoring.",
+        items: [
+          {
+            title: "Part 1: Contract-First Design",
+            content:
+              "Define clear schema contracts using OpenAPI/Swagger, validating payload structures before execution.",
+          },
+          {
+            title: "Part 2: Circuit Breakers & Retries",
+            content:
+              "Implement exponential backoff, circuit breakers, and dead-letter queues to handle third-party service outages smoothly.",
+          },
+          {
+            title: "Part 3: Observability & Auditing",
+            content:
+              "Track response times, payload hashes, and HTTP status codes in centralized dashboards with instant alerting.",
+          },
+        ],
+      },
+
+      greenCta: {
+        image: "/images/handonhand.png",
+        text: "Connect your platforms with bank-grade API integrations and custom gateway solutions.",
+        buttonLabel: "Talk to an API Specialist",
+        buttonLink: "/schedule-a-call-page",
+      },
+
+      whyChoose: {
+        title: "Why Choose SevenUnique for API Integration?",
+        image: "/images/qa.png",
+        points: [
+          {
+            icon: "arrow",
+            title: "Fintech & API Specialists",
+            desc: "Extensive experience integrating dozens of banking, payment, KYC, and utility APIs with zero data loss.",
+          },
+          {
+            icon: "location",
+            title: "Fault-Tolerant Architecture",
+            desc: "Architected with fallback gateways, automated reconciliation, and idempotency guarantees for financial accuracy.",
+          },
+          {
+            icon: "work",
+            title: "Comprehensive Documentation",
+            desc: "Clear interactive developer documentation, sample SDKs, and post-integration monitoring support.",
+          },
+        ],
+      },
+
+      process: {
+        titleLines: [
+          "Our integration process.",
+          "Secure, robust,",
+          "fully tested.",
+        ],
+        image: "/images/process.png",
+        steps: [
+          {
+            step: "STEP 1",
+            title: "API Assessment & Data Mapping",
+            desc: "We analyze provider documentation, rate limits, schema structures, and data transformation requirements.",
+          },
+          {
+            step: "STEP 2",
+            title: "Adapter Development & Sandbox Validation",
+            desc: "We build isolated adapter modules, error handlers, and run comprehensive mock integration tests.",
+          },
+          {
+            step: "STEP 3",
+            title: "Production Cutover & Live Monitoring",
+            desc: "We deploy with automated telemetry, alert triggers, and real-time transaction reconciliation dashboards.",
+          },
+        ],
+        buttonLabel: "Schedule a Call",
+        buttonLink: "/schedule-a-call-page",
+      },
+
+      faq: {
+        questions: [
+          {
+            q: "How do you handle downtime or errors from third-party APIs?",
+            a: "We implement circuit breakers, retry queues with exponential backoff, and automated fallback providers so your users experience uninterrupted service.",
+          },
+          {
+            q: "Can you build custom APIs for our mobile and web applications?",
+            a: "Yes, we build secure, lightning-fast REST and GraphQL APIs tailored specifically for modern mobile and frontend clients.",
+          },
+          {
+            q: "Do you assist with developer documentation and SDK generation?",
+            a: "Yes, we produce interactive Swagger/OpenAPI documentation and client SDKs to make adoption seamless for partners and internal developers.",
+          },
+        ],
+      },
+
+      darkCta: {
+        titleLines: [
+          "Need robust API integration for",
+          "your modern platforms?",
+        ],
+        highlight: "Let's connect your systems.",
+        buttonLabel: "Schedule a Call",
+        buttonLink: "/schedule-a-call-page",
+        image: "/images/team-handjoin.png",
+      },
+    },
+  }),
+
+  // ✅ AI SOLUTIONS & RESEARCH INTELLIGENCE (PDF Sections 6 & 7)
+  "ai-solutions": createRestServiceEntry({
+    slug: "ai-solutions",
+    breadcrumb: "AI Solutions",
+    title: "AI SOLUTIONS & RESEARCH INTELLIGENCE",
+    heading: "Autonomous AI agents, conversational bots, and market intelligence.",
+    description:
+      "Transform business operations with custom LLM integrations, autonomous competitor research agents, and predictive workflow automation.",
+    buttonLabel: "Deploy AI Agents",
+    image: "/images/aiagent.png",
+
+    sections: {
+      androidServices: {
+        title: "Intelligent AI Solutions We Engineer",
+        services: [
+          {
+            title: "AI Agent Development",
+            desc: "Goal-driven autonomous agents capable of executing multi-step business tasks, tool calls, and automated decision making.",
+          },
+          {
+            title: "AI Chatbot & Conversational AI",
+            desc: "Context-aware conversational assistants trained on your proprietary knowledge base for 24/7 customer and employee support.",
+          },
+          {
+            title: "AI Competitor Research Agents",
+            desc: "Automated intelligence agents that continuously monitor competitor websites, messaging shifts, and product launches.",
+          },
+          {
+            title: "Content Ideas & Trend Analysis",
+            desc: "AI research agents that track industry trends and audience queries to generate data-backed content strategies.",
+          },
+          {
+            title: "AI-Powered Business Automation",
+            desc: "Eliminating manual document processing, data extraction, categorization, and reporting with intelligent AI pipelines.",
+          },
+          {
+            title: "Enterprise LLM Integration",
+            desc: "Secure on-premise and cloud LLM deployments with RAG (Retrieval-Augmented Generation) and enterprise privacy controls.",
+          },
+        ],
+        navItems: [
+          "AI Capabilities",
+          "Key Facts",
+          "Best Practices",
+          "Why Choose Us",
+          "Process",
+          "FAQ",
+        ],
+      },
+
+      keyFacts: {
+        tabs: [
+          "Autonomous Agents",
+          "Content Intelligence",
+          "Enterprise RAG",
+        ],
+        content: [
+          {
+            title: "Beyond Simple Chatbots: Autonomous Agents",
+            body: `Modern AI goes beyond simple prompt responses. We engineer proactive AI agents that interact with your APIs, databases, and third-party tools.
+
+Autonomous Action: Agents make structured decisions and execute workflows without manual intervention.
+
+Contextual Memory: Systems retain conversation context and user history for personalized interactions.
+
+Enterprise Data Privacy: Zero data leakage. Your sensitive business intelligence is never used to train public models.`,
+          },
+          {
+            title: "Continuous Market & Content Intelligence",
+            body: `Automated agents scan competitor publications, identify white-space keyword opportunities, and generate actionable strategic briefs.`,
+          },
+          {
+            title: "Retrieval-Augmented Generation (RAG)",
+            body: `Ground AI responses in your verified company data using vector databases like pgvector and Pinecone with strict citation tracking.`,
+          },
+        ],
+        sidebar: [
+          {
+            title: "Agent Tool-Use & Function Calling Architectures",
+          },
+          {
+            title: "Vector Search & Semantic RAG Optimization",
+          },
+        ],
+      },
+
+      bestPractices: {
+        title: "Engineering Standards for Enterprise AI",
+        description:
+          "We follow rigorous AI safety, accuracy verification, and latency optimization practices.",
+        items: [
+          {
+            title: "Part 1: Guardrails & Validation",
+            content:
+              "Implement strict output validation, JSON schema enforcement, and hallucination reduction guardrails.",
+          },
+          {
+            title: "Part 2: Vector Search & Chunking",
+            content:
+              "Optimize document chunking, semantic embedding generation, and hybrid keyword/vector search retrieval.",
+          },
+          {
+            title: "Part 3: Cost & Latency Optimization",
+            content:
+              "Leverage model distillation, prompt caching, and fast inference models like Groq LPU and Sonar for sub-second responses.",
+          },
+        ],
+      },
+
+      greenCta: {
+        image: "/images/generative.png",
+        text: "Empower your business with autonomous AI agents and competitive market intelligence.",
+        buttonLabel: "Explore AI Solutions",
+        buttonLink: "/schedule-a-call-page",
+      },
+
+      whyChoose: {
+        title: "Why Choose SevenUnique for AI Solutions?",
+        image: "/images/dark.png",
+        points: [
+          {
+            icon: "arrow",
+            title: "Production AI Experience",
+            desc: "We build real, production-ready AI systems that integrate directly into client databases and operational workflows.",
+          },
+          {
+            icon: "location",
+            title: "Enterprise Data Confidentiality",
+            desc: "Strict adherence to data privacy. All corporate knowledge stays within your private infrastructure.",
+          },
+          {
+            icon: "work",
+            title: "Speed to Deployment",
+            desc: "Launch custom AI agents, automated research tools, and chat systems in weeks rather than quarters.",
+          },
+        ],
+      },
+
+      process: {
+        titleLines: [
+          "Our AI implementation.",
+          "Targeted, secure,",
+          "high-impact.",
+        ],
+        image: "/images/process.png",
+        steps: [
+          {
+            step: "STEP 1",
+            title: "Use Case & Data Assessment",
+            desc: "We evaluate your workflow requirements, knowledge sources, and identify high-value AI automation targets.",
+          },
+          {
+            step: "STEP 2",
+            title: "Agent Architecture & RAG Pipeline Setup",
+            desc: "We configure vector stores, design system prompts with strict guardrails, and build tool-calling integrations.",
+          },
+          {
+            step: "STEP 3",
+            title: "Validation, Deployment & Monitoring",
+            desc: "We benchmark accuracy, test adversarial edge cases, deploy on high-speed infrastructure, and monitor telemetry.",
+          },
+        ],
+        buttonLabel: "Schedule a Call",
+        buttonLink: "/schedule-a-call-page",
+      },
+
+      faq: {
+        questions: [
+          {
+            q: "Can AI agents interact with our internal ERP and CRM?",
+            a: "Yes, our AI agents use structured function calling to safely read and write data to your CRM, ERP, and databases.",
+          },
+          {
+            q: "How do you prevent hallucinations in AI responses?",
+            a: "We use Retrieval-Augmented Generation (RAG) with strict citation requirements, confidence scoring, and validation guardrails.",
+          },
+          {
+            q: "Is our company data used to train external public models?",
+            a: "Never. We use enterprise API endpoints with zero-data-retention agreements, ensuring your proprietary data remains 100% confidential.",
+          },
+        ],
+      },
+
+      darkCta: {
+        titleLines: [
+          "Ready to revolutionize operations",
+          "with autonomous AI solutions?",
+        ],
+        highlight: "Let's engineer your AI agents.",
+        buttonLabel: "Schedule a Call",
+        buttonLink: "/schedule-a-call-page",
+        image: "/images/team-handjoin.png",
+      },
+    },
+  }),
 };
 
 

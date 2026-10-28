@@ -66,8 +66,8 @@ export default function BackendHero({ data }) {
           <div className="flex items-center text-sm text-gray-500 mb-6">
             <GoHome className="mr-2 text-lg" />
             <span className="mx-2">›</span>
-            <Link href="/solutions" className="hover:text-white transition hover:underline">
-              Solutions
+            <Link href="/services" className="hover:text-white transition hover:underline">
+              Services
             </Link>
             <span className="mx-2">›</span>
             <span className="text-gray-500 font-medium">

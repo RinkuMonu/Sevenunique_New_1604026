@@ -49,7 +49,7 @@ export default function TalentProcess() {
             make the cut.
           </p>
           <Link
-            href="/top-1-percent"
+            href="/about-us/tech-talent"
             className="inline-flex items-center bg-[#f4622a] hover:bg-[#d94f1e] text-white font-medium text-[15px] px-7 py-3.5 rounded-[7px] transition-colors duration-150"
           >
             Explore our talent

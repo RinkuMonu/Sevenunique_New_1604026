@@ -97,9 +97,9 @@ export default function PressReleasesPage() {
         <div className="flex items-center gap-2 text-sm text-gray-500 mb-6">
           <Home size={16} />
           <ChevronRight size={16} />
-          <Link href="/media-hub">
-  <span className="cursor-pointer">Press</span>
-</Link>
+          <Link href="/about-us/press">
+            <span className="cursor-pointer">Press</span>
+          </Link>
           <ChevronRight size={16} />
           <span className="text-black font-medium">Press Releases</span>
         </div>

@@ -33,10 +33,14 @@ const nextConfig = {
 
       {
         protocol: "https",
+        hostname: "sevenunique.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
         hostname: "www.sevenunique.com",
         pathname: "/**",
       },
-
     ],
 
   },
