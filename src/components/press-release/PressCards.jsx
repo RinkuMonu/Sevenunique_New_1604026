@@ -11,10 +11,10 @@ const data = [
     link: "/about-us",
   },
   {
-    title: "Our Leadership",
-    desc: "Meet the leaders guiding us and shaping the future of tech innovation.",
-    btn: "Meet The Leaders",
-    link: "/about-us/Leadership",
+    title: "About Our Team",
+    desc: "Meet the team guiding us and shaping the future of tech innovation.",
+    btn: "Meet The Team",
+    link: "/about-us",
   },
   {
     title: "Brand Resources",

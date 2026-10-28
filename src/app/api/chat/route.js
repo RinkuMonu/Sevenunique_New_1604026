@@ -68,7 +68,7 @@ Fintech/Software Products:
 
 === ABOUT SEVENUNIQUE ===
 - Company: SevenUnique Tech Solutions Pvt. Ltd.
-- Website: www.sevenunique.com
+- Website: https://sevenunique.com
 - Email: hello@sevenunique.com
 - Phone: +91-8741886688
 - Working since 2024, 3500+ projects delivered

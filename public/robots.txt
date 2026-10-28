@@ -1,0 +1,22 @@
+# robots.txt for sevenunique.com
+# Verified and updated for Googlebot, Bingbot, and modern web crawlers
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+Sitemap: https://sevenunique.com/sitemap.xml

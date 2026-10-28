@@ -134,7 +134,7 @@ export default function AboutPage() {
 
               <div className="flex flex-wrap gap-5">
                 <Link
-                  href="/contact"
+                  href="/schedule-a-call-page"
                   className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 flex items-center gap-3"
                 >
                   Schedule a Call
@@ -142,7 +142,7 @@ export default function AboutPage() {
                 </Link>
 
                 {/* <Link
-                  href="/projects"
+                  href="/our-work-page"
                   className="border border-gray-300 hover:border-orange-500 hover:text-orange-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300"
                 >
                   View Projects
